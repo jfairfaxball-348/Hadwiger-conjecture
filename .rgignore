@@ -1,0 +1,12 @@
+# Keep default searches focused on live source/current authority.
+/sessions/
+/Archive/
+/.rl-work/
+/knowledge/*.jsonl
+/knowledge/index_metadata.json
+
+# Generated/binary payloads are not default prose search inputs.
+*.zip
+*.zip.sha256
+*.b64.part*
+**/SHA256SUMS.txt

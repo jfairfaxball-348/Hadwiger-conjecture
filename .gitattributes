@@ -1,0 +1,9 @@
+# Deterministic repository text across platforms.
+* text=auto eol=lf
+
+# Archives are opaque binary artifacts.
+*.zip binary
+
+# Future generated knowledge catalogues are cache data, not source prose.
+knowledge/*.jsonl text eol=lf linguist-generated=true
+knowledge/index_metadata.json text eol=lf linguist-generated=true
