@@ -30,4 +30,4 @@ Scratch is never authority.
 
 ## Current handoff
 
-RL2 is CLOSED/FROZEN under `sessions/RL2/`. RL3 is the unique incoming session: top-down roadmap setting, with the full sharp conjecture as its highest-level target. Begin only through `authoritative/START_HERE.md`. No project-originated theorem or certificate has been established.
+RL3 is CLOSED/FROZEN under `sessions/RL3/`. RL4 is the unique incoming session: N1 colorful rooted-K6 admissibility, with full sharp Hadwiger still the root. Begin only through `authoritative/START_HERE.md` and its sole RL4 brief. Elementary scoped barriers and one exact finite base are classified explicitly; the universal bridge remains unresolved.

@@ -1,27 +1,26 @@
-# RL3 authoritative start
+# Authoritative incoming state — RL4
 
-Status: RL2 is CLOSED/FROZEN; RL3 is the unique incoming research session and has not started.
-Research cutoff inherited from RL2: 2026-09-30.
+**Unique incoming session: RL4.** RL3 is CLOSED/FROZEN under sessions/RL3/.
+**Sole current brief:** [RL4_COLORFUL_K6_ADMISSIBILITY_BRIEF.md](RL4_COLORFUL_K6_ADMISSIBILITY_BRIEF.md).
+Full sharp ordinary Hadwiger remains the root. This handover installs N1; no RL4 mathematics has begun.
 
-## Unique RL3 session
+## Required current reads and start gate
 
-Current session brief: [RL3_TOP_DOWN_ROADMAP_BRIEF.md](RL3_TOP_DOWN_ROADMAP_BRIEF.md).
+Pin the live default-branch HEAD as BASE_HEAD, read root AGENTS.md, and record the current authoritative tree identity before mathematics. Confirm no unresolved integrity failure; source gaps below are deliberate open obligations.
 
-RL3 sets a top-down roadmap. Its highest-level target is the full sharp ordinary Hadwiger conjecture for arbitrary finite simple graphs and unbounded minor order. Assess the first missing universal bridge before scheduling local proof work.
+Read these exact current files, in order:
 
-## Required incoming state
+1. [RL4_COLORFUL_K6_ADMISSIBILITY_BRIEF.md](RL4_COLORFUL_K6_ADMISSIBILITY_BRIEF.md).
+2. [RL3_SESSION_STATE_AND_RL4_KICKOFF.md](RL3_SESSION_STATE_AND_RL4_KICKOFF.md).
+3. [PROOF_STATE_AND_OPEN_OBLIGATIONS.md](PROOF_STATE_AND_OPEN_OBLIGATIONS.md).
+4. [RL3_ROADMAP.md](RL3_ROADMAP.md), [DEPENDENCY_MAP.md](DEPENDENCY_MAP.md), [BRIDGE_LEDGER.md](BRIDGE_LEDGER.md).
+5. [FALSIFICATION_REPORT.md](FALSIFICATION_REPORT.md), [SOURCE_ADDENDUM.md](SOURCE_ADDENDUM.md), [COLLATZ_FAILURE_REVIEW.md](COLLATZ_FAILURE_REVIEW.md).
+6. [VERIFICATION_REPORT.md](VERIFICATION_REPORT.md) and [background/READ_ME_FIRST.md](background/READ_ME_FIRST.md); use the guide's exact topical records as needed.
 
-Complete the normal start gate in AGENTS.md, then read:
+The authority carries the unchanged RL2 corpus and all load-bearing RL3 outputs. INCOMING_SNAPSHOT.json identifies historical RL3 inputs, not the new worker's BASE_HEAD. Do not recursively preload sessions/, Archive/ or knowledge/. The frozen RL3 entrypoint is sessions/RL3/START_HERE.md and is historical.
 
-1. [RL3_TOP_DOWN_ROADMAP_BRIEF.md](RL3_TOP_DOWN_ROADMAP_BRIEF.md) — the sole session brief.
-2. [RL2_SESSION_STATE_AND_RL3_KICKOFF.md](RL2_SESSION_STATE_AND_RL3_KICKOFF.md) — handoff and exact resume frontier.
-3. [PROOF_STATE_AND_OPEN_OBLIGATIONS.md](PROOF_STATE_AND_OPEN_OBLIGATIONS.md) — classification, corrections and open/source obligations.
-4. [background/READ_ME_FIRST.md](background/READ_ME_FIRST.md) and [background/OPEN_FRONTIER.md](background/OPEN_FRONTIER.md).
-5. [background/RESULT_CATALOG.jsonl](background/RESULT_CATALOG.jsonl) — exact inherited statements and scopes.
-6. [COLLATZ_FAILURE_REVIEW.md](COLLATZ_FAILURE_REVIEW.md) — pinned external bridge failures and review criteria.
+## Current limits
 
-Use catalog source IDs for targeted provenance recovery. Source gaps remain explicit. There are no project-originated mathematical claims or certificates and no selected proof attack. All original RL2 inputs and full frozen work are under sessions/RL2/; historical sessions need not be preloaded.
+No universal sharp bridge is proved. CR_6 is a known strengthening instance with current primary status unresolved in RL3. OPEN-0005, OPEN-0008, sixteen inherited source-access limits and RL3-GAP-01/02 remain. N1 first resolves RL3-GAP-01, then assesses one obstruction interface under the brief's stopping rule. A proof of CR_6 would imply ordinary t=7 only; a CR_6 countermodel would refute that bridge, not automatically ordinary Hadwiger.
 
-## First bounded work unit
-
-Freeze the root objective, compare plausible routes backwards from it, state the highest missing global bridge with full quantifiers, and attack its sufficiency before choosing follow-up work. Produce a defensible roadmap decision or an explicit blocked/inconclusive assessment. Do not treat a plan or equivalent restatement as a theorem.
+Proof and counterexample are both legitimate root outcomes under the canonical proof-state standard. A complete root disproof requires a finite simple G with rigorously established h(G)<chi(G).

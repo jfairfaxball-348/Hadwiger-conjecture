@@ -1,0 +1,83 @@
+{
+  "format": "rl3-nonauthoritative-checkpoint-manifest-v1",
+  "status": "NOT PROMOTED",
+  "base_head": "d5a978dd4e37040a63645a83e5c39c94c3b5182e",
+  "authoritative_tree": "8f8e3c6f077d2879ca5f25933d2e7be90aacbc91",
+  "branch": "work/rl3-roadmap-20260930",
+  "allowed_change_prefix": ".rl-work/RL3/",
+  "artifacts": [
+    {
+      "path": ".rl-work/RL3/BRIDGE_LEDGER.md",
+      "bytes": 9353,
+      "git_blob": "8b198866502d0ba2d6e612080abc2d6fafe9d2e8",
+      "sha256": "48b21720ce5ad20fff0fc6b27ffe7d367f94ddf1d3ea02ba29132d32ffdd3f2b"
+    },
+    {
+      "path": ".rl-work/RL3/DEPENDENCY_MAP.md",
+      "bytes": 5618,
+      "git_blob": "dc3a5332c71c6314e8f44b77ca24b59508b9b804",
+      "sha256": "3939f0a9d2b62fb851b1eef72b28b1813ebef98aa71cf0b32a4ecedaee478c91"
+    },
+    {
+      "path": ".rl-work/RL3/FALSIFICATION_REPORT.md",
+      "bytes": 7208,
+      "git_blob": "f9b6b5e94fbf355e6280086339b1142ddec164ba",
+      "sha256": "c1d7249484aa73feab5bd02de866e986fe895af5edbb9c7e4c690605621538a9"
+    },
+    {
+      "path": ".rl-work/RL3/INCOMING_SNAPSHOT.json",
+      "bytes": 3892,
+      "git_blob": "3b84cdce595540bab9c1dfe7c13ab4e0e646f7f9",
+      "sha256": "af4694bab604fde782b74af38af4f35ff6f0e4d909b0a53b5155ed7774de844b"
+    },
+    {
+      "path": ".rl-work/RL3/NEXT_BOUNDED_RESEARCH_BRIEF.md",
+      "bytes": 5208,
+      "git_blob": "c33fc2c1a149114c9097ee724b03ecf2626d729c",
+      "sha256": "8f4235651597565341caae5cb5c5f98e5c889684dbc2687f072b0a88e23dab64"
+    },
+    {
+      "path": ".rl-work/RL3/README.md",
+      "bytes": 2365,
+      "git_blob": "d15cbf61e4b740954cd43da635f2a4c9aabf3bb2",
+      "sha256": "f06acb3c7848462221472e499cf036140e0832c7842852b644959014c3448538"
+    },
+    {
+      "path": ".rl-work/RL3/RESUME_STATE.json",
+      "bytes": 3972,
+      "git_blob": "6452fb590978e47e495c7f15a42a19843e748e95",
+      "sha256": "7e0d7ab26e6c299d4c34024ecce1f76891d6d33475170426c4b3300427b53ce7"
+    },
+    {
+      "path": ".rl-work/RL3/RL3_ROADMAP.md",
+      "bytes": 7593,
+      "git_blob": "484c3b484a6f1f8f31eb78966f1a77fa5311e5e3",
+      "sha256": "4399fa488a045d77b39767489fe2cdd240e16805cd1e3ab1a0231ce9068ef685"
+    },
+    {
+      "path": ".rl-work/RL3/SOURCE_ADDENDUM.md",
+      "bytes": 4501,
+      "git_blob": "fe8c1c2ebecb6c50d5f8933778978b6090d53655",
+      "sha256": "3f6a410615d3986260d8127eefc0ebd73a322fbdc9eddbf5dad85f69e3729419"
+    },
+    {
+      "path": ".rl-work/RL3/VERIFICATION_REPORT.md",
+      "bytes": 4706,
+      "git_blob": "3284ef5b67073c7e78d6b23c2858c9835ce6770d",
+      "sha256": "d0da71d57284cf2a30e026797fdf2cfe58f2e60efbe15e9bb1068d842553d86c"
+    },
+    {
+      "path": ".rl-work/RL3/verification/ROOTED_BARRIER_CERTIFICATE.json",
+      "bytes": 1471,
+      "git_blob": "183f4c5f9ea680eeb648998ac95732466d6400c2",
+      "sha256": "bd4a4f503f0be2db4eb0f737d51086c79c2130fd6501065d0483933f6cfd22a7"
+    },
+    {
+      "path": ".rl-work/RL3/verification/verify_rooted_barrier.py",
+      "bytes": 3601,
+      "git_blob": "aa525daf5cf42600e10ab2008be3744904c3a5d4",
+      "sha256": "c18bcdf6ffc16d71d8b848de72e7b84ef50b93a15a83f23346dd88fc3d227e93"
+    }
+  ],
+  "self_reference_limit": "Manifest omits its own hash; complete Git tree check includes it."
+}

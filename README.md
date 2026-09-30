@@ -16,7 +16,7 @@ For the current incoming research state, begin at [`START_HERE.md`](START_HERE.m
 - `knowledge/` is non-authoritative lookup/index material only.
 - `.rl-work/` is ignored local scratch/checkpoint state.
 
-RL2 is **CLOSED/FROZEN** under [`sessions/RL2/`](sessions/RL2/START_HERE.md). Its literature corpus and pinned Collatz failure review are carried into `authoritative/`. The unique incoming **RL3** sets a top-down roadmap for the full sharp conjecture; no proof strategy has yet been selected and no project-originated theorem or certificate has been established.
+RL3 is **CLOSED/FROZEN** under [`sessions/RL3/`](sessions/RL3/START_HERE.md). Its ranked sharp-Hadwiger roadmap, scoped barriers and exact finite base certificate are carried alongside the unchanged RL2 corpus and pinned Collatz review into `authoritative/`. The unique incoming **RL4** assesses colorful rooted K6 under its precise bounded brief. The universal sharp bridge remains unresolved.
 
 ## Interactive convention
 
@@ -32,4 +32,4 @@ Each research turn should form a coherent bounded work unit. A completed RL is f
 
 This project may use AI-assisted mathematical exploration, drafting, computation, verification, and research-state management. Claims are classified by their actual proof/verification status, not by who or what generated them.
 
-This repository is a research record, not a claim that the Hadwiger Conjecture has been proved.
+The project accepts either a complete proof of h(G)>=chi(G) for every finite simple graph or a rigorously verified finite counterexample with h(G)<chi(G). Counterexamples to candidate bridges or stronger variants are recorded at their exact scopes. The current state establishes neither a full proof nor an ordinary-Hadwiger counterexample.
