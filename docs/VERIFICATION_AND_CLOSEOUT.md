@@ -16,6 +16,7 @@ Before changing remote authority:
 8. confirm incoming `authoritative/` still matches `BASE_HEAD` and the recorded snapshot/tree identity;
 9. confirm the successor RL is exactly one number ahead;
 10. inspect the complete intended final repository path set/tree.
+11. carry the failure/lesson ledger forward with exact provenance, impact, surviving valid scopes, and retry conditions; for a blocked route, include the next bounded recovery task or an explicit user-directed pause.
 
 If a mathematical or authority-integrity step fails, do not promote.
 
@@ -42,6 +43,12 @@ The invariant is:
 The successor `authoritative/START_HERE.md` must identify exactly one incoming RL and exactly one current session brief. It must carry forward the minimum load-bearing state needed to continue without conversation history.
 
 Do not silently create a long-horizon roadmap during closeout. Preserve only current state, exact open obligations, and the next session brief unless the user has explicitly requested broader planning.
+
+Under the standing programme-continuity instruction, a blocked route hands over a bounded repair, rework, or pivot assessment. It does not require the user to supply a proved new input before exploratory diagnosis can begin. Such a brief must preserve proof-admission gates and recorded failure limits. CLOSEOUT_LOCK writes the already established recovery frontier; it does not perform a new recovery investigation during closeout.
+
+## Explicit process amendments
+
+An explicitly tasked change to repository process uses a separate non-RL commit. Record the authorization, pinned base, operational changes, and preservation checks. Changing a current session's operational brief is permitted only as an explicit amendment: keep the same incoming RL, leave frozen sessions and mathematical/source/certificate records unchanged, and do not describe the commit as mathematical progress. Verify the complete diff, current entrypoint/brief agreement, and remote readback before calling the amendment complete.
 
 ## Final reporting
 

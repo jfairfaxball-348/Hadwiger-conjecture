@@ -30,6 +30,11 @@ Maintain a non-authoritative resume record with at least:
   "unpromoted_or_uncovered": [],
   "next_exact_operation": "<single next operation>",
   "do_not_recompute": [],
+  "failure_lesson_ids": [],
+  "recovery_mode": null,
+  "changed_input_or_mechanism": null,
+  "next_task_bounds": null,
+  "retry_conditions": [],
   "stop_and_repair_active": false
 }
 ```
@@ -37,6 +42,8 @@ Maintain a non-authoritative resume record with at least:
 This record aids resumability only. It cannot promote mathematics.
 
 Update it after startup validation, before and after long computation, after material intermediate results, before switching branches, before a long connector sequence, and immediately before closeout.
+
+A blocked route must carry a provenance-linked failure record and a next bounded recovery task under `docs/RESEARCH_RECOVERY_PROTOCOL.md`. Preserve exact unsuccessful queries and inspected passages so a connector does not replay them without a concrete change. Recovery candidates remain unpromoted until justified.
 
 ## Bare continue fast path
 

@@ -41,6 +41,16 @@ Never promote evidence to theorem, incomplete coverage to exact certificate, a b
 
 A contradiction, counterexample, failed verifier, or scope error is a result and must be preserved honestly.
 
+## Programme continuity and recovery
+
+This is a long research programme. A blocked work unit, failed candidate, or retired route does not terminate the programme. After recording a barrier, diagnose it and prepare one bounded repair, rework, or pivot assessment under `docs/RESEARCH_RECOVERY_PROTOCOL.md`.
+
+Separate permission to investigate an input from permission to consume it as proved. Workers may formulate, test, and try to justify a new candidate input without requiring the user to supply an already proved theorem. Every candidate remains unpromoted until its exact proof/certificate and scope requirements are met. A stopped mechanism requires a recorded change addressing its particular obstruction before dependent work resumes.
+
+Carry `authoritative/FAILURE_AND_LESSON_LEDGER.md` forward in every handover. Preserve the original error or failed expectation, evidence, first invalid or missing dependency, surviving valid scope, downstream effects, lesson, and conditions for revisiting it. Distinguish an actual mathematical error from a valid restricted result, inconclusive search, access defect, or process defect. Corrections append an explicit history; they never erase the original issue or rewrite frozen sessions.
+
+Each blocked research checkpoint must identify the next concrete recovery task and its bounds. A work unit or RL may finish while the programme remains active. Do not repeat a failed attempt without a named change, manufacture progress, or replace the root by an easier variant. Integrity failures still freeze affected deductions; only repair or work independent of the failure may proceed after the applicable gate passes. User-directed pauses and `CLOSEOUT_LOCK` remain binding.
+
 ## Execution environments are peers
 
 Shell workers and connector/cloud workers are both valid first-class workers.
@@ -86,6 +96,7 @@ At each user-facing research checkpoint:
 - state what remains open or unpromoted;
 - state the exact durable resume frontier when relevant;
 - autonomously judge whether the current session should continue or close;
+- for a blocked or failed route, record its lesson and the next bounded repair, rework, or pivot task; closing the RL does not by itself end the programme;
 - end that recommendation with exactly one of:
   - `it makes sense to continue here`
   - `it makes sense to finish up here`
@@ -123,6 +134,8 @@ Freeze the last unquestionably valid frontier and identify the first invalid dep
 
 Mechanical defects and mathematical defects are different. A path, packaging, catalogue, transport, or tooling defect does not by itself change mathematical proof classification.
 
+Stop dependent work, rather than declaring the entire programme exhausted. Record the failure and apply the recovery protocol from the last valid frontier. Never use a pivot to bypass an unresolved start gate or to consume an invalid dependency.
+
 ## CLOSEOUT_LOCK
 
 Enter `CLOSEOUT_LOCK` immediately when the user asks to finish, close, hand over, commit/push, end, or promote the current RL, or when delay materially risks an incomplete closeout.
@@ -159,4 +172,4 @@ Do not make phrases such as “as discussed above” load-bearing.
 
 ## Infrastructure changes
 
-Repository architecture, conveyor rules, indexing, helper tooling, CI, and verification infrastructure are not mathematical RL progress. Make such changes only when explicitly tasked, use a separate non-RL commit, and do not silently alter mathematical authority while doing so.
+Repository architecture, conveyor rules, indexing, helper tooling, CI, and verification infrastructure are not mathematical RL progress. Make such changes only when explicitly tasked, use a separate non-RL commit, and do not silently alter mathematical authority while doing so. An explicitly authorized process amendment may update the current operational brief and navigation in that commit if its authorization, exact changes, and unchanged mathematical scopes are recorded. It must preserve the incoming RL number, frozen history, certificates, and source classifications; it cannot promote research results or count as a numbered transition.

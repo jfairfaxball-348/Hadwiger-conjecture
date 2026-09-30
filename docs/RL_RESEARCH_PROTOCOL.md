@@ -24,7 +24,8 @@ Useful checkpoint material includes:
 - artifacts/hashes when useful;
 - exact next intended operation;
 - things explicitly not to recompute;
-- whether stop-and-repair is active.
+- whether stop-and-repair is active;
+- active failure/lesson IDs, recovery mode, changed premise or mechanism, bounded next task, and retry conditions.
 
 ## Bounded continuation work units
 
@@ -51,7 +52,11 @@ For any claim promoted as exact finite work:
 
 ## Route discipline
 
-Preserve failed approaches and barriers. Do not repeatedly restart a recorded dead route unless new information actually changes the obstruction or the user explicitly asks to revisit it.
+Preserve failed approaches and barriers in the portable failure/lesson ledger. Do not repeatedly restart a recorded dead route unless new information actually changes the obstruction or the user explicitly asks to revisit it. An explicit revisit permits reassessment, not use of a false or unproved dependency.
+
+A blocked route triggers diagnosis and one bounded repair, rework, or pivot assessment, as specified in [RESEARCH_RECOVERY_PROTOCOL.md](RESEARCH_RECOVERY_PROTOCOL.md). Investigating a new candidate premise is permitted before it is proved; consuming it as a sufficient theorem is not. Prefer a concrete changed mathematical mechanism and falsification test over another roadmap or an unchanged source search.
+
+Stopping a failed candidate and finishing an RL are local control decisions. Preserve a next recovery task so the programme can continue from the failure rather than repeatedly rediscovering it.
 
 This repository begins without a roadmap. Do not create a global roadmap as a side effect of ordinary research unless the user explicitly requests one.
 

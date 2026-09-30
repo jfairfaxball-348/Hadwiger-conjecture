@@ -1,6 +1,12 @@
-# RL6 — blocked-frontier input admission
+# Retired RL6 input-admission brief — navigation only
 
-Handover cutoff: 2026-09-30. Status: **SOLE INCOMING RL6 BRIEF**.
+The direct user process instruction of 2026-09-30 supersedes this brief for current operations. The sole incoming session remains RL6; its sole current brief is [RL6_ROUTE_RECOVERY_AND_PIVOT_BRIEF.md](RL6_ROUTE_RECOVERY_AND_PIVOT_BRIEF.md). Explore one bounded repair, rework, or pivot assessment there; no new input is thereby accepted as proved.
+
+The exact former brief is preserved at commit e35f3459837bca890bcef9641179dcf83f96d01e and in [the frozen RL5 handover](../sessions/RL5/RL6_BLOCKED_FRONTIER_INPUT_ADMISSION_BRIEF.md). The historical text below records the original gate and authorizes no current work or hold. Mathematical/source scopes and integrity safeguards remain as carried in the new brief.
+
+## Historical brief, superseded operational instructions
+
+Handover cutoff: 2026-09-30. Former status: sole incoming RL6 brief at the RL5 closeout.
 RL5 is CLOSED/FROZEN. **Incoming admission state: HOLD — no accepted new input.** No RL6 mathematics or source retrieval has begun.
 
 ## Root and exact target

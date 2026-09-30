@@ -35,11 +35,29 @@ If work stops before promotion:
 - preserve the last verified checkpoint where possible;
 - report exactly what remains unpromoted.
 
+## Route recovery
+
+A failed or blocked route enters a recovery subcycle inside the ordinary research phase:
+
+```mermaid
+flowchart TD
+  B["Blocked or failed route"] --> D["Preserve evidence and diagnose"]
+  D --> R["Bounded repair, rework, or pivot"]
+  R --> A["Assess one changed candidate"]
+  A --> V["Verified result or revised frontier"]
+  A --> B
+  V --> H["Checkpoint and portable handover"]
+```
+
+Apply `docs/RESEARCH_RECOVERY_PROTOCOL.md`. Permission to explore a candidate is separate from proof admission. A scoped failure may retire a route while the programme remains active. Each checkpoint records lessons and the next bounded task; the subcycle cannot bypass the start gate, mathematical integrity, or CLOSEOUT_LOCK.
+
 ## Stop-and-repair
 
 A failure freezes the last valid state and identifies the first invalid dependency.
 
 Mechanical failures are repaired mechanically. Mathematical/proof-state failures require explicit correction or demotion when eventually promoted.
+
+Affected deductions stop. Repair or an independent route can continue from the last valid state after the applicable gate passes; a failure does not automatically terminate the programme.
 
 ## Closeout
 

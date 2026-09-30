@@ -1,8 +1,10 @@
-# RL5 completed state and RL6 input-admission handover
+# RL5 completed state and amended RL6 recovery handover
 
 Completed session: **RL5 CLOSED/FROZEN**. Unique incoming successor: **RL6**.
-Sole successor brief: [RL6_BLOCKED_FRONTIER_INPUT_ADMISSION_BRIEF.md](RL6_BLOCKED_FRONTIER_INPUT_ADMISSION_BRIEF.md).
+Sole current successor brief: [RL6_ROUTE_RECOVERY_AND_PIVOT_BRIEF.md](RL6_ROUTE_RECOVERY_AND_PIVOT_BRIEF.md). The former input-admission brief is retired navigation.
 Handover cutoff: 2026-09-30. No RL6 research has begun.
+
+Operational amendment, 2026-09-30: the user directs a continuing programme with repair, rework, pivot, and preserved failure lessons. [RECOVERY_PROCESS_AMENDMENT.md](RECOVERY_PROCESS_AMENDMENT.md) records the change. All completed RL5 results, original incoming/checkpoint bytes, mathematical scopes and source limits remain unchanged in their frozen provenance.
 
 ## Completed bounded result
 
@@ -28,7 +30,7 @@ Completed flat records normalize status, navigation and finished/next control wo
 
 Full sharp ordinary Hadwiger remains the root: h(G)>=chi(G) for every finite simple G, with both values zero on the empty graph. A rigorous proof or an actual rigorously verified graph with h(G)<chi(G) is a legitimate root outcome; neither is established.
 
-RL6 first pins its then-live default-branch HEAD and follows the sole current entrypoint. Its incoming state contains **no accepted premise-changing input**. This is an admission hold, not another scheduled lookup or proof mechanism. Without a specified genuinely new resource/passage/access lead or independently justified structural/colorfulness input for graphs without universal vertices, record the unchanged blockage and stop without repeating the completed gate. A candidate negative must satisfy the complete chromatic, all-colorings and all-model domains before any certificate promotion.
+RL6 first pins its then-live default-branch HEAD and follows the sole current entrypoint. Its incoming state contains **no accepted premise-changing input**. Under the explicit process amendment it may diagnose the barrier and develop/assess one changed repair, rework, or pivot candidate without requiring a proved input from the user first. This permission does not admit the candidate as a theorem or justify dependent unconditional conclusions. Do not repeat the completed source gate without a concrete changed lead. A candidate negative must satisfy the complete chromatic, all-colorings and all-model domains before any certificate promotion. Preserve [FAILURE_AND_LESSON_LEDGER.md](FAILURE_AND_LESSON_LEDGER.md) and a bounded next recovery task in the subsequent handover.
 
 Reuse RL2, the RL3 roadmap/dependency map/bridge ledger, CM-B/CM-D/CM-R proofs and exact base certificate, the Collatz review, and RL4-P01-P03 at their scopes. M1 still covers none of the critical order-7 application and must not be restarted absent a named premise-changing input. Every ordinary t>=7 remains unresolved by this project. Universal CR_6 would imply ordinary order 7 only; every t>=8 and CR_s for s>=7 remains.
 

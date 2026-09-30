@@ -1,6 +1,6 @@
 # Proof state and open obligations after RL5
 
-Status: RL5 CLOSED/FROZEN; RL6 is the sole incoming session, on input-admission HOLD. Cutoff: 2026-09-30.
+Status: RL5 CLOSED/FROZEN; RL6 is the sole incoming session, ready for bounded recovery assessment under the explicit process amendment of 2026-09-30. No new mathematical input or RL6 result is promoted. Mathematical cutoff: 2026-09-30.
 This is the canonical classification record for the carried RL3 outputs, completed RL4 deductions and completed RL5 source gate. The original RL3 record is preserved in sessions/RL4/incoming/. Freezing a candidate statement does not prove it. Historical NOT PROMOTED files in the frozen checkpoint are provenance; this record and the completed-session reports govern the frozen result.
 
 ## Root and mathematical success
@@ -38,7 +38,7 @@ There is no new unrestricted Hadwiger theorem, CR_6 countermodel or ordinary-Had
 
 No previously promoted mathematical claim was repaired or demoted in RL4. The earlier scoped route failures retain their original classifications. RL4 closeout made only explicit status, path and control-wording normalizations, with mathematical statements and limitations preserved. All nine original RL4 checkpoint files and the full 31-blob incoming authority are retained byte-identically as checkpoint/ and incoming/ in sessions/RL4/. The earlier RL3 freeze and all previous session trees are unchanged.
 
-The pinned Collatz failure review is binding methodology: exact quantifiers, exhaustive coverage, simultaneous model compatibility, retained sharpness, non-circular sufficiency, falsification and stopping at the first invalid dependency. Full reports are RL3_ROADMAP.md, DEPENDENCY_MAP.md, BRIDGE_LEDGER.md, FALSIFICATION_REPORT.md, SOURCE_ADDENDUM.md, RL4_ADMISSIBILITY_REPORT.md, PROOF_STATE_AND_RESIDUAL_LEDGER.md, SOURCE_STATUS_AND_SEARCH_LOG.md and VERIFICATION_REPORT.md. Only RL5_CR6_SOURCE_AND_NEW_INPUT_GATE_BRIEF.md specifies the next work unit. M1 must not be restarted without a named premise-changing input addressing its critical-frontier coverage barrier.
+The pinned Collatz failure review is binding methodology: exact quantifiers, exhaustive coverage, simultaneous model compatibility, retained sharpness, non-circular sufficiency, falsification and stopping at the first invalid dependency. Full reports are RL3_ROADMAP.md, DEPENDENCY_MAP.md, BRIDGE_LEDGER.md, FALSIFICATION_REPORT.md, SOURCE_ADDENDUM.md, RL4_ADMISSIBILITY_REPORT.md, PROOF_STATE_AND_RESIDUAL_LEDGER.md, SOURCE_STATUS_AND_SEARCH_LOG.md and VERIFICATION_REPORT.md. RL5_CR6_SOURCE_AND_NEW_INPUT_GATE_BRIEF.md governed the now-completed RL5 work unit; the sole current brief is RL6_ROUTE_RECOVERY_AND_PIVOT_BRIEF.md. M1 must not be restarted without a named premise-changing input addressing its critical-frontier coverage barrier.
 
 ## Completed RL5 source gate and RL6 boundary
 
@@ -48,4 +48,8 @@ The obligation closed is assessment of that named new source lead and the bounde
 
 RL3-GAP-01 remains UNVERIFIED: a newer primary discussion does not certify the six-color status or exhaustive discovery through the cutoff. RL3-GAP-02, OPEN-0005, OPEN-0008 / SRC-0014 / RES-0015 and all sixteen unchecked-source limits remain. Every critical order-7 application is uncovered by a newly justified model; M1 still covers none of it. All larger chromatic orders and every residual bridge parameter remain.
 
-RL6 is the unique successor, governed only by RL6_BLOCKED_FRONTIER_INPUT_ADMISSION_BRIEF.md. It inherits no accepted new input. Without a specified premise-changing lead or independently justified input, startup validation ends in preserved HOLD / BLOCKED; no repeated lookup or local program is scheduled. Both a full sharp proof and an actual rigorously verified ordinary counterexample remain legitimate root outcomes.
+At RL5 closeout, RL6 inherited no accepted new input and an operational hold under RL6_BLOCKED_FRONTIER_INPUT_ADMISSION_BRIEF.md. That exact historical boundary remains frozen in sessions/RL5/. The explicit user process amendment now makes RL6_ROUTE_RECOVERY_AND_PIVOT_BRIEF.md the sole current brief and permits bounded development/assessment of changed repair, rework, or pivot candidates. Proof admission still requires independent justification, full scope and sharp simultaneous compatibility; repeated unchanged lookups or M1 deductions are not scheduled. Both a full sharp proof and an actual rigorously verified ordinary counterexample remain legitimate root outcomes.
+
+## Explicit process amendment — no mathematical promotion
+
+[RECOVERY_PROCESS_AMENDMENT.md](RECOVERY_PROCESS_AMENDMENT.md) records the 2026-09-30 authorization and preservation checks. [FAILURE_AND_LESSON_LEDGER.md](FAILURE_AND_LESSON_LEDGER.md) indexes inherited barriers and the operational repair at their actual scopes. The ledger adds no theorem or certificate. The current programme remains active after route failures, with one bounded next recovery task per handover. All mathematical classifications, inherited source/certificate limits, and residual obligations above remain unchanged. No previously promoted mathematical claim is corrected or demoted by this amendment.

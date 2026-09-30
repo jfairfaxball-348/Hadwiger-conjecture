@@ -30,4 +30,4 @@ Scratch is never authority.
 
 ## Current handoff
 
-RL5 is CLOSED/FROZEN under `sessions/RL5/`. RL6 is the unique incoming session, with an input-admission hold after the completed CR6 gate. Full sharp Hadwiger remains the root, accepting either a rigorous proof or an actual verified counterexample. Begin through `authoritative/START_HERE.md` and its sole RL6 brief. No new qualifying input is carried; do not repeat the completed gate without a named premise-changing resource or independently justified input.
+RL5 is CLOSED/FROZEN under `sessions/RL5/`. RL6 is the unique incoming session, ready for one bounded repair, rework, or pivot assessment after the completed CR6 gate. Full sharp Hadwiger remains the root, accepting either a rigorous proof or an actual verified counterexample. Begin through `authoritative/START_HERE.md` and its sole RL6 recovery brief. No new input is accepted as proved; developing and testing candidates is permitted under the recovery protocol. Preserve failed attempts and lessons, and do not repeat the completed gate without a concrete changed lead.
