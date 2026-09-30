@@ -1,0 +1,61 @@
+{
+  "format": "rl-connector-resume-v1",
+  "base_head": "779339630af6e819cd047462941bed97a571630b",
+  "authoritative_tree": "5fe85255f41270f3bf5a5b808f706c319c6696e3",
+  "incoming_rl": 4,
+  "session_brief": "authoritative/RL4_COLORFUL_K6_ADMISSIBILITY_BRIEF.md",
+  "validated_authority_paths": [
+    "AGENTS.md",
+    "authoritative/START_HERE.md",
+    "authoritative/RL4_COLORFUL_K6_ADMISSIBILITY_BRIEF.md",
+    "authoritative/RL3_SESSION_STATE_AND_RL4_KICKOFF.md",
+    "authoritative/PROOF_STATE_AND_OPEN_OBLIGATIONS.md",
+    "authoritative/RL3_ROADMAP.md",
+    "authoritative/DEPENDENCY_MAP.md",
+    "authoritative/BRIDGE_LEDGER.md",
+    "authoritative/FALSIFICATION_REPORT.md",
+    "authoritative/SOURCE_ADDENDUM.md",
+    "authoritative/COLLATZ_FAILURE_REVIEW.md",
+    "authoritative/VERIFICATION_REPORT.md",
+    "authoritative/background/READ_ME_FIRST.md",
+    "authoritative/background/LITERATURE_MAP.md",
+    "authoritative/background/OPEN_FRONTIER.md",
+    "authoritative/background/VARIANTS_AND_RELATED_PROBLEMS.md",
+    "authoritative/background/RESULT_CATALOG.jsonl",
+    "docs/PROOF_STATE_CLASSIFICATIONS.md",
+    "docs/RL_RESEARCH_PROTOCOL.md",
+    "docs/CONNECTOR_WORKFLOW.md",
+    "docs/VERIFICATION_AND_CLOSEOUT.md"
+  ],
+  "last_verified_frontier": "One bounded N1 unit complete. RL4-P01: exact all-colorings factorization. RL4-P02: simultaneous rooted-K6 on every H=K2 join P, chi(P)=4, and every colorful S, using inherited checked CR4. RL4-P03: no G-v in a hypothetical minor-minimal 7-counterexample has even one universal vertex, using inherited RES-0005. M1 therefore covers none of the critical frontier. Universal CR6 is NOT PROMOTED / INCONCLUSIVE; current literature status gap RL3-GAP-01 remains.",
+  "completed_artifacts": [
+    "README.md",
+    "INCOMING_SNAPSHOT.json",
+    "MECHANISM_SCOPE.md",
+    "RL4_ADMISSIBILITY_REPORT.md",
+    "SOURCE_STATUS_AND_SEARCH_LOG.md",
+    "PROOF_STATE_AND_RESIDUAL_LEDGER.md",
+    "VERIFICATION_REPORT.md",
+    "RESUME_STATE.json",
+    "CHECKPOINT_MANIFEST.json"
+  ],
+  "unpromoted_or_uncovered": [
+    "Universal CR6 at every order and every colorful S",
+    "Current primary resolution/status of CR6; RL3-GAP-01 narrowed but retained",
+    "All chi=6 H without two universal vertices",
+    "Every critical-neighborhood order-7 target instance, because P03 excludes the M1 premise",
+    "Every CR_s for s>=7 and every ordinary t>=8",
+    "OPEN-0005, OPEN-0008, sixteen inherited unchecked-source limits and RL3-GAP-02"
+  ],
+  "next_exact_operation": "Await user finish instruction. Then enter CLOSEOUT_LOCK and perform deterministic RL4 freeze, verified successor handover and one atomic numbered transition with readback. No more research is scheduled. Any research continuation needs a named new input addressing source status or the missing universal/root-relevant six-color obstruction; do not restart M1.",
+  "bounds": "One source/status and one obstruction assessment. No graph census.",
+  "do_not_recompute": [
+    "RL2 corpus",
+    "RL3 base certificate; unchanged artifacts and verified coverage retained"
+  ],
+  "stop_and_repair_active": false,
+  "stop_reason": "No independent unrestricted six-color obstruction theorem recovered or proved; single-work-unit stopping rule reached. Restricted M1 also misses the entire critical frontier.",
+  "recommendation": "it makes sense to finish up here",
+  "checkpoint_branch": "work/rl4-colorful-k6-20260930",
+  "authority_promoted": false
+}

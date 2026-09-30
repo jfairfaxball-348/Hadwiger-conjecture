@@ -1,0 +1,79 @@
+{
+  "format": "rl4-nonauthoritative-checkpoint-v1",
+  "date": "2026-09-30",
+  "base_head": "779339630af6e819cd047462941bed97a571630b",
+  "incoming_authoritative_tree": "5fe85255f41270f3bf5a5b808f706c319c6696e3",
+  "incoming_rl": 4,
+  "default_branch": "main",
+  "checkpoint_branch": "work/rl4-colorful-k6-20260930",
+  "status": "OPEN-SESSION CHECKPOINT; NOT AUTHORITATIVE",
+  "universal_target_verdict": "NOT PROMOTED / INCONCLUSIVE",
+  "artifacts": [
+    {
+      "path": ".rl-work/RL4/INCOMING_SNAPSHOT.json",
+      "bytes": 4181,
+      "sha256": "18f7b96342cec7ca96ff2dfff9a69b58baffdb63e084434d1126656a0390fcb5",
+      "git_blob": "a666b609bc29dfe9576e525315452db4d9990fa9"
+    },
+    {
+      "path": ".rl-work/RL4/MECHANISM_SCOPE.md",
+      "bytes": 1908,
+      "sha256": "c5119bb246141f5dfe3a147ba3f71fbd3113b4fa79f4f5fdb48a05920034b57b",
+      "git_blob": "ab518fd18de771e4246bfbd1fd9df8e64382b143"
+    },
+    {
+      "path": ".rl-work/RL4/PROOF_STATE_AND_RESIDUAL_LEDGER.md",
+      "bytes": 4494,
+      "sha256": "ec6b307dfa6193efc117a93398364d3522534c1fcaf3916c20676b8d5aeb1fe0",
+      "git_blob": "e38dbaf9c32840c39544f77109425ff790f198b6"
+    },
+    {
+      "path": ".rl-work/RL4/README.md",
+      "bytes": 1587,
+      "sha256": "8f3551675f52b79a0bb9e75884ed30df038f5abfee3cccb2c42538a0b39b3930",
+      "git_blob": "8bb9a42f5cea4035c3cd011beea0d95405a9803d"
+    },
+    {
+      "path": ".rl-work/RL4/RESUME_STATE.json",
+      "bytes": 3458,
+      "sha256": "7e66763d87252e8abed689c3c92e7809e4a411b6a254ebd78d02c6575e8efef0",
+      "git_blob": "808b44cfd50b1a40bc62b9af0945fd4973e33bfb"
+    },
+    {
+      "path": ".rl-work/RL4/RL4_ADMISSIBILITY_REPORT.md",
+      "bytes": 11357,
+      "sha256": "336de9a2cf7e460431911a5b303b432d362f4da03e0c5cd4acc94853a94a1d5f",
+      "git_blob": "7fa163b99442f80f68bb75b014882c4385f61195"
+    },
+    {
+      "path": ".rl-work/RL4/SOURCE_STATUS_AND_SEARCH_LOG.md",
+      "bytes": 9022,
+      "sha256": "905c131ddd5c206cd2212351e23e65eb86441323ca56cc5a175eacaaf99bfb28",
+      "git_blob": "107fc7fb4ace7bdd9ac9a0ae0f5ec5a5f63f88a3"
+    },
+    {
+      "path": ".rl-work/RL4/VERIFICATION_REPORT.md",
+      "bytes": 6710,
+      "sha256": "39490e3ecde523cb6b3f75318cb1c994c133e415f689863728360d6cb45b4829",
+      "git_blob": "de0ae2e9a2b0d8bb2257f201eb5da91d552d8963"
+    }
+  ],
+  "manifest_path": ".rl-work/RL4/CHECKPOINT_MANIFEST.json",
+  "self_hash_excluded": true,
+  "baseline_mutations": [],
+  "publication_rule": "Complete candidate tree with BASE_HEAD as sole parent; add only .rl-work/RL4 files; create one non-default work ref; verify main unchanged and read back all artifacts. This is not a numbered RL transition.",
+  "source_gaps_retained": [
+    "OPEN-0005",
+    "OPEN-0008",
+    "RL3-GAP-01",
+    "RL3-GAP-02",
+    "sixteen RL2 not-directly-checked source labels"
+  ],
+  "verifier_reuse": {
+    "rooted_base_certificate_blob": "183f4c5f9ea680eeb648998ac95732466d6400c2",
+    "rooted_base_verifier_blob": "aa525daf5cf42600e10ab2008be3744904c3a5d4",
+    "background_tree": "2524a0821e56d09fe2d49cdf4850d358ed21b38f",
+    "rerun_base_certificate": false,
+    "reason": "Unchanged artifacts; no expanded certificate domain or required research rerun."
+  }
+}

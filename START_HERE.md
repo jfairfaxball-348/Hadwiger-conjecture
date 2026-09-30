@@ -30,4 +30,4 @@ Scratch is never authority.
 
 ## Current handoff
 
-RL3 is CLOSED/FROZEN under `sessions/RL3/`. RL4 is the unique incoming session: N1 colorful rooted-K6 admissibility, with full sharp Hadwiger still the root. Begin only through `authoritative/START_HERE.md` and its sole RL4 brief. Elementary scoped barriers and one exact finite base are classified explicitly; the universal bridge remains unresolved.
+RL4 is CLOSED/FROZEN under `sessions/RL4/`. RL5 is the unique incoming session: the CR6 source/new-input reopening gate, with full sharp Hadwiger still the root. Begin only through `authoritative/START_HERE.md` and its sole RL5 brief. RL4 proves a restricted join-family statement and a barrier excluding that family from the critical order-7 application; universal CR6 remains inconclusive.
