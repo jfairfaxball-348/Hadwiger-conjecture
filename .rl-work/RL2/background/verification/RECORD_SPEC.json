@@ -1,0 +1,162 @@
+{
+  "format": "hadwiger-background-research-spec-v1",
+  "incoming_rl": 2,
+  "session_kind": "background_research",
+  "authority": "authoritative background corpus produced by RL2 must preserve source provenance; knowledge/ may only mirror/index it",
+  "cutoff_policy": "record an explicit research_cutoff_date; later sessions should search only for post-cutoff developments or unresolved gaps unless revalidation is required",
+  "id_policy": {
+    "source": "SRC-####",
+    "result": "RES-####",
+    "topic": "TOP-####",
+    "open_case": "OPEN-####",
+    "glossary": "TERM-####"
+  },
+  "required_outputs": [
+    "background/READ_ME_FIRST.md",
+    "background/LITERATURE_MAP.md",
+    "background/KNOWN_RESULTS.md",
+    "background/TECHNIQUES.md",
+    "background/VARIANTS_AND_RELATED_PROBLEMS.md",
+    "background/OPEN_FRONTIER.md",
+    "background/SEARCH_LOG.md",
+    "background/SOURCE_CATALOG.jsonl",
+    "background/RESULT_CATALOG.jsonl",
+    "background/TOPIC_CATALOG.jsonl",
+    "background/OPEN_CASE_CATALOG.jsonl",
+    "background/GLOSSARY.jsonl"
+  ],
+  "source_catalog_fields": {
+    "required": [
+      "source_id",
+      "title",
+      "authors",
+      "year",
+      "source_type",
+      "primary_status",
+      "stable_locator",
+      "topics",
+      "verification_status"
+    ],
+    "optional": [
+      "venue",
+      "doi",
+      "arxiv_id",
+      "url",
+      "publication_date",
+      "version",
+      "accessed_date",
+      "aliases",
+      "result_ids",
+      "notes_path",
+      "supersedes",
+      "superseded_by",
+      "correction_of",
+      "bibliographic_notes"
+    ]
+  },
+  "result_catalog_fields": {
+    "required": [
+      "result_id",
+      "label",
+      "statement_summary",
+      "result_status",
+      "scope",
+      "source_ids",
+      "primary_source_verified",
+      "relation_to_hadwiger"
+    ],
+    "optional": [
+      "year",
+      "hypotheses",
+      "equivalent_formulations",
+      "dependencies",
+      "implies",
+      "implied_by",
+      "technique_topic_ids",
+      "variant_topic_ids",
+      "open_case_ids",
+      "notes_path",
+      "caveats",
+      "attribution_notes"
+    ]
+  },
+  "topic_catalog_fields": {
+    "required": [
+      "topic_id",
+      "label",
+      "description"
+    ],
+    "optional": [
+      "aliases",
+      "source_ids",
+      "result_ids",
+      "open_case_ids",
+      "related_topic_ids",
+      "notes_path"
+    ]
+  },
+  "open_case_catalog_fields": {
+    "required": [
+      "open_case_id",
+      "label",
+      "status",
+      "scope_summary",
+      "source_ids",
+      "as_of_date"
+    ],
+    "optional": [
+      "related_result_ids",
+      "related_topic_ids",
+      "known_reductions",
+      "known_barriers",
+      "notes_path",
+      "uncertainty"
+    ]
+  },
+  "glossary_fields": {
+    "required": [
+      "term_id",
+      "term",
+      "definition_summary"
+    ],
+    "optional": [
+      "aliases",
+      "notation",
+      "source_ids",
+      "topic_ids",
+      "notes"
+    ]
+  },
+  "enum_guidance": {
+    "primary_status": [
+      "primary",
+      "authoritative_secondary",
+      "secondary_orientation",
+      "metadata_only"
+    ],
+    "verification_status": [
+      "checked_primary",
+      "checked_authoritative_secondary",
+      "metadata_checked",
+      "not_directly_checked"
+    ],
+    "result_status": [
+      "proved",
+      "exact_finite_result",
+      "conditional",
+      "equivalence_or_reduction",
+      "counterexample_to_variant",
+      "historical_claim",
+      "open",
+      "superseded_or_corrected",
+      "uncertain"
+    ]
+  },
+  "cross_reference_rules": [
+    "Every referenced ID must resolve to exactly one record.",
+    "Every material result record must cite at least one source_id.",
+    "A result may not be marked proved solely from a secondary orientation source when a primary or authoritative source is reasonably obtainable.",
+    "Human-readable synthesis must not claim more than the structured result record states.",
+    "Unresolved attribution or status conflicts must be preserved explicitly rather than silently normalized."
+  ]
+}
