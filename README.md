@@ -16,7 +16,7 @@ For the current incoming research state, begin at [`START_HERE.md`](START_HERE.m
 - `knowledge/` is non-authoritative lookup/index material only.
 - `.rl-work/` is ignored local scratch/checkpoint state.
 
-RL4 is **CLOSED/FROZEN** under [`sessions/RL4/`](sessions/RL4/START_HERE.md). Its restricted colorful-K6 deduction, critical relevance barrier and preserved source-status gap are carried with the RL3 roadmap, exact base certificate, unchanged RL2 corpus and Collatz review into `authoritative/`. The unique incoming **RL5** runs the CR6 source/new-input gate under its sole bounded brief. Universal CR6 and the full sharp bridge remain unresolved by this project.
+RL5 is **CLOSED/FROZEN** under [`sessions/RL5/`](sessions/RL5/START_HERE.md). Its one bounded CR6 source/new-input gate is blocked/inconclusive, with a checked source update at its exact scope. The RL3 roadmap, scoped proofs/barriers/certificate, RL4 deductions, unchanged RL2 corpus and Collatz review remain carried into `authoritative/`. The unique incoming **RL6** has an input-admission hold: research requires a named genuinely new input under its sole brief. Universal CR6 and the full sharp bridge remain unresolved by this project.
 
 ## Interactive convention
 

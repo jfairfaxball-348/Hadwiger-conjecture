@@ -30,4 +30,4 @@ Scratch is never authority.
 
 ## Current handoff
 
-RL4 is CLOSED/FROZEN under `sessions/RL4/`. RL5 is the unique incoming session: the CR6 source/new-input reopening gate, with full sharp Hadwiger still the root. Begin only through `authoritative/START_HERE.md` and its sole RL5 brief. RL4 proves a restricted join-family statement and a barrier excluding that family from the critical order-7 application; universal CR6 remains inconclusive.
+RL5 is CLOSED/FROZEN under `sessions/RL5/`. RL6 is the unique incoming session, with an input-admission hold after the completed CR6 gate. Full sharp Hadwiger remains the root, accepting either a rigorous proof or an actual verified counterexample. Begin through `authoritative/START_HERE.md` and its sole RL6 brief. No new qualifying input is carried; do not repeat the completed gate without a named premise-changing resource or independently justified input.

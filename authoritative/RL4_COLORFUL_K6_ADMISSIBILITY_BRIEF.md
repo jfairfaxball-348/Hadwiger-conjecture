@@ -1,5 +1,5 @@
 # Retired RL4 colorful-K6 brief path
 
-RL4 is CLOSED/FROZEN. This path is retained for the carried RL3 roadmap links and is not a current session brief. The sole incoming session is RL5, under [RL5_CR6_SOURCE_AND_NEW_INPUT_GATE_BRIEF.md](RL5_CR6_SOURCE_AND_NEW_INPUT_GATE_BRIEF.md).
+RL4 is CLOSED/FROZEN. This is navigation for carried roadmap links, not a current session brief. Its completed mandate is [frozen here](../sessions/RL4/RL4_COLORFUL_K6_ADMISSIBILITY_BRIEF.md).
 
-The completed RL4 task brief is [frozen here](../sessions/RL4/RL4_COLORFUL_K6_ADMISSIBILITY_BRIEF.md). Read [RL4_ADMISSIBILITY_REPORT.md](RL4_ADMISSIBILITY_REPORT.md) for its restricted proof, relevance barrier, source gaps and inconclusive universal outcome.
+Read [RL4_ADMISSIBILITY_REPORT.md](RL4_ADMISSIBILITY_REPORT.md) for the restricted proof and critical relevance barrier. RL5 is also CLOSED/FROZEN; the sole incoming session is RL6 under [RL6_BLOCKED_FRONTIER_INPUT_ADMISSION_BRIEF.md](RL6_BLOCKED_FRONTIER_INPUT_ADMISSION_BRIEF.md), with no accepted new input.
