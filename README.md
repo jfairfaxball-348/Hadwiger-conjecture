@@ -16,7 +16,7 @@ For the current incoming research state, begin at [`START_HERE.md`](START_HERE.m
 - `knowledge/` is non-authoritative lookup/index material only.
 - `.rl-work/` is ignored local scratch/checkpoint state.
 
-The initial scaffold deliberately contains **no mathematical roadmap, no chosen attack, and no mathematical claim**. Those belong to subsequent research sessions.
+RL2 is **CLOSED/FROZEN** under [`sessions/RL2/`](sessions/RL2/START_HERE.md). Its literature corpus and pinned Collatz failure review are carried into `authoritative/`. The unique incoming **RL3** sets a top-down roadmap for the full sharp conjecture; no proof strategy has yet been selected and no project-originated theorem or certificate has been established.
 
 ## Interactive convention
 

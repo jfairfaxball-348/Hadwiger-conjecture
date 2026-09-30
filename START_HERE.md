@@ -28,6 +28,6 @@ Shell/local scratch belongs under ignored `.rl-work/RL<incoming>/`. Connector wo
 
 Scratch is never authority.
 
-## Initial condition
+## Current handoff
 
-This scaffold intentionally contains no mathematical roadmap, no selected proof route, and no mathematical claim. RL1 is the first incoming exploratory session.
+RL2 is CLOSED/FROZEN under `sessions/RL2/`. RL3 is the unique incoming session: top-down roadmap setting, with the full sharp conjecture as its highest-level target. Begin only through `authoritative/START_HERE.md`. No project-originated theorem or certificate has been established.

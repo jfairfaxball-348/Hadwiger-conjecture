@@ -1,0 +1,166 @@
+{
+  "format": "rl-connector-resume-v1",
+  "base_head": "0ded120b3c9b92cae044d076d7d81a7cdd4eedb8",
+  "authoritative_tree": "8e0bcfb94cb30ddb2127680018045edbbe5fc9e7",
+  "incoming_rl": 2,
+  "session_brief": "authoritative/RL2_BACKGROUND_RESEARCH_BRIEF.md",
+  "validated_authority_paths": [
+    "authoritative/START_HERE.md",
+    "authoritative/RL2_BACKGROUND_RESEARCH_BRIEF.md",
+    "authoritative/RL2_RESEARCH_RECORD_SPEC.json"
+  ],
+  "gate_status": "PASS: unique RL2; three authority blobs; no nested AGENTS or inherited mathematical claims; no unresolved integrity failure.",
+  "last_verified_frontier": "Complete required background package; 31 source/31 result/14 topic/8 open/30 glossary records; mechanical validation PASS; manual source/scope review recorded; zero project-originated claims.",
+  "completed_artifacts": [
+    {
+      "path": "COLLATZ_FAILURE_REVIEW.md",
+      "sha256": "1eeb94583f35d972df0fd5e9b6c4bf60f2fd8b35913327d69649e63c5eba9822",
+      "git_blob_sha": "f6bc62a6dc71944f71e37bc7bc734e76fa436882"
+    },
+    {
+      "path": "README.md",
+      "sha256": "e404f0b949fcf839a6fc893b4f3919db606575d78dbb1babd75670275b80bb5d",
+      "git_blob_sha": "dc607eee73e2fc17626bb86852d7fb085fb12678"
+    },
+    {
+      "path": "RL3_TOP_DOWN_ROADMAP_BRIEF.md",
+      "sha256": "06c5a906bc70b079b7a994175454fcab452052cb040b5b7f1799f1ee22c02ca4",
+      "git_blob_sha": "7c3079b3c2ddbf9984544d0c5ba35d891339613a"
+    },
+    {
+      "path": "VERIFICATION_REPORT.md",
+      "sha256": "e1d5c213e6e97ccb78a17d39c6ab9d46552788fa5c389d05f8b151bf48f13b11",
+      "git_blob_sha": "f68f9806621929722f731d653b82650f8724273d"
+    },
+    {
+      "path": "background/CORPUS_METADATA.json",
+      "sha256": "fe35a89d5d643368a8c347f1ebd13b211eeccea3a4b1798bf7dc27480eab06dc",
+      "git_blob_sha": "de40912a1908e2f718cd197a825c56929cadd53a"
+    },
+    {
+      "path": "background/GLOSSARY.jsonl",
+      "sha256": "1da4aaaa5a9b22bb4f61a815a5324fae4bf65b97f26523d63c572af9825a2ae1",
+      "git_blob_sha": "51723d7c22256c839465409a6ef400075c9fd3cf"
+    },
+    {
+      "path": "background/KNOWN_RESULTS.md",
+      "sha256": "aed3e9156a941671625e33e5ffe368210fb698c5b9b1d771b8f357f199a91d57",
+      "git_blob_sha": "818aaac0b130eea3254feb85abc63caa026d76c3"
+    },
+    {
+      "path": "background/LITERATURE_MAP.md",
+      "sha256": "0fa63334751a6f50378d92d6cd940e5faad7d796e6145f9e66a9ead91f49cf55",
+      "git_blob_sha": "fe51202001c62d621596e4a1ec2279abb13f12f0"
+    },
+    {
+      "path": "background/OPEN_CASE_CATALOG.jsonl",
+      "sha256": "e62b52764e21774d6b130c2f11ce89cb3fd9be3492b2ea998797a3c6284c488a",
+      "git_blob_sha": "d948c777d61838520641e07d31018d91d690ee04"
+    },
+    {
+      "path": "background/OPEN_FRONTIER.md",
+      "sha256": "954b3a6d44e1cfa1d3aa30cc60996136ab997a84586824fb1c5a12731d17ca5f",
+      "git_blob_sha": "c59fb624af61f8df45a135fc966b8a76214a0d2e"
+    },
+    {
+      "path": "background/READ_ME_FIRST.md",
+      "sha256": "9f21679f25ec502b37637e46387932e38d5e353b5413dfa315a01e7e835d4ca7",
+      "git_blob_sha": "e40de72e128359f0cfc6d608a9d0eda5fb73f3a5"
+    },
+    {
+      "path": "background/RESULT_CATALOG.jsonl",
+      "sha256": "440314c3381952437ae53ae450153da2cdb5c349575dbb22505e313230b8393e",
+      "git_blob_sha": "b550f02f2c91a767631e9e9844a11a3f8f79252f"
+    },
+    {
+      "path": "background/SEARCH_LOG.md",
+      "sha256": "d572a57135d6ca34860c9f140690b4dd3fa926a8e499abe228b2cf252f76aef0",
+      "git_blob_sha": "784203e50b0b88b1da8ee8bde687407af9f8721a"
+    },
+    {
+      "path": "background/SOURCE_CATALOG.jsonl",
+      "sha256": "ab2adeb373bc6692ee893b522285df670b110f24ff520116552ff652d17e261c",
+      "git_blob_sha": "7ec89d2cd3d387cbcc0122732ee36b07a19e8e12"
+    },
+    {
+      "path": "background/SOURCE_CHECKS.md",
+      "sha256": "36151de081af95581f40036295622b244adb3c43448c47357ec148433b312a27",
+      "git_blob_sha": "21e6c67dbfb7702d11fe0f60d1f3462b9499be32"
+    },
+    {
+      "path": "background/TECHNIQUES.md",
+      "sha256": "b6d384f0e871282995995d6704f3f0284b4bc776c52680562137deafba503ef2",
+      "git_blob_sha": "8f8a27857d15cbae2ca0e5f900770f8985c948f1"
+    },
+    {
+      "path": "background/TOPIC_CATALOG.jsonl",
+      "sha256": "9c3c0c79e023fb6e82c1590d1fe5fa0d1c6f254a12c6d5407cdec54d77ec9c57",
+      "git_blob_sha": "0f34808195741448b0c12ea32bdd70f8546ba0f5"
+    },
+    {
+      "path": "background/VARIANTS_AND_RELATED_PROBLEMS.md",
+      "sha256": "b55984360bd573d299024c4d7487a2b5702c2aea1c7d7f8400fe85c4accce613",
+      "git_blob_sha": "2e2d39a34b47aa2605564ab594349f7e79a6c8b7"
+    },
+    {
+      "path": "background/verification/RECORD_SPEC.json",
+      "sha256": "debf8f56f3f2d12add28c14d59f1c45b0afc7e25cd0a73d4e8ee879d3afdf2d1",
+      "git_blob_sha": "4aa44526b7af6cec124638f3f625c6b0181f3f7e"
+    },
+    {
+      "path": "background/verification/verify_corpus.py",
+      "sha256": "170db45260d8a558960dfd949ac4dd211675e68e748fe1490963cf7504230960",
+      "git_blob_sha": "2e210600f63966967e272e28dae0f9fef036cd40"
+    },
+    {
+      "path": "incoming/RL2_BACKGROUND_RESEARCH_BRIEF.md",
+      "sha256": "ac00f02ac5b8e832c4168246b3891fb7bd16606edd4f56a587fdb900de989d6e",
+      "git_blob_sha": "156c3218b394b4a3e7ec8a6bf07f744b19018106"
+    },
+    {
+      "path": "incoming/RL2_RESEARCH_RECORD_SPEC.json",
+      "sha256": "debf8f56f3f2d12add28c14d59f1c45b0afc7e25cd0a73d4e8ee879d3afdf2d1",
+      "git_blob_sha": "4aa44526b7af6cec124638f3f625c6b0181f3f7e"
+    },
+    {
+      "path": "incoming/START_HERE.md",
+      "sha256": "fef0dc867105127df4bbf2dfb9180ea6320fe4d322ef53b907c37dfed0797c68",
+      "git_blob_sha": "d9d928be2c79dd0dafd1258fd68473d4d1952709"
+    }
+  ],
+  "unpromoted_or_uncovered": [
+    "All work remains NOT PROMOTED until the normal atomic RL2 closeout.",
+    "RL3 is a drafted roadmap-setting successor, not started research.",
+    "OPEN-0008: reported September 2026 Lin manuscript not retrieved or verified.",
+    "OPEN-0005: dedicated newest sharp-fractional status check outstanding.",
+    "Sixteen sources not directly inspected; bibliographic/version ambiguities remain explicit."
+  ],
+  "next_exact_operation": "On finish up, enter CLOSEOUT_LOCK; read deterministic closeout instructions; verify main BASE_HEAD and authority snapshot; freeze this full RL2 corpus/review; carry load-bearing background IDs unchanged and review into successor; update packaging labels consistently; install RL3 roadmap brief separately; validate complete intended tree and one numbered transition; advance main once and read back.",
+  "do_not_recompute": [
+    "Broad pre-cutoff literature search already represented in SOURCE_CATALOG and SEARCH_LOG.",
+    "Collatz audit at pinned commit unless a new source or discrepancy requires review.",
+    "Startup authority reads unless HEAD/authority changes."
+  ],
+  "stop_and_repair_active": false,
+  "cutoff_date": "2026-09-30",
+  "user_successor_instruction": "RL3 must set a top-down roadmap anchored in the hardest full-conjecture target and avoid Collatz local/global bridge errors.",
+  "work_unit": "RL2 source-grounded background corpus plus requested external failure audit and separate successor roadmap mandate",
+  "checkpoint_branch": "work/rl2-background-20260930",
+  "checkpoint_path": ".rl-work/RL2/",
+  "incoming_blob_shas": {
+    "START_HERE.md": "d9d928be2c79dd0dafd1258fd68473d4d1952709",
+    "RL2_BACKGROUND_RESEARCH_BRIEF.md": "156c3218b394b4a3e7ec8a6bf07f744b19018106",
+    "RL2_RESEARCH_RECORD_SPEC.json": "4aa44526b7af6cec124638f3f625c6b0181f3f7e"
+  },
+  "bounds": {
+    "research_cutoff_date": "2026-09-30",
+    "original_proof_attacks": 0,
+    "new_RL3_research": false,
+    "default_branch_mutations": 0,
+    "checkpoint_only_additions": ".rl-work/RL2/"
+  },
+  "pre_save_check": "Default HEAD and root tree re-read and match pinned inputs. Only main existed; checkpoint branch is new. Existing authoritative tree remains 8e0bcfb94cb30ddb2127680018045edbbe5fc9e7.",
+  "intended_output": "One separate branch checkpoint commit adding only .rl-work/RL2/; no numbered transition or main update.",
+  "post_save_check_required": "Read branch ref and full checkpoint tree; verify every added Git blob hash and every pre-existing root entry; recheck default HEAD unchanged.",
+  "recommendation": "it makes sense to finish up here"
+}
