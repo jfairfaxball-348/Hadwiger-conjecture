@@ -1,23 +1,30 @@
-# RL1 authoritative start
+# RL2 authoritative start
 
-Status: repository scaffold complete; RL1 is the unique incoming research session and has not started.
+Status: RL1 is CLOSED/FROZEN; RL2 is the unique incoming research session and has not started.
 
-## Current authority
+## Unique RL2 session
 
-There are no promoted mathematical claims, lemmas, certificates, conjectures, barriers, corrections, or computational results yet.
+Read and execute:
 
-There is no mathematical roadmap and no preselected attack route.
+1. `RL2_BACKGROUND_RESEARCH_BRIEF.md`
+2. `RL2_RESEARCH_RECORD_SPEC.json`
 
-## Unique RL1 session brief
+## Sole session purpose
 
-After the start gate, read and execute only:
+Build a deep, durable background-research corpus for the Hadwiger Conjecture.
 
-`RL1_SESSION_BRIEF.md`
+The goal is to understand and record the existing research space well enough that later sessions can consult the repository instead of repeatedly searching for the same literature, rediscovering standard facts, or reconstructing provenance.
 
-Any additional kickoff instruction from the user takes priority over the generic exploratory brief, subject to the integrity rules in `AGENTS.md`.
+RL2 is a literature/background session, not an original proof-attack session.
 
-## Verification state
+## Incoming mathematical state
 
-At scaffold time there are no mathematical verifiers or red teams because there is no promoted mathematics to verify.
+There are still no project-originated mathematical claims, lemmas, certificates, or conjectures.
 
-The repository/Git state itself is the only incoming transport for RL1.
+RL2 may record and classify results from the literature, but every such result must retain source provenance and must be distinguished from project-originated proof state.
+
+## Startup
+
+Complete the normal start gate in `AGENTS.md`.
+
+For historical provenance, the only frozen session normally needed at startup is `sessions/RL1/`, and even that need not be loaded unless required to verify the bootstrap transition.
