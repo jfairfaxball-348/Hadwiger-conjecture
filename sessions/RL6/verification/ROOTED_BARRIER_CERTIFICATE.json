@@ -1,0 +1,143 @@
+{
+  "status": "PASS",
+  "domain": "one labeled graph P on vertices 0..8",
+  "vertex_labels": {
+    "x": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "y": [
+      4,
+      5,
+      6,
+      7
+    ],
+    "z": 8
+  },
+  "edges": [
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      3
+    ],
+    [
+      0,
+      4
+    ],
+    [
+      0,
+      7
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      1,
+      4
+    ],
+    [
+      1,
+      5
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      2,
+      5
+    ],
+    [
+      2,
+      6
+    ],
+    [
+      3,
+      6
+    ],
+    [
+      3,
+      7
+    ],
+    [
+      4,
+      5
+    ],
+    [
+      4,
+      7
+    ],
+    [
+      4,
+      8
+    ],
+    [
+      5,
+      6
+    ],
+    [
+      5,
+      8
+    ],
+    [
+      6,
+      7
+    ],
+    [
+      6,
+      8
+    ],
+    [
+      7,
+      8
+    ]
+  ],
+  "n": 9,
+  "m": 20,
+  "connectivity": 4,
+  "cuts_of_size_at_most_3_checked": 130,
+  "root_set": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "rooted_model_assignments_checked": 3125,
+  "rooted_K4_models": 0,
+  "K4_witness": [
+    [
+      8
+    ],
+    [
+      4
+    ],
+    [
+      5
+    ],
+    [
+      6,
+      7
+    ]
+  ],
+  "chromatic_number": 4,
+  "three_colorings_checked": 19683,
+  "four_coloring": [
+    2,
+    3,
+    2,
+    3,
+    0,
+    1,
+    0,
+    1,
+    2
+  ],
+  "root_set_colorful": false,
+  "limits": "Exact finite base only. Universal join lift has a separate analytic proof; no Hadwiger counterexample or general graph census."
+}

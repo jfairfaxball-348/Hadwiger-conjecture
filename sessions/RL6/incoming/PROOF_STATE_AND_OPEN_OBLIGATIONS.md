@@ -1,6 +1,6 @@
-# Proof state and open obligations after RL6
+# Proof state and open obligations after RL5
 
-Status: RL6 CLOSED/FROZEN; RL7 is the sole incoming session for the bounded cyclic degree-seven compatibility assessment. Only the completed scoped analytic results below are promoted; the cyclic routing input remains conjectural. No RL7 research has begun. Mathematical cutoff: 2026-09-30.
+Status: RL5 CLOSED/FROZEN; RL6 is the sole incoming session, ready for bounded recovery assessment under the explicit process amendment of 2026-09-30. No new mathematical input or RL6 result is promoted. Mathematical cutoff: 2026-09-30.
 This is the canonical classification record for the carried RL3 outputs, completed RL4 deductions and completed RL5 source gate. The original RL3 record is preserved in sessions/RL4/incoming/. Freezing a candidate statement does not prove it. Historical NOT PROMOTED files in the frozen checkpoint are provenance; this record and the completed-session reports govern the frozen result.
 
 ## Root and mathematical success
@@ -38,7 +38,7 @@ There is no new unrestricted Hadwiger theorem, CR_6 countermodel or ordinary-Had
 
 No previously promoted mathematical claim was repaired or demoted in RL4. The earlier scoped route failures retain their original classifications. RL4 closeout made only explicit status, path and control-wording normalizations, with mathematical statements and limitations preserved. All nine original RL4 checkpoint files and the full 31-blob incoming authority are retained byte-identically as checkpoint/ and incoming/ in sessions/RL4/. The earlier RL3 freeze and all previous session trees are unchanged.
 
-The pinned Collatz failure review is binding methodology: exact quantifiers, exhaustive coverage, simultaneous model compatibility, retained sharpness, non-circular sufficiency, falsification and stopping at the first invalid dependency. Full reports are RL3_ROADMAP.md, DEPENDENCY_MAP.md, BRIDGE_LEDGER.md, FALSIFICATION_REPORT.md, SOURCE_ADDENDUM.md, RL4_ADMISSIBILITY_REPORT.md, PROOF_STATE_AND_RESIDUAL_LEDGER.md, SOURCE_STATUS_AND_SEARCH_LOG.md and VERIFICATION_REPORT.md. RL5_CR6_SOURCE_AND_NEW_INPUT_GATE_BRIEF.md governed the now-completed RL5 work unit; the completed RL6 brief was RL6_ROUTE_RECOVERY_AND_PIVOT_BRIEF.md; the sole current brief is RL7_CYCLIC_DEGREE7_COMPATIBILITY_BRIEF.md. M1 must not be restarted without a named premise-changing input addressing its critical-frontier coverage barrier.
+The pinned Collatz failure review is binding methodology: exact quantifiers, exhaustive coverage, simultaneous model compatibility, retained sharpness, non-circular sufficiency, falsification and stopping at the first invalid dependency. Full reports are RL3_ROADMAP.md, DEPENDENCY_MAP.md, BRIDGE_LEDGER.md, FALSIFICATION_REPORT.md, SOURCE_ADDENDUM.md, RL4_ADMISSIBILITY_REPORT.md, PROOF_STATE_AND_RESIDUAL_LEDGER.md, SOURCE_STATUS_AND_SEARCH_LOG.md and VERIFICATION_REPORT.md. RL5_CR6_SOURCE_AND_NEW_INPUT_GATE_BRIEF.md governed the now-completed RL5 work unit; the sole current brief is RL6_ROUTE_RECOVERY_AND_PIVOT_BRIEF.md. M1 must not be restarted without a named premise-changing input addressing its critical-frontier coverage barrier.
 
 ## Completed RL5 source gate and RL6 boundary
 
@@ -48,30 +48,8 @@ The obligation closed is assessment of that named new source lead and the bounde
 
 RL3-GAP-01 remains UNVERIFIED: a newer primary discussion does not certify the six-color status or exhaustive discovery through the cutoff. RL3-GAP-02, OPEN-0005, OPEN-0008 / SRC-0014 / RES-0015 and all sixteen unchecked-source limits remain. Every critical order-7 application is uncovered by a newly justified model; M1 still covers none of it. All larger chromatic orders and every residual bridge parameter remain.
 
-At RL5 closeout, RL6 inherited no accepted new input and an operational hold under RL6_BLOCKED_FRONTIER_INPUT_ADMISSION_BRIEF.md. That exact historical boundary remains frozen in sessions/RL5/. The explicit user process amendment then made RL6_ROUTE_RECOVERY_AND_PIVOT_BRIEF.md the sole incoming RL6 brief and permits bounded development/assessment of changed repair, rework, or pivot candidates. Proof admission still requires independent justification, full scope and sharp simultaneous compatibility; repeated unchanged lookups or M1 deductions are not scheduled. Both a full sharp proof and an actual rigorously verified ordinary counterexample remain legitimate root outcomes.
+At RL5 closeout, RL6 inherited no accepted new input and an operational hold under RL6_BLOCKED_FRONTIER_INPUT_ADMISSION_BRIEF.md. That exact historical boundary remains frozen in sessions/RL5/. The explicit user process amendment now makes RL6_ROUTE_RECOVERY_AND_PIVOT_BRIEF.md the sole current brief and permits bounded development/assessment of changed repair, rework, or pivot candidates. Proof admission still requires independent justification, full scope and sharp simultaneous compatibility; repeated unchanged lookups or M1 deductions are not scheduled. Both a full sharp proof and an actual rigorously verified ordinary counterexample remain legitimate root outcomes.
 
-## Historical process amendment — no mathematical promotion
+## Explicit process amendment — no mathematical promotion
 
 [RECOVERY_PROCESS_AMENDMENT.md](RECOVERY_PROCESS_AMENDMENT.md) records the 2026-09-30 authorization and preservation checks. [FAILURE_AND_LESSON_LEDGER.md](FAILURE_AND_LESSON_LEDGER.md) indexes inherited barriers and the operational repair at their actual scopes. The ledger adds no theorem or certificate. The current programme remains active after route failures, with one bounded next recovery task per handover. All mathematical classifications, inherited source/certificate limits, and residual obligations above remain unchanged. No previously promoted mathematical claim is corrected or demoted by this amendment.
-
-## Completed RL6 scope and sole RL7 successor
-
-[RL6_RECOVERY_REPORT.md](RL6_RECOVERY_REPORT.md) supplies complete proofs; [RL6_PROOF_STATE_AND_RESIDUAL_LEDGER.md](RL6_PROOF_STATE_AND_RESIDUAL_LEDGER.md) supplies the exact classification/residual ledger. RL6 compares three changed candidates and deeply assesses C1 only. No inherited theorem is corrected or demoted.
-
-| Completed item | Canonical classification | Exact scope |
-|---|---|---|
-| RL6-P01/P02 | Proved scoped analytic mathematics | Exact chi(H)=6, full every-six-coloring colorfulness and an existential matching/private-S-color certificate give one rooted K6 with all fifteen adjacencies. All graph orders and |S|, including >6, remain in the scoped theorem. |
-| RL6-P03 | Proved analytic critical-input/exclusion | Every C_7 degree-seven matching-defect neighborhood supplies that certificate by a proper star minor's coloring, yielding a forbidden proper K7 minor. This configuration is excluded; no universal coverage. |
-| RL6-P03 star-fold context | Proved analytic necessary condition | alpha(N(v))<=d(v)-5 in C_7; the degree-six case supplies K7. Hypothetical minor-minimal K7-minor-free counterexamples have minimum degree at least seven and triangle-free degree-seven complement-neighborhoods. |
-| RL6-P04 | Proved analytic countermodel / coverage barrier | H=C5 join C5, S=V(H), satisfies F_6 but has no matching certificate for any optimal coloring/transversal. Its explicit positive rooted K6 prevents interpreting this as a CR_6 or ordinary negative. |
-| C1 unbounded example | Analytic witness family | Every m>=1; connected non-universal H of order 12+m with |S|=6+m and an explicit simultaneous model. No critical unavoidability. |
-| C2 | Proved analytic necessary condition; completion pivot suspended | For an actually independent large bipartite side in C_t, external signatures form an antichain and b<=2^r. No upper bound on unbounded r or inherited independent-side extraction. |
-| C3 | Proved scoped analytic coloring reduction; coverage open | One-defect clique separator with an x-y path through each side, 2<=|K|<=t-1; two proper-minor colorings glue. No uniform unavoidability. |
-
-The incoming root/promoted-scope/source-gap sections above retain their inherited scopes. Source/corpus/certificate classifications are unchanged; complete proof here does not imply novelty, formal checking or independent external review.
-
-Every other degree-seven complement, all degrees at least eight, arbitrary graph order, general colorful pairs outside the extra certificate, all ordinary t>=8 and CR_s for s>=7 remain. BR-03 retains both alternatives, unknown T and the finite prefix at unbounded order; BR-04's sharp upgrade, BR-05's transfer and BR-06's unavoidability remain. General CR_6 and full Hadwiger are unresolved by this project.
-
-[FAILURE_AND_LESSON_LEDGER.md](FAILURE_AND_LESSON_LEDGER.md) carries FL-001–FL-008 and their exact recovery conditions. Preserve RL3-GAP-01, original/published access failures and incomplete cutoff discovery, RL3-GAP-02, OPEN-0005, OPEN-0008 / SRC-0014 / RES-0015 and all sixteen unchecked-source limits.
-
-The sole current brief is [RL7_CYCLIC_DEGREE7_COMPATIBILITY_BRIEF.md](RL7_CYCLIC_DEGREE7_COMPATIBILITY_BRIEF.md). RL6's brief and earlier hold/control wording are historical. The shared-palette cyclic selection input is NOT PROMOTED / NOT STARTED; permission to develop it does not grant its truth. No broader roadmap or source gate is installed.
