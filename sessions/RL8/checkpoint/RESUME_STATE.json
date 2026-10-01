@@ -1,0 +1,68 @@
+{
+  "format": "rl-connector-resume-v1",
+  "base_head": "2fbd0440857302ac3a8e1807f4d0451b6a641823",
+  "authoritative_tree": "112b083f1fe7579ea7ce80fe9d02067e6a7c59b1",
+  "incoming_rl": 8,
+  "session_brief": "authoritative/RL8_UNCOLORED_CYCLIC_ROUTING_BRIEF.md",
+  "validated_authority_paths": [
+    "AGENTS.md",
+    "docs/RESEARCH_RECOVERY_PROTOCOL.md",
+    "authoritative/START_HERE.md",
+    "authoritative/RL8_UNCOLORED_CYCLIC_ROUTING_BRIEF.md",
+    "authoritative/RL7_SESSION_STATE_AND_RL8_KICKOFF.md",
+    "authoritative/RL7_COMPATIBILITY_REPORT.md",
+    "authoritative/RL7_PROOF_STATE_AND_RESIDUAL_LEDGER.md",
+    "authoritative/FAILURE_AND_LESSON_LEDGER.md",
+    "authoritative/PROOF_STATE_AND_OPEN_OBLIGATIONS.md",
+    "authoritative/RL6_RECOVERY_REPORT.md",
+    "authoritative/RL6_PROOF_STATE_AND_RESIDUAL_LEDGER.md",
+    "authoritative/DEPENDENCY_MAP.md",
+    "authoritative/BRIDGE_LEDGER.md",
+    "authoritative/COLLATZ_FAILURE_REVIEW.md",
+    "authoritative/VERIFICATION_REPORT.md",
+    "authoritative/background/READ_ME_FIRST.md",
+    "authoritative/AUXILIARY_COUNTERMODEL.json",
+    "authoritative/verify_auxiliary_countermodel.py"
+  ],
+  "last_verified_frontier": "RL8-P01 alpha<=2 order/core count; P02 full simultaneous UP6 on Q5 at arbitrary total order; P03 universal all-two-edge obstruction on one D_cyc graph; P04 positive UP6/rooted K6/proper K7. All four verifiers PASS at their recorded scopes. General UP6 unproved/unrefuted.",
+  "completed_artifacts": [
+    "RL8_UNCOLORED_ROUTING_REPORT.md",
+    "RL8_PROOF_STATE_AND_RESIDUAL_LEDGER.md",
+    "FAILURE_AND_LESSON_LEDGER_APPENDIX.md",
+    "NEXT_RECOVERY_TASK.md",
+    "UNCOLORED_CORE_WITNESS.json",
+    "verify_uncolored_core.py",
+    "VERIFICATION_REPORT.md",
+    "VERIFIER_RESULTS.json"
+  ],
+  "unpromoted_or_uncovered": [
+    "All RL8 work results pending numbered promotion.",
+    "General UP_6 outside independently present Q5.",
+    "EX5 and complement-perfect-matching edge extension unproved and unassessed.",
+    "Core-free critical cyclic case and every inherited bridge/source/sharpness residual."
+  ],
+  "next_exact_operation": "Normal RL8 closeout on finish up: freeze verified work, append FL-010, install the prepared EX5 recovery task as sole RL9 brief; no further mathematics in closeout.",
+  "do_not_recompute": [
+    "No SP_6 replay, M1 restart, source gate, graph census, sampling or roadmap refresh."
+  ],
+  "failure_lesson_ids": [
+    "FL-001",
+    "FL-002",
+    "FL-003",
+    "FL-004",
+    "FL-005",
+    "FL-006",
+    "FL-007",
+    "FL-008",
+    "FL-009",
+    "FL-010"
+  ],
+  "recovery_mode": "rework",
+  "changed_input_or_mechanism": "Prepared EX5 removes the assumed exterior clique in the explicit alpha<=2 slice; it does not restrict general UP6 to that slice.",
+  "next_task_bounds": "EX5: one analytic complement-edge extension inference in the proved 12-vertex global-alpha<=2 slice; at most seven star types; no census or sampling; general graph order/exterior remain unbounded.",
+  "retry_conditions": [
+    "Independent helper-structure extraction, or a different simultaneous branch-allocation input, required before general routing consequences.",
+    "All-two-edge shortcut requires an independently justified distinct-resource premise."
+  ],
+  "stop_and_repair_active": false
+}

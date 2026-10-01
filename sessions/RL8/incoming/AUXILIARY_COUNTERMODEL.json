@@ -1,0 +1,215 @@
+{
+  "format": "rl7-cyclic-auxiliary-countermodel-v1",
+  "status": "completed-scoped-analytic-witness",
+  "construction": "H is the simple complement of F. F consists exactly of the S cycle and listed T-to-S edges; T is independent in F.",
+  "S_cycle": [
+    "u0",
+    "u1",
+    "u2",
+    "u3",
+    "u4",
+    "u5",
+    "u6"
+  ],
+  "T": [
+    "t0",
+    "t1",
+    "t2",
+    "t3",
+    "t4"
+  ],
+  "F_T_neighbors": {
+    "t0": [
+      "u0",
+      "u2",
+      "u4"
+    ],
+    "t1": [
+      "u1",
+      "u3",
+      "u5"
+    ],
+    "t2": [
+      "u2",
+      "u4",
+      "u6"
+    ],
+    "t3": [
+      "u3",
+      "u5",
+      "u0"
+    ],
+    "t4": [
+      "u4",
+      "u6",
+      "u1"
+    ]
+  },
+  "star_coloring_matching_rows": [
+    {
+      "i": 0,
+      "repeated_S": [
+        "u0",
+        "u1"
+      ],
+      "T_partners": [
+        "u2",
+        "u3",
+        "u4",
+        "u5",
+        "u6"
+      ]
+    },
+    {
+      "i": 1,
+      "repeated_S": [
+        "u1",
+        "u2"
+      ],
+      "T_partners": [
+        "u0",
+        "u3",
+        "u4",
+        "u5",
+        "u6"
+      ]
+    },
+    {
+      "i": 2,
+      "repeated_S": [
+        "u2",
+        "u3"
+      ],
+      "T_partners": [
+        "u0",
+        "u1",
+        "u4",
+        "u5",
+        "u6"
+      ]
+    },
+    {
+      "i": 3,
+      "repeated_S": [
+        "u3",
+        "u4"
+      ],
+      "T_partners": [
+        "u0",
+        "u1",
+        "u2",
+        "u5",
+        "u6"
+      ]
+    },
+    {
+      "i": 4,
+      "repeated_S": [
+        "u4",
+        "u5"
+      ],
+      "T_partners": [
+        "u0",
+        "u1",
+        "u2",
+        "u3",
+        "u6"
+      ]
+    },
+    {
+      "i": 5,
+      "repeated_S": [
+        "u5",
+        "u6"
+      ],
+      "T_partners": [
+        "u0",
+        "u1",
+        "u2",
+        "u3",
+        "u4"
+      ]
+    },
+    {
+      "i": 6,
+      "repeated_S": [
+        "u6",
+        "u0"
+      ],
+      "T_partners": [
+        "u2",
+        "u5",
+        "u4",
+        "u3",
+        "u1"
+      ]
+    }
+  ],
+  "uncolored_positive_paths": {
+    "star_i": 3,
+    "omitted": "u4",
+    "paths": [
+      [
+        "u0",
+        "t2",
+        "u1"
+      ],
+      [
+        "u1",
+        "t3",
+        "u2"
+      ],
+      [
+        "u2",
+        "t4",
+        "u3"
+      ],
+      [
+        "u5",
+        "t0",
+        "u6"
+      ],
+      [
+        "u6",
+        "t1",
+        "u0"
+      ]
+    ]
+  },
+  "rooted_K6_branches": [
+    [
+      "u0",
+      "t2"
+    ],
+    [
+      "u1",
+      "t3"
+    ],
+    [
+      "u2",
+      "t4"
+    ],
+    [
+      "u3"
+    ],
+    [
+      "u5",
+      "t0"
+    ],
+    [
+      "u6",
+      "t1"
+    ]
+  ],
+  "G_added_vertex": "v",
+  "scope": {
+    "analytic_report": "RL7_COMPATIBILITY_REPORT.md",
+    "negative": "SP_6 auxiliary bichromatic selection only, for every star coloring and either root choice; universal proof is analytic",
+    "positive": "one S-rooted K6 in H; adding singleton v gives K7 in G",
+    "not_a_CR6_countermodel": true,
+    "not_an_ordinary_Hadwiger_counterexample": true,
+    "not_full_C7_critical": true,
+    "general_UP6_status": "unproved; this one witness passes",
+    "checker_limit": "fixed explicit graph/witness consistency, no graph, coloring or path census; no formal or independent external proof certification"
+  }
+}

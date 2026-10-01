@@ -16,7 +16,7 @@ For the current incoming research state, begin at [`START_HERE.md`](START_HERE.m
 - `knowledge/` is non-authoritative lookup/index material only.
 - `.rl-work/` is ignored local scratch/checkpoint state.
 
-RL7 is **CLOSED/FROZEN** under [sessions/RL7/](sessions/RL7/START_HERE.md). Its bounded assessment gives an analytic countermodel to auxiliary shared-color routing and an explicit positive rooted K6, preserving the distinction from CR6 and ordinary negatives. The unique incoming **RL8** assesses uncolored cyclic routing under its [sole brief](authoritative/RL8_UNCOLORED_CYCLIC_ROUTING_BRIEF.md). UP_6 remains unproved; all inherited scopes, corpus/certificate, source limits and failure lessons remain. General CR6 and full sharp Hadwiger remain unresolved by this project.
+RL8 is **CLOSED/FROZEN** under [sessions/RL8/](sessions/RL8/START_HERE.md). It proves a scoped uncolored cyclic-routing construction using five clique helpers, preserves a complete all-two-edge shortcut obstruction with a positive longer-route witness, and retains every inherited result/source limit. The unique incoming **RL9** tests helper-clique extraction in the explicit alpha<=2 slice under its [sole brief](authoritative/RL9_HELPER_CLIQUE_EXTRACTION_BRIEF.md). EX5 remains unproved; general UP_6, CR6 and full sharp Hadwiger remain unresolved by this project. The programme remains active.
 
 ## Continuing through failures
 

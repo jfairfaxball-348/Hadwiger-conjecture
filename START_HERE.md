@@ -30,14 +30,15 @@ Scratch is never authority.
 
 ## Current handoff
 
-RL7 is CLOSED/FROZEN under `sessions/RL7/`. RL8 is the unique incoming
-session for one bounded uncolored cyclic-routing assessment. Begin through
-`authoritative/START_HERE.md` and its sole `RL8_UNCOLORED_CYCLIC_ROUTING_BRIEF.md`. The auxiliary SP_6
-countermodel, positive rooted K6, inherited results and failure lessons are
-preserved; UP_6 remains unproved and no RL8 research has begun.
+RL8 is CLOSED/FROZEN under sessions/RL8/. RL9 is the unique incoming
+session for one bounded EX5 helper-clique extraction assessment. Begin through
+authoritative/START_HERE.md and its sole RL9_HELPER_CLIQUE_EXTRACTION_BRIEF.md.
+The scoped routing theorem, complete direct-resource obstruction, positive
+models and all inherited results/source/failure lessons are preserved.
+EX5 is unproved and no RL9 research has begun; general UP_6 is unproved/unrefuted.
 
 Full sharp Hadwiger remains the root, accepting either a rigorous universal
-proof or an actual rigorously verified ordinary counterexample. Develop and
-test the changed input under the recovery protocol, retain all source/coverage
-limits, and hand over a concrete recovery task after any failure. Do not
-replay SP_6, the source gate or M1 without an obstruction-changing input.
+proof or an actual rigorously verified ordinary counterexample. Develop/test
+the prepared input under the recovery protocol; consume only independently
+justified results. Retain every coverage/source/sharpness residual and leave
+an exact changed recovery task after any failure. Programme active.
