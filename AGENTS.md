@@ -51,6 +51,19 @@ Carry `authoritative/FAILURE_AND_LESSON_LEDGER.md` forward in every handover. Pr
 
 Each blocked research checkpoint must identify the next concrete recovery task and its bounds. A work unit or RL may finish while the programme remains active. Do not repeat a failed attempt without a named change, manufacture progress, or replace the root by an easier variant. Integrity failures still freeze affected deductions; only repair or work independent of the failure may proceed after the applicable gate passes. User-directed pauses and `CLOSEOUT_LOCK` remain binding.
 
+## Every tenth session: progress and correction audit
+
+By direct user instruction dated 2026-10-01, every numbered RL divisible
+by ten (RL10, RL20, RL30, ...) is a progress/correction audit of the ten
+preceding session positions and current authority before further theorem
+discovery. Follow `docs/TENTH_SESSION_PROGRESS_AUDIT.md`. The first audit
+must reconcile the RL1–RL9 inventory and initialization baseline, reporting
+any missing predecessor record without inventing RL0. Historical reads
+required by this bounded audit are explicitly authorized. Preserve valid
+results, challenge their root applicability, record corrections and their
+downstream effects, and install one justified bounded successor task.
+An audit is neither an automatic roadmap refresh nor a new proof campaign.
+
 ## Execution environments are peers
 
 Shell workers and connector/cloud workers are both valid first-class workers.
