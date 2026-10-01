@@ -1,0 +1,82 @@
+{
+  "format": "rl-isolated-checkpoint-v1",
+  "incoming_rl": 12,
+  "status": "OPEN / NOT PROMOTED",
+  "base_head": "dbbc49fb16198edfc61e0c34616a3b80dbe968e0",
+  "base_root_tree": "212dbe0a40cad110637f6513a5154e675422fefb",
+  "authoritative_tree": "b434f9e5402bb5bbf81a579a133b087d501dd3f6",
+  "branch": "work/rl12-route-discovery-20261001",
+  "prefix": "work-checkpoints/RL12-20261001",
+  "expected_total_files": 11,
+  "files": [
+    {
+      "path": "WORK_UNIT_SCOPE.md",
+      "bytes": 4598,
+      "git_blob_sha": "a1b95a59b64f136dc172a027dc85585e9bf8b5f5"
+    },
+    {
+      "path": "INCOMING_SNAPSHOT.json",
+      "bytes": 25360,
+      "git_blob_sha": "d667c9362359dc4f5c00916ee55642dbb8db5d53"
+    },
+    {
+      "path": "ROUTE_COMPARISON.md",
+      "bytes": 11181,
+      "git_blob_sha": "a963df653603ef06d4d9886b9226250bec0ae15c"
+    },
+    {
+      "path": "SEPARATOR_FEASIBILITY_REPORT.md",
+      "bytes": 9911,
+      "git_blob_sha": "f8e9693ac032d65a44bd1a9891a62ac2a681c98c"
+    },
+    {
+      "path": "PROOF_STATE_AND_RESIDUAL_LEDGER.md",
+      "bytes": 4385,
+      "git_blob_sha": "6303b08e80a6ab91336c3376ccb3701b05e75110"
+    },
+    {
+      "path": "FAILURE_AND_LESSON_LEDGER_APPENDIX.md",
+      "bytes": 5014,
+      "git_blob_sha": "c0fa2be1dc09f65fc5db71b25675c039c9e99ed2"
+    },
+    {
+      "path": "SOURCE_QUESTION_AND_LIMITS.md",
+      "bytes": 2226,
+      "git_blob_sha": "c2f7e83ac6156373cf256be83ca9cc1bf8f603e5"
+    },
+    {
+      "path": "NEXT_RECOVERY_TASK.md",
+      "bytes": 5654,
+      "git_blob_sha": "bd9c07afa44ddb1d824eb1aebf77786679197100"
+    },
+    {
+      "path": "VERIFICATION_REPORT.md",
+      "bytes": 3903,
+      "git_blob_sha": "ab865cde3ef6c7014ef72ec889653cbc72fef91e"
+    },
+    {
+      "path": "RESUME_STATE.json",
+      "bytes": 6034,
+      "git_blob_sha": "e7da736e25514148cb5e05eaa112597046872fbb"
+    }
+  ],
+  "mechanical_checks": {
+    "incoming_read_hashes": 22,
+    "authority_snapshot_blob_count": 125,
+    "json_parse": "PASS",
+    "relative_links_checked": 15,
+    "relative_links": "PASS",
+    "existing_paths_modified": 0
+  },
+  "mathematical_scope": {
+    "candidates_compared": 2,
+    "selected": "B / BR-06-SEP2",
+    "bounded_feasibility_checks": 1,
+    "mathematical_numerical_computation": 0,
+    "source_queries": 1,
+    "direct_primary_opens": 2,
+    "local_obligation": "BR-06-SEP2 resolved analytically in unpromoted work",
+    "inherited_universal_obligation_reduced": false
+  },
+  "publication_note": "Manifest excludes its own hash. Commit/tree IDs and remote readback are recorded externally; no authoritative transition is claimed."
+}
