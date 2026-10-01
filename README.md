@@ -16,8 +16,17 @@ For the current incoming research state, begin at [`START_HERE.md`](START_HERE.m
 - `knowledge/` is non-authoritative lookup/index material only.
 - `.rl-work/` is ignored local scratch/checkpoint state.
 
-RL10 is **CLOSED/FROZEN** under [sessions/RL10/](sessions/RL10/START_HERE.md).
-Its [audit](authoritative/RL10_AUDIT_REPORT.md) retains valid scoped results, finds no required mathematical demotion, and identifies general applicability as the missing bridge. The unique incoming **RL11** performs one bounded colorful-kernel applicability assessment under its [sole brief](authoritative/RL11_APPLICABILITY_GATE_BRIEF.md). MK2 is unproved/unassessed and RL11 is not started. RL9 EX5 and UP_6 still require GLOBAL alpha<=2; general UP_6, CR_6 and full sharp Hadwiger remain unresolved here. All prior results, source limits and failure lessons survive. Every tenth session follows the [audit policy](docs/TENTH_SESSION_PROGRESS_AUDIT.md). Programme active.
+RL11 is **CLOSED/FROZEN** under [sessions/RL11/](sessions/RL11/START_HERE.md).
+Its [analytic countermodel](authoritative/RL11_MK2_COUNTERMODEL_REPORT.md)
+refutes MK2 on exact D_cyc: an eighteen-vertex deletion-minimal graph has
+an independent triple and no Q5, while retaining UP_6 and a rooted K6.
+This is no ordinary Hadwiger counterexample. No inherited theorem is
+demoted; general UP_6, CR_6 and full sharp Hadwiger remain unresolved here.
+The unique incoming **RL12** performs user-requested new-route discovery
+under its [sole brief](authoritative/RL12_NEW_ROUTE_DISCOVERY_BRIEF.md).
+No route is preselected and RL12 is not started. All prior results,
+source limits and lessons survive; every tenth session follows the
+[audit policy](docs/TENTH_SESSION_PROGRESS_AUDIT.md). Programme active.
 
 ## Continuing through failures
 

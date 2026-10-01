@@ -1,0 +1,34 @@
+{
+  "format": "rl8-work-checkpoint-manifest-v1",
+  "status": "NOT PROMOTED; COMPLETE BOUNDED UNIT",
+  "base_head": "2fbd0440857302ac3a8e1807f4d0451b6a641823",
+  "authority_tree": "112b083f1fe7579ea7ce80fe9d02067e6a7c59b1",
+  "branch": "work/rl8-uncolored-routing-20261001",
+  "artifact_directory": "rl_work/RL8_checkpoint",
+  "self_file": "CHECKPOINT_MANIFEST.json",
+  "file_count_including_self": 12,
+  "sha256_excluding_self": {
+    "RL8_INCOMING_SNAPSHOT.json": "25e4e33af92dd888f0533a252f7fc7e84e3c93ede6421a694829c41f114a6e2f",
+    "WORK_UNIT_SCOPE.md": "771ef3eb1318fa810e579e8f7fac4c8f49fd37722d7a0478253295264a13c62b",
+    "RESUME_STATE.json": "71bff48fbed275c23219272a626e9d0c6d8a1f6d60429606b29ac26579bcd469",
+    "RL8_UNCOLORED_ROUTING_REPORT.md": "ae26c6d51a7019521bdac591a15b3a4a62e35e770a9b19e2bfd43fa9855c9486",
+    "RL8_PROOF_STATE_AND_RESIDUAL_LEDGER.md": "1472c96e29a04a89fd85663a1c1a9c50e502d004630cfb2a63e7d8a081906415",
+    "FAILURE_AND_LESSON_LEDGER_APPENDIX.md": "909b09495ac4f4c73a25fc0ef89cb5515dcd04cefac3f6ded0b60c4bf3a99f0d",
+    "NEXT_RECOVERY_TASK.md": "1dc7638d9abab2de700b8d4629d79f96456494497aceb18fb2d0b481190e16cb",
+    "UNCOLORED_CORE_WITNESS.json": "4b266195ce07570b7b7ab916133462f553621b290ee062989f4b9eea6693e8aa",
+    "verify_uncolored_core.py": "07652660394c8865c13e3d6c7064f5df548efac4dd8f1873f34dfc32a767ad38",
+    "VERIFICATION_REPORT.md": "42ffacfe8edf39cc605c0035fbc6ebb5125a8e0245e1b02c56dcee749078e08f",
+    "VERIFIER_RESULTS.json": "3cafe51139a76a9e01d8553869532989d5c07ba0891079c24cec0dcdb4674c55"
+  },
+  "authority_preserved_blobs": 69,
+  "results": [
+    "RL8-P01",
+    "RL8-P02",
+    "RL8-P03",
+    "RL8-P04"
+  ],
+  "general_UP6": "unproved and unrefuted",
+  "numbered_transition": false,
+  "next_task": "NEXT_RECOVERY_TASK.md",
+  "required_checks": "All four verifiers PASS at exact recorded scopes; analytic same-worker review; no formal/external certification."
+}

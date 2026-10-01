@@ -30,6 +30,15 @@ Scratch is never authority.
 
 ## Current handoff
 
-RL10 is CLOSED/FROZEN under sessions/RL10/. RL11 is the unique incoming session for one colorful-kernel applicability assessment. Begin through authoritative/START_HERE.md and its sole RL11_APPLICABILITY_GATE_BRIEF.md. RL10's audit found no mathematical demotion, retained the exact global-alpha slice, and selected the future MK2 safe-deletion task after an explicit comparison. MK2 is unproved/unassessed and RL11 is not started. All inherited scopes, source/failure/certificate limits and residual obligations remain. Every tenth RL follows docs/TENTH_SESSION_PROGRESS_AUDIT.md.
+RL11 is CLOSED/FROZEN under sessions/RL11/. RL12 is the unique incoming
+session for user-requested new-route discovery. Begin through
+authoritative/START_HERE.md and its sole RL12_NEW_ROUTE_DISCOVERY_BRIEF.md.
+MK2 is refuted on exact D_cyc; the same countermodel retains UP_6 and a
+rooted K6. General UP_6, CR_6 and full sharp Hadwiger remain unresolved.
+No inherited theorem is demoted. The preserved connected-helper proposal
+is a comparator, not a predetermined successor route. RL12 is NOT STARTED.
 
-Full sharp ordinary Hadwiger remains the root, accepting either rigorous universal proof or an actual rigorously verified finite h<chi counterexample. Programme active. Develop candidates under the recovery protocol; consume only independently justified inputs at their exact scopes.
+Preserve every result, source/failure/certificate limit and residual.
+Full sharp Hadwiger remains the root, accepting rigorous universal proof
+or an actual rigorously verified finite h<chi counterexample. Programme
+active. Follow the recovery protocol and every-tenth-session audit rule.
