@@ -1,0 +1,57 @@
+{
+  "format": "rl-connector-resume-v1",
+  "base_head": "0eb090e5986d909046e00b83085cb0afb5f54116",
+  "authoritative_tree": "01ee75abad5aff6cc34796e8331ae4114f6ae3c7",
+  "incoming_rl": 9,
+  "session_brief": "authoritative/RL9_HELPER_CLIQUE_EXTRACTION_BRIEF.md",
+  "start_gate": "PASS",
+  "last_verified_frontier": "Complete scoped analytic RL9-P01\u2013P04: EX5 proved and UP_6 on D_cyc plus GLOBAL alpha<=2; self-contained matching criterion proof",
+  "completed_artifacts": [
+    "INCOMING_SNAPSHOT.json",
+    "WORK_UNIT_SCOPE.md",
+    "MATCHING_CRITERION_PROOF.md",
+    "RL9_HELPER_CLIQUE_REPORT.md",
+    "RL9_PROOF_STATE_AND_RESIDUAL_LEDGER.md",
+    "FAILURE_AND_LESSON_LEDGER_APPENDIX.md",
+    "NEXT_RECOVERY_TASK.md",
+    "VERIFICATION_REPORT.md",
+    "RL9_SESSION_STATE_AND_PROPOSED_RL10.md"
+  ],
+  "unpromoted_or_uncovered": [
+    "All new work pending normal RL9 promotion",
+    "general UP_6 outside Q5/global-alpha<=2",
+    "critical alpha/core applicability",
+    "MK2 unproved and unassessed",
+    "all inherited residuals and source limits"
+  ],
+  "next_exact_operation": "Verify mechanical package, publish complete isolated checkpoint branch, read back entire tree and confirm main/authority unchanged; then recommend finish",
+  "do_not_recompute": [
+    "RL6\u2013RL8 analytic results",
+    "SP_6 failure",
+    "all-two-edge failure",
+    "source gate",
+    "roadmap"
+  ],
+  "failure_lesson_ids": [
+    "FL-001",
+    "FL-002",
+    "FL-003",
+    "FL-004",
+    "FL-005",
+    "FL-006",
+    "FL-007",
+    "FL-008",
+    "FL-009",
+    "FL-010",
+    "FL-011"
+  ],
+  "recovery_mode": "rework",
+  "changed_input_or_mechanism": "Proposed MK2: induced exterior deletion preserving actual colorfulness to extract a minimal kernel; no global-alpha premise on original graph",
+  "next_task_bounds": "ONE analytic coloring-extension/deletable-vertex inference, at most seven stars; order and general parameters unbounded; no computation without pre-recorded finite bounds/verifier",
+  "retry_conditions": [
+    "Independent kernel/colorfulness preservation proof",
+    "Do not apply ten-vertex matching argument outside its established alpha/order/neighborhood bounds"
+  ],
+  "stop_and_repair_active": false,
+  "source_check_deviation": "T-008 preserved; no unread source consumed; matching criterion independently proved; no further search"
+}
