@@ -1,0 +1,108 @@
+{
+  "format": "rl9-work-checkpoint-v1",
+  "status": "VERIFIED SCOPED ANALYTIC WORK; NOT PROMOTED",
+  "base_head": "0eb090e5986d909046e00b83085cb0afb5f54116",
+  "base_tree": "ad89484245da4555014cd4137422efdae05eedb6",
+  "incoming_authority_tree": "01ee75abad5aff6cc34796e8331ae4114f6ae3c7",
+  "incoming_authority_blobs": 81,
+  "branch": "work/rl9-helper-clique-20261001",
+  "artifact_directory": ".rl-work/RL9",
+  "non_self_entries": [
+    {
+      "path": ".rl-work/RL9/FAILURE_AND_LESSON_LEDGER_APPENDIX.md",
+      "local_name": "FAILURE_AND_LESSON_LEDGER_APPENDIX.md",
+      "bytes": 7392,
+      "sha256": "e30db122c0ed55dd89bab88b479e741faf1094f0edc1819d013075b29235850b",
+      "git_blob_sha": "0c96f427ac937939f4cd86af8cf585bc289258b0"
+    },
+    {
+      "path": ".rl-work/RL9/INCOMING_SNAPSHOT.json",
+      "local_name": "INCOMING_SNAPSHOT.json",
+      "bytes": 28743,
+      "sha256": "5879b084744d82ce6ba9ca4e38027cc5a4fba8761198286a07032df0f4d611bd",
+      "git_blob_sha": "267cb06af81bd98309ae7fb3949c0d64e394556b"
+    },
+    {
+      "path": ".rl-work/RL9/MATCHING_CRITERION_PROOF.md",
+      "local_name": "MATCHING_CRITERION_PROOF.md",
+      "bytes": 5494,
+      "sha256": "e7859251b4770dc944d977ebc64abfcdfb51c7f97c78f3bbdab25b83e1ce912d",
+      "git_blob_sha": "d8a324fdc9569418b6693dfa0cc3bb89e87b4ae4"
+    },
+    {
+      "path": ".rl-work/RL9/NEXT_RECOVERY_TASK.md",
+      "local_name": "NEXT_RECOVERY_TASK.md",
+      "bytes": 5344,
+      "sha256": "debd0bfd6a43c8ccb84479973daa99dfbd6da4985a7b7f2a2a2d39fc20832ca0",
+      "git_blob_sha": "5765b0cc3d22d2d50c5b0c061ecb4e155fcd3a7e"
+    },
+    {
+      "path": ".rl-work/RL9/RESUME_STATE.json",
+      "local_name": "RESUME_STATE.json",
+      "bytes": 2345,
+      "sha256": "71b429d23fcabb5a1c300a0d70da3a386d19df0dd557369ff831e52fab931698",
+      "git_blob_sha": "cd4bb5d8c61c06aa39c65281bff3d198cebbacd7"
+    },
+    {
+      "path": ".rl-work/RL9/RL9_HELPER_CLIQUE_REPORT.md",
+      "local_name": "RL9_HELPER_CLIQUE_REPORT.md",
+      "bytes": 16489,
+      "sha256": "b2f502b728d6a23935a87701e941d4c1445ce131b6741e54462cee34914ffc46",
+      "git_blob_sha": "ae360fe39ad8e6dca8882ee8bf190c385570b8ce"
+    },
+    {
+      "path": ".rl-work/RL9/RL9_PROOF_STATE_AND_RESIDUAL_LEDGER.md",
+      "local_name": "RL9_PROOF_STATE_AND_RESIDUAL_LEDGER.md",
+      "bytes": 4512,
+      "sha256": "ae469f3d03a937f908281644f5eda54b4b51e873b2c6b192a216741d4a267a67",
+      "git_blob_sha": "2d65ebaf67075e51c24e2f3a4e216970e76ad9cf"
+    },
+    {
+      "path": ".rl-work/RL9/RL9_SESSION_STATE_AND_PROPOSED_RL10.md",
+      "local_name": "RL9_SESSION_STATE_AND_PROPOSED_RL10.md",
+      "bytes": 4118,
+      "sha256": "0c7c392ace1ed4524cae9fef781c655dcaddc43ceac68d2ddf3738c929582646",
+      "git_blob_sha": "41a8846b1802d19e9cbba7fb90ac9463a6aec228"
+    },
+    {
+      "path": ".rl-work/RL9/VERIFICATION_REPORT.md",
+      "local_name": "VERIFICATION_REPORT.md",
+      "bytes": 5118,
+      "sha256": "0fb45bd915ddac5cafbe54a560dd24a34d353f05afc1128680bc4f76d1c40eee",
+      "git_blob_sha": "6ede6bb6a4156ae5c8b80b131657df59d415085f"
+    },
+    {
+      "path": ".rl-work/RL9/WORK_UNIT_SCOPE.md",
+      "local_name": "WORK_UNIT_SCOPE.md",
+      "bytes": 4021,
+      "sha256": "0658d4ab3fffc7a6cd3e803430391e4cef2ede2b048f7be160d9bdbf6012e036",
+      "git_blob_sha": "a8719920148eb16641bcb20aae42eddd5c68c22b"
+    }
+  ],
+  "all_checkpoint_names": [
+    "FAILURE_AND_LESSON_LEDGER_APPENDIX.md",
+    "INCOMING_SNAPSHOT.json",
+    "MATCHING_CRITERION_PROOF.md",
+    "NEXT_RECOVERY_TASK.md",
+    "RESUME_STATE.json",
+    "RL9_HELPER_CLIQUE_REPORT.md",
+    "RL9_PROOF_STATE_AND_RESIDUAL_LEDGER.md",
+    "RL9_SESSION_STATE_AND_PROPOSED_RL10.md",
+    "VERIFICATION_REPORT.md",
+    "WORK_UNIT_SCOPE.md",
+    "CHECKPOINT_MANIFEST.json"
+  ],
+  "mechanical_validation": "PASS: JSON, local links, hash identities; intended remote tree adds these eleven blobs only",
+  "analytic_review": "PASS: complete same-worker criterion proof, universal MC and exhaustive deletion cases; no computation/formal/independent review",
+  "main_authority_and_frozen_sessions": "UNCHANGED",
+  "mathematical_results": [
+    "RL9-P01",
+    "RL9-P02",
+    "RL9-P03 EX5 on D_cyc plus GLOBAL alpha<=2",
+    "RL9-P04 scoped UP_6 through RL8-P01/P02"
+  ],
+  "new_ledger": "FL-011; T-008",
+  "new_task": "MK2 deletion-minimal colorful kernel, conjectural and unassessed",
+  "current_incoming_session": 9,
+  "proposed_successor_after_normal_closeout": 10
+}

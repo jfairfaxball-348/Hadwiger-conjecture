@@ -1,0 +1,168 @@
+{
+  "format": "rl8-uncolored-core-witness-v1",
+  "status": "completed-scoped-analytic-witness",
+  "construction": "H is the complement of F: F has C7 on S, no T-T edges, and N_F(t)={u_(k+2),u_(k+4),u_(k+6)} for helper type k, modulo seven.",
+  "S_cycle": [
+    "u0",
+    "u1",
+    "u2",
+    "u3",
+    "u4",
+    "u5",
+    "u6"
+  ],
+  "T": [
+    "t0",
+    "t1",
+    "t2",
+    "t3",
+    "t4"
+  ],
+  "helper_types": [
+    0,
+    0,
+    1,
+    1,
+    4
+  ],
+  "star_matching_rows": [
+    {
+      "i": 0,
+      "T_partners": [
+        "u2",
+        "u4",
+        "u3",
+        "u5",
+        "u6"
+      ]
+    },
+    {
+      "i": 1,
+      "T_partners": [
+        "u4",
+        "u6",
+        "u0",
+        "u5",
+        "u3"
+      ]
+    },
+    {
+      "i": 2,
+      "T_partners": [
+        "u4",
+        "u6",
+        "u0",
+        "u5",
+        "u1"
+      ]
+    },
+    {
+      "i": 3,
+      "T_partners": [
+        "u2",
+        "u6",
+        "u0",
+        "u5",
+        "u1"
+      ]
+    },
+    {
+      "i": 4,
+      "T_partners": [
+        "u2",
+        "u6",
+        "u0",
+        "u3",
+        "u1"
+      ]
+    },
+    {
+      "i": 5,
+      "T_partners": [
+        "u2",
+        "u4",
+        "u0",
+        "u3",
+        "u1"
+      ]
+    },
+    {
+      "i": 6,
+      "T_partners": [
+        "u2",
+        "u4",
+        "u3",
+        "u5",
+        "u1"
+      ]
+    }
+  ],
+  "UP6_witness": {
+    "star_i": 2,
+    "omitted": "u3",
+    "paths": [
+      [
+        "u0",
+        "t0",
+        "u1"
+      ],
+      [
+        "u1",
+        "t2",
+        "u2"
+      ],
+      [
+        "u4",
+        "t4",
+        "u5"
+      ],
+      [
+        "u5",
+        "u3",
+        "u6"
+      ],
+      [
+        "u6",
+        "t3",
+        "t1",
+        "u0"
+      ]
+    ]
+  },
+  "rooted_K6_branches": [
+    [
+      "u0",
+      "t0"
+    ],
+    [
+      "u1",
+      "t2"
+    ],
+    [
+      "u2"
+    ],
+    [
+      "u4",
+      "t4"
+    ],
+    [
+      "u5",
+      "u3"
+    ],
+    [
+      "u6",
+      "t3",
+      "t1"
+    ]
+  ],
+  "scope": {
+    "negative": "Every omission fails if all five paths are required to have exactly two edges. Helpers cover only three boundary edge types, and the omitted vertex can repair at most one more.",
+    "positive": "UP_6 itself holds on this graph through the supplied longer path; the rooted K6 and proper K7 coexist.",
+    "not_a_UP6_countermodel": true,
+    "not_a_CR6_countermodel": true,
+    "not_an_ordinary_Hadwiger_counterexample": true,
+    "not_full_C7_critical": true,
+    "general_UP6_status": "unproved",
+    "checker_limit": "Fixed explicit witnesses only; no graph, coloring or path search."
+  }
+}

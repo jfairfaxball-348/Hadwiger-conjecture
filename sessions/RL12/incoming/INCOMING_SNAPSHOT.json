@@ -1,0 +1,117 @@
+{
+  "base_head": "d5a978dd4e37040a63645a83e5c39c94c3b5182e",
+  "root_tree": "cfecd5174c1240c0810e0eca556ab3cac3b77228",
+  "authoritative_tree": "8f8e3c6f077d2879ca5f25933d2e7be90aacbc91",
+  "background_tree": "2524a0821e56d09fe2d49cdf4850d358ed21b38f",
+  "background_matches_frozen_RL2": true,
+  "paths": [
+    {
+      "path": "AGENTS.md",
+      "git_blob": "9bb957d8ec64dca45175abe1abafeceaa01842c7"
+    },
+    {
+      "path": "authoritative/START_HERE.md",
+      "git_blob": "a3fc953a198700be98f6373447e7e4c33e223d8d"
+    },
+    {
+      "path": "authoritative/RL3_TOP_DOWN_ROADMAP_BRIEF.md",
+      "git_blob": "c9ebb5a88ff85e37a4e29ac22901ee0ee2a84100"
+    },
+    {
+      "path": "authoritative/RL2_SESSION_STATE_AND_RL3_KICKOFF.md",
+      "git_blob": "1537636ff085c0d8a2389fdf33becd3badc4a1a5"
+    },
+    {
+      "path": "authoritative/PROOF_STATE_AND_OPEN_OBLIGATIONS.md",
+      "git_blob": "fb0a0c6cd12722b637d88ef42fdf496030ec5e33"
+    },
+    {
+      "path": "authoritative/COLLATZ_FAILURE_REVIEW.md",
+      "git_blob": "cc50b241b5ca464cd078ac6cff6aa1ea573dff45"
+    },
+    {
+      "path": "docs/RL_RESEARCH_PROTOCOL.md",
+      "git_blob": "29e1688a99673255e65cb0dc9e2d9154f704ccd0"
+    },
+    {
+      "path": "docs/CONNECTOR_WORKFLOW.md",
+      "git_blob": "b8628d313a934fa7d054da8809f8b7a20390bef4"
+    },
+    {
+      "path": "docs/PROOF_STATE_CLASSIFICATIONS.md",
+      "git_blob": "2657e975e1eb80521f764411a4b4641eb7088e37"
+    },
+    {
+      "path": "authoritative/background/CORPUS_METADATA.json",
+      "git_blob": "db1df19de084182328e78e7d001d9e23110b3e6c"
+    },
+    {
+      "path": "authoritative/background/GLOSSARY.jsonl",
+      "git_blob": "51723d7c22256c839465409a6ef400075c9fd3cf"
+    },
+    {
+      "path": "authoritative/background/KNOWN_RESULTS.md",
+      "git_blob": "40e8ae4eac2a34ac63294d2faf9484f699e3df20"
+    },
+    {
+      "path": "authoritative/background/LITERATURE_MAP.md",
+      "git_blob": "711a59e0956e7444532fc2cbbc56edd124f9b90b"
+    },
+    {
+      "path": "authoritative/background/OPEN_CASE_CATALOG.jsonl",
+      "git_blob": "d948c777d61838520641e07d31018d91d690ee04"
+    },
+    {
+      "path": "authoritative/background/OPEN_FRONTIER.md",
+      "git_blob": "0bf010589067c75ac996c336760fdd54f3367f84"
+    },
+    {
+      "path": "authoritative/background/READ_ME_FIRST.md",
+      "git_blob": "9caaadca880127d051d7f0b0b14ec0d48d6b7340"
+    },
+    {
+      "path": "authoritative/background/RESULT_CATALOG.jsonl",
+      "git_blob": "b550f02f2c91a767631e9e9844a11a3f8f79252f"
+    },
+    {
+      "path": "authoritative/background/SEARCH_LOG.md",
+      "git_blob": "cef5e9f761e24ec637a739f69c0321d7c1a7b6ef"
+    },
+    {
+      "path": "authoritative/background/SOURCE_CATALOG.jsonl",
+      "git_blob": "7ec89d2cd3d387cbcc0122732ee36b07a19e8e12"
+    },
+    {
+      "path": "authoritative/background/SOURCE_CHECKS.md",
+      "git_blob": "737f77dc9c36b5dd12cfce6d678f4abed1cc9b1f"
+    },
+    {
+      "path": "authoritative/background/TECHNIQUES.md",
+      "git_blob": "45901f3b2b7221b6d6e57e6fa488abad18525c25"
+    },
+    {
+      "path": "authoritative/background/TOPIC_CATALOG.jsonl",
+      "git_blob": "0f34808195741448b0c12ea32bdd70f8546ba0f5"
+    },
+    {
+      "path": "authoritative/background/VARIANTS_AND_RELATED_PROBLEMS.md",
+      "git_blob": "cf70f8bec038ccf0e88141d46e7eefb4c80f03a8"
+    },
+    {
+      "path": "authoritative/background/verification/verify_corpus.py",
+      "git_blob": "2e210600f63966967e272e28dae0f9fef036cd40"
+    },
+    {
+      "path": "authoritative/background/verification/RECORD_SPEC.json",
+      "git_blob": "4aa44526b7af6cec124638f3f625c6b0181f3f7e"
+    },
+    {
+      "path": "authoritative/VERIFICATION_REPORT.md",
+      "git_blob": "ec5984ef21913a15fd459f17e3a00ca1622e3d2e"
+    },
+    {
+      "path": "sessions/RL2/RL2_CLOSEOUT_VERIFICATION.md",
+      "git_blob": "b33006a4d7aabe03a286937cdf940a1be0d08f02"
+    }
+  ]
+}

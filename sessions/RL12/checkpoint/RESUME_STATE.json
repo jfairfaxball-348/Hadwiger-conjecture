@@ -1,0 +1,181 @@
+{
+  "format": "rl-connector-resume-v1",
+  "base_head": "dbbc49fb16198edfc61e0c34616a3b80dbe968e0",
+  "authoritative_tree": "b434f9e5402bb5bbf81a579a133b087d501dd3f6",
+  "incoming_rl": 12,
+  "session_brief": "authoritative/RL12_NEW_ROUTE_DISCOVERY_BRIEF.md",
+  "validated_authority_paths": [
+    {
+      "path": "AGENTS.md",
+      "sha": "72ad349e4744718651fec497dbd4cf967c19566d",
+      "ok": true,
+      "byte_verified": true
+    },
+    {
+      "path": "authoritative/START_HERE.md",
+      "sha": "e21d68f910116e0468aaac1e2e0c31bdd0691b4b",
+      "ok": true,
+      "byte_verified": true
+    },
+    {
+      "path": "authoritative/RL12_NEW_ROUTE_DISCOVERY_BRIEF.md",
+      "sha": "cc261c6befbb66fc88b36505a32fd87ca765cbbc",
+      "ok": true,
+      "byte_verified": true
+    },
+    {
+      "path": "authoritative/RL11_SESSION_STATE_AND_RL12_KICKOFF.md",
+      "sha": "75e55da29c7e4f8e80767d77e8bb173ce96b8121",
+      "ok": true,
+      "byte_verified": true
+    },
+    {
+      "path": "authoritative/RL11_MK2_COUNTERMODEL_REPORT.md",
+      "sha": "327f3f600eac913fd8c9bf7918b12da73017446a",
+      "ok": true,
+      "byte_verified": true
+    },
+    {
+      "path": "authoritative/RL11_PROOF_STATE_AND_RESIDUAL_LEDGER.md",
+      "sha": "42ecb4d1714358656652e64db83673719b0536e8",
+      "ok": true,
+      "byte_verified": true
+    },
+    {
+      "path": "authoritative/PROOF_STATE_AND_OPEN_OBLIGATIONS.md",
+      "sha": "4726fdf02193a722dc428c50cd320a15e51ab8af",
+      "ok": true,
+      "byte_verified": true
+    },
+    {
+      "path": "authoritative/FAILURE_AND_LESSON_LEDGER.md",
+      "sha": "edf38c1636a62bcfe0fcb07fe7697994764b892a",
+      "ok": true,
+      "byte_verified": true
+    },
+    {
+      "path": "authoritative/RL10_AUDIT_REPORT.md",
+      "sha": "2500be3011290adcfea6fa91e9316e8ea0e0e159",
+      "ok": true,
+      "byte_verified": true
+    },
+    {
+      "path": "authoritative/RL10_DEPENDENCY_SCOPE_AUDIT.md",
+      "sha": "f3da18a9e486cbbb1b21dfecb4d87df1fc41df91",
+      "ok": true,
+      "byte_verified": true
+    },
+    {
+      "path": "authoritative/RL10_COLLATZ_RISK_AND_VERDICT.md",
+      "sha": "5ab743ac551b060dba8b73c7e79bc082d384acfd",
+      "ok": true,
+      "byte_verified": true
+    },
+    {
+      "path": "authoritative/RL10_CORRECTION_AND_LESSON_RECORD.md",
+      "sha": "b593e7779437c8787748869b6edee584ef6d2e62",
+      "ok": true,
+      "byte_verified": true
+    },
+    {
+      "path": "authoritative/BRIDGE_LEDGER.md",
+      "sha": "7e4a93f6fb71606fdb3dedb038d5002ae3a34fd4",
+      "ok": true,
+      "byte_verified": true
+    },
+    {
+      "path": "authoritative/DEPENDENCY_MAP.md",
+      "sha": "8464e2ae873c4fd33ec24cd8cdd54e72dceb0460",
+      "ok": true,
+      "byte_verified": true
+    },
+    {
+      "path": "authoritative/RL3_ROADMAP.md",
+      "sha": "abe4968ac8675eb9eb3e68d1b3279219c1685ce1",
+      "ok": true,
+      "byte_verified": true
+    },
+    {
+      "path": "authoritative/RL11_PREPARED_RECOVERY_TASK.md",
+      "sha": "2dce34465e8efcff5c8a0acc70a25bce4493c37e",
+      "ok": true,
+      "byte_verified": true
+    },
+    {
+      "path": "authoritative/VERIFICATION_REPORT.md",
+      "sha": "e4d1f04f1caf6a726da7133fce8905b4568e3cc3",
+      "ok": true,
+      "byte_verified": true
+    },
+    {
+      "path": "docs/RESEARCH_RECOVERY_PROTOCOL.md",
+      "sha": "2b6710e32dad04800dd32fce771be630bce61082",
+      "ok": true,
+      "byte_verified": true
+    },
+    {
+      "path": "docs/CONNECTOR_WORKFLOW.md",
+      "sha": "b3a90487e1eaf14504eba18cc07521ed08e59256",
+      "ok": true,
+      "byte_verified": true
+    },
+    {
+      "path": "docs/RL_RESEARCH_PROTOCOL.md",
+      "sha": "9f2a2f94a2eb0134b4cf6f393dc0395edce10b24",
+      "ok": true,
+      "byte_verified": true
+    },
+    {
+      "path": "docs/PROOF_STATE_CLASSIFICATIONS.md",
+      "sha": "2657e975e1eb80521f764411a4b4641eb7088e37",
+      "ok": true,
+      "byte_verified": true
+    },
+    {
+      "path": "authoritative/RL6_RECOVERY_REPORT.md",
+      "sha": "48ca81c5abf57c352b99f9f50beb133817651f2a",
+      "ok": true,
+      "byte_verified": true
+    }
+  ],
+  "last_verified_frontier": "Two distinct routes compared; B selected after narrow source gate. Complete analytic proof of BR-06-SEP2 at its exact two-disjoint-nonedge separator scope; universal coverage remains open.",
+  "completed_artifacts": [
+    "WORK_UNIT_SCOPE.md",
+    "INCOMING_SNAPSHOT.json",
+    "ROUTE_COMPARISON.md",
+    "SEPARATOR_FEASIBILITY_REPORT.md",
+    "PROOF_STATE_AND_RESIDUAL_LEDGER.md",
+    "FAILURE_AND_LESSON_LEDGER_APPENDIX.md",
+    "SOURCE_QUESTION_AND_LIMITS.md",
+    "NEXT_RECOVERY_TASK.md"
+  ],
+  "unpromoted_or_uncovered": [
+    "RL12-P01 and all new work NOT PROMOTED; RL12 OPEN.",
+    "No new order-seven coverage or inherited universal mathematical obligation reduction.",
+    "BR-06 unavoidability; Candidate A resource extraction; all canonical root/source residuals."
+  ],
+  "next_exact_operation": "Verify and publish these completed artifacts as one isolated work checkpoint; leave main and authoritative unchanged. Recommended next interaction is normal finish; no further research in this unit.",
+  "do_not_recompute": [
+    "MK2 negative and positive witness",
+    "RL10 audit",
+    "Old source gates",
+    "RL12 four-mask proof",
+    "RL12 connectivity source question"
+  ],
+  "failure_lesson_ids": [
+    "FL-001",
+    "FL-005",
+    "FL-008",
+    "FL-012",
+    "FL-013",
+    "FL-014"
+  ],
+  "recovery_mode": "pivot",
+  "changed_input_or_mechanism": "Use full minor-criticality, separator equality patterns and two disjoint spare-color palettes; no induced kernel extraction.",
+  "stop_and_repair_active": false,
+  "next_task_bounds": "Future critical resource obstruction gate: one mechanism, seven stars, m=0..4; zero source queries and numerical mathematics by default; not started.",
+  "retry_conditions": [
+    "Separator extension needs independent coverage/relevance input.",
+    "Connected-resource work must use explicit actual critical domain, and prove an independent obstruction/augmentation invariant."
+  ]
+}

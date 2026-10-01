@@ -1,0 +1,64 @@
+{
+  "format": "rl-connector-resume-v1",
+  "base_head": "ea4978ec31b060d432db2987b06586cd4bea60cc",
+  "authoritative_tree": "95833de67b819add9abf53fa229066e5ee8a50ab",
+  "incoming_rl": 11,
+  "session_brief": "authoritative/RL11_APPLICABILITY_GATE_BRIEF.md",
+  "status": "One bounded analytic unit complete; NOT PROMOTED; RL11 open",
+  "validated_authority_paths": [
+    "AGENTS.md",
+    "authoritative/START_HERE.md",
+    "authoritative/RL11_APPLICABILITY_GATE_BRIEF.md",
+    "authoritative/RL10_AUDIT_REPORT.md",
+    "authoritative/RL10_DEPENDENCY_SCOPE_AUDIT.md",
+    "authoritative/RL10_COLLATZ_RISK_AND_VERDICT.md",
+    "authoritative/RL10_CORRECTION_AND_LESSON_RECORD.md",
+    "authoritative/PROOF_STATE_AND_OPEN_OBLIGATIONS.md",
+    "authoritative/FAILURE_AND_LESSON_LEDGER.md",
+    "authoritative/RL9_DEFERRED_COLORFUL_KERNEL_TASK.md",
+    "authoritative/VERIFICATION_REPORT.md",
+    "docs/RESEARCH_RECOVERY_PROTOCOL.md",
+    "authoritative/RL8_UNCOLORED_ROUTING_REPORT.md",
+    "authoritative/RL9_HELPER_CLIQUE_REPORT.md",
+    "authoritative/UNCOLORED_CORE_WITNESS.json"
+  ],
+  "last_verified_frontier": "Complete analytic eighteen-vertex MK2 countermodel in exact D_cyc, all eleven exterior deletions unsafe; no Q5; same graph satisfies UP6 and rooted K6. Conditional MK2 sufficiency valid but antecedent false.",
+  "completed_artifacts": [
+    "BASE_HEAD",
+    "FAILURE_AND_LESSON_LEDGER_APPENDIX.md",
+    "INCOMING_SNAPSHOT.json",
+    "MK2_COUNTERMODEL_REPORT.md",
+    "NEXT_RECOVERY_TASK.md",
+    "PROOF_STATE_AND_RESIDUAL_LEDGER.md",
+    "README.md",
+    "VERIFICATION_REPORT.md",
+    "WORK_UNIT_SCOPE.md"
+  ],
+  "unpromoted_or_uncovered": [
+    "All RL11 work awaits normal atomic promotion.",
+    "General UP6, CR6, full critical applicability, ordinary orders seven and higher remain open.",
+    "All inherited unbounded parameters and source gaps remain.",
+    "Prepared recovery task is unassessed and not started."
+  ],
+  "next_exact_operation": "Publish/read back isolated checkpoint, then normal closeout only after user finish command; no further mathematics in this completed unit.",
+  "do_not_recompute": [
+    "Do not replay MK2, SP6, all-two-edge, M1, old source gates or recreate the graph search.",
+    "The proof is analytic; do not claim any new numerical verification.",
+    "Do not rewrite original RL9 deferral or RL10 audit."
+  ],
+  "failure_lesson_ids": [
+    "FL-001 through FL-012 preserved",
+    "FL-013 new work appendix"
+  ],
+  "recovery_mode": "rework",
+  "changed_input_or_mechanism": "Direct connected exterior resource interface development, replacing induced deletion/core extraction.",
+  "next_task_bounds": "One candidate interface and first applicability gate; at most seven star types; zero new sources/numerical computation by default.",
+  "retry_conditions": [
+    "Exact independently attainable changed domain or a connected-resource mechanism; no unproved criticality/alpha shortcut."
+  ],
+  "stop_and_repair_active": false,
+  "checkpoint_branch": "work/rl11-mk2-countermodel-20261001",
+  "checkpoint_directory": "work-checkpoints/RL11-20261001",
+  "main_authority_unchanged": true,
+  "programme_active": true
+}

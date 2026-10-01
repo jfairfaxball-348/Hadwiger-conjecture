@@ -1,53 +1,33 @@
-# Authoritative incoming state — RL12
+# Authoritative incoming state — RL13
 
-**Unique incoming session: RL12. RL11 CLOSED/FROZEN under sessions/RL11/.**
-**Sole current brief: [RL12_NEW_ROUTE_DISCOVERY_BRIEF.md](RL12_NEW_ROUTE_DISCOVERY_BRIEF.md).**
-Operational state: READY FOR ONE BOUNDED NEW-ROUTE DISCOVERY UNIT; NOT STARTED.
+**Unique incoming session: RL13. RL12 CLOSED/FROZEN under
+[sessions/RL12/](../sessions/RL12/START_HERE.md).**
+**Sole current brief: [RL13_CRITICAL_CONNECTED_RESOURCE_BRIEF.md](RL13_CRITICAL_CONNECTED_RESOURCE_BRIEF.md).**
+Operational state: READY FOR ONE BOUNDED CRITICAL CONNECTED-RESOURCE GATE;
+NOT STARTED.
 
-Pin live HEAD, follow root AGENTS.md, snapshot incoming authority and
-investigate any predecessor mismatch. Read the sole brief and its exact
-required current records: [RL11 handover](RL11_SESSION_STATE_AND_RL12_KICKOFF.md),
-[countermodel proof](RL11_MK2_COUNTERMODEL_REPORT.md),
-[RL11 classifications](RL11_PROOF_STATE_AND_RESIDUAL_LEDGER.md),
+Pin live HEAD and compare it with the predecessor recorded in
+RL12_CLOSEOUT_MANIFEST.json before consuming authority. Confirm RL13 is
+unique. Read the sole brief and its exact current records:
+[RL12 handover](RL12_SESSION_STATE_AND_RL13_KICKOFF.md),
+[route comparison](RL12_ROUTE_COMPARISON.md),
+[separator feasibility report](RL12_SEPARATOR_FEASIBILITY_REPORT.md),
+[RL12 proof state](RL12_PROOF_STATE_AND_RESIDUAL_LEDGER.md),
+[RL12 failure appendix](RL12_FAILURE_AND_LESSON_LEDGER_APPENDIX.md),
+[RL12 source limits](RL12_SOURCE_QUESTION_AND_LIMITS.md),
 [canonical proof state](PROOF_STATE_AND_OPEN_OBLIGATIONS.md),
-[failure ledger](FAILURE_AND_LESSON_LEDGER.md),
-[RL10 audit](RL10_AUDIT_REPORT.md),
-[dependency/scope audit](RL10_DEPENDENCY_SCOPE_AUDIT.md),
-[Collatz risks/verdict](RL10_COLLATZ_RISK_AND_VERDICT.md),
-[correction record](RL10_CORRECTION_AND_LESSON_RECORD.md),
-[bridge ledger](BRIDGE_LEDGER.md), [dependency map](DEPENDENCY_MAP.md),
-[roadmap](RL3_ROADMAP.md),
-[historical connected-helper proposal](RL11_PREPARED_RECOVERY_TASK.md),
-[verification](VERIFICATION_REPORT.md) and
+[failure ledger](FAILURE_AND_LESSON_LEDGER.md), the RL11
+countermodel/handover, RL10 audit/dependency records, BRIDGE_LEDGER.md,
+DEPENDENCY_MAP.md, RL3_ROADMAP.md, VERIFICATION_REPORT.md and
 [recovery protocol](../docs/RESEARCH_RECOVERY_PROTOCOL.md).
 
-MK2 is REFUTED on exact D_cyc, not merely blocked by a missing proof.
-The eighteen-vertex witness meets ALL domain premises, has an independent
-triple, and loses colorfulness after EACH of eleven exterior deletions.
-It has no induced eligible proper kernel or Q5, but DOES have UP_6 and a
-simultaneous S-rooted K6. This refutes that extraction route only; no
-general UP_6, CR_6 or ordinary negative follows. No inherited theorem is
-demoted; original RL9/RL10 unassessed wording is historical provenance.
+RL12's exact BR-06-SEP2 result is local only: it rules out the stated
+two-defect A/Q/B separator in C_t for t>=7. It does not prove a separator
+exists or is unavoidable, and the source check gives no order-seven credit.
+RL11's MK2 refutation on exact D_cyc remains a refutation of MK2 only; the
+same graph retains UP_6 and a rooted K6. The induced-kernel extraction claim
+is retired. No inherited theorem is demoted.
 
-The user's closeout instruction makes RL12 a discovery session. Compare
-at most three genuinely distinct routes and select at most one for a
-bounded feasibility/first-obstruction check. Do not automatically select
-the preserved connected-helper proposal or replay MK2 under a new name.
-No RL12 research has begun. A discovery decision is not a theorem.
-
-Keep full sharp Hadwiger h(G)>=chi(G) for EVERY finite simple graph as
-the root, accepting a complete rigorous proof or actual rigorously verified
-finite h<chi counterexample. General UP_6/CR_6/root obligations remain;
-even general CR_6 implies ordinary order seven only. Preserve flexible
-roots and all simultaneous branch conditions. Do not impose criticality,
-global alpha<=2, order twelve/five helpers, a helper clique or induced-core
-existence on the original D_cyc domain. An independently justified changed
-domain must be explicit.
-
-Preserve RL6–RL9 P01–P04, RL11-P01–P04, A1–A11, C2/C3, FL-001–FL-013,
-source gaps/sixteen unchecked-source limits, corpus, roadmap, dependency/
-bridge records, all countermodel proofs/certificates and Collatz review.
-All uncovered cases and arbitrary order/exterior/path/component/coloring
-parameters, larger S, degrees>=8, other degree-seven complements,
-ordinary t>=8/CR_s>=7 and all sharpness/unavoidability obligations remain.
-Programme active; normal checkpoint and closeout rules apply.
+Keep full sharp Hadwiger h(G)>=chi(G) for EVERY finite simple graph as the
+root. RL13 is one bounded input-development gate on full C_7 only, not a
+root proof or universal coverage claim. Programme active.
