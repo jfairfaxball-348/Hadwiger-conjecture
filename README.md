@@ -16,7 +16,7 @@ For the current incoming research state, begin at [`START_HERE.md`](START_HERE.m
 - `knowledge/` is non-authoritative lookup/index material only.
 - `.rl-work/` is ignored local scratch/checkpoint state.
 
-RL6 is **CLOSED/FROZEN** under [`sessions/RL6/`](sessions/RL6/START_HERE.md). Its bounded recovery assessment proves a scoped rooted-K6 construction and a critical degree-seven configuration exclusion, while preserving an analytic countermodel to universal certificate extraction. The unique incoming **RL7** assesses the cyclic degree-seven shared-color compatibility gap under its [sole brief](authoritative/RL7_CYCLIC_DEGREE7_COMPATIBILITY_BRIEF.md). The scoped results, inherited corpus/certificate, RL4/RL5 source limits and failure lessons are retained. No cyclic selection input is accepted as proved; general CR6 and full sharp Hadwiger remain unresolved by this project.
+RL7 is **CLOSED/FROZEN** under [sessions/RL7/](sessions/RL7/START_HERE.md). Its bounded assessment gives an analytic countermodel to auxiliary shared-color routing and an explicit positive rooted K6, preserving the distinction from CR6 and ordinary negatives. The unique incoming **RL8** assesses uncolored cyclic routing under its [sole brief](authoritative/RL8_UNCOLORED_CYCLIC_ROUTING_BRIEF.md). UP_6 remains unproved; all inherited scopes, corpus/certificate, source limits and failure lessons remain. General CR6 and full sharp Hadwiger remain unresolved by this project.
 
 ## Continuing through failures
 

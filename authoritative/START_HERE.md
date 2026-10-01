@@ -1,41 +1,78 @@
-# Authoritative incoming state — RL7
+# Authoritative incoming state — RL8
 
-**Unique incoming session: RL7.** RL6 is CLOSED/FROZEN under sessions/RL6/.
-**Sole current brief:** [RL7_CYCLIC_DEGREE7_COMPATIBILITY_BRIEF.md](RL7_CYCLIC_DEGREE7_COMPATIBILITY_BRIEF.md).
-**Operational state: READY FOR ONE BOUNDED CYCLIC-DEFECT COMPATIBILITY ASSESSMENT.**
-No RL7 research has begun. The shared-palette selection input is conjectural, not accepted as proved.
+**Unique incoming session: RL8.** RL7 is CLOSED/FROZEN under sessions/RL7/.
+**Sole current brief:** [RL8_UNCOLORED_CYCLIC_ROUTING_BRIEF.md](RL8_UNCOLORED_CYCLIC_ROUTING_BRIEF.md).
+**Operational state: READY FOR ONE BOUNDED UNCOLORED CYCLIC-ROUTING ASSESSMENT.**
+UP_6 is conjectural; no RL8 research has begun. SP_6 is retired on D_cyc.
 
 ## Start gate and exact current reads
 
-Pin the then-live default-branch HEAD as BASE_HEAD, read root AGENTS.md, record the current authority identity, and confirm no unresolved integrity failure. Source gaps are explicit obligations, not unexplained integrity failures.
+Pin the then-live default-branch HEAD as BASE_HEAD, read root AGENTS.md,
+record current authority identity and confirm no unresolved integrity
+failure. Explicit source gaps remain obligations. Read only:
 
-Read:
-1. The sole RL7 brief above and [../docs/RESEARCH_RECOVERY_PROTOCOL.md](../docs/RESEARCH_RECOVERY_PROTOCOL.md).
-2. [RL6_SESSION_STATE_AND_RL7_KICKOFF.md](RL6_SESSION_STATE_AND_RL7_KICKOFF.md), [RL6_RECOVERY_REPORT.md](RL6_RECOVERY_REPORT.md), and [RL6_PROOF_STATE_AND_RESIDUAL_LEDGER.md](RL6_PROOF_STATE_AND_RESIDUAL_LEDGER.md).
-3. [FAILURE_AND_LESSON_LEDGER.md](FAILURE_AND_LESSON_LEDGER.md), [PROOF_STATE_AND_OPEN_OBLIGATIONS.md](PROOF_STATE_AND_OPEN_OBLIGATIONS.md).
-4. [DEPENDENCY_MAP.md](DEPENDENCY_MAP.md), [BRIDGE_LEDGER.md](BRIDGE_LEDGER.md), [RL4_ADMISSIBILITY_REPORT.md](RL4_ADMISSIBILITY_REPORT.md), and [COLLATZ_FAILURE_REVIEW.md](COLLATZ_FAILURE_REVIEW.md).
-5. [VERIFICATION_REPORT.md](VERIFICATION_REPORT.md), [background/READ_ME_FIRST.md](background/READ_ME_FIRST.md). Use exact inherited source/corpus records only when a live dependency needs them.
+1. The sole RL8 brief and [../docs/RESEARCH_RECOVERY_PROTOCOL.md](../docs/RESEARCH_RECOVERY_PROTOCOL.md).
+2. [RL7_SESSION_STATE_AND_RL8_KICKOFF.md](RL7_SESSION_STATE_AND_RL8_KICKOFF.md),
+   [RL7_COMPATIBILITY_REPORT.md](RL7_COMPATIBILITY_REPORT.md), and
+   [RL7_PROOF_STATE_AND_RESIDUAL_LEDGER.md](RL7_PROOF_STATE_AND_RESIDUAL_LEDGER.md).
+3. [FAILURE_AND_LESSON_LEDGER.md](FAILURE_AND_LESSON_LEDGER.md) and
+   [PROOF_STATE_AND_OPEN_OBLIGATIONS.md](PROOF_STATE_AND_OPEN_OBLIGATIONS.md).
+4. [RL6_RECOVERY_REPORT.md](RL6_RECOVERY_REPORT.md),
+   [RL6_PROOF_STATE_AND_RESIDUAL_LEDGER.md](RL6_PROOF_STATE_AND_RESIDUAL_LEDGER.md),
+   [DEPENDENCY_MAP.md](DEPENDENCY_MAP.md), [BRIDGE_LEDGER.md](BRIDGE_LEDGER.md),
+   [COLLATZ_FAILURE_REVIEW.md](COLLATZ_FAILURE_REVIEW.md).
+5. [VERIFICATION_REPORT.md](VERIFICATION_REPORT.md) and
+   [background/READ_ME_FIRST.md](background/READ_ME_FIRST.md). The exact new
+   witness/checker is AUXILIARY_COUNTERMODEL.json / verify_auxiliary_countermodel.py
+   if its live dependency needs them; source/corpus records only as required.
 
-Do not recursively preload frozen sessions, Archive, knowledge or the whole corpus. RL6_INCOMING_SNAPSHOT.json and earlier snapshots identify historical inputs, not the new BASE_HEAD. Earlier briefs/handovers and their former hold/next wording are historical; they authorize no old-session work. RL6_WORK_UNIT_SCOPE.md records completed pre-assessment bounds.
+Do not preload frozen sessions, Archive, knowledge or the full corpus.
+RL7_INCOMING_SNAPSHOT.json, RL7_CHECKPOINT_MANIFEST.json and earlier snapshots
+are historical inputs, not the new BASE_HEAD. Earlier briefs/handovers and
+their next/hold wording are historical and authorize no old-session work.
+RL7_WORK_UNIT_SCOPE.md is the completed pre-assessment record.
 
-## Exact frontier and changed target
+## Exact frontier and one changed target
 
-RL6-P01/P02 prove a scoped simultaneous rooted-K6 construction when a coloring/transversal has a matching of missing root edges and unique S-colors at its endpoints. RL6-P03 supplies that input on the critical degree-seven matching-defect slice and excludes that configuration. Its star-fold context establishes minimum degree at least seven in a hypothetical minor-minimal order-seven counterexample.
+RL7-P02/P03 give a twelve-vertex auxiliary countermodel to SP_6 for every
+star coloring and either repeated-color root choice. Shared unique-color
+demands force common internal vertices. P04 supplies a positive rooted K6,
+all fifteen adjacencies and a proper K7 in G. The failure does not refute
+CR_6 or ordinary Hadwiger and does not satisfy full C_7 criticality.
 
-RL6-P04 proves that H=C5 join C5, S=V(H), is colorful and has a rooted K6 but admits no matching certificate under any optimal coloring/transversal. This rejects universal certificate extraction, not CR_6 or ordinary Hadwiger. C2's external signature dimension and C3's unavoidability remain open.
+The sole next task is UP_6: retain the explicitly weaker D_cyc domain and
+five simultaneous internally disjoint paths, remove only endpoint-palette
+restrictions. RL7's graph passes that change via five uncolored paths; the
+general input is unproved. UP_6 is a restricted subdivision certificate,
+not a replacement target. The conditional assembly retains exact order six,
+and A3 retains order seven in the critical application. All fifteen branch
+adjacencies and all S intersections must coexist in one model.
 
-The sole next target is d(v)=7 with the nonedges of G[N(v)] forming C7. Six selected neighbors leave a P6 of five missing adjacencies. Assess the exact auxiliary mechanism in the brief, using at most seven star-contraction types and one path-selection attempt. Shared color labels and the choice of repeated-color root need a changed compatibility argument. Independent paths do not supply one model automatically.
-
-The graph exterior, path lengths, two-color component structures and colorings remain unbounded. No automatic census, repeated source gate or general roadmap is scheduled. A computation requires an explicit hypothesis and complete finite bounds before it starts.
+At most seven named star types and one uncolored-routing assessment. General
+exterior size, path lengths, components and colorings remain unbounded;
+seven boundary choices do not establish finite global coverage. No source
+query/gate replay, census, sampling or general roadmap is scheduled. A
+numerical experiment requires recorded complete finite bounds and verifier.
 
 ## Root, coverage and recovery
 
-Full sharp Hadwiger remains h(G)>=chi(G) for every finite simple graph, with both values zero on the empty graph. A full rigorous proof or an actual rigorously verified finite graph with h(G)<chi(G) is legitimate; neither is established.
+Full sharp Hadwiger remains h(G)>=chi(G) for every finite simple graph, both
+zero on empty. Either a complete rigorous proof or an actual rigorously
+verified finite h<chi counterexample is legitimate. Neither is established.
+General CR_6 remains unpromoted/inconclusive; a proof would imply ordinary
+order seven only, leaving every t>=8 and CR_s for s>=7. Retain the critical
+cyclic slice, other degree-seven complements, all degrees >=8, arbitrary
+order and larger root sets, C2/C3 and every bridge/sharpness residual.
 
-At the critical interface H=G-v has exact chi(H)=6 and S=N(v) is colorful in every proper six-coloring. A claimed model must provide six simultaneous nonempty, disjoint, connected branches, all fifteen adjacencies, every branch meeting S. Retain flexible roots and absence of universal vertices; M1 still covers none of the critical frontier.
+Preserve RL6-P01–P04, FL-001–FL-009, RL3-GAP-01, RL3-GAP-02, OPEN-0005,
+OPEN-0008 / SRC-0014 / RES-0015 and all sixteen unchecked-source limits.
+M1 covers none of the critical frontier and may not restart without an
+obstruction-changing input. No openness is inferred from failed retrieval.
+An auxiliary routing negative, a CR_6 negative and an actual ordinary
+Hadwiger counterexample have distinct full witness obligations.
 
-Other degree-seven complements, all degrees at least eight, arbitrary graph order and general root-set size remain. No unavoidability of the cyclic configuration is asserted. General CR_6 remains unpromoted/inconclusive; even a general proof would address ordinary order seven only, leaving every t>=8 and CR_s for s>=7.
-
-Preserve FL-001–FL-008, RL3-GAP-01, RL3-GAP-02, OPEN-0005, OPEN-0008 / SRC-0014 / RES-0015, and all sixteen unchecked-source limits. No openness is inferred from failed retrieval. An auxiliary routing countermodel need not refute a rooted model; a CR_6 countermodel is distinct from an ordinary Hadwiger counterexample.
-
-Developing/testing unproved inputs is authorized; consuming them as sufficient theorems requires independent justification. Complete one bounded unit, preserve its outcome and a concrete next recovery task, and recommend continue or finish under AGENTS.md. The programme remains active after scoped failures.
+Developing/testing UP_6 is authorized; consuming it as proved requires
+independent justification. Complete one bounded unit, record failures,
+surviving scope, downstream effects, lessons and retry conditions, recommend
+continue or finish, and preserve an exact changed recovery task. The programme
+remains active after failures.

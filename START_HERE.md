@@ -30,6 +30,14 @@ Scratch is never authority.
 
 ## Current handoff
 
-RL6 is CLOSED/FROZEN under `sessions/RL6/`. RL7 is the unique incoming session for one bounded cyclic degree-seven compatibility assessment. Begin through `authoritative/START_HERE.md` and its sole RL7 brief. The exact scoped RL6 proofs, coverage countermodel and failure lessons are preserved; the new path-selection input remains conjectural.
+RL7 is CLOSED/FROZEN under `sessions/RL7/`. RL8 is the unique incoming
+session for one bounded uncolored cyclic-routing assessment. Begin through
+`authoritative/START_HERE.md` and its sole `RL8_UNCOLORED_CYCLIC_ROUTING_BRIEF.md`. The auxiliary SP_6
+countermodel, positive rooted K6, inherited results and failure lessons are
+preserved; UP_6 remains unproved and no RL8 research has begun.
 
-Full sharp Hadwiger remains the root, accepting either a rigorous universal proof or an actual verified finite counterexample. Develop and test changed inputs under the recovery protocol, preserve all source/coverage limits, and hand over a concrete recovery task after any failure. Do not replay the completed source gate or matching proof without an obstruction-changing input.
+Full sharp Hadwiger remains the root, accepting either a rigorous universal
+proof or an actual rigorously verified ordinary counterexample. Develop and
+test the changed input under the recovery protocol, retain all source/coverage
+limits, and hand over a concrete recovery task after any failure. Do not
+replay SP_6, the source gate or M1 without an obstruction-changing input.

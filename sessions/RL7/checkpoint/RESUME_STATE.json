@@ -1,0 +1,64 @@
+{
+  "format": "rl7-work-resume-v1",
+  "date": "2026-10-01",
+  "base_head": "a773ff58e114b6a1a81ca388872684ed875372aa",
+  "authoritative_tree": "d32e2cb7975570ed6cea69b1a1328ef26d577316",
+  "incoming_rl": 7,
+  "session_brief": "authoritative/RL7_CYCLIC_DEGREE7_COMPATIBILITY_BRIEF.md",
+  "gate_passed": true,
+  "expected_predecessor_match": true,
+  "bounded_work_unit_complete": true,
+  "authoritative_promotion": false,
+  "rl7_closed": false,
+  "checkpoint_branch": "work/rl7-cyclic-compatibility-20261001",
+  "checkpoint_prefix": "research-checkpoints/RL7/",
+  "last_verified_frontier": "SP_6 refuted on the exact weaker auxiliary domain by a 12-vertex analytic countermodel, universally over all seven star types, every coloring and both root choices; the witness has an explicit rooted K6 and G has proper K7, so no CR_6 or ordinary negative. RL7-P01 conditional assembly survives.",
+  "completed_results": [
+    "RL7-P01 conditional sufficiency",
+    "RL7-P02 auxiliary premise verification",
+    "RL7-P03 universal shared-color routing countermodel",
+    "RL7-P04 positive rooted K6/K7 and one uncolored-routing witness"
+  ],
+  "corrections_demotions": [],
+  "failure_lesson_ids": [
+    "FL-001",
+    "FL-002",
+    "FL-003",
+    "FL-004",
+    "FL-005",
+    "FL-006",
+    "FL-007",
+    "FL-008",
+    "FL-009"
+  ],
+  "recovery_mode": "rework",
+  "changed_input_or_mechanism": "UP_6 removes only endpoint-palette restrictions while retaining D_cyc and five disjoint path interiors; general input unproved",
+  "next_recovery_task": "NEXT_RECOVERY_TASK.md",
+  "next_task_bounds": "one desk-based uncolored routing assessment at at most seven star types; no source gate, sampling or census; general exterior/path/coloring dimensions unbounded",
+  "next_exact_operation": "finish normal RL7 closeout on explicit finish up; do not begin a second mechanism in this completed unit",
+  "do_not_recompute": [
+    "inherited source gate",
+    "M1 without obstruction-changing input",
+    "SP_6 on unchanged D_cyc",
+    "completed 12-vertex proof and explicit witnesses"
+  ],
+  "stop_and_repair_active": false,
+  "stop_candidate_dependent_deductions": true,
+  "unpromoted_or_uncovered": [
+    "all new RL7 work pending numbered closeout",
+    "general UP_6",
+    "critical cyclic exclusion",
+    "general CR_6",
+    "ordinary order seven",
+    "full sharp Hadwiger",
+    "all retained bridge/source residuals"
+  ],
+  "verification_results": {
+    "new_fixed_witness": "PASS; one explicit graph/witness, no graph/color/path enumeration",
+    "analytic_scope_review": "PASS same worker; no formal/independent external review",
+    "inherited_corpus": "PASS packaging/provenance only",
+    "inherited_finite_base": "PASS one nine-vertex graph only"
+  },
+  "recommendation": "it makes sense to finish up here",
+  "transport_recovery": "T-004: CLI push authentication failed before remote mutation; publish exact verified tree via GitHub app Git objects and read back branch/main/artifacts"
+}
