@@ -1,0 +1,30 @@
+{
+  "scope": "inherited fixed witnesses, exact finite base, corpus packaging; no universal analytic proof certification",
+  "certificate_unchanged": true,
+  "runs": [
+    {
+      "script": "verify_uncolored_core.py",
+      "returncode": 0,
+      "stdout": "{\n  \"result\": \"PASS\",\n  \"H_vertices\": 12,\n  \"H_edges\": 44,\n  \"triples_checked\": 220,\n  \"seven_supplied_star_colorings_checked\": 7,\n  \"helper_capacity_edge_types\": [\n    0,\n    1,\n    4\n  ],\n  \"all_two_edge_routing_capacity_upper_bound\": 4,\n  \"supplied_UP6_path_edge_lengths\": [\n    2,\n    2,\n    2,\n    2,\n    3\n  ],\n  \"omitted_root_internal_uses\": 1,\n  \"rooted_K6_adjacencies\": [\n    {\n      \"branches\": [\n        0,\n        1\n      ],\n      \"edge\": [\n        \"t0\",\n        \"u1\"\n      ]\n    },\n    {\n      \"branches\": [\n        0,\n        2\n      ],\n      \"edge\": [\n        \"u0\",\n        \"u2\"\n      ]\n    },\n    {\n      \"branches\": [\n        0,\n        3\n      ],\n      \"edge\": [\n        \"u0\",\n        \"u4\"\n      ]\n    },\n    {\n      \"branches\": [\n        0,\n        4\n      ],\n      \"edge\": [\n        \"u0\",\n        \"u5\"\n      ]\n    },\n    {\n      \"branches\": [\n        0,\n        5\n      ],\n      \"edge\": [\n        \"u0\",\n        \"t1\"\n      ]\n    },\n    {\n      \"branches\": [\n        1,\n        2\n      ],\n      \"edge\": [\n        \"t2\",\n        \"u2\"\n      ]\n    },\n    {\n      \"branches\": [\n        1,\n        3\n      ],\n      \"edge\": [\n        \"u1\",\n        \"u4\"\n      ]\n    },\n    {\n      \"branches\": [\n        1,\n        4\n      ],\n      \"edge\": [\n        \"u1\",\n        \"u5\"\n      ]\n    },\n    {\n      \"branches\": [\n        1,\n        5\n      ],\n      \"edge\": [\n        \"u1\",\n        \"u6\"\n      ]\n    },\n    {\n      \"branches\": [\n        2,\n        3\n      ],\n      \"edge\": [\n        \"u2\",\n        \"u4\"\n      ]\n    },\n    {\n      \"branches\": [\n        2,\n        4\n      ],\n      \"edge\": [\n        \"u2\",\n        \"u5\"\n      ]\n    },\n    {\n      \"branches\": [\n        2,\n        5\n      ],\n      \"edge\": [\n        \"u2\",\n        \"u6\"\n      ]\n    },\n    {\n      \"branches\": [\n        3,\n        4\n      ],\n      \"edge\": [\n        \"t4\",\n        \"u5\"\n      ]\n    },\n    {\n      \"branches\": [\n        3,\n        5\n      ],\n      \"edge\": [\n        \"u4\",\n        \"u6\"\n      ]\n    },\n    {\n      \"branches\": [\n        4,\n        5\n      ],\n      \"edge\": [\n        \"u5\",\n        \"t1\"\n      ]\n    }\n  ],\n  \"G_K7_adjacency_count\": 21,\n  \"scope\": \"one fixed graph and supplied witnesses; universal proofs are analytic\",\n  \"graph_coloring_or_path_search\": false\n}\n",
+      "stderr": ""
+    },
+    {
+      "script": "verify_auxiliary_countermodel.py",
+      "returncode": 0,
+      "stdout": "{\n  \"result\": \"PASS\",\n  \"H_vertices\": 12,\n  \"H_edges\": 44,\n  \"F_triangle_free\": true,\n  \"T_clique_size\": 5,\n  \"no_universal_H_vertex\": true,\n  \"listed_H_and_J_colorings_checked\": 7,\n  \"listed_uncolored_paths_checked\": 5,\n  \"rooted_K6_adjacencies_checked\": 15,\n  \"G_K7_adjacencies_checked\": 21,\n  \"scope\": \"one explicit graph and listed witnesses; all-coloring/path exclusion remains the analytic report's proof\",\n  \"enumerated_arbitrary_graphs_colorings_paths\": false\n}\n",
+      "stderr": ""
+    },
+    {
+      "script": "verification/verify_rooted_barrier.py",
+      "returncode": 0,
+      "stdout": "{\n  \"status\": \"PASS\",\n  \"domain\": \"one labeled graph P on vertices 0..8\",\n  \"n\": 9,\n  \"m\": 20,\n  \"connectivity\": 4,\n  \"cuts_of_size_at_most_3_checked\": 130,\n  \"root_set\": [\n    0,\n    1,\n    2,\n    3\n  ],\n  \"rooted_model_assignments_checked\": 3125,\n  \"rooted_K4_models\": 0,\n  \"chromatic_number\": 4,\n  \"three_colorings_checked\": 19683,\n  \"root_set_colorful\": false,\n  \"limits\": \"Exact finite base only. Universal join lift has a separate analytic proof; no Hadwiger counterexample or general graph census.\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "script": "background/verification/verify_corpus.py",
+      "returncode": 0,
+      "stdout": "{\n  \"status\": \"PASS\",\n  \"cutoff\": \"2026-09-30\",\n  \"counts\": {\n    \"sources\": 31,\n    \"results\": 31,\n    \"topics\": 14,\n    \"open_cases\": 8,\n    \"glossary_terms\": 30\n  },\n  \"inspection_counts\": {\n    \"not_directly_checked\": 16,\n    \"checked_primary\": 13,\n    \"checked_authoritative_secondary\": 2\n  },\n  \"project_originated_claims\": 0,\n  \"limits\": \"Mechanical packaging/provenance validation only; not a mathematical proof verifier.\"\n}\n",
+      "stderr": ""
+    }
+  ]
+}
