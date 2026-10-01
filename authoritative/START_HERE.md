@@ -1,38 +1,15 @@
-# Authoritative incoming state — RL10
+# Authoritative incoming state — RL11
 
-**Unique incoming session: RL10.** RL9 is CLOSED/FROZEN under sessions/RL9/.
-**Sole current brief:** [RL10_PROGRESS_AND_CORRECTION_AUDIT_BRIEF.md](RL10_PROGRESS_AND_CORRECTION_AUDIT_BRIEF.md).
-**Operational state: READY FOR ONE PROGRESS AND CORRECTION AUDIT.**
-No RL10 audit or mathematics has begun. Direct user instruction replaced
-the proposed MK2 research session with this audit during RL9 closeout.
+**Unique incoming session: RL11. RL10 CLOSED/FROZEN under sessions/RL10/.**
+**Sole current brief: [RL11_APPLICABILITY_GATE_BRIEF.md](RL11_APPLICABILITY_GATE_BRIEF.md).**
+Operational state: READY FOR ONE BOUNDED APPLICABILITY ASSESSMENT; NOT STARTED.
 
-Pin live HEAD, read root AGENTS.md, verify the unique incoming generation
-and integrity gate, then follow the sole brief and
-[../docs/TENTH_SESSION_PROGRESS_AUDIT.md](../docs/TENTH_SESSION_PROGRESS_AUDIT.md).
-Review RL1–RL9 and separately reconcile initialization/baseline provenance
-against the ten-predecessor window; report any missing record, never invent
-RL0. The bounded audit explicitly authorizes necessary historical reads.
-Use the exact current inputs and frozen records named by the brief.
+Pin live HEAD and follow root AGENTS.md. Verify incoming authority and investigate any predecessor mismatch. Read the sole brief, [RL10_AUDIT_REPORT.md](RL10_AUDIT_REPORT.md), [RL10_DEPENDENCY_SCOPE_AUDIT.md](RL10_DEPENDENCY_SCOPE_AUDIT.md), [RL10_COLLATZ_RISK_AND_VERDICT.md](RL10_COLLATZ_RISK_AND_VERDICT.md), [RL10_CORRECTION_AND_LESSON_RECORD.md](RL10_CORRECTION_AND_LESSON_RECORD.md), [PROOF_STATE_AND_OPEN_OBLIGATIONS.md](PROOF_STATE_AND_OPEN_OBLIGATIONS.md), [FAILURE_AND_LESSON_LEDGER.md](FAILURE_AND_LESSON_LEDGER.md), [RL9_DEFERRED_COLORFUL_KERNEL_TASK.md](RL9_DEFERRED_COLORFUL_KERNEL_TASK.md), [VERIFICATION_REPORT.md](VERIFICATION_REPORT.md) and [../docs/RESEARCH_RECOVERY_PROTOCOL.md](../docs/RESEARCH_RECOVERY_PROTOCOL.md).
 
-RL9 records EX5 and scoped UP_6 on EVERY D_cyc pair with GLOBAL alpha<=2,
-through RL8-P01/P02 only. Recheck load-bearing proofs and exact consuming
-hypotheses, especially the particular-edge extension and all residual
-matching deletion cases. The retained verifier passes are fixed-witness,
-finite-base and packaging checks, not certificates of the new analytic proof.
+RL10 found no mathematical demotion at the audited scopes. Its verdict is CONTINUE only for one applicability assessment. The root remains full sharp ordinary Hadwiger, h(G)>=chi(G) for EVERY finite simple graph, accepting either a full proof or an actual rigorously verified finite h<chi graph. No root outcome is established.
 
-MK2 is unproved, unassessed and deferred in
-[RL9_DEFERRED_COLORFUL_KERNEL_TASK.md](RL9_DEFERRED_COLORFUL_KERNEL_TASK.md).
-It authorizes no RL10 proof assessment. The audit must decide whether to
-continue, repair, pivot or pause the current route and justify one exact
-bounded RL11 target. Earlier briefs and checkpoint handovers are preserved
-history, not current task authorization.
+Retain exactly D_cyc and distinguish its premises from full minor-criticality. RL9 EX5 and UP_6 are proved only with GLOBAL alpha(H)<=2, through RL8-P01/P02. Order twelve and five helpers are restricted-slice facts. General alpha/core applicability, general UP_6/CR_6, ordinary order seven and higher orders remain open. Even general CR_6 gives ordinary order seven only. Keep flexible roots, six simultaneous nonempty/disjoint/connected branches, all fifteen adjacencies and every S-intersection. No unrestricted subdivision substitution.
 
-Keep full sharp Hadwiger h(G)>=chi(G) for EVERY finite simple graph as the
-root, accepting either a complete rigorous proof or a rigorously verified
-finite h<chi counterexample. Preserve RL6–RL9 P01–P04, C2/C3, FL-001–FL-011,
-all source gaps/unchecked-source limits, corpus, roadmap, dependency/bridge
-records, countermodels, certificates and Collatz review. Preserve every
-coverage, applicability, unbounded-parameter and sharpness obligation.
-No general alpha<=2 premise, general UP_6/CR_6 or full root outcome is
-currently established; even general CR_6 gives ordinary order seven only.
-No unrestricted subdivision substitute. Programme remains active.
+MK2 is UNPROVED, NOT ASSESSED and NOT STARTED. Its original deferred RL9 record remains unchanged as provenance; this sole RL11 brief supersedes deferral for future candidate exploration only. The audit checked conditional sufficiency/circularity and selected the task after comparing three options; it did not assess MK2's truth. No RL11 research occurred during closeout.
+
+Preserve RL6–RL9 P01–P04, A1–A11, C2/C3, FL-001–FL-012, all source gaps and sixteen unchecked-source limits, corpus, roadmap, dependency/bridge records, countermodels/certificates and Collatz review. All uncovered cases and arbitrary graph/exterior/path/component/coloring parameters remain. Seven star types and three triple placements are not a finite global reduction. No census, sampling, unchanged failed-route/source-gate replay or new proof campaign beyond the one bounded brief. Any new numerical work requires complete recorded bounds and a verifier first. Programme active.

@@ -16,16 +16,8 @@ For the current incoming research state, begin at [`START_HERE.md`](START_HERE.m
 - `knowledge/` is non-authoritative lookup/index material only.
 - `.rl-work/` is ignored local scratch/checkpoint state.
 
-RL9 is **CLOSED/FROZEN** under [sessions/RL9/](sessions/RL9/START_HERE.md).
-It proves EX5 and UP_6 on the explicit D_cyc plus GLOBAL alpha<=2 slice,
-using extension of each specified complement edge. General UP_6, CR_6 and
-full sharp Hadwiger remain unresolved by this project. All prior results,
-failure lessons and source limits are retained. The unique incoming **RL10**
-performs a progress/correction audit of the preceding session window under its
-[sole brief](authoritative/RL10_PROGRESS_AND_CORRECTION_AUDIT_BRIEF.md).
-Every tenth session will audit progress and corrections under the
-[recurring policy](docs/TENTH_SESSION_PROGRESS_AUDIT.md). MK2 is deferred.
-No RL10 audit has begun. The programme remains active.
+RL10 is **CLOSED/FROZEN** under [sessions/RL10/](sessions/RL10/START_HERE.md).
+Its [audit](authoritative/RL10_AUDIT_REPORT.md) retains valid scoped results, finds no required mathematical demotion, and identifies general applicability as the missing bridge. The unique incoming **RL11** performs one bounded colorful-kernel applicability assessment under its [sole brief](authoritative/RL11_APPLICABILITY_GATE_BRIEF.md). MK2 is unproved/unassessed and RL11 is not started. RL9 EX5 and UP_6 still require GLOBAL alpha<=2; general UP_6, CR_6 and full sharp Hadwiger remain unresolved here. All prior results, source limits and failure lessons survive. Every tenth session follows the [audit policy](docs/TENTH_SESSION_PROGRESS_AUDIT.md). Programme active.
 
 ## Continuing through failures
 

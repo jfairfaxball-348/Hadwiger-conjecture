@@ -1,3 +1,16 @@
+# Current proof state after RL10
+
+**RL10 CLOSED/FROZEN; RL11 is the sole incoming applicability assessment, NOT STARTED.**
+RL10 promoted a completed audit/research decision, no new universal mathematical theorem. No mathematical error requiring correction/demotion was found at the audited scopes. Fresh analytic review retained RL6–RL9 P01–P04, C2/C3, the matching criterion, every RL9 residual deletion case and every particular-edge extension; it is not external independent certification. Four inherited checkers retain only their fixed-witness, finite-base and corpus scopes.
+
+The exact D_cyc domain is unchanged. EX5 and its UP_6 consequence retain GLOBAL alpha(H)<=2 through RL8-P01/P02. General D_cyc or critical G-v has no established global independence bound or applicable-core extraction. Order twelve/five helpers are slice-specific. General UP_6, CR_6 and full sharp Hadwiger remain unproved/unrefuted by this programme; even general CR_6 gives ordinary order seven only.
+
+MK2 is UNPROVED, NOT ASSESSED and NOT STARTED. RL10 checked its conditional sufficiency/circularity only, compared three next options and selected one bounded safe-deletion assessment for RL11. The earlier deferred RL9 record is preserved; only RL11_APPLICABILITY_GATE_BRIEF.md authorizes its future assessment. Candidate development is allowed; consuming it as a proved input is not.
+
+Evidence and scope: RL10_AUDIT_REPORT.md, RL10_SESSION_MATRIX.md, RL10_DEPENDENCY_SCOPE_AUDIT.md, RL10_COLLATZ_RISK_AND_VERDICT.md and RL10_CORRECTION_AND_LESSON_RECORD.md. All inherited classifications, uncovered cases, arbitrary-order/exterior/path/component/coloring parameters, higher ordinary orders, C2/C3, bridge/sharpness/unavoidability obligations and all source limits remain. The original ledger below is preserved byte-identically; its old incoming/next/deferred wording describes earlier generations, not the sole current mandate.
+
+## Preserved complete pre-RL10 canonical state
+
 # Proof state and open obligations after RL9
 
 Status: RL9 CLOSED/FROZEN; RL10 is the sole incoming progress/correction audit session.

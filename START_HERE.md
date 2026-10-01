@@ -30,18 +30,6 @@ Scratch is never authority.
 
 ## Current handoff
 
-RL9 is CLOSED/FROZEN under sessions/RL9/. RL10 is the unique incoming
-session for a progress/correction audit of the preceding session window. Begin
-through authoritative/START_HERE.md and its sole
-RL10_PROGRESS_AND_CORRECTION_AUDIT_BRIEF.md. Every tenth session follows
-docs/TENTH_SESSION_PROGRESS_AUDIT.md. MK2 is unproved, unassessed and deferred;
-no RL10 audit has begun. EX5 and UP_6 are established only on the
-explicit D_cyc plus GLOBAL alpha<=2 slice. General UP_6 remains unproved
-and unrefuted. Every inherited result/source/failure limit is retained.
+RL10 is CLOSED/FROZEN under sessions/RL10/. RL11 is the unique incoming session for one colorful-kernel applicability assessment. Begin through authoritative/START_HERE.md and its sole RL11_APPLICABILITY_GATE_BRIEF.md. RL10's audit found no mathematical demotion, retained the exact global-alpha slice, and selected the future MK2 safe-deletion task after an explicit comparison. MK2 is unproved/unassessed and RL11 is not started. All inherited scopes, source/failure/certificate limits and residual obligations remain. Every tenth RL follows docs/TENTH_SESSION_PROGRESS_AUDIT.md.
 
-Full sharp Hadwiger remains the root, accepting either a rigorous universal
-proof or an actual rigorously verified finite ordinary counterexample.
-Audit progress and exact root applicability; select a justified bounded
-successor under the recovery protocol and consume only independently justified results. Retain every coverage/source/sharpness
-residual and leave a changed bounded recovery task after any failure.
-The programme remains active.
+Full sharp ordinary Hadwiger remains the root, accepting either rigorous universal proof or an actual rigorously verified finite h<chi counterexample. Programme active. Develop candidates under the recovery protocol; consume only independently justified inputs at their exact scopes.

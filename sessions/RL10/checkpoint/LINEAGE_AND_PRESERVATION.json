@@ -1,0 +1,89 @@
+{
+  "scope": "finite pinned Git objects, no mathematical proof verification",
+  "sessions": [
+    {
+      "session": 1,
+      "transition_commit": "0ded120b3c9b92cae044d076d7d81a7cdd4eedb8",
+      "parent": "7c2442fb63c37c2ea5d1ca5a11aa90babd4f5716",
+      "frozen_tree": "b8ed02ab4189d1e56ab632fd3034196973d1a350",
+      "incoming_authority_tree": "57fde12830ee517e9fb7b0e7c6aa62b418b2a525",
+      "frozen_history_unchanged": true,
+      "incoming_identity_pass": true
+    },
+    {
+      "session": 2,
+      "transition_commit": "d5a978dd4e37040a63645a83e5c39c94c3b5182e",
+      "parent": "0ded120b3c9b92cae044d076d7d81a7cdd4eedb8",
+      "frozen_tree": "ceadcb014e21135631fa9743691d024696295e99",
+      "incoming_authority_tree": "8e0bcfb94cb30ddb2127680018045edbbe5fc9e7",
+      "frozen_history_unchanged": true,
+      "incoming_identity_pass": true
+    },
+    {
+      "session": 3,
+      "transition_commit": "779339630af6e819cd047462941bed97a571630b",
+      "parent": "d5a978dd4e37040a63645a83e5c39c94c3b5182e",
+      "frozen_tree": "33b577d19a5dc3a68a5f3d40c2b6773e25c71d0e",
+      "incoming_authority_tree": "8f8e3c6f077d2879ca5f25933d2e7be90aacbc91",
+      "frozen_history_unchanged": true,
+      "incoming_identity_pass": true
+    },
+    {
+      "session": 4,
+      "transition_commit": "e345884d1656fe1b7c77bafb0d6b6df0027bfb28",
+      "parent": "779339630af6e819cd047462941bed97a571630b",
+      "frozen_tree": "e1a69cdb9c0aaed1ff3dd7941aa36d2a8d41062a",
+      "incoming_authority_tree": "5fe85255f41270f3bf5a5b808f706c319c6696e3",
+      "frozen_history_unchanged": true,
+      "incoming_identity_pass": true
+    },
+    {
+      "session": 5,
+      "transition_commit": "e35f3459837bca890bcef9641179dcf83f96d01e",
+      "parent": "e345884d1656fe1b7c77bafb0d6b6df0027bfb28",
+      "frozen_tree": "12486cee53fc0f906d116f9fe32c603e0bde3b88",
+      "incoming_authority_tree": "55e4b84008084a14a3e04e4caf96c0e910b4ff40",
+      "frozen_history_unchanged": true,
+      "incoming_identity_pass": true
+    },
+    {
+      "session": 6,
+      "transition_commit": "a773ff58e114b6a1a81ca388872684ed875372aa",
+      "parent": "63af75cde689372a766105d1b3d7cdcac1ad36c8",
+      "frozen_tree": "5faa31463fddf200192c50bbbf2e4b01fbc0e83a",
+      "incoming_authority_tree": "5f109b306dca394f0a48b12b3ed40af7d7ad411a",
+      "frozen_history_unchanged": true,
+      "incoming_identity_pass": true
+    },
+    {
+      "session": 7,
+      "transition_commit": "2fbd0440857302ac3a8e1807f4d0451b6a641823",
+      "parent": "a773ff58e114b6a1a81ca388872684ed875372aa",
+      "frozen_tree": "45808a97ad529aabea5b9f22b3482faa294cdf74",
+      "incoming_authority_tree": "d32e2cb7975570ed6cea69b1a1328ef26d577316",
+      "frozen_history_unchanged": true,
+      "incoming_identity_pass": true
+    },
+    {
+      "session": 8,
+      "transition_commit": "0eb090e5986d909046e00b83085cb0afb5f54116",
+      "parent": "2fbd0440857302ac3a8e1807f4d0451b6a641823",
+      "frozen_tree": "e09efd052bb386e1d073559f8dda0d0e3d2c1257",
+      "incoming_authority_tree": "112b083f1fe7579ea7ce80fe9d02067e6a7c59b1",
+      "frozen_history_unchanged": true,
+      "incoming_identity_pass": true
+    },
+    {
+      "session": 9,
+      "transition_commit": "415728ca27c9a20c57960d568ab11762bdec88cd",
+      "parent": "0eb090e5986d909046e00b83085cb0afb5f54116",
+      "frozen_tree": "ade180ac94fc7e8a2d3b19f4dd7834aa50e01cbf",
+      "incoming_authority_tree": "01ee75abad5aff6cc34796e8331ae4114f6ae3c7",
+      "frozen_history_unchanged": true,
+      "incoming_identity_pass": true
+    }
+  ],
+  "background_unchanged_from_RL2": true,
+  "finite_base_unchanged_from_RL3": true,
+  "collatz_review_unchanged_from_RL2": true
+}
