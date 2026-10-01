@@ -30,15 +30,18 @@ Scratch is never authority.
 
 ## Current handoff
 
-RL8 is CLOSED/FROZEN under sessions/RL8/. RL9 is the unique incoming
-session for one bounded EX5 helper-clique extraction assessment. Begin through
-authoritative/START_HERE.md and its sole RL9_HELPER_CLIQUE_EXTRACTION_BRIEF.md.
-The scoped routing theorem, complete direct-resource obstruction, positive
-models and all inherited results/source/failure lessons are preserved.
-EX5 is unproved and no RL9 research has begun; general UP_6 is unproved/unrefuted.
+RL9 is CLOSED/FROZEN under sessions/RL9/. RL10 is the unique incoming
+session for a progress/correction audit of the preceding session window. Begin
+through authoritative/START_HERE.md and its sole
+RL10_PROGRESS_AND_CORRECTION_AUDIT_BRIEF.md. Every tenth session follows
+docs/TENTH_SESSION_PROGRESS_AUDIT.md. MK2 is unproved, unassessed and deferred;
+no RL10 audit has begun. EX5 and UP_6 are established only on the
+explicit D_cyc plus GLOBAL alpha<=2 slice. General UP_6 remains unproved
+and unrefuted. Every inherited result/source/failure limit is retained.
 
 Full sharp Hadwiger remains the root, accepting either a rigorous universal
-proof or an actual rigorously verified ordinary counterexample. Develop/test
-the prepared input under the recovery protocol; consume only independently
-justified results. Retain every coverage/source/sharpness residual and leave
-an exact changed recovery task after any failure. Programme active.
+proof or an actual rigorously verified finite ordinary counterexample.
+Audit progress and exact root applicability; select a justified bounded
+successor under the recovery protocol and consume only independently justified results. Retain every coverage/source/sharpness
+residual and leave a changed bounded recovery task after any failure.
+The programme remains active.

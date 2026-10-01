@@ -16,7 +16,16 @@ For the current incoming research state, begin at [`START_HERE.md`](START_HERE.m
 - `knowledge/` is non-authoritative lookup/index material only.
 - `.rl-work/` is ignored local scratch/checkpoint state.
 
-RL8 is **CLOSED/FROZEN** under [sessions/RL8/](sessions/RL8/START_HERE.md). It proves a scoped uncolored cyclic-routing construction using five clique helpers, preserves a complete all-two-edge shortcut obstruction with a positive longer-route witness, and retains every inherited result/source limit. The unique incoming **RL9** tests helper-clique extraction in the explicit alpha<=2 slice under its [sole brief](authoritative/RL9_HELPER_CLIQUE_EXTRACTION_BRIEF.md). EX5 remains unproved; general UP_6, CR6 and full sharp Hadwiger remain unresolved by this project. The programme remains active.
+RL9 is **CLOSED/FROZEN** under [sessions/RL9/](sessions/RL9/START_HERE.md).
+It proves EX5 and UP_6 on the explicit D_cyc plus GLOBAL alpha<=2 slice,
+using extension of each specified complement edge. General UP_6, CR_6 and
+full sharp Hadwiger remain unresolved by this project. All prior results,
+failure lessons and source limits are retained. The unique incoming **RL10**
+performs a progress/correction audit of the preceding session window under its
+[sole brief](authoritative/RL10_PROGRESS_AND_CORRECTION_AUDIT_BRIEF.md).
+Every tenth session will audit progress and corrections under the
+[recurring policy](docs/TENTH_SESSION_PROGRESS_AUDIT.md). MK2 is deferred.
+No RL10 audit has begun. The programme remains active.
 
 ## Continuing through failures
 

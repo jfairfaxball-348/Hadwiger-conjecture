@@ -1,0 +1,105 @@
+{
+  "format": "rl6-work-checkpoint-manifest-v1",
+  "date_utc": "2026-09-30",
+  "BASE_HEAD": "63af75cde689372a766105d1b3d7cdcac1ad36c8",
+  "base_root_tree": "aa938d0d834e59fa5409eed051360e92291963f7",
+  "incoming_authority_tree": "5f109b306dca394f0a48b12b3ed40af7d7ad411a",
+  "incoming_rl": 6,
+  "checkpoint_branch": "work/rl6-route-recovery-20260930",
+  "checkpoint_prefix": "research-checkpoints/RL6/",
+  "candidate_count": 3,
+  "deeper_candidate": "C1 / BR-01",
+  "complete_bounded_work_unit": true,
+  "authoritative_promotion": false,
+  "rl6_closed": false,
+  "next_task": "NEXT_RECOVERY_TASK.md",
+  "input_blobs_verified": 45,
+  "relative_links_verified": 18,
+  "artifacts_excluding_this_manifest": {
+    "FAILURE_AND_LESSON_LEDGER_APPENDIX.md": {
+      "bytes": 10100,
+      "sha256": "421587c0ea1e234a56bbe0b49590e202066f85710677dbf443db5c76fb726cef",
+      "git_blob": "eea30fbe72d6cce914f40e50d6efb4321ee68636"
+    },
+    "NEXT_RECOVERY_TASK.md": {
+      "bytes": 6513,
+      "sha256": "82ee4bc1e598231c4bbd6e61bb3978be2bdbdc3c8b251d7eaa02749d64d68aaa",
+      "git_blob": "61b6767ec2717f9c0573286e0d01ddf1b535d8fc"
+    },
+    "RESUME_STATE.json": {
+      "bytes": 4302,
+      "sha256": "ca4896e99de4da72e004d7362718155a323930eeffe3b0831bcf5af6d34a6faf",
+      "git_blob": "2c1c4554b8bd6a61a0e0175c54fd697b4f8f148b"
+    },
+    "RL6_INCOMING_SNAPSHOT.json": {
+      "bytes": 13335,
+      "sha256": "7f5eabc215dfea861e47c67915f50e564c8779a78abdd8a0e7d54c58d0010059",
+      "git_blob": "2e4d02aa176dcfa1d5bafc1786198a4781121b3c"
+    },
+    "RL6_PROOF_STATE_AND_RESIDUAL_LEDGER.md": {
+      "bytes": 6058,
+      "sha256": "a0a15bb3adf4eabf7c9fa616cb5f4128f673ad1c498109e1f7fe5a327c41792e",
+      "git_blob": "f478da96a023d688601878f4f3f041e2e811b465"
+    },
+    "RL6_RECOVERY_REPORT.md": {
+      "bytes": 22273,
+      "sha256": "949dbec4ed2b2966abcc9675d6e6745876b7d77b0fcfe111a29dd8c3968188c5",
+      "git_blob": "395ae62dbaab744cd813a849b519c1f8f6540faf"
+    },
+    "VERIFICATION_REPORT.md": {
+      "bytes": 5524,
+      "sha256": "b36f394f09219953a4133606c08be4ac31d79ff4c1227ece3615a20fc23213da",
+      "git_blob": "e32c640f8b8c03c21a338fdd28c3b3524ac19f85"
+    },
+    "WORK_UNIT_SCOPE.md": {
+      "bytes": 3212,
+      "sha256": "f9c532e796c1731cdb7697c874b77895f2555023468975aca02bcc2a0071ecdc",
+      "git_blob": "3672cc4893cf1e0ef3a797721a55aa73626bcfe8"
+    }
+  },
+  "intended_artifact_paths": [
+    "CHECKPOINT_MANIFEST.json",
+    "FAILURE_AND_LESSON_LEDGER_APPENDIX.md",
+    "NEXT_RECOVERY_TASK.md",
+    "RESUME_STATE.json",
+    "RL6_INCOMING_SNAPSHOT.json",
+    "RL6_PROOF_STATE_AND_RESIDUAL_LEDGER.md",
+    "RL6_RECOVERY_REPORT.md",
+    "VERIFICATION_REPORT.md",
+    "WORK_UNIT_SCOPE.md"
+  ],
+  "preservation": "All BASE_HEAD entries and subtrees retained; only isolated checkpoint directory added.",
+  "verification_limits": [
+    "same-worker analytic review; no formal check or independent external review",
+    "inherited corpus packaging only",
+    "inherited nine-vertex finite certificate only",
+    "no new source retrieval or graph census"
+  ],
+  "source_gaps_retained": [
+    "RL3-GAP-01",
+    "RL3-GAP-02",
+    "OPEN-0005",
+    "OPEN-0008",
+    "SRC-0014",
+    "RES-0015"
+  ],
+  "unchecked_sources_retained": [
+    "SRC-0001",
+    "SRC-0002",
+    "SRC-0006",
+    "SRC-0008",
+    "SRC-0014",
+    "SRC-0020",
+    "SRC-0021",
+    "SRC-0022",
+    "SRC-0023",
+    "SRC-0025",
+    "SRC-0026",
+    "SRC-0027",
+    "SRC-0028",
+    "SRC-0029",
+    "SRC-0030",
+    "SRC-0031"
+  ],
+  "recommendation": "it makes sense to finish up here"
+}
