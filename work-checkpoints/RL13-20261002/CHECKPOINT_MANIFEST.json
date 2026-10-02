@@ -1,0 +1,90 @@
+{
+  "format": "rl-isolated-checkpoint-v1",
+  "incoming_rl": 13,
+  "status": "OPEN / isolated checkpoint / NOT PROMOTED",
+  "base_head": "23a2dfa3fff5b8bbd11cd986f4418dfc5b3a54b1",
+  "base_root_tree": "2da5fc8f126fcc81aa6a102aff3b70c1513f8cb8",
+  "authoritative_tree": "4a477bf49f47be34f743e7700863ac0472d8776c",
+  "authoritative_blob_count": 140,
+  "branch": "work/rl13-critical-resource-20261002",
+  "prefix": "work-checkpoints/RL13-20261002/",
+  "checkpoint_body_commit": "b481d3a33df0ba191c54f4fef1c8fd8faaf71534",
+  "checkpoint_body_tree": "587d365ef0947e3a7f4bd87e92147a2f27605be4",
+  "expected_total_files": 10,
+  "body_files": [
+    {
+      "path": "CRITICAL_CONNECTED_RESOURCE_REPORT.md",
+      "sha": "4c31339633f7cdd6d591194a8d461a7c82229b9a",
+      "size": 8942
+    },
+    {
+      "path": "FAILURE_AND_LESSON_LEDGER_APPENDIX.md",
+      "sha": "cfc787ac5b719e2c3edfaeb31c68bd83a95ffa0f",
+      "size": 3245
+    },
+    {
+      "path": "INCOMING_SNAPSHOT.json",
+      "sha": "82c1eedd481e76bfffb85755a4a20a5beea8bbda",
+      "size": 2588
+    },
+    {
+      "path": "NEXT_RECOVERY_TASK.md",
+      "sha": "eb26b938ef0aba3744d5664de7c139d919d851ad",
+      "size": 1658
+    },
+    {
+      "path": "PROOF_STATE_AND_RESIDUAL_LEDGER.md",
+      "sha": "4c8786c212d84f5468885c92a9015a51457ed68b",
+      "size": 3009
+    },
+    {
+      "path": "RESUME_STATE.json",
+      "sha": "19fbb624090c8907a374c4befec07678dc6dd46d",
+      "size": 1850
+    },
+    {
+      "path": "SOURCE_QUESTION_AND_LIMITS.md",
+      "sha": "7d5c708a5ab65473f0e73b263385a32c249cee4a",
+      "size": 995
+    },
+    {
+      "path": "VERIFICATION_REPORT.md",
+      "sha": "5610265fcf80a1074d9e3a3f6dff9cd81143f001",
+      "size": 2165
+    },
+    {
+      "path": "WORK_UNIT_SCOPE.md",
+      "sha": "dd0f873c1c80a2216d401e9550446ea7795dd59d",
+      "size": 2380
+    }
+  ],
+  "start_gate": {
+    "expected_predecessor_match": true,
+    "incoming_rl_unique": true,
+    "preexisting_rl13_branch": false,
+    "preexisting_sessions_rl13": false
+  },
+  "mathematical_scope": {
+    "mechanism_count": 1,
+    "m_cases": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "star_types_max": 7,
+    "mathematical_numerical_computation": 0,
+    "new_source_queries": 0,
+    "new_source_opens": 0,
+    "result": "For m=1..4 and N_H(U)∩S proper, one-star boundary compression forces an inextendible residual component and a coverage-or-compatibility defect; m=0 excluded only using inherited RL12-SRC-01; stop at N_H(U)∩S=S.",
+    "first_obstruction": "S-complete resource union: one-star equality partition has one repeated pair, but a five-color S pattern has two; no independent implication forces a missing boundary vertex.",
+    "named_inherited_universal_obligation_reduced": false
+  },
+  "preservation": {
+    "main_mutated": false,
+    "authoritative_mutated": false,
+    "failure_ids_through": "FL-015 in work appendix; FL-001..FL-014 preserved in authority"
+  },
+  "publication_note": "This is an isolated work checkpoint only. Manifest excludes its own blob hash. RL13 remains open and authority is unchanged until explicit closeout."
+}
