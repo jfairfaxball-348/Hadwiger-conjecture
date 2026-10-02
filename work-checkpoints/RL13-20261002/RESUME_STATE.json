@@ -1,0 +1,49 @@
+{
+  "format": "rl-connector-resume-v2",
+  "session": 13,
+  "status": "OPEN / bounded checkpoint complete / NOT PROMOTED",
+  "base_head": "23a2dfa3fff5b8bbd11cd986f4418dfc5b3a54b1",
+  "root_tree_sha": "2da5fc8f126fcc81aa6a102aff3b70c1513f8cb8",
+  "authority_tree_sha": "4a477bf49f47be34f743e7700863ac0472d8776c",
+  "branch": "work/rl13-critical-resource-20261002",
+  "prefix": "work-checkpoints/RL13-20261002/",
+  "mechanism": "one-star boundary five-color compression",
+  "cases": {
+    "m0": "excluded using inherited RL12-SRC-01 7-connectivity at retained source status",
+    "m1_to_m4_proper_boundary": "RL13-P01 proved: five-color compression plus inextendible residual component and coverage-or-compatibility dichotomy",
+    "m1_to_m4_S_complete": "OPEN; first obstruction"
+  },
+  "first_missing_implication": "No independent input forces N_H(U)∩S to be a proper subset of S; with A=S the one-star permutation cannot match a five-color S equality partition.",
+  "minimum_total_size_used": false,
+  "mathematical_numerical_computation": 0,
+  "new_source_queries": 0,
+  "new_source_opens": 0,
+  "named_universal_obligation_reduced": false,
+  "preserved_failure_ids": [
+    "FL-001",
+    "FL-002",
+    "FL-003",
+    "FL-004",
+    "FL-005",
+    "FL-006",
+    "FL-007",
+    "FL-008",
+    "FL-009",
+    "FL-010",
+    "FL-011",
+    "FL-012",
+    "FL-013",
+    "FL-014"
+  ],
+  "new_failure_id": "FL-015",
+  "next_exact_operation": "Restrict to m=1 with S-complete minimum resource T; derive leaf-private cyclic-edge witnesses from minimum size and test one actual-star-coloring augmentation/obstruction mechanism, at most seven types.",
+  "do_not_recompute": [
+    "RL11 MK2",
+    "RL7 SP_6",
+    "RL8 all-two-edge shortcut",
+    "RL12 separator catalogue",
+    "RL12 source question"
+  ],
+  "stop_and_repair_active": false,
+  "programme": "ACTIVE"
+}
