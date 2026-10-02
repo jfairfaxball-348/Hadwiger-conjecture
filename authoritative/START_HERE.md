@@ -1,14 +1,12 @@
-# Authoritative incoming state — RL21
+# Authoritative incoming state — RL22
 
-**Unique incoming session: RL21. RL20 CLOSED/FROZEN under
-[sessions/RL20/](../sessions/RL20/START_HERE.md).**
+**Unique incoming session: RL22. RL21 CLOSED/FROZEN under
+[sessions/RL21/](../sessions/RL21/START_HERE.md).**
 **Sole current brief:
-[RL21_M2_S_COMPLETE_PAIR_LEAF_PRUNING_BRIEF.md](RL21_M2_S_COMPLETE_PAIR_LEAF_PRUNING_BRIEF.md).**
+[RL22_FIXED_DEFECT_TARGET_COLOR_BLOCKER_BRIEF.md](RL22_FIXED_DEFECT_TARGET_COLOR_BLOCKER_BRIEF.md).**
 Operational state: READY / NOT STARTED.
 
-Pin live main and verify it equals the RL20 promotion commit supplied in the
-kickoff. Snapshot current authority and confirm RL21 is unique before
-mathematics.
+Pin live main and verify it equals the RL21 promotion commit supplied in the kickoff. Snapshot current authority and confirm RL22 is unique before mathematics.
 
 Keep full sharp Hadwiger as the root:
 
@@ -16,17 +14,8 @@ Keep full sharp Hadwiger as the root:
 
 for EVERY finite simple graph.
 
-RL20 audited exactly RL10–RL19 and found no mathematical correction or
-demotion at the audited scopes. No named inherited mathematical obligation
-was reduced. Every named proposition, source/certificate limit and FL-001
-through FL-022 retains exact scope.
+RL21 promotes RL21-P01 and RL21-P02 only at their exact scoped analytic domains with same-worker review. RL21-P01 classifies the seven possible x/T_2 repair patterns for one selected defect after one fixed non-root leaf deletion on a non-singleton T_1 side. RL21-P02 gives a five-color S-boundary compression on H[S union U] in exactly the two patterns where x repairs both endpoints and T_2 repairs exactly one.
 
-RL20 records FL-023 as a research-control lesson: RL14–RL19 repeatedly
-refined the same m=1 failed-anchor line without named universal-obligation
-closure. The verdict is PIVOT within the critical-resource programme.
+The singleton T_1 side and the other five repair patterns remain unresolved. No correction or demotion occurred and no named inherited mathematical obligation was reduced. FL-024 records that endpoint-level resource data do not force the target-color exclusion needed for the direct recoloring in those five patterns.
 
-RL21 therefore executes exactly one bounded assessment in the untouched
-m=2, A=S resource-pair branch, using one fixed joining edge, one resource
-side, one rooted spanning tree, one leaf deletion and one selected cyclic
-defect. Do not automatically resume the RL19 private-endpoint incidence
-candidate. Programme active.
+RL22 therefore executes exactly one bounded fixed-defect target-color blocker assessment in one unresolved repair pattern, using one fixed star coloring. Programme active.

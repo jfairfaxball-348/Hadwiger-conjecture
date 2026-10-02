@@ -1,0 +1,62 @@
+{
+  "format": "rl-connector-resume-v1",
+  "base_head": "afd7414ab547adc3781b3ec67989464a6c9ce0d8",
+  "authoritative_tree": "3fbb6642475e282f7a084c11f4ddb1dea143110c",
+  "incoming_rl": 21,
+  "session_brief": "authoritative/RL21_M2_S_COMPLETE_PAIR_LEAF_PRUNING_BRIEF.md",
+  "validated_authority_paths": [
+    "AGENTS.md",
+    "authoritative/START_HERE.md",
+    "authoritative/RL21_M2_S_COMPLETE_PAIR_LEAF_PRUNING_BRIEF.md",
+    "docs/RESEARCH_RECOVERY_PROTOCOL.md",
+    "authoritative/RL20_AUDIT_REPORT.md",
+    "authoritative/RL20_SESSION_MATRIX.md",
+    "authoritative/RL20_DEPENDENCY_SCOPE_AUDIT.md",
+    "authoritative/RL20_COLLATZ_RISK_AND_VERDICT.md",
+    "authoritative/RL20_CORRECTION_AND_DEMOTION_RECORD.md",
+    "authoritative/RL20_SESSION_STATE_AND_RL21_KICKOFF.md",
+    "authoritative/PROOF_STATE_AND_OPEN_OBLIGATIONS.md",
+    "authoritative/FAILURE_AND_LESSON_LEDGER.md",
+    "authoritative/DEPENDENCY_MAP.md",
+    "authoritative/RL13_CRITICAL_CONNECTED_RESOURCE_REPORT.md",
+    "authoritative/RL13_LEAF_PRIVATE_RESOURCE_REPORT.md",
+    "authoritative/VERIFICATION_REPORT.md"
+  ],
+  "last_verified_frontier": "RL21-P01: on the fixed non-singleton T_1 side, one non-root leaf deletion preserves pq and one minimum-total-size use forces one selected defect e=ab. The repair sets X via x and Y via T_2 are nonempty and cover {a,b}, giving exactly seven patterns. RL21-P02: when X={a,b} and Y is singleton, one disjoint-star source coloring admits a direct endpoint recoloring giving five colors on S across H[S union U]. The singleton T_1 subcase and the other five repair patterns remain open; their first missing implication is target-color exclusion on T_2-neighbors.",
+  "completed_artifacts": [
+    "M2_S_COMPLETE_PAIR_LEAF_PRUNING_REPORT.md",
+    "PROOF_STATE_AND_RESIDUAL_LEDGER.md",
+    "FAILURE_AND_LESSON_LEDGER_APPENDIX.md",
+    "NEXT_RECOVERY_TASK.md",
+    "SOURCE_QUESTION_AND_LIMITS.md",
+    "VERIFICATION_REPORT.md"
+  ],
+  "unpromoted_or_uncovered": [
+    "RL21-P01 remains unpromoted until closeout",
+    "RL21-P02 remains unpromoted until closeout",
+    "FL-024 remains unpromoted until closeout",
+    "|T_1|=1 singleton side unresolved",
+    "five of seven selected-defect repair patterns unresolved",
+    "full m=2, A=S branch unresolved",
+    "all named inherited mathematical obligations unchanged"
+  ],
+  "next_exact_operation": "Await user control. On finish up, enter CLOSEOUT_LOCK and atomically freeze/promote RL21 and install exactly one bounded successor. On continue, do not execute a second RL21 mechanism because the user-authorized work unit was exactly one bounded m=2 leaf-pruning assessment.",
+  "do_not_recompute": [
+    "same seven-pattern endpoint repair classification",
+    "same direct one-endpoint recoloring test without target-color information",
+    "m=1 failed-anchor/private-endpoint line",
+    "resource-side switch within RL21",
+    "smaller-family mechanism within RL21"
+  ],
+  "failure_lesson_ids": [
+    "FL-001..FL-023 preserved",
+    "FL-024 prepared/unpromoted"
+  ],
+  "recovery_mode": "rework",
+  "changed_input_or_mechanism": "One fixed source star coloring and its target-colored T_2 blocker sets Z_a,Z_b, instead of endpoint-incidence data alone.",
+  "next_task_bounds": "Same m=2, A=S interface; same fixed pq, one fixed leaf and one selected defect; one unresolved repair pattern; one disjoint star type and one actual coloring; no T_2 pruning, side switch, second coloring, second defect, m=1 line, numerical/source expansion.",
+  "retry_conditions": [
+    "Do not repeat the RL21 incidence-only recoloring argument without new color-level control on T_2."
+  ],
+  "stop_and_repair_active": false
+}

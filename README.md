@@ -10,17 +10,20 @@ barriers, corrections and open obligations.
 
 ## Current handover
 
-RL20 is CLOSED/FROZEN under [sessions/RL20/](sessions/RL20/START_HERE.md).
-It completed the mandatory RL10–RL19 progress/correction audit. No
-mathematical correction or demotion was required, and no named inherited
-mathematical obligation was reduced.
+RL21 is CLOSED/FROZEN under [sessions/RL21/](sessions/RL21/START_HERE.md).
+It completed one bounded m=2, A=S resource-pair leaf-pruning assessment.
 
-The audit identified a repeated-local-work/coverage risk in the RL14–RL19
-m=1 failed-anchor chain and selected a bounded branch pivot. RL21 is the
-unique incoming session through
-[authoritative/RL21_M2_S_COMPLETE_PAIR_LEAF_PRUNING_BRIEF.md](authoritative/RL21_M2_S_COMPLETE_PAIR_LEAF_PRUNING_BRIEF.md).
-It is READY / NOT STARTED and works only in the untouched m=2, A=S
-resource-pair branch.
+RL21-P01 classifies the seven possible x/T_2 repair patterns for one selected
+cyclic defect after a fixed non-root leaf deletion on a non-singleton T_1
+side. RL21-P02 gives a five-color S-boundary compression on H[S union U] in
+the two patterns where x repairs both defect endpoints and T_2 repairs
+exactly one. The singleton side and five repair patterns remain open; no
+named inherited mathematical obligation is reduced.
+
+RL22 is the unique incoming session through
+[authoritative/RL22_FIXED_DEFECT_TARGET_COLOR_BLOCKER_BRIEF.md](authoritative/RL22_FIXED_DEFECT_TARGET_COLOR_BLOCKER_BRIEF.md).
+It is READY / NOT STARTED and tests one fixed-coloring T_2 target-color
+blocker gate in one unresolved RL21 repair pattern.
 
 The programme is active and the root remains full sharp Hadwiger for every
 finite simple graph.
