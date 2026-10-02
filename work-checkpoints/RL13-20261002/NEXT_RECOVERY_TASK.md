@@ -1,19 +1,54 @@
-# RL13 concrete next target
+# Prepared recovery after RL13-U02
 
-Status: PREPARED ONLY; NOT STARTED.
+Status: PREPARED ONLY / NOT STARTED. RL13 is OPEN / NOT PROMOTED.
+The earlier leaf-private task was completed in RL13-U02; its exact prior
+text remains in checkpoint bf6a4ad12bde1d20216b65dd9df51ea09930878e.
+This file does not begin another unit or designate a successor session.
 
-Work only inside the unresolved RL13 subcase m=1 and N_H(T) intersect S = S, where T is the single member of the maximum partial family and, because m=1, the minimum-total-size tie-breaker makes T a minimum-cardinality resource.
+## Why a changed input is required
 
-Use one changed input: minimal resource structure.
+RL13-P02 now supplies the five-color S boundary on the m=1, S-complete
+minimum-resource case. Its inextendible residual component can either
+join T while missing a cyclic coverage demand, or lack any edge to T
+while supporting the private-endpoint path. No step supplies a second
+disjoint resource with BOTH complete coverage and a joining edge.
+Repeating another source star, a global label permutation, or the same
+blocker dichotomy does not address that missing implication.
 
-If |T|=1, first record the immediate A2 obstruction to a vertex adjacent to all of S; do not generalize it to larger T.
+## One prospective gate
 
-If |T|>=2, choose a spanning tree Q of H[T]. For a leaf x of Q, T\{x} remains nonempty and connected. Minimum cardinality therefore forces T\{x} not to be a resource, so some cyclic nonedge e_i has no endpoint neighbor in T\{x}; since T is a resource, x alone supplies T's coverage of that e_i. Call this a private cyclic-edge witness for x.
+Retain exactly the same full C_7 domain, m=1, minimum S-complete T,
+spanning-tree leaf x, and private endpoints a,b with
+N_H(a) intersect T = N_H(b) intersect T = {x}.
 
-Bounded assessment: use at most the seven possible private cyclic-edge/star types and actual original-G star-minor colorings to test whether the leaf-private witnesses force either:
-1. a second resource C disjoint from T with an actual joining edge to T, contradicting m=1; or
-2. a precise residual attachment/coloring obstruction that explains why augmentation can fail.
+Use one additional independent full-critical input: an actual proper
+six-coloring d of the original vertex-deletion minor G-x. Let gamma=d(v).
+Then gamma is absent on S, and d already colors all of H-x, including
+the residual components. This is not a coloring of a contracted T and
+does not require a lift through its interior.
 
-Stop at the first missing independent implication, invalid coloring lift, circularity or uncovered leaf case. Do not infer that all leaves can be simultaneously colored from separate star colorings. Do not contract T and assume the quotient coloring lifts. No source query or numerical work by default.
+Assess one mechanism only: use the private-endpoint identities to test
+whether a single gamma/delta Kempe-component swap avoiding v can make
+gamma absent from N_G(x), permitting x to be colored gamma. Specify the
+entire changed component and check all old and new neighbor colors;
+the comparison must handle every affected edge. If no such swap is
+forced, identify the first missing component-incidence implication and
+record the precise surviving coloring obstruction. Do not assume a
+favorable choice of d, mix separate colorings, or treat this proposed
+insertion as an established theorem.
 
-If this m=1 S-complete gate fails, preserve the exact countermechanism before considering m=2,3,4. All larger-order/root obligations remain outside this bounded target.
+Bounds: one candidate mechanism, m=1 only, one extra minor type G-x,
+at most the five palettes {gamma,delta} with delta!=gamma. Quantify over
+actual colorings without numerical enumeration. No mathematical numerical
+work, new source query, or new source open by default. Stop at the first
+missing independent implication, invalid recoloring, circularity, or
+uncovered leaf/coloring case.
+
+No assessment of this gate has occurred. RL13-P01/P02 and every inherited
+result and source limit remain unchanged. This is one concrete recovery
+task, not a promise of augmentation or a universal obligation reduction.
+
+Current recommendation: complete RL13 through the normal user-triggered
+finish process before beginning a new mechanism. A recommendation does
+not close the session. Programme active.
+it makes sense to finish up here
