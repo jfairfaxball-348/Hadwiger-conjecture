@@ -1,35 +1,3 @@
-# Current proof state after RL14
-
-**RL14 CLOSED/FROZEN. RL15 is the sole incoming mixed-Kempe-component
-structural extraction gate, READY / NOT STARTED.**
-
-RL14-P01 is promoted as complete scoped analytic mathematics with
-same-worker review only. In every actual six-coloring d of G-x, every
-color occurs on N_G(x), and every two-color palette has a Kempe component
-meeting N_G(x) in both colors. Hence the prepared one-component
-gamma/delta insertion swap cannot free gamma=d(v) at x for any
-delta!=gamma, even if the swapped component is allowed to contain v.
-
-This retires only that recoloring mechanism. It does not exclude m=1,
-construct a second resource, or handle m=2,3,4 S-complete unions. The
-private endpoint identities survive but do not force the needed mixed-
-component incidence.
-
-No named inherited universal obligation is reduced: BR-00, BR-01 universal
-coverage, general UP_6, CR_6, ordinary order-seven coverage, every higher
-order and full sharp Hadwiger remain open. No inherited theorem is
-corrected or demoted. RL13-P00/P01/P02 and all earlier results,
-countermodels, certificates, source gaps and verification limits are
-preserved. FL-017 is appended; FL-001 through FL-016 are unchanged.
-Mathematical numerical computation and new source queries/opens were zero;
-no formal or external independent certification or novelty claim is made.
-
-The sole next task uses the forced mixed Kempe components structurally in
-at most the two private-endpoint anchor palettes; it is not yet assessed.
-Programme active.
-
-## Preserved complete pre-RL14 canonical state
-
 # Current proof state after RL13
 
 **RL13 CLOSED/FROZEN. RL14 is the sole incoming leaf-deletion coloring gate,

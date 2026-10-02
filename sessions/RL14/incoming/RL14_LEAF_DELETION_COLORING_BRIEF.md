@@ -1,5 +1,3 @@
-> **RL14 CLOSED/FROZEN — retained completed work record.** The exact original brief follows as historical incoming authority. RL14_SESSION_STATE_AND_RL15_KICKOFF.md and RL15_MIXED_KEMPE_COMPONENT_RESOURCE_BRIEF.md govern the current state. No RL15 work has begun.
-
 # RL14 — original-G leaf-deletion coloring / insertion gate
 
 **SOLE INCOMING RL14 BRIEF. READY / NOT STARTED.**

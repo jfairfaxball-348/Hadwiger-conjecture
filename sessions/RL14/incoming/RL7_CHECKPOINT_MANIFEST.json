@@ -1,0 +1,141 @@
+{
+  "format": "rl7-work-checkpoint-manifest-v1",
+  "date": "2026-10-01",
+  "BASE_HEAD": "a773ff58e114b6a1a81ca388872684ed875372aa",
+  "expected_predecessor": "a773ff58e114b6a1a81ca388872684ed875372aa",
+  "predecessor_match": true,
+  "base_root_tree": "627242605e0e2bd285eea1561f1a6adc355cb083",
+  "incoming_authority_tree": "d32e2cb7975570ed6cea69b1a1328ef26d577316",
+  "incoming_rl": 7,
+  "checkpoint_branch": "work/rl7-cyclic-compatibility-20261001",
+  "checkpoint_prefix": "research-checkpoints/RL7/",
+  "candidate_count": 1,
+  "assessed_candidate": "SP_6 / shared-color five-path selection on D_cyc",
+  "complete_bounded_work_unit": true,
+  "authoritative_promotion": false,
+  "rl7_closed": false,
+  "new_results": [
+    "RL7-P01 conditional assembly",
+    "RL7-P02 auxiliary premises",
+    "RL7-P03 universal routing countermodel",
+    "RL7-P04 positive rooted model and scoped uncolored witness"
+  ],
+  "corrections_demotions": [],
+  "failure_lesson_outcome": "FL-009",
+  "mechanical_incident": "T-003 repaired: abbreviated stdout is not full certificate; regenerated certificate bytes preserved",
+  "next_task": "NEXT_RECOVERY_TASK.md / UP_6",
+  "next_task_status": "formulated; not generally assessed or promoted",
+  "input_blobs_verified": 15,
+  "relative_links_verified": 7,
+  "artifacts_excluding_this_manifest": {
+    "AUXILIARY_COUNTERMODEL.json": {
+      "bytes": 2173,
+      "sha256": "89655ded048cf63d05e9f526759d648de465e533fabb20b1de9cdb96d40dc6a6",
+      "git_blob": "5bd3b56bb619b118a859030fad52a798991b88b4"
+    },
+    "FAILURE_AND_LESSON_LEDGER_APPENDIX.md": {
+      "bytes": 8761,
+      "sha256": "83b9380a08b50da84f99f422e0d5a8d20bbb85ce90c8bef3791f67227974d07e",
+      "git_blob": "48fc78350fd356e9f0ace710031c42cbd7c47b3a"
+    },
+    "NEXT_RECOVERY_TASK.md": {
+      "bytes": 7317,
+      "sha256": "891c5d436b4b0897ffbc74341fa1966ea8b05d69e7643ecfe0d1ee269de0a138",
+      "git_blob": "6aeda0934f8b900d7a1f4c335104b92dd52fb43c"
+    },
+    "RESUME_STATE.json": {
+      "bytes": 2979,
+      "sha256": "b0b7e75f28e280e2a56158daca291e40e5fa5fc83f8aba623a69acb46cea0168",
+      "git_blob": "0f518ecb8603a708cd32c6f4ba6ee7e51e632afe"
+    },
+    "RL7_COMPATIBILITY_REPORT.md": {
+      "bytes": 16851,
+      "sha256": "6e8ffb8b3a047bc9c55345710fb4de9f872e38fe7c81985066cce77aee7c92ce",
+      "git_blob": "92f67d54cee823fd10aa3eb9f87b2ad4025285fc"
+    },
+    "RL7_INCOMING_SNAPSHOT.json": {
+      "bytes": 3737,
+      "sha256": "60d45ddb0e33816a24c49a146de4695972b872527b3785031f56490fbfb94b73",
+      "git_blob": "89a04ac8a73c39cdd881378b53cf65b1a3f979da"
+    },
+    "RL7_PROOF_STATE_AND_RESIDUAL_LEDGER.md": {
+      "bytes": 5626,
+      "sha256": "ed53a5a8f5890a93700fe4176509f415cd2f64e6916617c33c115412d95ebafa",
+      "git_blob": "d9529bc31446bd976d57996d234f533ba50c5132"
+    },
+    "VERIFICATION_REPORT.md": {
+      "bytes": 7145,
+      "sha256": "55c796bf1dedda6eba17186de1dc013026cf8a193dc41f6f9e2e93840707c6a1",
+      "git_blob": "b753a05112cbaf10850062f33ebaa4e4d4b5b830"
+    },
+    "WORK_UNIT_SCOPE.md": {
+      "bytes": 4048,
+      "sha256": "3ca9ea0c29117c6994f929eb345bdf2311026719d686bc9eaef56447853097ca",
+      "git_blob": "d896d8d2a8ac3d5ffd49340f35ae6c1654ad36de"
+    },
+    "verify_auxiliary_countermodel.py": {
+      "bytes": 5221,
+      "sha256": "fc684a836b783ad32c97b1d8df86e51aac2cf42c3670dc219fb13609c7f09f8d",
+      "git_blob": "2c9dad3d2ef5bf97c96555e567db9b4a66f0898d"
+    }
+  },
+  "intended_artifact_paths": [
+    "AUXILIARY_COUNTERMODEL.json",
+    "CHECKPOINT_MANIFEST.json",
+    "FAILURE_AND_LESSON_LEDGER_APPENDIX.md",
+    "NEXT_RECOVERY_TASK.md",
+    "RESUME_STATE.json",
+    "RL7_COMPATIBILITY_REPORT.md",
+    "RL7_INCOMING_SNAPSHOT.json",
+    "RL7_PROOF_STATE_AND_RESIDUAL_LEDGER.md",
+    "VERIFICATION_REPORT.md",
+    "WORK_UNIT_SCOPE.md",
+    "verify_auxiliary_countermodel.py"
+  ],
+  "preservation": "All BASE_HEAD entries and subtrees retained; only isolated research-checkpoints/RL7/ directory added. main authority remains unchanged.",
+  "verifier_status": {
+    "fixed_witness": "PASS on one listed 12-vertex graph and explicit witnesses",
+    "analytic_scope_review": "PASS same worker, P01-P04 at stated scopes",
+    "corpus": "PASS packaging/provenance only",
+    "inherited_finite_base": "PASS exact nine-vertex domain; regenerated certificate byte-identical"
+  },
+  "verification_limits": [
+    "no formal proof checking or independent external review",
+    "no new external source retrieval",
+    "no graph, coloring or path census for the new witness",
+    "all-coloring/path negative proof analytic, not sampled",
+    "general auxiliary exterior, path and coloring dimensions unbounded",
+    "no critical cyclic exclusion or universal CR_6/root conclusion"
+  ],
+  "source_gaps_retained": [
+    "RL3-GAP-01",
+    "RL3-GAP-02",
+    "OPEN-0005",
+    "OPEN-0008",
+    "SRC-0014",
+    "RES-0015"
+  ],
+  "unchecked_sources_retained": [
+    "SRC-0001",
+    "SRC-0002",
+    "SRC-0006",
+    "SRC-0008",
+    "SRC-0014",
+    "SRC-0020",
+    "SRC-0021",
+    "SRC-0022",
+    "SRC-0023",
+    "SRC-0025",
+    "SRC-0026",
+    "SRC-0027",
+    "SRC-0028",
+    "SRC-0029",
+    "SRC-0030",
+    "SRC-0031"
+  ],
+  "recommendation": "it makes sense to finish up here",
+  "mechanical_incidents": [
+    "T-003 repaired summary/full certificate comparison",
+    "T-004 CLI push authentication failure; exact-tree connector fallback"
+  ]
+}

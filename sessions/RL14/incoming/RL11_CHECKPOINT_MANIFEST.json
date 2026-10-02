@@ -1,0 +1,80 @@
+{
+  "format": "rl11-work-checkpoint-v1",
+  "base_head": "ea4978ec31b060d432db2987b06586cd4bea60cc",
+  "authoritative_tree": "95833de67b819add9abf53fa229066e5ee8a50ab",
+  "branch": "work/rl11-mk2-countermodel-20261001",
+  "directory": "work-checkpoints/RL11-20261001",
+  "status": "NOT PROMOTED; one analytic MK2 negative complete; RL11 open",
+  "files": [
+    {
+      "path": "BASE_HEAD",
+      "bytes": 41,
+      "sha256": "17a6bbd1053f5af80ed7943e2398221194be8baaf999d3c2a036ca776603acc0",
+      "git_blob": "d7293e315a45ea2f3f148fea18e405f9e433ba14"
+    },
+    {
+      "path": "INCOMING_SNAPSHOT.json",
+      "bytes": 27382,
+      "sha256": "4c5e3fc8978da6e42c18def30c9fd7330f906750636c7ec74d5835f0ea3781f5",
+      "git_blob": "360f3a2f41568841d74822cf113bebee45555bcc"
+    },
+    {
+      "path": "WORK_UNIT_SCOPE.md",
+      "bytes": 3285,
+      "sha256": "6cfdf56c7b4720aec87c302841bcaf83515ff99e37b1b94947620dddcdace7c1",
+      "git_blob": "a2d97ea9dc38cdb74a2b36fa400b0310b0647041"
+    },
+    {
+      "path": "MK2_COUNTERMODEL_REPORT.md",
+      "bytes": 16729,
+      "sha256": "5f00bbfa1eedf7d8927f78717dfb2d5b81ef2636d5a0e2198a810110a037d910",
+      "git_blob": "0c8fab147f46ec436faa506219226884a1a94a43"
+    },
+    {
+      "path": "FAILURE_AND_LESSON_LEDGER_APPENDIX.md",
+      "bytes": 6652,
+      "sha256": "692ac633124eab0d13293c756bfb3a65fafaddae10778cbfc03f7c3fe07c73c5",
+      "git_blob": "33e11f9e37d335bc6cc68fcef8a04977de8aa51e"
+    },
+    {
+      "path": "PROOF_STATE_AND_RESIDUAL_LEDGER.md",
+      "bytes": 3471,
+      "sha256": "123266333fadec982186f1d9a140d4b0bd248209b5c7af7fc733ef220abb2f5f",
+      "git_blob": "5d3499827d9e904f9d82638997121755080c9b3e"
+    },
+    {
+      "path": "NEXT_RECOVERY_TASK.md",
+      "bytes": 4722,
+      "sha256": "156f4d76b9c4fa4a5a0cb67f80e08f50de2f01bfe0484c7134dbd69936bf127b",
+      "git_blob": "c1f32e73b1ec2652550d041147e8b171bf64b36c"
+    },
+    {
+      "path": "VERIFICATION_REPORT.md",
+      "bytes": 4987,
+      "sha256": "db3112d2417dcd22a662233fd1c4ef6afe794d2517e961bbc10c225bc1aa7f19",
+      "git_blob": "b1e3e1136617cf72ef33124cd0748c4913917850"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1456,
+      "sha256": "4bdabb815b2f75fe0bc018323620c210e43b10d309a1930ce5d905d1553ce89b",
+      "git_blob": "1b18cd103698ceb6d3a49d443b0d2fa79eeeff49"
+    },
+    {
+      "path": "RESUME_STATE.json",
+      "bytes": 3165,
+      "sha256": "e1b609cdea2f205cb90c7380322cad6e4cbc062ec21db35567568a0d49860835",
+      "git_blob": "ea5b30c0e06f1aee1adc9515dd0c53fb4991371b"
+    }
+  ],
+  "verification": {
+    "incoming_blobs_byte_verified": 111,
+    "new_source_queries": 0,
+    "new_mathematical_numerical_computation": false,
+    "inherited_verifiers_rerun_this_unit": false,
+    "external_independent_certification": false,
+    "classification": "analytic countermodel and positive witness; same-worker review",
+    "main_authority_unchanged": true
+  },
+  "self_hash": "Excluded; whole package included in intended Git tree check."
+}
