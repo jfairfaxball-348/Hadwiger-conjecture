@@ -1,0 +1,68 @@
+{
+  "format": "rl-connector-resume-v1",
+  "base_head": "10cfdbb3b6aeb47cab037912f0f6a18b5684ac26",
+  "authoritative_tree": "a9875ecec30d7a785b521ff73320efc192772193",
+  "incoming_rl": 24,
+  "session_brief": "authoritative/RL24_STRICT_MINIMUM_TOTAL_SIZE_RESOURCE_FAMILY_EXCHANGE_BRIEF.md",
+  "validated_authority_paths": [
+    "AGENTS.md",
+    "authoritative/START_HERE.md",
+    "authoritative/RL24_STRICT_MINIMUM_TOTAL_SIZE_RESOURCE_FAMILY_EXCHANGE_BRIEF.md",
+    "docs/RESEARCH_RECOVERY_PROTOCOL.md",
+    "docs/RL_RESEARCH_PROTOCOL.md",
+    "docs/CONNECTOR_WORKFLOW.md",
+    "authoritative/RL23_SESSION_STATE_AND_RL24_KICKOFF.md",
+    "authoritative/RL23_ONE_SIDED_LEAF_COLOR_COMPATIBILITY_REPORT.md",
+    "authoritative/RL23_PROOF_STATE_AND_RESIDUAL_LEDGER.md",
+    "authoritative/RL23_FAILURE_AND_LESSON_LEDGER_APPENDIX.md",
+    "authoritative/RL23_PREPARED_RECOVERY_TASK.md",
+    "authoritative/PROOF_STATE_AND_OPEN_OBLIGATIONS.md",
+    "authoritative/FAILURE_AND_LESSON_LEDGER.md",
+    "authoritative/DEPENDENCY_MAP.md",
+    "authoritative/RL21_M2_S_COMPLETE_PAIR_LEAF_PRUNING_REPORT.md",
+    "authoritative/RL22_FIXED_DEFECT_TARGET_COLOR_BLOCKER_REPORT.md",
+    "authoritative/RL13_WORK_UNIT_SCOPE.md",
+    "authoritative/RL13_CRITICAL_CONNECTED_RESOURCE_REPORT.md",
+    "authoritative/RL21_WORK_UNIT_SCOPE.md",
+    "authoritative/RL22_WORK_UNIT_SCOPE.md"
+  ],
+  "last_verified_frontier": "For the sole fixed candidate F'={{x},T_2}, gates 1-3 pass. Gate 4 stops because no retained premise forces singleton x to hit an endpoint of every cyclic nonedge; only the selected defect e=ab is certified through xa.",
+  "completed_artifacts": [
+    "STRICT_MINIMUM_TOTAL_SIZE_RESOURCE_FAMILY_EXCHANGE_REPORT.md",
+    "PROOF_STATE_AND_RESIDUAL_LEDGER.md",
+    "FAILURE_AND_LESSON_LEDGER_APPENDIX.md",
+    "NEXT_RECOVERY_TASK.md",
+    "SOURCE_QUESTION_AND_LIMITS.md",
+    "VERIFICATION_REPORT.md"
+  ],
+  "unpromoted_or_uncovered": [
+    "candidate FL-027",
+    "R_1={x} not certified as a resource",
+    "gates 5-6 not reached and minimum total size not invoked",
+    "full m=2, A=S branch remains open",
+    "all named inherited universal obligations remain open"
+  ],
+  "next_exact_operation": "On explicit finish request, enter CLOSEOUT_LOCK and atomically freeze RL24 plus install one bounded successor based on NEXT_RECOVERY_TASK.md.",
+  "do_not_recompute": [
+    "RL21 seven-pattern classification",
+    "RL22 Z_a blocker emptiness",
+    "RL23 c(x)=beta compatibility gate",
+    "RL24 candidate F'={{x},T_2}",
+    "m=1 failed-anchor/private-endpoint chain"
+  ],
+  "failure_lesson_ids": [
+    "FL-023",
+    "FL-024",
+    "FL-025",
+    "FL-026",
+    "candidate FL-027"
+  ],
+  "recovery_mode": "rework",
+  "changed_input_or_mechanism": "Replace singleton-leaf compression with one future connected q-to-b-neighbor path transfer candidate if the programme continues.",
+  "next_task_bounds": "One explicitly fixed path-transfer replacement family only; certify every family axiom before minimum-total-size use; no second mechanism.",
+  "retry_conditions": [
+    "A new fixed-scope premise controlling x across all cyclic nonedges, or the materially different fixed path-transfer exchange recorded in NEXT_RECOVERY_TASK.md."
+  ],
+  "stop_and_repair_active": false,
+  "programme": "ACTIVE"
+}
