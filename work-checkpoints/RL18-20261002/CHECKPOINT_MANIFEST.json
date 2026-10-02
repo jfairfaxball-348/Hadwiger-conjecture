@@ -1,0 +1,29 @@
+{
+  "format": "rl18-checkpoint-manifest-v1",
+  "session": 18,
+  "status": "FINAL ISOLATED CHECKPOINT / PRE-CLOSEOUT",
+  "base_head": "c6e9ada33dd8107471e20c04afb775cdbc38ddd9",
+  "branch": "work/rl18-inside-t-essentiality-20261002",
+  "prefix": "work-checkpoints/RL18-20261002/",
+  "pre_manifest_tip": "0034b390c1d746e8100c4d14b769164d244d75ba",
+  "body_files": [
+    "INCOMING_SNAPSHOT.json",
+    "WORK_UNIT_SCOPE.md",
+    "INSIDE_T_WITNESS_ESSENTIALITY_REPORT.md",
+    "PROOF_STATE_AND_RESIDUAL_LEDGER.md",
+    "FAILURE_AND_LESSON_LEDGER_APPENDIX.md",
+    "NEXT_RECOVERY_TASK.md",
+    "SOURCE_QUESTION_AND_LIMITS.md",
+    "VERIFICATION_REPORT.md",
+    "START_HERE.md",
+    "RESUME_STATE.json"
+  ],
+  "result": "Conditional y-in-T deletion yields coverage-essential-or-articulation dichotomy; fixed gamma/alpha data eliminates neither branch.",
+  "candidate_result": "RL18-P01",
+  "candidate_failure_event": "FL-021",
+  "named_obligation_reduced": false,
+  "mathematical_numerical_computation": 0,
+  "new_source_queries": 0,
+  "new_source_opens": 0,
+  "programme": "ACTIVE"
+}
