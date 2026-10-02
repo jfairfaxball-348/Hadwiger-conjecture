@@ -1251,28 +1251,3 @@ Date: 2026-10-02 Europe/Madrid.
 - **Programme:** ACTIVE.
 
 RL23 is CLOSED/FROZEN by the atomic transition. The OPEN/NOT PROMOTED wording inside the frozen checkpoint records its original checkpoint status. RL23 promotes no new positive mathematical theorem. No inherited theorem is corrected or demoted. RL24 is the sole prepared, unstarted successor via RL24_STRICT_MINIMUM_TOTAL_SIZE_RESOURCE_FAMILY_EXCHANGE_BRIEF.md. Programme active.
-
-
-# Atomic RL24 closeout and completed FL-027 event
-
-# RL24 append-only lesson event — FL-027
-
-Date: 2026-10-02 Europe/Madrid.
-
-## FL-027 — selected leaf repair does not imply singleton cyclic-resource coverage
-
-- **Origin/evidence:** RL24 bounded strict minimum-total-size resource-family exchange feasibility assessment at BASE_HEAD 10cfdbb3b6aeb47cab037912f0f6a18b5684ac26; exact work is frozen under sessions/RL24/checkpoint/. The sole fixed candidate is F'={{x},T_2}.
-- **Classification:** method barrier / recovery lesson; not a mathematical error, counterexample, theorem demotion, source-status change or full-model existence certificate.
-- **Expectation tested:** whether the retained non-singleton m=2, A=S resource and selected repair-pattern structure makes {{x},T_2} a valid smaller cardinality-two partial resource family.
-- **Actual observation:** gates 1-3 pass. T_2 remains a resource, and singleton {x} covers the selected defect e=ab because xa is an edge. But no retained premise forces x to meet an endpoint of every other cyclic nonedge.
-- **First missing dependency:** the all-seven-pairs coverage statement N_H(x) intersect endpoints(g) != empty for every cyclic nonedge g of H[S].
-- **Downstream effect:** R_1={x} is not certified as a resource; gates 5-6 are not reached; minimum total size is not invoked; no smaller valid family, m=2 exclusion or boundary compression follows.
-- **Scope caution:** the recorded local incidence schema is only a compatibility witness for the listed local resource/incidence consequences and is not asserted to extend to a full C_7 critical graph.
-- **Surviving frontier:** RL23's stopping result and FL-026, RL22-P01 and FL-025, RL21-P01/P02 and FL-024, the RL20 NONE result and FL-023 remain exact.
-- **Lesson:** coverage of one selected B-defect by the deleted leaf cannot be silently globalized into resource coverage of the singleton leaf.
-- **Retry condition:** do not retry F'={{x},T_2} without a genuinely new premise controlling x's S-neighborhood across every cyclic nonedge.
-- **Selected successor:** RL25 performs one bounded cross-resource path-transfer family-exchange feasibility assessment. It fixes the x-p tree path, one actual b-neighbor y in T_2, one q-y path, and exactly one explicit replacement family before auditing all family axioms.
-- **Sources/computation:** zero new mathematical source queries/opens and zero mathematical numerical computation.
-- **Programme:** ACTIVE.
-
-RL24 is CLOSED/FROZEN by the atomic transition. The OPEN/NOT PROMOTED wording inside the frozen checkpoint records its original checkpoint status. RL24 promotes no new positive mathematical theorem. No inherited theorem is corrected or demoted. RL25 is the sole prepared, unstarted successor via RL25_CROSS_RESOURCE_PATH_TRANSFER_EXCHANGE_BRIEF.md. Programme active.

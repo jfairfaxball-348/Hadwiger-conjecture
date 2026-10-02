@@ -1,0 +1,1118 @@
+{
+  "format": "rl4-atomic-closeout-manifest-v1",
+  "date": "2026-09-30",
+  "completed_rl": 4,
+  "successor_rl": 5,
+  "base_head": "779339630af6e819cd047462941bed97a571630b",
+  "incoming_authoritative_tree": "5fe85255f41270f3bf5a5b808f706c319c6696e3",
+  "checkpoint_commit": "2711e0d9370698566f2bfdca25affc0743706cd8",
+  "checkpoint_artifact_tree": "014f81fb6722b7e0e6661a990460c1f314c69e59",
+  "frozen_session": "sessions/RL4/",
+  "sole_successor_brief": "authoritative/RL5_CR6_SOURCE_AND_NEW_INPUT_GATE_BRIEF.md",
+  "intended_ref": "main",
+  "numbered_transition_commit_count": 1,
+  "candidate_artifacts": [
+    {
+      "path": "README.md",
+      "bytes": 2472,
+      "sha256": "479b340dc4b0d8f3647e4ac6ae78ae4c880166e9dcdf56651c5d58301425e021",
+      "git_blob": "38aded0a6aeb8722e278501cd157902e718f081c"
+    },
+    {
+      "path": "START_HERE.md",
+      "bytes": 1521,
+      "sha256": "20d16c1488dd6ca9d21157d683baf056c65cd23d7661d5fbc2f614900d02d829",
+      "git_blob": "6315d3f74ba3888cb5b831dcb2bab83d4cee022a"
+    },
+    {
+      "path": "authoritative/BRIDGE_LEDGER.md",
+      "bytes": 9392,
+      "sha256": "2fa8cf723ef2a20ee816aaa50c7d9ce5160ff151279805cc308f4eba1e468430",
+      "git_blob": "7e4a93f6fb71606fdb3dedb038d5002ae3a34fd4"
+    },
+    {
+      "path": "authoritative/COLLATZ_FAILURE_REVIEW.md",
+      "bytes": 5114,
+      "sha256": "e3144eb54bed3430b17c4d0d7f0b3105eebbdd64f0e12b29df8284b880a02560",
+      "git_blob": "cc50b241b5ca464cd078ac6cff6aa1ea573dff45"
+    },
+    {
+      "path": "authoritative/DEPENDENCY_MAP.md",
+      "bytes": 5645,
+      "sha256": "9d99aec93d5f4da96413aa80083864a9ae210f6cb82cd251a4065769793c6cf8",
+      "git_blob": "8464e2ae873c4fd33ec24cd8cdd54e72dceb0460"
+    },
+    {
+      "path": "authoritative/FALSIFICATION_REPORT.md",
+      "bytes": 7236,
+      "sha256": "3b91da47378aa6135afa5133ed12b9ff9c038ee950039c5a6a38e2af7050caca",
+      "git_blob": "e481b183f7e1e37821cf8ab584704708417eb311"
+    },
+    {
+      "path": "authoritative/INCOMING_SNAPSHOT.json",
+      "bytes": 3892,
+      "sha256": "af4694bab604fde782b74af38af4f35ff6f0e4d909b0a53b5155ed7774de844b",
+      "git_blob": "3b84cdce595540bab9c1dfe7c13ab4e0e646f7f9"
+    },
+    {
+      "path": "authoritative/MECHANISM_SCOPE.md",
+      "bytes": 2102,
+      "sha256": "64fb9f11c742a82d0619c362a8e99c3426a12eb5443c9141e0f1cb692c861200",
+      "git_blob": "1cbca823d864288a1ea58b1b2efffbdbe58231b4"
+    },
+    {
+      "path": "authoritative/PROOF_STATE_AND_OPEN_OBLIGATIONS.md",
+      "bytes": 7138,
+      "sha256": "de7f4d5e3a2a32d5773150cc31598b8ae70541eb04f0275b8df42a4c7ccb8cbc",
+      "git_blob": "9d65dbc1d2e3038c4a316c1d14eb38f8790282ea"
+    },
+    {
+      "path": "authoritative/PROOF_STATE_AND_RESIDUAL_LEDGER.md",
+      "bytes": 4567,
+      "sha256": "958fe4760dc67bc2daef6f1d3cdf696cee30c2cce2840fdf8db84fdca057f499",
+      "git_blob": "20b381f13a6498ace35bf69be59ef9e8cbe16549"
+    },
+    {
+      "path": "authoritative/RL3_ROADMAP.md",
+      "bytes": 7472,
+      "sha256": "960a2cabe0223938bb1e3126917ac1550a37013c0294940c09625f57e056977d",
+      "git_blob": "abe4968ac8675eb9eb3e68d1b3279219c1685ce1"
+    },
+    {
+      "path": "authoritative/RL3_SESSION_STATE_AND_RL4_KICKOFF.md",
+      "bytes": 558,
+      "sha256": "3446be330b70dfa813453a524cada49758a5c7d77bbc0de9a85fce57fd6f52e1",
+      "git_blob": "df3c47b39c62f0fe6ba286b67dfb1aa06334d72e"
+    },
+    {
+      "path": "authoritative/RL3_TOP_DOWN_ROADMAP_BRIEF.md",
+      "bytes": 734,
+      "sha256": "d90e84cb9d84ba82479fcc13f1977ae702b131909d3d660c198ac433b429e156",
+      "git_blob": "055221577ea9ff01111b575a1959fcb2dc830bf8"
+    },
+    {
+      "path": "authoritative/RL4_ADMISSIBILITY_REPORT.md",
+      "bytes": 11475,
+      "sha256": "0a6e8153a98b197d90da35b65cdcbf1e7c627631afebef136381494a54238369",
+      "git_blob": "28907e747225de58ea17e0f00831438a4d3671c4"
+    },
+    {
+      "path": "authoritative/RL4_COLORFUL_K6_ADMISSIBILITY_BRIEF.md",
+      "bytes": 543,
+      "sha256": "bcd3ab37fbcb06cdde7ed3c7a176cde83657c974ade7f9a7a1e0565d2da7b14c",
+      "git_blob": "337a39fc2c332d2643707cc323b2fbae7c85febd"
+    },
+    {
+      "path": "authoritative/RL4_INCOMING_SNAPSHOT.json",
+      "bytes": 4181,
+      "sha256": "18f7b96342cec7ca96ff2dfff9a69b58baffdb63e084434d1126656a0390fcb5",
+      "git_blob": "a666b609bc29dfe9576e525315452db4d9990fa9"
+    },
+    {
+      "path": "authoritative/RL4_SESSION_STATE_AND_RL5_KICKOFF.md",
+      "bytes": 4010,
+      "sha256": "0d723455d8aa34797e5cf4e65afdf398ce7fedc2122ab9e3ebc9a33ee98fe5a1",
+      "git_blob": "ea886a98bdfe53facb934da14545cb54d624ccd7"
+    },
+    {
+      "path": "authoritative/RL5_CR6_SOURCE_AND_NEW_INPUT_GATE_BRIEF.md",
+      "bytes": 5398,
+      "sha256": "b4869be9974596b1d499a21b058c8f9dab553b8e47f07818c61dfd489123fe09",
+      "git_blob": "efa05fd2bf5e8be8fb6915e5c7828d53fcdee89a"
+    },
+    {
+      "path": "authoritative/SOURCE_ADDENDUM.md",
+      "bytes": 4540,
+      "sha256": "eec0dbb03e0fbbb9c2fc5e0698085b0f754756b39d91816628699e2d395583e7",
+      "git_blob": "edc40e7fa74f41ebb2e3aac2641f3d08fea2dd7a"
+    },
+    {
+      "path": "authoritative/SOURCE_STATUS_AND_SEARCH_LOG.md",
+      "bytes": 9048,
+      "sha256": "3bb79d27e85ad41776a43412064e7af970564b7b4f9940d187f6818b753a1520",
+      "git_blob": "29f46cadf5aafb37b871d10d8213369dfa2cdcd5"
+    },
+    {
+      "path": "authoritative/START_HERE.md",
+      "bytes": 2889,
+      "sha256": "c1139a0d70888c00b52c73f74f2394648e93d733406192fe9154df3fd7fb5d6e",
+      "git_blob": "c4aa43bc36cd2e8ef1366c30244fc52a91e597f1"
+    },
+    {
+      "path": "authoritative/VERIFICATION_REPORT.md",
+      "bytes": 6907,
+      "sha256": "20b93c9281195749e5f704e4b1b7724f774544c8efe156e0a7a887b4a260496c",
+      "git_blob": "058525b9b9abf5544ead47476cc036eee3706e26"
+    },
+    {
+      "path": "authoritative/background/CORPUS_METADATA.json",
+      "bytes": 1708,
+      "sha256": "eb43fe0d19a7bb25827997fd3ce577749231c89f1919889edd8f0b860978302f",
+      "git_blob": "db1df19de084182328e78e7d001d9e23110b3e6c"
+    },
+    {
+      "path": "authoritative/background/GLOSSARY.jsonl",
+      "bytes": 9220,
+      "sha256": "1da4aaaa5a9b22bb4f61a815a5324fae4bf65b97f26523d63c572af9825a2ae1",
+      "git_blob": "51723d7c22256c839465409a6ef400075c9fd3cf"
+    },
+    {
+      "path": "authoritative/background/KNOWN_RESULTS.md",
+      "bytes": 8725,
+      "sha256": "fef8024675f700f1584ca0e9fc9e0564783f44badddd15b0f32e56b5de2c9386",
+      "git_blob": "40e8ae4eac2a34ac63294d2faf9484f699e3df20"
+    },
+    {
+      "path": "authoritative/background/LITERATURE_MAP.md",
+      "bytes": 4337,
+      "sha256": "e0e627889e891fee034a31fae37178a0341ab14e5ee6c977e85d8bc29ad4cadf",
+      "git_blob": "711a59e0956e7444532fc2cbbc56edd124f9b90b"
+    },
+    {
+      "path": "authoritative/background/OPEN_CASE_CATALOG.jsonl",
+      "bytes": 4321,
+      "sha256": "e62b52764e21774d6b130c2f11ce89cb3fd9be3492b2ea998797a3c6284c488a",
+      "git_blob": "d948c777d61838520641e07d31018d91d690ee04"
+    },
+    {
+      "path": "authoritative/background/OPEN_FRONTIER.md",
+      "bytes": 2951,
+      "sha256": "f442734cf59dd0f5e8c5936de9511d36e8b2ef115af06c4bd0ce1d51a9d79c78",
+      "git_blob": "0bf010589067c75ac996c336760fdd54f3367f84"
+    },
+    {
+      "path": "authoritative/background/READ_ME_FIRST.md",
+      "bytes": 3606,
+      "sha256": "a5306033a9a60e4c4fe2fdbd3d4dbd2b0fac7031a318239d157ee86a698c6c91",
+      "git_blob": "9caaadca880127d051d7f0b0b14ec0d48d6b7340"
+    },
+    {
+      "path": "authoritative/background/RESULT_CATALOG.jsonl",
+      "bytes": 23710,
+      "sha256": "440314c3381952437ae53ae450153da2cdb5c349575dbb22505e313230b8393e",
+      "git_blob": "b550f02f2c91a767631e9e9844a11a3f8f79252f"
+    },
+    {
+      "path": "authoritative/background/SEARCH_LOG.md",
+      "bytes": 4831,
+      "sha256": "74b34934b863a3bad592fc093234deefab10cc522362ae34cc44c2b1fedcf6e9",
+      "git_blob": "cef5e9f761e24ec637a739f69c0321d7c1a7b6ef"
+    },
+    {
+      "path": "authoritative/background/SOURCE_CATALOG.jsonl",
+      "bytes": 21251,
+      "sha256": "ab2adeb373bc6692ee893b522285df670b110f24ff520116552ff652d17e261c",
+      "git_blob": "7ec89d2cd3d387cbcc0122732ee36b07a19e8e12"
+    },
+    {
+      "path": "authoritative/background/SOURCE_CHECKS.md",
+      "bytes": 7061,
+      "sha256": "b750f9054a215a60482e1558f4911d500bc69a2fcd443f8160adf83bc2241ef3",
+      "git_blob": "737f77dc9c36b5dd12cfce6d678f4abed1cc9b1f"
+    },
+    {
+      "path": "authoritative/background/TECHNIQUES.md",
+      "bytes": 2571,
+      "sha256": "d3786d5df9e433cdc77cac22601955828cfb3f4555ba80aeae82cfa1e8525812",
+      "git_blob": "45901f3b2b7221b6d6e57e6fa488abad18525c25"
+    },
+    {
+      "path": "authoritative/background/TOPIC_CATALOG.jsonl",
+      "bytes": 5174,
+      "sha256": "9c3c0c79e023fb6e82c1590d1fe5fa0d1c6f254a12c6d5407cdec54d77ec9c57",
+      "git_blob": "0f34808195741448b0c12ea32bdd70f8546ba0f5"
+    },
+    {
+      "path": "authoritative/background/VARIANTS_AND_RELATED_PROBLEMS.md",
+      "bytes": 2383,
+      "sha256": "14a147df0357890355d50407bdb2da099bad4f21abda95e33238b651976eb6d9",
+      "git_blob": "cf70f8bec038ccf0e88141d46e7eefb4c80f03a8"
+    },
+    {
+      "path": "authoritative/background/verification/RECORD_SPEC.json",
+      "bytes": 4052,
+      "sha256": "debf8f56f3f2d12add28c14d59f1c45b0afc7e25cd0a73d4e8ee879d3afdf2d1",
+      "git_blob": "4aa44526b7af6cec124638f3f625c6b0181f3f7e"
+    },
+    {
+      "path": "authoritative/background/verification/verify_corpus.py",
+      "bytes": 8615,
+      "sha256": "170db45260d8a558960dfd949ac4dd211675e68e748fe1490963cf7504230960",
+      "git_blob": "2e210600f63966967e272e28dae0f9fef036cd40"
+    },
+    {
+      "path": "authoritative/verification/ROOTED_BARRIER_CERTIFICATE.json",
+      "bytes": 1471,
+      "sha256": "bd4a4f503f0be2db4eb0f737d51086c79c2130fd6501065d0483933f6cfd22a7",
+      "git_blob": "183f4c5f9ea680eeb648998ac95732466d6400c2"
+    },
+    {
+      "path": "authoritative/verification/verify_rooted_barrier.py",
+      "bytes": 3601,
+      "sha256": "c18bcdf6ffc16d71d8b848de72e7b84ef50b93a15a83f23346dd88fc3d227e93",
+      "git_blob": "aa525daf5cf42600e10ab2008be3744904c3a5d4"
+    },
+    {
+      "path": "sessions/RL4/BRIDGE_LEDGER.md",
+      "bytes": 9392,
+      "sha256": "2fa8cf723ef2a20ee816aaa50c7d9ce5160ff151279805cc308f4eba1e468430",
+      "git_blob": "7e4a93f6fb71606fdb3dedb038d5002ae3a34fd4"
+    },
+    {
+      "path": "sessions/RL4/COLLATZ_FAILURE_REVIEW.md",
+      "bytes": 5114,
+      "sha256": "e3144eb54bed3430b17c4d0d7f0b3105eebbdd64f0e12b29df8284b880a02560",
+      "git_blob": "cc50b241b5ca464cd078ac6cff6aa1ea573dff45"
+    },
+    {
+      "path": "sessions/RL4/DEPENDENCY_MAP.md",
+      "bytes": 5645,
+      "sha256": "9d99aec93d5f4da96413aa80083864a9ae210f6cb82cd251a4065769793c6cf8",
+      "git_blob": "8464e2ae873c4fd33ec24cd8cdd54e72dceb0460"
+    },
+    {
+      "path": "sessions/RL4/FALSIFICATION_REPORT.md",
+      "bytes": 7236,
+      "sha256": "3b91da47378aa6135afa5133ed12b9ff9c038ee950039c5a6a38e2af7050caca",
+      "git_blob": "e481b183f7e1e37821cf8ab584704708417eb311"
+    },
+    {
+      "path": "sessions/RL4/INCOMING_SNAPSHOT.json",
+      "bytes": 3892,
+      "sha256": "af4694bab604fde782b74af38af4f35ff6f0e4d909b0a53b5155ed7774de844b",
+      "git_blob": "3b84cdce595540bab9c1dfe7c13ab4e0e646f7f9"
+    },
+    {
+      "path": "sessions/RL4/MECHANISM_SCOPE.md",
+      "bytes": 2102,
+      "sha256": "64fb9f11c742a82d0619c362a8e99c3426a12eb5443c9141e0f1cb692c861200",
+      "git_blob": "1cbca823d864288a1ea58b1b2efffbdbe58231b4"
+    },
+    {
+      "path": "sessions/RL4/PROOF_STATE_AND_OPEN_OBLIGATIONS.md",
+      "bytes": 7138,
+      "sha256": "de7f4d5e3a2a32d5773150cc31598b8ae70541eb04f0275b8df42a4c7ccb8cbc",
+      "git_blob": "9d65dbc1d2e3038c4a316c1d14eb38f8790282ea"
+    },
+    {
+      "path": "sessions/RL4/PROOF_STATE_AND_RESIDUAL_LEDGER.md",
+      "bytes": 4567,
+      "sha256": "958fe4760dc67bc2daef6f1d3cdf696cee30c2cce2840fdf8db84fdca057f499",
+      "git_blob": "20b381f13a6498ace35bf69be59ef9e8cbe16549"
+    },
+    {
+      "path": "sessions/RL4/RL3_ROADMAP.md",
+      "bytes": 7472,
+      "sha256": "960a2cabe0223938bb1e3126917ac1550a37013c0294940c09625f57e056977d",
+      "git_blob": "abe4968ac8675eb9eb3e68d1b3279219c1685ce1"
+    },
+    {
+      "path": "sessions/RL4/RL3_SESSION_STATE_AND_RL4_KICKOFF.md",
+      "bytes": 558,
+      "sha256": "3446be330b70dfa813453a524cada49758a5c7d77bbc0de9a85fce57fd6f52e1",
+      "git_blob": "df3c47b39c62f0fe6ba286b67dfb1aa06334d72e"
+    },
+    {
+      "path": "sessions/RL4/RL3_TOP_DOWN_ROADMAP_BRIEF.md",
+      "bytes": 734,
+      "sha256": "d90e84cb9d84ba82479fcc13f1977ae702b131909d3d660c198ac433b429e156",
+      "git_blob": "055221577ea9ff01111b575a1959fcb2dc830bf8"
+    },
+    {
+      "path": "sessions/RL4/RL4_ADMISSIBILITY_REPORT.md",
+      "bytes": 11475,
+      "sha256": "0a6e8153a98b197d90da35b65cdcbf1e7c627631afebef136381494a54238369",
+      "git_blob": "28907e747225de58ea17e0f00831438a4d3671c4"
+    },
+    {
+      "path": "sessions/RL4/RL4_COLORFUL_K6_ADMISSIBILITY_BRIEF.md",
+      "bytes": 5317,
+      "sha256": "91754182b1010e8f7b6d84d3c667ffe2a2cdc4b45b99838afcfa7144a62065c8",
+      "git_blob": "44ebe20761238c755e0cbacf38166ea305eb38d0"
+    },
+    {
+      "path": "sessions/RL4/RL4_INCOMING_SNAPSHOT.json",
+      "bytes": 4181,
+      "sha256": "18f7b96342cec7ca96ff2dfff9a69b58baffdb63e084434d1126656a0390fcb5",
+      "git_blob": "a666b609bc29dfe9576e525315452db4d9990fa9"
+    },
+    {
+      "path": "sessions/RL4/RL4_SESSION_STATE_AND_RL5_KICKOFF.md",
+      "bytes": 4010,
+      "sha256": "0d723455d8aa34797e5cf4e65afdf398ce7fedc2122ab9e3ebc9a33ee98fe5a1",
+      "git_blob": "ea886a98bdfe53facb934da14545cb54d624ccd7"
+    },
+    {
+      "path": "sessions/RL4/RL5_CR6_SOURCE_AND_NEW_INPUT_GATE_BRIEF.md",
+      "bytes": 5398,
+      "sha256": "b4869be9974596b1d499a21b058c8f9dab553b8e47f07818c61dfd489123fe09",
+      "git_blob": "efa05fd2bf5e8be8fb6915e5c7828d53fcdee89a"
+    },
+    {
+      "path": "sessions/RL4/SOURCE_ADDENDUM.md",
+      "bytes": 4540,
+      "sha256": "eec0dbb03e0fbbb9c2fc5e0698085b0f754756b39d91816628699e2d395583e7",
+      "git_blob": "edc40e7fa74f41ebb2e3aac2641f3d08fea2dd7a"
+    },
+    {
+      "path": "sessions/RL4/SOURCE_STATUS_AND_SEARCH_LOG.md",
+      "bytes": 9048,
+      "sha256": "3bb79d27e85ad41776a43412064e7af970564b7b4f9940d187f6818b753a1520",
+      "git_blob": "29f46cadf5aafb37b871d10d8213369dfa2cdcd5"
+    },
+    {
+      "path": "sessions/RL4/START_HERE.md",
+      "bytes": 1696,
+      "sha256": "d9e99ac6c2af1bbbb9097a81f978405761e34614d8dcfa34f08f7e4608130dfc",
+      "git_blob": "c3908df23b4d18ab0623d8ebd2c2072eb32e91f7"
+    },
+    {
+      "path": "sessions/RL4/VERIFICATION_REPORT.md",
+      "bytes": 6907,
+      "sha256": "20b93c9281195749e5f704e4b1b7724f774544c8efe156e0a7a887b4a260496c",
+      "git_blob": "058525b9b9abf5544ead47476cc036eee3706e26"
+    },
+    {
+      "path": "sessions/RL4/background/CORPUS_METADATA.json",
+      "bytes": 1708,
+      "sha256": "eb43fe0d19a7bb25827997fd3ce577749231c89f1919889edd8f0b860978302f",
+      "git_blob": "db1df19de084182328e78e7d001d9e23110b3e6c"
+    },
+    {
+      "path": "sessions/RL4/background/GLOSSARY.jsonl",
+      "bytes": 9220,
+      "sha256": "1da4aaaa5a9b22bb4f61a815a5324fae4bf65b97f26523d63c572af9825a2ae1",
+      "git_blob": "51723d7c22256c839465409a6ef400075c9fd3cf"
+    },
+    {
+      "path": "sessions/RL4/background/KNOWN_RESULTS.md",
+      "bytes": 8725,
+      "sha256": "fef8024675f700f1584ca0e9fc9e0564783f44badddd15b0f32e56b5de2c9386",
+      "git_blob": "40e8ae4eac2a34ac63294d2faf9484f699e3df20"
+    },
+    {
+      "path": "sessions/RL4/background/LITERATURE_MAP.md",
+      "bytes": 4337,
+      "sha256": "e0e627889e891fee034a31fae37178a0341ab14e5ee6c977e85d8bc29ad4cadf",
+      "git_blob": "711a59e0956e7444532fc2cbbc56edd124f9b90b"
+    },
+    {
+      "path": "sessions/RL4/background/OPEN_CASE_CATALOG.jsonl",
+      "bytes": 4321,
+      "sha256": "e62b52764e21774d6b130c2f11ce89cb3fd9be3492b2ea998797a3c6284c488a",
+      "git_blob": "d948c777d61838520641e07d31018d91d690ee04"
+    },
+    {
+      "path": "sessions/RL4/background/OPEN_FRONTIER.md",
+      "bytes": 2951,
+      "sha256": "f442734cf59dd0f5e8c5936de9511d36e8b2ef115af06c4bd0ce1d51a9d79c78",
+      "git_blob": "0bf010589067c75ac996c336760fdd54f3367f84"
+    },
+    {
+      "path": "sessions/RL4/background/READ_ME_FIRST.md",
+      "bytes": 3606,
+      "sha256": "a5306033a9a60e4c4fe2fdbd3d4dbd2b0fac7031a318239d157ee86a698c6c91",
+      "git_blob": "9caaadca880127d051d7f0b0b14ec0d48d6b7340"
+    },
+    {
+      "path": "sessions/RL4/background/RESULT_CATALOG.jsonl",
+      "bytes": 23710,
+      "sha256": "440314c3381952437ae53ae450153da2cdb5c349575dbb22505e313230b8393e",
+      "git_blob": "b550f02f2c91a767631e9e9844a11a3f8f79252f"
+    },
+    {
+      "path": "sessions/RL4/background/SEARCH_LOG.md",
+      "bytes": 4831,
+      "sha256": "74b34934b863a3bad592fc093234deefab10cc522362ae34cc44c2b1fedcf6e9",
+      "git_blob": "cef5e9f761e24ec637a739f69c0321d7c1a7b6ef"
+    },
+    {
+      "path": "sessions/RL4/background/SOURCE_CATALOG.jsonl",
+      "bytes": 21251,
+      "sha256": "ab2adeb373bc6692ee893b522285df670b110f24ff520116552ff652d17e261c",
+      "git_blob": "7ec89d2cd3d387cbcc0122732ee36b07a19e8e12"
+    },
+    {
+      "path": "sessions/RL4/background/SOURCE_CHECKS.md",
+      "bytes": 7061,
+      "sha256": "b750f9054a215a60482e1558f4911d500bc69a2fcd443f8160adf83bc2241ef3",
+      "git_blob": "737f77dc9c36b5dd12cfce6d678f4abed1cc9b1f"
+    },
+    {
+      "path": "sessions/RL4/background/TECHNIQUES.md",
+      "bytes": 2571,
+      "sha256": "d3786d5df9e433cdc77cac22601955828cfb3f4555ba80aeae82cfa1e8525812",
+      "git_blob": "45901f3b2b7221b6d6e57e6fa488abad18525c25"
+    },
+    {
+      "path": "sessions/RL4/background/TOPIC_CATALOG.jsonl",
+      "bytes": 5174,
+      "sha256": "9c3c0c79e023fb6e82c1590d1fe5fa0d1c6f254a12c6d5407cdec54d77ec9c57",
+      "git_blob": "0f34808195741448b0c12ea32bdd70f8546ba0f5"
+    },
+    {
+      "path": "sessions/RL4/background/VARIANTS_AND_RELATED_PROBLEMS.md",
+      "bytes": 2383,
+      "sha256": "14a147df0357890355d50407bdb2da099bad4f21abda95e33238b651976eb6d9",
+      "git_blob": "cf70f8bec038ccf0e88141d46e7eefb4c80f03a8"
+    },
+    {
+      "path": "sessions/RL4/background/verification/RECORD_SPEC.json",
+      "bytes": 4052,
+      "sha256": "debf8f56f3f2d12add28c14d59f1c45b0afc7e25cd0a73d4e8ee879d3afdf2d1",
+      "git_blob": "4aa44526b7af6cec124638f3f625c6b0181f3f7e"
+    },
+    {
+      "path": "sessions/RL4/background/verification/verify_corpus.py",
+      "bytes": 8615,
+      "sha256": "170db45260d8a558960dfd949ac4dd211675e68e748fe1490963cf7504230960",
+      "git_blob": "2e210600f63966967e272e28dae0f9fef036cd40"
+    },
+    {
+      "path": "sessions/RL4/checkpoint/CHECKPOINT_MANIFEST.json",
+      "bytes": 3207,
+      "sha256": "1cf7adf4caecc7f6132b75d71374f99c4145ad174aff088476fdb2f4617ff259",
+      "git_blob": "3f3b74b774d7e6f37b504bd249ac8dc12fcc363b"
+    },
+    {
+      "path": "sessions/RL4/checkpoint/INCOMING_SNAPSHOT.json",
+      "bytes": 4181,
+      "sha256": "18f7b96342cec7ca96ff2dfff9a69b58baffdb63e084434d1126656a0390fcb5",
+      "git_blob": "a666b609bc29dfe9576e525315452db4d9990fa9"
+    },
+    {
+      "path": "sessions/RL4/checkpoint/MECHANISM_SCOPE.md",
+      "bytes": 1908,
+      "sha256": "c5119bb246141f5dfe3a147ba3f71fbd3113b4fa79f4f5fdb48a05920034b57b",
+      "git_blob": "ab518fd18de771e4246bfbd1fd9df8e64382b143"
+    },
+    {
+      "path": "sessions/RL4/checkpoint/PROOF_STATE_AND_RESIDUAL_LEDGER.md",
+      "bytes": 4494,
+      "sha256": "ec6b307dfa6193efc117a93398364d3522534c1fcaf3916c20676b8d5aeb1fe0",
+      "git_blob": "e38dbaf9c32840c39544f77109425ff790f198b6"
+    },
+    {
+      "path": "sessions/RL4/checkpoint/README.md",
+      "bytes": 1587,
+      "sha256": "8f3551675f52b79a0bb9e75884ed30df038f5abfee3cccb2c42538a0b39b3930",
+      "git_blob": "8bb9a42f5cea4035c3cd011beea0d95405a9803d"
+    },
+    {
+      "path": "sessions/RL4/checkpoint/RESUME_STATE.json",
+      "bytes": 3458,
+      "sha256": "7e66763d87252e8abed689c3c92e7809e4a411b6a254ebd78d02c6575e8efef0",
+      "git_blob": "808b44cfd50b1a40bc62b9af0945fd4973e33bfb"
+    },
+    {
+      "path": "sessions/RL4/checkpoint/RL4_ADMISSIBILITY_REPORT.md",
+      "bytes": 11357,
+      "sha256": "336de9a2cf7e460431911a5b303b432d362f4da03e0c5cd4acc94853a94a1d5f",
+      "git_blob": "7fa163b99442f80f68bb75b014882c4385f61195"
+    },
+    {
+      "path": "sessions/RL4/checkpoint/SOURCE_STATUS_AND_SEARCH_LOG.md",
+      "bytes": 9022,
+      "sha256": "905c131ddd5c206cd2212351e23e65eb86441323ca56cc5a175eacaaf99bfb28",
+      "git_blob": "107fc7fb4ace7bdd9ac9a0ae0f5ec5a5f63f88a3"
+    },
+    {
+      "path": "sessions/RL4/checkpoint/VERIFICATION_REPORT.md",
+      "bytes": 6710,
+      "sha256": "39490e3ecde523cb6b3f75318cb1c994c133e415f689863728360d6cb45b4829",
+      "git_blob": "de0ae2e9a2b0d8bb2257f201eb5da91d552d8963"
+    },
+    {
+      "path": "sessions/RL4/incoming/BRIDGE_LEDGER.md",
+      "bytes": 9392,
+      "sha256": "2fa8cf723ef2a20ee816aaa50c7d9ce5160ff151279805cc308f4eba1e468430",
+      "git_blob": "7e4a93f6fb71606fdb3dedb038d5002ae3a34fd4"
+    },
+    {
+      "path": "sessions/RL4/incoming/COLLATZ_FAILURE_REVIEW.md",
+      "bytes": 5114,
+      "sha256": "e3144eb54bed3430b17c4d0d7f0b3105eebbdd64f0e12b29df8284b880a02560",
+      "git_blob": "cc50b241b5ca464cd078ac6cff6aa1ea573dff45"
+    },
+    {
+      "path": "sessions/RL4/incoming/DEPENDENCY_MAP.md",
+      "bytes": 5645,
+      "sha256": "9d99aec93d5f4da96413aa80083864a9ae210f6cb82cd251a4065769793c6cf8",
+      "git_blob": "8464e2ae873c4fd33ec24cd8cdd54e72dceb0460"
+    },
+    {
+      "path": "sessions/RL4/incoming/FALSIFICATION_REPORT.md",
+      "bytes": 7236,
+      "sha256": "3b91da47378aa6135afa5133ed12b9ff9c038ee950039c5a6a38e2af7050caca",
+      "git_blob": "e481b183f7e1e37821cf8ab584704708417eb311"
+    },
+    {
+      "path": "sessions/RL4/incoming/INCOMING_SNAPSHOT.json",
+      "bytes": 3892,
+      "sha256": "af4694bab604fde782b74af38af4f35ff6f0e4d909b0a53b5155ed7774de844b",
+      "git_blob": "3b84cdce595540bab9c1dfe7c13ab4e0e646f7f9"
+    },
+    {
+      "path": "sessions/RL4/incoming/PROOF_STATE_AND_OPEN_OBLIGATIONS.md",
+      "bytes": 5471,
+      "sha256": "27f0fc07f608f4b3faf08a418fb69e8e31253033b307dc5eb7074799652e91dd",
+      "git_blob": "e2722b4f63d118aad2fd0fba2d68f3574a65b7d7"
+    },
+    {
+      "path": "sessions/RL4/incoming/RL3_ROADMAP.md",
+      "bytes": 7472,
+      "sha256": "960a2cabe0223938bb1e3126917ac1550a37013c0294940c09625f57e056977d",
+      "git_blob": "abe4968ac8675eb9eb3e68d1b3279219c1685ce1"
+    },
+    {
+      "path": "sessions/RL4/incoming/RL3_SESSION_STATE_AND_RL4_KICKOFF.md",
+      "bytes": 3076,
+      "sha256": "ed8c679f78ad0cbedfb44ee125326a340ef9a870dcd07a4101f297b31656d576",
+      "git_blob": "b6dd6fb0c31ad52c9092153a90f7c48e286f2540"
+    },
+    {
+      "path": "sessions/RL4/incoming/RL3_TOP_DOWN_ROADMAP_BRIEF.md",
+      "bytes": 736,
+      "sha256": "d724947644779c1cde961bfc534597cdf3872cc64d217710829957449bb20787",
+      "git_blob": "b1260ca7587a73b132e51a6ef5d1345f31d6242f"
+    },
+    {
+      "path": "sessions/RL4/incoming/RL4_COLORFUL_K6_ADMISSIBILITY_BRIEF.md",
+      "bytes": 5118,
+      "sha256": "e36902fea4f807716f2b9ba4a1d5d266b62eebe0e08bcd15afb1f1e2e5e8c2e0",
+      "git_blob": "cfc621915f5a0a6dc6b7b6b4a32d411991ac2431"
+    },
+    {
+      "path": "sessions/RL4/incoming/SOURCE_ADDENDUM.md",
+      "bytes": 4540,
+      "sha256": "eec0dbb03e0fbbb9c2fc5e0698085b0f754756b39d91816628699e2d395583e7",
+      "git_blob": "edc40e7fa74f41ebb2e3aac2641f3d08fea2dd7a"
+    },
+    {
+      "path": "sessions/RL4/incoming/START_HERE.md",
+      "bytes": 2288,
+      "sha256": "746bf64d604c8cb72461fc1e777e8b492186357185f0246e71d5b3ac3998cab0",
+      "git_blob": "a2abc764f5c0aae6ebb03bcdb0c5601f356e28d5"
+    },
+    {
+      "path": "sessions/RL4/incoming/VERIFICATION_REPORT.md",
+      "bytes": 5086,
+      "sha256": "ea338d81540698e31c2b84591f8056261a05bffaaba42b8c72b44088cea37755",
+      "git_blob": "099e9aa2ab53cacbc96db00e439f4d7b6315af56"
+    },
+    {
+      "path": "sessions/RL4/incoming/background/CORPUS_METADATA.json",
+      "bytes": 1708,
+      "sha256": "eb43fe0d19a7bb25827997fd3ce577749231c89f1919889edd8f0b860978302f",
+      "git_blob": "db1df19de084182328e78e7d001d9e23110b3e6c"
+    },
+    {
+      "path": "sessions/RL4/incoming/background/GLOSSARY.jsonl",
+      "bytes": 9220,
+      "sha256": "1da4aaaa5a9b22bb4f61a815a5324fae4bf65b97f26523d63c572af9825a2ae1",
+      "git_blob": "51723d7c22256c839465409a6ef400075c9fd3cf"
+    },
+    {
+      "path": "sessions/RL4/incoming/background/KNOWN_RESULTS.md",
+      "bytes": 8725,
+      "sha256": "fef8024675f700f1584ca0e9fc9e0564783f44badddd15b0f32e56b5de2c9386",
+      "git_blob": "40e8ae4eac2a34ac63294d2faf9484f699e3df20"
+    },
+    {
+      "path": "sessions/RL4/incoming/background/LITERATURE_MAP.md",
+      "bytes": 4337,
+      "sha256": "e0e627889e891fee034a31fae37178a0341ab14e5ee6c977e85d8bc29ad4cadf",
+      "git_blob": "711a59e0956e7444532fc2cbbc56edd124f9b90b"
+    },
+    {
+      "path": "sessions/RL4/incoming/background/OPEN_CASE_CATALOG.jsonl",
+      "bytes": 4321,
+      "sha256": "e62b52764e21774d6b130c2f11ce89cb3fd9be3492b2ea998797a3c6284c488a",
+      "git_blob": "d948c777d61838520641e07d31018d91d690ee04"
+    },
+    {
+      "path": "sessions/RL4/incoming/background/OPEN_FRONTIER.md",
+      "bytes": 2951,
+      "sha256": "f442734cf59dd0f5e8c5936de9511d36e8b2ef115af06c4bd0ce1d51a9d79c78",
+      "git_blob": "0bf010589067c75ac996c336760fdd54f3367f84"
+    },
+    {
+      "path": "sessions/RL4/incoming/background/READ_ME_FIRST.md",
+      "bytes": 3606,
+      "sha256": "a5306033a9a60e4c4fe2fdbd3d4dbd2b0fac7031a318239d157ee86a698c6c91",
+      "git_blob": "9caaadca880127d051d7f0b0b14ec0d48d6b7340"
+    },
+    {
+      "path": "sessions/RL4/incoming/background/RESULT_CATALOG.jsonl",
+      "bytes": 23710,
+      "sha256": "440314c3381952437ae53ae450153da2cdb5c349575dbb22505e313230b8393e",
+      "git_blob": "b550f02f2c91a767631e9e9844a11a3f8f79252f"
+    },
+    {
+      "path": "sessions/RL4/incoming/background/SEARCH_LOG.md",
+      "bytes": 4831,
+      "sha256": "74b34934b863a3bad592fc093234deefab10cc522362ae34cc44c2b1fedcf6e9",
+      "git_blob": "cef5e9f761e24ec637a739f69c0321d7c1a7b6ef"
+    },
+    {
+      "path": "sessions/RL4/incoming/background/SOURCE_CATALOG.jsonl",
+      "bytes": 21251,
+      "sha256": "ab2adeb373bc6692ee893b522285df670b110f24ff520116552ff652d17e261c",
+      "git_blob": "7ec89d2cd3d387cbcc0122732ee36b07a19e8e12"
+    },
+    {
+      "path": "sessions/RL4/incoming/background/SOURCE_CHECKS.md",
+      "bytes": 7061,
+      "sha256": "b750f9054a215a60482e1558f4911d500bc69a2fcd443f8160adf83bc2241ef3",
+      "git_blob": "737f77dc9c36b5dd12cfce6d678f4abed1cc9b1f"
+    },
+    {
+      "path": "sessions/RL4/incoming/background/TECHNIQUES.md",
+      "bytes": 2571,
+      "sha256": "d3786d5df9e433cdc77cac22601955828cfb3f4555ba80aeae82cfa1e8525812",
+      "git_blob": "45901f3b2b7221b6d6e57e6fa488abad18525c25"
+    },
+    {
+      "path": "sessions/RL4/incoming/background/TOPIC_CATALOG.jsonl",
+      "bytes": 5174,
+      "sha256": "9c3c0c79e023fb6e82c1590d1fe5fa0d1c6f254a12c6d5407cdec54d77ec9c57",
+      "git_blob": "0f34808195741448b0c12ea32bdd70f8546ba0f5"
+    },
+    {
+      "path": "sessions/RL4/incoming/background/VARIANTS_AND_RELATED_PROBLEMS.md",
+      "bytes": 2383,
+      "sha256": "14a147df0357890355d50407bdb2da099bad4f21abda95e33238b651976eb6d9",
+      "git_blob": "cf70f8bec038ccf0e88141d46e7eefb4c80f03a8"
+    },
+    {
+      "path": "sessions/RL4/incoming/background/verification/RECORD_SPEC.json",
+      "bytes": 4052,
+      "sha256": "debf8f56f3f2d12add28c14d59f1c45b0afc7e25cd0a73d4e8ee879d3afdf2d1",
+      "git_blob": "4aa44526b7af6cec124638f3f625c6b0181f3f7e"
+    },
+    {
+      "path": "sessions/RL4/incoming/background/verification/verify_corpus.py",
+      "bytes": 8615,
+      "sha256": "170db45260d8a558960dfd949ac4dd211675e68e748fe1490963cf7504230960",
+      "git_blob": "2e210600f63966967e272e28dae0f9fef036cd40"
+    },
+    {
+      "path": "sessions/RL4/incoming/verification/ROOTED_BARRIER_CERTIFICATE.json",
+      "bytes": 1471,
+      "sha256": "bd4a4f503f0be2db4eb0f737d51086c79c2130fd6501065d0483933f6cfd22a7",
+      "git_blob": "183f4c5f9ea680eeb648998ac95732466d6400c2"
+    },
+    {
+      "path": "sessions/RL4/incoming/verification/verify_rooted_barrier.py",
+      "bytes": 3601,
+      "sha256": "c18bcdf6ffc16d71d8b848de72e7b84ef50b93a15a83f23346dd88fc3d227e93",
+      "git_blob": "aa525daf5cf42600e10ab2008be3744904c3a5d4"
+    },
+    {
+      "path": "sessions/RL4/verification/ROOTED_BARRIER_CERTIFICATE.json",
+      "bytes": 1471,
+      "sha256": "bd4a4f503f0be2db4eb0f737d51086c79c2130fd6501065d0483933f6cfd22a7",
+      "git_blob": "183f4c5f9ea680eeb648998ac95732466d6400c2"
+    },
+    {
+      "path": "sessions/RL4/verification/verify_rooted_barrier.py",
+      "bytes": 3601,
+      "sha256": "c18bcdf6ffc16d71d8b848de72e7b84ef50b93a15a83f23346dd88fc3d227e93",
+      "git_blob": "aa525daf5cf42600e10ab2008be3744904c3a5d4"
+    }
+  ],
+  "self_hash_exclusions": [
+    "authoritative/RL4_CLOSEOUT_MANIFEST.json",
+    "sessions/RL4/RL4_CLOSEOUT_MANIFEST.json"
+  ],
+  "candidate_paths": [
+    "README.md",
+    "START_HERE.md",
+    "authoritative/BRIDGE_LEDGER.md",
+    "authoritative/COLLATZ_FAILURE_REVIEW.md",
+    "authoritative/DEPENDENCY_MAP.md",
+    "authoritative/FALSIFICATION_REPORT.md",
+    "authoritative/INCOMING_SNAPSHOT.json",
+    "authoritative/MECHANISM_SCOPE.md",
+    "authoritative/PROOF_STATE_AND_OPEN_OBLIGATIONS.md",
+    "authoritative/PROOF_STATE_AND_RESIDUAL_LEDGER.md",
+    "authoritative/RL3_ROADMAP.md",
+    "authoritative/RL3_SESSION_STATE_AND_RL4_KICKOFF.md",
+    "authoritative/RL3_TOP_DOWN_ROADMAP_BRIEF.md",
+    "authoritative/RL4_ADMISSIBILITY_REPORT.md",
+    "authoritative/RL4_CLOSEOUT_MANIFEST.json",
+    "authoritative/RL4_COLORFUL_K6_ADMISSIBILITY_BRIEF.md",
+    "authoritative/RL4_INCOMING_SNAPSHOT.json",
+    "authoritative/RL4_SESSION_STATE_AND_RL5_KICKOFF.md",
+    "authoritative/RL5_CR6_SOURCE_AND_NEW_INPUT_GATE_BRIEF.md",
+    "authoritative/SOURCE_ADDENDUM.md",
+    "authoritative/SOURCE_STATUS_AND_SEARCH_LOG.md",
+    "authoritative/START_HERE.md",
+    "authoritative/VERIFICATION_REPORT.md",
+    "authoritative/background/CORPUS_METADATA.json",
+    "authoritative/background/GLOSSARY.jsonl",
+    "authoritative/background/KNOWN_RESULTS.md",
+    "authoritative/background/LITERATURE_MAP.md",
+    "authoritative/background/OPEN_CASE_CATALOG.jsonl",
+    "authoritative/background/OPEN_FRONTIER.md",
+    "authoritative/background/READ_ME_FIRST.md",
+    "authoritative/background/RESULT_CATALOG.jsonl",
+    "authoritative/background/SEARCH_LOG.md",
+    "authoritative/background/SOURCE_CATALOG.jsonl",
+    "authoritative/background/SOURCE_CHECKS.md",
+    "authoritative/background/TECHNIQUES.md",
+    "authoritative/background/TOPIC_CATALOG.jsonl",
+    "authoritative/background/VARIANTS_AND_RELATED_PROBLEMS.md",
+    "authoritative/background/verification/RECORD_SPEC.json",
+    "authoritative/background/verification/verify_corpus.py",
+    "authoritative/verification/ROOTED_BARRIER_CERTIFICATE.json",
+    "authoritative/verification/verify_rooted_barrier.py",
+    "sessions/RL4/BRIDGE_LEDGER.md",
+    "sessions/RL4/COLLATZ_FAILURE_REVIEW.md",
+    "sessions/RL4/DEPENDENCY_MAP.md",
+    "sessions/RL4/FALSIFICATION_REPORT.md",
+    "sessions/RL4/INCOMING_SNAPSHOT.json",
+    "sessions/RL4/MECHANISM_SCOPE.md",
+    "sessions/RL4/PROOF_STATE_AND_OPEN_OBLIGATIONS.md",
+    "sessions/RL4/PROOF_STATE_AND_RESIDUAL_LEDGER.md",
+    "sessions/RL4/RL3_ROADMAP.md",
+    "sessions/RL4/RL3_SESSION_STATE_AND_RL4_KICKOFF.md",
+    "sessions/RL4/RL3_TOP_DOWN_ROADMAP_BRIEF.md",
+    "sessions/RL4/RL4_ADMISSIBILITY_REPORT.md",
+    "sessions/RL4/RL4_CLOSEOUT_MANIFEST.json",
+    "sessions/RL4/RL4_COLORFUL_K6_ADMISSIBILITY_BRIEF.md",
+    "sessions/RL4/RL4_INCOMING_SNAPSHOT.json",
+    "sessions/RL4/RL4_SESSION_STATE_AND_RL5_KICKOFF.md",
+    "sessions/RL4/RL5_CR6_SOURCE_AND_NEW_INPUT_GATE_BRIEF.md",
+    "sessions/RL4/SOURCE_ADDENDUM.md",
+    "sessions/RL4/SOURCE_STATUS_AND_SEARCH_LOG.md",
+    "sessions/RL4/START_HERE.md",
+    "sessions/RL4/VERIFICATION_REPORT.md",
+    "sessions/RL4/background/CORPUS_METADATA.json",
+    "sessions/RL4/background/GLOSSARY.jsonl",
+    "sessions/RL4/background/KNOWN_RESULTS.md",
+    "sessions/RL4/background/LITERATURE_MAP.md",
+    "sessions/RL4/background/OPEN_CASE_CATALOG.jsonl",
+    "sessions/RL4/background/OPEN_FRONTIER.md",
+    "sessions/RL4/background/READ_ME_FIRST.md",
+    "sessions/RL4/background/RESULT_CATALOG.jsonl",
+    "sessions/RL4/background/SEARCH_LOG.md",
+    "sessions/RL4/background/SOURCE_CATALOG.jsonl",
+    "sessions/RL4/background/SOURCE_CHECKS.md",
+    "sessions/RL4/background/TECHNIQUES.md",
+    "sessions/RL4/background/TOPIC_CATALOG.jsonl",
+    "sessions/RL4/background/VARIANTS_AND_RELATED_PROBLEMS.md",
+    "sessions/RL4/background/verification/RECORD_SPEC.json",
+    "sessions/RL4/background/verification/verify_corpus.py",
+    "sessions/RL4/checkpoint/CHECKPOINT_MANIFEST.json",
+    "sessions/RL4/checkpoint/INCOMING_SNAPSHOT.json",
+    "sessions/RL4/checkpoint/MECHANISM_SCOPE.md",
+    "sessions/RL4/checkpoint/PROOF_STATE_AND_RESIDUAL_LEDGER.md",
+    "sessions/RL4/checkpoint/README.md",
+    "sessions/RL4/checkpoint/RESUME_STATE.json",
+    "sessions/RL4/checkpoint/RL4_ADMISSIBILITY_REPORT.md",
+    "sessions/RL4/checkpoint/SOURCE_STATUS_AND_SEARCH_LOG.md",
+    "sessions/RL4/checkpoint/VERIFICATION_REPORT.md",
+    "sessions/RL4/incoming/BRIDGE_LEDGER.md",
+    "sessions/RL4/incoming/COLLATZ_FAILURE_REVIEW.md",
+    "sessions/RL4/incoming/DEPENDENCY_MAP.md",
+    "sessions/RL4/incoming/FALSIFICATION_REPORT.md",
+    "sessions/RL4/incoming/INCOMING_SNAPSHOT.json",
+    "sessions/RL4/incoming/PROOF_STATE_AND_OPEN_OBLIGATIONS.md",
+    "sessions/RL4/incoming/RL3_ROADMAP.md",
+    "sessions/RL4/incoming/RL3_SESSION_STATE_AND_RL4_KICKOFF.md",
+    "sessions/RL4/incoming/RL3_TOP_DOWN_ROADMAP_BRIEF.md",
+    "sessions/RL4/incoming/RL4_COLORFUL_K6_ADMISSIBILITY_BRIEF.md",
+    "sessions/RL4/incoming/SOURCE_ADDENDUM.md",
+    "sessions/RL4/incoming/START_HERE.md",
+    "sessions/RL4/incoming/VERIFICATION_REPORT.md",
+    "sessions/RL4/incoming/background/CORPUS_METADATA.json",
+    "sessions/RL4/incoming/background/GLOSSARY.jsonl",
+    "sessions/RL4/incoming/background/KNOWN_RESULTS.md",
+    "sessions/RL4/incoming/background/LITERATURE_MAP.md",
+    "sessions/RL4/incoming/background/OPEN_CASE_CATALOG.jsonl",
+    "sessions/RL4/incoming/background/OPEN_FRONTIER.md",
+    "sessions/RL4/incoming/background/READ_ME_FIRST.md",
+    "sessions/RL4/incoming/background/RESULT_CATALOG.jsonl",
+    "sessions/RL4/incoming/background/SEARCH_LOG.md",
+    "sessions/RL4/incoming/background/SOURCE_CATALOG.jsonl",
+    "sessions/RL4/incoming/background/SOURCE_CHECKS.md",
+    "sessions/RL4/incoming/background/TECHNIQUES.md",
+    "sessions/RL4/incoming/background/TOPIC_CATALOG.jsonl",
+    "sessions/RL4/incoming/background/VARIANTS_AND_RELATED_PROBLEMS.md",
+    "sessions/RL4/incoming/background/verification/RECORD_SPEC.json",
+    "sessions/RL4/incoming/background/verification/verify_corpus.py",
+    "sessions/RL4/incoming/verification/ROOTED_BARRIER_CERTIFICATE.json",
+    "sessions/RL4/incoming/verification/verify_rooted_barrier.py",
+    "sessions/RL4/verification/ROOTED_BARRIER_CERTIFICATE.json",
+    "sessions/RL4/verification/verify_rooted_barrier.py"
+  ],
+  "complete_intended_repository_paths": [
+    ".gitattributes",
+    ".gitignore",
+    ".rgignore",
+    "AGENTS.md",
+    "Archive/README.md",
+    "CONTRIBUTING.md",
+    "README.md",
+    "START_HERE.md",
+    "authoritative/BRIDGE_LEDGER.md",
+    "authoritative/COLLATZ_FAILURE_REVIEW.md",
+    "authoritative/DEPENDENCY_MAP.md",
+    "authoritative/FALSIFICATION_REPORT.md",
+    "authoritative/INCOMING_SNAPSHOT.json",
+    "authoritative/MECHANISM_SCOPE.md",
+    "authoritative/PROOF_STATE_AND_OPEN_OBLIGATIONS.md",
+    "authoritative/PROOF_STATE_AND_RESIDUAL_LEDGER.md",
+    "authoritative/RL3_ROADMAP.md",
+    "authoritative/RL3_SESSION_STATE_AND_RL4_KICKOFF.md",
+    "authoritative/RL3_TOP_DOWN_ROADMAP_BRIEF.md",
+    "authoritative/RL4_ADMISSIBILITY_REPORT.md",
+    "authoritative/RL4_CLOSEOUT_MANIFEST.json",
+    "authoritative/RL4_COLORFUL_K6_ADMISSIBILITY_BRIEF.md",
+    "authoritative/RL4_INCOMING_SNAPSHOT.json",
+    "authoritative/RL4_SESSION_STATE_AND_RL5_KICKOFF.md",
+    "authoritative/RL5_CR6_SOURCE_AND_NEW_INPUT_GATE_BRIEF.md",
+    "authoritative/SOURCE_ADDENDUM.md",
+    "authoritative/SOURCE_STATUS_AND_SEARCH_LOG.md",
+    "authoritative/START_HERE.md",
+    "authoritative/VERIFICATION_REPORT.md",
+    "authoritative/background/CORPUS_METADATA.json",
+    "authoritative/background/GLOSSARY.jsonl",
+    "authoritative/background/KNOWN_RESULTS.md",
+    "authoritative/background/LITERATURE_MAP.md",
+    "authoritative/background/OPEN_CASE_CATALOG.jsonl",
+    "authoritative/background/OPEN_FRONTIER.md",
+    "authoritative/background/READ_ME_FIRST.md",
+    "authoritative/background/RESULT_CATALOG.jsonl",
+    "authoritative/background/SEARCH_LOG.md",
+    "authoritative/background/SOURCE_CATALOG.jsonl",
+    "authoritative/background/SOURCE_CHECKS.md",
+    "authoritative/background/TECHNIQUES.md",
+    "authoritative/background/TOPIC_CATALOG.jsonl",
+    "authoritative/background/VARIANTS_AND_RELATED_PROBLEMS.md",
+    "authoritative/background/verification/RECORD_SPEC.json",
+    "authoritative/background/verification/verify_corpus.py",
+    "authoritative/verification/ROOTED_BARRIER_CERTIFICATE.json",
+    "authoritative/verification/verify_rooted_barrier.py",
+    "docs/CLOSEOUT_LOCK.md",
+    "docs/CONNECTOR_WORKFLOW.md",
+    "docs/PROOF_STATE_CLASSIFICATIONS.md",
+    "docs/RL_RESEARCH_PROTOCOL.md",
+    "docs/RL_STATE_MACHINE.md",
+    "docs/VERIFICATION_AND_CLOSEOUT.md",
+    "knowledge/README.md",
+    "sessions/README.md",
+    "sessions/RL1/RL1_AUTHORITATIVE_START.md",
+    "sessions/RL1/RL1_CLOSEOUT_VERIFICATION.md",
+    "sessions/RL1/RL1_SESSION_BRIEF.md",
+    "sessions/RL1/RL1_SESSION_STATE_AND_RL2_KICKOFF.md",
+    "sessions/RL1/START_HERE.md",
+    "sessions/RL2/CHECKPOINT_RESUME_STATE.json",
+    "sessions/RL2/COLLATZ_FAILURE_REVIEW.md",
+    "sessions/RL2/PROOF_STATE_AND_OPEN_OBLIGATIONS.md",
+    "sessions/RL2/README.md",
+    "sessions/RL2/RL2_CLOSEOUT_MANIFEST.json",
+    "sessions/RL2/RL2_CLOSEOUT_VERIFICATION.md",
+    "sessions/RL2/RL2_SESSION_STATE_AND_RL3_KICKOFF.md",
+    "sessions/RL2/RL3_TOP_DOWN_ROADMAP_BRIEF.md",
+    "sessions/RL2/START_HERE.md",
+    "sessions/RL2/VERIFICATION_REPORT.md",
+    "sessions/RL2/background/CORPUS_METADATA.json",
+    "sessions/RL2/background/GLOSSARY.jsonl",
+    "sessions/RL2/background/KNOWN_RESULTS.md",
+    "sessions/RL2/background/LITERATURE_MAP.md",
+    "sessions/RL2/background/OPEN_CASE_CATALOG.jsonl",
+    "sessions/RL2/background/OPEN_FRONTIER.md",
+    "sessions/RL2/background/READ_ME_FIRST.md",
+    "sessions/RL2/background/RESULT_CATALOG.jsonl",
+    "sessions/RL2/background/SEARCH_LOG.md",
+    "sessions/RL2/background/SOURCE_CATALOG.jsonl",
+    "sessions/RL2/background/SOURCE_CHECKS.md",
+    "sessions/RL2/background/TECHNIQUES.md",
+    "sessions/RL2/background/TOPIC_CATALOG.jsonl",
+    "sessions/RL2/background/VARIANTS_AND_RELATED_PROBLEMS.md",
+    "sessions/RL2/background/verification/RECORD_SPEC.json",
+    "sessions/RL2/background/verification/verify_corpus.py",
+    "sessions/RL2/incoming/RL2_BACKGROUND_RESEARCH_BRIEF.md",
+    "sessions/RL2/incoming/RL2_RESEARCH_RECORD_SPEC.json",
+    "sessions/RL2/incoming/START_HERE.md",
+    "sessions/RL3/BRIDGE_LEDGER.md",
+    "sessions/RL3/COLLATZ_FAILURE_REVIEW.md",
+    "sessions/RL3/DEPENDENCY_MAP.md",
+    "sessions/RL3/FALSIFICATION_REPORT.md",
+    "sessions/RL3/INCOMING_SNAPSHOT.json",
+    "sessions/RL3/PROOF_STATE_AND_OPEN_OBLIGATIONS.md",
+    "sessions/RL3/README.md",
+    "sessions/RL3/RL3_CLOSEOUT_MANIFEST.json",
+    "sessions/RL3/RL3_ROADMAP.md",
+    "sessions/RL3/RL3_SESSION_STATE_AND_RL4_KICKOFF.md",
+    "sessions/RL3/RL3_TOP_DOWN_ROADMAP_BRIEF.md",
+    "sessions/RL3/RL4_COLORFUL_K6_ADMISSIBILITY_BRIEF.md",
+    "sessions/RL3/SOURCE_ADDENDUM.md",
+    "sessions/RL3/START_HERE.md",
+    "sessions/RL3/VERIFICATION_REPORT.md",
+    "sessions/RL3/background/CORPUS_METADATA.json",
+    "sessions/RL3/background/GLOSSARY.jsonl",
+    "sessions/RL3/background/KNOWN_RESULTS.md",
+    "sessions/RL3/background/LITERATURE_MAP.md",
+    "sessions/RL3/background/OPEN_CASE_CATALOG.jsonl",
+    "sessions/RL3/background/OPEN_FRONTIER.md",
+    "sessions/RL3/background/READ_ME_FIRST.md",
+    "sessions/RL3/background/RESULT_CATALOG.jsonl",
+    "sessions/RL3/background/SEARCH_LOG.md",
+    "sessions/RL3/background/SOURCE_CATALOG.jsonl",
+    "sessions/RL3/background/SOURCE_CHECKS.md",
+    "sessions/RL3/background/TECHNIQUES.md",
+    "sessions/RL3/background/TOPIC_CATALOG.jsonl",
+    "sessions/RL3/background/VARIANTS_AND_RELATED_PROBLEMS.md",
+    "sessions/RL3/background/verification/RECORD_SPEC.json",
+    "sessions/RL3/background/verification/verify_corpus.py",
+    "sessions/RL3/checkpoint/BRIDGE_LEDGER.md",
+    "sessions/RL3/checkpoint/CHECKPOINT_MANIFEST.json",
+    "sessions/RL3/checkpoint/DEPENDENCY_MAP.md",
+    "sessions/RL3/checkpoint/FALSIFICATION_REPORT.md",
+    "sessions/RL3/checkpoint/INCOMING_SNAPSHOT.json",
+    "sessions/RL3/checkpoint/NEXT_BOUNDED_RESEARCH_BRIEF.md",
+    "sessions/RL3/checkpoint/README.md",
+    "sessions/RL3/checkpoint/RESUME_STATE.json",
+    "sessions/RL3/checkpoint/RL3_ROADMAP.md",
+    "sessions/RL3/checkpoint/SOURCE_ADDENDUM.md",
+    "sessions/RL3/checkpoint/VERIFICATION_REPORT.md",
+    "sessions/RL3/checkpoint/verification/ROOTED_BARRIER_CERTIFICATE.json",
+    "sessions/RL3/checkpoint/verification/verify_rooted_barrier.py",
+    "sessions/RL3/incoming/COLLATZ_FAILURE_REVIEW.md",
+    "sessions/RL3/incoming/PROOF_STATE_AND_OPEN_OBLIGATIONS.md",
+    "sessions/RL3/incoming/RL2_SESSION_STATE_AND_RL3_KICKOFF.md",
+    "sessions/RL3/incoming/RL3_TOP_DOWN_ROADMAP_BRIEF.md",
+    "sessions/RL3/incoming/START_HERE.md",
+    "sessions/RL3/incoming/VERIFICATION_REPORT.md",
+    "sessions/RL3/incoming/background/CORPUS_METADATA.json",
+    "sessions/RL3/incoming/background/GLOSSARY.jsonl",
+    "sessions/RL3/incoming/background/KNOWN_RESULTS.md",
+    "sessions/RL3/incoming/background/LITERATURE_MAP.md",
+    "sessions/RL3/incoming/background/OPEN_CASE_CATALOG.jsonl",
+    "sessions/RL3/incoming/background/OPEN_FRONTIER.md",
+    "sessions/RL3/incoming/background/READ_ME_FIRST.md",
+    "sessions/RL3/incoming/background/RESULT_CATALOG.jsonl",
+    "sessions/RL3/incoming/background/SEARCH_LOG.md",
+    "sessions/RL3/incoming/background/SOURCE_CATALOG.jsonl",
+    "sessions/RL3/incoming/background/SOURCE_CHECKS.md",
+    "sessions/RL3/incoming/background/TECHNIQUES.md",
+    "sessions/RL3/incoming/background/TOPIC_CATALOG.jsonl",
+    "sessions/RL3/incoming/background/VARIANTS_AND_RELATED_PROBLEMS.md",
+    "sessions/RL3/incoming/background/verification/RECORD_SPEC.json",
+    "sessions/RL3/incoming/background/verification/verify_corpus.py",
+    "sessions/RL3/verification/ROOTED_BARRIER_CERTIFICATE.json",
+    "sessions/RL3/verification/verify_rooted_barrier.py",
+    "sessions/RL4/BRIDGE_LEDGER.md",
+    "sessions/RL4/COLLATZ_FAILURE_REVIEW.md",
+    "sessions/RL4/DEPENDENCY_MAP.md",
+    "sessions/RL4/FALSIFICATION_REPORT.md",
+    "sessions/RL4/INCOMING_SNAPSHOT.json",
+    "sessions/RL4/MECHANISM_SCOPE.md",
+    "sessions/RL4/PROOF_STATE_AND_OPEN_OBLIGATIONS.md",
+    "sessions/RL4/PROOF_STATE_AND_RESIDUAL_LEDGER.md",
+    "sessions/RL4/RL3_ROADMAP.md",
+    "sessions/RL4/RL3_SESSION_STATE_AND_RL4_KICKOFF.md",
+    "sessions/RL4/RL3_TOP_DOWN_ROADMAP_BRIEF.md",
+    "sessions/RL4/RL4_ADMISSIBILITY_REPORT.md",
+    "sessions/RL4/RL4_CLOSEOUT_MANIFEST.json",
+    "sessions/RL4/RL4_COLORFUL_K6_ADMISSIBILITY_BRIEF.md",
+    "sessions/RL4/RL4_INCOMING_SNAPSHOT.json",
+    "sessions/RL4/RL4_SESSION_STATE_AND_RL5_KICKOFF.md",
+    "sessions/RL4/RL5_CR6_SOURCE_AND_NEW_INPUT_GATE_BRIEF.md",
+    "sessions/RL4/SOURCE_ADDENDUM.md",
+    "sessions/RL4/SOURCE_STATUS_AND_SEARCH_LOG.md",
+    "sessions/RL4/START_HERE.md",
+    "sessions/RL4/VERIFICATION_REPORT.md",
+    "sessions/RL4/background/CORPUS_METADATA.json",
+    "sessions/RL4/background/GLOSSARY.jsonl",
+    "sessions/RL4/background/KNOWN_RESULTS.md",
+    "sessions/RL4/background/LITERATURE_MAP.md",
+    "sessions/RL4/background/OPEN_CASE_CATALOG.jsonl",
+    "sessions/RL4/background/OPEN_FRONTIER.md",
+    "sessions/RL4/background/READ_ME_FIRST.md",
+    "sessions/RL4/background/RESULT_CATALOG.jsonl",
+    "sessions/RL4/background/SEARCH_LOG.md",
+    "sessions/RL4/background/SOURCE_CATALOG.jsonl",
+    "sessions/RL4/background/SOURCE_CHECKS.md",
+    "sessions/RL4/background/TECHNIQUES.md",
+    "sessions/RL4/background/TOPIC_CATALOG.jsonl",
+    "sessions/RL4/background/VARIANTS_AND_RELATED_PROBLEMS.md",
+    "sessions/RL4/background/verification/RECORD_SPEC.json",
+    "sessions/RL4/background/verification/verify_corpus.py",
+    "sessions/RL4/checkpoint/CHECKPOINT_MANIFEST.json",
+    "sessions/RL4/checkpoint/INCOMING_SNAPSHOT.json",
+    "sessions/RL4/checkpoint/MECHANISM_SCOPE.md",
+    "sessions/RL4/checkpoint/PROOF_STATE_AND_RESIDUAL_LEDGER.md",
+    "sessions/RL4/checkpoint/README.md",
+    "sessions/RL4/checkpoint/RESUME_STATE.json",
+    "sessions/RL4/checkpoint/RL4_ADMISSIBILITY_REPORT.md",
+    "sessions/RL4/checkpoint/SOURCE_STATUS_AND_SEARCH_LOG.md",
+    "sessions/RL4/checkpoint/VERIFICATION_REPORT.md",
+    "sessions/RL4/incoming/BRIDGE_LEDGER.md",
+    "sessions/RL4/incoming/COLLATZ_FAILURE_REVIEW.md",
+    "sessions/RL4/incoming/DEPENDENCY_MAP.md",
+    "sessions/RL4/incoming/FALSIFICATION_REPORT.md",
+    "sessions/RL4/incoming/INCOMING_SNAPSHOT.json",
+    "sessions/RL4/incoming/PROOF_STATE_AND_OPEN_OBLIGATIONS.md",
+    "sessions/RL4/incoming/RL3_ROADMAP.md",
+    "sessions/RL4/incoming/RL3_SESSION_STATE_AND_RL4_KICKOFF.md",
+    "sessions/RL4/incoming/RL3_TOP_DOWN_ROADMAP_BRIEF.md",
+    "sessions/RL4/incoming/RL4_COLORFUL_K6_ADMISSIBILITY_BRIEF.md",
+    "sessions/RL4/incoming/SOURCE_ADDENDUM.md",
+    "sessions/RL4/incoming/START_HERE.md",
+    "sessions/RL4/incoming/VERIFICATION_REPORT.md",
+    "sessions/RL4/incoming/background/CORPUS_METADATA.json",
+    "sessions/RL4/incoming/background/GLOSSARY.jsonl",
+    "sessions/RL4/incoming/background/KNOWN_RESULTS.md",
+    "sessions/RL4/incoming/background/LITERATURE_MAP.md",
+    "sessions/RL4/incoming/background/OPEN_CASE_CATALOG.jsonl",
+    "sessions/RL4/incoming/background/OPEN_FRONTIER.md",
+    "sessions/RL4/incoming/background/READ_ME_FIRST.md",
+    "sessions/RL4/incoming/background/RESULT_CATALOG.jsonl",
+    "sessions/RL4/incoming/background/SEARCH_LOG.md",
+    "sessions/RL4/incoming/background/SOURCE_CATALOG.jsonl",
+    "sessions/RL4/incoming/background/SOURCE_CHECKS.md",
+    "sessions/RL4/incoming/background/TECHNIQUES.md",
+    "sessions/RL4/incoming/background/TOPIC_CATALOG.jsonl",
+    "sessions/RL4/incoming/background/VARIANTS_AND_RELATED_PROBLEMS.md",
+    "sessions/RL4/incoming/background/verification/RECORD_SPEC.json",
+    "sessions/RL4/incoming/background/verification/verify_corpus.py",
+    "sessions/RL4/incoming/verification/ROOTED_BARRIER_CERTIFICATE.json",
+    "sessions/RL4/incoming/verification/verify_rooted_barrier.py",
+    "sessions/RL4/verification/ROOTED_BARRIER_CERTIFICATE.json",
+    "sessions/RL4/verification/verify_rooted_barrier.py"
+  ],
+  "mathematical_classifications": {
+    "RL4-P01": "proved elementary analytic mathematics at the two-universal-vertex family",
+    "RL4-P02": "complete scoped analytic deduction using inherited checked CR4; not general CR6",
+    "RL4-P03": "proved analytic relevance barrier using inherited ordinary order 6; excludes M1 from every critical order-7 target interface",
+    "universal_CR6": "NOT PROMOTED / INCONCLUSIVE",
+    "root": "unresolved by this project"
+  },
+  "corrections_or_demotions": [],
+  "preserved_source_gaps": [
+    "RL3-GAP-01",
+    "RL3-GAP-02",
+    "OPEN-0005",
+    "OPEN-0008 / SRC-0014 / RES-0015",
+    "sixteen inherited unchecked-source labels"
+  ],
+  "verification": {
+    "required_base_verifier_frozen": "PASS",
+    "required_base_verifier_successor": "PASS",
+    "required_corpus_verifier_frozen": "PASS",
+    "required_corpus_verifier_successor": "PASS",
+    "regenerated_certificate_byte_identity": "PASS",
+    "incoming_freeze_byte_identity": "PASS",
+    "checkpoint_freeze_byte_identity": "PASS",
+    "mathematical_proof_sections_byte_identity": "PASS",
+    "source_scopes_and_gap_sections_byte_identity": "PASS",
+    "relative_links_checked": 128,
+    "json_documents_before_self_manifest": 17,
+    "unique_successor_and_scope_checks": "PASS"
+  },
+  "publication_invariant": "One complete numbered transition with sole parent BASE_HEAD; one non-forced main advance after final comparison; read back ref, complete tree, frozen RL4 and successor RL5 entrypoints."
+}

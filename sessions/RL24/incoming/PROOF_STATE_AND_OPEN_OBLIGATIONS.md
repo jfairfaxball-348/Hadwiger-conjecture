@@ -1,27 +1,3 @@
-# Current proof state after RL24
-
-**RL24 CLOSED/FROZEN. RL25 is the sole incoming bounded cross-resource path-transfer family-exchange feasibility assessment, READY / NOT STARTED.**
-
-RL24 promotes no new positive mathematical theorem. It records one scoped analytic stopping result with same-worker review only.
-
-At the exact inherited non-singleton m=2, A=S fixed-choice setup, RL24 fixed exactly one replacement family
-
-    F'={{x},T_2}.
-
-The ordered family-validity audit passes nonemptiness/exteriority, disjointness and connectedness. At the exact cyclic resource-coverage gate, T_2 remains a resource and singleton {x} covers the selected defect e=ab through xa, but no retained premise forces x to meet an endpoint of every other cyclic nonedge. T_1=B union {x} being a resource permits B to supply coverage on pairs missed by x.
-
-Therefore {x} is not certified as a resource. The audit stops at gate 4. The joining-edge gate and strict-size gate are not reached, and minimum total size is not invoked.
-
-FL-027 records the method barrier. The local incidence schema used in RL24 is only a compatibility witness for the listed local resource/incidence axioms; it is not a full C_7 critical-graph realization or counterexample.
-
-No correction or demotion occurs. RL23's stopping result and FL-026, RL22-P01 and FL-025, RL21-P01/P02 and FL-024, and the RL20 audit NONE result with FL-023 remain exact.
-
-No named inherited mathematical obligation is genuinely reduced by RL24. The full m=2, A=S branch remains open, as do m=1, m=3, m=4, BR-00, BR-01 universal coverage, general UP_6, CR_6, ordinary order-seven coverage, every higher order and full sharp Hadwiger. All inherited source/certificate limits, simultaneous-compatibility requirements, sharpness conditions and unbounded residual parameters remain unchanged.
-
-RL25 changes the exchange geometry rather than retrying singleton {x}. It fixes the unique x-p path in the retained T_1 spanning tree, one b-neighbor y in T_2, one q-y path in T_2, and one explicit cross-resource path-transfer family; every family axiom must be audited before any minimum-total-size invocation. No RL25 mathematics occurred during RL24 closeout.
-
-## Preserved complete pre-RL24 canonical state
-
 # Current proof state after RL23
 
 **RL23 CLOSED/FROZEN. RL24 is the sole incoming bounded strict minimum-total-size resource-family exchange feasibility assessment, READY / NOT STARTED.**
