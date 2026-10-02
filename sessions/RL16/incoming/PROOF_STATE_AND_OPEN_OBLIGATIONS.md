@@ -1,37 +1,3 @@
-# Current proof state after RL16
-
-**RL16 CLOSED/FROZEN. RL17 is the sole incoming strict-shrink resource
-exchange gate, READY / NOT STARTED.**
-
-RL16-P01 is promoted as proved scoped elementary analytic mathematics with
-same-worker review only. In the conditional failed-anchor branch
-`C_a∩A_gamma=empty`, the forced witness
-`y∈(A_alpha\C_a)\S` lies in `V(H)\S`. Since `T` is minimum-cardinality
-among resources and `|T|>=2`, the exterior singleton `{y}` is not a
-resource; hence its S-neighborhood misses both endpoints of at least one
-cyclic missing edge.
-
-The direct exchange `R=(T-{x})∪{y}` does not contradict minimality. If
-`y∈T-{x}`, then `R=T-{x}`, already known to fail cyclic coverage. If
-`y∉T`, no edge from `y` to `T-{x}` is forced after deleting `x`, so
-connectedness is unproved at the first resource-validity gate; moreover
-`|R|=|T|`, so the required strict size decrease is false. Endpoint
-anchoring `C_a∩A_gamma!=empty` remains unproved.
-
-No named inherited universal obligation is reduced: BR-00, BR-01 universal
-coverage, general UP_6, CR_6, ordinary order-seven coverage, every higher
-order and full sharp Hadwiger remain open. The m=1 case remains unresolved
-and no second resource is constructed. No inherited theorem is corrected
-or demoted. RL15-P01, RL14-P01, RL13-P00/P01/P02 and all earlier results,
-countermodels, certificates, source gaps and verification limits are
-preserved. FL-019 is appended; FL-001 through FL-018 are unchanged.
-Mathematical numerical computation and new source queries/opens were zero;
-no formal or external independent certification or novelty claim is made.
-
-The sole next task tests one genuinely strict-shrink exchange using the
-same anchor/witness data; it is not yet assessed. Programme active.
-
-## Preserved complete pre-RL16 canonical state
 # Current proof state after RL15
 
 **RL15 CLOSED/FROZEN. RL16 is the sole incoming off-S witness /

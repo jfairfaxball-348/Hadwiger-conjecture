@@ -1,0 +1,49 @@
+{
+  "format": "rl16-incoming-snapshot-v1",
+  "session": 16,
+  "status": "OPEN / bounded work checkpoint / NOT PROMOTED",
+  "base_head": "fd2853dceff192a6b21f5e2d25c6a60ee8263ed2",
+  "base_root_tree": "d49b211a309ce9444a7c8211b4638082bf7722ef",
+  "authoritative_tree": "a9504558311bc2c19ec493449603afcc5662be48",
+  "expected_predecessor_match": true,
+  "unique_incoming_rl": true,
+  "preexisting_session_RL16": false,
+  "preexisting_rl16_work_branch": false,
+  "snapshot_method": "BASE_HEAD plus authoritative tree plus exact blob SHAs for every required current read; supporting RL13 resource-definition reads recorded separately",
+  "sole_brief": "authoritative/RL16_OFF_S_WITNESS_RESOURCE_MINIMALITY_BRIEF.md",
+  "validated_paths": {
+    "AGENTS.md": "72ad349e4744718651fec497dbd4cf967c19566d",
+    "authoritative/START_HERE.md": "ad3ef5bb4276283709330cb2f63416be2630da0d",
+    "authoritative/RL16_OFF_S_WITNESS_RESOURCE_MINIMALITY_BRIEF.md": "fda19dc1aa830bd9b0b85ab2196e77660bd89848",
+    "authoritative/RL15_SESSION_STATE_AND_RL16_KICKOFF.md": "ecf07478ffdff71f9d496052d54807168f58408e",
+    "authoritative/RL15_MIXED_KEMPE_COMPONENT_RESOURCE_REPORT.md": "37c7e9cf9b6b348ca73690c0ea684f3cb07fcac1",
+    "authoritative/RL15_PROOF_STATE_AND_RESIDUAL_LEDGER.md": "2f0017e1fa0d36711e13e83e5cfb9023c6ccc1b4",
+    "authoritative/RL15_FAILURE_AND_LESSON_LEDGER_APPENDIX.md": "cd3b1e3c67a580f7d52e1f1a18351f5e6b1bb629",
+    "authoritative/RL15_PREPARED_RECOVERY_TASK.md": "6f703db1e9d9e13a197b67c36bb776074408e34a",
+    "authoritative/RL15_SOURCE_QUESTION_AND_LIMITS.md": "c7b35d8ab0988102b7d70a9917412e9b460d98fc",
+    "authoritative/PROOF_STATE_AND_OPEN_OBLIGATIONS.md": "e956363e1d9d37d343653d8b654e15c6cb7155d3",
+    "authoritative/FAILURE_AND_LESSON_LEDGER.md": "e8e5f50fd44726846237f34604c7cc352c2802f8",
+    "authoritative/DEPENDENCY_MAP.md": "8464e2ae873c4fd33ec24cd8cdd54e72dceb0460",
+    "authoritative/VERIFICATION_REPORT.md": "b7c160b6e4d9f4136c9f997f66755b3dc482fea2",
+    "docs/RESEARCH_RECOVERY_PROTOCOL.md": "2b6710e32dad04800dd32fce771be630bce61082"
+  },
+  "supporting_definition_reads": {
+    "authoritative/RL13_LEAF_PRIVATE_RESOURCE_REPORT.md": "593a36138bbc69758eb9f8535a37e5bb4a8844f6",
+    "authoritative/RL13_CRITICAL_CONNECTED_RESOURCE_REPORT.md": "c71da40828d5ee880f7eb0a04dfbaec0ebf2fe88",
+    "docs/RL_RESEARCH_PROTOCOL.md": "9f2a2f94a2eb0134b4cf6f393dc0395edce10b24",
+    "docs/CONNECTOR_WORKFLOW.md": "b3a90487e1eaf14504eba18cc07521ed08e59256"
+  },
+  "start_gate": {
+    "live_head_match": true,
+    "incoming_rl_unique": true,
+    "sessions_RL16_absent": true,
+    "preexisting_rl16_branch_absent": true,
+    "integrity_failure_found": false
+  },
+  "sources_and_computation": {
+    "new_source_queries": 0,
+    "new_source_opens": 0,
+    "mathematical_numerical_computation": 0
+  },
+  "programme": "ACTIVE"
+}
