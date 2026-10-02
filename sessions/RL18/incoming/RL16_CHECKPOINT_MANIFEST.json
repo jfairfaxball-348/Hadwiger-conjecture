@@ -1,0 +1,55 @@
+{
+  "format": "rl16-checkpoint-manifest-v1",
+  "session": 16,
+  "status": "FINAL ISOLATED CHECKPOINT / PRE-CLOSEOUT",
+  "base_head": "fd2853dceff192a6b21f5e2d25c6a60ee8263ed2",
+  "branch": "work/rl16-off-s-minimality-20261002",
+  "checkpoint_commit": "c7ed103bd2b297b4d3fa7510624b0ea62f7aa08b",
+  "checkpoint_tree": "74deb938ef4b44fd99bb26715ed01c2a73cc5b5f",
+  "prefix": "work-checkpoints/RL16-20261002/",
+  "expected_total_files": 10,
+  "body_files": [
+    {
+      "name": "FAILURE_AND_LESSON_LEDGER_APPENDIX.md",
+      "sha": "8ca957d465f9cbc39d0a6ce5434e5fd4b930d1dd"
+    },
+    {
+      "name": "INCOMING_SNAPSHOT.json",
+      "sha": "d8a4c7f7ca9265f29114dee02beea2b86730a179"
+    },
+    {
+      "name": "NEXT_RECOVERY_TASK.md",
+      "sha": "9da802eeac05a8cae96f19fdc550e531af33e923"
+    },
+    {
+      "name": "OFF_S_WITNESS_RESOURCE_MINIMALITY_REPORT.md",
+      "sha": "88d9c800a002db6789c5d3f2b105a91c07ad5afb"
+    },
+    {
+      "name": "PROOF_STATE_AND_RESIDUAL_LEDGER.md",
+      "sha": "cc9a7ed2399cdb311cdafaccd2151f8e7c16ee49"
+    },
+    {
+      "name": "RESUME_STATE.json",
+      "sha": "29e91a3597616d15c335e3a99efe05afb0d14f9d"
+    },
+    {
+      "name": "SOURCE_QUESTION_AND_LIMITS.md",
+      "sha": "f66342f4a919f688fdb476cecb0c55269d39c142"
+    },
+    {
+      "name": "START_HERE.md",
+      "sha": "cc31f299e7e14b7f3dc83f89cb29001f76bb9c9e"
+    },
+    {
+      "name": "VERIFICATION_REPORT.md",
+      "sha": "4625e4b292bbc4e3b6ae570008f40579b07462d2"
+    },
+    {
+      "name": "WORK_UNIT_SCOPE.md",
+      "sha": "69d8e94979f99dea087994259109bf87d368a52f"
+    }
+  ],
+  "result": "singleton witness is coverage-defective; direct x-to-y exchange fails connectedness/resource validity or strict-size gate; endpoint anchoring remains unproved",
+  "programme": "ACTIVE"
+}

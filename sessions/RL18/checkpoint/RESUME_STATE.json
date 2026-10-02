@@ -1,0 +1,56 @@
+{
+  "format": "rl-connector-resume-v1",
+  "base_head": "c6e9ada33dd8107471e20c04afb775cdbc38ddd9",
+  "authoritative_tree": "required-path blob SHA snapshot in INCOMING_SNAPSHOT.json",
+  "incoming_rl": 18,
+  "session_brief": "authoritative/RL18_INSIDE_T_WITNESS_ESSENTIALITY_BRIEF.md",
+  "validated_authority_paths": [
+    "AGENTS.md",
+    "authoritative/START_HERE.md",
+    "authoritative/RL18_INSIDE_T_WITNESS_ESSENTIALITY_BRIEF.md",
+    "authoritative/RL17_SESSION_STATE_AND_RL18_KICKOFF.md",
+    "authoritative/RL17_STRICT_SHRINK_EXCHANGE_REPORT.md",
+    "authoritative/RL17_PROOF_STATE_AND_RESIDUAL_LEDGER.md",
+    "authoritative/RL17_FAILURE_AND_LESSON_LEDGER_APPENDIX.md",
+    "authoritative/RL17_PREPARED_RECOVERY_TASK.md",
+    "authoritative/RL17_SOURCE_QUESTION_AND_LIMITS.md",
+    "authoritative/PROOF_STATE_AND_OPEN_OBLIGATIONS.md",
+    "authoritative/FAILURE_AND_LESSON_LEDGER.md",
+    "authoritative/DEPENDENCY_MAP.md",
+    "authoritative/VERIFICATION_REPORT.md",
+    "docs/RESEARCH_RECOVERY_PROTOCOL.md"
+  ],
+  "last_verified_frontier": "Conditional on y in T, T-y is nonempty. If connected, some cyclic nonedge pq has N_H(p)∩T=N_H(q)∩T={y}, with d(p),d(q) outside {gamma,alpha} and p,q not adjacent x. If disconnected, y is an articulation of H[T] and every component K of H[T-y] has N_H(K)∩(T\\K)={y}. The same fixed gamma/alpha data eliminates neither branch.",
+  "completed_artifacts": [
+    "INSIDE_T_WITNESS_ESSENTIALITY_REPORT.md",
+    "PROOF_STATE_AND_RESIDUAL_LEDGER.md",
+    "FAILURE_AND_LESSON_LEDGER_APPENDIX.md",
+    "NEXT_RECOVERY_TASK.md",
+    "SOURCE_QUESTION_AND_LIMITS.md",
+    "VERIFICATION_REPORT.md"
+  ],
+  "unpromoted_or_uncovered": [
+    "RL18-P01 remains unpromoted until closeout",
+    "connected and disconnected alternatives both survive",
+    "m=1 unresolved",
+    "endpoint anchoring unproved",
+    "second resource absent",
+    "all named universal obligations unchanged"
+  ],
+  "next_exact_operation": "Await user control. On finish up, enter CLOSEOUT_LOCK and atomically freeze/promote RL18 with a sole RL19 successor brief based on the prepared recovery. On continue, execute only the prepared articulation-side pruning gate.",
+  "do_not_recompute": [
+    "RL17 y-notin-T gate",
+    "RL16 equal-size exchange",
+    "RL14 insertion swap",
+    "fixed gamma/alpha elimination test from RL18"
+  ],
+  "failure_lesson_ids": ["FL-001..FL-020", "FL-021 prepared/unpromoted"],
+  "recovery_mode": "rework",
+  "changed_input_or_mechanism": "Use the RL18 articulation decomposition and one cut-side pruning pair instead of the fixed gamma/alpha component partition.",
+  "next_task_bounds": "Disconnected branch only; one component K not containing x; two proper connected subsets R=K∪{y}, R'=T\\K; one coverage defect from each; no second component or color mechanism.",
+  "retry_conditions": [
+    "Do not retry fixed gamma/alpha unless a new bridge links it to S-incidence or T-block structure.",
+    "Do not retry RL17 z-exchange unless y notin T is independently proved."
+  ],
+  "stop_and_repair_active": false
+}

@@ -1,0 +1,136 @@
+{
+  "format": "rl11-atomic-closeout-v1",
+  "status": "PASS: complete verified RL11 transition candidate",
+  "base_head": "ea4978ec31b060d432db2987b06586cd4bea60cc",
+  "incoming_authority_tree": "95833de67b819add9abf53fa229066e5ee8a50ab",
+  "checkpoint_commit": "d2c396b1e602070699e21d2054b319adef2d9c51",
+  "checkpoint_root_tree": "988406610e6455d87b38cd2cc4729e9b14bb6074",
+  "incoming_rl": 11,
+  "successor_rl": 12,
+  "sole_successor_brief": "RL12_NEW_ROUTE_DISCOVERY_BRIEF.md",
+  "incoming_files_preserved": 111,
+  "checkpoint_originals_preserved": 11,
+  "mathematical_demotions": 0,
+  "new_universal_positive_root_theorems": 0,
+  "analytic_outcome": "MK2 false on exact D_cyc; no Q5; same graph has positive UP6/rooted K6.",
+  "verifier_runs": 8,
+  "external_independent_certification": false,
+  "new_research_during_closeout": false,
+  "user_directed_successor": "Further discovery of genuinely changed routes, at most three candidates and one bounded selected feasibility check.",
+  "allowed_changes": [
+    "authoritative/",
+    "sessions/RL11/",
+    "README.md",
+    "START_HERE.md"
+  ],
+  "identity_records": [
+    "RL11_INCOMING_SNAPSHOT.json",
+    "RL11_CHECKPOINT_MANIFEST.json",
+    "RL11_CLOSEOUT_VERIFIER_RESULTS.json"
+  ],
+  "artifacts": [
+    {
+      "path": "FAILURE_AND_LESSON_LEDGER.md",
+      "bytes": 66232,
+      "sha256": "430c38a374a9a7769465d42ff7fc99374ad1552d75d17c83603cc2bdc75228c2",
+      "git_blob": "edf38c1636a62bcfe0fcb07fe7697994764b892a"
+    },
+    {
+      "path": "PROOF_STATE_AND_OPEN_OBLIGATIONS.md",
+      "bytes": 30612,
+      "sha256": "ebae45406f36f9e94a8c7620650733659dd666469ef2a75c110ce13a0b889cfb",
+      "git_blob": "4726fdf02193a722dc428c50cd320a15e51ab8af"
+    },
+    {
+      "path": "RL11_APPLICABILITY_GATE_BRIEF.md",
+      "bytes": 9665,
+      "sha256": "ff4bdbc835f992203a18652989449cb0db16addeceaa82f8bbb28aee8fc3480f",
+      "git_blob": "ce89e8da04723ec8233b14f54c2ec33e1bd5cb5e"
+    },
+    {
+      "path": "RL11_CHECKPOINT_MANIFEST.json",
+      "bytes": 2997,
+      "sha256": "1e089ffc6d25c6d20f6a6d0198bbd5cf7c596da7e2e19dad8995aef3b26fb73b",
+      "git_blob": "8d3a4a90f8fc076a4a3a8e716206551d7bb413f9"
+    },
+    {
+      "path": "RL11_CLOSEOUT_VERIFIER_RESULTS.json",
+      "bytes": 11240,
+      "sha256": "c9aa826bcf58f215720da0c172fead6b45a7cbd7399f89748cfec74fc2e8dd68",
+      "git_blob": "6aec374e7d4eeda675e9325cd1f8664f451b836c"
+    },
+    {
+      "path": "RL11_FAILURE_AND_LESSON_LEDGER_APPENDIX.md",
+      "bytes": 7158,
+      "sha256": "4b132c93f37c3c5dec0a36fb69f9ba9ceb80e08a1f702d11d67afcd3b7f4a552",
+      "git_blob": "25c1dccf1b661523dec779d975224a532040e559"
+    },
+    {
+      "path": "RL11_INCOMING_SNAPSHOT.json",
+      "bytes": 27382,
+      "sha256": "4c5e3fc8978da6e42c18def30c9fd7330f906750636c7ec74d5835f0ea3781f5",
+      "git_blob": "360f3a2f41568841d74822cf113bebee45555bcc"
+    },
+    {
+      "path": "RL11_MK2_COUNTERMODEL_REPORT.md",
+      "bytes": 17225,
+      "sha256": "03f3e8d1eb0f6f6f514a7fe334506cc075377b79722e0314906818ac69797d7d",
+      "git_blob": "327f3f600eac913fd8c9bf7918b12da73017446a"
+    },
+    {
+      "path": "RL11_PREPARED_RECOVERY_TASK.md",
+      "bytes": 5209,
+      "sha256": "fa53b3429d78b58911d8919e381a22f2f3ddea85e74119351780db00d38bde31",
+      "git_blob": "2dce34465e8efcff5c8a0acc70a25bce4493c37e"
+    },
+    {
+      "path": "RL11_PROOF_STATE_AND_RESIDUAL_LEDGER.md",
+      "bytes": 3972,
+      "sha256": "3aa02ade1c390e78f4ca9fd16893ec6d3519f79e73a2569bf4a5ef12e89cb724",
+      "git_blob": "42ecb4d1714358656652e64db83673719b0536e8"
+    },
+    {
+      "path": "RL11_SESSION_STATE_AND_RL12_KICKOFF.md",
+      "bytes": 3927,
+      "sha256": "a15d6e9d83ecaadad7f6489ca668c85239b29aee52cc9dd09a00ae13e16fae56",
+      "git_blob": "75e55da29c7e4f8e80767d77e8bb173ce96b8121"
+    },
+    {
+      "path": "RL11_WORK_RESUME_STATE.json",
+      "bytes": 3165,
+      "sha256": "e1b609cdea2f205cb90c7380322cad6e4cbc062ec21db35567568a0d49860835",
+      "git_blob": "ea5b30c0e06f1aee1adc9515dd0c53fb4991371b"
+    },
+    {
+      "path": "RL11_WORK_UNIT_SCOPE.md",
+      "bytes": 3772,
+      "sha256": "0efe3d06e4c8e82e89f268067cbe6c3d63a4f147d888e499505fc59817a43c53",
+      "git_blob": "97743da8208799fbebe08dec1fa74efd4914704a"
+    },
+    {
+      "path": "RL11_WORK_VERIFICATION_REPORT.md",
+      "bytes": 5484,
+      "sha256": "8bad3f50d9070a3f896388608a4e35d2cd626e3fbe47a2871f8d7134e7288b92",
+      "git_blob": "10691136c478dedb7c3f2dab9bb2d14a382171f9"
+    },
+    {
+      "path": "RL12_NEW_ROUTE_DISCOVERY_BRIEF.md",
+      "bytes": 8747,
+      "sha256": "476ccb36cf16bdd587cd72d266049909d47e8da4a16a994a940de80cb7861e61",
+      "git_blob": "cc261c6befbb66fc88b36505a32fd87ca765cbbc"
+    },
+    {
+      "path": "START_HERE.md",
+      "bytes": 3138,
+      "sha256": "5d14f0acfc4a5051f6fe76bed9ed3bbc7582e10225f7f5a900b79a747a6c8bc3",
+      "git_blob": "e21d68f910116e0468aaac1e2e0c31bdd0691b4b"
+    },
+    {
+      "path": "VERIFICATION_REPORT.md",
+      "bytes": 6767,
+      "sha256": "d2295aeb9fc674d4b6f81e616121eb7a20979f159c11b09ef03b7694c17cdf33",
+      "git_blob": "e4d1f04f1caf6a726da7133fce8905b4568e3cc3"
+    }
+  ],
+  "self_hash": "Excluded; full intended tree recorded externally and required to equal the remote-created tree."
+}

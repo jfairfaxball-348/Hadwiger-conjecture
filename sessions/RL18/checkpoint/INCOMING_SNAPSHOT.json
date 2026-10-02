@@ -1,0 +1,44 @@
+{
+  "format": "rl18-incoming-snapshot-v1",
+  "session": 18,
+  "status": "OPEN / bounded work checkpoint / NOT PROMOTED",
+  "base_head": "c6e9ada33dd8107471e20c04afb775cdbc38ddd9",
+  "expected_predecessor": "c6e9ada33dd8107471e20c04afb775cdbc38ddd9",
+  "expected_predecessor_match": true,
+  "incoming_rl_unique": true,
+  "preexisting_session_RL18": false,
+  "preexisting_rl18_work_branch": false,
+  "sole_brief": "authoritative/RL18_INSIDE_T_WITNESS_ESSENTIALITY_BRIEF.md",
+  "authoritative_snapshot_kind": "required-path blob SHA map",
+  "validated_paths": {
+    "AGENTS.md": "72ad349e4744718651fec497dbd4cf967c19566d",
+    "authoritative/START_HERE.md": "345b77b7ee0613fdf9e785c377efdd41c15042b4",
+    "authoritative/RL18_INSIDE_T_WITNESS_ESSENTIALITY_BRIEF.md": "3488bdbc1c536b4b0094a865254ba0d998e62657",
+    "authoritative/RL17_SESSION_STATE_AND_RL18_KICKOFF.md": "3b91a54f0a024425602b56ebd3c1598c62fa9793",
+    "authoritative/RL17_STRICT_SHRINK_EXCHANGE_REPORT.md": "dda46c4ebf26c8512a3bea387814be273db41f4b",
+    "authoritative/RL17_PROOF_STATE_AND_RESIDUAL_LEDGER.md": "6b9f11225a9573b9fb806956371a6d3d20ea1d75",
+    "authoritative/RL17_FAILURE_AND_LESSON_LEDGER_APPENDIX.md": "9e5bb36203bb3285763c50093e7d76928335742c",
+    "authoritative/RL17_PREPARED_RECOVERY_TASK.md": "ec067597628c5247c554b7883e8ba2bc920c7432",
+    "authoritative/RL17_SOURCE_QUESTION_AND_LIMITS.md": "2d7db7e4e57824da7c101784018ad3c32e7b9c4c",
+    "authoritative/PROOF_STATE_AND_OPEN_OBLIGATIONS.md": "0927c1759aa91ab0b64888cc2efde351cacaeee5",
+    "authoritative/FAILURE_AND_LESSON_LEDGER.md": "3601d03b6a441e93ee9cff23bf898f991d15c1eb",
+    "authoritative/DEPENDENCY_MAP.md": "8464e2ae873c4fd33ec24cd8cdd54e72dceb0460",
+    "authoritative/VERIFICATION_REPORT.md": "f3bd01843390ab97846e5c3927addc6c4ea6afe5",
+    "docs/RESEARCH_RECOVERY_PROTOCOL.md": "2b6710e32dad04800dd32fce771be630bce61082"
+  },
+  "supporting_definition_reads": {
+    "authoritative/RL13_CRITICAL_CONNECTED_RESOURCE_REPORT.md": "c71da40828d5ee880f7eb0a04dfbaec0ebf2fe88",
+    "authoritative/RL13_LEAF_PRIVATE_RESOURCE_REPORT.md": "593a36138bbc69758eb9f8535a37e5bb4a8844f6",
+    "authoritative/RL15_MIXED_KEMPE_COMPONENT_RESOURCE_REPORT.md": "37c7e9cf9b6b348ca73690c0ea684f3cb07fcac1",
+    "docs/RL_RESEARCH_PROTOCOL.md": "9f2a2f94a2eb0134b4cf6f393dc0395edce10b24",
+    "docs/CONNECTOR_WORKFLOW.md": "b3a90487e1eaf14504eba18cc07521ed08e59256"
+  },
+  "start_gate": {
+    "live_head_match": true,
+    "incoming_rl_unique": true,
+    "sessions_RL18_absent": true,
+    "preexisting_rl18_branch_absent": true,
+    "integrity_failure_found": false
+  },
+  "programme": "ACTIVE"
+}

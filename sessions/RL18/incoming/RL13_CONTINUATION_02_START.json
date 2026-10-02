@@ -1,0 +1,55 @@
+{
+  "format": "rl13-continuation-start-v1",
+  "unit": "RL13-U02",
+  "session": 13,
+  "status": "OPEN / NOT PROMOTED",
+  "base_head": "23a2dfa3fff5b8bbd11cd986f4418dfc5b3a54b1",
+  "checkpoint_commit": "bf6a4ad12bde1d20216b65dd9df51ea09930878e",
+  "checkpoint_root_tree": "dc2f9fd0d78503abf35e792019b406f6837254dc",
+  "authoritative_tree": "4a477bf49f47be34f743e7700863ac0472d8776c",
+  "branch": "work/rl13-critical-resource-20261002",
+  "verified_unchanged_required_blob_pins": {
+    "authoritative/START_HERE.md": "14b459beb2722067431be8610f700d54f1fdb945",
+    "authoritative/RL13_CRITICAL_CONNECTED_RESOURCE_BRIEF.md": "e489d8382f26422561143301eac0f595ea43c811",
+    "authoritative/RL12_SESSION_STATE_AND_RL13_KICKOFF.md": "559132cdc8babfd6b8ab57f7a869092dd00f1788",
+    "authoritative/RL12_ROUTE_COMPARISON.md": "eba6c0e8f60231fad70240546c3c05b78a0c90cd",
+    "authoritative/RL12_SEPARATOR_FEASIBILITY_REPORT.md": "c654fa3b149856c005996ba7bd2c997876ce4eac",
+    "authoritative/RL12_PROOF_STATE_AND_RESIDUAL_LEDGER.md": "52fbef34df75d8b8660330bef038a106f9f9cb2d",
+    "authoritative/RL12_FAILURE_AND_LESSON_LEDGER_APPENDIX.md": "8d7dc8e9b61909c974ebc0ef9c7702692600bebd",
+    "authoritative/RL12_SOURCE_QUESTION_AND_LIMITS.md": "af749846f58fc80d2829d7e87a40245f36d440a6",
+    "authoritative/PROOF_STATE_AND_OPEN_OBLIGATIONS.md": "1728523fe7ee57edf4baf5824c937a4e7ee9fa7f",
+    "authoritative/FAILURE_AND_LESSON_LEDGER.md": "c148e93250a6448342524dddc2c9770adf76b926",
+    "authoritative/RL11_MK2_COUNTERMODEL_REPORT.md": "327f3f600eac913fd8c9bf7918b12da73017446a",
+    "authoritative/RL11_SESSION_STATE_AND_RL12_KICKOFF.md": "75e55da29c7e4f8e80767d77e8bb173ce96b8121",
+    "authoritative/RL10_AUDIT_REPORT.md": "2500be3011290adcfea6fa91e9316e8ea0e0e159",
+    "authoritative/RL10_DEPENDENCY_SCOPE_AUDIT.md": "f3da18a9e486cbbb1b21dfecb4d87df1fc41df91",
+    "authoritative/BRIDGE_LEDGER.md": "7e4a93f6fb71606fdb3dedb038d5002ae3a34fd4",
+    "authoritative/DEPENDENCY_MAP.md": "8464e2ae873c4fd33ec24cd8cdd54e72dceb0460",
+    "authoritative/RL3_ROADMAP.md": "abe4968ac8675eb9eb3e68d1b3279219c1685ce1",
+    "authoritative/VERIFICATION_REPORT.md": "bf7264f97f4f25e2392d853e65c7b5f001ae32d4"
+  },
+  "resume_mode": "Reuse verified incoming start gate after matching live main, work branch, authority tree and all recorded required blob identities; inspect load-bearing A2/star scopes and checkpoint in this continuation.",
+  "completed_work": "Incoming checkpoint verified; no RL13-U02 mathematics recorded yet.",
+  "candidate": "Minimum-resource leaf-private witnesses in m=1 and N_H(T)∩S=S",
+  "intended_output": "One independent augmentation invariant or precise residual attachment/coloring obstruction, with first missing implication and obligation accounting",
+  "bounds": {
+    "continuation_units": 1,
+    "m_cases": [
+      1
+    ],
+    "star_types_max": 7,
+    "mathematical_numerical_computation": 0,
+    "new_source_queries": 0,
+    "new_source_opens": 0
+  },
+  "next_exact_operation": "Handle singleton T by A2; for arbitrary spanning-tree leaf derive a private cyclic edge and test one actual-original-star-coloring continuation.",
+  "stop_conditions": [
+    "first missing independent implication",
+    "invalid coloring lift",
+    "circularity",
+    "uncovered leaf case"
+  ],
+  "stop_and_repair_active": false,
+  "promotion": false,
+  "programme": "ACTIVE"
+}

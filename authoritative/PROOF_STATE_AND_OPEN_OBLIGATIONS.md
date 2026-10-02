@@ -1,3 +1,23 @@
+# Current proof state after RL18
+
+**RL18 CLOSED/FROZEN. RL19 is the sole incoming articulation-side pruning gate, READY / NOT STARTED.**
+
+RL18-P01 is promoted as proved scoped elementary analytic mathematics with same-worker review only. Under the retained failed-anchor setup and conditional subcase y∈T, T_y=T-{y} is nonempty. If H[T_y] is connected, minimum-cardinality forces a cyclic coverage defect and S-completeness upgrades it to a cyclic nonedge pq with
+
+    N_H(p) ∩ T = N_H(q) ∩ T = {y}.
+
+The endpoints p,q are not neighbors of x and, in the fixed coloring d, have colors outside {gamma,alpha}. If H[T_y] is disconnected, y is an articulation of H[T] and every component K of H[T_y] satisfies
+
+    N_H(K) ∩ (T\K) = {y}.
+
+The same fixed gamma/alpha locked-component data eliminates neither alternative and supplies no smaller valid resource. No y∉T theorem, endpoint anchoring, second resource, contradiction, or m=1 exclusion follows. FL-021 records the barrier.
+
+No named inherited mathematical obligation is reduced. m=1, endpoint anchoring, a second resource, BR-00, BR-01 universal coverage, general UP_6, CR_6, ordinary order-seven coverage, every higher order and full sharp Hadwiger remain open. RL16-P01, RL15-P01, RL14-P01, RL13-P00/P01/P02 and all earlier results/source limits retain exact scope. Mathematical numerical computation and new source queries/opens were zero; no formal or external independent certification or novelty claim is made.
+
+The sole next task works only in the disconnected RL18 alternative and tests one articulation-side pruning pair, as specified in RL19_ARTICULATION_SIDE_PRUNING_BRIEF.md. Programme active.
+
+## Preserved complete pre-RL18 canonical state
+
 # Current proof state after RL17
 
 **RL17 CLOSED/FROZEN. RL18 is the sole incoming inside-T witness-essentiality

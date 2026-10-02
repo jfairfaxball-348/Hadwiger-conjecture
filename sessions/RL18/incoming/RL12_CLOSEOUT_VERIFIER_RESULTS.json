@@ -1,0 +1,129 @@
+{
+  "format": "rl12-closeout-verifier-results-v1",
+  "status": "PASS",
+  "base_head": "dbbc49fb16198edfc61e0c34616a3b80dbe968e0",
+  "authority_tree_sha": "b434f9e5402bb5bbf81a579a133b087d501dd3f6",
+  "checkpoint_files_preserved": 11,
+  "incoming_authority_blobs_preserved": 125,
+  "candidate_count": 2,
+  "selected": "B / BR-06-SEP2",
+  "bounded_checks": 1,
+  "mathematical_numerical_computation": 0,
+  "source_queries": 1,
+  "direct_primary_opens": 2,
+  "local_analytic_check": "PASS — BR-06-SEP2 exact masks/minors/Kempe/double-contraction proof recorded",
+  "inherited_verifier_results": {
+    "status": "PRESERVED",
+    "note": "These are inherited fixed-witness/package results; RL12 did not rerun them and they do not certify the new analytic result.",
+    "runs": [
+      {
+        "copy": "sessions/RL12/incoming",
+        "command": "python -I verify_uncolored_core.py",
+        "result": "PASS",
+        "key_counts": {
+          "H_vertices": 12,
+          "H_edges": 44,
+          "triples_checked": 220,
+          "star_colorings": 7
+        }
+      },
+      {
+        "copy": "sessions/RL12/incoming",
+        "command": "python -I verify_auxiliary_countermodel.py",
+        "result": "PASS",
+        "key_counts": {
+          "H_vertices": 12,
+          "H_edges": 44,
+          "colorings": 7,
+          "paths": 5,
+          "adjacencies": "15/21"
+        }
+      },
+      {
+        "copy": "sessions/RL12/incoming",
+        "command": "python -I verification/verify_rooted_barrier.py",
+        "result": "PASS",
+        "key_counts": {
+          "n": 9,
+          "m": 20,
+          "cuts": 130,
+          "rooted_assignments": 3125,
+          "colorings": 19683
+        }
+      },
+      {
+        "copy": "sessions/RL12/incoming",
+        "command": "python -I background/verification/verify_corpus.py",
+        "result": "PASS",
+        "key_counts": {
+          "cutoff": "2026-09-30",
+          "sources": 31,
+          "results": 31,
+          "topics": 14,
+          "open": 8,
+          "checked_primary": 13,
+          "checked_authoritative_secondary": 2,
+          "not_directly_checked": 16
+        }
+      },
+      {
+        "copy": "authoritative",
+        "command": "python -I verify_uncolored_core.py",
+        "result": "PASS",
+        "key_counts": {
+          "H_vertices": 12,
+          "H_edges": 44,
+          "triples_checked": 220,
+          "star_colorings": 7
+        }
+      },
+      {
+        "copy": "authoritative",
+        "command": "python -I verify_auxiliary_countermodel.py",
+        "result": "PASS",
+        "key_counts": {
+          "H_vertices": 12,
+          "H_edges": 44,
+          "colorings": 7,
+          "paths": 5,
+          "adjacencies": "15/21"
+        }
+      },
+      {
+        "copy": "authoritative",
+        "command": "python -I verification/verify_rooted_barrier.py",
+        "result": "PASS",
+        "key_counts": {
+          "n": 9,
+          "m": 20,
+          "cuts": 130,
+          "rooted_assignments": 3125,
+          "colorings": 19683
+        }
+      },
+      {
+        "copy": "authoritative",
+        "command": "python -I background/verification/verify_corpus.py",
+        "result": "PASS",
+        "key_counts": {
+          "cutoff": "2026-09-30",
+          "sources": 31,
+          "results": 31,
+          "topics": 14,
+          "open": 8,
+          "checked_primary": 13,
+          "checked_authoritative_secondary": 2,
+          "not_directly_checked": 16
+        }
+      }
+    ]
+  },
+  "readback_requirements": [
+    "main equals the new sole-parent promotion commit",
+    "commit parent equals base_head",
+    "RL13 is the unique successor brief",
+    "frozen incoming and checkpoint byte identities match their source trees",
+    "JSON and declared overlay parse"
+  ],
+  "commit_identity": "recorded externally to avoid self-reference"
+}
