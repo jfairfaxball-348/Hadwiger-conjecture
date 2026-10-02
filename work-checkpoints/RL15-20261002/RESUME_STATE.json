@@ -6,7 +6,6 @@
   "base_head": "9aa0e881944d6ac6b59ed015b4f184b7c0909c33",
   "branch": "work/rl15-mixed-kempe-20261002",
   "prefix": "work-checkpoints/RL15-20261002/",
-  "expected_parent": "9aa0e881944d6ac6b59ed015b4f184b7c0909c33",
   "checkpoint_commit_identity": "Resolve the branch tip containing this file; omitted to avoid self-reference.",
   "expected_total_files": 10,
   "mathematical_scope": {
@@ -43,5 +42,7 @@
   "recommendation": "it makes sense to finish up here",
   "rl_closed": false,
   "successor_started": false,
-  "programme": "ACTIVE"
+  "programme": "ACTIVE",
+  "branch_base": "9aa0e881944d6ac6b59ed015b4f184b7c0909c33",
+  "checkpoint_commit_shape": "sequential work-branch checkpoint commits rooted at branch_base; no default-branch or authoritative mutation"
 }
