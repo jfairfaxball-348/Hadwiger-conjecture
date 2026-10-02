@@ -1202,3 +1202,26 @@ Date: 2026-10-02 Europe/Madrid.
 - **Selected successor:** RL22 performs one bounded fixed-defect target-color blocker assessment using one actual star coloring and one unresolved repair pattern.
 - **Sources/computation:** zero new mathematical source queries/opens and zero mathematical numerical computation.
 - **Programme:** ACTIVE.
+
+
+
+# Atomic RL22 closeout and completed FL-025 event
+
+# RL22 append-only lesson event — FL-025
+
+Date: 2026-10-02 Europe/Madrid.
+
+## FL-025 — T_2 blocker emptiness can hold while a one-sided leaf remains the target-color blocker
+
+- **Origin/evidence:** RL22 bounded fixed-defect target-color blocker assessment at BASE_HEAD 33176e4691c1a657ae114cdd058664c544f81a40; exact work is frozen under sessions/RL22/checkpoint/. The selected RL21 repair pattern is X={a},Y={b}, with one fixed defect e=ab and one fixed disjoint-star coloring c.
+- **Classification:** method-barrier / recovery lesson accompanying RL22-P01; not a mathematical error, counterexample, theorem demotion or source-status change.
+- **Positive observation:** Y={b} forces N_H(a) intersect T_2=empty, hence Z_a=empty. The corresponding recoloring a->beta is safe against S, B and T_2.
+- **First missing dependency:** x is adjacent to a but not b. Properness gives c(x)!=alpha but does not force c(x)!=beta. Thus ax can remain a target-color blocker outside Z_a.
+- **Scope caution:** no claim is made that c(x)=beta occurs in every or any actual full C_7 instance. The event records only that the permitted fixed-choice premises do not exclude it.
+- **Downstream effect:** no five-color boundary compression is certified in this selected pattern, no repair pattern is eliminated, no m=2 exclusion or smaller family follows, and no named inherited mathematical obligation is reduced.
+- **Surviving frontier:** RL22-P01 is promoted only at its exact fixed-choice scope; RL21-P01/P02, FL-024, the RL20 audit NONE result, FL-023 and every inherited result/source/certificate limit remain unchanged.
+- **Lesson:** in a repair pattern where x sees only the recolored endpoint, T_2 target-color exclusion is not a sufficient recoloring certificate; the leaf color must be controlled separately.
+- **Retry condition:** do not repeat the same Z_a/Z_b test in this pattern without a new premise controlling c(x) relative to beta, and do not change coloring or resource side merely to evade the fixed-choice barrier.
+- **Selected successor:** RL23 assesses only the conditional branch c(x)=beta for the same fixed choices and same coloring, seeking either a contradiction from already retained structure or an exact compatibility barrier.
+- **Sources/computation:** zero new mathematical source queries/opens and zero mathematical numerical computation.
+- **Programme:** ACTIVE.

@@ -1,3 +1,21 @@
+# Current proof state after RL22
+
+**RL22 CLOSED/FROZEN. RL23 is the sole incoming bounded one-sided leaf-color compatibility assessment, READY / NOT STARTED.**
+
+RL22 promotes exactly one scoped analytic observation, with same-worker review only.
+
+RL22-P01: retain the full C_7 cyclic degree-seven domain and the exact fixed RL21 non-singleton m=2, A=S setup with fixed family {T_1,T_2}, joining edge pq, rooted spanning tree of H[T_1], non-root leaf x, B=T_1-{x}, selected defect e=ab, and repair pattern X={a},Y={b}. Fix one cyclic nonedge f disjoint from e and one actual pulled-back six-coloring c, with alpha=c(a), beta=c(b). Then Y={b} gives N_H(a) intersect T_2=empty, so the target-color blocker set Z_a is empty.
+
+The corresponding one-endpoint recoloring a->beta is proper on S, B and T_2, but is not certified on x. Pattern X={a},Y={b} gives xa in E(H) and xb notin E(H). Source properness forces c(x)!=alpha but supplies no implication c(x)!=beta. Hence the first missing implication is exactly c(x)!=beta. RL22 does not assert that c(x)=beta occurs in any full C_7 instance; it records only that the retained premises do not exclude it.
+
+FL-025 records that T_2 blocker emptiness alone is insufficient when x is a one-sided repairer. No second orientation, source coloring, repair pattern, defect, leaf, spanning tree, joining edge, resource side or mechanism was assessed.
+
+No correction or demotion occurs. The RL20 audit NONE result remains exact; FL-023 and FL-024 remain unchanged; RL21-P01/P02 retain their exact scopes. No named inherited mathematical obligation is genuinely reduced by RL22. The full m=2, A=S branch remains open, including this selected repair pattern, as do m=1, m=3, m=4, BR-00, BR-01 universal coverage, general UP_6, CR_6, ordinary order-seven coverage, every higher order and full sharp Hadwiger. All inherited source/certificate limits, simultaneous-compatibility requirements, sharpness conditions and unbounded residual parameters remain unchanged.
+
+RL23 keeps the exact same fixed choices and same source coloring and enters only the conditional branch c(x)=beta. No RL23 mathematics occurred during RL22 closeout.
+
+## Preserved complete pre-RL22 canonical state
+
 # Current proof state after RL21
 
 **RL21 CLOSED/FROZEN. RL22 is the sole incoming bounded fixed-defect target-color blocker assessment, READY / NOT STARTED.**

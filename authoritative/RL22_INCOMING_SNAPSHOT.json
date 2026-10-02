@@ -1,0 +1,37 @@
+{
+  "format": "rl22-incoming-snapshot-v1",
+  "session": 22,
+  "status": "OPEN / bounded analytic checkpoint / NOT PROMOTED",
+  "base_head": "33176e4691c1a657ae114cdd058664c544f81a40",
+  "expected_predecessor": "33176e4691c1a657ae114cdd058664c544f81a40",
+  "expected_predecessor_match": true,
+  "branch": "work/rl22-fixed-defect-target-color-blocker-20261002",
+  "incoming_rl_unique": true,
+  "preexisting_session_RL22": false,
+  "preexisting_rl22_work_branch": false,
+  "sole_brief": "authoritative/RL22_FIXED_DEFECT_TARGET_COLOR_BLOCKER_BRIEF.md",
+  "validated_paths": {
+    "AGENTS.md": "72ad349e4744718651fec497dbd4cf967c19566d",
+    "authoritative/START_HERE.md": "a1bf8ff416cdc6dc031ce6ffba76f1a9b8d69cce",
+    "authoritative/RL22_FIXED_DEFECT_TARGET_COLOR_BLOCKER_BRIEF.md": "847a8c4e98867b29eeb4a387e741f1338efd611e",
+    "docs/RESEARCH_RECOVERY_PROTOCOL.md": "2b6710e32dad04800dd32fce771be630bce61082",
+    "authoritative/RL21_SESSION_STATE_AND_RL22_KICKOFF.md": "202cfbcf703b5c99f745f1d1dfaefa4556e8d92e",
+    "authoritative/RL21_M2_S_COMPLETE_PAIR_LEAF_PRUNING_REPORT.md": "e259681091b27e74f238bf04c3aedfafceb3241e",
+    "authoritative/RL21_PROOF_STATE_AND_RESIDUAL_LEDGER.md": "b4417a2093e6623c69ccb5ddd37a159ccaa069c4",
+    "authoritative/RL21_FAILURE_AND_LESSON_LEDGER_APPENDIX.md": "badbe8564e8eb87b6386b770ea9e818249e1b604",
+    "authoritative/RL21_PREPARED_RECOVERY_TASK.md": "003a8e494e5d25089c1014376c08555d5122ed77",
+    "authoritative/PROOF_STATE_AND_OPEN_OBLIGATIONS.md": "931815a6b56a11614b8b76bc48ef7e458b0e425e",
+    "authoritative/FAILURE_AND_LESSON_LEDGER.md": "7cc917a0aa1c1a04c7723980da1ba778ff9b5bb2",
+    "authoritative/DEPENDENCY_MAP.md": "8464e2ae873c4fd33ec24cd8cdd54e72dceb0460",
+    "authoritative/RL13_CRITICAL_CONNECTED_RESOURCE_REPORT.md": "c71da40828d5ee880f7eb0a04dfbaec0ebf2fe88",
+    "authoritative/RL20_CORRECTION_AND_DEMOTION_RECORD.md": "69f0e4b2ed8fcd28263f2ecc6ecb96a2ec63bd38"
+  },
+  "start_gate": {
+    "live_head_match": true,
+    "incoming_rl_unique": true,
+    "sessions_RL22_absent": true,
+    "preexisting_rl22_branch_absent": true,
+    "integrity_failure_found": false
+  },
+  "programme": "ACTIVE"
+}

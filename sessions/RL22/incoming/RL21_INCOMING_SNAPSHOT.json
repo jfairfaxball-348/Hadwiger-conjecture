@@ -1,0 +1,46 @@
+{
+  "format": "rl21-incoming-snapshot-v1",
+  "session": 21,
+  "status": "OPEN / bounded work checkpoint / NOT PROMOTED",
+  "base_head": "afd7414ab547adc3781b3ec67989464a6c9ce0d8",
+  "expected_predecessor": "afd7414ab547adc3781b3ec67989464a6c9ce0d8",
+  "expected_predecessor_match": true,
+  "base_root_tree": "c06895ad32fd16ccc778f726b1a366e0a92b410c",
+  "incoming_authoritative_tree": "3fbb6642475e282f7a084c11f4ddb1dea143110c",
+  "incoming_rl_unique": true,
+  "preexisting_session_RL21": false,
+  "preexisting_rl21_work_branch": false,
+  "sole_brief": "authoritative/RL21_M2_S_COMPLETE_PAIR_LEAF_PRUNING_BRIEF.md",
+  "authoritative_snapshot_kind": "tree SHA plus required-path blob SHA map",
+  "validated_paths": {
+    "AGENTS.md": "72ad349e4744718651fec497dbd4cf967c19566d",
+    "authoritative/START_HERE.md": "bf801d0ddadd5bf87c8f80aac27b10251499df3c",
+    "authoritative/RL21_M2_S_COMPLETE_PAIR_LEAF_PRUNING_BRIEF.md": "c97def6b03c091357efd95f5c206da2a50859ec2",
+    "docs/RESEARCH_RECOVERY_PROTOCOL.md": "2b6710e32dad04800dd32fce771be630bce61082",
+    "authoritative/RL20_AUDIT_REPORT.md": "e1e5012232cee19eee7455a84e9b9ab56931b4a2",
+    "authoritative/RL20_SESSION_MATRIX.md": "45c217933ad3fafa6e33dfc3f35c5c2c7aa59447",
+    "authoritative/RL20_DEPENDENCY_SCOPE_AUDIT.md": "6452856295b3c32b0e6b39d69260317b43cc0af8",
+    "authoritative/RL20_COLLATZ_RISK_AND_VERDICT.md": "dd0895e177810cde0be27166404004cf3e5c7a2d",
+    "authoritative/RL20_CORRECTION_AND_DEMOTION_RECORD.md": "69f0e4b2ed8fcd28263f2ecc6ecb96a2ec63bd38",
+    "authoritative/RL20_SESSION_STATE_AND_RL21_KICKOFF.md": "2489784c43c961961f7b022fc7df01993c24fae6",
+    "authoritative/PROOF_STATE_AND_OPEN_OBLIGATIONS.md": "7281cc66023a67b8ecd5e3d9113339dff52082a4",
+    "authoritative/FAILURE_AND_LESSON_LEDGER.md": "688652f0029296ce3eb336dac1dc148571f90b77",
+    "authoritative/DEPENDENCY_MAP.md": "8464e2ae873c4fd33ec24cd8cdd54e72dceb0460",
+    "authoritative/RL13_CRITICAL_CONNECTED_RESOURCE_REPORT.md": "c71da40828d5ee880f7eb0a04dfbaec0ebf2fe88",
+    "authoritative/RL13_LEAF_PRIVATE_RESOURCE_REPORT.md": "593a36138bbc69758eb9f8535a37e5bb4a8844f6",
+    "authoritative/VERIFICATION_REPORT.md": "a4b9a1fe3c6b0eff6801b6660ee77bc256138654"
+  },
+  "supporting_process_reads": [
+    "docs/RL_RESEARCH_PROTOCOL.md",
+    "docs/CONNECTOR_WORKFLOW.md",
+    "work-checkpoints/RL19-20261002 checkpoint format only"
+  ],
+  "start_gate": {
+    "live_head_match": true,
+    "incoming_rl_unique": true,
+    "sessions_RL21_absent": true,
+    "preexisting_rl21_branch_absent": true,
+    "integrity_failure_found": false
+  },
+  "programme": "ACTIVE"
+}

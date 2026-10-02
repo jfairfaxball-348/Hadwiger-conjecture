@@ -1,0 +1,24 @@
+{
+  "format": "rl20-audit-incoming-snapshot-v1",
+  "date": "2026-10-02 Europe/Madrid",
+  "base_head": "2f96a2e90f3b5a22ad424a15446f67c6a35b34fe",
+  "base_root_tree": "14d8e736157ce13a60e03dc40bfd4f0924f338f4",
+  "incoming_rl": 20,
+  "unique": true,
+  "expected_predecessor_match": true,
+  "required_current_blobs": {
+    "AGENTS.md": "72ad349e4744718651fec497dbd4cf967c19566d",
+    "authoritative/START_HERE.md": "859d2aec8c04c7501a05a49384daa77918645316",
+    "authoritative/RL20_PROGRESS_AND_CORRECTION_AUDIT_BRIEF.md": "e4a7393539c56bd97373c83f8e03d80120a38c9b",
+    "docs/TENTH_SESSION_PROGRESS_AUDIT.md": "786f2b19031b261b1aaaf056c5273f678fdd10f2",
+    "docs/RESEARCH_RECOVERY_PROTOCOL.md": "2b6710e32dad04800dd32fce771be630bce61082",
+    "authoritative/PROOF_STATE_AND_OPEN_OBLIGATIONS.md": "31285aab77b46eade237a6fe80152447eda6829b",
+    "authoritative/FAILURE_AND_LESSON_LEDGER.md": "2c9e9d0aa4a69ff3747f772c3e0c1ea901be4d70",
+    "authoritative/DEPENDENCY_MAP.md": "8464e2ae873c4fd33ec24cd8cdd54e72dceb0460",
+    "authoritative/VERIFICATION_REPORT.md": "c56ccc22f08318fe0b956730485a3e369b142aa2"
+  },
+  "historical_window": "sessions/RL10 through sessions/RL19, exact records required by the RL20 brief and their frozen checkpoint proofs where needed",
+  "new_source_queries": 0,
+  "new_source_opens": 0,
+  "mathematical_numerical_computation": 0
+}

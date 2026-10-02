@@ -10,20 +10,21 @@ barriers, corrections and open obligations.
 
 ## Current handover
 
-RL21 is CLOSED/FROZEN under [sessions/RL21/](sessions/RL21/START_HERE.md).
-It completed one bounded m=2, A=S resource-pair leaf-pruning assessment.
+RL22 is CLOSED/FROZEN under [sessions/RL22/](sessions/RL22/START_HERE.md).
+It completed one bounded fixed-defect T_2 target-color blocker assessment
+inside one fixed unresolved RL21 repair pattern.
 
-RL21-P01 classifies the seven possible x/T_2 repair patterns for one selected
-cyclic defect after a fixed non-root leaf deletion on a non-singleton T_1
-side. RL21-P02 gives a five-color S-boundary compression on H[S union U] in
-the two patterns where x repairs both defect endpoints and T_2 repairs
-exactly one. The singleton side and five repair patterns remain open; no
-named inherited mathematical obligation is reduced.
+At the exact fixed pattern X={a}, Y={b}, RL22-P01 records that
+N_H(a) intersect T_2 is empty and therefore Z_a is empty. The corresponding
+a->beta recoloring is safe on S, B and T_2 but is not certified against the
+one-sided leaf x: xa is an edge, xb is a nonedge, and properness does not
+force c(x)!=beta. FL-025 records this method barrier. No named inherited
+mathematical obligation is reduced.
 
-RL22 is the unique incoming session through
-[authoritative/RL22_FIXED_DEFECT_TARGET_COLOR_BLOCKER_BRIEF.md](authoritative/RL22_FIXED_DEFECT_TARGET_COLOR_BLOCKER_BRIEF.md).
-It is READY / NOT STARTED and tests one fixed-coloring T_2 target-color
-blocker gate in one unresolved RL21 repair pattern.
+RL23 is the unique incoming session through
+[authoritative/RL23_ONE_SIDED_LEAF_COLOR_COMPATIBILITY_BRIEF.md](authoritative/RL23_ONE_SIDED_LEAF_COLOR_COMPATIBILITY_BRIEF.md).
+It is READY / NOT STARTED and works only in the same fixed pattern and same
+fixed coloring, conditional on c(x)=beta.
 
 The programme is active and the root remains full sharp Hadwiger for every
 finite simple graph.

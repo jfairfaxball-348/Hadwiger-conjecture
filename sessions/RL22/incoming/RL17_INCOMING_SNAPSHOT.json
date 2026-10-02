@@ -1,0 +1,50 @@
+{
+  "format": "rl17-incoming-snapshot-v1",
+  "session": 17,
+  "status": "OPEN / bounded work checkpoint / NOT PROMOTED",
+  "base_head": "32387459dc70787ab65f1da9ffcfa87ffa57d00e",
+  "base_root_tree": "e907bf4752404abaf234701466fbbc6292199778",
+  "authoritative_tree": "aedcece2f7d51a3c11aebde5ea843557d3efcac2",
+  "authoritative_blob_count": 187,
+  "expected_predecessor_match": true,
+  "unique_incoming_rl": true,
+  "preexisting_session_RL17": false,
+  "preexisting_rl17_work_branch": false,
+  "sole_brief": "authoritative/RL17_STRICT_SHRINK_EXCHANGE_BRIEF.md",
+  "validated_paths": {
+    "AGENTS.md": "72ad349e4744718651fec497dbd4cf967c19566d",
+    "authoritative/START_HERE.md": "62104d158ad89225fdf11b775c055ef1875aac32",
+    "authoritative/RL17_STRICT_SHRINK_EXCHANGE_BRIEF.md": "7aff1e4b827059c0e7eee000bfb114d909004678",
+    "authoritative/RL16_SESSION_STATE_AND_RL17_KICKOFF.md": "68479bee3bc52cef4ce949e8cc4a1fb1b55a1cef",
+    "authoritative/RL16_OFF_S_WITNESS_RESOURCE_MINIMALITY_REPORT.md": "927f3f83867dbd38c4ea2cb47c8e8b74770b6958",
+    "authoritative/RL16_PROOF_STATE_AND_RESIDUAL_LEDGER.md": "55ec25497e0b84aedf60065e91e5f4a8871d1f98",
+    "authoritative/RL16_FAILURE_AND_LESSON_LEDGER_APPENDIX.md": "e952fc875b0027d647c11a0e8998a908ed2a6ac7",
+    "authoritative/RL16_PREPARED_RECOVERY_TASK.md": "e0c3860b8208f9f277c6194d9814ed1e12606d9c",
+    "authoritative/RL16_SOURCE_QUESTION_AND_LIMITS.md": "02828c1933f7774876277c1d2ab8221175bedd8c",
+    "authoritative/PROOF_STATE_AND_OPEN_OBLIGATIONS.md": "1a99c07c6bb22e06271aaa56005726c9de20dfb9",
+    "authoritative/FAILURE_AND_LESSON_LEDGER.md": "a2aa0b5e8c9175efa1903823ecc2f910a88addf5",
+    "authoritative/DEPENDENCY_MAP.md": "8464e2ae873c4fd33ec24cd8cdd54e72dceb0460",
+    "authoritative/VERIFICATION_REPORT.md": "565537b135fb5d6d1e99bac476a6cbdbc1eb678e",
+    "docs/RESEARCH_RECOVERY_PROTOCOL.md": "2b6710e32dad04800dd32fce771be630bce61082"
+  },
+  "supporting_definition_reads": {
+    "authoritative/RL13_LEAF_PRIVATE_RESOURCE_REPORT.md": "593a36138bbc69758eb9f8535a37e5bb4a8844f6",
+    "authoritative/RL13_CRITICAL_CONNECTED_RESOURCE_REPORT.md": "c71da40828d5ee880f7eb0a04dfbaec0ebf2fe88",
+    "authoritative/RL15_MIXED_KEMPE_COMPONENT_RESOURCE_REPORT.md": "37c7e9cf9b6b348ca73690c0ea684f3cb07fcac1",
+    "docs/RL_RESEARCH_PROTOCOL.md": "9f2a2f94a2eb0134b4cf6f393dc0395edce10b24",
+    "docs/CONNECTOR_WORKFLOW.md": "b3a90487e1eaf14504eba18cc07521ed08e59256"
+  },
+  "start_gate": {
+    "live_head_match": true,
+    "incoming_rl_unique": true,
+    "sessions_RL17_absent": true,
+    "preexisting_rl17_branch_absent": true,
+    "integrity_failure_found": false
+  },
+  "sources_and_computation": {
+    "new_source_queries": 0,
+    "new_source_opens": 0,
+    "mathematical_numerical_computation": 0
+  },
+  "programme": "ACTIVE"
+}

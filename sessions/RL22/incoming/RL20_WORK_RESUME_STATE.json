@@ -1,0 +1,65 @@
+{
+  "format": "rl-connector-resume-v1",
+  "base_head": "2f96a2e90f3b5a22ad424a15446f67c6a35b34fe",
+  "authoritative_tree": "base root tree 14d8e736157ce13a60e03dc40bfd4f0924f338f4; required current blob snapshot in INCOMING_SNAPSHOT.json",
+  "incoming_rl": 20,
+  "session_brief": "authoritative/RL20_PROGRESS_AND_CORRECTION_AUDIT_BRIEF.md",
+  "validated_authority_paths": [
+    "AGENTS.md",
+    "authoritative/START_HERE.md",
+    "authoritative/RL20_PROGRESS_AND_CORRECTION_AUDIT_BRIEF.md",
+    "docs/TENTH_SESSION_PROGRESS_AUDIT.md",
+    "docs/RESEARCH_RECOVERY_PROTOCOL.md",
+    "authoritative/PROOF_STATE_AND_OPEN_OBLIGATIONS.md",
+    "authoritative/FAILURE_AND_LESSON_LEDGER.md",
+    "authoritative/DEPENDENCY_MAP.md",
+    "authoritative/VERIFICATION_REPORT.md",
+    "required frozen RL10-RL19 audit records and original checkpoint proofs for the named propositions"
+  ],
+  "last_verified_frontier": "RL20 audit complete: no correction/demotion; exact scoped results survive; no named inherited obligation reduced; repeated-local-work risk is material across RL14-RL19; verdict PIVOT to one bounded m=2 A=S resource-pair gate.",
+  "completed_artifacts": [
+    "START_HERE.md",
+    "INCOMING_SNAPSHOT.json",
+    "SESSION_MATRIX.md",
+    "DEPENDENCY_SCOPE_AUDIT.md",
+    "CORRECTION_AND_DEMOTION_RECORD.md",
+    "COLLATZ_RISK_AND_VERDICT.md",
+    "NEXT_RECOVERY_TASK.md"
+  ],
+  "unpromoted_or_uncovered": [
+    "all RL20 audit findings until normal closeout",
+    "selected RL21 m=2 successor task is NOT STARTED",
+    "m=1 endpoint anchoring / second resource",
+    "m=2,3,4 S-complete branches",
+    "BR-00/BR-01 universal coverage",
+    "general UP_6 / CR_6",
+    "ordinary order seven and all higher orders",
+    "full sharp Hadwiger"
+  ],
+  "next_exact_operation": "On user finish request, enter CLOSEOUT_LOCK, freeze this RL20 audit, install exactly the selected m=2 successor brief as RL21 authority, atomically promote, and read back.",
+  "do_not_recompute": [
+    "RL10-RL19 proposition audit",
+    "FL-013 through FL-022 reconciliation",
+    "RL19 private-endpoint candidate comparison"
+  ],
+  "failure_lesson_ids": [
+    "FL-013",
+    "FL-014",
+    "FL-015",
+    "FL-016",
+    "FL-017",
+    "FL-018",
+    "FL-019",
+    "FL-020",
+    "FL-021",
+    "FL-022"
+  ],
+  "recovery_mode": "pivot",
+  "changed_input_or_mechanism": "move from six-session m=1 failed-anchor refinement chain to the untouched m=2 S-complete resource-pair branch and consume the actual joining-edge requirement",
+  "next_task_bounds": "one family, one joining edge, one resource side, one rooted spanning tree, one leaf, one defect edge; zero new sources/computation by default",
+  "retry_conditions": [
+    "do not retry the RL19 two-side coverage mechanism without a genuinely new sufficiency premise",
+    "do not return to the private-endpoint full-defect-set candidate merely because it is prepared"
+  ],
+  "stop_and_repair_active": false
+}
