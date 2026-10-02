@@ -1,3 +1,47 @@
+# Current proof state after RL13
+
+**RL13 CLOSED/FROZEN. RL14 is the sole incoming leaf-deletion coloring gate,
+READY / NOT STARTED.**
+
+RL13-P01 and RL13-P02 are promoted as complete scoped analytic mathematics
+at their exact report scopes, with same-worker review only. P01 supplies
+five-color S boundary compression and a residual obstruction for m=1,2,3,4
+when the resource-union boundary is a proper subset of S. P02 supplies the
+leaf-private recoloring and precise residual attachment obstruction for
+m=1 with a minimum S-complete resource. P00 excludes m=0 only using the
+inherited RL12-SRC-01 connectivity statement at its unchanged verification
+status; there is no new source-proof certification.
+
+The local m=1, S-complete boundary-coloring subcase is reduced. No second
+resource, exclusion of m=1, or handling of m=2,3,4 S-complete unions is
+proved. The first missing implication is a disjoint residual resource with
+BOTH complete cyclic coverage AND an actual joining edge to T. A list
+obstruction or a path through S does not supply that conjunction.
+
+No named inherited universal obligation is reduced: BR-00, BR-01 coverage,
+general UP_6, CR_6, ordinary order-seven coverage, every higher order and
+full sharp Hadwiger remain open here. All graph/resource/component orders,
+path lengths, attachment patterns and coloring choices remain unbounded.
+No inherited theorem is corrected or demoted. Every earlier result,
+countermodel, certificate, source gap and verification limit is preserved.
+FL-015/016 record the new lessons. Numerical mathematics and new source
+queries/opens were zero; no formal or external independent certification
+or novelty claim is made.
+
+Complete statements and proofs are in
+RL13_CRITICAL_CONNECTED_RESOURCE_REPORT.md,
+RL13_LEAF_PRIVATE_RESOURCE_REPORT.md, and
+RL13_PROOF_STATE_AND_RESIDUAL_LEDGER.md. The sole next task uses an actual
+coloring of G-x and one bounded Kempe insertion assessment, as prepared
+in RL13; it is not yet assessed. Programme active.
+
+## Preserved complete pre-RL13 canonical state
+
+The historical incoming-session and work-control wording below is
+superseded by this current status and the sole RL14 brief. All original
+mathematical classifications and limits remain exactly as recorded.
+
+---
 # Current proof state after RL12
 
 **RL12 CLOSED/FROZEN. RL13 is the sole incoming critical-resource gate and is NOT STARTED.**

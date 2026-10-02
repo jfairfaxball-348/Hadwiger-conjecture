@@ -1,0 +1,30 @@
+{
+  "format": "rl13-closeout-candidate-checks-v1",
+  "session": 13,
+  "successor": 14,
+  "classification": "packaging and preservation checks only",
+  "pinned_main_and_work_refs_match": true,
+  "incoming_authority_blob_count": 140,
+  "checkpoint_blob_count": 13,
+  "checkpoint_blob_hashes_and_manifest_match": true,
+  "all_frozen_inputs_reuse_exact_git_trees": true,
+  "old_canonical_text_preserved": true,
+  "old_failure_ledger_preserved": true,
+  "all_checkpoint_alias_bodies_preserved": true,
+  "successor_is_exactly_one_ahead": true,
+  "successor_ready_not_started": true,
+  "current_authority_overlays": [
+    "authoritative/START_HERE.md",
+    "authoritative/PROOF_STATE_AND_OPEN_OBLIGATIONS.md",
+    "authoritative/FAILURE_AND_LESSON_LEDGER.md",
+    "authoritative/VERIFICATION_REPORT.md",
+    "authoritative/RL13_CRITICAL_CONNECTED_RESOURCE_BRIEF.md"
+  ],
+  "corrections_demotions": [],
+  "mathematical_review": "retained same-worker analytic reviews; no new formal/external certification",
+  "mathematical_numerical_computation": 0,
+  "new_source_queries": 0,
+  "new_source_opens": 0,
+  "new_research_during_closeout": false,
+  "remote_gate": "Must verify candidate tree, final main pin, one non-forced update, and readback before reporting completion."
+}

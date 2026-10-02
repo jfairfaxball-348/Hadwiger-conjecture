@@ -13,13 +13,13 @@ Before beginning mathematics, complete the start gate in AGENTS.md.
 
 ## Current handoff
 
-RL12 is CLOSED/FROZEN under sessions/RL12/. RL13 is the unique incoming
+RL13 is CLOSED/FROZEN under sessions/RL13/. RL14 is the unique incoming
 session, with sole brief
-[authoritative/RL13_CRITICAL_CONNECTED_RESOURCE_BRIEF.md](authoritative/RL13_CRITICAL_CONNECTED_RESOURCE_BRIEF.md).
-RL12 proved only the exact local BR-06-SEP2 separator statement; universal
-coverage and the full sharp Hadwiger root remain open. The MK2 induced-kernel
-route is retired on its exact D_cyc countermodel.
+[authoritative/RL14_LEAF_DELETION_COLORING_BRIEF.md](authoritative/RL14_LEAF_DELETION_COLORING_BRIEF.md).
+RL13's scoped boundary-coloring results leave compatible resource
+augmentation and every inherited universal obligation open. RL14 is
+READY / NOT STARTED; it uses the prepared leaf-deletion coloring gate.
 
 Keep h(G)>=chi(G) for EVERY finite simple graph as the root. Preserve every
 result, source/failure/certificate limit and residual, and follow the recovery
-protocol and every-tenth-session audit rule.
+protocol and every-tenth-session audit rule. Programme active.

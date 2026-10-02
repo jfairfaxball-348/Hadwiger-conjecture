@@ -1,3 +1,8 @@
+> **RL13 CLOSED/FROZEN.** This is the retained historical incoming
+> brief. Its original READY/NOT STARTED wording below describes the input
+> generation. RL14_LEAF_DELETION_COLORING_BRIEF.md is the sole current brief.
+> No original mathematical instruction or claim is changed.
+
 # RL13 — critical connected-resource obstruction/augmentation gate
 
 **SOLE INCOMING RL13 BRIEF. READY; NOT STARTED.**

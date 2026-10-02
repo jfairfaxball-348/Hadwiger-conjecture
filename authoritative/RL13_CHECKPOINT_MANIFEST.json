@@ -1,0 +1,124 @@
+{
+  "format": "rl-isolated-continuation-checkpoint-v2",
+  "incoming_rl": 13,
+  "status": "OPEN / RL13-U02 checkpoint / NOT PROMOTED",
+  "base_head": "23a2dfa3fff5b8bbd11cd986f4418dfc5b3a54b1",
+  "base_root_tree": "2da5fc8f126fcc81aa6a102aff3b70c1513f8cb8",
+  "authoritative_tree": "4a477bf49f47be34f743e7700863ac0472d8776c",
+  "branch": "work/rl13-critical-resource-20261002",
+  "prefix": "work-checkpoints/RL13-20261002/",
+  "previous_verified_checkpoint": "bf6a4ad12bde1d20216b65dd9df51ea09930878e",
+  "previous_checkpoint_manifest_blob": "b2df68f0916e56858e22f6196ed4d0c8099ac882",
+  "expected_parent": "bf6a4ad12bde1d20216b65dd9df51ea09930878e",
+  "checkpoint_commit_identity": "Resolve the commit containing this file from the named work branch; omitted here to avoid self-reference.",
+  "expected_total_files": 13,
+  "body_files": [
+    {
+      "path": "CONTINUATION_02_START.json",
+      "sha": "81a864322373da5f0b448215457397179d581533",
+      "size": 3369
+    },
+    {
+      "path": "CONTINUATION_02_VERIFICATION.md",
+      "sha": "c1e5183fa7d9432dd990911ab735c2847f82ef50",
+      "size": 6513
+    },
+    {
+      "path": "CRITICAL_CONNECTED_RESOURCE_REPORT.md",
+      "sha": "4c31339633f7cdd6d591194a8d461a7c82229b9a",
+      "size": 8942
+    },
+    {
+      "path": "FAILURE_AND_LESSON_LEDGER_APPENDIX.md",
+      "sha": "819e3355251aecb44e608d5adc4a8f217e43b902",
+      "size": 6911
+    },
+    {
+      "path": "INCOMING_SNAPSHOT.json",
+      "sha": "82c1eedd481e76bfffb85755a4a20a5beea8bbda",
+      "size": 2588
+    },
+    {
+      "path": "LEAF_PRIVATE_RESOURCE_REPORT.md",
+      "sha": "0b1332fa5c1c832e0349a63cd9be88c15678e1bf",
+      "size": 11902
+    },
+    {
+      "path": "NEXT_RECOVERY_TASK.md",
+      "sha": "37797779444eafb3953cdeba06be5cfe8d804542",
+      "size": 2776
+    },
+    {
+      "path": "PROOF_STATE_AND_RESIDUAL_LEDGER.md",
+      "sha": "89c06b72bd02782dfef3364deb106bc46fb4b020",
+      "size": 5803
+    },
+    {
+      "path": "RESUME_STATE.json",
+      "sha": "726babf61e76e1ef9385fe23e82bb11eced64c44",
+      "size": 4134
+    },
+    {
+      "path": "SOURCE_QUESTION_AND_LIMITS.md",
+      "sha": "7d5c708a5ab65473f0e73b263385a32c249cee4a",
+      "size": 995
+    },
+    {
+      "path": "VERIFICATION_REPORT.md",
+      "sha": "5610265fcf80a1074d9e3a3f6dff9cd81143f001",
+      "size": 2165
+    },
+    {
+      "path": "WORK_UNIT_SCOPE.md",
+      "sha": "dd0f873c1c80a2216d401e9550446ea7795dd59d",
+      "size": 2380
+    }
+  ],
+  "continuation_unit": "RL13-U02",
+  "continuation_units_this_turn": 1,
+  "start_gate": {
+    "base_head_match": true,
+    "work_head_match": true,
+    "authority_identity_unchanged": true,
+    "incoming_rl_unique": true,
+    "prior_gate_reused_after_identity_checks": true,
+    "integrity_failure_found": false
+  },
+  "mathematical_scope": {
+    "domain": "full C_7 cyclic degree-seven interface; m=1; minimum-cardinality resource T with N_H(T) intersect S=S",
+    "mechanism_count": 1,
+    "m_cases": [
+      1
+    ],
+    "star_types_max": 7,
+    "mathematical_numerical_computation": 0,
+    "new_source_queries": 0,
+    "new_source_opens": 0,
+    "result": "RL13-P02: leaf-private endpoint recoloring gives a five-color S boundary without changing T colors, plus a fixed-boundary inextendible component and precise two-color attachment/coverage-or-joining defect.",
+    "first_obstruction": "No independent implication forces a residual resource with both all cyclic coverage and an actual joining edge to T.",
+    "local_boundary_subcase_reduced": true,
+    "m1_augmentation_or_exclusion_proved": false,
+    "named_inherited_universal_obligation_reduced": false,
+    "proof_review": "same-worker analytic only; no formal or external independent certification"
+  },
+  "preservation": {
+    "main_mutated": false,
+    "authoritative_mutated": false,
+    "P01_report_blob": "4c31339633f7cdd6d591194a8d461a7c82229b9a",
+    "previous_proof_and_lesson_text_preserved_as_prefix": true,
+    "unchanged_checkpoint_files": [
+      "CRITICAL_CONNECTED_RESOURCE_REPORT.md",
+      "INCOMING_SNAPSHOT.json",
+      "SOURCE_QUESTION_AND_LIMITS.md",
+      "VERIFICATION_REPORT.md",
+      "WORK_UNIT_SCOPE.md"
+    ],
+    "inherited_failure_ids_preserved": "FL-001..FL-015; new work event FL-016"
+  },
+  "next_task": "Prepared original-G leaf-deletion coloring/Kempe insertion gate; NOT STARTED",
+  "recommendation": "it makes sense to finish up here",
+  "rl_closed": false,
+  "successor_started": false,
+  "programme": "ACTIVE",
+  "publication_note": "One isolated work-branch checkpoint only. Manifest excludes its own blob hash. Remote readback must verify complete tree and ref; no authoritative promotion occurs."
+}
