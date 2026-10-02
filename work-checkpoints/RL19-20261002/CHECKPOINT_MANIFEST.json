@@ -1,0 +1,30 @@
+{
+  "format": "rl19-checkpoint-manifest-v1",
+  "session": 19,
+  "status": "FINAL ISOLATED CHECKPOINT / PRE-CLOSEOUT",
+  "base_head": "fc61fb68165e341de9e15cf3b7de63232ffc295b",
+  "branch": "work/rl19-articulation-pruning-20261002",
+  "prefix": "work-checkpoints/RL19-20261002/",
+  "pre_manifest_tip": "10cf0970185cf943f80ff85f2c540c62055dc355",
+  "body_files": [
+    "WORK_UNIT_SCOPE.md",
+    "INCOMING_SNAPSHOT.json",
+    "ARTICULATION_SIDE_PRUNING_REPORT.md",
+    "PROOF_STATE_AND_RESIDUAL_LEDGER.md",
+    "FAILURE_AND_LESSON_LEDGER_APPENDIX.md",
+    "NEXT_RECOVERY_TASK.md",
+    "SOURCE_QUESTION_AND_LIMITS.md",
+    "VERIFICATION_REPORT.md",
+    "START_HERE.md",
+    "RESUME_STATE.json"
+  ],
+  "result": "Two pruning sides each have a coverage defect; S-completeness forces opposite-side endpoint localization and vertex-disjoint defects, but two disjoint cyclic defects can coexist, so no coverage collapse or smaller resource follows.",
+  "candidate_result": "RL19-P01",
+  "candidate_failure_event": "FL-022",
+  "named_obligation_reduced": false,
+  "mathematical_numerical_computation": 0,
+  "new_source_queries": 0,
+  "new_source_opens": 0,
+  "mandatory_successor": "RL20 progress/correction audit",
+  "programme": "ACTIVE"
+}
