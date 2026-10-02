@@ -1,0 +1,67 @@
+{
+  "format": "rl-connector-resume-v1",
+  "base_head": "32387459dc70787ab65f1da9ffcfa87ffa57d00e",
+  "authoritative_tree": "aedcece2f7d51a3c11aebde5ea843557d3efcac2",
+  "incoming_rl": 17,
+  "session_brief": "authoritative/RL17_STRICT_SHRINK_EXCHANGE_BRIEF.md",
+  "validated_authority_paths": [
+    "AGENTS.md",
+    "authoritative/START_HERE.md",
+    "authoritative/RL17_STRICT_SHRINK_EXCHANGE_BRIEF.md",
+    "authoritative/RL16_SESSION_STATE_AND_RL17_KICKOFF.md",
+    "authoritative/RL16_OFF_S_WITNESS_RESOURCE_MINIMALITY_REPORT.md",
+    "authoritative/RL16_PROOF_STATE_AND_RESIDUAL_LEDGER.md",
+    "authoritative/RL16_FAILURE_AND_LESSON_LEDGER_APPENDIX.md",
+    "authoritative/RL16_PREPARED_RECOVERY_TASK.md",
+    "authoritative/RL16_SOURCE_QUESTION_AND_LIMITS.md",
+    "authoritative/PROOF_STATE_AND_OPEN_OBLIGATIONS.md",
+    "authoritative/FAILURE_AND_LESSON_LEDGER.md",
+    "authoritative/DEPENDENCY_MAP.md",
+    "authoritative/VERIFICATION_REPORT.md",
+    "docs/RESEARCH_RECOVERY_PROTOCOL.md"
+  ],
+  "last_verified_frontier": "RL17-U01 blocked at first mandated implication: y∉T is not proved; no z chosen and no R_z gate assessed.",
+  "completed_artifacts": [
+    "STRICT_SHRINK_EXCHANGE_REPORT.md",
+    "PROOF_STATE_AND_RESIDUAL_LEDGER.md",
+    "FAILURE_AND_LESSON_LEDGER_APPENDIX.md",
+    "NEXT_RECOVERY_TASK.md",
+    "SOURCE_QUESTION_AND_LIMITS.md",
+    "VERIFICATION_REPORT.md",
+    "WORK_UNIT_SCOPE.md",
+    "INCOMING_SNAPSHOT.json",
+    "START_HERE.md"
+  ],
+  "unpromoted_or_uncovered": [
+    "y∉T",
+    "existence of suitable z",
+    "R_z nonemptiness",
+    "R_z connectedness",
+    "R_z all-seven cyclic coverage",
+    "R_z strict-size gate in the required outside-T branch",
+    "R_z resource validity",
+    "endpoint anchoring",
+    "m=1 exclusion",
+    "second resource"
+  ],
+  "next_exact_operation": "On user finish: enter CLOSEOUT_LOCK and atomically freeze RL17 checkpoint, append FL-020, and install the bounded inside-T witness-essentiality successor task. If user instead explicitly continues RL17, do not start a second mechanism under the current brief.",
+  "do_not_recompute": [
+    "RL16 direct equal-size x-to-y exchange",
+    "RL14 insertion swap",
+    "beta palette or b-anchor",
+    "alternate leaf or coloring",
+    "witness splicing",
+    "source/history audit"
+  ],
+  "failure_lesson_ids": [
+    "FL-001..FL-020"
+  ],
+  "recovery_mode": "rework",
+  "changed_input_or_mechanism": "Condition on y∈T and test deletion-essentiality of y rather than assuming an outside-T strict-shrink replacement.",
+  "next_task_bounds": "one fixed y; one deletion T-{y}; same leaf/coloring/anchor; stop at first connectivity/coverage/Kempe implication; zero numerical/source work by default",
+  "retry_conditions": [
+    "Do not retry RL17 z-exchange absent an independently established y∉T."
+  ],
+  "stop_and_repair_active": false,
+  "programme": "ACTIVE"
+}
