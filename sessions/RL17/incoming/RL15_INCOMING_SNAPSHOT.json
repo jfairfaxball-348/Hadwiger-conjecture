@@ -1,0 +1,40 @@
+{
+  "format": "rl15-incoming-snapshot-v1",
+  "session": 15,
+  "status": "OPEN / bounded work checkpoint / NOT PROMOTED",
+  "base_head": "9aa0e881944d6ac6b59ed015b4f184b7c0909c33",
+  "expected_predecessor_match": true,
+  "unique_incoming_rl": true,
+  "preexisting_session_RL15": false,
+  "preexisting_rl15_work_branch": false,
+  "snapshot_method": "BASE_HEAD plus exact blob SHAs for every required current read; sufficient to detect concurrent change with available connector",
+  "sole_brief": "authoritative/RL15_MIXED_KEMPE_COMPONENT_RESOURCE_BRIEF.md",
+  "validated_paths": {
+    "AGENTS.md": "72ad349e4744718651fec497dbd4cf967c19566d",
+    "authoritative/START_HERE.md": "7a6311fbc4b266e4a9e08db1ca931357f4be8bc8",
+    "authoritative/RL15_MIXED_KEMPE_COMPONENT_RESOURCE_BRIEF.md": "3ac0cb4979123f98dc0d14ba84f52e605db9178b",
+    "authoritative/RL14_SESSION_STATE_AND_RL15_KICKOFF.md": "11759d88b882110cb3d73b242fa80f7b9ec830f4",
+    "authoritative/RL14_LEAF_DELETION_COLORING_REPORT.md": "761292661c521133a0e1629247aa604ac7d1b454",
+    "authoritative/RL14_PROOF_STATE_AND_RESIDUAL_LEDGER.md": "f639cc1f36550e7c54374b48308afc76a23f9e8b",
+    "authoritative/RL14_FAILURE_AND_LESSON_LEDGER_APPENDIX.md": "1b43524221141766b7066371ada3c67aa492efe0",
+    "authoritative/RL14_PREPARED_RECOVERY_TASK.md": "a2243d5d668c5d79ee4a381ae5f5c42b65231dcc",
+    "authoritative/RL14_SOURCE_QUESTION_AND_LIMITS.md": "9cd05d4ccde0a2cc988caa1f626a78db38731391",
+    "authoritative/PROOF_STATE_AND_OPEN_OBLIGATIONS.md": "700f2f77aae1c94b11f7572fd4263d293bdeccff",
+    "authoritative/FAILURE_AND_LESSON_LEDGER.md": "21e8059935fd63ce04ddce6213875dde6c944ecd",
+    "authoritative/DEPENDENCY_MAP.md": "8464e2ae873c4fd33ec24cd8cdd54e72dceb0460",
+    "authoritative/VERIFICATION_REPORT.md": "66b09399aee13dd1308a4c68f25b8236f3e81061",
+    "docs/RESEARCH_RECOVERY_PROTOCOL.md": "2b6710e32dad04800dd32fce771be630bce61082"
+  },
+  "start_gate": {
+    "live_head_match": true,
+    "incoming_rl_unique": true,
+    "sessions_RL15_absent": true,
+    "integrity_failure_found": false
+  },
+  "sources_and_computation": {
+    "new_source_queries": 0,
+    "new_source_opens": 0,
+    "mathematical_numerical_computation": 0
+  },
+  "programme": "ACTIVE"
+}

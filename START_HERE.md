@@ -13,12 +13,14 @@ Before beginning mathematics, complete the start gate in AGENTS.md.
 
 ## Current handoff
 
-RL13 is CLOSED/FROZEN under sessions/RL13/. RL14 is the unique incoming
+RL17 is CLOSED/FROZEN under sessions/RL17/. RL18 is the unique incoming
 session, with sole brief
-[authoritative/RL14_LEAF_DELETION_COLORING_BRIEF.md](authoritative/RL14_LEAF_DELETION_COLORING_BRIEF.md).
-RL13's scoped boundary-coloring results leave compatible resource
-augmentation and every inherited universal obligation open. RL14 is
-READY / NOT STARTED; it uses the prepared leaf-deletion coloring gate.
+[authoritative/RL18_INSIDE_T_WITNESS_ESSENTIALITY_BRIEF.md](authoritative/RL18_INSIDE_T_WITNESS_ESSENTIALITY_BRIEF.md).
+
+RL17's strict-shrink exchange gate stops before z-selection because the
+retained structure does not prove y∉T. RL18 works only in the conditional
+subcase y∈T and tests one deletion-essentiality gate for T-{y}. No named
+universal mathematical obligation was reduced by RL17.
 
 Keep h(G)>=chi(G) for EVERY finite simple graph as the root. Preserve every
 result, source/failure/certificate limit and residual, and follow the recovery

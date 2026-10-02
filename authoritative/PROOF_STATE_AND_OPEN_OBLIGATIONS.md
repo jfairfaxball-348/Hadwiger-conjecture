@@ -1,3 +1,40 @@
+# Current proof state after RL17
+
+**RL17 CLOSED/FROZEN. RL18 is the sole incoming inside-T witness-essentiality
+gate, READY / NOT STARTED.**
+
+RL17 completed exactly one bounded strict-shrink resource exchange assessment.
+No new positive mathematical theorem was promoted. The assessment stops at
+its first required implication: the retained full-critical/Kempe/resource
+facts do not prove `y∉T`. The alternative `y∈T-{x}` remains compatible
+with every currently proved local consequence used by this mechanism.
+Endpoint privacy gives only `ay∉E(H)`, consistent with
+`d(a)=d(y)=alpha`; separation into gamma/alpha components of `G-x`
+does not control membership or unrestricted-color connectivity inside T.
+
+Accordingly no z was chosen, no `R_z=(T-{x,z})∪{y}` was assessed for
+nonemptiness, connectedness, cyclic coverage, strict size or resource
+validity, and minimum-cardinality supplied no new contradiction. This is a
+blocked/inconclusive analytic proof-frontier result, not a C_7 countermodel
+and not a Hadwiger counterexample.
+
+RL16-P01, RL15-P01, RL14-P01, RL13-P00/P01/P02 and all earlier results,
+countermodels, certificates, source gaps and verification limits retain
+their exact scopes. FL-020 records the new witness-location barrier;
+FL-001 through FL-019 are unchanged. No named inherited universal
+mathematical obligation is reduced: m=1, endpoint anchoring, a second
+resource, BR-00, BR-01 universal coverage, general UP_6, CR_6, ordinary
+order-seven coverage, every higher order and full sharp Hadwiger remain
+open. Mathematical numerical computation and new source queries/opens were
+zero; verification is same-worker analytic only, with no formal or external
+independent certification and no novelty claim.
+
+The sole next task conditions on `y∈T` and tests one deletion-essentiality
+gate for `T-{y}`, as specified in RL18_INSIDE_T_WITNESS_ESSENTIALITY_BRIEF.md.
+Programme active.
+
+## Preserved complete pre-RL17 canonical state
+
 # Current proof state after RL16
 
 **RL16 CLOSED/FROZEN. RL17 is the sole incoming strict-shrink resource

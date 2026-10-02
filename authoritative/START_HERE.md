@@ -1,40 +1,38 @@
-# Authoritative incoming state — RL17
+# Authoritative incoming state — RL18
 
-**Unique incoming session: RL17. RL16 CLOSED/FROZEN under
-[sessions/RL16/](../sessions/RL16/START_HERE.md).**
+**Unique incoming session: RL18. RL17 CLOSED/FROZEN under
+[sessions/RL17/](../sessions/RL17/START_HERE.md).**
 **Sole current brief:
-[RL17_STRICT_SHRINK_EXCHANGE_BRIEF.md](RL17_STRICT_SHRINK_EXCHANGE_BRIEF.md).**
-Operational state: READY FOR ONE BOUNDED STRICT-SHRINK RESOURCE EXCHANGE
-GATE; NOT STARTED.
+[RL18_INSIDE_T_WITNESS_ESSENTIALITY_BRIEF.md](RL18_INSIDE_T_WITNESS_ESSENTIALITY_BRIEF.md).**
+Operational state: READY FOR ONE BOUNDED INSIDE-T WITNESS-ESSENTIALITY GATE;
+NOT STARTED.
 
-Pin live main and verify it equals the RL16 promotion commit supplied in
-the kickoff. Snapshot current authority and confirm RL17 is unique before
+Pin live main and verify it equals the RL17 promotion commit supplied in the
+kickoff. Snapshot current authority and confirm RL18 is unique before
 mathematics.
 
 Read the sole brief and its exact current records:
-[RL16 handover](RL16_SESSION_STATE_AND_RL17_KICKOFF.md),
-[RL16 resource-minimality report](RL16_OFF_S_WITNESS_RESOURCE_MINIMALITY_REPORT.md),
-[RL16 proof state](RL16_PROOF_STATE_AND_RESIDUAL_LEDGER.md),
-[RL16 lessons](RL16_FAILURE_AND_LESSON_LEDGER_APPENDIX.md),
-[prepared recovery](RL16_PREPARED_RECOVERY_TASK.md),
-[source limits](RL16_SOURCE_QUESTION_AND_LIMITS.md),
+[RL17 handover](RL17_SESSION_STATE_AND_RL18_KICKOFF.md),
+[RL17 strict-shrink report](RL17_STRICT_SHRINK_EXCHANGE_REPORT.md),
+[RL17 proof state](RL17_PROOF_STATE_AND_RESIDUAL_LEDGER.md),
+[RL17 lessons](RL17_FAILURE_AND_LESSON_LEDGER_APPENDIX.md),
+[prepared recovery](RL17_PREPARED_RECOVERY_TASK.md),
+[source limits](RL17_SOURCE_QUESTION_AND_LIMITS.md),
 [canonical proof state](PROOF_STATE_AND_OPEN_OBLIGATIONS.md),
 [failure ledger](FAILURE_AND_LESSON_LEDGER.md), DEPENDENCY_MAP.md,
 VERIFICATION_REPORT.md and
 [recovery protocol](../docs/RESEARCH_RECOVERY_PROTOCOL.md).
 
-RL16-P01 is scoped elementary analytic mathematics, same-worker review
-only. In the failed-anchor branch the fixed witness y is an exterior
-vertex and the singleton {y} is not a resource, so it misses at least one
-cyclic missing edge. The direct replacement of x by y does not yield a
-minimum-cardinality contradiction: membership inside T returns the known
-coverage-defective T-{x}; outside T, connectedness is not forced and the
-replacement has equal cardinality to T.
+RL17 promotes no new positive theorem. Its sole gate stops because y∉T is
+not proved. The conditional case y∈T remains compatible with the proved
+local consequences at this mechanism's scope. No z or R_z was assessed.
+FL-020 records that barrier; all inherited mathematics and source limits
+retain exact scope.
 
-Endpoint anchoring, m=1 exclusion and a second resource therefore remain
-unresolved. All inherited results, source limits and FL-001 through FL-019
-retain their exact scopes.
+RL18 therefore works only in the conditional subcase y∈T and tests one
+deletion-essentiality classification for T-{y}. Endpoint anchoring, m=1
+exclusion and a second resource remain unresolved.
 
 Keep full sharp Hadwiger h(G)>=chi(G) for EVERY finite simple graph as the
 root. Historical session mandates are not alternate current work.
-Programme active. RL17 has not begun.
+Programme active. RL18 has not begun.

@@ -1,0 +1,47 @@
+{
+  "format": "rl17-atomic-closeout-v1",
+  "session": 17,
+  "status": "CLOSED/FROZEN",
+  "base_head": "32387459dc70787ab65f1da9ffcfa87ffa57d00e",
+  "base_root_tree": "e907bf4752404abaf234701466fbbc6292199778",
+  "incoming_authority_tree": "aedcece2f7d51a3c11aebde5ea843557d3efcac2",
+  "checkpoint_commit": "21d42a172eb173f8bc30586bb458ad0624d7efb7",
+  "checkpoint_tree": "6c67324c0bec5e704604265b97047983e0f193b9",
+  "checkpoint_branch": "work/rl17-strict-shrink-20261002",
+  "checkpoint_prefix": "work-checkpoints/RL17-20261002/",
+  "frozen_incoming_authority_blob_count": 187,
+  "frozen_checkpoint_blob_count": 10,
+  "successor_session": 18,
+  "successor_brief": "authoritative/RL18_INSIDE_T_WITNESS_ESSENTIALITY_BRIEF.md",
+  "successor_status": "READY / NOT STARTED",
+  "promoted_results": [
+    "RL17 proof-frontier classification: strict-shrink gate blocked at unproved y∉T implication"
+  ],
+  "promoted_positive_mathematical_theorems": [],
+  "corrections_demotions": [],
+  "endpoint_anchoring_proved": false,
+  "contradiction_obtained": false,
+  "m1_exclusion_proved": false,
+  "second_resource_constructed": false,
+  "inherited_universal_obligation_reduced": false,
+  "failure_ids_added": [
+    "FL-020"
+  ],
+  "inherited_failure_ids_preserved": "FL-001..FL-019",
+  "mathematical_numerical_computation": 0,
+  "new_source_queries": 0,
+  "new_source_opens": 0,
+  "frozen_tree_entries": [
+    {
+      "path": "sessions/RL17/incoming",
+      "sha": "aedcece2f7d51a3c11aebde5ea843557d3efcac2"
+    },
+    {
+      "path": "sessions/RL17/checkpoint",
+      "sha": "6c67324c0bec5e704604265b97047983e0f193b9"
+    }
+  ],
+  "promotion": "one commit with sole parent base_head; one non-forced main advance",
+  "commit_identity": "intentionally omitted from self-referential manifest; verify by remote readback",
+  "programme": "ACTIVE"
+}
