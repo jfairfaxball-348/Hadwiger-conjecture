@@ -1,0 +1,97 @@
+{
+  "format": "rl-isolated-checkpoint-v1",
+  "incoming_rl": 14,
+  "continuation_unit": "RL14-U01",
+  "status": "OPEN / bounded checkpoint complete / NOT PROMOTED",
+  "base_head": "16f7847c90a1b8667c33c3963d125da272217b35",
+  "base_root_tree": "1f3e0bdfc011f77d08fe20c85487aab30a3a382d",
+  "authoritative_tree": "eb263feb1f4e59c9c08478c2c1872b78daebf5c9",
+  "branch": "work/rl14-leaf-deletion-20261002",
+  "prefix": "work-checkpoints/RL14-20261002/",
+  "expected_parent": "16f7847c90a1b8667c33c3963d125da272217b35",
+  "checkpoint_commit_identity": "Resolve the commit containing this file from the named work branch; omitted to avoid self-reference.",
+  "expected_total_files": 10,
+  "body_files": [
+    {
+      "name": "INCOMING_SNAPSHOT.json",
+      "sha": "d543a122aafa12be52f4e90f2b0ebc612b4d1a57",
+      "size": 2494
+    },
+    {
+      "name": "WORK_UNIT_SCOPE.md",
+      "sha": "02868b8e8e40efd0e7a670be2695719a60ee8d8a",
+      "size": 1843
+    },
+    {
+      "name": "LEAF_DELETION_COLORING_REPORT.md",
+      "sha": "b87c5f9b2f7a8224b51b8001f4913715b370c2ee",
+      "size": 6379
+    },
+    {
+      "name": "PROOF_STATE_AND_RESIDUAL_LEDGER.md",
+      "sha": "4bb40c45bacb0e72d44994fa4002fe874553644c",
+      "size": 2344
+    },
+    {
+      "name": "FAILURE_AND_LESSON_LEDGER_APPENDIX.md",
+      "sha": "65ae2cbd1e95b4c29196ed5280d40abd0b7eb3af",
+      "size": 2868
+    },
+    {
+      "name": "NEXT_RECOVERY_TASK.md",
+      "sha": "e6b77a675f10163c435b66f8b3045f673229d3f9",
+      "size": 1759
+    },
+    {
+      "name": "SOURCE_QUESTION_AND_LIMITS.md",
+      "sha": "b8e2ec80365abb6341021e3ce55a0aeb4a6f64d8",
+      "size": 514
+    },
+    {
+      "name": "VERIFICATION_REPORT.md",
+      "sha": "c35d8bd3cd4d5cca4cf7ddc916851c3c55de62cb",
+      "size": 2115
+    },
+    {
+      "name": "RESUME_STATE.json",
+      "sha": "b4060efba231acc428487ad6b4927d5056bdcae6",
+      "size": 2835
+    }
+  ],
+  "start_gate": {
+    "base_head_match": true,
+    "authority_identity_unchanged": true,
+    "incoming_rl_unique": true,
+    "sessions_RL14_absent": true,
+    "prior_rl14_work_branch_absent": true,
+    "integrity_failure_found": false
+  },
+  "mathematical_scope": {
+    "domain": "full C_7 cyclic degree-seven domain; m=1 minimum S-complete resource T; one spanning-tree leaf x; one arbitrary actual six-coloring d of G-x",
+    "mechanism_count": 1,
+    "palettes_max": 5,
+    "additional_minor_type": "G-x",
+    "result": "RL14-P01: every palette is Kempe-locked at x; no single gamma/delta component swap can free gamma for insertion.",
+    "first_obstruction": "For every delta!=gamma, a gamma/delta component meets N_G(x) in both colors. If all gamma-neighbors are in one component it also contains a delta-neighbor; otherwise one swap cannot remove them all.",
+    "private_endpoints_force_safe_swap": false,
+    "m1_excluded": false,
+    "second_resource_constructed": false,
+    "named_inherited_universal_obligation_reduced": false,
+    "mathematical_numerical_computation": 0,
+    "new_source_queries": 0,
+    "new_source_opens": 0,
+    "proof_review": "same-worker analytic only; no formal or external independent certification"
+  },
+  "preservation": {
+    "main_mutated": false,
+    "authoritative_mutated": false,
+    "inherited_failure_ids": "FL-001..FL-016",
+    "new_work_event": "FL-017",
+    "inherited_results_and_source_limits_unchanged": true
+  },
+  "next_task": "Prepared mixed-Kempe-component structural extraction from at most two anchor palettes; NOT STARTED",
+  "recommendation": "it makes sense to finish up here",
+  "rl_closed": false,
+  "successor_started": false,
+  "programme": "ACTIVE"
+}

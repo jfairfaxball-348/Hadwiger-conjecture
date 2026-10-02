@@ -1,0 +1,885 @@
+{
+  "format": "rl-incoming-authority-snapshot-v1",
+  "incoming_rl": 12,
+  "base_head": "dbbc49fb16198edfc61e0c34616a3b80dbe968e0",
+  "root_tree_sha": "212dbe0a40cad110637f6513a5154e675422fefb",
+  "authority_tree_sha": "b434f9e5402bb5bbf81a579a133b087d501dd3f6",
+  "authority_blob_count": 125,
+  "entries": [
+    {
+      "path": "AUXILIARY_COUNTERMODEL.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e215470e7b210738c14249c4e5e92b803874f2c1",
+      "size": 3282
+    },
+    {
+      "path": "BRIDGE_LEDGER.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7e4a93f6fb71606fdb3dedb038d5002ae3a34fd4",
+      "size": 9392
+    },
+    {
+      "path": "COLLATZ_FAILURE_REVIEW.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cc50b241b5ca464cd078ac6cff6aa1ea573dff45",
+      "size": 5114
+    },
+    {
+      "path": "DEPENDENCY_MAP.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8464e2ae873c4fd33ec24cd8cdd54e72dceb0460",
+      "size": 5645
+    },
+    {
+      "path": "FAILURE_AND_LESSON_LEDGER.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "edf38c1636a62bcfe0fcb07fe7697994764b892a",
+      "size": 66232
+    },
+    {
+      "path": "FALSIFICATION_REPORT.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e481b183f7e1e37821cf8ab584704708417eb311",
+      "size": 7236
+    },
+    {
+      "path": "INCOMING_SNAPSHOT.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3b84cdce595540bab9c1dfe7c13ab4e0e646f7f9",
+      "size": 3892
+    },
+    {
+      "path": "MECHANISM_SCOPE.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1cbca823d864288a1ea58b1b2efffbdbe58231b4",
+      "size": 2102
+    },
+    {
+      "path": "PROOF_STATE_AND_OPEN_OBLIGATIONS.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4726fdf02193a722dc428c50cd320a15e51ab8af",
+      "size": 30612
+    },
+    {
+      "path": "PROOF_STATE_AND_RESIDUAL_LEDGER.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "20b381f13a6498ace35bf69be59ef9e8cbe16549",
+      "size": 4567
+    },
+    {
+      "path": "RECOVERY_PROCESS_AMENDMENT.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a3dd3c4fbb94582dba0224a6b3c300784cd177d2",
+      "size": 6439
+    },
+    {
+      "path": "RL10_AUDIT_REPORT.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2500be3011290adcfea6fa91e9316e8ea0e0e159",
+      "size": 6812
+    },
+    {
+      "path": "RL10_CHECKPOINT_MANIFEST.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "335c9175850dbe6afed3576371387299d302744d",
+      "size": 3407
+    },
+    {
+      "path": "RL10_CLOSEOUT_MANIFEST.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "edae2b54a0b19c6996765b795b1307566fe79013",
+      "size": 58621
+    },
+    {
+      "path": "RL10_CLOSEOUT_VERIFICATION_REPORT.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b2c2656cb727b43f56d5548be379fa3f97daa4cd",
+      "size": 6184
+    },
+    {
+      "path": "RL10_CLOSEOUT_VERIFIER_RESULTS.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "44188fdcf2bc75e95669cd9be47bcabd69b79d76",
+      "size": 10994
+    },
+    {
+      "path": "RL10_COLLATZ_RISK_AND_VERDICT.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5ab743ac551b060dba8b73c7e79bc082d384acfd",
+      "size": 9688
+    },
+    {
+      "path": "RL10_CORRECTION_AND_LESSON_RECORD.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b593e7779437c8787748869b6edee584ef6d2e62",
+      "size": 8427
+    },
+    {
+      "path": "RL10_DEPENDENCY_SCOPE_AUDIT.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f3da18a9e486cbbb1b21dfecb4d87df1fc41df91",
+      "size": 24706
+    },
+    {
+      "path": "RL10_INCOMING_SNAPSHOT.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "772be19cdc18a313c05bf4a1148aa1f3cfb7923a",
+      "size": 23035
+    },
+    {
+      "path": "RL10_LINEAGE_AND_PRESERVATION.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "612c2fcf07c81d61b2f6edb7b9462e995e554c2a",
+      "size": 3674
+    },
+    {
+      "path": "RL10_PROGRESS_AND_CORRECTION_AUDIT_BRIEF.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6d1c7126278c4f5f4674a669363c86953c7c93d9",
+      "size": 460
+    },
+    {
+      "path": "RL10_SESSION_MATRIX.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "62ac6c713b0b92c11dd81f05f90e6d36b275d47a",
+      "size": 14444
+    },
+    {
+      "path": "RL10_SESSION_STATE_AND_RL11_KICKOFF.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b35444adcb06453baf717dc35aba3afce055e04e",
+      "size": 2730
+    },
+    {
+      "path": "RL10_VERIFIER_RESULTS.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3ad89f9df345689074dae2a1a82a6f13a68ae385",
+      "size": 4820
+    },
+    {
+      "path": "RL10_WORK_RESUME_STATE.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ae2aa513687fa3e30b25b4136c9b196a961d706d",
+      "size": 2436
+    },
+    {
+      "path": "RL10_WORK_UNIT_SCOPE.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "60bd1dfa92f5039375d3bb6450e3741d9f159464",
+      "size": 3685
+    },
+    {
+      "path": "RL10_WORK_VERIFICATION_REPORT.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c9e36eb0577d0dc02d55c314044469127a019001",
+      "size": 6161
+    },
+    {
+      "path": "RL11_APPLICABILITY_GATE_BRIEF.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ce89e8da04723ec8233b14f54c2ec33e1bd5cb5e",
+      "size": 9665
+    },
+    {
+      "path": "RL11_CHECKPOINT_MANIFEST.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8d3a4a90f8fc076a4a3a8e716206551d7bb413f9",
+      "size": 2997
+    },
+    {
+      "path": "RL11_CLOSEOUT_MANIFEST.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "026f36151b1aa5a2ddc6a158f9cb65ac81443f64",
+      "size": 5245
+    },
+    {
+      "path": "RL11_CLOSEOUT_VERIFIER_RESULTS.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6aec374e7d4eeda675e9325cd1f8664f451b836c",
+      "size": 11240
+    },
+    {
+      "path": "RL11_FAILURE_AND_LESSON_LEDGER_APPENDIX.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "25c1dccf1b661523dec779d975224a532040e559",
+      "size": 7158
+    },
+    {
+      "path": "RL11_INCOMING_SNAPSHOT.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "360f3a2f41568841d74822cf113bebee45555bcc",
+      "size": 27382
+    },
+    {
+      "path": "RL11_MK2_COUNTERMODEL_REPORT.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "327f3f600eac913fd8c9bf7918b12da73017446a",
+      "size": 17225
+    },
+    {
+      "path": "RL11_PREPARED_RECOVERY_TASK.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2dce34465e8efcff5c8a0acc70a25bce4493c37e",
+      "size": 5209
+    },
+    {
+      "path": "RL11_PROOF_STATE_AND_RESIDUAL_LEDGER.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "42ecb4d1714358656652e64db83673719b0536e8",
+      "size": 3972
+    },
+    {
+      "path": "RL11_SESSION_STATE_AND_RL12_KICKOFF.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "75e55da29c7e4f8e80767d77e8bb173ce96b8121",
+      "size": 3927
+    },
+    {
+      "path": "RL11_WORK_RESUME_STATE.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ea5b30c0e06f1aee1adc9515dd0c53fb4991371b",
+      "size": 3165
+    },
+    {
+      "path": "RL11_WORK_UNIT_SCOPE.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "97743da8208799fbebe08dec1fa74efd4914704a",
+      "size": 3772
+    },
+    {
+      "path": "RL11_WORK_VERIFICATION_REPORT.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "10691136c478dedb7c3f2dab9bb2d14a382171f9",
+      "size": 5484
+    },
+    {
+      "path": "RL12_NEW_ROUTE_DISCOVERY_BRIEF.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cc261c6befbb66fc88b36505a32fd87ca765cbbc",
+      "size": 8747
+    },
+    {
+      "path": "RL3_ROADMAP.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "abe4968ac8675eb9eb3e68d1b3279219c1685ce1",
+      "size": 7472
+    },
+    {
+      "path": "RL3_SESSION_STATE_AND_RL4_KICKOFF.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "222f5ffbd92f83f34b320067f69db58ed8688151",
+      "size": 609
+    },
+    {
+      "path": "RL3_TOP_DOWN_ROADMAP_BRIEF.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f68f5d0ec0366780b858eec02c52f0bd72927001",
+      "size": 661
+    },
+    {
+      "path": "RL4_ADMISSIBILITY_REPORT.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "28907e747225de58ea17e0f00831438a4d3671c4",
+      "size": 11475
+    },
+    {
+      "path": "RL4_CLOSEOUT_MANIFEST.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "77d52cc7dbba51cb1c5af8b06e2824661f3191b0",
+      "size": 48966
+    },
+    {
+      "path": "RL4_COLORFUL_K6_ADMISSIBILITY_BRIEF.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b0061e58d77cdd3c3ec0122504209e9212424ab7",
+      "size": 543
+    },
+    {
+      "path": "RL4_INCOMING_SNAPSHOT.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a666b609bc29dfe9576e525315452db4d9990fa9",
+      "size": 4181
+    },
+    {
+      "path": "RL4_SESSION_STATE_AND_RL5_KICKOFF.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f421e7d7e5623f47d14b6cbb533f403660fb5489",
+      "size": 464
+    },
+    {
+      "path": "RL5_CLOSEOUT_MANIFEST.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "518cc21f21cea29e1cb6198012ebbf6c667b859f",
+      "size": 54612
+    },
+    {
+      "path": "RL5_CR6_SOURCE_AND_NEW_INPUT_GATE_BRIEF.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4de23f49a5db671411fa035319a6dd2aee3a7712",
+      "size": 610
+    },
+    {
+      "path": "RL5_GATE_REPORT.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "28f48a4cc281a76f19906ed2ca3af3dc4697c791",
+      "size": 5011
+    },
+    {
+      "path": "RL5_INCOMING_SNAPSHOT.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "673a8fb3d7a9a6eeb5d356f1b3210cf9cee961ef",
+      "size": 10985
+    },
+    {
+      "path": "RL5_PROOF_STATE_AND_RESIDUAL_LEDGER.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c2eb65994f91dd0b3b20c183c5b765612cf08e15",
+      "size": 3609
+    },
+    {
+      "path": "RL5_SESSION_STATE_AND_RL6_KICKOFF.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6cad04b81eb08540b8c8bfeb264c733ddeec07c3",
+      "size": 5422
+    },
+    {
+      "path": "RL6_BLOCKED_FRONTIER_INPUT_ADMISSION_BRIEF.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fa810dbc220904acf66fc153c105d61287366642",
+      "size": 5930
+    },
+    {
+      "path": "RL6_CHECKPOINT_MANIFEST.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f88506f6935d86d70d20955ec9663096781e337e",
+      "size": 3555
+    },
+    {
+      "path": "RL6_CLOSEOUT_MANIFEST.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0e13278f6f7485eb2fc4d9bcbdc0548a70822196",
+      "size": 66209
+    },
+    {
+      "path": "RL6_FAILURE_AND_LESSON_LEDGER_APPENDIX.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2cd29efed6a717e498db0a9b0c2b7e55f8ee4625",
+      "size": 10036
+    },
+    {
+      "path": "RL6_INCOMING_SNAPSHOT.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2e4d02aa176dcfa1d5bafc1786198a4781121b3c",
+      "size": 13335
+    },
+    {
+      "path": "RL6_PROOF_STATE_AND_RESIDUAL_LEDGER.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "37e2e69f07bb08a3431ff45712befe942a510f60",
+      "size": 6114
+    },
+    {
+      "path": "RL6_RECOVERY_REPORT.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "48ca81c5abf57c352b99f9f50beb133817651f2a",
+      "size": 22476
+    },
+    {
+      "path": "RL6_ROUTE_RECOVERY_AND_PIVOT_BRIEF.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4313f40a5dd044e2a93b84c1e100fd0981a3e168",
+      "size": 763
+    },
+    {
+      "path": "RL6_SESSION_STATE_AND_RL7_KICKOFF.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ede0208500e5c2a51ce62853b43a32756f2d3ab4",
+      "size": 5326
+    },
+    {
+      "path": "RL6_WORK_UNIT_SCOPE.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8bab5f1f08a76d1d34de9a1066b88cbad945d9f4",
+      "size": 3305
+    },
+    {
+      "path": "RL7_CHECKPOINT_MANIFEST.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "acbedcb761755af85818293593ab03095eb7ec9d",
+      "size": 5381
+    },
+    {
+      "path": "RL7_CLOSEOUT_MANIFEST.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1c4d28e27147b80e7f171474adaa7a2b99578e91",
+      "size": 61031
+    },
+    {
+      "path": "RL7_COMPATIBILITY_REPORT.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9f3c8a721f864034937b41c88a3543246dd414d9",
+      "size": 16973
+    },
+    {
+      "path": "RL7_CYCLIC_DEGREE7_COMPATIBILITY_BRIEF.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "79930768fff6dc6389648216121a158ea6a4f7ad",
+      "size": 651
+    },
+    {
+      "path": "RL7_FAILURE_AND_LESSON_LEDGER_APPENDIX.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "66f62f262e7f4a5042150d3c42781c3ad2c072e1",
+      "size": 9931
+    },
+    {
+      "path": "RL7_INCOMING_SNAPSHOT.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "89a04ac8a73c39cdd881378b53cf65b1a3f979da",
+      "size": 3737
+    },
+    {
+      "path": "RL7_PROOF_STATE_AND_RESIDUAL_LEDGER.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ff04efe764c1ecf83d52a3b04480c90f209edd59",
+      "size": 5757
+    },
+    {
+      "path": "RL7_SESSION_STATE_AND_RL8_KICKOFF.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "96e3082cbe6681b7cbd6b569acacfa51ccad7e73",
+      "size": 5592
+    },
+    {
+      "path": "RL7_WORK_UNIT_SCOPE.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "10c5c98bd8c7380bd5dea576d4b460bda9706d81",
+      "size": 4136
+    },
+    {
+      "path": "RL8_CHECKPOINT_MANIFEST.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e966e02b7712199e9a692346ca9645bfed2627a2",
+      "size": 1920
+    },
+    {
+      "path": "RL8_CLOSEOUT_MANIFEST.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2ce1776dd4726fd016b9e556ce23e84e0d0d5038",
+      "size": 44148
+    },
+    {
+      "path": "RL8_FAILURE_AND_LESSON_LEDGER_APPENDIX.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fdc8433eee1c8d2d94ea4fbde67686a1313af1c7",
+      "size": 6794
+    },
+    {
+      "path": "RL8_INCOMING_SNAPSHOT.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "33ad5e06a63b0ecce3efd2f90f3bfe60fd582df3",
+      "size": 9190
+    },
+    {
+      "path": "RL8_PROOF_STATE_AND_RESIDUAL_LEDGER.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1f77d2f87b7832436825963449ebaa862c3c09f7",
+      "size": 4967
+    },
+    {
+      "path": "RL8_SESSION_STATE_AND_RL9_KICKOFF.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "26d7a6bcbc455fc9646691960e4cda62cb6d3dff",
+      "size": 6142
+    },
+    {
+      "path": "RL8_UNCOLORED_CYCLIC_ROUTING_BRIEF.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6dd5f1f1e01908b082023e16bd629aec9f70d3b7",
+      "size": 7702
+    },
+    {
+      "path": "RL8_UNCOLORED_ROUTING_REPORT.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3f60b25125ac0b71be4754d91c2218bfcf29b124",
+      "size": 21307
+    },
+    {
+      "path": "RL8_VERIFIER_RESULTS.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8b684ec59a320461d30766d3c30a5051cc2fe097",
+      "size": 4178
+    },
+    {
+      "path": "RL8_WORK_UNIT_SCOPE.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9ce5ee821a289fd9c0e9c6e300a6dca3ac656424",
+      "size": 4328
+    },
+    {
+      "path": "RL9_CHECKPOINT_MANIFEST.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "26b7f69922451e1705eb61062d51bb755050ecb7",
+      "size": 4451
+    },
+    {
+      "path": "RL9_CLOSEOUT_MANIFEST.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "843772bfa5be0b686cd62c4db253256469fa01ed",
+      "size": 60157
+    },
+    {
+      "path": "RL9_CLOSEOUT_VERIFICATION_REPORT.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3007889608e8f68840b12859159203827011927c",
+      "size": 6902
+    },
+    {
+      "path": "RL9_DEFERRED_COLORFUL_KERNEL_TASK.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0134e37f08181d306e574078432e4caef2e7a25b",
+      "size": 5263
+    },
+    {
+      "path": "RL9_FAILURE_AND_LESSON_LEDGER_APPENDIX.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4a584053a6eadecc22839c3141b51fbdd51074fe",
+      "size": 9441
+    },
+    {
+      "path": "RL9_HELPER_CLIQUE_EXTRACTION_BRIEF.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a1192e32df666ef06e9782d70954b06c27e7e731",
+      "size": 6518
+    },
+    {
+      "path": "RL9_HELPER_CLIQUE_REPORT.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9a314777bdf67164a27857a1196de1da22978158",
+      "size": 17559
+    },
+    {
+      "path": "RL9_INCOMING_SNAPSHOT.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "267cb06af81bd98309ae7fb3949c0d64e394556b",
+      "size": 28743
+    },
+    {
+      "path": "RL9_MATCHING_CRITERION_PROOF.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "edb898b1b1b810d36c46fbee5803e26146dafb84",
+      "size": 5558
+    },
+    {
+      "path": "RL9_PROOF_STATE_AND_RESIDUAL_LEDGER.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9a63b9275eafe3edbd0a252afef1426cf4bd90c2",
+      "size": 5494
+    },
+    {
+      "path": "RL9_SESSION_STATE_AND_RL10_KICKOFF.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "701bfef56d53bc5c65bc093d806e9251164be807",
+      "size": 6957
+    },
+    {
+      "path": "RL9_VERIFIER_RESULTS.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eec18354184954054c37c8d29817e0d12a771504",
+      "size": 9763
+    },
+    {
+      "path": "RL9_WORK_UNIT_SCOPE.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "77aa58f64c0a75fc9afe7e275b7e66f10c7b7d3f",
+      "size": 4025
+    },
+    {
+      "path": "RL9_WORK_VERIFICATION_REPORT.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cb6120fcc92c66c9f578167d372a9caf0caf82e5",
+      "size": 5321
+    },
+    {
+      "path": "SOURCE_ADDENDUM.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "edc40e7fa74f41ebb2e3aac2641f3d08fea2dd7a",
+      "size": 4540
+    },
+    {
+      "path": "SOURCE_GATE_LEDGER.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1247ab61fecd22918667b8ee88c6967181066b51",
+      "size": 8705
+    },
+    {
+      "path": "SOURCE_STATUS_AND_SEARCH_LOG.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "29f46cadf5aafb37b871d10d8213369dfa2cdcd5",
+      "size": 9048
+    },
+    {
+      "path": "START_HERE.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e21d68f910116e0468aaac1e2e0c31bdd0691b4b",
+      "size": 3138
+    },
+    {
+      "path": "UNCOLORED_CORE_WITNESS.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "287d9cde45a79b8f8a5edc5232475624969f1d07",
+      "size": 2620
+    },
+    {
+      "path": "VERIFICATION_REPORT.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e4d1f04f1caf6a726da7133fce8905b4568e3cc3",
+      "size": 6767
+    },
+    {
+      "path": "background/CORPUS_METADATA.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "db1df19de084182328e78e7d001d9e23110b3e6c",
+      "size": 1708
+    },
+    {
+      "path": "background/GLOSSARY.jsonl",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "51723d7c22256c839465409a6ef400075c9fd3cf",
+      "size": 9220
+    },
+    {
+      "path": "background/KNOWN_RESULTS.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "40e8ae4eac2a34ac63294d2faf9484f699e3df20",
+      "size": 8725
+    },
+    {
+      "path": "background/LITERATURE_MAP.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "711a59e0956e7444532fc2cbbc56edd124f9b90b",
+      "size": 4337
+    },
+    {
+      "path": "background/OPEN_CASE_CATALOG.jsonl",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d948c777d61838520641e07d31018d91d690ee04",
+      "size": 4321
+    },
+    {
+      "path": "background/OPEN_FRONTIER.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0bf010589067c75ac996c336760fdd54f3367f84",
+      "size": 2951
+    },
+    {
+      "path": "background/READ_ME_FIRST.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9caaadca880127d051d7f0b0b14ec0d48d6b7340",
+      "size": 3606
+    },
+    {
+      "path": "background/RESULT_CATALOG.jsonl",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b550f02f2c91a767631e9e9844a11a3f8f79252f",
+      "size": 23710
+    },
+    {
+      "path": "background/SEARCH_LOG.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cef5e9f761e24ec637a739f69c0321d7c1a7b6ef",
+      "size": 4831
+    },
+    {
+      "path": "background/SOURCE_CATALOG.jsonl",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7ec89d2cd3d387cbcc0122732ee36b07a19e8e12",
+      "size": 21251
+    },
+    {
+      "path": "background/SOURCE_CHECKS.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "737f77dc9c36b5dd12cfce6d678f4abed1cc9b1f",
+      "size": 7061
+    },
+    {
+      "path": "background/TECHNIQUES.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "45901f3b2b7221b6d6e57e6fa488abad18525c25",
+      "size": 2571
+    },
+    {
+      "path": "background/TOPIC_CATALOG.jsonl",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0f34808195741448b0c12ea32bdd70f8546ba0f5",
+      "size": 5174
+    },
+    {
+      "path": "background/VARIANTS_AND_RELATED_PROBLEMS.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cf70f8bec038ccf0e88141d46e7eefb4c80f03a8",
+      "size": 2383
+    },
+    {
+      "path": "background/verification/RECORD_SPEC.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4aa44526b7af6cec124638f3f625c6b0181f3f7e",
+      "size": 4052
+    },
+    {
+      "path": "background/verification/verify_corpus.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2e210600f63966967e272e28dae0f9fef036cd40",
+      "size": 8615
+    },
+    {
+      "path": "verification/ROOTED_BARRIER_CERTIFICATE.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "183f4c5f9ea680eeb648998ac95732466d6400c2",
+      "size": 1471
+    },
+    {
+      "path": "verification/verify_rooted_barrier.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aa525daf5cf42600e10ab2008be3744904c3a5d4",
+      "size": 3601
+    },
+    {
+      "path": "verify_auxiliary_countermodel.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2c9dad3d2ef5bf97c96555e567db9b4a66f0898d",
+      "size": 5221
+    },
+    {
+      "path": "verify_uncolored_core.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "db1adb8d21728a53c45d1b18112399b757bf18a2",
+      "size": 5758
+    }
+  ]
+}

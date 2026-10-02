@@ -1,0 +1,39 @@
+{
+  "format": "hadwiger-background-corpus-v1",
+  "research_cutoff_date": "2026-09-30",
+  "incoming_rl": 2,
+  "status": "PROMOTED BACKGROUND",
+  "base_head": "0ded120b3c9b92cae044d076d7d81a7cdd4eedb8",
+  "authoritative_tree": "8e0bcfb94cb30ddb2127680018045edbbe5fc9e7",
+  "origin": "literature_inherited",
+  "project_originated_claims": 0,
+  "counts": {
+    "sources": 31,
+    "results": 31,
+    "topics": 14,
+    "open_cases": 8,
+    "glossary_terms": 30
+  },
+  "source_inspection_counts": {
+    "checked_primary": 13,
+    "checked_authoritative_secondary": 2,
+    "not_directly_checked": 16
+  },
+  "inspection_policy": "Statement, scope and cited locations inspected; no independent full-proof certification, finite computation rerun or formal proof execution.",
+  "schema_path": "verification/RECORD_SPEC.json",
+  "verification_command": "python3 -I verification/verify_corpus.py",
+  "freshness_gaps": [
+    "OPEN-0008: September 2026 reported Lin improvement not directly retrieved.",
+    "OPEN-0005: dedicated newest sharp-fractional status check remains outstanding."
+  ],
+  "source_gaps_policy": "Preserve unresolved originals, dates, page endpoints and versions explicitly; do not fill from model memory.",
+  "successor_mandate_path": "../RL3_TOP_DOWN_ROADMAP_BRIEF.md",
+  "closeout_policy": "RL2 CLOSED/FROZEN; this identical load-bearing corpus is inherited by RL3; stable IDs preserved. A literature package promotion is not a new theorem.",
+  "promotion_context": {
+    "completed_rl": 2,
+    "incoming_successor_rl": 3,
+    "frozen_corpus": "sessions/RL2/background/",
+    "successor_corpus": "authoritative/background/",
+    "checkpoint_commit": "acc46fbe8175f35f8e7de39b74f1af59b81e47a4"
+  }
+}

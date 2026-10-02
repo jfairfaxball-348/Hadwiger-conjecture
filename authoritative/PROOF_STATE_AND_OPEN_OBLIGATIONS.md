@@ -1,3 +1,38 @@
+# Current proof state after RL15
+
+**RL15 CLOSED/FROZEN. RL16 is the sole incoming off-S witness /
+minimum-resource pruning gate, READY / NOT STARTED.**
+
+RL15-P01 is promoted as proved scoped elementary analytic mathematics with
+same-worker review only. For the first anchor palette {gamma,alpha=d(a)},
+the gamma/alpha component C_a containing a also contains v and every
+alpha-colored vertex of S. Together with RL14-P01 this gives an exact
+dichotomy: either C_a meets A_gamma, or a distinct locked component contains
+an alpha-colored neighbor of x outside S.
+
+The desired endpoint-incidence implication C_a∩A_gamma!=empty is not
+proved. N_H(a)∩T={x} controls a's direct incidence with T-{x}; it does not
+exclude or locate the off-S alpha witness. The RL15 mechanism therefore
+stops before cyclic coverage, joining-edge, disjointness or resource-validity
+analysis. The failed-anchor branch is not asserted to occur in an actual
+C_7 graph.
+
+No named inherited universal obligation is reduced: BR-00, BR-01 universal
+coverage, general UP_6, CR_6, ordinary order-seven coverage, every higher
+order and full sharp Hadwiger remain open. The m=1 case remains unresolved
+and no second resource is constructed. No inherited theorem is corrected
+or demoted. RL14-P01, RL13-P00/P01/P02 and all earlier results,
+countermodels, certificates, source gaps and verification limits are
+preserved. FL-018 is appended; FL-001 through FL-017 are unchanged.
+Mathematical numerical computation and new source queries/opens were zero;
+no formal or external independent certification or novelty claim is made.
+
+The sole next task tests whether minimum-resource structure rules out the
+off-S alpha witness in the unresolved failed-anchor branch; it is not yet
+assessed. Programme active.
+
+## Preserved complete pre-RL15 canonical state
+
 # Current proof state after RL14
 
 **RL14 CLOSED/FROZEN. RL15 is the sole incoming mixed-Kempe-component

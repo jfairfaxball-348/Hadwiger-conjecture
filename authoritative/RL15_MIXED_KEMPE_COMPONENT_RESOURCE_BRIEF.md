@@ -1,3 +1,5 @@
+> **RL15 CLOSED/FROZEN — retained completed work record.** The exact original brief follows as historical incoming authority. RL15_SESSION_STATE_AND_RL16_KICKOFF.md and RL16_OFF_S_WITNESS_RESOURCE_MINIMALITY_BRIEF.md govern the current state. No RL16 work has begun.
+
 # RL15 — mixed Kempe-component structural extraction gate
 
 **SOLE INCOMING RL15 BRIEF. READY / NOT STARTED.**

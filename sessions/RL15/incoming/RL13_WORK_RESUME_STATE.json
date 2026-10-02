@@ -1,0 +1,82 @@
+{
+  "format": "rl-connector-resume-v3",
+  "session": 13,
+  "status": "OPEN / RL13-U02 bounded checkpoint complete / NOT PROMOTED",
+  "base_head": "23a2dfa3fff5b8bbd11cd986f4418dfc5b3a54b1",
+  "root_tree_sha": "2da5fc8f126fcc81aa6a102aff3b70c1513f8cb8",
+  "authority_tree_sha": "4a477bf49f47be34f743e7700863ac0472d8776c",
+  "branch": "work/rl13-critical-resource-20261002",
+  "prefix": "work-checkpoints/RL13-20261002/",
+  "mechanism": "minimum-resource leaf-private recoloring of one S endpoint using one actual original-G star-minor coloring",
+  "cases": {
+    "m0": "excluded using inherited RL12-SRC-01 7-connectivity at retained source status",
+    "m1_to_m4_proper_boundary": "RL13-P01 proved: five-color compression plus inextendible residual component and coverage-or-compatibility dichotomy",
+    "m1_S_complete": "RL13-P02 proved in unpromoted work: singleton excluded; private endpoints yield five-color S boundary without recoloring T; an inextendible residual component has the stated anchored coverage-or-joining defect. Existence of a second resource remains OPEN.",
+    "m2_to_m4_S_complete": "OPEN / untouched by RL13-U02"
+  },
+  "first_missing_implication": "An independently justified step turning the residual attachment/coloring obstruction into a resource disjoint from T with both complete cyclic coverage and an actual joining edge. Neither property supplies the other.",
+  "minimum_total_size_used": true,
+  "mathematical_numerical_computation": 0,
+  "new_source_queries": 0,
+  "new_source_opens": 0,
+  "named_universal_obligation_reduced": false,
+  "preserved_failure_ids": [
+    "FL-001",
+    "FL-002",
+    "FL-003",
+    "FL-004",
+    "FL-005",
+    "FL-006",
+    "FL-007",
+    "FL-008",
+    "FL-009",
+    "FL-010",
+    "FL-011",
+    "FL-012",
+    "FL-013",
+    "FL-014",
+    "FL-015"
+  ],
+  "new_failure_id": "FL-016",
+  "next_exact_operation": "If the user finishes, perform deterministic RL13 closeout. If a further continuation is authorized, assess only the prepared original-G leaf-deletion coloring/Kempe insertion gate in NEXT_RECOVERY_TASK.md; do not re-prove P02 or start a second unit automatically.",
+  "do_not_recompute": [
+    "RL11 MK2",
+    "RL7 SP_6",
+    "RL8 all-two-edge shortcut",
+    "RL12 separator catalogue",
+    "RL12 source question",
+    "RL13-P01",
+    "RL13-P02"
+  ],
+  "stop_and_repair_active": false,
+  "programme": "ACTIVE",
+  "previous_verified_checkpoint": "bf6a4ad12bde1d20216b65dd9df51ea09930878e",
+  "current_checkpoint_identity": "The commit containing this record; obtain it from the named work branch. Its direct parent must be previous_verified_checkpoint. No self-referential commit SHA is embedded.",
+  "completed_continuation": "RL13-U02",
+  "last_verified_frontier": "For every minimum S-complete resource T in m=1, every spanning-tree leaf and private cyclic edge admit the one-endpoint recoloring. Every resulting fixed boundary has a list-inextendible residual component: if it joins T it misses a cyclic edge; if not, it supports the private-endpoint two-color path but lacks a C-T edge.",
+  "local_obligation_reduced": "The recorded m=1, A=S boundary-coloring subcase is handled; m=1 augmentation/exclusion is not established.",
+  "completed_artifacts": [
+    "CRITICAL_CONNECTED_RESOURCE_REPORT.md (unchanged RL13-P01)",
+    "LEAF_PRIVATE_RESOURCE_REPORT.md (RL13-P02)",
+    "CONTINUATION_02_START.json",
+    "CONTINUATION_02_VERIFICATION.md",
+    "PROOF_STATE_AND_RESIDUAL_LEDGER.md",
+    "FAILURE_AND_LESSON_LEDGER_APPENDIX.md"
+  ],
+  "prepared_recovery_mode": "rework",
+  "changed_input_or_mechanism": "One actual proper coloring of G-x, whose v color is absent from S, replaces the unproved claim that a fixed star boundary's residual blocker is augmentable.",
+  "next_task_bounds": {
+    "units": 1,
+    "m_cases": [
+      1
+    ],
+    "candidate_mechanisms": 1,
+    "additional_minor_type": "vertex deletion G-x",
+    "two_color_palettes_max": 5,
+    "mathematical_numerical_computation": 0,
+    "new_source_queries": 0,
+    "new_source_opens": 0
+  },
+  "recommendation": "it makes sense to finish up here",
+  "recommendation_is_not_closeout": true
+}
