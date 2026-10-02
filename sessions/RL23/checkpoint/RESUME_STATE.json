@@ -1,0 +1,59 @@
+{
+  "format": "rl-connector-resume-v1",
+  "base_head": "57572d2e3cf353cad139460902e0958339371480",
+  "authoritative_tree": "76e0cc682e1b454e0d8436ece9db72a7ac9d442f",
+  "incoming_rl": 23,
+  "session_brief": "authoritative/RL23_ONE_SIDED_LEAF_COLOR_COMPATIBILITY_BRIEF.md",
+  "validated_authority_paths": [
+    "AGENTS.md",
+    "authoritative/START_HERE.md",
+    "authoritative/RL23_ONE_SIDED_LEAF_COLOR_COMPATIBILITY_BRIEF.md",
+    "docs/RESEARCH_RECOVERY_PROTOCOL.md",
+    "authoritative/RL22_SESSION_STATE_AND_RL23_KICKOFF.md",
+    "authoritative/RL22_FIXED_DEFECT_TARGET_COLOR_BLOCKER_REPORT.md",
+    "authoritative/RL22_PROOF_STATE_AND_RESIDUAL_LEDGER.md",
+    "authoritative/RL22_FAILURE_AND_LESSON_LEDGER_APPENDIX.md",
+    "authoritative/RL22_PREPARED_RECOVERY_TASK.md",
+    "authoritative/PROOF_STATE_AND_OPEN_OBLIGATIONS.md",
+    "authoritative/FAILURE_AND_LESSON_LEDGER.md",
+    "authoritative/DEPENDENCY_MAP.md",
+    "authoritative/RL21_M2_S_COMPLETE_PAIR_LEAF_PRUNING_REPORT.md"
+  ],
+  "last_verified_frontier": "In the same fixed RL22 pattern and source coloring, conditional c(x)=beta is not contradicted by permitted fixed-scope properness/resource consequences. The first missing implication is any forced beta-colored neighbor of x or equivalent exclusion of beta at x.",
+  "completed_artifacts": [
+    "ONE_SIDED_LEAF_COLOR_COMPATIBILITY_REPORT.md",
+    "PROOF_STATE_AND_RESIDUAL_LEDGER.md",
+    "FAILURE_AND_LESSON_LEDGER_APPENDIX.md",
+    "NEXT_RECOVERY_TASK.md",
+    "SOURCE_QUESTION_AND_LIMITS.md",
+    "VERIFICATION_REPORT.md"
+  ],
+  "unpromoted_or_uncovered": [
+    "candidate FL-026",
+    "no five-color boundary compression in the conditional c(x)=beta branch",
+    "full m=2, A=S branch remains open",
+    "all named inherited universal obligations remain open"
+  ],
+  "next_exact_operation": "On explicit finish request, enter CLOSEOUT_LOCK and atomically freeze RL23 plus install one bounded successor based on NEXT_RECOVERY_TASK.md.",
+  "do_not_recompute": [
+    "RL21 seven-pattern classification",
+    "RL21 compressed patterns",
+    "RL22 Z_a blocker emptiness",
+    "same c(x)=beta contradiction gate",
+    "m=1 failed-anchor/private-endpoint chain"
+  ],
+  "failure_lesson_ids": [
+    "FL-023",
+    "FL-024",
+    "FL-025",
+    "candidate FL-026"
+  ],
+  "recovery_mode": "rework",
+  "changed_input_or_mechanism": "Move away from the exhausted leaf-color contradiction and require one explicit strict minimum-total-size family-exchange candidate before invoking resource minimality.",
+  "next_task_bounds": "One explicitly named cardinality-two replacement family only; verify all resource/family axioms before any minimum-total-size contradiction; no second mechanism.",
+  "retry_conditions": [
+    "A new fixed-scope incidence/color premise at x, or a genuinely different resource-family exchange mechanism with explicit replacement sets."
+  ],
+  "stop_and_repair_active": false,
+  "programme": "ACTIVE"
+}

@@ -1,0 +1,32 @@
+{
+  "format": "rl23-checkpoint-manifest-v1",
+  "session": 23,
+  "status": "BOUNDED ANALYTIC CHECKPOINT / NOT PROMOTED",
+  "base_head": "57572d2e3cf353cad139460902e0958339371480",
+  "base_root_tree": "df0f2d0838ff9ab6b58fdd46162251b8554035cd",
+  "incoming_authoritative_tree": "76e0cc682e1b454e0d8436ece9db72a7ac9d442f",
+  "branch": "work/rl23-one-sided-leaf-color-compatibility-20261002",
+  "prefix": "work-checkpoints/RL23-20261002/",
+  "body_files": [
+    "CHECKPOINT_MANIFEST.json",
+    "FAILURE_AND_LESSON_LEDGER_APPENDIX.md",
+    "INCOMING_SNAPSHOT.json",
+    "NEXT_RECOVERY_TASK.md",
+    "ONE_SIDED_LEAF_COLOR_COMPATIBILITY_REPORT.md",
+    "PROOF_STATE_AND_RESIDUAL_LEDGER.md",
+    "RESUME_STATE.json",
+    "SOURCE_QUESTION_AND_LIMITS.md",
+    "START_HERE.md",
+    "VERIFICATION_REPORT.md",
+    "WORK_UNIT_SCOPE.md"
+  ],
+  "result": "At the exact fixed RL22 scope, conditional c(x)=beta is compatible with all permitted local properness/resource consequences. No retained premise forces a beta-colored neighbor of x or otherwise excludes beta at x; a->beta is blocked on ax.",
+  "candidate_failure_event": "FL-026",
+  "named_obligation_reduced": false,
+  "correction_or_demotion": false,
+  "mathematical_numerical_computation": 0,
+  "new_source_queries": 0,
+  "new_source_opens": 0,
+  "recommendation": "it makes sense to finish up here",
+  "programme": "ACTIVE"
+}

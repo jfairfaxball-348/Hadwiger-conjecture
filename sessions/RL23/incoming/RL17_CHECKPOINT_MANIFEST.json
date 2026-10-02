@@ -1,0 +1,65 @@
+{
+  "format": "rl17-checkpoint-manifest-v1",
+  "session": 17,
+  "status": "FINAL ISOLATED CHECKPOINT / PRE-CLOSEOUT",
+  "base_head": "32387459dc70787ab65f1da9ffcfa87ffa57d00e",
+  "branch": "work/rl17-strict-shrink-20261002",
+  "checkpoint_commit": "21d42a172eb173f8bc30586bb458ad0624d7efb7",
+  "checkpoint_tree": "6c67324c0bec5e704604265b97047983e0f193b9",
+  "prefix": "work-checkpoints/RL17-20261002/",
+  "expected_total_files": 10,
+  "body_files": [
+    {
+      "name": "FAILURE_AND_LESSON_LEDGER_APPENDIX.md",
+      "sha": "354d956dd6ce15f2ef30f45104b441b46db25885",
+      "size": 2375
+    },
+    {
+      "name": "INCOMING_SNAPSHOT.json",
+      "sha": "3fd2146cbca5c8f231328ad122e1eb389a28fcc8",
+      "size": 2790
+    },
+    {
+      "name": "NEXT_RECOVERY_TASK.md",
+      "sha": "8dc3b110b388a125e9bf156147fb43264d722ed2",
+      "size": 1715
+    },
+    {
+      "name": "PROOF_STATE_AND_RESIDUAL_LEDGER.md",
+      "sha": "c2527cc1609331d3befe52e852856592fdccd74e",
+      "size": 1463
+    },
+    {
+      "name": "RESUME_STATE.json",
+      "sha": "a74f685e39f82bd6e03503c30abfa6a96eddc25b",
+      "size": 2883
+    },
+    {
+      "name": "SOURCE_QUESTION_AND_LIMITS.md",
+      "sha": "5652c37adec02a66caa613ca1b29f7d91fc70fb2",
+      "size": 545
+    },
+    {
+      "name": "START_HERE.md",
+      "sha": "cd30af09c70df41fe99ab22141962c18134a9c5d",
+      "size": 1209
+    },
+    {
+      "name": "STRICT_SHRINK_EXCHANGE_REPORT.md",
+      "sha": "d4c9c6dd2defdfa783c0151199fabf11a72c3192",
+      "size": 4543
+    },
+    {
+      "name": "VERIFICATION_REPORT.md",
+      "sha": "38f700c3690b1232c92eb7905326dd0e7d15e787",
+      "size": 1656
+    },
+    {
+      "name": "WORK_UNIT_SCOPE.md",
+      "sha": "9233e74df3bb94f14e39a5d8396e4e63a17abb29",
+      "size": 1242
+    }
+  ],
+  "result": "strict-shrink gate stops because y∉T is not proved; no z or R_z assessed",
+  "programme": "ACTIVE"
+}

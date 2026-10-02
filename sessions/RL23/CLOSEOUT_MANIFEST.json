@@ -1,0 +1,40 @@
+{
+  "format": "rl23-atomic-closeout-v1",
+  "session": 23,
+  "status": "CLOSED/FROZEN",
+  "base_head": "57572d2e3cf353cad139460902e0958339371480",
+  "base_root_tree": "df0f2d0838ff9ab6b58fdd46162251b8554035cd",
+  "incoming_authority_tree": "76e0cc682e1b454e0d8436ece9db72a7ac9d442f",
+  "checkpoint_commit": "8f5c8eeb902283beb7d2ec10b9baa942c4188b5e",
+  "checkpoint_tree": "4dd1472dde561518e829a2a2b730a80ac32aa659",
+  "checkpoint_branch": "work/rl23-one-sided-leaf-color-compatibility-20261002",
+  "successor_session": 24,
+  "successor_brief": "authoritative/RL24_STRICT_MINIMUM_TOTAL_SIZE_RESOURCE_FAMILY_EXCHANGE_BRIEF.md",
+  "successor_status": "READY / NOT STARTED",
+  "promoted_results": [],
+  "promoted_stopping_results": [
+    "RL23: at the exact inherited fixed scope and conditional branch c(x)=beta, the permitted fixed-scope premises do not contradict the equality; the prepared a->beta recoloring is blocked on ax"
+  ],
+  "corrections_demotions": [],
+  "named_obligation_reduced": false,
+  "failure_ids_added": [
+    "FL-026"
+  ],
+  "inherited_failure_ids_preserved": "FL-001..FL-025",
+  "mathematical_numerical_computation": 0,
+  "new_source_queries": 0,
+  "new_source_opens": 0,
+  "frozen_tree_entries": [
+    {
+      "path": "sessions/RL23/incoming",
+      "sha": "76e0cc682e1b454e0d8436ece9db72a7ac9d442f"
+    },
+    {
+      "path": "sessions/RL23/checkpoint",
+      "sha": "4dd1472dde561518e829a2a2b730a80ac32aa659"
+    }
+  ],
+  "promotion": "one commit with sole parent base_head; one non-forced main advance",
+  "commit_identity": "intentionally omitted from self-referential manifest; verify by remote readback",
+  "programme": "ACTIVE"
+}
