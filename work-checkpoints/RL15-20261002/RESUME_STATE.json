@@ -1,0 +1,47 @@
+{
+  "format": "rl15-isolated-checkpoint-v1",
+  "incoming_rl": 15,
+  "continuation_unit": "RL15-U01",
+  "status": "OPEN / bounded checkpoint complete / NOT PROMOTED",
+  "base_head": "9aa0e881944d6ac6b59ed015b4f184b7c0909c33",
+  "branch": "work/rl15-mixed-kempe-20261002",
+  "prefix": "work-checkpoints/RL15-20261002/",
+  "expected_parent": "9aa0e881944d6ac6b59ed015b4f184b7c0909c33",
+  "checkpoint_commit_identity": "Resolve the branch tip containing this file; omitted to avoid self-reference.",
+  "expected_total_files": 10,
+  "mathematical_scope": {
+    "domain": "full C_7 cyclic degree-seven domain; m=1 minimum-cardinality S-complete T; fixed leaf x/private a,b; fixed six-coloring d of G-x",
+    "mechanism_count": 1,
+    "anchor_palettes_assessed": 1,
+    "first_anchor": "{gamma,alpha=d(a)}",
+    "proved_observations": [
+      "v lies in the gamma/alpha component C_a containing a",
+      "every alpha-colored S vertex lies in C_a",
+      "if C_a misses A_gamma, RL14-P01 forces a distinct locked component with an alpha-colored neighbor of x outside S"
+    ],
+    "first_missing_implication": "C_a ∩ A_gamma != empty",
+    "endpoint_anchoring_proved": false,
+    "cyclic_coverage_assessed": false,
+    "joining_edge_assessed": false,
+    "resource_disjointness_assessed": false,
+    "second_resource_constructed": false,
+    "m1_excluded": false,
+    "named_inherited_universal_obligation_reduced": false,
+    "mathematical_numerical_computation": 0,
+    "new_source_queries": 0,
+    "new_source_opens": 0,
+    "proof_review": "same-worker analytic only; no formal or external independent certification"
+  },
+  "preservation": {
+    "main_mutated": false,
+    "authoritative_mutated": false,
+    "inherited_failure_ids": "FL-001..FL-017",
+    "new_work_event": "FL-018",
+    "inherited_results_and_source_limits_unchanged": true
+  },
+  "next_task": "One-anchor off-S alpha-witness / minimum-resource pruning gate; PREPARED ONLY / NOT STARTED",
+  "recommendation": "it makes sense to finish up here",
+  "rl_closed": false,
+  "successor_started": false,
+  "programme": "ACTIVE"
+}
