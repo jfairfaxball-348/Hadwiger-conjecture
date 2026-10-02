@@ -1,3 +1,40 @@
+# Current proof state after RL20
+
+**RL20 CLOSED/FROZEN. RL21 is the sole incoming bounded m=2 resource-pair
+assessment, READY / NOT STARTED.**
+
+RL20 completed the mandatory audit of exactly RL10–RL19 and current
+authority. It promotes no new mathematical theorem. The audit found no
+mathematical correction or demotion at the audited scopes.
+
+RL13-P00/P01/P02, RL14-P01, RL15-P01, RL16-P01, RL17's stopping result,
+RL18-P01 and RL19-P01 retain their exact statements, dependencies,
+quantifiers and same-worker verification classifications. FL-013 through
+FL-022 reconcile consistently; FL-001 through FL-012 remain unchanged.
+Inherited source and certificate limits remain unchanged.
+
+No named inherited mathematical obligation is genuinely reduced by RL20.
+In particular m=1, endpoint anchoring, a second resource, m=2,3,4 S-complete
+branches, BR-00, BR-01 universal coverage, general UP_6, CR_6, ordinary
+order-seven coverage, every higher order and full sharp Hadwiger remain
+open.
+
+The audit records a material repeated-local-work/coverage risk: RL14–RL19
+all refined the same m=1 failed-anchor line without closing a named inherited
+universal obligation. This is a research-control finding, not a mathematical
+demotion. The verdict is PIVOT within the current critical-resource programme.
+
+RL21 therefore works only in the untouched m=2, A=S resource-pair branch.
+It uses one fixed actual joining edge, one resource side, one rooted spanning
+tree, one leaf deletion and one selected cyclic defect, with the exact
+stopping guards in RL21_M2_S_COMPLETE_PAIR_LEAF_PRUNING_BRIEF.md.
+The RL19 prepared private-endpoint incidence candidate remains preserved but
+is not the selected default task. No RL21 discovery occurred during closeout.
+
+Programme active.
+
+## Preserved complete pre-RL20 canonical state
+
 # Current proof state after RL19
 
 **RL19 CLOSED/FROZEN. RL20 is the sole incoming mandatory progress/correction audit, READY / NOT STARTED.**

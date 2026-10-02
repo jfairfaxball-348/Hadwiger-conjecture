@@ -1,0 +1,24 @@
+{
+  "format": "rl20-closeout-manifest-v1",
+  "date": "2026-10-02 Europe/Madrid",
+  "incoming_rl": 20,
+  "successor_rl": 21,
+  "base_head": "2f96a2e90f3b5a22ad424a15446f67c6a35b34fe",
+  "incoming_authoritative_tree": "05c4cb95265689ccf9dbd91e40c79d0ae7d5c248",
+  "checkpoint_tree": "ccbd68ccff56e3f6c58db8d88f00d693e71ff70c",
+  "checkpoint_commit": "1f558c80c50dd4011bcffe444622f14cca97a57e",
+  "work_branch": "work/rl20-progress-audit-20261002",
+  "promoted_classification": "mandatory audit finding / research-control decision; no new mathematical theorem",
+  "corrections_demotions": "NONE",
+  "named_mathematical_obligation_reduced": false,
+  "verdict": "PIVOT",
+  "successor_task": "bounded m=2 S-complete resource-pair leaf-pruning gate",
+  "new_source_queries": 0,
+  "new_source_opens": 0,
+  "mathematical_numerical_computation": 0,
+  "intended_ref": "main",
+  "immutable_preservation": {
+    "incoming_subtree": "sessions/RL20/incoming",
+    "checkpoint_subtree": "sessions/RL20/checkpoint"
+  }
+}

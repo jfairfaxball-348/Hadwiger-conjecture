@@ -1,0 +1,45 @@
+{
+  "format": "rl15-atomic-closeout-v1",
+  "session": 15,
+  "status": "CLOSED/FROZEN",
+  "base_head": "9aa0e881944d6ac6b59ed015b4f184b7c0909c33",
+  "base_root_tree": "a70dab6aba191f522191ad1964c8deb7b98d1fcf",
+  "incoming_authority_tree": "075a2f8cad2fface77e72acc9d7f875061bf2041",
+  "checkpoint_commit": "f74cf303bd63eb5ffdf7fca6f59d9c7b05a111ee",
+  "checkpoint_tree": "19b8b92f2253fa506928bc42a311151fddb558d4",
+  "checkpoint_branch": "work/rl15-mixed-kempe-20261002",
+  "checkpoint_prefix": "work-checkpoints/RL15-20261002/",
+  "frozen_incoming_authority_blob_count": 173,
+  "frozen_checkpoint_blob_count": 10,
+  "successor_session": 16,
+  "successor_brief": "authoritative/RL16_OFF_S_WITNESS_RESOURCE_MINIMALITY_BRIEF.md",
+  "successor_status": "READY / NOT STARTED",
+  "promoted_results": [
+    "RL15-P01: scoped analytic anchor-component / off-S-witness dichotomy"
+  ],
+  "corrections_demotions": [],
+  "endpoint_anchoring_proved": false,
+  "m1_exclusion_proved": false,
+  "second_resource_constructed": false,
+  "inherited_universal_obligation_reduced": false,
+  "failure_ids_added": [
+    "FL-018"
+  ],
+  "inherited_failure_ids_preserved": "FL-001..FL-017",
+  "mathematical_numerical_computation": 0,
+  "new_source_queries": 0,
+  "new_source_opens": 0,
+  "frozen_tree_entries": [
+    {
+      "path": "sessions/RL15/incoming",
+      "sha": "075a2f8cad2fface77e72acc9d7f875061bf2041"
+    },
+    {
+      "path": "sessions/RL15/checkpoint",
+      "sha": "19b8b92f2253fa506928bc42a311151fddb558d4"
+    }
+  ],
+  "promotion": "one commit with sole parent base_head; one non-forced main advance",
+  "commit_identity": "intentionally omitted from self-referential manifest; verify by remote readback",
+  "programme": "ACTIVE"
+}

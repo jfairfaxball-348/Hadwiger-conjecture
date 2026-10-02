@@ -10,18 +10,20 @@ barriers, corrections and open obligations.
 
 ## Current handover
 
-RL13 is CLOSED/FROZEN under [sessions/RL13/](sessions/RL13/START_HERE.md).
-It proved scoped boundary-coloring and residual-obstruction results for
-the critical cyclic resource interface. Leaf privacy handles the m=1
-S-complete boundary-coloring subcase; a second compatible resource is
-still unproved. No named inherited universal Hadwiger obligation is reduced.
-All earlier results, countermodels and source limits retain their scopes.
+RL20 is CLOSED/FROZEN under [sessions/RL20/](sessions/RL20/START_HERE.md).
+It completed the mandatory RL10–RL19 progress/correction audit. No
+mathematical correction or demotion was required, and no named inherited
+mathematical obligation was reduced.
 
-RL14 is the unique incoming session through
-[authoritative/RL14_LEAF_DELETION_COLORING_BRIEF.md](authoritative/RL14_LEAF_DELETION_COLORING_BRIEF.md).
-It is one bounded original-G leaf-deletion coloring / insertion gate,
-READY / NOT STARTED. The programme is active and the root remains full
-sharp Hadwiger for every finite simple graph.
+The audit identified a repeated-local-work/coverage risk in the RL14–RL19
+m=1 failed-anchor chain and selected a bounded branch pivot. RL21 is the
+unique incoming session through
+[authoritative/RL21_M2_S_COMPLETE_PAIR_LEAF_PRUNING_BRIEF.md](authoritative/RL21_M2_S_COMPLETE_PAIR_LEAF_PRUNING_BRIEF.md).
+It is READY / NOT STARTED and works only in the untouched m=2, A=S
+resource-pair branch.
+
+The programme is active and the root remains full sharp Hadwiger for every
+finite simple graph.
 
 ## Core repository model
 
