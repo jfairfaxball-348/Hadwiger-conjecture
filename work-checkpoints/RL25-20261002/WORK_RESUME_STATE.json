@@ -1,0 +1,66 @@
+{
+  "format": "rl-connector-resume-v1",
+  "base_head": "1f9725c0ea44d91c107f8bbc02dd881aa62cb3a3",
+  "authoritative_tree": "294fa569486e0388be1e95a0d05567037267780f",
+  "incoming_rl": 25,
+  "session_brief": "authoritative/RL25_CROSS_RESOURCE_PATH_TRANSFER_EXCHANGE_BRIEF.md",
+  "operational_status": "OPEN / bounded unit complete / NOT PROMOTED",
+  "checkpoint_branch": "work/rl25-cross-resource-path-transfer-20261002",
+  "checkpoint_directory": "work-checkpoints/RL25-20261002",
+  "validated_authority_paths": [
+    "authoritative/START_HERE.md",
+    "authoritative/RL25_CROSS_RESOURCE_PATH_TRANSFER_EXCHANGE_BRIEF.md",
+    "authoritative/RL24_SESSION_STATE_AND_RL25_KICKOFF.md",
+    "authoritative/RL24_STRICT_MINIMUM_TOTAL_SIZE_RESOURCE_FAMILY_EXCHANGE_REPORT.md",
+    "authoritative/RL24_PROOF_STATE_AND_RESIDUAL_LEDGER.md",
+    "authoritative/RL24_FAILURE_AND_LESSON_LEDGER_APPENDIX.md",
+    "authoritative/RL24_PREPARED_RECOVERY_TASK.md",
+    "authoritative/PROOF_STATE_AND_OPEN_OBLIGATIONS.md",
+    "authoritative/FAILURE_AND_LESSON_LEDGER.md",
+    "authoritative/DEPENDENCY_MAP.md",
+    "authoritative/RL21_M2_S_COMPLETE_PAIR_LEAF_PRUNING_REPORT.md",
+    "authoritative/RL22_FIXED_DEFECT_TARGET_COLOR_BLOCKER_REPORT.md",
+    "authoritative/RL13_CRITICAL_CONNECTED_RESOURCE_REPORT.md"
+  ],
+  "last_verified_frontier": "For the one fixed F'={V(L) union V(P), T_2 minus V(P)}, gate 1 certifies R_1 nonempty/exterior and R_2 exterior. R_2 nonempty is unproved. Gates 2-6 not reached; no new minimum-total-size invocation.",
+  "completed_artifacts": [
+    "WORK_UNIT_SCOPE.md",
+    "CROSS_RESOURCE_PATH_TRANSFER_EXCHANGE_REPORT.md",
+    "PROOF_STATE_AND_RESIDUAL_LEDGER.md",
+    "FAILURE_AND_LESSON_LEDGER_APPENDIX.md",
+    "PREPARED_RECOVERY_TASK.md",
+    "SOURCE_QUESTION_AND_LIMITS.md"
+  ],
+  "unpromoted_or_uncovered": [
+    "RL25 gate-1 stopping record and candidate FL-028 are NOT PROMOTED",
+    "No named inherited mathematical obligation reduced",
+    "Full m=2 A=S branch, all other resource counts and all inherited universal obligations remain open",
+    "Prepared saturation-minor task is NOT STARTED"
+  ],
+  "next_exact_operation": "On user finish up, enter CLOSEOUT_LOCK and perform deterministic RL25 closeout from this verified checkpoint; do not start recovery mathematics. Before any reuse, verify live main still equals BASE_HEAD and authority identity is unchanged.",
+  "do_not_recompute": [
+    "Do not repeat the completed RL25 gate-1 audit",
+    "Do not choose another y or P or change L/Q_1",
+    "Do not retry RL24 singleton or RL23 coloring/recoloring",
+    "Do not resume m=1 failed-anchor/private-endpoint/Kempe work",
+    "Do not assess gates 2-6 until the first implication has a newly justified input"
+  ],
+  "failure_lesson_ids": [
+    "FL-023",
+    "FL-024",
+    "FL-025",
+    "FL-026",
+    "FL-027",
+    "FL-028 (candidate)"
+  ],
+  "recovery_mode": "rework / candidate input development only",
+  "changed_input_or_mechanism": "Future fixed-saturation assessment using one prescribed original-G contraction and a fully certified reconstruction; no such assessment has started.",
+  "next_task_bounds": "One saturation alternative, one prescribed contraction, at most one reconstruction proposal; zero new sources/numerical work by default; first-missing-implication stop.",
+  "retry_conditions": [
+    "Independently certify T_2 minus V(P) nonempty for the same choices or derive a contradiction excluding saturation",
+    "No path switch or resource-validity assumption may repair the stopped candidate"
+  ],
+  "stop_and_repair_active": false,
+  "integrity_note": "No inherited theorem corrected/demoted. Preliminary B-based recovery note is superseded as task control by explicit user instruction and sole L-based RL25 brief.",
+  "recommendation": "it makes sense to finish up here"
+}

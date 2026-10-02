@@ -1,0 +1,103 @@
+{
+  "format": "rl-incoming-snapshot-v1",
+  "date": "2026-10-02",
+  "timezone": "Europe/Madrid",
+  "repository": "jfairfaxball-348/Hadwiger-conjecture",
+  "default_branch": "main",
+  "base_head": "1f9725c0ea44d91c107f8bbc02dd881aa62cb3a3",
+  "expected_predecessor": "1f9725c0ea44d91c107f8bbc02dd881aa62cb3a3",
+  "predecessor_match": true,
+  "root_tree": "ef0120884c93f7723e96ba40dd4b711b3c07bd57",
+  "authoritative_tree": "294fa569486e0388be1e95a0d05567037267780f",
+  "sessions_tree": "8f859c1a7a9f779718e2d8c35512e47ef8b84d70",
+  "incoming_rl": 25,
+  "session_brief": "authoritative/RL25_CROSS_RESOURCE_PATH_TRANSFER_EXCHANGE_BRIEF.md",
+  "uniqueness": {
+    "start_here": "RL25 READY / NOT STARTED",
+    "matching_rl25_branches": 0,
+    "matching_rl25_prs": 0,
+    "frozen_rl25_present": false,
+    "sole_rl25_brief": true
+  },
+  "nested_instructions": {
+    "root_agents": "72ad349e4744718651fec497dbd4cf967c19566d",
+    "authoritative_agents_present": false,
+    "docs_agents_present": false
+  },
+  "read_files": [
+    {
+      "path": "AGENTS.md",
+      "git_blob_sha": "72ad349e4744718651fec497dbd4cf967c19566d"
+    },
+    {
+      "path": "authoritative/START_HERE.md",
+      "git_blob_sha": "59326e62c86c8a1acb8ea5953f5383e88b62ef40"
+    },
+    {
+      "path": "authoritative/RL25_CROSS_RESOURCE_PATH_TRANSFER_EXCHANGE_BRIEF.md",
+      "git_blob_sha": "3a62ad0c871bc4464ec277848171e80e4d0d4a6e"
+    },
+    {
+      "path": "docs/RESEARCH_RECOVERY_PROTOCOL.md",
+      "git_blob_sha": "2b6710e32dad04800dd32fce771be630bce61082"
+    },
+    {
+      "path": "docs/RL_RESEARCH_PROTOCOL.md",
+      "git_blob_sha": "9f2a2f94a2eb0134b4cf6f393dc0395edce10b24"
+    },
+    {
+      "path": "docs/CONNECTOR_WORKFLOW.md",
+      "git_blob_sha": "b3a90487e1eaf14504eba18cc07521ed08e59256"
+    },
+    {
+      "path": "authoritative/RL24_SESSION_STATE_AND_RL25_KICKOFF.md",
+      "git_blob_sha": "842047de7c7b9c6b636de533eab5e5ef68850cee"
+    },
+    {
+      "path": "authoritative/RL24_STRICT_MINIMUM_TOTAL_SIZE_RESOURCE_FAMILY_EXCHANGE_REPORT.md",
+      "git_blob_sha": "7bdc162e903f4fa6184104b3e6f927087fed89d1"
+    },
+    {
+      "path": "authoritative/RL24_PROOF_STATE_AND_RESIDUAL_LEDGER.md",
+      "git_blob_sha": "9b39ca955099cae9ef84edb28f3ec31f7841ade7"
+    },
+    {
+      "path": "authoritative/RL24_FAILURE_AND_LESSON_LEDGER_APPENDIX.md",
+      "git_blob_sha": "70dca66e58822284045f3810c77f3817b6c677d9"
+    },
+    {
+      "path": "authoritative/RL24_PREPARED_RECOVERY_TASK.md",
+      "git_blob_sha": "8eb01078a8a4ef93deb6570b856fa6189bb1e661"
+    },
+    {
+      "path": "authoritative/PROOF_STATE_AND_OPEN_OBLIGATIONS.md",
+      "git_blob_sha": "f9fe5abda648666cb5c2c4da31a5cae3cfc4d27c"
+    },
+    {
+      "path": "authoritative/FAILURE_AND_LESSON_LEDGER.md",
+      "git_blob_sha": "b24eaca69aa3ff068e22b811c4279e79360e04d9"
+    },
+    {
+      "path": "authoritative/DEPENDENCY_MAP.md",
+      "git_blob_sha": "8464e2ae873c4fd33ec24cd8cdd54e72dceb0460"
+    },
+    {
+      "path": "authoritative/RL21_M2_S_COMPLETE_PAIR_LEAF_PRUNING_REPORT.md",
+      "git_blob_sha": "e259681091b27e74f238bf04c3aedfafceb3241e"
+    },
+    {
+      "path": "authoritative/RL22_FIXED_DEFECT_TARGET_COLOR_BLOCKER_REPORT.md",
+      "git_blob_sha": "8aab6e565426a4828dea1e9dbd4b2e01195c2aad"
+    },
+    {
+      "path": "docs/PROOF_STATE_CLASSIFICATIONS.md",
+      "git_blob_sha": "2657e975e1eb80521f764411a4b4641eb7088e37"
+    },
+    {
+      "path": "authoritative/RL13_CRITICAL_CONNECTED_RESOURCE_REPORT.md",
+      "git_blob_sha": "c71da40828d5ee880f7eb0a04dfbaec0ebf2fe88"
+    }
+  ],
+  "integrity_gate": "PASS: no unresolved load-bearing integrity failure identified in the required current records",
+  "precedence_note": "RL24 preliminary recovery mentions B-based transfer; explicit user instruction and sole RL25 brief both govern the L-based candidate. Preserve the preliminary note unchanged as provenance."
+}
