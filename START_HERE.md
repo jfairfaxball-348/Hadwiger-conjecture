@@ -12,8 +12,8 @@ Before beginning mathematics, complete the start gate in AGENTS.md.
 
 ## Current handoff
 
-RL18 is CLOSED/FROZEN under sessions/RL18/. RL19 is the unique incoming session, with sole brief [authoritative/RL19_ARTICULATION_SIDE_PRUNING_BRIEF.md](authoritative/RL19_ARTICULATION_SIDE_PRUNING_BRIEF.md).
+RL19 is CLOSED/FROZEN under sessions/RL19/. RL20 is the unique incoming session, with sole brief [authoritative/RL20_PROGRESS_AND_CORRECTION_AUDIT_BRIEF.md](authoritative/RL20_PROGRESS_AND_CORRECTION_AUDIT_BRIEF.md).
 
-RL18 promotes the conditional coverage-essential-or-articulation dichotomy RL18-P01. RL19 works only in the disconnected articulation alternative and tests one two-sided pruning pair. No named universal mathematical obligation was reduced by RL18.
+RL19 promotes the scoped articulation-side defect-localization result RL19-P01 but obtains no coverage collapse, smaller resource, or named-obligation reduction. RL20 is the mandatory every-tenth-session audit of RL10–RL19 and current authority; it performs no theorem discovery by default.
 
 Keep h(G)>=chi(G) for EVERY finite simple graph as the root. Preserve every result, source/failure/certificate limit and residual, and follow the recovery protocol and every-tenth-session audit rule. Programme active.

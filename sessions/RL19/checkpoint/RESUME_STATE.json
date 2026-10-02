@@ -1,0 +1,61 @@
+{
+  "format": "rl-connector-resume-v1",
+  "base_head": "fc61fb68165e341de9e15cf3b7de63232ffc295b",
+  "authoritative_tree": "dd8be48961ea4cc23693024cb6160013036f08b6",
+  "incoming_rl": 19,
+  "session_brief": "authoritative/RL19_ARTICULATION_SIDE_PRUNING_BRIEF.md",
+  "validated_authority_paths": [
+    "AGENTS.md",
+    "authoritative/START_HERE.md",
+    "authoritative/RL19_ARTICULATION_SIDE_PRUNING_BRIEF.md",
+    "authoritative/RL18_SESSION_STATE_AND_RL19_KICKOFF.md",
+    "authoritative/RL18_INSIDE_T_WITNESS_ESSENTIALITY_REPORT.md",
+    "authoritative/RL18_PROOF_STATE_AND_RESIDUAL_LEDGER.md",
+    "authoritative/RL18_FAILURE_AND_LESSON_LEDGER_APPENDIX.md",
+    "authoritative/RL18_PREPARED_RECOVERY_TASK.md",
+    "authoritative/RL18_SOURCE_QUESTION_AND_LIMITS.md",
+    "authoritative/PROOF_STATE_AND_OPEN_OBLIGATIONS.md",
+    "authoritative/FAILURE_AND_LESSON_LEDGER.md",
+    "authoritative/DEPENDENCY_MAP.md",
+    "authoritative/VERIFICATION_REPORT.md",
+    "docs/RESEARCH_RECOVERY_PROTOCOL.md"
+  ],
+  "last_verified_frontier": "In the disconnected RL18-P01 branch, for one fixed K≠K_x, R=K∪{y} and R'=T\\K are proper nonempty connected exterior strict subsets. One minimum-cardinality use per side gives defect cyclic nonedges e_R and e_R'. S-completeness localizes e_R endpoints to T\\R and e_R' endpoints to K, and e_R,e_R' are vertex-disjoint. Two disjoint defects remain compatible with all incidence consequences used here, so no side is forced to complete coverage and no smaller resource follows.",
+  "completed_artifacts": [
+    "ARTICULATION_SIDE_PRUNING_REPORT.md",
+    "PROOF_STATE_AND_RESIDUAL_LEDGER.md",
+    "FAILURE_AND_LESSON_LEDGER_APPENDIX.md",
+    "NEXT_RECOVERY_TASK.md",
+    "SOURCE_QUESTION_AND_LIMITS.md",
+    "VERIFICATION_REPORT.md"
+  ],
+  "unpromoted_or_uncovered": [
+    "RL19-P01 remains unpromoted until closeout",
+    "FL-022 remains unpromoted until closeout",
+    "two-sided coverage collapse is blocked",
+    "m=1 unresolved",
+    "endpoint anchoring unproved",
+    "second resource absent",
+    "all named universal obligations unchanged"
+  ],
+  "next_exact_operation": "Await user control. On finish up, enter CLOSEOUT_LOCK and atomically freeze/promote RL19, preserving the mandatory RL20 progress/correction audit as the sole successor. On continue, do not execute a second RL19 mechanism because the user-authorized work unit was exactly one bounded articulation-side pruning assessment.",
+  "do_not_recompute": [
+    "same S-completeness plus articulation split coverage-collapse test",
+    "gamma/alpha Kempe mechanism",
+    "RL17 z-exchange",
+    "RL16 equal-size exchange",
+    "RL14 insertion swap"
+  ],
+  "failure_lesson_ids": [
+    "FL-001..FL-021",
+    "FL-022 prepared/unpromoted"
+  ],
+  "recovery_mode": "rework",
+  "changed_input_or_mechanism": "After the mandatory RL20 audit, candidate use of the fixed private endpoint a with N_H(a)∩T={x} to constrain the full cyclic defect set for the same articulation side.",
+  "next_task_bounds": "Same disconnected branch and same K; fixed a only; full defect sets on R,R'; no b/beta, no second component, no coloring mechanism, no numerical/source expansion.",
+  "retry_conditions": [
+    "Do not retry the RL19 two-side split without a new S-incidence constraint."
+  ],
+  "mandatory_successor_control": "RL20 must be the every-tenth-session progress/correction audit before further theorem discovery.",
+  "stop_and_repair_active": false
+}

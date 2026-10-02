@@ -1,0 +1,58 @@
+{
+  "format": "rl-connector-resume-v3",
+  "session": 14,
+  "status": "OPEN / RL14-U01 bounded checkpoint complete / NOT PROMOTED",
+  "base_head": "16f7847c90a1b8667c33c3963d125da272217b35",
+  "root_tree_sha": "1f3e0bdfc011f77d08fe20c85487aab30a3a382d",
+  "authority_tree_sha": "eb263feb1f4e59c9c08478c2c1872b78daebf5c9",
+  "branch": "work/rl14-leaf-deletion-20261002",
+  "prefix": "work-checkpoints/RL14-20261002/",
+  "mechanism": "one gamma/delta Kempe-component swap in an actual six-coloring of G-x, followed by insertion of x with gamma",
+  "result": "RL14-P01: for every palette, criticality forces a gamma/delta component meeting x-neighbors in both colors; therefore no single component swap can free gamma at x.",
+  "exact_one_swap_criterion": "A component K must contain every gamma-colored neighbor of x and no delta-colored neighbor of x; under the brief it must also avoid v.",
+  "first_obstruction": "For every delta!=gamma a mixed gamma/delta component meets both A_gamma and A_delta, contradicting the safe-component criterion if all gamma-neighbors lie in one component; if they do not, one swap cannot remove them all.",
+  "private_endpoint_role": "preserved but insufficient to control mixed-component incidence through S/residual/exterior vertices",
+  "mathematical_numerical_computation": 0,
+  "new_source_queries": 0,
+  "new_source_opens": 0,
+  "named_universal_obligation_reduced": false,
+  "m1_excluded": false,
+  "second_resource_constructed": false,
+  "preserved_failure_ids": "FL-001..FL-016",
+  "new_failure_id": "FL-017",
+  "completed_artifacts": [
+    "LEAF_DELETION_COLORING_REPORT.md",
+    "PROOF_STATE_AND_RESIDUAL_LEDGER.md",
+    "FAILURE_AND_LESSON_LEDGER_APPENDIX.md",
+    "NEXT_RECOVERY_TASK.md",
+    "VERIFICATION_REPORT.md"
+  ],
+  "next_exact_operation": "If the user continues, assess only the prepared mixed-Kempe-component structural extraction task in NEXT_RECOVERY_TASK.md. If the user says finish up, enter CLOSEOUT_LOCK and perform deterministic RL14 closeout without more mathematics.",
+  "do_not_recompute": [
+    "RL13-P01",
+    "RL13-P02",
+    "RL11 MK2",
+    "RL7 SP_6",
+    "RL8 all-two-edge shortcut",
+    "RL12 separator catalogue",
+    "RL12 source question",
+    "RL14 one-component insertion swap"
+  ],
+  "stop_and_repair_active": false,
+  "recovery_mode": "rework",
+  "changed_input_or_mechanism": "Consume forced mixed Kempe components as structural paths/components instead of trying to swap one of them safely.",
+  "next_task_bounds": {
+    "units": 1,
+    "m_cases": [
+      1
+    ],
+    "candidate_mechanisms": 1,
+    "anchor_palettes_max": 2,
+    "mathematical_numerical_computation": 0,
+    "new_source_queries": 0,
+    "new_source_opens": 0
+  },
+  "recommendation": "it makes sense to finish up here",
+  "recommendation_is_not_closeout": true,
+  "programme": "ACTIVE"
+}

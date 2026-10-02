@@ -1,0 +1,47 @@
+{
+  "format": "rl19-incoming-snapshot-v1",
+  "session": 19,
+  "status": "OPEN / bounded work checkpoint / NOT PROMOTED",
+  "base_head": "fc61fb68165e341de9e15cf3b7de63232ffc295b",
+  "expected_predecessor": "fc61fb68165e341de9e15cf3b7de63232ffc295b",
+  "expected_predecessor_match": true,
+  "base_root_tree": "a26473913185839cc96a92f89c41360dc89d9bb3",
+  "incoming_authoritative_tree": "dd8be48961ea4cc23693024cb6160013036f08b6",
+  "incoming_rl_unique": true,
+  "preexisting_session_RL19": false,
+  "preexisting_rl19_work_branch": false,
+  "sole_brief": "authoritative/RL19_ARTICULATION_SIDE_PRUNING_BRIEF.md",
+  "authoritative_snapshot_kind": "tree SHA plus required-path blob SHA map",
+  "validated_paths": {
+    "AGENTS.md": "72ad349e4744718651fec497dbd4cf967c19566d",
+    "authoritative/START_HERE.md": "d7aaffaf7817764be1a0e3b701b4d2daf7f54a62",
+    "authoritative/RL19_ARTICULATION_SIDE_PRUNING_BRIEF.md": "00700f7c437e817f9e4408917954ce6996f81bed",
+    "authoritative/RL18_SESSION_STATE_AND_RL19_KICKOFF.md": "215811c14f52d93762939655d72b26533037674e",
+    "authoritative/RL18_INSIDE_T_WITNESS_ESSENTIALITY_REPORT.md": "5f048c780f19514eccc423e1785d918862de2c82",
+    "authoritative/RL18_PROOF_STATE_AND_RESIDUAL_LEDGER.md": "b5a15be12fe2409080d6d078c064b315c212af3e",
+    "authoritative/RL18_FAILURE_AND_LESSON_LEDGER_APPENDIX.md": "82673ff7fa6ddc5fda26b58004941699db258698",
+    "authoritative/RL18_PREPARED_RECOVERY_TASK.md": "9b4d1961c2ff2a31f5e02219ea22b6f4d653b3d0",
+    "authoritative/RL18_SOURCE_QUESTION_AND_LIMITS.md": "3f6559018ddd60ae50564fe76abb66836ee349d1",
+    "authoritative/PROOF_STATE_AND_OPEN_OBLIGATIONS.md": "c048c821c48f40a792941ecb722affd49cd122d9",
+    "authoritative/FAILURE_AND_LESSON_LEDGER.md": "d490439535d087e5a462b61f4b7fd561ac585652",
+    "authoritative/DEPENDENCY_MAP.md": "8464e2ae873c4fd33ec24cd8cdd54e72dceb0460",
+    "authoritative/VERIFICATION_REPORT.md": "164f21a90904b0cbb71c10f7d8f2a35b154cdc55",
+    "docs/RESEARCH_RECOVERY_PROTOCOL.md": "2b6710e32dad04800dd32fce771be630bce61082"
+  },
+  "supporting_process_reads": [
+    "sessions/RL18/checkpoint/WORK_UNIT_SCOPE.md",
+    "sessions/RL18/checkpoint/INCOMING_SNAPSHOT.json",
+    "sessions/RL18/checkpoint/START_HERE.md",
+    "sessions/RL18/checkpoint/RESUME_STATE.json",
+    "sessions/RL18/checkpoint/VERIFICATION_REPORT.md",
+    "sessions/RL18/checkpoint/CHECKPOINT_MANIFEST.json"
+  ],
+  "start_gate": {
+    "live_head_match": true,
+    "incoming_rl_unique": true,
+    "sessions_RL19_absent": true,
+    "preexisting_rl19_branch_absent": true,
+    "integrity_failure_found": false
+  },
+  "programme": "ACTIVE"
+}
