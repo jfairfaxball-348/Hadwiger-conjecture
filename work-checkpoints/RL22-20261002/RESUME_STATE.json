@@ -1,0 +1,57 @@
+{
+  "format": "rl-connector-resume-v1",
+  "base_head": "33176e4691c1a657ae114cdd058664c544f81a40",
+  "incoming_rl": 22,
+  "session_brief": "authoritative/RL22_FIXED_DEFECT_TARGET_COLOR_BLOCKER_BRIEF.md",
+  "validated_authority_paths": [
+    "AGENTS.md",
+    "authoritative/START_HERE.md",
+    "authoritative/RL22_FIXED_DEFECT_TARGET_COLOR_BLOCKER_BRIEF.md",
+    "docs/RESEARCH_RECOVERY_PROTOCOL.md",
+    "authoritative/RL21_SESSION_STATE_AND_RL22_KICKOFF.md",
+    "authoritative/RL21_M2_S_COMPLETE_PAIR_LEAF_PRUNING_REPORT.md",
+    "authoritative/RL21_PROOF_STATE_AND_RESIDUAL_LEDGER.md",
+    "authoritative/RL21_FAILURE_AND_LESSON_LEDGER_APPENDIX.md",
+    "authoritative/RL21_PREPARED_RECOVERY_TASK.md",
+    "authoritative/PROOF_STATE_AND_OPEN_OBLIGATIONS.md",
+    "authoritative/FAILURE_AND_LESSON_LEDGER.md",
+    "authoritative/DEPENDENCY_MAP.md",
+    "authoritative/RL13_CRITICAL_CONNECTED_RESOURCE_REPORT.md",
+    "authoritative/RL20_CORRECTION_AND_DEMOTION_RECORD.md"
+  ],
+  "last_verified_frontier": "In fixed RL21 pattern X={a},Y={b}, Z_a is forced empty, but a->beta is not certified because xa is an edge, xb is a nonedge, and current premises do not force c(x)!=beta.",
+  "completed_artifacts": [
+    "FIXED_DEFECT_TARGET_COLOR_BLOCKER_REPORT.md",
+    "PROOF_STATE_AND_RESIDUAL_LEDGER.md",
+    "FAILURE_AND_LESSON_LEDGER_APPENDIX.md",
+    "NEXT_RECOVERY_TASK.md",
+    "SOURCE_QUESTION_AND_LIMITS.md",
+    "VERIFICATION_REPORT.md"
+  ],
+  "unpromoted_or_uncovered": [
+    "candidate FL-025",
+    "five-color boundary compression in selected pattern remains uncertified",
+    "full m=2, A=S branch remains open",
+    "all named inherited universal obligations remain open"
+  ],
+  "next_exact_operation": "On explicit finish request, enter CLOSEOUT_LOCK and atomically freeze RL22 plus install one bounded successor based on NEXT_RECOVERY_TASK.md.",
+  "do_not_recompute": [
+    "RL21 seven-pattern classification",
+    "RL21 two compressed patterns",
+    "same Z_a/Z_b blocker test in pattern X={a},Y={b}",
+    "m=1 failed-anchor/private-endpoint chain"
+  ],
+  "failure_lesson_ids": [
+    "FL-023",
+    "FL-024",
+    "candidate FL-025"
+  ],
+  "recovery_mode": "rework",
+  "changed_input_or_mechanism": "Control the one-sided leaf target color c(x) relative to beta instead of repeating T_2 blocker exclusion.",
+  "next_task_bounds": "Same fixed pattern and same fixed coloring; conditional branch c(x)=beta; no second coloring or resource-side switch.",
+  "retry_conditions": [
+    "A new premise controlling c(x) versus the opposite endpoint color, or a genuinely different recoloring certificate."
+  ],
+  "stop_and_repair_active": false,
+  "programme": "ACTIVE"
+}
