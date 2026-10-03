@@ -1,0 +1,13 @@
+{
+  "session": "RL36",
+  "status": "CLOSED/FROZEN",
+  "base_head": "79eba28e0058c1c2b0f585c7d7667a1057357259",
+  "base_tree": "836476df3317c707fd9f88617d895c103fcab9a3",
+  "promoted": ["RL36-P01"],
+  "certified_targets": ["M3-NAMED-BLOCKER-OVERLAP"],
+  "correction_demotion": "NONE",
+  "failure_lesson": "FL-039",
+  "successor": "RL37",
+  "successor_brief": "authoritative/RL37_NEAREST_WITNESS_CHOICE_REFINEMENT_BRIEF.md",
+  "programme": "ACTIVE"
+}
