@@ -1,0 +1,29 @@
+{
+  "format": "rl-connector-resume-v1",
+  "base_head": "6d9d0539c252d7265a7a2443e3771c854f711b0b",
+  "incoming_rl": 31,
+  "successor_rl": 32,
+  "session_brief": "authoritative/RL31_M3_TERMINAL_CORE_RESOURCE_FAMILY_EXCHANGE_BRIEF.md",
+  "last_verified_frontier": "RL31-P01: each fixed side is MISS_i(g_i) or SAT_i; M3-CORE not certified.",
+  "promoted": [
+    "RL31-P01"
+  ],
+  "corrections_demotions": "NONE",
+  "failure_lesson_ids": [
+    "FL-034"
+  ],
+  "completed_artifacts": [
+    "RL31_M3_TERMINAL_CORE_RESOURCE_FAMILY_EXCHANGE_REPORT.md",
+    "RL31_PROOF_STATE_AND_RESIDUAL_LEDGER.md",
+    "FAILURE_AND_LESSON_LEDGER_APPENDIX.md",
+    "PREPARED_RECOVERY_TASK.md"
+  ],
+  "unpromoted_or_uncovered": [
+    "M3-CORE",
+    "m=3 A=S exclusion"
+  ],
+  "recovery_mode": "rework",
+  "changed_input_or_mechanism": "Use one actual MISS witness to augment the least-index missed core by one forced off-core Q_i path.",
+  "next_exact_operation": "Atomic closeout and install RL32.",
+  "stop_and_repair_active": false
+}

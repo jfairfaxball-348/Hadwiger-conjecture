@@ -1,7 +1,3 @@
-# Current failure and lesson ledger after RL31
-
-The complete canonical ledger through FL-033 is preserved through sessions/RL31/incoming/FAILURE_AND_LESSON_LEDGER.md and its cited frozen provenance. No historical entry is erased, renumbered or reclassified.
-
 # FL-034 — minimum total size cannot force an unverified fixed terminal core to retain resource coverage
 
 Date: 2026-10-03 Europe/Madrid.
@@ -26,4 +22,3 @@ Selected recovery: RL32 uses at most one recorded MISS side. It augments the fir
 
 Sources/computation: zero new mathematical source retrieval and zero mathematical numerical computation.
 Programme ACTIVE.
-

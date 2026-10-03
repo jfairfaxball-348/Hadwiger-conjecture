@@ -1,0 +1,90 @@
+{
+  "format": "rl-incoming-snapshot-v1",
+  "incoming_rl": 31,
+  "base_head": "6d9d0539c252d7265a7a2443e3771c854f711b0b",
+  "default_branch": "main",
+  "expected_predecessor": "6d9d0539c252d7265a7a2443e3771c854f711b0b",
+  "authority_files": [
+    {
+      "path": "authoritative/FAILURE_AND_LESSON_LEDGER.md",
+      "sha": "98c56432a194324c1b07524b142953bea55936a4"
+    },
+    {
+      "path": "authoritative/PROOF_STATE_AND_OPEN_OBLIGATIONS.md",
+      "sha": "ebf8bd21442a571a11c96fadd77a2d956430983f"
+    },
+    {
+      "path": "authoritative/RL30_AUDIT_REPORT.md",
+      "sha": "9ba6a04637ce7826f47a5495d1c949ca0fc65ba3"
+    },
+    {
+      "path": "authoritative/RL30_CLOSEOUT_MANIFEST.json",
+      "sha": "12b4bf50d3e906aed1a24aec57c86847ed25bcb1"
+    },
+    {
+      "path": "authoritative/RL30_CLOSEOUT_VERIFICATION_REPORT.md",
+      "sha": "fbcf7e7d6906761f68ac8cdff4d1f3f359376ac3"
+    },
+    {
+      "path": "authoritative/RL30_COLLATZ_RISK_AND_VERDICT.md",
+      "sha": "769775c7bf64cd6b49f9a535cd20a3407dd8e4c9"
+    },
+    {
+      "path": "authoritative/RL30_CORRECTION_AND_DEMOTION_RECORD.md",
+      "sha": "79abfcbe76bfe6fa2e4202d9262537398db59d47"
+    },
+    {
+      "path": "authoritative/RL30_DEPENDENCY_SCOPE_AUDIT.md",
+      "sha": "26ab9e02dfb98f37c7238d66f095b269ba413855"
+    },
+    {
+      "path": "authoritative/RL30_FAILURE_AND_LESSON_LEDGER_APPENDIX.md",
+      "sha": "2180059da82793293773ded5e26ba6ad6cd2d5a0"
+    },
+    {
+      "path": "authoritative/RL30_INCOMING_SNAPSHOT.json",
+      "sha": "cb0f0af3d351b87ec747171b1499c8db31de6247"
+    },
+    {
+      "path": "authoritative/RL30_PROMOTION_MARKER.md",
+      "sha": "3a2628a0efbab1b4efcd0993f7d05ddae56d3158"
+    },
+    {
+      "path": "authoritative/RL30_PROOF_STATE_AND_RESIDUAL_LEDGER.md",
+      "sha": "7402a279e93895c61c5c9416dda2871cae1d6083"
+    },
+    {
+      "path": "authoritative/RL30_SESSION_MATRIX.md",
+      "sha": "823169dced02bf4caed41f3d638a141029db88df"
+    },
+    {
+      "path": "authoritative/RL30_SESSION_STATE_AND_RL31_KICKOFF.md",
+      "sha": "da2fb189e7fa3cf31cc10e860157e4e6b71fdce4"
+    },
+    {
+      "path": "authoritative/RL30_WORK_VERIFICATION_REPORT.md",
+      "sha": "868303571bf3955d62e8af5a29d2ee7d3a1167bb"
+    },
+    {
+      "path": "authoritative/RL31_M3_TERMINAL_CORE_RESOURCE_FAMILY_EXCHANGE_BRIEF.md",
+      "sha": "ca37a30a245ad2f92790daedb7992867804dd3da"
+    },
+    {
+      "path": "authoritative/RL31_STATE.md",
+      "sha": "7059509ea20f4de461f7f849c90a50385469028b"
+    },
+    {
+      "path": "authoritative/START_HERE.md",
+      "sha": "84607256a9961a5230579ddcfa6ad0d797bcc386"
+    },
+    {
+      "path": "authoritative/VERIFICATION_REPORT.md",
+      "sha": "fbcf7e7d6906761f68ac8cdff4d1f3f359376ac3"
+    }
+  ],
+  "agents_sha": "72ad349e4744718651fec497dbd4cf967c19566d",
+  "integrity_failure": null,
+  "uniqueness_check": "No existing RL31 record found before work.",
+  "new_math_sources": 0,
+  "numerical_computation": 0
+}

@@ -1,16 +1,18 @@
-# RL31 authoritative state
+# RL32 authoritative state
 
 Status: READY / NOT STARTED.
-Predecessor: RL30 CLOSED/FROZEN under sessions/RL30/.
-Sole current brief: RL31_M3_TERMINAL_CORE_RESOURCE_FAMILY_EXCHANGE_BRIEF.md.
+Predecessor: RL31 CLOSED/FROZEN under sessions/RL31/.
+Sole current brief: RL32_FIRST_MISS_WITNESS_AUGMENTED_TERMINAL_CORE_BRIEF.md.
 Root: h(G) >= chi(G) for every finite simple graph.
 
-RL30 completed the mandatory RL20-RL29 audit. Correction/demotion: NONE. No named inherited mathematical obligation was genuinely reduced. All RL20-RL29 results retain exact recorded scopes.
+RL31 promoted RL31-P01 only at its exact fixed m=3, A=S terminal-core scope: each of the three fixed sides stops either at one cyclic coverage miss MISS_i(g_i) or at terminal-path saturation SAT_i. M3-CORE was not certified. Correction/demotion: NONE. No named inherited universal mathematical obligation was genuinely reduced.
 
-RL30 route verdict: PIVOT. FL-033 records repeated refinement of the m=2, A=S frontier without obligation closure. The RL29 K-xz one-coloring recovery remains preserved but is not selected.
+FL-034 records that minimum total size cannot be used before resource coverage and strictness are independently certified.
 
-RL31 works only on the untouched m=3, A=S terminal-core exchange gate in the sole brief and must not import the nested RL21-RL29 m=2 choices.
+RL32 executes exactly one changed recovery candidate on the least-index recorded MISS side, augmenting its fixed terminal core by one forced off-core Q_i witness path. If the RL31 obstruction profile is all-SAT, RL32 records that profile and stops.
 
-Required inherited definitions and provenance are frozen verbatim under sessions/RL30/incoming/, especially RL13_CRITICAL_CONNECTED_RESOURCE_REPORT.md, RL13_PROOF_STATE_AND_RESIDUAL_LEDGER.md, PROOF_STATE_AND_OPEN_OBLIGATIONS.md and FAILURE_AND_LESSON_LEDGER.md.
+The RL21-RL29 m=2 chain remains preserved but suspended under RL30/FL-033.
+
+Required provenance is frozen verbatim under sessions/RL31/incoming/. Consume RL31 report/proof-state/failure records from current authority and inherited records only as named by the RL32 brief.
 
 Programme: ACTIVE.
