@@ -1,0 +1,41 @@
+{
+  "rl": 30,
+  "captured_at": "2026-10-03 Europe/Madrid",
+  "base_head": "dee47a50f0a1da072dca22cc1f0d6a76cd6b11ca",
+  "expected_predecessor": "dee47a50f0a1da072dca22cc1f0d6a76cd6b11ca",
+  "head_match": true,
+  "incoming_unique": true,
+  "sole_brief": "authoritative/RL30_PROGRESS_AND_CORRECTION_AUDIT_BRIEF.md",
+  "core_authority_identity": [
+    {
+      "path": "AGENTS.md",
+      "blob_sha": "72ad349e4744718651fec497dbd4cf967c19566d"
+    },
+    {
+      "path": "authoritative/START_HERE.md",
+      "blob_sha": "627edcdc1ca0b2dfbb1ddf066f3d53598a1b6627"
+    },
+    {
+      "path": "authoritative/RL30_PROGRESS_AND_CORRECTION_AUDIT_BRIEF.md",
+      "blob_sha": "5587af9a60b20cb7a9a0722bc5f2bdeeefcae599"
+    },
+    {
+      "path": "docs/TENTH_SESSION_PROGRESS_AUDIT.md",
+      "blob_sha": "786f2b19031b261b1aaaf056c5273f678fdd10f2"
+    },
+    {
+      "path": "docs/RESEARCH_RECOVERY_PROTOCOL.md",
+      "blob_sha": "2b6710e32dad04800dd32fce771be630bce61082"
+    },
+    {
+      "path": "authoritative/PROOF_STATE_AND_OPEN_OBLIGATIONS.md",
+      "blob_sha": "b110a91d7562ccc26ad21e6d282acf45548a0541"
+    },
+    {
+      "path": "authoritative/FAILURE_AND_LESSON_LEDGER.md",
+      "blob_sha": "bc42ae4cb4fb95bdbd685058212d9621a5ad6396"
+    }
+  ],
+  "audited_session_evidence": "RL20-RL29 exact reports/proof-state records read at BASE_HEAD; paths enumerated in SESSION_MATRIX.md.",
+  "note": "Historical RL13 read was limited to the load-bearing untouched m=3 A=S definition for successor selection."
+}

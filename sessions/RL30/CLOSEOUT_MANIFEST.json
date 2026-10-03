@@ -1,0 +1,20 @@
+{
+  "rl": 30,
+  "status": "CLOSED/FROZEN",
+  "base_head": "dee47a50f0a1da072dca22cc1f0d6a76cd6b11ca",
+  "incoming_authoritative_tree": "186c34e06559b7be4ce56997ad45f177d6d65f95",
+  "verified_checkpoint_tree": "7d53e23e079742f5ac69267aa1600be8fab94494",
+  "intended_ref": "main",
+  "result_classification": "mandatory audit / research-control finding; no new mathematical theorem",
+  "correction_demotion": "NONE",
+  "named_obligations_reduced": [],
+  "route_verdict": "PIVOT",
+  "failure_lesson": "FL-033",
+  "successor_rl": 31,
+  "successor_brief": "authoritative/RL31_M3_TERMINAL_CORE_RESOURCE_FAMILY_EXCHANGE_BRIEF.md",
+  "sources_retrieved": 0,
+  "mathematical_computation": 0,
+  "census": 0,
+  "frozen_incoming": "sessions/RL30/incoming/",
+  "frozen_checkpoint": "sessions/RL30/checkpoint/"
+}

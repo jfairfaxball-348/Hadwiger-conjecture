@@ -1,10 +1,16 @@
-# RL30 authoritative state
+# RL31 authoritative state
 
 Status: READY / NOT STARTED.
-Predecessor: RL29 CLOSED/FROZEN under sessions/RL29/.
-Sole current brief: RL30_PROGRESS_AND_CORRECTION_AUDIT_BRIEF.md.
+Predecessor: RL30 CLOSED/FROZEN under sessions/RL30/.
+Sole current brief: RL31_M3_TERMINAL_CORE_RESOURCE_FAMILY_EXCHANGE_BRIEF.md.
 Root: h(G) >= chi(G) for every finite simple graph.
 
-RL29 records only a scoped method barrier: the fixed retained premises do not decide A-list-colorability of K-xz, so no phi was fixed and phi(x)=phi(z) was not reached. FL-032 is the current local barrier. Named obligations reduced: none. Correction/demotion: NONE.
+RL30 completed the mandatory RL20-RL29 audit. Correction/demotion: NONE. No named inherited mathematical obligation was genuinely reduced. All RL20-RL29 results retain exact recorded scopes.
 
-RL30 is mandatory under docs/TENTH_SESSION_PROGRESS_AUDIT.md and must audit exactly RL20-RL29 before any new theorem-discovery mechanism. Programme: ACTIVE.
+RL30 route verdict: PIVOT. FL-033 records repeated refinement of the m=2, A=S frontier without obligation closure. The RL29 K-xz one-coloring recovery remains preserved but is not selected.
+
+RL31 works only on the untouched m=3, A=S terminal-core exchange gate in the sole brief and must not import the nested RL21-RL29 m=2 choices.
+
+Required inherited definitions and provenance are frozen verbatim under sessions/RL30/incoming/, especially RL13_CRITICAL_CONNECTED_RESOURCE_REPORT.md, RL13_PROOF_STATE_AND_RESIDUAL_LEDGER.md, PROOF_STATE_AND_OPEN_OBLIGATIONS.md and FAILURE_AND_LESSON_LEDGER.md.
+
+Programme: ACTIVE.
