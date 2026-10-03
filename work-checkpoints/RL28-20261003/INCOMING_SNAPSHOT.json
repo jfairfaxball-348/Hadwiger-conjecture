@@ -1,0 +1,83 @@
+{
+  "format": "rl-incoming-snapshot-v1",
+  "incoming_rl": 28,
+  "base_head": "3a90dd79fc56e9238c10229c0a32e3602bc16924",
+  "expected_predecessor": "3a90dd79fc56e9238c10229c0a32e3602bc16924",
+  "head_match": true,
+  "unique_incoming_rl": true,
+  "sole_brief": "authoritative/RL28_EDGE_CRITICAL_EXTRA_NEIGHBOR_BRIEF.md",
+  "integrity_failure": false,
+  "snapshot_method": "Exact BASE_HEAD plus blob SHA identity for every file required by the brief/start gate.",
+  "validated_paths": [
+    [
+      "AGENTS.md",
+      "72ad349e4744718651fec497dbd4cf967c19566d"
+    ],
+    [
+      "authoritative/START_HERE.md",
+      "6cc413a05b9e01c034735fc9a55120c1fa1a9bbc"
+    ],
+    [
+      "authoritative/RL28_EDGE_CRITICAL_EXTRA_NEIGHBOR_BRIEF.md",
+      "cf582775bde09b9b0238f32fd82959b5deab4d47"
+    ],
+    [
+      "docs/RESEARCH_RECOVERY_PROTOCOL.md",
+      "2b6710e32dad04800dd32fce771be630bce61082"
+    ],
+    [
+      "authoritative/RL27_SESSION_STATE_AND_RL28_KICKOFF.md",
+      "bf377c09a402d0b9ef6df1ec36fee7dc12aed716"
+    ],
+    [
+      "authoritative/RL27_FIXED_COLOR_MINIMAL_LIST_OBSTRUCTION_REPORT.md",
+      "d62a7f9e3a560e444ed96f5544966f1f0797b4e0"
+    ],
+    [
+      "authoritative/RL27_PROOF_STATE_AND_RESIDUAL_LEDGER.md",
+      "02edc8c3c7b1ed0a1e9dcfab809eecfbede13596"
+    ],
+    [
+      "authoritative/RL27_FAILURE_AND_LESSON_LEDGER_APPENDIX.md",
+      "69de40b9887c8abe002c06369c1ad41fa25d74ca"
+    ],
+    [
+      "authoritative/RL27_PREPARED_RECOVERY_TASK.md",
+      "2dae2b6c532c27e78bc576220084153904f58ff5"
+    ],
+    [
+      "authoritative/RL27_SOURCE_QUESTION_AND_LIMITS.md",
+      "5549120eea9ccbb84d31df57df7aeec57d684aaf"
+    ],
+    [
+      "authoritative/RL26_FULL_CRITICAL_PATH_SATURATION_MINOR_REPORT.md",
+      "8cecbe0b48a9d2592de356461459a6c6cdfe2bc3"
+    ],
+    [
+      "authoritative/RL25_CROSS_RESOURCE_PATH_TRANSFER_EXCHANGE_REPORT.md",
+      "e479e380bdab63e06b499a5b8cf53573dda3b4ce"
+    ],
+    [
+      "authoritative/PROOF_STATE_AND_OPEN_OBLIGATIONS.md",
+      "341111a7e01c89a58abd4e4f27f757e06e0479d7"
+    ],
+    [
+      "authoritative/FAILURE_AND_LESSON_LEDGER.md",
+      "d2c2034b486944b491698be69e291004e8d39548"
+    ],
+    [
+      "authoritative/DEPENDENCY_MAP.md",
+      "8464e2ae873c4fd33ec24cd8cdd54e72dceb0460"
+    ],
+    [
+      "authoritative/RL21_M2_S_COMPLETE_PAIR_LEAF_PRUNING_REPORT.md",
+      "e259681091b27e74f238bf04c3aedfafceb3241e"
+    ],
+    [
+      "authoritative/RL22_FIXED_DEFECT_TARGET_COLOR_BLOCKER_REPORT.md",
+      "8aab6e565426a4828dea1e9dbd4b2e01195c2aad"
+    ]
+  ],
+  "mathematical_sources_opened": 0,
+  "mathematical_numerical_work": 0
+}
