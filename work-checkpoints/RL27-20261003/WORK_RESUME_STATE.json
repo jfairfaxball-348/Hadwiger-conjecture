@@ -1,0 +1,67 @@
+{
+  "format": "rl-connector-resume-v1",
+  "base_head": "c032a457aa986b3d2f366e4c3807d0a985de45cb",
+  "root_tree": "ee5c689e26c26f75d2329583807e94c843ffece5",
+  "authoritative_tree": "bf48eb5cbe00c6637cc5e0d937dac90d1439528a",
+  "incoming_rl": 27,
+  "session_brief": "authoritative/RL27_FIXED_COLOR_MINIMAL_LIST_OBSTRUCTION_BRIEF.md",
+  "branch": "work/rl27-fixed-color-minimal-list-obstruction-20261003",
+  "checkpoint_path": "work-checkpoints/RL27-20261003",
+  "validated_authority_paths": [
+    "AGENTS.md",
+    "authoritative/START_HERE.md",
+    "authoritative/RL27_FIXED_COLOR_MINIMAL_LIST_OBSTRUCTION_BRIEF.md",
+    "docs/RESEARCH_RECOVERY_PROTOCOL.md",
+    "authoritative/RL26_SESSION_STATE_AND_RL27_KICKOFF.md",
+    "authoritative/RL26_FULL_CRITICAL_PATH_SATURATION_MINOR_REPORT.md",
+    "authoritative/RL26_PROOF_STATE_AND_RESIDUAL_LEDGER.md",
+    "authoritative/RL26_FAILURE_AND_LESSON_LEDGER_APPENDIX.md",
+    "authoritative/RL26_PREPARED_RECOVERY_TASK.md",
+    "authoritative/RL26_SOURCE_QUESTION_AND_LIMITS.md",
+    "authoritative/RL25_CROSS_RESOURCE_PATH_TRANSFER_EXCHANGE_REPORT.md",
+    "authoritative/PROOF_STATE_AND_OPEN_OBLIGATIONS.md",
+    "authoritative/FAILURE_AND_LESSON_LEDGER.md",
+    "authoritative/DEPENDENCY_MAP.md",
+    "authoritative/RL13_CRITICAL_CONNECTED_RESOURCE_REPORT.md",
+    "authoritative/RL21_M2_S_COMPLETE_PAIR_LEAF_PRUNING_REPORT.md",
+    "authoritative/RL22_FIXED_DEFECT_TARGET_COLOR_BLOCKER_REPORT.md"
+  ],
+  "last_verified_frontier": "For fixed c and A, G[R1] is not A-list-colorable. One fixed inclusion-minimal induced obstruction K satisfies |A(u)|<=d_K(u) for every u and hence d_K(u)>=1. Sole consequence C27-X stops because Q1-leaf/W-endpoint status does not imply d_K(x)<=1.",
+  "candidate_results": [
+    "RL27-P01: fixed G[R1] is not A-list-colorable",
+    "RL27-P02: fixed minimal K satisfies |A(u)|<=d_K(u)"
+  ],
+  "completed_artifacts": [
+    "WORK_UNIT_SCOPE.md",
+    "FIXED_COLOR_MINIMAL_LIST_OBSTRUCTION_REPORT.md",
+    "PROOF_STATE_AND_RESIDUAL_LEDGER.md",
+    "FAILURE_AND_LESSON_LEDGER_APPENDIX.md",
+    "PREPARED_RECOVERY_TASK.md",
+    "SOURCE_QUESTION_AND_LIMITS.md",
+    "WORK_VERIFICATION_REPORT.md"
+  ],
+  "unpromoted_or_uncovered": [
+    "C27-X not certified",
+    "V(P)=T_2 not excluded",
+    "RL25 gate 1 unresolved",
+    "RL25 gates 2-6 not reached",
+    "no named inherited mathematical obligation reduced"
+  ],
+  "next_exact_operation": "On an explicit finish/closeout request, enter CLOSEOUT_LOCK and atomically freeze RL27 plus install one successor brief from the prepared changed recovery. Do not perform further RL27 mathematics.",
+  "do_not_recompute": [
+    "non-A-list-colorability splice proof",
+    "minimal-K delete-and-extend proof",
+    "C27-X tree-leaf/path-endpoint degree audit"
+  ],
+  "failure_lesson_ids": ["FL-030"],
+  "recovery_mode": "rework",
+  "changed_input_or_mechanism": "future one-edge critical extra-neighbor gate using exactly one coloring of G-xz, only if an extra fixed K-neighbor z of x exists",
+  "next_task_bounds": "same saturation/R1/c/A/K/x/W; at most one z, one edge xz and one new proper-minor coloring; stop at first missing implication",
+  "retry_conditions": [
+    "do not infer original-graph degree from Q1 or W",
+    "do not switch to y, another K, another coloring or another path within RL27",
+    "future retry must control an actual extra internal edge or supply a genuine original-graph degree bound"
+  ],
+  "stop_and_repair_active": false,
+  "programme_active": true
+}
