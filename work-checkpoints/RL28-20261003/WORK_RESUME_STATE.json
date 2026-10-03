@@ -1,0 +1,42 @@
+{
+  "format": "rl-connector-resume-v1",
+  "base_head": "3a90dd79fc56e9238c10229c0a32e3602bc16924",
+  "authority_snapshot_method": "BASE_HEAD plus exact blob SHAs in INCOMING_SNAPSHOT.json",
+  "incoming_rl": 28,
+  "session_brief": "authoritative/RL28_EDGE_CRITICAL_EXTRA_NEIGHBOR_BRIEF.md",
+  "last_verified_frontier": "Under the prescribed conditional branch, fixed z and fixed d of G-xz satisfy d(x)=d(z), and the sole fixed consequence C28-X gives d(N_G(x)\\{z})=[6]\\{d(x)}. Testing stops because d is independent of c and its witnesses are not localized to R_1/K; no internal-degree upper bound or contradiction follows.",
+  "completed_artifacts": [
+    "EDGE_CRITICAL_EXTRA_NEIGHBOR_REPORT.md",
+    "PROOF_STATE_AND_RESIDUAL_LEDGER.md",
+    "FAILURE_AND_LESSON_LEDGER_APPENDIX.md",
+    "PREPARED_RECOVERY_TASK.md",
+    "SOURCE_QUESTION_AND_LIMITS.md"
+  ],
+  "unpromoted_or_uncovered": [
+    "RL28-P01/P02 are checkpoint-only pending closeout",
+    "No realization claim for V(P)=T_2 or the extra-neighbor branch",
+    "FL-030 remains open",
+    "RL25 gate 1 remains unresolved; gates 2-6 not reached"
+  ],
+  "next_exact_operation": "Await user finish instruction for deterministic RL28 closeout; do not start a second RL28 mathematical mechanism.",
+  "do_not_recompute": [
+    "d(x)=d(z) proof",
+    "C28-X neighborhood color-saturation proof",
+    "RL27 fixed K/list obstruction",
+    "RL26 quotient-color boundary-safe fact"
+  ],
+  "failure_lesson_ids": [
+    "FL-030",
+    "FL-031"
+  ],
+  "recovery_mode": "rework",
+  "changed_input_or_mechanism": "Prepared successor tests A-list-essentiality of the same fixed edge xz inside the same fixed K, avoiding cross-coloring comparison.",
+  "next_task_bounds": "Same K,x,z; one edge xz; at most one A-list coloring if existence is proved; stop immediately if K-xz remains non-A-list-colorable.",
+  "retry_conditions": [
+    "No second z or proper-minor coloring d",
+    "No relabeling d to manufacture c compatibility",
+    "No tree/path-to-graph degree inference"
+  ],
+  "stop_and_repair_active": false,
+  "recommendation": "it makes sense to finish up here"
+}
