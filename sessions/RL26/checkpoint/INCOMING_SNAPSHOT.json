@@ -1,0 +1,80 @@
+{
+  "format": "rl26-incoming-required-path-snapshot-v1",
+  "captured_date": "2026-10-03 Europe/Madrid",
+  "base_head": "ff395bbe3eb5d69b3dc425710f80753146f80f7e",
+  "incoming_rl": 26,
+  "unique_incoming_confirmed": true,
+  "work_branch_absent_before_creation": true,
+  "required_paths": [
+    [
+      "AGENTS.md",
+      "72ad349e4744718651fec497dbd4cf967c19566d"
+    ],
+    [
+      "authoritative/START_HERE.md",
+      "ed59f251c7234530971d658a9ceeed9f348ffee7"
+    ],
+    [
+      "authoritative/RL26_FULL_CRITICAL_PATH_SATURATION_MINOR_BRIEF.md",
+      "9b239f3bfcedb44b169240b8f4d6431c9d50144f"
+    ],
+    [
+      "docs/RESEARCH_RECOVERY_PROTOCOL.md",
+      "2b6710e32dad04800dd32fce771be630bce61082"
+    ],
+    [
+      "authoritative/RL25_SESSION_STATE_AND_RL26_KICKOFF.md",
+      "00dfa010d616aec62b8564c09db731ec27414590"
+    ],
+    [
+      "authoritative/RL25_CROSS_RESOURCE_PATH_TRANSFER_EXCHANGE_REPORT.md",
+      "e479e380bdab63e06b499a5b8cf53573dda3b4ce"
+    ],
+    [
+      "authoritative/RL25_PROOF_STATE_AND_RESIDUAL_LEDGER.md",
+      "ec98312759d3ae85da9d9c8a1b3dbd2758897d42"
+    ],
+    [
+      "authoritative/RL25_FAILURE_AND_LESSON_LEDGER_APPENDIX.md",
+      "8907114f9f9dcfcd6f736ea841f8eb23ccb2016c"
+    ],
+    [
+      "authoritative/RL25_PREPARED_RECOVERY_TASK.md",
+      "c93685e4838d609c94d9f1aae7fac4d10bba2cd5"
+    ],
+    [
+      "authoritative/RL25_SOURCE_QUESTION_AND_LIMITS.md",
+      "a1f3a8cde0d0e816636dc3e0ba58599c838e2475"
+    ],
+    [
+      "authoritative/RL24_STRICT_MINIMUM_TOTAL_SIZE_RESOURCE_FAMILY_EXCHANGE_REPORT.md",
+      "7bdc162e903f4fa6184104b3e6f927087fed89d1"
+    ],
+    [
+      "authoritative/PROOF_STATE_AND_OPEN_OBLIGATIONS.md",
+      "7fa2f9f415f0c6f167793d8e8837539eb9a7f596"
+    ],
+    [
+      "authoritative/FAILURE_AND_LESSON_LEDGER.md",
+      "e7437968f0e08a235cd420ae54d04454684447e5"
+    ],
+    [
+      "authoritative/DEPENDENCY_MAP.md",
+      "8464e2ae873c4fd33ec24cd8cdd54e72dceb0460"
+    ],
+    [
+      "authoritative/RL13_CRITICAL_CONNECTED_RESOURCE_REPORT.md",
+      "c71da40828d5ee880f7eb0a04dfbaec0ebf2fe88"
+    ],
+    [
+      "authoritative/RL21_M2_S_COMPLETE_PAIR_LEAF_PRUNING_REPORT.md",
+      "e259681091b27e74f238bf04c3aedfafceb3241e"
+    ],
+    [
+      "authoritative/RL22_FIXED_DEFECT_TARGET_COLOR_BLOCKER_REPORT.md",
+      "8aab6e565426a4828dea1e9dbd4b2e01195c2aad"
+    ]
+  ],
+  "integrity_failure": false,
+  "note": "Compact required-path blob snapshot; authority was consumed only at the pinned BASE_HEAD."
+}

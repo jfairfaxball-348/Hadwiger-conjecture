@@ -1,0 +1,40 @@
+{
+  "format": "rl21-atomic-closeout-v1",
+  "session": 21,
+  "status": "CLOSED/FROZEN",
+  "base_head": "afd7414ab547adc3781b3ec67989464a6c9ce0d8",
+  "base_root_tree": "c06895ad32fd16ccc778f726b1a366e0a92b410c",
+  "incoming_authority_tree": "3fbb6642475e282f7a084c11f4ddb1dea143110c",
+  "checkpoint_commit": "9a6acc6a3ba40f23e4a7e4089441b3debca4a3fb",
+  "checkpoint_tree": "5f8e7995639ef192e94cd91fb166e07d78dc94b2",
+  "checkpoint_branch": "work/rl21-m2-pair-leaf-pruning-20261002",
+  "successor_session": 22,
+  "successor_brief": "authoritative/RL22_FIXED_DEFECT_TARGET_COLOR_BLOCKER_BRIEF.md",
+  "successor_status": "READY / NOT STARTED",
+  "promoted_results": [
+    "RL21-P01 seven-pattern selected-defect x/T_2 repair classification at exact fixed-choice m=2, A=S scope",
+    "RL21-P02 five-color H[S union U] boundary compression in the two X={a,b}, Y singleton patterns"
+  ],
+  "corrections_demotions": [],
+  "named_obligation_reduced": false,
+  "failure_ids_added": [
+    "FL-024"
+  ],
+  "inherited_failure_ids_preserved": "FL-001..FL-023",
+  "mathematical_numerical_computation": 0,
+  "new_source_queries": 0,
+  "new_source_opens": 0,
+  "frozen_tree_entries": [
+    {
+      "path": "sessions/RL21/incoming",
+      "sha": "3fbb6642475e282f7a084c11f4ddb1dea143110c"
+    },
+    {
+      "path": "sessions/RL21/checkpoint",
+      "sha": "5f8e7995639ef192e94cd91fb166e07d78dc94b2"
+    }
+  ],
+  "promotion": "one commit with sole parent base_head; one non-forced main advance",
+  "commit_identity": "intentionally omitted from self-referential manifest; verify by remote readback",
+  "programme": "ACTIVE"
+}

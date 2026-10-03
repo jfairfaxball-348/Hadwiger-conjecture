@@ -1,0 +1,28 @@
+{
+  "format": "rl22-checkpoint-manifest-v1",
+  "session": 22,
+  "status": "FINAL ISOLATED CHECKPOINT / PRE-CLOSEOUT",
+  "base_head": "33176e4691c1a657ae114cdd058664c544f81a40",
+  "branch": "work/rl22-fixed-defect-target-color-blocker-20261002",
+  "prefix": "work-checkpoints/RL22-20261002/",
+  "body_files": [
+    "WORK_UNIT_SCOPE.md",
+    "INCOMING_SNAPSHOT.json",
+    "FIXED_DEFECT_TARGET_COLOR_BLOCKER_REPORT.md",
+    "PROOF_STATE_AND_RESIDUAL_LEDGER.md",
+    "FAILURE_AND_LESSON_LEDGER_APPENDIX.md",
+    "NEXT_RECOVERY_TASK.md",
+    "SOURCE_QUESTION_AND_LIMITS.md",
+    "VERIFICATION_REPORT.md",
+    "START_HERE.md",
+    "RESUME_STATE.json"
+  ],
+  "result": "In fixed RL21 repair pattern X={a},Y={b}, Y={b} forces Z_a=empty. The corresponding a->beta recoloring is safe on S, B and T_2 but is not certified on x because xa is an edge, xb is a nonedge, and properness does not force c(x)!=beta.",
+  "candidate_failure_event": "FL-025",
+  "named_obligation_reduced": false,
+  "correction_or_demotion": false,
+  "mathematical_numerical_computation": 0,
+  "new_source_queries": 0,
+  "new_source_opens": 0,
+  "programme": "ACTIVE"
+}

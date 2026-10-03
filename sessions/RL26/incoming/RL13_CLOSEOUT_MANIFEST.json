@@ -1,0 +1,272 @@
+{
+  "format": "rl13-atomic-closeout-v1",
+  "session": 13,
+  "status": "CLOSED/FROZEN",
+  "base_head": "23a2dfa3fff5b8bbd11cd986f4418dfc5b3a54b1",
+  "base_root_tree": "2da5fc8f126fcc81aa6a102aff3b70c1513f8cb8",
+  "incoming_authority_tree": "4a477bf49f47be34f743e7700863ac0472d8776c",
+  "checkpoint_commit": "45381b4a3b621e6b2a17ac2c236c6530db5aa8bf",
+  "checkpoint_tree": "3a3d925611168f92732be12cb793d4777e8ab820",
+  "checkpoint_branch": "work/rl13-critical-resource-20261002",
+  "checkpoint_prefix": "work-checkpoints/RL13-20261002/",
+  "frozen_incoming_authority_blob_count": 140,
+  "frozen_checkpoint_blob_count": 13,
+  "frozen_tree_entries": [
+    {
+      "path": "sessions/RL13/incoming",
+      "sha": "4a477bf49f47be34f743e7700863ac0472d8776c"
+    },
+    {
+      "path": "sessions/RL13/checkpoint",
+      "sha": "3a3d925611168f92732be12cb793d4777e8ab820"
+    }
+  ],
+  "successor_session": 14,
+  "successor_brief": "authoritative/RL14_LEAF_DELETION_COLORING_BRIEF.md",
+  "successor_status": "READY / NOT STARTED",
+  "bounded_analytic_work_units": 2,
+  "mathematical_numerical_computation": 0,
+  "new_source_queries": 0,
+  "new_source_opens": 0,
+  "promoted_results": [
+    "RL13-P00: inherited-source-dependent derived m=0 exclusion",
+    "RL13-P01: scoped analytic proper-boundary result",
+    "RL13-P02: scoped analytic leaf-private m=1 boundary and residual obstruction"
+  ],
+  "local_boundary_subcase_reduced": true,
+  "m1_augmentation_or_exclusion_proved": false,
+  "inherited_universal_obligation_reduced": false,
+  "corrections_demotions": [],
+  "failure_ids_added": [
+    "FL-015",
+    "FL-016"
+  ],
+  "inherited_failure_ids_preserved": "FL-001..FL-014",
+  "existing_authority_overlays": [
+    "authoritative/START_HERE.md",
+    "authoritative/PROOF_STATE_AND_OPEN_OBLIGATIONS.md",
+    "authoritative/FAILURE_AND_LESSON_LEDGER.md",
+    "authoritative/VERIFICATION_REPORT.md",
+    "authoritative/RL13_CRITICAL_CONNECTED_RESOURCE_BRIEF.md"
+  ],
+  "checkpoint_aliases": [
+    {
+      "source": "CHECKPOINT_MANIFEST.json",
+      "target": "RL13_CHECKPOINT_MANIFEST.json",
+      "source_blob": "c811afeedf99df37281561a3f53a698bab4a303e",
+      "method": "byte-identical"
+    },
+    {
+      "source": "CONTINUATION_02_START.json",
+      "target": "RL13_CONTINUATION_02_START.json",
+      "source_blob": "81a864322373da5f0b448215457397179d581533",
+      "method": "byte-identical"
+    },
+    {
+      "source": "CONTINUATION_02_VERIFICATION.md",
+      "target": "RL13_CONTINUATION_02_VERIFICATION.md",
+      "source_blob": "c1e5183fa7d9432dd990911ab735c2847f82ef50",
+      "method": "exact text after closing notice"
+    },
+    {
+      "source": "CRITICAL_CONNECTED_RESOURCE_REPORT.md",
+      "target": "RL13_CRITICAL_CONNECTED_RESOURCE_REPORT.md",
+      "source_blob": "4c31339633f7cdd6d591194a8d461a7c82229b9a",
+      "method": "exact text after closing notice"
+    },
+    {
+      "source": "FAILURE_AND_LESSON_LEDGER_APPENDIX.md",
+      "target": "RL13_FAILURE_AND_LESSON_LEDGER_APPENDIX.md",
+      "source_blob": "819e3355251aecb44e608d5adc4a8f217e43b902",
+      "method": "exact text after closing notice"
+    },
+    {
+      "source": "INCOMING_SNAPSHOT.json",
+      "target": "RL13_INCOMING_SNAPSHOT.json",
+      "source_blob": "82c1eedd481e76bfffb85755a4a20a5beea8bbda",
+      "method": "byte-identical"
+    },
+    {
+      "source": "LEAF_PRIVATE_RESOURCE_REPORT.md",
+      "target": "RL13_LEAF_PRIVATE_RESOURCE_REPORT.md",
+      "source_blob": "0b1332fa5c1c832e0349a63cd9be88c15678e1bf",
+      "method": "exact text after closing notice"
+    },
+    {
+      "source": "NEXT_RECOVERY_TASK.md",
+      "target": "RL13_PREPARED_RECOVERY_TASK.md",
+      "source_blob": "37797779444eafb3953cdeba06be5cfe8d804542",
+      "method": "exact text after closing notice"
+    },
+    {
+      "source": "PROOF_STATE_AND_RESIDUAL_LEDGER.md",
+      "target": "RL13_PROOF_STATE_AND_RESIDUAL_LEDGER.md",
+      "source_blob": "89c06b72bd02782dfef3364deb106bc46fb4b020",
+      "method": "exact text after closing notice"
+    },
+    {
+      "source": "RESUME_STATE.json",
+      "target": "RL13_WORK_RESUME_STATE.json",
+      "source_blob": "726babf61e76e1ef9385fe23e82bb11eced64c44",
+      "method": "byte-identical"
+    },
+    {
+      "source": "SOURCE_QUESTION_AND_LIMITS.md",
+      "target": "RL13_SOURCE_QUESTION_AND_LIMITS.md",
+      "source_blob": "7d5c708a5ab65473f0e73b263385a32c249cee4a",
+      "method": "exact text after closing notice"
+    },
+    {
+      "source": "VERIFICATION_REPORT.md",
+      "target": "RL13_WORK_VERIFICATION_REPORT.md",
+      "source_blob": "5610265fcf80a1074d9e3a3f6dff9cd81143f001",
+      "method": "exact text after closing notice"
+    },
+    {
+      "source": "WORK_UNIT_SCOPE.md",
+      "target": "RL13_WORK_UNIT_SCOPE.md",
+      "source_blob": "dd0f873c1c80a2216d401e9550446ea7795dd59d",
+      "method": "exact text after closing notice"
+    }
+  ],
+  "candidate_blob_paths_including_manifest_copies": [
+    "README.md",
+    "START_HERE.md",
+    "authoritative/FAILURE_AND_LESSON_LEDGER.md",
+    "authoritative/PROOF_STATE_AND_OPEN_OBLIGATIONS.md",
+    "authoritative/RL13_CHECKPOINT_MANIFEST.json",
+    "authoritative/RL13_CLOSEOUT_MANIFEST.json",
+    "authoritative/RL13_CLOSEOUT_VERIFICATION_REPORT.md",
+    "authoritative/RL13_CLOSEOUT_VERIFIER_RESULTS.json",
+    "authoritative/RL13_CONTINUATION_02_START.json",
+    "authoritative/RL13_CONTINUATION_02_VERIFICATION.md",
+    "authoritative/RL13_CRITICAL_CONNECTED_RESOURCE_BRIEF.md",
+    "authoritative/RL13_CRITICAL_CONNECTED_RESOURCE_REPORT.md",
+    "authoritative/RL13_FAILURE_AND_LESSON_LEDGER_APPENDIX.md",
+    "authoritative/RL13_INCOMING_SNAPSHOT.json",
+    "authoritative/RL13_LEAF_PRIVATE_RESOURCE_REPORT.md",
+    "authoritative/RL13_PREPARED_RECOVERY_TASK.md",
+    "authoritative/RL13_PROOF_STATE_AND_RESIDUAL_LEDGER.md",
+    "authoritative/RL13_SESSION_STATE_AND_RL14_KICKOFF.md",
+    "authoritative/RL13_SOURCE_QUESTION_AND_LIMITS.md",
+    "authoritative/RL13_WORK_RESUME_STATE.json",
+    "authoritative/RL13_WORK_UNIT_SCOPE.md",
+    "authoritative/RL13_WORK_VERIFICATION_REPORT.md",
+    "authoritative/RL14_LEAF_DELETION_COLORING_BRIEF.md",
+    "authoritative/START_HERE.md",
+    "authoritative/VERIFICATION_REPORT.md",
+    "sessions/RL13/CLOSEOUT_MANIFEST.json",
+    "sessions/RL13/START_HERE.md",
+    "sessions/RL13/VERIFICATION_REPORT.md"
+  ],
+  "candidate_body_hashes": [
+    {
+      "path": "README.md",
+      "git_blob": "46f78547d8ed9c5e179db242564f821eb6a77810"
+    },
+    {
+      "path": "START_HERE.md",
+      "git_blob": "ecf6e66491d1b32138993ed4665ea36516af393e"
+    },
+    {
+      "path": "authoritative/FAILURE_AND_LESSON_LEDGER.md",
+      "git_blob": "8f90056bf3762691622d0473817e66ca75c933f0"
+    },
+    {
+      "path": "authoritative/PROOF_STATE_AND_OPEN_OBLIGATIONS.md",
+      "git_blob": "0076967f24269bcf925b71f44cf4162837a1fc7a"
+    },
+    {
+      "path": "authoritative/RL13_CHECKPOINT_MANIFEST.json",
+      "git_blob": "c811afeedf99df37281561a3f53a698bab4a303e"
+    },
+    {
+      "path": "authoritative/RL13_CLOSEOUT_VERIFICATION_REPORT.md",
+      "git_blob": "44e61c63908391d74a79c236196b6c051ade4fe0"
+    },
+    {
+      "path": "authoritative/RL13_CLOSEOUT_VERIFIER_RESULTS.json",
+      "git_blob": "7caa53ea332c05d396233deb239c3ce31549375f"
+    },
+    {
+      "path": "authoritative/RL13_CONTINUATION_02_START.json",
+      "git_blob": "81a864322373da5f0b448215457397179d581533"
+    },
+    {
+      "path": "authoritative/RL13_CONTINUATION_02_VERIFICATION.md",
+      "git_blob": "13e47f486e6bf6a3d9f2e4e2ce546cb7997d7337"
+    },
+    {
+      "path": "authoritative/RL13_CRITICAL_CONNECTED_RESOURCE_BRIEF.md",
+      "git_blob": "e5c45619c36bbc36c9e725af5b44cf74fa34d567"
+    },
+    {
+      "path": "authoritative/RL13_CRITICAL_CONNECTED_RESOURCE_REPORT.md",
+      "git_blob": "c71da40828d5ee880f7eb0a04dfbaec0ebf2fe88"
+    },
+    {
+      "path": "authoritative/RL13_FAILURE_AND_LESSON_LEDGER_APPENDIX.md",
+      "git_blob": "cc8737d7d23df879fe09b33f4438101b2f9754a3"
+    },
+    {
+      "path": "authoritative/RL13_INCOMING_SNAPSHOT.json",
+      "git_blob": "82c1eedd481e76bfffb85755a4a20a5beea8bbda"
+    },
+    {
+      "path": "authoritative/RL13_LEAF_PRIVATE_RESOURCE_REPORT.md",
+      "git_blob": "593a36138bbc69758eb9f8535a37e5bb4a8844f6"
+    },
+    {
+      "path": "authoritative/RL13_PREPARED_RECOVERY_TASK.md",
+      "git_blob": "0465a85e1c041d4c06f12bab336ec30c4ff96666"
+    },
+    {
+      "path": "authoritative/RL13_PROOF_STATE_AND_RESIDUAL_LEDGER.md",
+      "git_blob": "78d8cc688c411d3b781fd6ee1dd860f64ca9a92d"
+    },
+    {
+      "path": "authoritative/RL13_SESSION_STATE_AND_RL14_KICKOFF.md",
+      "git_blob": "486e29c6537394af958b90649bc64241cc7bdea8"
+    },
+    {
+      "path": "authoritative/RL13_SOURCE_QUESTION_AND_LIMITS.md",
+      "git_blob": "3e7bbef4b530f7462b56a199e4442e7b90855d34"
+    },
+    {
+      "path": "authoritative/RL13_WORK_RESUME_STATE.json",
+      "git_blob": "726babf61e76e1ef9385fe23e82bb11eced64c44"
+    },
+    {
+      "path": "authoritative/RL13_WORK_UNIT_SCOPE.md",
+      "git_blob": "2e47dd7bd4122131bd01b1c22777961b31b86bd5"
+    },
+    {
+      "path": "authoritative/RL13_WORK_VERIFICATION_REPORT.md",
+      "git_blob": "740255adfc2e13bded7e0b6abe8eabf60024e890"
+    },
+    {
+      "path": "authoritative/RL14_LEAF_DELETION_COLORING_BRIEF.md",
+      "git_blob": "63cdead0c6dc0bd21849a49cf9539469ef792e9a"
+    },
+    {
+      "path": "authoritative/START_HERE.md",
+      "git_blob": "435baa102a18b2fb183747169b9a38044e832c13"
+    },
+    {
+      "path": "authoritative/VERIFICATION_REPORT.md",
+      "git_blob": "44e61c63908391d74a79c236196b6c051ade4fe0"
+    },
+    {
+      "path": "sessions/RL13/START_HERE.md",
+      "git_blob": "5b16040d2876970336cbbfa5011256fcf0c798bb"
+    },
+    {
+      "path": "sessions/RL13/VERIFICATION_REPORT.md",
+      "git_blob": "44e61c63908391d74a79c236196b6c051ade4fe0"
+    }
+  ],
+  "promotion": "one commit with sole parent base_head; one non-forced main advance",
+  "commit_identity": "intentionally omitted from self-referential manifest; verify by remote readback",
+  "manifest_hash_rule": "both identical manifest copies excluded from candidate_body_hashes",
+  "programme": "ACTIVE"
+}

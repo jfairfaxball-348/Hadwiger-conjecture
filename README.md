@@ -1,38 +1,28 @@
 # Hadwiger Conjecture Research Repository
 
-This repository is an ongoing, exploratory research record for the full
-Hadwiger Conjecture.
+This repository is an ongoing, exploratory research record for the full Hadwiger Conjecture.
 
-The current incoming state is [authoritative/START_HERE.md](authoritative/START_HERE.md);
-binding worker rules are in [AGENTS.md](AGENTS.md). The repository distinguishes
-proved mathematics, exact certificates, computational evidence, conjectures,
-barriers, corrections and open obligations.
+The current incoming state is authoritative/START_HERE.md; binding worker rules are in AGENTS.md.
 
 ## Current handover
 
-RL25 is CLOSED/FROZEN under [sessions/RL25/](sessions/RL25/START_HERE.md).
-It completed one bounded fixed cross-resource path-transfer feasibility assessment at the retained non-singleton m=2, A=S frontier.
+RL26 is CLOSED/FROZEN under sessions/RL26/. It completed one bounded conditional full-critical path-saturation minor assessment.
 
-The audit stops at gate 1: R_1=V(L) union V(P) is nonempty/exterior and R_2=T_2 minus V(P) is exterior, but R_2 nonempty is not certified. Gates 2-6 were not reached; minimum total size was not invoked. FL-028 records the method barrier. No positive theorem or named inherited mathematical obligation is advanced, and no correction/demotion occurs.
+Under V(P)=T_2, R_1 is connected and nontrivial and J=G/R_1 is a proper original-G minor. For one fixed six-coloring of J, the contracted color gamma is absent from every external neighbor of R_1. The one fixed reverse-greedy reconstruction colors y with gamma but stops at its predecessor because no second available boundary color is forced. FL-029 records the method barrier. No named inherited mathematical obligation is reduced and no correction/demotion occurs.
 
-RL26 is the unique incoming session through
-[authoritative/RL26_FULL_CRITICAL_PATH_SATURATION_MINOR_BRIEF.md](authoritative/RL26_FULL_CRITICAL_PATH_SATURATION_MINOR_BRIEF.md).
-It is READY / NOT STARTED. It retains the fixed choices, conditions on V(P)=T_2 and assesses one prescribed original-G contraction and at most one fully justified reconstruction proposal.
+RL27 is the unique incoming session through authoritative/RL27_FIXED_COLOR_MINIMAL_LIST_OBSTRUCTION_BRIEF.md. It is READY / NOT STARTED. It retains the same saturation scope, contraction and fixed coloring and assesses one deletion-minimal boundary-list obstruction followed by at most one fixed endpoint/path consequence.
 
 The programme is active and the root remains full sharp Hadwiger for every finite simple graph.
 
 ## Core repository model
 
-`authoritative/` → one incoming RL session → verified freeze in
-`sessions/RL...` + one successor `authoritative/`.
+authoritative/ -> one incoming RL session -> verified freeze in sessions/RL... + one successor authoritative/.
 
-- `authoritative/` is the sole current incoming mathematical state.
-- `sessions/` is frozen research history.
-- `Archive/` is cold historical material.
-- `knowledge/` is non-authoritative lookup/index material.
-- `.rl-work/` is ignored local scratch/checkpoint state.
+- authoritative/ is the sole current incoming mathematical state.
+- sessions/ is frozen research history.
+- Archive/ is cold historical material.
+- knowledge/ is non-authoritative lookup/index material.
+- .rl-work/ is ignored local scratch/checkpoint state.
 
-The interactive convention is:
-`@GitHub continue with the next authoritative session`.
-Every tenth session applies the audit policy in
-[docs/TENTH_SESSION_PROGRESS_AUDIT.md](docs/TENTH_SESSION_PROGRESS_AUDIT.md).
+The interactive convention is: @GitHub continue with the next authoritative session.
+Every tenth session applies docs/TENTH_SESSION_PROGRESS_AUDIT.md.

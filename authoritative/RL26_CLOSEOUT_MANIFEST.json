@@ -1,0 +1,21 @@
+{
+  "format": "rl-atomic-closeout-manifest-v1",
+  "completed_rl": 26,
+  "successor_rl": 27,
+  "base_head": "ff395bbe3eb5d69b3dc425710f80753146f80f7e",
+  "incoming_authority_tree": "788dca8f576e856cfdf0c4d507b7e44ba969e8bf",
+  "checkpoint_commit": "7e3217c907fd845fd7c641c364f4d4f3d29c302b",
+  "checkpoint_tree": "c26e99a31bd932813f412c8bc7b4a56c25016c9e",
+  "successor_brief": "authoritative/RL27_FIXED_COLOR_MINIMAL_LIST_OBSTRUCTION_BRIEF.md",
+  "classification": "Scoped analytic contraction/boundary-color structure plus method barrier FL-029",
+  "corrections_demotions": "NONE",
+  "named_obligations_reduced": [],
+  "saturation_excluded": false,
+  "rl25_gates_not_reached": [2,3,4,5,6],
+  "minimum_total_size_invocations_in_rl26": 0,
+  "new_mathematical_sources": 0,
+  "mathematical_numerical_work": 0,
+  "successor_started": false,
+  "publication_gate": "one commit with sole parent BASE_HEAD; one non-forced main advance; exact readback",
+  "self_reference_policy": "final root tree and commit identities are verified after publication and are not embedded here"
+}

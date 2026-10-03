@@ -1,0 +1,68 @@
+{
+  "format": "rl-connector-resume-v1",
+  "base_head": "ff395bbe3eb5d69b3dc425710f80753146f80f7e",
+  "authority_snapshot": "required-path blob SHAs recorded in INCOMING_SNAPSHOT.json",
+  "incoming_rl": 26,
+  "session_brief": "authoritative/RL26_FULL_CRITICAL_PATH_SATURATION_MINOR_BRIEF.md",
+  "validated_authority_paths": [
+    "AGENTS.md",
+    "authoritative/START_HERE.md",
+    "authoritative/RL26_FULL_CRITICAL_PATH_SATURATION_MINOR_BRIEF.md",
+    "docs/RESEARCH_RECOVERY_PROTOCOL.md",
+    "authoritative/RL25_SESSION_STATE_AND_RL26_KICKOFF.md",
+    "authoritative/RL25_CROSS_RESOURCE_PATH_TRANSFER_EXCHANGE_REPORT.md",
+    "authoritative/RL25_PROOF_STATE_AND_RESIDUAL_LEDGER.md",
+    "authoritative/RL25_FAILURE_AND_LESSON_LEDGER_APPENDIX.md",
+    "authoritative/RL25_PREPARED_RECOVERY_TASK.md",
+    "authoritative/RL25_SOURCE_QUESTION_AND_LIMITS.md",
+    "authoritative/RL24_STRICT_MINIMUM_TOTAL_SIZE_RESOURCE_FAMILY_EXCHANGE_REPORT.md",
+    "authoritative/PROOF_STATE_AND_OPEN_OBLIGATIONS.md",
+    "authoritative/FAILURE_AND_LESSON_LEDGER.md",
+    "authoritative/DEPENDENCY_MAP.md",
+    "authoritative/RL13_CRITICAL_CONNECTED_RESOURCE_REPORT.md",
+    "authoritative/RL21_M2_S_COMPLETE_PAIR_LEAF_PRUNING_REPORT.md",
+    "authoritative/RL22_FIXED_DEFECT_TARGET_COLOR_BLOCKER_REPORT.md"
+  ],
+  "last_verified_frontier": "Under V(P)=T_2, J=G/R_1 is a proper minor. For one fixed six-coloring c of J, gamma=c(rho) is absent from all external neighbors of R_1. The sole reverse-greedy spanning-path lift colors y with gamma but is not certified at y's predecessor because no retained premise forces a non-gamma boundary-color omission.",
+  "completed_artifacts": [
+    "FULL_CRITICAL_PATH_SATURATION_MINOR_REPORT.md",
+    "PROOF_STATE_AND_RESIDUAL_LEDGER.md",
+    "FAILURE_AND_LESSON_LEDGER_APPENDIX.md",
+    "PREPARED_RECOVERY_TASK.md",
+    "SOURCE_QUESTION_AND_LIMITS.md",
+    "WORK_VERIFICATION_REPORT.md",
+    "WORK_UNIT_SCOPE.md"
+  ],
+  "unpromoted_or_uncovered": [
+    "candidate FL-029",
+    "saturation V(P)=T_2 not excluded",
+    "RL25 gate-1 obstacle remains",
+    "all named inherited obligations remain unreduced"
+  ],
+  "next_exact_operation": "On explicit finish request, enter CLOSEOUT_LOCK and atomically freeze RL26 plus install one bounded successor based on PREPARED_RECOVERY_TASK.md.",
+  "do_not_recompute": [
+    "RL26 contraction admissibility",
+    "same reverse-greedy quotient lift",
+    "second J-coloring or alternate path",
+    "RL25 gates 2-6",
+    "m=1 failed-anchor/private-endpoint line"
+  ],
+  "failure_lesson_ids": [
+    "FL-023",
+    "FL-024",
+    "FL-025",
+    "FL-026",
+    "FL-027",
+    "FL-028",
+    "candidate FL-029"
+  ],
+  "recovery_mode": "rework",
+  "changed_input_or_mechanism": "Extract a minimal fixed-color boundary-list obstruction from nonextendability instead of assuming another color is available during path uncontracting.",
+  "next_task_bounds": "Same V(P)=T_2, same R_1, same J, same fixed six-coloring c; one deletion-minimal list obstruction K and one endpoint/path consequence only.",
+  "retry_conditions": [
+    "Do not retry quotient pullback/greedy expansion without a new proved boundary-color omission.",
+    "Do not switch coloring, path, witness, tree, joining edge, defect or resource side."
+  ],
+  "stop_and_repair_active": false,
+  "programme": "ACTIVE"
+}

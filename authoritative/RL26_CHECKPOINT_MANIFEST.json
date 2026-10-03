@@ -1,0 +1,65 @@
+{
+  "format": "rl-isolated-checkpoint-manifest-v1",
+  "incoming_rl": 26,
+  "status": "OPEN / NOT PROMOTED",
+  "base_head": "ff395bbe3eb5d69b3dc425710f80753146f80f7e",
+  "branch": "work/rl26-full-critical-path-saturation-minor-20261003",
+  "checkpoint_path": "work-checkpoints/RL26-20261003",
+  "conditional_scope": "V(P)=T_2 only; no realization claim",
+  "contraction_admissibility": "PASS",
+  "reconstruction_proposal": "single reverse-greedy expansion of the L-pq-P spanning path from y toward x",
+  "reconstruction_status": "STOPPED at second expanded vertex",
+  "first_missing_implication": "For w_{k-1}, some non-gamma color must be absent from c(N_G(w_{k-1})\\\\R_1).",
+  "graph_level_contradiction": false,
+  "saturation_excluded": false,
+  "named_obligations_reduced": [],
+  "correction_demotion": "NONE",
+  "candidate_failure_lesson": "FL-029",
+  "new_mathematical_sources": 0,
+  "mathematical_numerical_work": 0,
+  "main_unchanged_after_checkpoint": true,
+  "final_checkpoint_head_before_manifest": "5db26857fedb6168526db7ddb225826b29cd4281",
+  "artifacts": [
+    [
+      "README.md",
+      "4eebf8e05622e4280b4803ea400ec4b70e5a6561"
+    ],
+    [
+      "WORK_UNIT_SCOPE.md",
+      "5c6b069cabbff3257be66b4dc6b2de31d7b8e370"
+    ],
+    [
+      "FULL_CRITICAL_PATH_SATURATION_MINOR_REPORT.md",
+      "8cecbe0b48a9d2592de356461459a6c6cdfe2bc3"
+    ],
+    [
+      "PROOF_STATE_AND_RESIDUAL_LEDGER.md",
+      "a1256cadd05f98b257330c092b734fb74f6b34bf"
+    ],
+    [
+      "FAILURE_AND_LESSON_LEDGER_APPENDIX.md",
+      "259190b523107dfdf93576d371376b1db603f493"
+    ],
+    [
+      "PREPARED_RECOVERY_TASK.md",
+      "878b0eed8f0806c96366fb7595fa204ac178d80f"
+    ],
+    [
+      "SOURCE_QUESTION_AND_LIMITS.md",
+      "b658e65c789043832fa8d517543655bcf6710861"
+    ],
+    [
+      "WORK_VERIFICATION_REPORT.md",
+      "db4a8a1a5180b132d1575cdd0fd7afae64d941be"
+    ],
+    [
+      "WORK_RESUME_STATE.json",
+      "0a256cd8f8141df11c269bd8ba6de6e77787a1d2"
+    ],
+    [
+      "INCOMING_SNAPSHOT.json",
+      "e980a2935f7f71be62b2344ccdc19a7633f1e832"
+    ]
+  ],
+  "note": "Manifest added after artifact readback; main remains authoritative and unchanged until explicit closeout."
+}

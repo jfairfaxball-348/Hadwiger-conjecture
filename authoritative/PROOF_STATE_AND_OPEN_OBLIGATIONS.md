@@ -1,3 +1,25 @@
+# Current proof state after RL26
+
+**RL26 CLOSED/FROZEN. RL27 is the sole incoming fixed-color minimal list-obstruction assessment, READY / NOT STARTED.**
+
+RL26 promotes a scoped analytic structural result and method barrier, with same-worker review only.
+
+At the exact retained non-singleton m=2, A=S fixed-choice setup, only under V(P)=T_2, the paths L and P plus the actual joining edge pq form a simple spanning path of R_1=V(L) union V(P). Since x!=p, R_1 contains at least two vertices. Therefore J=G/R_1 is a proper original-G minor.
+
+Fix the one actual proper six-coloring c of J used in RL26, let rho be the contracted vertex and gamma=c(rho). Every external neighbor of R_1 is adjacent to rho in J and hence avoids gamma.
+
+RL26 fixed exactly one reconstruction: reverse-greedy expansion of the spanning path from y toward x while preserving c outside R_1. The first step y->gamma is certified. At y's predecessor, gamma is blocked by the path edge and no retained premise forces another color to be absent from its external neighborhood. The reconstruction therefore stops at that first missing boundary-color availability implication.
+
+FL-029 records the barrier. There is no complete six-coloring of G, no simultaneous K_7 minor and no contradiction excluding V(P)=T_2. RL25's first nonemptiness obstacle remains unresolved. RL25 gates 2-6 remain NOT REACHED and minimum total size is not invoked.
+
+Correction/demotion: NONE. Preserve RL25/FL-028, RL24/FL-027, RL23/FL-026, RL22-P01/FL-025, RL21-P01/P02/FL-024 and RL20 NONE/FL-023 exactly. The m=1 failed-anchor/private-endpoint line is not resumed.
+
+No named inherited mathematical obligation is genuinely reduced. The full m=2, A=S branch remains open, together with m=1, m=3, m=4, BR-00, BR-01 universal coverage, general UP_6, CR_6, ordinary order seven, every higher order and full sharp Hadwiger. All source/certificate limits, simultaneous-compatibility requirements, sharpness conditions and unbounded residual parameters remain unchanged.
+
+RL27 develops only the prepared fixed-color minimal list-obstruction mechanism under RL27_FIXED_COLOR_MINIMAL_LIST_OBSTRUCTION_BRIEF.md. No RL27 mathematics occurred during closeout.
+
+## Preserved complete pre-RL26 canonical state
+
 # Current proof state after RL25
 
 **RL25 CLOSED/FROZEN. RL26 is the sole incoming full-critical path-saturation minor input-development assessment, READY / NOT STARTED.**
