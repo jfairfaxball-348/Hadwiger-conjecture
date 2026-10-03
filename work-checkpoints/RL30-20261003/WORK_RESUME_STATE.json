@@ -1,0 +1,17 @@
+{
+  "rl": 30,
+  "status": "OPEN / bounded audit complete / NOT PROMOTED",
+  "base_head": "dee47a50f0a1da072dca22cc1f0d6a76cd6b11ca",
+  "work_branch": "rl30-audit-work",
+  "theorem_discovery_executed": false,
+  "correction_demotion": "NONE",
+  "named_obligations_reduced": [],
+  "route_verdict": "PIVOT",
+  "current_frontier": "Preserve RL20-RL29 exact scopes; m=2 A=S remains open; RL25 gates 2-6 NOT REACHED; V(P)=T_2 conditional; K-xz A-list status undecided.",
+  "collatz_risk": "HIGH repeated-local-work risk across RL21-RL29",
+  "prepared_successor": "m=3 A=S terminal-core resource-family exchange, at most 3 fixed candidates",
+  "rl29_recovery_disposition": "preserved but not selected",
+  "new_sources": 0,
+  "new_mathematical_computation": 0,
+  "next_operation": "Normal RL30 closeout when user requests finish; do not execute RL31 mathematics during RL30."
+}
