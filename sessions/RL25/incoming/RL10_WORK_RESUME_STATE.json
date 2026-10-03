@@ -1,0 +1,54 @@
+{
+  "format": "rl-connector-resume-v1",
+  "base_head": "bf3ebc0b9e5470b8170c00ff17094882a6adf689",
+  "authoritative_tree": "7afef1a1971df6ae955a78568831c484493de4d9",
+  "incoming_rl": 10,
+  "session_brief": "authoritative/RL10_PROGRESS_AND_CORRECTION_AUDIT_BRIEF.md",
+  "last_verified_frontier": "One bounded RL10 audit complete. No mathematical demotion found; complete RL6\u2013RL9 scope/deletion/edge-extension review. CONTINUE only for one future applicability assessment.",
+  "completed_artifacts": [
+    "COLLATZ_RISK_AND_VERDICT.md",
+    "CORRECTION_AND_LESSON_RECORD.md",
+    "DEPENDENCY_SCOPE_AUDIT.md",
+    "INCOMING_SNAPSHOT.json",
+    "LINEAGE_AND_PRESERVATION.json",
+    "RL10_AUDIT_REPORT.md",
+    "RL11_APPLICABILITY_GATE_BRIEF.md",
+    "SESSION_MATRIX.md",
+    "VERIFICATION_REPORT.md",
+    "VERIFIER_RESULTS.json",
+    "WORK_UNIT_SCOPE.md"
+  ],
+  "next_exact_operation": "Publish/read back isolated complete work checkpoint. Then await finish up for deterministic atomic RL10 closeout; do no further mathematics.",
+  "stop_and_repair_active": false,
+  "unpromoted_or_uncovered": [
+    "Audit findings and prepared RL11 brief unpromoted until closeout",
+    "General D_cyc alpha/core applicability, UP_6, CR_6 and all root residuals remain open",
+    "MK2 proof assessment not performed; original authority remains deferred"
+  ],
+  "failure_lesson_ids": [
+    "FL-001",
+    "FL-002",
+    "FL-003",
+    "FL-004",
+    "FL-005",
+    "FL-006",
+    "FL-007",
+    "FL-008",
+    "FL-009",
+    "FL-010",
+    "FL-011",
+    "FL-012"
+  ],
+  "recovery_mode": "continue through one bounded applicability gate",
+  "changed_input_or_mechanism": "Future RL11: colorfulness-preserving exterior deletion on arbitrary-order D_cyc, selected after three-option comparison",
+  "next_task_bounds": "One MK2 analytic inference; seven star types, three independent-triple placements; zero new computation/source queries by default; no general graph-order bound",
+  "retry_conditions": [
+    "No unchanged within-slice or failed-route replay",
+    "Any MK2 failure/inconclusion requires recorded obstacle and genuinely changed next task"
+  ],
+  "checkpoint_branch": "work/rl10-progress-audit-20261001",
+  "checkpoint_directory": "work-checkpoints/RL10-20261001",
+  "rl11_started": false,
+  "external_independent_certification": false,
+  "user_continue": "Received during active audit; original bounded unit retained without scope enlargement."
+}

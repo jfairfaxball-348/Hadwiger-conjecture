@@ -1,0 +1,11 @@
+{
+  "format": "rl18-promoted-checkpoint-reference-v1",
+  "session": 18,
+  "status": "CLOSED/FROZEN",
+  "base_head": "c6e9ada33dd8107471e20c04afb775cdbc38ddd9",
+  "checkpoint_commit": "f7877892a6f29c17bd17f83371f8188d51153ead",
+  "checkpoint_tree": "7397eab2861717e4ac22541a118bf60ad5de9e6a",
+  "checkpoint_file_count": 11,
+  "candidate_result_promoted": "RL18-P01",
+  "programme": "ACTIVE"
+}

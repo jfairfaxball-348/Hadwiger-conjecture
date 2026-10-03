@@ -1,0 +1,51 @@
+{
+  "format": "rl14-atomic-closeout-v1",
+  "session": 14,
+  "status": "CLOSED/FROZEN",
+  "base_head": "16f7847c90a1b8667c33c3963d125da272217b35",
+  "base_root_tree": "1f3e0bdfc011f77d08fe20c85487aab30a3a382d",
+  "incoming_authority_tree": "eb263feb1f4e59c9c08478c2c1872b78daebf5c9",
+  "checkpoint_commit": "6adb2876c99ee4d3b30050fdc498226fcb32699f",
+  "checkpoint_tree": "d2d64d1662abdfefe45d909a7a4d74b3418672f3",
+  "checkpoint_branch": "work/rl14-leaf-deletion-20261002",
+  "checkpoint_prefix": "work-checkpoints/RL14-20261002/",
+  "frozen_incoming_authority_blob_count": 158,
+  "frozen_checkpoint_blob_count": 10,
+  "successor_session": 15,
+  "successor_brief": "authoritative/RL15_MIXED_KEMPE_COMPONENT_RESOURCE_BRIEF.md",
+  "successor_status": "READY / NOT STARTED",
+  "promoted_results": [
+    "RL14-P01: scoped analytic palette-wise Kempe-lock obstruction"
+  ],
+  "corrections_demotions": [],
+  "m1_exclusion_proved": false,
+  "second_resource_constructed": false,
+  "inherited_universal_obligation_reduced": false,
+  "failure_ids_added": [
+    "FL-017"
+  ],
+  "inherited_failure_ids_preserved": "FL-001..FL-016",
+  "mathematical_numerical_computation": 0,
+  "new_source_queries": 0,
+  "new_source_opens": 0,
+  "frozen_tree_entries": [
+    {
+      "path": "sessions/RL14/incoming",
+      "sha": "eb263feb1f4e59c9c08478c2c1872b78daebf5c9"
+    },
+    {
+      "path": "sessions/RL14/checkpoint",
+      "sha": "d2d64d1662abdfefe45d909a7a4d74b3418672f3"
+    }
+  ],
+  "current_authority_overlays": [
+    "authoritative/START_HERE.md",
+    "authoritative/PROOF_STATE_AND_OPEN_OBLIGATIONS.md",
+    "authoritative/FAILURE_AND_LESSON_LEDGER.md",
+    "authoritative/VERIFICATION_REPORT.md",
+    "authoritative/RL14_LEAF_DELETION_COLORING_BRIEF.md"
+  ],
+  "promotion": "one commit with sole parent base_head; one non-forced main advance",
+  "commit_identity": "intentionally omitted from self-referential manifest; verify by remote readback",
+  "programme": "ACTIVE"
+}

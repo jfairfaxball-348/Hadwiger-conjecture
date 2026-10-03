@@ -10,24 +10,16 @@ barriers, corrections and open obligations.
 
 ## Current handover
 
-RL22 is CLOSED/FROZEN under [sessions/RL22/](sessions/RL22/START_HERE.md).
-It completed one bounded fixed-defect T_2 target-color blocker assessment
-inside one fixed unresolved RL21 repair pattern.
+RL25 is CLOSED/FROZEN under [sessions/RL25/](sessions/RL25/START_HERE.md).
+It completed one bounded fixed cross-resource path-transfer feasibility assessment at the retained non-singleton m=2, A=S frontier.
 
-At the exact fixed pattern X={a}, Y={b}, RL22-P01 records that
-N_H(a) intersect T_2 is empty and therefore Z_a is empty. The corresponding
-a->beta recoloring is safe on S, B and T_2 but is not certified against the
-one-sided leaf x: xa is an edge, xb is a nonedge, and properness does not
-force c(x)!=beta. FL-025 records this method barrier. No named inherited
-mathematical obligation is reduced.
+The audit stops at gate 1: R_1=V(L) union V(P) is nonempty/exterior and R_2=T_2 minus V(P) is exterior, but R_2 nonempty is not certified. Gates 2-6 were not reached; minimum total size was not invoked. FL-028 records the method barrier. No positive theorem or named inherited mathematical obligation is advanced, and no correction/demotion occurs.
 
-RL23 is the unique incoming session through
-[authoritative/RL23_ONE_SIDED_LEAF_COLOR_COMPATIBILITY_BRIEF.md](authoritative/RL23_ONE_SIDED_LEAF_COLOR_COMPATIBILITY_BRIEF.md).
-It is READY / NOT STARTED and works only in the same fixed pattern and same
-fixed coloring, conditional on c(x)=beta.
+RL26 is the unique incoming session through
+[authoritative/RL26_FULL_CRITICAL_PATH_SATURATION_MINOR_BRIEF.md](authoritative/RL26_FULL_CRITICAL_PATH_SATURATION_MINOR_BRIEF.md).
+It is READY / NOT STARTED. It retains the fixed choices, conditions on V(P)=T_2 and assesses one prescribed original-G contraction and at most one fully justified reconstruction proposal.
 
-The programme is active and the root remains full sharp Hadwiger for every
-finite simple graph.
+The programme is active and the root remains full sharp Hadwiger for every finite simple graph.
 
 ## Core repository model
 

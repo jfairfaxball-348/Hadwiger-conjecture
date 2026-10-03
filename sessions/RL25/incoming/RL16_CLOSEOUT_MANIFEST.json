@@ -1,0 +1,46 @@
+{
+  "format": "rl16-atomic-closeout-v1",
+  "session": 16,
+  "status": "CLOSED/FROZEN",
+  "base_head": "fd2853dceff192a6b21f5e2d25c6a60ee8263ed2",
+  "base_root_tree": "d49b211a309ce9444a7c8211b4638082bf7722ef",
+  "incoming_authority_tree": "a9504558311bc2c19ec493449603afcc5662be48",
+  "checkpoint_commit": "c7ed103bd2b297b4d3fa7510624b0ea62f7aa08b",
+  "checkpoint_tree": "74deb938ef4b44fd99bb26715ed01c2a73cc5b5f",
+  "checkpoint_branch": "work/rl16-off-s-minimality-20261002",
+  "checkpoint_prefix": "work-checkpoints/RL16-20261002/",
+  "frozen_incoming_authority_blob_count": 188,
+  "frozen_checkpoint_blob_count": 10,
+  "successor_session": 17,
+  "successor_brief": "authoritative/RL17_STRICT_SHRINK_EXCHANGE_BRIEF.md",
+  "successor_status": "READY / NOT STARTED",
+  "promoted_results": [
+    "RL16-P01: scoped analytic singleton off-S witness coverage defect"
+  ],
+  "corrections_demotions": [],
+  "endpoint_anchoring_proved": false,
+  "contradiction_obtained": false,
+  "m1_exclusion_proved": false,
+  "second_resource_constructed": false,
+  "inherited_universal_obligation_reduced": false,
+  "failure_ids_added": [
+    "FL-019"
+  ],
+  "inherited_failure_ids_preserved": "FL-001..FL-018",
+  "mathematical_numerical_computation": 0,
+  "new_source_queries": 0,
+  "new_source_opens": 0,
+  "frozen_tree_entries": [
+    {
+      "path": "sessions/RL16/incoming",
+      "sha": "a9504558311bc2c19ec493449603afcc5662be48"
+    },
+    {
+      "path": "sessions/RL16/checkpoint",
+      "sha": "74deb938ef4b44fd99bb26715ed01c2a73cc5b5f"
+    }
+  ],
+  "promotion": "one commit with sole parent base_head; one non-forced main advance",
+  "commit_identity": "intentionally omitted from self-referential manifest; verify by remote readback",
+  "programme": "ACTIVE"
+}

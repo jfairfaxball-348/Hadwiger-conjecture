@@ -1,0 +1,55 @@
+{
+  "format": "rl15-checkpoint-manifest-v1",
+  "session": 15,
+  "status": "FINAL ISOLATED CHECKPOINT / PRE-CLOSEOUT",
+  "base_head": "9aa0e881944d6ac6b59ed015b4f184b7c0909c33",
+  "branch": "work/rl15-mixed-kempe-20261002",
+  "checkpoint_commit": "f74cf303bd63eb5ffdf7fca6f59d9c7b05a111ee",
+  "checkpoint_tree": "19b8b92f2253fa506928bc42a311151fddb558d4",
+  "prefix": "work-checkpoints/RL15-20261002/",
+  "expected_total_files": 10,
+  "body_files": [
+    {
+      "name": "FAILURE_AND_LESSON_LEDGER_APPENDIX.md",
+      "sha": "487275dcf209cf94ed96385441a0bccf1834427a"
+    },
+    {
+      "name": "INCOMING_SNAPSHOT.json",
+      "sha": "e4b87f269d0df3aa603f0540061ebc427c4f3902"
+    },
+    {
+      "name": "MIXED_KEMPE_COMPONENT_RESOURCE_REPORT.md",
+      "sha": "0d73db6fccc2479d64c6a62e7d7216f388505df3"
+    },
+    {
+      "name": "NEXT_RECOVERY_TASK.md",
+      "sha": "7548afa52c9bbcc236008300820d0ec230b33fcd"
+    },
+    {
+      "name": "PROOF_STATE_AND_RESIDUAL_LEDGER.md",
+      "sha": "5f0fb02a224b3bfc8d1842b73aff246f3570c9fc"
+    },
+    {
+      "name": "RESUME_STATE.json",
+      "sha": "8e492a3e2b89a6983132c6eccd38a10aca84597b"
+    },
+    {
+      "name": "SOURCE_QUESTION_AND_LIMITS.md",
+      "sha": "ad6927d752781d6965e01f585f7ebf149a5d9c33"
+    },
+    {
+      "name": "START_HERE.md",
+      "sha": "c81e0bee1c7f4749f555dd15e46486ed6c166cb3"
+    },
+    {
+      "name": "VERIFICATION_REPORT.md",
+      "sha": "428f2dea5acad1f2d57cb7dcc1854cd9383a7a9e"
+    },
+    {
+      "name": "WORK_UNIT_SCOPE.md",
+      "sha": "f2a97531d0597627d0abaccad48a158f2da5aa45"
+    }
+  ],
+  "result": "first endpoint-incidence implication not proved; scoped component dichotomy established",
+  "programme": "ACTIVE"
+}

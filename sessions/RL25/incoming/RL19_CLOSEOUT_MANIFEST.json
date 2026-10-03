@@ -1,0 +1,39 @@
+{
+  "format": "rl19-atomic-closeout-v1",
+  "session": 19,
+  "status": "CLOSED/FROZEN",
+  "base_head": "fc61fb68165e341de9e15cf3b7de63232ffc295b",
+  "base_root_tree": "a26473913185839cc96a92f89c41360dc89d9bb3",
+  "incoming_authority_tree": "dd8be48961ea4cc23693024cb6160013036f08b6",
+  "checkpoint_commit": "cdf5d8abd391ebf43a69aca9e3438c0047d1fbfc",
+  "checkpoint_tree": "eacbdaabfd6f3dca505acf0c6d5d90984dc7bcb5",
+  "checkpoint_branch": "work/rl19-articulation-pruning-20261002",
+  "successor_session": 20,
+  "successor_brief": "authoritative/RL20_PROGRESS_AND_CORRECTION_AUDIT_BRIEF.md",
+  "successor_status": "READY / NOT STARTED",
+  "promoted_results": [
+    "RL19-P01 two-sided articulation defect localization and vertex-disjointness at exact disconnected RL18-P01 scope"
+  ],
+  "corrections_demotions": [],
+  "named_obligation_reduced": false,
+  "failure_ids_added": [
+    "FL-022"
+  ],
+  "inherited_failure_ids_preserved": "FL-001..FL-021",
+  "mathematical_numerical_computation": 0,
+  "new_source_queries": 0,
+  "new_source_opens": 0,
+  "frozen_tree_entries": [
+    {
+      "path": "sessions/RL19/incoming",
+      "sha": "dd8be48961ea4cc23693024cb6160013036f08b6"
+    },
+    {
+      "path": "sessions/RL19/checkpoint",
+      "sha": "eacbdaabfd6f3dca505acf0c6d5d90984dc7bcb5"
+    }
+  ],
+  "promotion": "one commit with sole parent base_head; one non-forced main advance",
+  "commit_identity": "intentionally omitted from self-referential manifest; verify by remote readback",
+  "programme": "ACTIVE"
+}

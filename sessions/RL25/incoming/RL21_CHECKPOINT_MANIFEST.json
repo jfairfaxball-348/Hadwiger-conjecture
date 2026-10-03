@@ -1,0 +1,32 @@
+{
+  "format": "rl21-checkpoint-manifest-v1",
+  "session": 21,
+  "status": "FINAL ISOLATED CHECKPOINT / PRE-CLOSEOUT",
+  "base_head": "afd7414ab547adc3781b3ec67989464a6c9ce0d8",
+  "branch": "work/rl21-m2-pair-leaf-pruning-20261002",
+  "prefix": "work-checkpoints/RL21-20261002/",
+  "pre_manifest_tip": "b0e77a589dab3e2ef4ebb0a6ad1e95b0d64927ac",
+  "body_files": [
+    "WORK_UNIT_SCOPE.md",
+    "INCOMING_SNAPSHOT.json",
+    "M2_S_COMPLETE_PAIR_LEAF_PRUNING_REPORT.md",
+    "PROOF_STATE_AND_RESIDUAL_LEDGER.md",
+    "FAILURE_AND_LESSON_LEDGER_APPENDIX.md",
+    "NEXT_RECOVERY_TASK.md",
+    "SOURCE_QUESTION_AND_LIMITS.md",
+    "VERIFICATION_REPORT.md",
+    "START_HERE.md",
+    "RESUME_STATE.json"
+  ],
+  "result": "On a non-singleton fixed T_1 side, leaf deletion preserves pq and forces one cyclic defect. Its endpoints have exactly seven x/T_2 repair patterns. Two patterns yield a direct five-color boundary compression; the other five stop at a missing T_2 target-color exclusion. A singleton fixed T_1 side blocks the leaf gate.",
+  "candidate_results": [
+    "RL21-P01",
+    "RL21-P02"
+  ],
+  "candidate_failure_event": "FL-024",
+  "named_obligation_reduced": false,
+  "mathematical_numerical_computation": 0,
+  "new_source_queries": 0,
+  "new_source_opens": 0,
+  "programme": "ACTIVE"
+}

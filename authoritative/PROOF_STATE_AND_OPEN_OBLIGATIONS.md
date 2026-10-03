@@ -1,3 +1,23 @@
+# Current proof state after RL25
+
+**RL25 CLOSED/FROZEN. RL26 is the sole incoming full-critical path-saturation minor input-development assessment, READY / NOT STARTED.**
+
+RL25 promotes no new positive mathematical theorem. It records one scoped analytic stopping result and method barrier, with same-worker review only.
+
+At the exact retained non-singleton m=2, A=S fixed-choice setup, the sole candidate is R_1=V(L) union V(P), R_2=T_2 minus V(P), F'={R_1,R_2}. L is the fixed x-p path in Q_1; y and the simple q-y path P were each fixed exactly once. The selected defect pattern remains X={a},Y={b}.
+
+At gate 1, R_1 is nonempty and exterior and R_2 is exterior. The missing implication is R_2 nonempty, equivalently V(P) proper subset T_2. Connectedness supplies a path, not a certified vertex outside that fixed path. If V(P)=T_2, R_2 is empty; neither occurrence in a full C_7 graph nor logical independence from all full-critical axioms is asserted.
+
+Gates 2-6 are NOT REACHED. No new minimum-total-size invocation or earlier contradiction is obtained. FL-028 records the barrier and retry condition. No smaller valid resource family, m=2 exclusion, boundary compression, rooted model or counterexample follows.
+
+Correction/demotion: NONE. Preserve RL24/FL-027, RL23/FL-026, RL22-P01/FL-025, RL21-P01/P02/FL-024 and the RL20 NONE result/FL-023 exactly. The m=1 failed-anchor/private-endpoint line is not resumed.
+
+No named inherited mathematical obligation is genuinely reduced. The full m=2, A=S branch remains open, together with m=1, m=3, m=4, BR-00, BR-01 universal coverage, general UP_6, CR_6, ordinary order seven, every higher order and full sharp Hadwiger. All inherited source/certificate limits, simultaneous compatibility, sharpness conditions and unbounded residual parameters remain unchanged.
+
+RL26 only develops the prepared fixed-saturation contraction input under RL26_FULL_CRITICAL_PATH_SATURATION_MINOR_BRIEF.md. It must certify a legitimate proper original-G minor before consuming its coloring and must explicitly justify any reconstruction. No RL26 assessment occurred during closeout.
+
+## Preserved complete pre-RL25 canonical state
+
 # Current proof state after RL24
 
 **RL24 CLOSED/FROZEN. RL25 is the sole incoming bounded cross-resource path-transfer family-exchange feasibility assessment, READY / NOT STARTED.**

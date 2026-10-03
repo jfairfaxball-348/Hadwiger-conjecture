@@ -1,0 +1,39 @@
+{
+  "format": "rl18-atomic-closeout-v1",
+  "session": 18,
+  "status": "CLOSED/FROZEN",
+  "base_head": "c6e9ada33dd8107471e20c04afb775cdbc38ddd9",
+  "base_root_tree": "d4dde49cf9dfa4b460e06e7b52dc08da3b29d701",
+  "incoming_authority_tree": "173c23e6b37b1d95784feaf6dd89e2b55256c78d",
+  "checkpoint_commit": "f7877892a6f29c17bd17f83371f8188d51153ead",
+  "checkpoint_tree": "7397eab2861717e4ac22541a118bf60ad5de9e6a",
+  "checkpoint_branch": "work/rl18-inside-t-essentiality-20261002",
+  "successor_session": 19,
+  "successor_brief": "authoritative/RL19_ARTICULATION_SIDE_PRUNING_BRIEF.md",
+  "successor_status": "READY / NOT STARTED",
+  "promoted_results": [
+    "RL18-P01 coverage-essential-or-articulation dichotomy at exact conditional y∈T scope"
+  ],
+  "corrections_demotions": [],
+  "named_obligation_reduced": false,
+  "failure_ids_added": [
+    "FL-021"
+  ],
+  "inherited_failure_ids_preserved": "FL-001..FL-020",
+  "mathematical_numerical_computation": 0,
+  "new_source_queries": 0,
+  "new_source_opens": 0,
+  "frozen_tree_entries": [
+    {
+      "path": "sessions/RL18/incoming",
+      "sha": "173c23e6b37b1d95784feaf6dd89e2b55256c78d"
+    },
+    {
+      "path": "sessions/RL18/checkpoint",
+      "sha": "7397eab2861717e4ac22541a118bf60ad5de9e6a"
+    }
+  ],
+  "promotion": "one commit with sole parent base_head; one non-forced main advance",
+  "commit_identity": "intentionally omitted from self-referential manifest; verify by remote readback",
+  "programme": "ACTIVE"
+}
