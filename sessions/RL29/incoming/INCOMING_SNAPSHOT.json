@@ -1,0 +1,18 @@
+{
+  "format": "rl29-incoming-snapshot-v1",
+  "base_head": "ad222da6f4747d019af4ea0be7897920e5a5b355",
+  "incoming_rl": 29,
+  "authoritative_blobs": {
+    "AGENTS.md": "72ad349e4744718651fec497dbd4cf967c19566d",
+    "authoritative/START_HERE.md": "ead48c0faf67fbeac05878b2f7e3d95190691cba",
+    "authoritative/RL29_BRIEF.md": "07d8b4aaaf3b4edefbde3b532c3395239eec3210",
+    "authoritative/RL29_STATE.md": "de9b78cbd0773ba7a4e4cb59290fc66bc45824df",
+    "authoritative/RL28_EDGE_CRITICAL_EXTRA_NEIGHBOR_REPORT.md": "c7f54a088b9245ffc362d50393cae9d47f4b8cdb",
+    "authoritative/RL28_PROOF_STATE_AND_RESIDUAL_LEDGER.md": "a72ab2f878531aeae0e969e086b6989f114acddf",
+    "authoritative/RL28_FAILURE_AND_LESSON_LEDGER_APPENDIX.md": "daf82f733c814acff95f372822a2dd630bf8d230",
+    "authoritative/RL28_SESSION_STATE_AND_RL29_KICKOFF.md": "bf64417bfc19de24fbcf9463f96246499fe058cc",
+    "authoritative/PROOF_STATE_AND_OPEN_OBLIGATIONS.md": "341111a7e01c89a58abd4e4f27f757e06e0479d7",
+    "authoritative/FAILURE_AND_LESSON_LEDGER.md": "d2c2034b486944b491698be69e291004e8d39548"
+  },
+  "programme": "ACTIVE"
+}

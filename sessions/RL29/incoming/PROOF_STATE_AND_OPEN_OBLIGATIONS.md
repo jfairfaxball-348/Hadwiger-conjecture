@@ -1,21 +1,3 @@
-# Current proof state after RL29
-
-**RL29 CLOSED/FROZEN. RL30 is the sole incoming mandatory progress/correction audit, READY / NOT STARTED.**
-
-RL29 promotes no positive mathematical theorem. At the exact fixed conditional non-singleton m=2, A=S scope under V(P)=T_2, retain the same fixed A, K, x, z and xz. RL27's inclusion-minimality of K is by induced vertex set: it certifies A-list-colorability of every K-u, but it does not classify the same vertex set after deleting only xz. Current retained authority therefore certifies neither A-list-colorability nor non-A-list-colorability of K-xz.
-
-Because the edge-deletion status is undecided, RL29 fixes no A-list coloring phi of K-xz; the equality phi(x)=phi(z) is not reached. FL-032 records this fixed-edge list-essentiality barrier. The prepared one-coloring extension test from K-x is only a future recovery candidate and is not a current premise.
-
-RL28-P01/P02 and FL-031 remain exact. RL27-P01/P02 and FL-030, RL26/FL-029, RL25/FL-028, RL24/FL-027, RL23/FL-026, RL22-P01/FL-025, RL21-P01/P02/FL-024 and RL20 NONE/FL-023 remain exact.
-
-There is no contradiction excluding V(P)=T_2. RL25 gate 1 remains unresolved and gates 2-6 remain NOT REACHED. No minimum-total-size conclusion is activated by RL29.
-
-Correction/demotion: NONE. No named inherited mathematical obligation is genuinely reduced. The full m=2, A=S branch remains open, as do m=1, m=3, m=4, BR-00, BR-01 universal coverage, general UP_6, CR_6, ordinary order seven, every higher order, and full sharp Hadwiger.
-
-RL30 must audit exactly RL20-RL29 and current authority under docs/TENTH_SESSION_PROGRESS_AUDIT.md before further theorem discovery.
-
-## Preserved complete pre-RL29 canonical state
-
 # Current proof state after RL27
 
 **RL27 CLOSED/FROZEN. RL28 is the sole incoming bounded edge-critical extra-neighbor assessment, READY / NOT STARTED.**
