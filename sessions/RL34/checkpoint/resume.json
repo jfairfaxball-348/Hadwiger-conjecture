@@ -1,0 +1,23 @@
+{
+  "session": "RL34",
+  "status": "CLOSED/FROZEN",
+  "base_head": "0a669be4062e0f569b746012fb0e705723f6a441",
+  "base_tree": "b75916bb8840fc53b1ba9f706c5ee5f353351e7d",
+  "promoted": [
+    "RL34-P01"
+  ],
+  "certified_targets": [
+    "M3-SATURATION-LEAF-BLOCKER"
+  ],
+  "open": [
+    "M3-CORE",
+    "m=3, A=S",
+    "full sharp Hadwiger conjecture"
+  ],
+  "correction_demotion": "NONE",
+  "named_inherited_universal_obligations_reduced": "NONE",
+  "failure_lesson": "FL-037",
+  "successor": "RL35",
+  "successor_brief": "authoritative/RL35_LEAF_CRITICAL_BLOCKER_CYCLIC_ORDER_BRIEF.md",
+  "programme": "ACTIVE"
+}
