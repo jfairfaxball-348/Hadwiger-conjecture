@@ -1,0 +1,68 @@
+{
+  "format": "rl-isolated-checkpoint-manifest-v1",
+  "incoming_rl": 28,
+  "status": "OPEN / NOT PROMOTED",
+  "base_head": "3a90dd79fc56e9238c10229c0a32e3602bc16924",
+  "branch": "work/rl28-edge-critical-extra-neighbor-20261003",
+  "checkpoint_path": "work-checkpoints/RL28-20261003",
+  "conditional_scope": "fixed non-singleton m=2, A=S choices; V(P)=T_2; additionally x in K with one fixed z in N_K(x)\\{w_1}; no realization claim",
+  "branch_mechanism": "delete exactly xz in original G; one proper six-coloring d of G-xz",
+  "edge_equality": "PASS: d(x)=d(z)",
+  "fixed_consequence": "C28-X: d(N_G(x)\\{z})=[6]\\{d(x)}",
+  "fixed_consequence_status": "PASS",
+  "first_missing_implication": "No retained bridge identifies d with fixed quotient coloring c or localizes d-color saturation witnesses to R_1/K, so no internal-degree upper bound at x follows.",
+  "graph_level_contradiction": false,
+  "saturation_excluded": false,
+  "named_obligations_reduced": [],
+  "correction_demotion": "NONE",
+  "candidate_results": [
+    "RL28-P01",
+    "RL28-P02/C28-X"
+  ],
+  "candidate_failure_lesson": "FL-031",
+  "prepared_recovery": "same fixed K,x,z; test A-list-essentiality of edge xz inside K",
+  "new_mathematical_sources": 0,
+  "mathematical_numerical_work": 0,
+  "main_unchanged_after_core_readback": true,
+  "core_checkpoint_head_before_verification": "2268381396bcf17e7f715c35e6e15d75af40f385",
+  "verification_commit": "167ce3baea80f64a30713533363dde1d14b265b2",
+  "artifacts": [
+    [
+      "README.md",
+      "b8cfda938d45c8a7adf03b45f3fe299b443501cf"
+    ],
+    [
+      "WORK_UNIT_SCOPE.md",
+      "393a2020aacb62e91426f15415da85b7a7a37ea6"
+    ],
+    [
+      "EDGE_CRITICAL_EXTRA_NEIGHBOR_REPORT.md",
+      "aa750c358914aa7d96d9ca98ac687061f5f4e387"
+    ],
+    [
+      "PROOF_STATE_AND_RESIDUAL_LEDGER.md",
+      "f96fc694592be360b3ca22ccdb1fed7d0067ba73"
+    ],
+    [
+      "FAILURE_AND_LESSON_LEDGER_APPENDIX.md",
+      "a318b09491f1c6e91cad975320b9026ee2646a94"
+    ],
+    [
+      "PREPARED_RECOVERY_TASK.md",
+      "eea724d2655daebf58fe98652715187653290dd2"
+    ],
+    [
+      "SOURCE_QUESTION_AND_LIMITS.md",
+      "125c61bd4bc07fd19bb1a2990acb2c65594d8604"
+    ],
+    [
+      "WORK_RESUME_STATE.json",
+      "506e00728ee493bb4e13065fafc97b23cc28ea29"
+    ],
+    [
+      "INCOMING_SNAPSHOT.json",
+      "59604fadb4aae4673948b1bd7f68057be50eb1a4"
+    ]
+  ],
+  "note": "Manifest excludes its own blob identity. Default-branch authority remains unchanged until explicit closeout."
+}
