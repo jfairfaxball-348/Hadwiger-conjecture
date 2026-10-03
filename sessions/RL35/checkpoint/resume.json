@@ -1,0 +1,13 @@
+{
+  "session": "RL35",
+  "status": "CLOSED/FROZEN",
+  "base_head": "f3f8e32288be74f08015016e4a25a64463c822ca",
+  "base_tree": "eb6608bfd97b34637a45c89bd676021b415bc60a",
+  "promoted": ["RL35-P01"],
+  "certified_targets": ["M3-LEAF-BLOCKER-ORDER"],
+  "correction_demotion": "NONE",
+  "failure_lesson": "FL-038",
+  "successor": "RL36",
+  "successor_brief": "authoritative/RL36_NAMED_BLOCKER_ENDPOINT_OVERLAP_BRIEF.md",
+  "programme": "ACTIVE"
+}
