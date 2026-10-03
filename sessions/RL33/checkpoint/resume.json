@@ -1,0 +1,22 @@
+{
+  "session": "RL33",
+  "status": "CLOSED/FROZEN",
+  "base_head": "29af9c1b62beeef4c304b67a1183ceccfac2283d",
+  "promoted": [
+    "RL33-P01"
+  ],
+  "certified_targets": [
+    "M3-MISS-CLOSURE"
+  ],
+  "open": [
+    "M3-CORE",
+    "m=3, A=S",
+    "full sharp Hadwiger conjecture"
+  ],
+  "correction_demotion": "NONE",
+  "named_inherited_universal_obligations_reduced": "NONE",
+  "failure_lesson": "FL-036",
+  "successor": "RL34",
+  "successor_brief": "authoritative/RL34_FINAL_SATURATION_LEAF_BLOCKER_BRIEF.md",
+  "programme": "ACTIVE"
+}
