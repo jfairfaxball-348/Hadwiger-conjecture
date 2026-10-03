@@ -1,3 +1,25 @@
+# Current proof state after RL27
+
+**RL27 CLOSED/FROZEN. RL28 is the sole incoming bounded edge-critical extra-neighbor assessment, READY / NOT STARTED.**
+
+RL27 promotes two results only at their exact conditional fixed-choice scopes, with same-worker review only.
+
+RL27-P01: retain the exact non-singleton m=2, A=S setup under V(P)=T_2, the same R_1, proper minor J=G/R_1, and the same one fixed proper six-coloring c of J from RL26. Define A(u)=[6]\c(N_G(u)\R_1). Then G[R_1] has no proper A-list coloring. A hypothetical A-list coloring combines with c outside R_1: internal R_1 edges are proper by the list coloring, outside-outside edges are proper under c, and each crossing edge uz is proper because the color assigned to u is excluded from c(N_G(u)\R_1). This would six-color original G, contradicting chi(G)=7.
+
+RL27-P02: fix once and for all one inclusion-minimal induced subgraph K of G[R_1] that is not A-list-colorable. For every u in K, K-u has a proper A-list coloring. If |A(u)|>d_K(u), at most d_K(u) colors are used on its K-neighbors, leaving one color of A(u) available to extend the coloring to u, contradiction. Hence |A(u)|<=d_K(u) for every u in K. Since gamma belongs to every A(u), d_K(u)>=1.
+
+RL27 fixed exactly one endpoint/path consequence C27-X: if x belongs to K, attempt to force d_K(x)=1 and hence A(x)={gamma}. The required upper bound is not certified. x being a leaf of Q_1 controls only tree edges, and x being the endpoint of W controls only path edges; neither says W or Q_1 is induced or excludes additional original-G edges from x to other vertices of R_1. FL-030 records this method barrier.
+
+There is no explicit contradiction excluding V(P)=T_2. RL25's first nonemptiness obstacle remains unresolved; gates 2-6 remain NOT REACHED and minimum total size is not invoked.
+
+Correction/demotion: NONE. Preserve RL26/FL-029, RL25/FL-028, RL24/FL-027, RL23/FL-026, RL22-P01/FL-025, RL21-P01/P02/FL-024 and RL20 NONE/FL-023 exactly. The m=1 failed-anchor/private-endpoint line remains suspended.
+
+No named inherited mathematical obligation is genuinely reduced. The full m=2, A=S branch remains open, together with m=1, m=3, m=4, BR-00, BR-01 universal coverage, general UP_6, CR_6, ordinary order seven, every higher order and full sharp Hadwiger. All source/certificate limits, simultaneous-compatibility requirements, sharpness conditions and unbounded residual parameters remain unchanged.
+
+RL28 develops only the prepared one-edge critical extra-neighbor mechanism under RL28_EDGE_CRITICAL_EXTRA_NEIGHBOR_BRIEF.md. No RL28 mathematics occurred during closeout.
+
+## Preserved complete pre-RL27 canonical state
+
 # Current proof state after RL26
 
 **RL26 CLOSED/FROZEN. RL27 is the sole incoming fixed-color minimal list-obstruction assessment, READY / NOT STARTED.**

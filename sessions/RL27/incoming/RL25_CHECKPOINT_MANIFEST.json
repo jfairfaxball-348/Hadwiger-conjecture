@@ -1,0 +1,87 @@
+{
+  "format": "rl-isolated-checkpoint-manifest-v1",
+  "incoming_rl": 25,
+  "status": "OPEN / NOT PROMOTED",
+  "base_head": "1f9725c0ea44d91c107f8bbc02dd881aa62cb3a3",
+  "base_root_tree": "ef0120884c93f7723e96ba40dd4b711b3c07bd57",
+  "authoritative_tree": "294fa569486e0388be1e95a0d05567037267780f",
+  "branch": "work/rl25-cross-resource-path-transfer-20261002",
+  "checkpoint_path": "work-checkpoints/RL25-20261002",
+  "gate_stopped": 1,
+  "gates_not_reached": [
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "minimum_total_size_invocations": 0,
+  "named_obligations_reduced": [],
+  "candidate_failure_lesson": "FL-028",
+  "new_mathematical_sources": 0,
+  "mathematical_numerical_work": 0,
+  "planned_change": "add checkpoint directory only; preserve all original root entries",
+  "artifacts": [
+    {
+      "path": "CROSS_RESOURCE_PATH_TRANSFER_EXCHANGE_REPORT.md",
+      "size_bytes": 6521,
+      "git_blob_sha": "e479e380bdab63e06b499a5b8cf53573dda3b4ce",
+      "sha256": "7632e8fcb57b64ad64a5008d809421c74b16537d02a6aeb2154f7d387b4f80ae"
+    },
+    {
+      "path": "FAILURE_AND_LESSON_LEDGER_APPENDIX.md",
+      "size_bytes": 3271,
+      "git_blob_sha": "8907114f9f9dcfcd6f736ea841f8eb23ccb2016c",
+      "sha256": "c6fb586851cfd54d2fe0ef8afae143644c87138303c3b1492054c30196ea9c71"
+    },
+    {
+      "path": "INCOMING_SNAPSHOT.json",
+      "size_bytes": 3889,
+      "git_blob_sha": "30aa5fb01dab93bdac5a2acc7a56c4c2b3466f61",
+      "sha256": "0856f1868b67add1d5fb3279a0978e79eeb99fed35ad5a3f85b080c98626d354"
+    },
+    {
+      "path": "PREPARED_RECOVERY_TASK.md",
+      "size_bytes": 3154,
+      "git_blob_sha": "c93685e4838d609c94d9f1aae7fac4d10bba2cd5",
+      "sha256": "697c22a3802c96498117d66145cb9f555e9020124eeb27fcee85756f7f987c0f"
+    },
+    {
+      "path": "PROOF_STATE_AND_RESIDUAL_LEDGER.md",
+      "size_bytes": 2106,
+      "git_blob_sha": "ec98312759d3ae85da9d9c8a1b3dbd2758897d42",
+      "sha256": "c14b11dea171d42a1478fb4ddf098f9bfc0094355470bb61e99b7f28e0e97ba2"
+    },
+    {
+      "path": "README.md",
+      "size_bytes": 1306,
+      "git_blob_sha": "5568a630ad4af3ebfd8794a7fa19889a8edaea4d",
+      "sha256": "f0ef7e3cb6b71f8f2a7bcbca1eba72dd7a08d526609c1f070c2f15e6f548ca7e"
+    },
+    {
+      "path": "SOURCE_QUESTION_AND_LIMITS.md",
+      "size_bytes": 1533,
+      "git_blob_sha": "a1f3a8cde0d0e816636dc3e0ba58599c838e2475",
+      "sha256": "f85ec6a6b1e42e7f3381054c75f0568f9c44e150bc2b3db33db5146ab0c46561"
+    },
+    {
+      "path": "WORK_RESUME_STATE.json",
+      "size_bytes": 3823,
+      "git_blob_sha": "cab46bb3ae632f63d49812c8e94eb3bb51c9ab32",
+      "sha256": "98b5d5c704afcf7429431a69ccc3039439b490d589b22fcaa259a12e60229717"
+    },
+    {
+      "path": "WORK_UNIT_SCOPE.md",
+      "size_bytes": 4074,
+      "git_blob_sha": "7302ad5a6d667ed17e3178ff6bac69f8fd4cc6d0",
+      "sha256": "7e4070ce2fbd71d18fd62cf3ca304df4cd187790ae6a4a0107992df84a1e665d"
+    },
+    {
+      "path": "WORK_VERIFICATION_REPORT.md",
+      "size_bytes": 3856,
+      "git_blob_sha": "218233e3d5da08f5d2bb9c2cebacb7dd124beeaf",
+      "sha256": "644802c70f16a8a0ec05443e455663436b207cd119210b28b373b045cd49347b"
+    }
+  ],
+  "self_hash_policy": "manifest excluded from its own artifact list; remote tree verifies its blob separately"
+}

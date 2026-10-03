@@ -1,0 +1,39 @@
+{
+  "format": "rl22-atomic-closeout-v1",
+  "session": 22,
+  "status": "CLOSED/FROZEN",
+  "base_head": "33176e4691c1a657ae114cdd058664c544f81a40",
+  "base_root_tree": "e47c46034dd3b2cc054917ddad637139d993c181",
+  "incoming_authority_tree": "91094ea056dac2ea959b13983c434382140c38a0",
+  "checkpoint_commit": "d0959684666788f6469a9a1180cbb564b2e5dc1f",
+  "checkpoint_tree": "ca6766e01d0dd3f7c2ca5edd23d8632668c6a4af",
+  "checkpoint_branch": "work/rl22-fixed-defect-target-color-blocker-20261002",
+  "successor_session": 23,
+  "successor_brief": "authoritative/RL23_ONE_SIDED_LEAF_COLOR_COMPATIBILITY_BRIEF.md",
+  "successor_status": "READY / NOT STARTED",
+  "promoted_results": [
+    "RL22-P01: at exact fixed RL21 repair pattern X={a},Y={b}, Z_a=empty"
+  ],
+  "corrections_demotions": [],
+  "named_obligation_reduced": false,
+  "failure_ids_added": [
+    "FL-025"
+  ],
+  "inherited_failure_ids_preserved": "FL-001..FL-024",
+  "mathematical_numerical_computation": 0,
+  "new_source_queries": 0,
+  "new_source_opens": 0,
+  "frozen_tree_entries": [
+    {
+      "path": "sessions/RL22/incoming",
+      "sha": "91094ea056dac2ea959b13983c434382140c38a0"
+    },
+    {
+      "path": "sessions/RL22/checkpoint",
+      "sha": "ca6766e01d0dd3f7c2ca5edd23d8632668c6a4af"
+    }
+  ],
+  "promotion": "one commit with sole parent base_head; one non-forced main advance",
+  "commit_identity": "intentionally omitted from self-referential manifest; verify by remote readback",
+  "programme": "ACTIVE"
+}

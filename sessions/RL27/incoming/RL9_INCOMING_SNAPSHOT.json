@@ -1,0 +1,743 @@
+{
+  "format": "rl9-incoming-snapshot-v1",
+  "base_head": "0eb090e5986d909046e00b83085cb0afb5f54116",
+  "expected_predecessor": "0eb090e5986d909046e00b83085cb0afb5f54116",
+  "incoming_rl": 9,
+  "session_brief": "authoritative/RL9_HELPER_CLIQUE_EXTRACTION_BRIEF.md",
+  "authority_tree": "01ee75abad5aff6cc34796e8331ae4114f6ae3c7",
+  "authority_blobs": [
+    {
+      "path": "AUXILIARY_COUNTERMODEL.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e215470e7b210738c14249c4e5e92b803874f2c1",
+      "size": 3282,
+      "url": "https://api.github.com/repos/jfairfaxball-348/Hadwiger-conjecture/git/blobs/e215470e7b210738c14249c4e5e92b803874f2c1"
+    },
+    {
+      "path": "BRIDGE_LEDGER.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7e4a93f6fb71606fdb3dedb038d5002ae3a34fd4",
+      "size": 9392,
+      "url": "https://api.github.com/repos/jfairfaxball-348/Hadwiger-conjecture/git/blobs/7e4a93f6fb71606fdb3dedb038d5002ae3a34fd4"
+    },
+    {
+      "path": "COLLATZ_FAILURE_REVIEW.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cc50b241b5ca464cd078ac6cff6aa1ea573dff45",
+      "size": 5114,
+      "url": "https://api.github.com/repos/jfairfaxball-348/Hadwiger-conjecture/git/blobs/cc50b241b5ca464cd078ac6cff6aa1ea573dff45"
+    },
+    {
+      "path": "DEPENDENCY_MAP.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8464e2ae873c4fd33ec24cd8cdd54e72dceb0460",
+      "size": 5645,
+      "url": "https://api.github.com/repos/jfairfaxball-348/Hadwiger-conjecture/git/blobs/8464e2ae873c4fd33ec24cd8cdd54e72dceb0460"
+    },
+    {
+      "path": "FAILURE_AND_LESSON_LEDGER.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "94b393bae60387707e45a2744ba7e06e9d333012",
+      "size": 38046,
+      "url": "https://api.github.com/repos/jfairfaxball-348/Hadwiger-conjecture/git/blobs/94b393bae60387707e45a2744ba7e06e9d333012"
+    },
+    {
+      "path": "FALSIFICATION_REPORT.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e481b183f7e1e37821cf8ab584704708417eb311",
+      "size": 7236,
+      "url": "https://api.github.com/repos/jfairfaxball-348/Hadwiger-conjecture/git/blobs/e481b183f7e1e37821cf8ab584704708417eb311"
+    },
+    {
+      "path": "INCOMING_SNAPSHOT.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3b84cdce595540bab9c1dfe7c13ab4e0e646f7f9",
+      "size": 3892,
+      "url": "https://api.github.com/repos/jfairfaxball-348/Hadwiger-conjecture/git/blobs/3b84cdce595540bab9c1dfe7c13ab4e0e646f7f9"
+    },
+    {
+      "path": "MECHANISM_SCOPE.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1cbca823d864288a1ea58b1b2efffbdbe58231b4",
+      "size": 2102,
+      "url": "https://api.github.com/repos/jfairfaxball-348/Hadwiger-conjecture/git/blobs/1cbca823d864288a1ea58b1b2efffbdbe58231b4"
+    },
+    {
+      "path": "PROOF_STATE_AND_OPEN_OBLIGATIONS.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3e77761bbb4d4198699417816d5c332f4ea18253",
+      "size": 19460,
+      "url": "https://api.github.com/repos/jfairfaxball-348/Hadwiger-conjecture/git/blobs/3e77761bbb4d4198699417816d5c332f4ea18253"
+    },
+    {
+      "path": "PROOF_STATE_AND_RESIDUAL_LEDGER.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "20b381f13a6498ace35bf69be59ef9e8cbe16549",
+      "size": 4567,
+      "url": "https://api.github.com/repos/jfairfaxball-348/Hadwiger-conjecture/git/blobs/20b381f13a6498ace35bf69be59ef9e8cbe16549"
+    },
+    {
+      "path": "RECOVERY_PROCESS_AMENDMENT.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a3dd3c4fbb94582dba0224a6b3c300784cd177d2",
+      "size": 6439,
+      "url": "https://api.github.com/repos/jfairfaxball-348/Hadwiger-conjecture/git/blobs/a3dd3c4fbb94582dba0224a6b3c300784cd177d2"
+    },
+    {
+      "path": "RL3_ROADMAP.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "abe4968ac8675eb9eb3e68d1b3279219c1685ce1",
+      "size": 7472,
+      "url": "https://api.github.com/repos/jfairfaxball-348/Hadwiger-conjecture/git/blobs/abe4968ac8675eb9eb3e68d1b3279219c1685ce1"
+    },
+    {
+      "path": "RL3_SESSION_STATE_AND_RL4_KICKOFF.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "222f5ffbd92f83f34b320067f69db58ed8688151",
+      "size": 609,
+      "url": "https://api.github.com/repos/jfairfaxball-348/Hadwiger-conjecture/git/blobs/222f5ffbd92f83f34b320067f69db58ed8688151"
+    },
+    {
+      "path": "RL3_TOP_DOWN_ROADMAP_BRIEF.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f68f5d0ec0366780b858eec02c52f0bd72927001",
+      "size": 661,
+      "url": "https://api.github.com/repos/jfairfaxball-348/Hadwiger-conjecture/git/blobs/f68f5d0ec0366780b858eec02c52f0bd72927001"
+    },
+    {
+      "path": "RL4_ADMISSIBILITY_REPORT.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "28907e747225de58ea17e0f00831438a4d3671c4",
+      "size": 11475,
+      "url": "https://api.github.com/repos/jfairfaxball-348/Hadwiger-conjecture/git/blobs/28907e747225de58ea17e0f00831438a4d3671c4"
+    },
+    {
+      "path": "RL4_CLOSEOUT_MANIFEST.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "77d52cc7dbba51cb1c5af8b06e2824661f3191b0",
+      "size": 48966,
+      "url": "https://api.github.com/repos/jfairfaxball-348/Hadwiger-conjecture/git/blobs/77d52cc7dbba51cb1c5af8b06e2824661f3191b0"
+    },
+    {
+      "path": "RL4_COLORFUL_K6_ADMISSIBILITY_BRIEF.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b0061e58d77cdd3c3ec0122504209e9212424ab7",
+      "size": 543,
+      "url": "https://api.github.com/repos/jfairfaxball-348/Hadwiger-conjecture/git/blobs/b0061e58d77cdd3c3ec0122504209e9212424ab7"
+    },
+    {
+      "path": "RL4_INCOMING_SNAPSHOT.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a666b609bc29dfe9576e525315452db4d9990fa9",
+      "size": 4181,
+      "url": "https://api.github.com/repos/jfairfaxball-348/Hadwiger-conjecture/git/blobs/a666b609bc29dfe9576e525315452db4d9990fa9"
+    },
+    {
+      "path": "RL4_SESSION_STATE_AND_RL5_KICKOFF.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f421e7d7e5623f47d14b6cbb533f403660fb5489",
+      "size": 464,
+      "url": "https://api.github.com/repos/jfairfaxball-348/Hadwiger-conjecture/git/blobs/f421e7d7e5623f47d14b6cbb533f403660fb5489"
+    },
+    {
+      "path": "RL5_CLOSEOUT_MANIFEST.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "518cc21f21cea29e1cb6198012ebbf6c667b859f",
+      "size": 54612,
+      "url": "https://api.github.com/repos/jfairfaxball-348/Hadwiger-conjecture/git/blobs/518cc21f21cea29e1cb6198012ebbf6c667b859f"
+    },
+    {
+      "path": "RL5_CR6_SOURCE_AND_NEW_INPUT_GATE_BRIEF.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4de23f49a5db671411fa035319a6dd2aee3a7712",
+      "size": 610,
+      "url": "https://api.github.com/repos/jfairfaxball-348/Hadwiger-conjecture/git/blobs/4de23f49a5db671411fa035319a6dd2aee3a7712"
+    },
+    {
+      "path": "RL5_GATE_REPORT.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "28f48a4cc281a76f19906ed2ca3af3dc4697c791",
+      "size": 5011,
+      "url": "https://api.github.com/repos/jfairfaxball-348/Hadwiger-conjecture/git/blobs/28f48a4cc281a76f19906ed2ca3af3dc4697c791"
+    },
+    {
+      "path": "RL5_INCOMING_SNAPSHOT.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "673a8fb3d7a9a6eeb5d356f1b3210cf9cee961ef",
+      "size": 10985,
+      "url": "https://api.github.com/repos/jfairfaxball-348/Hadwiger-conjecture/git/blobs/673a8fb3d7a9a6eeb5d356f1b3210cf9cee961ef"
+    },
+    {
+      "path": "RL5_PROOF_STATE_AND_RESIDUAL_LEDGER.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c2eb65994f91dd0b3b20c183c5b765612cf08e15",
+      "size": 3609,
+      "url": "https://api.github.com/repos/jfairfaxball-348/Hadwiger-conjecture/git/blobs/c2eb65994f91dd0b3b20c183c5b765612cf08e15"
+    },
+    {
+      "path": "RL5_SESSION_STATE_AND_RL6_KICKOFF.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6cad04b81eb08540b8c8bfeb264c733ddeec07c3",
+      "size": 5422,
+      "url": "https://api.github.com/repos/jfairfaxball-348/Hadwiger-conjecture/git/blobs/6cad04b81eb08540b8c8bfeb264c733ddeec07c3"
+    },
+    {
+      "path": "RL6_BLOCKED_FRONTIER_INPUT_ADMISSION_BRIEF.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fa810dbc220904acf66fc153c105d61287366642",
+      "size": 5930,
+      "url": "https://api.github.com/repos/jfairfaxball-348/Hadwiger-conjecture/git/blobs/fa810dbc220904acf66fc153c105d61287366642"
+    },
+    {
+      "path": "RL6_CHECKPOINT_MANIFEST.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f88506f6935d86d70d20955ec9663096781e337e",
+      "size": 3555,
+      "url": "https://api.github.com/repos/jfairfaxball-348/Hadwiger-conjecture/git/blobs/f88506f6935d86d70d20955ec9663096781e337e"
+    },
+    {
+      "path": "RL6_CLOSEOUT_MANIFEST.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0e13278f6f7485eb2fc4d9bcbdc0548a70822196",
+      "size": 66209,
+      "url": "https://api.github.com/repos/jfairfaxball-348/Hadwiger-conjecture/git/blobs/0e13278f6f7485eb2fc4d9bcbdc0548a70822196"
+    },
+    {
+      "path": "RL6_FAILURE_AND_LESSON_LEDGER_APPENDIX.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2cd29efed6a717e498db0a9b0c2b7e55f8ee4625",
+      "size": 10036,
+      "url": "https://api.github.com/repos/jfairfaxball-348/Hadwiger-conjecture/git/blobs/2cd29efed6a717e498db0a9b0c2b7e55f8ee4625"
+    },
+    {
+      "path": "RL6_INCOMING_SNAPSHOT.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2e4d02aa176dcfa1d5bafc1786198a4781121b3c",
+      "size": 13335,
+      "url": "https://api.github.com/repos/jfairfaxball-348/Hadwiger-conjecture/git/blobs/2e4d02aa176dcfa1d5bafc1786198a4781121b3c"
+    },
+    {
+      "path": "RL6_PROOF_STATE_AND_RESIDUAL_LEDGER.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "37e2e69f07bb08a3431ff45712befe942a510f60",
+      "size": 6114,
+      "url": "https://api.github.com/repos/jfairfaxball-348/Hadwiger-conjecture/git/blobs/37e2e69f07bb08a3431ff45712befe942a510f60"
+    },
+    {
+      "path": "RL6_RECOVERY_REPORT.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "48ca81c5abf57c352b99f9f50beb133817651f2a",
+      "size": 22476,
+      "url": "https://api.github.com/repos/jfairfaxball-348/Hadwiger-conjecture/git/blobs/48ca81c5abf57c352b99f9f50beb133817651f2a"
+    },
+    {
+      "path": "RL6_ROUTE_RECOVERY_AND_PIVOT_BRIEF.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4313f40a5dd044e2a93b84c1e100fd0981a3e168",
+      "size": 763,
+      "url": "https://api.github.com/repos/jfairfaxball-348/Hadwiger-conjecture/git/blobs/4313f40a5dd044e2a93b84c1e100fd0981a3e168"
+    },
+    {
+      "path": "RL6_SESSION_STATE_AND_RL7_KICKOFF.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ede0208500e5c2a51ce62853b43a32756f2d3ab4",
+      "size": 5326,
+      "url": "https://api.github.com/repos/jfairfaxball-348/Hadwiger-conjecture/git/blobs/ede0208500e5c2a51ce62853b43a32756f2d3ab4"
+    },
+    {
+      "path": "RL6_WORK_UNIT_SCOPE.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8bab5f1f08a76d1d34de9a1066b88cbad945d9f4",
+      "size": 3305,
+      "url": "https://api.github.com/repos/jfairfaxball-348/Hadwiger-conjecture/git/blobs/8bab5f1f08a76d1d34de9a1066b88cbad945d9f4"
+    },
+    {
+      "path": "RL7_CHECKPOINT_MANIFEST.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "acbedcb761755af85818293593ab03095eb7ec9d",
+      "size": 5381,
+      "url": "https://api.github.com/repos/jfairfaxball-348/Hadwiger-conjecture/git/blobs/acbedcb761755af85818293593ab03095eb7ec9d"
+    },
+    {
+      "path": "RL7_CLOSEOUT_MANIFEST.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1c4d28e27147b80e7f171474adaa7a2b99578e91",
+      "size": 61031,
+      "url": "https://api.github.com/repos/jfairfaxball-348/Hadwiger-conjecture/git/blobs/1c4d28e27147b80e7f171474adaa7a2b99578e91"
+    },
+    {
+      "path": "RL7_COMPATIBILITY_REPORT.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9f3c8a721f864034937b41c88a3543246dd414d9",
+      "size": 16973,
+      "url": "https://api.github.com/repos/jfairfaxball-348/Hadwiger-conjecture/git/blobs/9f3c8a721f864034937b41c88a3543246dd414d9"
+    },
+    {
+      "path": "RL7_CYCLIC_DEGREE7_COMPATIBILITY_BRIEF.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "79930768fff6dc6389648216121a158ea6a4f7ad",
+      "size": 651,
+      "url": "https://api.github.com/repos/jfairfaxball-348/Hadwiger-conjecture/git/blobs/79930768fff6dc6389648216121a158ea6a4f7ad"
+    },
+    {
+      "path": "RL7_FAILURE_AND_LESSON_LEDGER_APPENDIX.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "66f62f262e7f4a5042150d3c42781c3ad2c072e1",
+      "size": 9931,
+      "url": "https://api.github.com/repos/jfairfaxball-348/Hadwiger-conjecture/git/blobs/66f62f262e7f4a5042150d3c42781c3ad2c072e1"
+    },
+    {
+      "path": "RL7_INCOMING_SNAPSHOT.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "89a04ac8a73c39cdd881378b53cf65b1a3f979da",
+      "size": 3737,
+      "url": "https://api.github.com/repos/jfairfaxball-348/Hadwiger-conjecture/git/blobs/89a04ac8a73c39cdd881378b53cf65b1a3f979da"
+    },
+    {
+      "path": "RL7_PROOF_STATE_AND_RESIDUAL_LEDGER.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ff04efe764c1ecf83d52a3b04480c90f209edd59",
+      "size": 5757,
+      "url": "https://api.github.com/repos/jfairfaxball-348/Hadwiger-conjecture/git/blobs/ff04efe764c1ecf83d52a3b04480c90f209edd59"
+    },
+    {
+      "path": "RL7_SESSION_STATE_AND_RL8_KICKOFF.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "96e3082cbe6681b7cbd6b569acacfa51ccad7e73",
+      "size": 5592,
+      "url": "https://api.github.com/repos/jfairfaxball-348/Hadwiger-conjecture/git/blobs/96e3082cbe6681b7cbd6b569acacfa51ccad7e73"
+    },
+    {
+      "path": "RL7_WORK_UNIT_SCOPE.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "10c5c98bd8c7380bd5dea576d4b460bda9706d81",
+      "size": 4136,
+      "url": "https://api.github.com/repos/jfairfaxball-348/Hadwiger-conjecture/git/blobs/10c5c98bd8c7380bd5dea576d4b460bda9706d81"
+    },
+    {
+      "path": "RL8_CHECKPOINT_MANIFEST.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e966e02b7712199e9a692346ca9645bfed2627a2",
+      "size": 1920,
+      "url": "https://api.github.com/repos/jfairfaxball-348/Hadwiger-conjecture/git/blobs/e966e02b7712199e9a692346ca9645bfed2627a2"
+    },
+    {
+      "path": "RL8_CLOSEOUT_MANIFEST.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2ce1776dd4726fd016b9e556ce23e84e0d0d5038",
+      "size": 44148,
+      "url": "https://api.github.com/repos/jfairfaxball-348/Hadwiger-conjecture/git/blobs/2ce1776dd4726fd016b9e556ce23e84e0d0d5038"
+    },
+    {
+      "path": "RL8_FAILURE_AND_LESSON_LEDGER_APPENDIX.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fdc8433eee1c8d2d94ea4fbde67686a1313af1c7",
+      "size": 6794,
+      "url": "https://api.github.com/repos/jfairfaxball-348/Hadwiger-conjecture/git/blobs/fdc8433eee1c8d2d94ea4fbde67686a1313af1c7"
+    },
+    {
+      "path": "RL8_INCOMING_SNAPSHOT.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "33ad5e06a63b0ecce3efd2f90f3bfe60fd582df3",
+      "size": 9190,
+      "url": "https://api.github.com/repos/jfairfaxball-348/Hadwiger-conjecture/git/blobs/33ad5e06a63b0ecce3efd2f90f3bfe60fd582df3"
+    },
+    {
+      "path": "RL8_PROOF_STATE_AND_RESIDUAL_LEDGER.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1f77d2f87b7832436825963449ebaa862c3c09f7",
+      "size": 4967,
+      "url": "https://api.github.com/repos/jfairfaxball-348/Hadwiger-conjecture/git/blobs/1f77d2f87b7832436825963449ebaa862c3c09f7"
+    },
+    {
+      "path": "RL8_SESSION_STATE_AND_RL9_KICKOFF.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "26d7a6bcbc455fc9646691960e4cda62cb6d3dff",
+      "size": 6142,
+      "url": "https://api.github.com/repos/jfairfaxball-348/Hadwiger-conjecture/git/blobs/26d7a6bcbc455fc9646691960e4cda62cb6d3dff"
+    },
+    {
+      "path": "RL8_UNCOLORED_CYCLIC_ROUTING_BRIEF.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6dd5f1f1e01908b082023e16bd629aec9f70d3b7",
+      "size": 7702,
+      "url": "https://api.github.com/repos/jfairfaxball-348/Hadwiger-conjecture/git/blobs/6dd5f1f1e01908b082023e16bd629aec9f70d3b7"
+    },
+    {
+      "path": "RL8_UNCOLORED_ROUTING_REPORT.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3f60b25125ac0b71be4754d91c2218bfcf29b124",
+      "size": 21307,
+      "url": "https://api.github.com/repos/jfairfaxball-348/Hadwiger-conjecture/git/blobs/3f60b25125ac0b71be4754d91c2218bfcf29b124"
+    },
+    {
+      "path": "RL8_VERIFIER_RESULTS.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8b684ec59a320461d30766d3c30a5051cc2fe097",
+      "size": 4178,
+      "url": "https://api.github.com/repos/jfairfaxball-348/Hadwiger-conjecture/git/blobs/8b684ec59a320461d30766d3c30a5051cc2fe097"
+    },
+    {
+      "path": "RL8_WORK_UNIT_SCOPE.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9ce5ee821a289fd9c0e9c6e300a6dca3ac656424",
+      "size": 4328,
+      "url": "https://api.github.com/repos/jfairfaxball-348/Hadwiger-conjecture/git/blobs/9ce5ee821a289fd9c0e9c6e300a6dca3ac656424"
+    },
+    {
+      "path": "RL9_HELPER_CLIQUE_EXTRACTION_BRIEF.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a1192e32df666ef06e9782d70954b06c27e7e731",
+      "size": 6518,
+      "url": "https://api.github.com/repos/jfairfaxball-348/Hadwiger-conjecture/git/blobs/a1192e32df666ef06e9782d70954b06c27e7e731"
+    },
+    {
+      "path": "SOURCE_ADDENDUM.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "edc40e7fa74f41ebb2e3aac2641f3d08fea2dd7a",
+      "size": 4540,
+      "url": "https://api.github.com/repos/jfairfaxball-348/Hadwiger-conjecture/git/blobs/edc40e7fa74f41ebb2e3aac2641f3d08fea2dd7a"
+    },
+    {
+      "path": "SOURCE_GATE_LEDGER.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1247ab61fecd22918667b8ee88c6967181066b51",
+      "size": 8705,
+      "url": "https://api.github.com/repos/jfairfaxball-348/Hadwiger-conjecture/git/blobs/1247ab61fecd22918667b8ee88c6967181066b51"
+    },
+    {
+      "path": "SOURCE_STATUS_AND_SEARCH_LOG.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "29f46cadf5aafb37b871d10d8213369dfa2cdcd5",
+      "size": 9048,
+      "url": "https://api.github.com/repos/jfairfaxball-348/Hadwiger-conjecture/git/blobs/29f46cadf5aafb37b871d10d8213369dfa2cdcd5"
+    },
+    {
+      "path": "START_HERE.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eeececb04963f71a87304b747067acf089762741",
+      "size": 5212,
+      "url": "https://api.github.com/repos/jfairfaxball-348/Hadwiger-conjecture/git/blobs/eeececb04963f71a87304b747067acf089762741"
+    },
+    {
+      "path": "UNCOLORED_CORE_WITNESS.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "287d9cde45a79b8f8a5edc5232475624969f1d07",
+      "size": 2620,
+      "url": "https://api.github.com/repos/jfairfaxball-348/Hadwiger-conjecture/git/blobs/287d9cde45a79b8f8a5edc5232475624969f1d07"
+    },
+    {
+      "path": "VERIFICATION_REPORT.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fe18a579eb4332d8e91af67784b7ce849de0fee5",
+      "size": 5317,
+      "url": "https://api.github.com/repos/jfairfaxball-348/Hadwiger-conjecture/git/blobs/fe18a579eb4332d8e91af67784b7ce849de0fee5"
+    },
+    {
+      "path": "background/CORPUS_METADATA.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "db1df19de084182328e78e7d001d9e23110b3e6c",
+      "size": 1708,
+      "url": "https://api.github.com/repos/jfairfaxball-348/Hadwiger-conjecture/git/blobs/db1df19de084182328e78e7d001d9e23110b3e6c"
+    },
+    {
+      "path": "background/GLOSSARY.jsonl",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "51723d7c22256c839465409a6ef400075c9fd3cf",
+      "size": 9220,
+      "url": "https://api.github.com/repos/jfairfaxball-348/Hadwiger-conjecture/git/blobs/51723d7c22256c839465409a6ef400075c9fd3cf"
+    },
+    {
+      "path": "background/KNOWN_RESULTS.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "40e8ae4eac2a34ac63294d2faf9484f699e3df20",
+      "size": 8725,
+      "url": "https://api.github.com/repos/jfairfaxball-348/Hadwiger-conjecture/git/blobs/40e8ae4eac2a34ac63294d2faf9484f699e3df20"
+    },
+    {
+      "path": "background/LITERATURE_MAP.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "711a59e0956e7444532fc2cbbc56edd124f9b90b",
+      "size": 4337,
+      "url": "https://api.github.com/repos/jfairfaxball-348/Hadwiger-conjecture/git/blobs/711a59e0956e7444532fc2cbbc56edd124f9b90b"
+    },
+    {
+      "path": "background/OPEN_CASE_CATALOG.jsonl",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d948c777d61838520641e07d31018d91d690ee04",
+      "size": 4321,
+      "url": "https://api.github.com/repos/jfairfaxball-348/Hadwiger-conjecture/git/blobs/d948c777d61838520641e07d31018d91d690ee04"
+    },
+    {
+      "path": "background/OPEN_FRONTIER.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0bf010589067c75ac996c336760fdd54f3367f84",
+      "size": 2951,
+      "url": "https://api.github.com/repos/jfairfaxball-348/Hadwiger-conjecture/git/blobs/0bf010589067c75ac996c336760fdd54f3367f84"
+    },
+    {
+      "path": "background/READ_ME_FIRST.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9caaadca880127d051d7f0b0b14ec0d48d6b7340",
+      "size": 3606,
+      "url": "https://api.github.com/repos/jfairfaxball-348/Hadwiger-conjecture/git/blobs/9caaadca880127d051d7f0b0b14ec0d48d6b7340"
+    },
+    {
+      "path": "background/RESULT_CATALOG.jsonl",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b550f02f2c91a767631e9e9844a11a3f8f79252f",
+      "size": 23710,
+      "url": "https://api.github.com/repos/jfairfaxball-348/Hadwiger-conjecture/git/blobs/b550f02f2c91a767631e9e9844a11a3f8f79252f"
+    },
+    {
+      "path": "background/SEARCH_LOG.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cef5e9f761e24ec637a739f69c0321d7c1a7b6ef",
+      "size": 4831,
+      "url": "https://api.github.com/repos/jfairfaxball-348/Hadwiger-conjecture/git/blobs/cef5e9f761e24ec637a739f69c0321d7c1a7b6ef"
+    },
+    {
+      "path": "background/SOURCE_CATALOG.jsonl",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7ec89d2cd3d387cbcc0122732ee36b07a19e8e12",
+      "size": 21251,
+      "url": "https://api.github.com/repos/jfairfaxball-348/Hadwiger-conjecture/git/blobs/7ec89d2cd3d387cbcc0122732ee36b07a19e8e12"
+    },
+    {
+      "path": "background/SOURCE_CHECKS.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "737f77dc9c36b5dd12cfce6d678f4abed1cc9b1f",
+      "size": 7061,
+      "url": "https://api.github.com/repos/jfairfaxball-348/Hadwiger-conjecture/git/blobs/737f77dc9c36b5dd12cfce6d678f4abed1cc9b1f"
+    },
+    {
+      "path": "background/TECHNIQUES.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "45901f3b2b7221b6d6e57e6fa488abad18525c25",
+      "size": 2571,
+      "url": "https://api.github.com/repos/jfairfaxball-348/Hadwiger-conjecture/git/blobs/45901f3b2b7221b6d6e57e6fa488abad18525c25"
+    },
+    {
+      "path": "background/TOPIC_CATALOG.jsonl",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0f34808195741448b0c12ea32bdd70f8546ba0f5",
+      "size": 5174,
+      "url": "https://api.github.com/repos/jfairfaxball-348/Hadwiger-conjecture/git/blobs/0f34808195741448b0c12ea32bdd70f8546ba0f5"
+    },
+    {
+      "path": "background/VARIANTS_AND_RELATED_PROBLEMS.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cf70f8bec038ccf0e88141d46e7eefb4c80f03a8",
+      "size": 2383,
+      "url": "https://api.github.com/repos/jfairfaxball-348/Hadwiger-conjecture/git/blobs/cf70f8bec038ccf0e88141d46e7eefb4c80f03a8"
+    },
+    {
+      "path": "background/verification/RECORD_SPEC.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4aa44526b7af6cec124638f3f625c6b0181f3f7e",
+      "size": 4052,
+      "url": "https://api.github.com/repos/jfairfaxball-348/Hadwiger-conjecture/git/blobs/4aa44526b7af6cec124638f3f625c6b0181f3f7e"
+    },
+    {
+      "path": "background/verification/verify_corpus.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2e210600f63966967e272e28dae0f9fef036cd40",
+      "size": 8615,
+      "url": "https://api.github.com/repos/jfairfaxball-348/Hadwiger-conjecture/git/blobs/2e210600f63966967e272e28dae0f9fef036cd40"
+    },
+    {
+      "path": "verification/ROOTED_BARRIER_CERTIFICATE.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "183f4c5f9ea680eeb648998ac95732466d6400c2",
+      "size": 1471,
+      "url": "https://api.github.com/repos/jfairfaxball-348/Hadwiger-conjecture/git/blobs/183f4c5f9ea680eeb648998ac95732466d6400c2"
+    },
+    {
+      "path": "verification/verify_rooted_barrier.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aa525daf5cf42600e10ab2008be3744904c3a5d4",
+      "size": 3601,
+      "url": "https://api.github.com/repos/jfairfaxball-348/Hadwiger-conjecture/git/blobs/aa525daf5cf42600e10ab2008be3744904c3a5d4"
+    },
+    {
+      "path": "verify_auxiliary_countermodel.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2c9dad3d2ef5bf97c96555e567db9b4a66f0898d",
+      "size": 5221,
+      "url": "https://api.github.com/repos/jfairfaxball-348/Hadwiger-conjecture/git/blobs/2c9dad3d2ef5bf97c96555e567db9b4a66f0898d"
+    },
+    {
+      "path": "verify_uncolored_core.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "db1adb8d21728a53c45d1b18112399b757bf18a2",
+      "size": 5758,
+      "url": "https://api.github.com/repos/jfairfaxball-348/Hadwiger-conjecture/git/blobs/db1adb8d21728a53c45d1b18112399b757bf18a2"
+    }
+  ],
+  "read_paths": [
+    {
+      "path": "authoritative/START_HERE.md",
+      "sha": "eeececb04963f71a87304b747067acf089762741"
+    },
+    {
+      "path": "authoritative/RL9_HELPER_CLIQUE_EXTRACTION_BRIEF.md",
+      "sha": "a1192e32df666ef06e9782d70954b06c27e7e731"
+    },
+    {
+      "path": "docs/RESEARCH_RECOVERY_PROTOCOL.md",
+      "sha": "2b6710e32dad04800dd32fce771be630bce61082"
+    },
+    {
+      "path": "authoritative/FAILURE_AND_LESSON_LEDGER.md",
+      "sha": "94b393bae60387707e45a2744ba7e06e9d333012"
+    },
+    {
+      "path": "authoritative/RL8_SESSION_STATE_AND_RL9_KICKOFF.md",
+      "sha": "26d7a6bcbc455fc9646691960e4cda62cb6d3dff"
+    },
+    {
+      "path": "authoritative/RL8_UNCOLORED_ROUTING_REPORT.md",
+      "sha": "3f60b25125ac0b71be4754d91c2218bfcf29b124"
+    },
+    {
+      "path": "authoritative/RL8_PROOF_STATE_AND_RESIDUAL_LEDGER.md",
+      "sha": "1f77d2f87b7832436825963449ebaa862c3c09f7"
+    },
+    {
+      "path": "authoritative/PROOF_STATE_AND_OPEN_OBLIGATIONS.md",
+      "sha": "3e77761bbb4d4198699417816d5c332f4ea18253"
+    },
+    {
+      "path": "authoritative/RL7_COMPATIBILITY_REPORT.md",
+      "sha": "9f3c8a721f864034937b41c88a3543246dd414d9"
+    },
+    {
+      "path": "authoritative/RL7_PROOF_STATE_AND_RESIDUAL_LEDGER.md",
+      "sha": "ff04efe764c1ecf83d52a3b04480c90f209edd59"
+    },
+    {
+      "path": "authoritative/RL6_RECOVERY_REPORT.md",
+      "sha": "48ca81c5abf57c352b99f9f50beb133817651f2a"
+    },
+    {
+      "path": "authoritative/RL6_PROOF_STATE_AND_RESIDUAL_LEDGER.md",
+      "sha": "37e2e69f07bb08a3431ff45712befe942a510f60"
+    },
+    {
+      "path": "authoritative/DEPENDENCY_MAP.md",
+      "sha": "8464e2ae873c4fd33ec24cd8cdd54e72dceb0460"
+    },
+    {
+      "path": "authoritative/BRIDGE_LEDGER.md",
+      "sha": "7e4a93f6fb71606fdb3dedb038d5002ae3a34fd4"
+    },
+    {
+      "path": "authoritative/COLLATZ_FAILURE_REVIEW.md",
+      "sha": "cc50b241b5ca464cd078ac6cff6aa1ea573dff45"
+    },
+    {
+      "path": "authoritative/VERIFICATION_REPORT.md",
+      "sha": "fe18a579eb4332d8e91af67784b7ce849de0fee5"
+    },
+    {
+      "path": "authoritative/background/READ_ME_FIRST.md",
+      "sha": "9caaadca880127d051d7f0b0b14ec0d48d6b7340"
+    },
+    {
+      "path": "docs/RL_RESEARCH_PROTOCOL.md",
+      "sha": "9f2a2f94a2eb0134b4cf6f393dc0395edce10b24"
+    },
+    {
+      "path": "docs/CONNECTOR_WORKFLOW.md",
+      "sha": "b3a90487e1eaf14504eba18cc07521ed08e59256"
+    },
+    {
+      "path": "docs/PROOF_STATE_CLASSIFICATIONS.md",
+      "sha": "2657e975e1eb80521f764411a4b4641eb7088e37"
+    }
+  ],
+  "gate_status": "PASS: predecessor matches, sole RL9, all 20 required read blobs plus AGENTS match pinned identities; no unresolved integrity failure; no nested AGENTS in authority/docs",
+  "created_at": "2026-10-01",
+  "authority_blob_count": 81
+}

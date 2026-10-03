@@ -1,0 +1,194 @@
+{
+  "format": "rl-atomic-closeout-manifest-v1",
+  "completed_rl": 25,
+  "successor_rl": 26,
+  "base_head": "1f9725c0ea44d91c107f8bbc02dd881aa62cb3a3",
+  "base_root_tree": "ef0120884c93f7723e96ba40dd4b711b3c07bd57",
+  "incoming_authority_tree": "294fa569486e0388be1e95a0d05567037267780f",
+  "checkpoint_commit": "99de120edfb4b78e0e1f491755c8709e53513cff",
+  "checkpoint_tree": "bd316c289b7f55a85927c374d59472159fcb5c95",
+  "frozen_subtrees": {
+    "sessions/RL25/incoming": "294fa569486e0388be1e95a0d05567037267780f",
+    "sessions/RL25/checkpoint": "bd316c289b7f55a85927c374d59472159fcb5c95"
+  },
+  "successor_brief": "authoritative/RL26_FULL_CRITICAL_PATH_SATURATION_MINOR_BRIEF.md",
+  "classification": "Scoped analytic stopping record / method barrier FL-028; no new positive theorem",
+  "corrections_demotions": "NONE",
+  "named_obligations_reduced": [],
+  "gates_not_reached": [
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "minimum_total_size_invocations_in_rl25": 0,
+  "new_mathematical_sources": 0,
+  "mathematical_numerical_work": 0,
+  "successor_started": false,
+  "existing_authority_updates": [
+    "FAILURE_AND_LESSON_LEDGER.md",
+    "PROOF_STATE_AND_OPEN_OBLIGATIONS.md",
+    "START_HERE.md",
+    "VERIFICATION_REPORT.md"
+  ],
+  "root_navigation_updates": [
+    "README.md",
+    "START_HERE.md"
+  ],
+  "preservation": "Every other original authority/root entry and every older session subtree retains its Git identity; old proof suffix and old ledger prefix exact",
+  "payload_artifacts": [
+    {
+      "path": "README.md",
+      "size_bytes": 2099,
+      "git_blob_sha": "7fde47949fbe6299a5a6fa8e649e06ad20ecf873",
+      "sha256": "0d7785c96eb302a72b6c12d3e42c0cc677e62444c18035799aaf2d6fca845b62"
+    },
+    {
+      "path": "START_HERE.md",
+      "size_bytes": 1241,
+      "git_blob_sha": "671ad4b55c62357574a87e8654fd9ff0bde1b55b",
+      "sha256": "2fc99ea92b81e689586bc41cd07f6fec0f6b4de5a5d9330f13a0458e5cbb37c0"
+    },
+    {
+      "path": "authoritative/FAILURE_AND_LESSON_LEDGER.md",
+      "size_bytes": 114830,
+      "git_blob_sha": "e7437968f0e08a235cd420ae54d04454684447e5",
+      "sha256": "37ed3f59af7e3f1d1ad334a9c3d7bf7e190af4056de96ba47b63fd39a79639eb"
+    },
+    {
+      "path": "authoritative/PROOF_STATE_AND_OPEN_OBLIGATIONS.md",
+      "size_bytes": 57616,
+      "git_blob_sha": "7fa2f9f415f0c6f167793d8e8837539eb9a7f596",
+      "sha256": "966140137a0b4c9779676acdeb00eb450fe7fa0862d05dae1a70f73fb06e109a"
+    },
+    {
+      "path": "authoritative/RL25_CHECKPOINT_MANIFEST.json",
+      "size_bytes": 3238,
+      "git_blob_sha": "3fd3dada8f9235dbe86c004b10984b184fda773c",
+      "sha256": "61bfee8008bb819bb069b563c78790c29903fe62434d3e1b9f6cc913a94ab2a3"
+    },
+    {
+      "path": "authoritative/RL25_CLOSEOUT_VERIFICATION_REPORT.md",
+      "size_bytes": 5372,
+      "git_blob_sha": "e764206aeb56607fd70d1b7078f1c3522b3b41f1",
+      "sha256": "282fb2728ae9f683af58ba32a961c8523bb10b1dd7f7b7ac7533dbf093dc6a6a"
+    },
+    {
+      "path": "authoritative/RL25_CROSS_RESOURCE_PATH_TRANSFER_EXCHANGE_REPORT.md",
+      "size_bytes": 6521,
+      "git_blob_sha": "e479e380bdab63e06b499a5b8cf53573dda3b4ce",
+      "sha256": "7632e8fcb57b64ad64a5008d809421c74b16537d02a6aeb2154f7d387b4f80ae"
+    },
+    {
+      "path": "authoritative/RL25_FAILURE_AND_LESSON_LEDGER_APPENDIX.md",
+      "size_bytes": 3271,
+      "git_blob_sha": "8907114f9f9dcfcd6f736ea841f8eb23ccb2016c",
+      "sha256": "c6fb586851cfd54d2fe0ef8afae143644c87138303c3b1492054c30196ea9c71"
+    },
+    {
+      "path": "authoritative/RL25_INCOMING_SNAPSHOT.json",
+      "size_bytes": 3889,
+      "git_blob_sha": "30aa5fb01dab93bdac5a2acc7a56c4c2b3466f61",
+      "sha256": "0856f1868b67add1d5fb3279a0978e79eeb99fed35ad5a3f85b080c98626d354"
+    },
+    {
+      "path": "authoritative/RL25_PREPARED_RECOVERY_TASK.md",
+      "size_bytes": 3154,
+      "git_blob_sha": "c93685e4838d609c94d9f1aae7fac4d10bba2cd5",
+      "sha256": "697c22a3802c96498117d66145cb9f555e9020124eeb27fcee85756f7f987c0f"
+    },
+    {
+      "path": "authoritative/RL25_PROOF_STATE_AND_RESIDUAL_LEDGER.md",
+      "size_bytes": 2106,
+      "git_blob_sha": "ec98312759d3ae85da9d9c8a1b3dbd2758897d42",
+      "sha256": "c14b11dea171d42a1478fb4ddf098f9bfc0094355470bb61e99b7f28e0e97ba2"
+    },
+    {
+      "path": "authoritative/RL25_SESSION_STATE_AND_RL26_KICKOFF.md",
+      "size_bytes": 3352,
+      "git_blob_sha": "00dfa010d616aec62b8564c09db731ec27414590",
+      "sha256": "d301d70e7188b20751ca3276f1cdcabd2ff9750f841979e4ca4ea11fea89e49c"
+    },
+    {
+      "path": "authoritative/RL25_SOURCE_QUESTION_AND_LIMITS.md",
+      "size_bytes": 1533,
+      "git_blob_sha": "a1f3a8cde0d0e816636dc3e0ba58599c838e2475",
+      "sha256": "f85ec6a6b1e42e7f3381054c75f0568f9c44e150bc2b3db33db5146ab0c46561"
+    },
+    {
+      "path": "authoritative/RL25_WORK_RESUME_STATE.json",
+      "size_bytes": 3823,
+      "git_blob_sha": "cab46bb3ae632f63d49812c8e94eb3bb51c9ab32",
+      "sha256": "98b5d5c704afcf7429431a69ccc3039439b490d589b22fcaa259a12e60229717"
+    },
+    {
+      "path": "authoritative/RL25_WORK_UNIT_SCOPE.md",
+      "size_bytes": 4074,
+      "git_blob_sha": "7302ad5a6d667ed17e3178ff6bac69f8fd4cc6d0",
+      "sha256": "7e4070ce2fbd71d18fd62cf3ca304df4cd187790ae6a4a0107992df84a1e665d"
+    },
+    {
+      "path": "authoritative/RL25_WORK_VERIFICATION_REPORT.md",
+      "size_bytes": 3856,
+      "git_blob_sha": "218233e3d5da08f5d2bb9c2cebacb7dd124beeaf",
+      "sha256": "644802c70f16a8a0ec05443e455663436b207cd119210b28b373b045cd49347b"
+    },
+    {
+      "path": "authoritative/RL26_FULL_CRITICAL_PATH_SATURATION_MINOR_BRIEF.md",
+      "size_bytes": 7168,
+      "git_blob_sha": "9b239f3bfcedb44b169240b8f4d6431c9d50144f",
+      "sha256": "28915a680d1903f74f6688265102ca218b1ea5819f06cf93fde926feb4d3851f"
+    },
+    {
+      "path": "authoritative/START_HERE.md",
+      "size_bytes": 1689,
+      "git_blob_sha": "ed59f251c7234530971d658a9ceeed9f348ffee7",
+      "sha256": "000f9f4a64aa831eec6960471f0c755aa29252f1a34f793ef9466a31e046cbf7"
+    },
+    {
+      "path": "authoritative/VERIFICATION_REPORT.md",
+      "size_bytes": 5372,
+      "git_blob_sha": "e764206aeb56607fd70d1b7078f1c3522b3b41f1",
+      "sha256": "282fb2728ae9f683af58ba32a961c8523bb10b1dd7f7b7ac7533dbf093dc6a6a"
+    },
+    {
+      "path": "sessions/RL25/CLOSEOUT_VERIFICATION_REPORT.md",
+      "size_bytes": 5372,
+      "git_blob_sha": "e764206aeb56607fd70d1b7078f1c3522b3b41f1",
+      "sha256": "282fb2728ae9f683af58ba32a961c8523bb10b1dd7f7b7ac7533dbf093dc6a6a"
+    },
+    {
+      "path": "sessions/RL25/RL26_FULL_CRITICAL_PATH_SATURATION_MINOR_BRIEF.md",
+      "size_bytes": 7168,
+      "git_blob_sha": "9b239f3bfcedb44b169240b8f4d6431c9d50144f",
+      "sha256": "28915a680d1903f74f6688265102ca218b1ea5819f06cf93fde926feb4d3851f"
+    },
+    {
+      "path": "sessions/RL25/SESSION_REPORT.md",
+      "size_bytes": 3352,
+      "git_blob_sha": "00dfa010d616aec62b8564c09db731ec27414590",
+      "sha256": "d301d70e7188b20751ca3276f1cdcabd2ff9750f841979e4ca4ea11fea89e49c"
+    },
+    {
+      "path": "sessions/RL25/START_HERE.md",
+      "size_bytes": 1688,
+      "git_blob_sha": "c9a18a92e12aa7d114a629f0d03d31cfd0e7ea76",
+      "sha256": "48809f685a81411434147387318e7a4a757150919100806b2b6a5b98d3bbf2e1"
+    }
+  ],
+  "self_reference_policy": "This manifest is copied identically to authoritative/RL25_CLOSEOUT_MANIFEST.json and sessions/RL25/CLOSEOUT_MANIFEST.json and excluded from payload_artifacts; final tree and commit identities are recorded outside the commit",
+  "checks": {
+    "eleven_checkpoint_blobs": "PASS",
+    "ten_authority_checkpoint_copies": "PASS",
+    "old_proof_suffix": "PASS",
+    "old_ledger_prefix": "PASS",
+    "unchanged_appendix": "PASS",
+    "required_successor_reads": "PASS",
+    "new_navigation_links": "PASS",
+    "json_encoding_status": "PASS",
+    "no_existing_rl25_session": "PASS",
+    "one_rl26_brief": "PASS"
+  },
+  "publication_gate": "One commit with sole parent BASE_HEAD, immediate live-base comparison, one non-forced main advance, exact readback"
+}

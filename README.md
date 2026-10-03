@@ -6,11 +6,11 @@ The current incoming state is authoritative/START_HERE.md; binding worker rules 
 
 ## Current handover
 
-RL26 is CLOSED/FROZEN under sessions/RL26/. It completed one bounded conditional full-critical path-saturation minor assessment.
+RL27 is CLOSED/FROZEN under sessions/RL27/. It completed one bounded conditional fixed-color minimal list-obstruction assessment.
 
-Under V(P)=T_2, R_1 is connected and nontrivial and J=G/R_1 is a proper original-G minor. For one fixed six-coloring of J, the contracted color gamma is absent from every external neighbor of R_1. The one fixed reverse-greedy reconstruction colors y with gamma but stops at its predecessor because no second available boundary color is forced. FL-029 records the method barrier. No named inherited mathematical obligation is reduced and no correction/demotion occurs.
+At the exact retained V(P)=T_2 scope, RL27 proves that G[R_1] is not A-list-colorable for the fixed quotient coloring c and that one fixed inclusion-minimal induced obstruction K satisfies |A(u)|<=d_K(u) for every u in K. The sole endpoint consequence stops because the retained tree/path data do not bound original-G degree at x. FL-030 records the method barrier. No named inherited mathematical obligation is reduced and no correction/demotion occurs.
 
-RL27 is the unique incoming session through authoritative/RL27_FIXED_COLOR_MINIMAL_LIST_OBSTRUCTION_BRIEF.md. It is READY / NOT STARTED. It retains the same saturation scope, contraction and fixed coloring and assesses one deletion-minimal boundary-list obstruction followed by at most one fixed endpoint/path consequence.
+RL28 is the unique incoming session through authoritative/RL28_EDGE_CRITICAL_EXTRA_NEIGHBOR_BRIEF.md. It is READY / NOT STARTED. It retains the same K and endpoint x and assesses exactly one edge-critical off-path-neighbor coloring gate.
 
 The programme is active and the root remains full sharp Hadwiger for every finite simple graph.
 

@@ -1,0 +1,31 @@
+{
+  "format": "rl-atomic-closeout-manifest-v1",
+  "completed_rl": 27,
+  "successor_rl": 28,
+  "base_head": "c032a457aa986b3d2f366e4c3807d0a985de45cb",
+  "incoming_authority_tree": "bf48eb5cbe00c6637cc5e0d937dac90d1439528a",
+  "checkpoint_commit": "92c9b26ea919524011525fadca0a17852b03001e",
+  "checkpoint_tree": "ba2d410d62e56fe36d5692239e8171a8286795d5",
+  "successor_brief": "authoritative/RL28_EDGE_CRITICAL_EXTRA_NEIGHBOR_BRIEF.md",
+  "promoted_results": [
+    "RL27-P01",
+    "RL27-P02"
+  ],
+  "classification": "Scoped elementary analytic list-obstruction results plus method barrier FL-030",
+  "corrections_demotions": "NONE",
+  "named_obligations_reduced": [],
+  "saturation_excluded": false,
+  "rl25_gates_not_reached": [
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "minimum_total_size_invocations_in_rl27": 0,
+  "new_mathematical_sources": 0,
+  "mathematical_numerical_work": 0,
+  "successor_started": false,
+  "publication_gate": "one commit with sole parent BASE_HEAD; one non-forced main advance; exact readback",
+  "self_reference_policy": "final root tree and commit identities are verified after publication and are not embedded here"
+}
