@@ -1,18 +1,20 @@
-# RL32 authoritative state
+# RL33 authoritative state
 
 Status: READY / NOT STARTED.
-Predecessor: RL31 CLOSED/FROZEN under sessions/RL31/.
-Sole current brief: RL32_FIRST_MISS_WITNESS_AUGMENTED_TERMINAL_CORE_BRIEF.md.
+Predecessor: RL32 CLOSED/FROZEN under sessions/RL32/.
+Sole current brief: RL33_MONOTONE_CYCLIC_MISS_CLOSURE_BRIEF.md.
 Root: h(G) >= chi(G) for every finite simple graph.
 
-RL31 promoted RL31-P01 only at its exact fixed m=3, A=S terminal-core scope: each of the three fixed sides stops either at one cyclic coverage miss MISS_i(g_i) or at terminal-path saturation SAT_i. M3-CORE was not certified. Correction/demotion: NONE. No named inherited universal mathematical obligation was genuinely reduced.
+RL32 promoted RL32-P01 only at its exact retained m=3, A=S fixed-choice scope. If the RL31 obstruction profile is not all-SAT, the one prescribed least-index-MISS witness augmentation permanently repairs the selected missed cyclic nonedge and then stops either at a different coverage miss or at augmented saturation R_i*^+=T_i*.
 
-FL-034 records that minimum total size cannot be used before resource coverage and strictness are independently certified.
+M3-WITNESS-AUGMENT and M3-CORE were not certified. Correction/demotion: NONE. No named inherited universal mathematical obligation was genuinely reduced.
 
-RL32 executes exactly one changed recovery candidate on the least-index recorded MISS side, augmenting its fixed terminal core by one forced off-core Q_i witness path. If the RL31 obstruction profile is all-SAT, RL32 records that profile and stops.
+FL-035 records that one witness path gives monotone local coverage repair but not full resource coverage.
+
+RL33 executes exactly one bounded monotone closure on the same fixed least-index MISS side, over at most the seven cyclic nonedges. If the RL31 profile is all-SAT, RL33 records that profile and stops.
 
 The RL21-RL29 m=2 chain remains preserved but suspended under RL30/FL-033.
 
-Required provenance is frozen verbatim under sessions/RL31/incoming/. Consume RL31 report/proof-state/failure records from current authority and inherited records only as named by the RL32 brief.
+Required pre-RL32 authority is frozen verbatim under sessions/RL32/incoming/. Consume current RL32 report/proof-state/failure records and inherited records only as named by the RL33 brief.
 
 Programme: ACTIVE.
