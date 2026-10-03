@@ -1,0 +1,35 @@
+{
+  "format": "rl27-connector-incoming-snapshot-v1",
+  "captured_date": "2026-10-03 Europe/Madrid",
+  "base_head": "c032a457aa986b3d2f366e4c3807d0a985de45cb",
+  "root_tree": "ee5c689e26c26f75d2329583807e94c843ffece5",
+  "authoritative_tree": "bf48eb5cbe00c6637cc5e0d937dac90d1439528a",
+  "expected_predecessor_match": true,
+  "incoming_rl": 27,
+  "unique_incoming_confirmed": true,
+  "sole_brief": "authoritative/RL27_FIXED_COLOR_MINIMAL_LIST_OBSTRUCTION_BRIEF.md",
+  "required_path_blobs": {
+    "AGENTS.md": "72ad349e4744718651fec497dbd4cf967c19566d",
+    "authoritative/START_HERE.md": "dc923d70dc52393f4ff3d4984abe8a2b8385c113",
+    "authoritative/RL27_FIXED_COLOR_MINIMAL_LIST_OBSTRUCTION_BRIEF.md": "6bcb7378c5848f869c89eb2ad777dfd6b1b2dd14",
+    "docs/RESEARCH_RECOVERY_PROTOCOL.md": "2b6710e32dad04800dd32fce771be630bce61082",
+    "authoritative/RL26_SESSION_STATE_AND_RL27_KICKOFF.md": "73cbfd7b3aec2ecb615ab1a5371ef44fe60ef59d",
+    "authoritative/RL26_FULL_CRITICAL_PATH_SATURATION_MINOR_REPORT.md": "8cecbe0b48a9d2592de356461459a6c6cdfe2bc3",
+    "authoritative/RL26_PROOF_STATE_AND_RESIDUAL_LEDGER.md": "a1256cadd05f98b257330c092b734fb74f6b34bf",
+    "authoritative/RL26_FAILURE_AND_LESSON_LEDGER_APPENDIX.md": "259190b523107dfdf93576d371376b1db603f493",
+    "authoritative/RL26_PREPARED_RECOVERY_TASK.md": "878b0eed8f0806c96366fb7595fa204ac178d80f",
+    "authoritative/RL26_SOURCE_QUESTION_AND_LIMITS.md": "b658e65c789043832fa8d517543655bcf6710861",
+    "authoritative/RL25_CROSS_RESOURCE_PATH_TRANSFER_EXCHANGE_REPORT.md": "e479e380bdab63e06b499a5b8cf53573dda3b4ce",
+    "authoritative/PROOF_STATE_AND_OPEN_OBLIGATIONS.md": "91af9bce4d46a87a0469583447428b78e6e7edd7",
+    "authoritative/FAILURE_AND_LESSON_LEDGER.md": "eb393b14cd916d06ffdd5da857850995a1bbc02f",
+    "authoritative/DEPENDENCY_MAP.md": "8464e2ae873c4fd33ec24cd8cdd54e72dceb0460",
+    "authoritative/RL13_CRITICAL_CONNECTED_RESOURCE_REPORT.md": "c71da40828d5ee880f7eb0a04dfbaec0ebf2fe88",
+    "authoritative/RL21_M2_S_COMPLETE_PAIR_LEAF_PRUNING_REPORT.md": "e259681091b27e74f238bf04c3aedfafceb3241e",
+    "authoritative/RL22_FIXED_DEFECT_TARGET_COLOR_BLOCKER_REPORT.md": "8aab6e565426a4828dea1e9dbd4b2e01195c2aad"
+  },
+  "top_level_rl27_named_paths": [
+    "authoritative/RL26_SESSION_STATE_AND_RL27_KICKOFF.md",
+    "authoritative/RL27_FIXED_COLOR_MINIMAL_LIST_OBSTRUCTION_BRIEF.md"
+  ],
+  "integrity_gate": "PASS"
+}
