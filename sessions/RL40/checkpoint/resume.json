@@ -1,0 +1,16 @@
+{
+  "session": "RL40",
+  "status": "CLOSED/FROZEN",
+  "base_head": "bd27b4a5dbab0593c0609041c68598e093a5109a",
+  "base_tree": "fbfc95acc92062551143fd37884d4b52d73ab961",
+  "promoted": [],
+  "correction_demotion": "NONE",
+  "failure_lesson": "FL-043",
+  "named_universal_obligations_reduced": "NONE",
+  "surviving_profiles": ["all-SAT", "EQ"],
+  "not_certified": ["M3-CORE"],
+  "route_verdict": "PIVOT",
+  "successor": "RL41",
+  "successor_brief": "authoritative/RL41_DIRECT_THREE_RESOURCE_ROOTED_K6_BOUNDARY_SELECTION_BRIEF.md",
+  "programme": "ACTIVE"
+}

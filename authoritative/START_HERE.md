@@ -1,24 +1,20 @@
-# RL40 authoritative state
+# RL41 authoritative state
 
 Status: READY / NOT STARTED.
-Predecessor: RL39 CLOSED/FROZEN under sessions/RL39/.
-Sole current brief: RL40_PROGRESS_AND_CORRECTION_AUDIT_BRIEF.md.
+Predecessor: RL40 CLOSED/FROZEN under sessions/RL40/.
+Sole current brief: RL41_DIRECT_THREE_RESOURCE_ROOTED_K6_BOUNDARY_SELECTION_BRIEF.md.
 Root: h(G) >= chi(G) for every finite simple graph.
 
-RL39 promoted RL39-P01 only at the exact RL38 global endpoint-witness-pair refined-closure scope of the retained RL31 m=3, A=S setup.
+RL40 completed the mandatory audit of RL30-RL39. Correction/demotion: NONE. Every valid RL30-RL39 result retains its exact recorded scope.
 
-RL39 independently audited the surviving refined NEQ DISJOINT profile. From g<h and h being the least cyclic nonedge missed by C union I, g is covered by C union I. Since g is missed by C, the inherited resource-coverage semantics force an endpoint y of g with an I-neighbor z. The pair (y,z) lies in the final global admissible set W and z is strictly closer to C in Q than w, contradicting the certified RL38 global minimization defining (a,w).
+RL39-P01 remains valid only at the RL38 global endpoint-witness-pair refined-closure scope: refined NEQ is impossible there. This does not certify M3-CORE. All-SAT and EQ remain genuine stopping profiles, the retained m=3,A=S configuration remains open, and the full sharp Hadwiger conjecture remains open.
 
-Therefore refined NEQ is impossible at the RL38 refined-closure scope. M3-GLOBAL-NEAREST-PAIR-DISJOINT is certified at that exact scope. This does not retroactively strengthen RL33-RL37.
+RL40 found HIGH Collatz/repetition risk: RL31-RL39 are nine consecutive refinements of one conditional m=3 mechanism without reducing a named inherited universal mathematical obligation. FL-043 records the research-control lesson. Route verdict: PIVOT.
 
-All-SAT and EQ remain stopping profiles. M3-CORE remains NOT CERTIFIED. The m=3, A=S configuration remains open. The full sharp Hadwiger conjecture remains open. No named inherited universal mathematical obligation was genuinely reduced. Correction/demotion remains NONE.
-
-FL-042 records the resolved RL38 DISJOINT residual and the lesson that disjointness is not load-bearing after the refined-NEQ branch gate.
-
-RL40 is mandatory under the every-tenth-session rule. It must audit exactly RL30-RL39 and current authority before any new theorem-discovery mechanism is begun. Preserve every valid scoped result and challenge its root applicability, quantifiers, dependencies, and any silent strengthening.
+RL41 therefore does not continue the terminal-core / least-miss / leaf-blocker / nearest-witness chain. It returns to the original retained three-resource axioms and tests exactly one direct S-boundary selection lemma whose success would give an S-rooted K6 in H and hence a K7 minor in G.
 
 The RL21-RL29 m=2 chain remains preserved but suspended under RL30/FL-033.
 
-Required predecessor authority is frozen under sessions/RL39/incoming/. Consume the current RL39 report, proof-state and failure/lesson records and historical session material only as required by the RL40 audit brief.
+Required RL40 audit provenance is in sessions/RL40/checkpoint/. Incoming RL40 authority is frozen verbatim under sessions/RL40/incoming/.
 
-Programme: ACTIVE.
+Programme ACTIVE.
