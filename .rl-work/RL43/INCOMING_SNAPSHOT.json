@@ -1,0 +1,37 @@
+{
+  "session": "RL43",
+  "base_head": "902169c00574daf412d806f220d4fd74d6f9990f",
+  "default_branch": "main",
+  "base_tree": "a8eb4f36b993aad2c2589c5adb7e785cad497591",
+  "authoritative_files": {
+    "authoritative/FAILURE_AND_LESSON_LEDGER.md": "05ffce8cb40be306bac7db77a373b3c4cb9a7f96",
+    "authoritative/PROOF_STATE_AND_OPEN_OBLIGATIONS.md": "c433ba80206725af72939c637ecf1166112652ba",
+    "authoritative/RL42_FAILURE_AND_LESSON_LEDGER_APPENDIX.md": "e7c0bb5ef6a777501caf44244f42133a023fe66c",
+    "authoritative/RL42_PROOF_STATE_AND_RESIDUAL_LEDGER.md": "c433ba80206725af72939c637ecf1166112652ba",
+    "authoritative/RL42_REPORT.md": "92a665f02e52f7ca53a20e1f0ea352fe5f7942e6",
+    "authoritative/RL43_FIXED_COUNTERPATTERN_CRITICALITY_COMPATIBILITY_BRIEF.md": "87c1bbade7703d3ff5191a85abbbbfaebef886c5",
+    "authoritative/RL43_STATE.md": "4ebe761323cc07846dcc7aaabcc63c85ef0169e2",
+    "authoritative/START_HERE.md": "db625b5be568f7b2c972ff6ce67becbbaf978e32"
+  },
+  "required_frozen_provenance_consumed": [
+    "sessions/RL42/checkpoint/RL42_MAXIMUM_RESOURCE_BOUNDARY_COMPATIBILITY_REPORT.md",
+    "sessions/RL42/checkpoint/RL42_PROOF_STATE_AND_RESIDUAL_LEDGER.md",
+    "sessions/RL42/checkpoint/FAILURE_AND_LESSON_LEDGER_APPENDIX.md",
+    "sessions/RL42/checkpoint/PREPARED_RECOVERY_TASK.md",
+    "sessions/RL42/checkpoint/README.md",
+    "sessions/RL42/checkpoint/RL42_CLOSEOUT_VERIFICATION_REPORT.md",
+    "sessions/RL42/checkpoint/RL42_SESSION_STATE_AND_RL43_KICKOFF.md",
+    "sessions/RL42/checkpoint/resume.json",
+    "sessions/RL42/incoming/FAILURE_AND_LESSON_LEDGER.md",
+    "sessions/RL42/incoming/PROOF_STATE_AND_OPEN_OBLIGATIONS.md",
+    "sessions/RL42/incoming/RL41_FAILURE_AND_LESSON_LEDGER_APPENDIX.md",
+    "sessions/RL42/incoming/RL41_PROOF_STATE_AND_RESIDUAL_LEDGER.md",
+    "sessions/RL42/incoming/RL41_REPORT.md",
+    "sessions/RL42/incoming/RL42_MAXIMUM_RESOURCE_BOUNDARY_COMPATIBILITY_BRIEF.md",
+    "sessions/RL42/incoming/RL42_STATE.md",
+    "sessions/RL42/incoming/START_HERE.md",
+    "sessions/RL13/checkpoint/CRITICAL_CONNECTED_RESOURCE_REPORT.md",
+    "sessions/RL13/checkpoint/PROOF_STATE_AND_RESIDUAL_LEDGER.md",
+    "sessions/RL13/incoming/RL13_CRITICAL_CONNECTED_RESOURCE_BRIEF.md"
+  ]
+}
