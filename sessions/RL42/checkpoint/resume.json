@@ -1,0 +1,23 @@
+{
+  "format": "rl-connector-resume-v1",
+  "session": "RL42",
+  "status": "CLOSED/FROZEN",
+  "base_head": "9cdb1685bce0e6bf72c1ab4cd5efea07faedaa6c",
+  "base_tree": "b50e04c51c3672f97c4023861a0a413a4230928b",
+  "authoritative_tree": "a295d95a298e85bc452f73db901b1879252a1ed6",
+  "promoted": ["RL42-P01"],
+  "classification": "proved scoped analytic resource-interface compatibility model",
+  "correction_demotion": "NONE",
+  "failure_lesson": "FL-045",
+  "named_universal_obligations_reduced": "NONE",
+  "counterpattern": {
+    "A1": ["u1", "u3", "u5", "u6"],
+    "A2": ["u0", "u1", "u3", "u5"],
+    "A3": ["u1", "u2", "u4", "u6"]
+  },
+  "not_certified": ["full-C7 critical realizability of fixed triple", "M3-CORE"],
+  "retained_open": ["m=3,A=S", "full sharp Hadwiger"],
+  "successor": "RL43",
+  "successor_brief": "authoritative/RL43_FIXED_COUNTERPATTERN_CRITICALITY_COMPATIBILITY_BRIEF.md",
+  "programme": "ACTIVE"
+}

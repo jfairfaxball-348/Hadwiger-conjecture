@@ -1,34 +1,35 @@
-# RL42 authoritative state
+# RL43 authoritative state
 
 Status: READY / NOT STARTED.
-Predecessor: RL41 CLOSED/FROZEN under sessions/RL41/.
-Sole current brief: RL42_MAXIMUM_RESOURCE_BOUNDARY_COMPATIBILITY_BRIEF.md.
+Predecessor: RL42 CLOSED/FROZEN under sessions/RL42/.
+Sole current brief: RL43_FIXED_COUNTERPATTERN_CRITICALITY_COMPATIBILITY_BRIEF.md.
 Root: h(G) >= chi(G) for every finite simple graph.
 
-RL41 promoted two scoped analytic results.
+RL42 promoted one scoped analytic result.
 
-RL41-P01 gives an explicit symbolic boundary-level counterpattern:
+RL42-P01 gives an explicit symbolic resource-interface realization of the fixed RL41 attachment triple
 
     A_1={u_1,u_3,u_5,u_6},
     A_2={u_0,u_1,u_3,u_5},
     A_3={u_1,u_2,u_4,u_6}.
 
-Each A_i is a vertex cover of the complement C7 and their union is S, yet there is no common independent three-set J satisfying the RL41 compatibility condition for all three resources. Therefore M3-DIRECT-ROOTED-K6-SELECTION is false at exactly the stated boundary-set scope.
+Three singleton exterior resources with these exact S-neighborhoods can be made pairwise joined. With no other exterior vertices, the family is maximum; its total size is also minimum among maximum three-resource families. Therefore the original formal RL13 resource-family/maximality semantics do not themselves exclude the RL41 counterpattern.
 
-RL41-P02 independently certifies the conditional payoff: whenever suitable distinct roots and common J do exist, the prescribed six branch sets form an S-rooted K6 in H, and adjoining {v} gives a K7 minor in G at the retained full-C7 critical scope.
+This is only a resource-interface model. It is not a full-C7 critical realization and not a Hadwiger counterexample.
 
-The RL41 counterpattern is not a graph counterexample and no full critical realization is claimed.
+RL41-P01 and RL41-P02 remain unchanged at their exact scopes.
 
 Correction/demotion: NONE.
 No named inherited universal mathematical obligation was genuinely reduced.
 M3-CORE remains NOT CERTIFIED.
 The retained m=3,A=S configuration remains open.
+Full critical realizability of the fixed triple remains open.
 The full sharp Hadwiger conjecture remains open.
 
-FL-044 records that individual attachment-cover data plus union=S are too coarse for the direct universal selection. RL31-RL39 terminal-core/nearest-witness machinery remains suspended under FL-043.
+FL-043 and FL-044 remain in force. FL-045 records the RL42 resource-interface non-exclusion.
 
-RL42 audits exactly whether the original maximum partial resource-family semantics impose an additional cross-A_i compatibility condition excluding the fixed RL41 counterpattern.
+RL43 audits exactly whether inherited full-C7 criticality inputs, beyond resource maximality, force a contradiction with this same fixed attachment triple.
 
-Required RL41 provenance is frozen under sessions/RL41/checkpoint/. Incoming RL41 authority is frozen verbatim under sessions/RL41/incoming/.
+Required RL42 provenance is frozen under sessions/RL42/checkpoint/. Incoming RL42 authority is frozen verbatim under sessions/RL42/incoming/.
 
 Programme ACTIVE.
