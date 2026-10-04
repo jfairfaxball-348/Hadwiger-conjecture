@@ -1,0 +1,22 @@
+{
+  "format": "rl-connector-resume-v1",
+  "session": "RL41",
+  "status": "CLOSED/FROZEN",
+  "base_head": "e76a7911c2d4f9ed79ffaefd218d8dcb22a903ef",
+  "base_tree": "1d6582dd9e01f79697c7fc5ecb41959a6535ed48",
+  "authoritative_tree": "07c02c8d1a3a58bd238dc25db382e37157c55a3a",
+  "promoted": ["RL41-P01", "RL41-P02"],
+  "correction_demotion": "NONE",
+  "failure_lesson": "FL-044",
+  "named_universal_obligations_reduced": "NONE",
+  "counterpattern": {
+    "A1": ["u1", "u3", "u5", "u6"],
+    "A2": ["u0", "u1", "u3", "u5"],
+    "A3": ["u1", "u2", "u4", "u6"]
+  },
+  "not_certified": ["M3-CORE"],
+  "retained_open": ["m=3,A=S", "full sharp Hadwiger"],
+  "successor": "RL42",
+  "successor_brief": "authoritative/RL42_MAXIMUM_RESOURCE_BOUNDARY_COMPATIBILITY_BRIEF.md",
+  "programme": "ACTIVE"
+}

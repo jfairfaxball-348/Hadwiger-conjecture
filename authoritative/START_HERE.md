@@ -1,20 +1,34 @@
-# RL41 authoritative state
+# RL42 authoritative state
 
 Status: READY / NOT STARTED.
-Predecessor: RL40 CLOSED/FROZEN under sessions/RL40/.
-Sole current brief: RL41_DIRECT_THREE_RESOURCE_ROOTED_K6_BOUNDARY_SELECTION_BRIEF.md.
+Predecessor: RL41 CLOSED/FROZEN under sessions/RL41/.
+Sole current brief: RL42_MAXIMUM_RESOURCE_BOUNDARY_COMPATIBILITY_BRIEF.md.
 Root: h(G) >= chi(G) for every finite simple graph.
 
-RL40 completed the mandatory audit of RL30-RL39. Correction/demotion: NONE. Every valid RL30-RL39 result retains its exact recorded scope.
+RL41 promoted two scoped analytic results.
 
-RL39-P01 remains valid only at the RL38 global endpoint-witness-pair refined-closure scope: refined NEQ is impossible there. This does not certify M3-CORE. All-SAT and EQ remain genuine stopping profiles, the retained m=3,A=S configuration remains open, and the full sharp Hadwiger conjecture remains open.
+RL41-P01 gives an explicit symbolic boundary-level counterpattern:
 
-RL40 found HIGH Collatz/repetition risk: RL31-RL39 are nine consecutive refinements of one conditional m=3 mechanism without reducing a named inherited universal mathematical obligation. FL-043 records the research-control lesson. Route verdict: PIVOT.
+    A_1={u_1,u_3,u_5,u_6},
+    A_2={u_0,u_1,u_3,u_5},
+    A_3={u_1,u_2,u_4,u_6}.
 
-RL41 therefore does not continue the terminal-core / least-miss / leaf-blocker / nearest-witness chain. It returns to the original retained three-resource axioms and tests exactly one direct S-boundary selection lemma whose success would give an S-rooted K6 in H and hence a K7 minor in G.
+Each A_i is a vertex cover of the complement C7 and their union is S, yet there is no common independent three-set J satisfying the RL41 compatibility condition for all three resources. Therefore M3-DIRECT-ROOTED-K6-SELECTION is false at exactly the stated boundary-set scope.
 
-The RL21-RL29 m=2 chain remains preserved but suspended under RL30/FL-033.
+RL41-P02 independently certifies the conditional payoff: whenever suitable distinct roots and common J do exist, the prescribed six branch sets form an S-rooted K6 in H, and adjoining {v} gives a K7 minor in G at the retained full-C7 critical scope.
 
-Required RL40 audit provenance is in sessions/RL40/checkpoint/. Incoming RL40 authority is frozen verbatim under sessions/RL40/incoming/.
+The RL41 counterpattern is not a graph counterexample and no full critical realization is claimed.
+
+Correction/demotion: NONE.
+No named inherited universal mathematical obligation was genuinely reduced.
+M3-CORE remains NOT CERTIFIED.
+The retained m=3,A=S configuration remains open.
+The full sharp Hadwiger conjecture remains open.
+
+FL-044 records that individual attachment-cover data plus union=S are too coarse for the direct universal selection. RL31-RL39 terminal-core/nearest-witness machinery remains suspended under FL-043.
+
+RL42 audits exactly whether the original maximum partial resource-family semantics impose an additional cross-A_i compatibility condition excluding the fixed RL41 counterpattern.
+
+Required RL41 provenance is frozen under sessions/RL41/checkpoint/. Incoming RL41 authority is frozen verbatim under sessions/RL41/incoming/.
 
 Programme ACTIVE.
