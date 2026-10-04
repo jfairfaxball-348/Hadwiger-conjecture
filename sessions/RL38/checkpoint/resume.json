@@ -1,0 +1,13 @@
+{
+  "session": "RL38",
+  "status": "CLOSED/FROZEN",
+  "base_head": "34702f58f37d80e28e55ebfae121cf9675b3c1c1",
+  "base_tree": "ebd461e45f09c072f51df6ebbcde875b3708ffd0",
+  "promoted": ["RL38-P01"],
+  "certified_targets": ["M3-GLOBAL-NEAREST-PAIR-OVERLAP"],
+  "correction_demotion": "NONE",
+  "failure_lesson": "FL-041",
+  "successor": "RL39",
+  "successor_brief": "authoritative/RL39_DISJOINT_BLOCKER_GLOBAL_PAIR_SUPPORT_AUDIT_BRIEF.md",
+  "programme": "ACTIVE"
+}
