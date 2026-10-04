@@ -1,0 +1,31 @@
+{
+  "format": "rl-connector-resume-v1",
+  "session": "RL47",
+  "status": "CLOSED/FROZEN",
+  "base_head": "b8b79b13d02a52a62662468333309a41f468b67c",
+  "authoritative_tree": "f70ee665401bc1e785fcc1371750469837a14d4f",
+  "successor": "RL48",
+  "successor_brief": "authoritative/RL48_A2_PIVOTAL_EDGE_TWO_ENDPOINT_REPAIR_BRIEF.md",
+  "promoted": [
+    "RL47-P01"
+  ],
+  "classification": "proved scoped analytic A2 pivotal-edge saturation necessity plus explicit symbolic insufficiency obstruction",
+  "stopping_outcome": 2,
+  "correction_demotion": "NONE",
+  "failure_lesson": "FL-050",
+  "named_universal_obligations_reduced": "NONE",
+  "still_open": [
+    "M3-RL41-A2-26-COMPONENT-SEPARATION on actual H",
+    "M3-RL41-A2-U4-CONFLICT-RECOLOR",
+    "M3-CORE",
+    "full-C7 critical realizability of fixed triple",
+    "m=3,A=S",
+    "full sharp Hadwiger"
+  ],
+  "sources_retrieved": 0,
+  "mathematical_numerical_computation": 0,
+  "prohibited_census": false,
+  "formal_proof_checker": false,
+  "independent_external_red_team": false,
+  "programme": "ACTIVE"
+}
