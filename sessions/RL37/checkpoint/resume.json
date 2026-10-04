@@ -1,0 +1,13 @@
+{
+  "session": "RL37",
+  "status": "CLOSED/FROZEN",
+  "base_head": "81efdafa3b08f17add2207e73dd0f31f6e9b1d1a",
+  "base_tree": "d1f4da4550e50f9f79ee8de438d871bdab813d31",
+  "promoted": ["RL37-P01"],
+  "certified_targets": ["M3-NEAREST-WITNESS-OVERLAP"],
+  "correction_demotion": "NONE",
+  "failure_lesson": "FL-040",
+  "successor": "RL38",
+  "successor_brief": "authoritative/RL38_GLOBAL_NEAREST_ENDPOINT_WITNESS_PAIR_REFINEMENT_BRIEF.md",
+  "programme": "ACTIVE"
+}

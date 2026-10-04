@@ -1,26 +1,26 @@
-# RL37 authoritative state
+# RL38 authoritative state
 
 Status: READY / NOT STARTED.
-Predecessor: RL36 CLOSED/FROZEN under sessions/RL36/.
-Sole current brief: RL37_NEAREST_WITNESS_CHOICE_REFINEMENT_BRIEF.md.
+Predecessor: RL37 CLOSED/FROZEN under sessions/RL37/.
+Sole current brief: RL38_GLOBAL_NEAREST_ENDPOINT_WITNESS_PAIR_REFINEMENT_BRIEF.md.
 Root: h(G) >= chi(G) for every finite simple graph.
 
-RL36 promoted RL36-P01 only at the exact retained m=3, A=S arbitrary fixed-choice scope. In NEQ, if the already named distinct blockers g,h share endpoint x, then x has no I-neighbor because h misses C union I, while g is I-covered; hence the nonshared endpoint of g is forced to be internally supported.
+RL37 promoted RL37-P01 only at the exact new fixed-endpoint nearest-witness refinement of the retained m=3, A=S setup. The changed closure independently re-established monotone repair, first exact coverage K<=7, minimum-total-size saturation C_K=T_i*, and the final leaf/deletion blocker plus least-miss order interface.
 
-The exact overlap identities are retained:
-- if x=a, then N_H(a) intersect T={w} and a is definitely a w-contact endpoint of h;
-- if x!=a, then a is the internally supported endpoint, N_H(a) intersect I is nonempty, and aw is retained;
-- neither identity contradicts the inherited arbitrary witness choice;
-- the disjoint ordered blocker profile also survives.
+In refined NEQ overlap, if x!=a then a is the nonshared endpoint of g and has an internal support z in I. Because z lies strictly inside the final Q-path from w toward C,
 
-M3-NAMED-BLOCKER-OVERLAP is certified only as this branchwise endpoint-support localization. M3-CORE remains not certified. Correction/demotion: NONE. No named inherited universal mathematical obligation was genuinely reduced.
+    dist_Q(z,C) < dist_Q(w,C),
 
-FL-039 records the barrier: endpoint overlap localizes the supporting endpoint, but RL33 chose w only as an arbitrary actual T-neighbor, so no nearest-neighbor/minimality contradiction is available.
+contradicting the RL37 rule that w minimizes distance to C among N_H(a) intersect T. Therefore refined overlap forces x=a.
 
-RL37 executes exactly one changed-choice candidate assessment. It defines a new monotone closure in which, after the least miss and an admissible endpoint a_k are fixed, w_k is chosen among that endpoint's T_i* neighbors minimizing Q_i*-distance to C_k. The modified construction must independently re-establish monotone closure, first coverage, minimum-total-size saturation, and the final blocker/order interface before testing whether refined NEQ overlap with x!=a contradicts nearest-witness choice. If it does, RL37 stops after recording that refined overlap forces x=a.
+M3-NEAREST-WITNESS-OVERLAP is certified only at this new refined-closure scope. It does not retroactively strengthen RL33-RL36. M3-CORE remains not certified. Correction/demotion: NONE. No named inherited universal mathematical obligation was genuinely reduced.
+
+FL-040 records the remaining barrier: in the surviving x=a overlap profile, the internal support lies on the other endpoint y of g. RL37 minimized only among neighbors of the already fixed endpoint a, so that closer alternate-endpoint witness was not eligible for comparison. In fact N_H(a) intersect T={w} there.
+
+RL38 executes exactly one further changed-choice candidate assessment. For each selected least miss g_k, it chooses an admissible endpoint-witness pair globally over both endpoints of g_k to minimize Q_i*-distance to C_k. The new construction must independently re-establish closure, first coverage, saturation, and the final blocker/order interface before testing whether any refined final overlap contradicts global pair minimality.
 
 The RL21-RL29 m=2 chain remains preserved but suspended under RL30/FL-033.
 
-Required pre-RL36 authority is frozen verbatim under sessions/RL36/incoming/. Consume the current RL36 report, proof-state and failure records and inherited records only as named by the RL37 brief.
+Required pre-RL37 authority is frozen verbatim under sessions/RL37/incoming/. Consume the current RL37 report, proof-state and failure records and inherited records only as named by the RL38 brief.
 
 Programme: ACTIVE.
