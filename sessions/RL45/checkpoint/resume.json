@@ -1,0 +1,32 @@
+{
+  "format": "rl-connector-resume-v1",
+  "session": "RL45",
+  "status": "CLOSED/FROZEN",
+  "base_head": "668e415fa5c1ad1d38dd331967c94a1ad302c430",
+  "base_tree": "6f1cebd9e204b4b3f059cbaeb4f504b1fb29a7dd",
+  "incoming_authoritative_tree": "aa26c4cff27f68f0a33f4f1036336a00e2cd346b",
+  "successor": "RL46",
+  "successor_brief": "authoritative/RL46_FIXED_26_COMPONENT_RESOURCE_INTERFACE_SEPARATION_BRIEF.md",
+  "promoted": [
+    "RL45-P01"
+  ],
+  "classification": "proved scoped analytic two-color-component obstruction",
+  "stopping_outcome": 3,
+  "first_missing_implication": "M3-RL41-A2-26-COMPONENT-SEPARATION",
+  "correction_demotion": "NONE",
+  "failure_lesson": "FL-048",
+  "named_universal_obligations_reduced": "NONE",
+  "still_open": [
+    "M3-RL41-A2-U4-CONFLICT-RECOLOR",
+    "M3-CORE",
+    "full-C7 critical realizability of fixed triple",
+    "m=3,A=S",
+    "full sharp Hadwiger"
+  ],
+  "sources_retrieved": 0,
+  "mathematical_numerical_computation": 0,
+  "prohibited_census": false,
+  "formal_proof_checker": false,
+  "independent_external_red_team": false,
+  "programme": "ACTIVE"
+}
