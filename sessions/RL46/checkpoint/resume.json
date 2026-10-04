@@ -1,0 +1,30 @@
+{
+  "format": "rl-connector-resume-v1",
+  "session": "RL46",
+  "status": "CLOSED/FROZEN",
+  "base_head": "901dabacfed8e5f74a7ee7a6c75fbbb3602e2293",
+  "successor": "RL47",
+  "successor_brief": "authoritative/RL47_A2_COLOR_SENSITIVE_RESOURCE_BRIDGE_RESTRICTION_BRIEF.md",
+  "promoted": [
+    "RL46-P01"
+  ],
+  "classification": "proved scoped analytic resource/proper-coloring/component-interface obstruction",
+  "stopping_outcome": 2,
+  "correction_demotion": "NONE",
+  "failure_lesson": "FL-049",
+  "named_universal_obligations_reduced": "NONE",
+  "still_open": [
+    "M3-RL41-A2-26-COMPONENT-SEPARATION on actual H",
+    "M3-RL41-A2-U4-CONFLICT-RECOLOR",
+    "M3-CORE",
+    "full-C7 critical realizability of fixed triple",
+    "m=3,A=S",
+    "full sharp Hadwiger"
+  ],
+  "sources_retrieved": 0,
+  "mathematical_numerical_computation": 0,
+  "prohibited_census": false,
+  "formal_proof_checker": false,
+  "independent_external_red_team": false,
+  "programme": "ACTIVE"
+}
