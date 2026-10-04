@@ -1,0 +1,22 @@
+{
+  "format": "rl-connector-resume-v1",
+  "session": "RL43",
+  "status": "CLOSED/FROZEN",
+  "base_head": "902169c00574daf412d806f220d4fd74d6f9990f",
+  "base_tree": "a8eb4f36b993aad2c2589c5adb7e785cad497591",
+  "incoming_authoritative_tree": "4c09c3abb4b41cf6439fe20940cfd356f9588934",
+  "work_checkpoint_commit": "83917d9adce9420d45938ac6e5c8427968c63502",
+  "successor_authoritative_tree": "16f5d741718d7bbc1ab2cbc62e23da7881d5e76a",
+  "promoted": ["RL43-P01"],
+  "classification": "proved scoped analytic criticality-interface compatibility/barrier",
+  "stopping_outcome": 3,
+  "first_missing_implication": "M3-RL41-A2-INTERFACE-LIFT",
+  "correction_demotion": "NONE",
+  "failure_lesson": "FL-046",
+  "named_universal_obligations_reduced": "NONE",
+  "not_certified": ["full-C7 critical realizability of fixed triple", "M3-CORE"],
+  "retained_open": ["m=3,A=S", "full sharp Hadwiger"],
+  "successor": "RL44",
+  "successor_brief": "authoritative/RL44_FIXED_COUNTERPATTERN_A2_INTERFACE_LIFT_FEASIBILITY_BRIEF.md",
+  "programme": "ACTIVE"
+}

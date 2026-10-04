@@ -1,0 +1,31 @@
+{
+  "format": "rl-connector-resume-v1",
+  "session": "RL43",
+  "status": "OPEN_CHECKPOINT_NOT_PROMOTED",
+  "base_head": "902169c00574daf412d806f220d4fd74d6f9990f",
+  "base_tree": "a8eb4f36b993aad2c2589c5adb7e785cad497591",
+  "work_branch": "work/rl43-fixed-counterpattern-criticality-20261004",
+  "stopping_outcome": 3,
+  "checkpoint_result": "criticality-interface non-exclusion with first missing A2 lift implication",
+  "fixed_counterpattern": {
+    "A1": ["u1","u3","u5","u6"],
+    "A2": ["u0","u1","u3","u5"],
+    "A3": ["u1","u2","u4","u6"]
+  },
+  "interface_facts": {
+    "canonical_quotient_chromatic_number": 5,
+    "all_seven_star_patterns": "proved uniformly by Hall SDR argument",
+    "near_critical_model": "Hdagger = Q disjoint-union K6",
+    "near_critical_model_chi_H": 6,
+    "A2": "FAILS in Hdagger"
+  },
+  "first_missing_implication": "M3-RL41-A2-INTERFACE-LIFT",
+  "correction_demotion": "NONE",
+  "named_universal_obligations_reduced": "NONE",
+  "not_certified": ["full-C7 critical realizability of fixed triple","M3-CORE"],
+  "retained_open": ["m=3,A=S","full sharp Hadwiger"],
+  "preserve_failures": ["FL-043","FL-044","FL-045"],
+  "new_failure_lesson_candidate": "FL-046",
+  "selected_successor_if_closed": "RL44 fixed-counterpattern A2 interface-lift feasibility audit",
+  "programme": "ACTIVE"
+}
