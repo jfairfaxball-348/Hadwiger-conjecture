@@ -1,0 +1,16 @@
+{
+  "session": "RL39",
+  "status": "CLOSED/FROZEN",
+  "base_head": "d8de77dbeb93ae8cbe1c242b9755ec868ee9247f",
+  "base_tree": "ba83cafa416d3e4d73c6af601b0287e6dc90d3e7",
+  "promoted": ["RL39-P01"],
+  "certified_targets": ["M3-GLOBAL-NEAREST-PAIR-DISJOINT"],
+  "correction_demotion": "NONE",
+  "failure_lesson": "FL-042",
+  "named_universal_obligations_reduced": "NONE",
+  "surviving_profiles": ["all-SAT", "EQ"],
+  "not_certified": ["M3-CORE"],
+  "successor": "RL40",
+  "successor_brief": "authoritative/RL40_PROGRESS_AND_CORRECTION_AUDIT_BRIEF.md",
+  "programme": "ACTIVE"
+}
