@@ -1,0 +1,26 @@
+{
+  "format": "rl-connector-resume-v1",
+  "base_head": "3f20e9e4692568c262f933a7457d57992f542eae",
+  "authoritative_tree": "c7f61c543722f405da96f130ee987c3d92a53102",
+  "incoming_rl": 50,
+  "successor_rl": 51,
+  "session_brief": "authoritative/RL50_PROGRESS_AND_CORRECTION_AUDIT_BRIEF.md",
+  "last_verified_frontier": "RL50 audit complete: correction/demotion NONE; no named universal obligation reduced; HIGH Collatz risk; route PIVOT; RL47-RL49 pivotal-edge antecedent remains conditional.",
+  "recovery_mode": "pivot",
+  "changed_input_or_mechanism": "RL51 requires a universally quantified independently obligation-closing candidate rather than another fixed-triple/Kempe refinement.",
+  "failure_lesson_ids": [
+    "FL-043",
+    "FL-044",
+    "FL-045",
+    "FL-046",
+    "FL-047",
+    "FL-048",
+    "FL-049",
+    "FL-050",
+    "FL-051",
+    "FL-052",
+    "FL-053"
+  ],
+  "next_task_bounds": "RL51 at most three candidate mechanisms; zero source retrieval/computation by default; no censuses; retained m=3,A=S universal domain.",
+  "stop_and_repair_active": false
+}
