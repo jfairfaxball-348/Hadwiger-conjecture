@@ -20,7 +20,17 @@ Authority order:
 
 `authoritative/` is the sole incoming mathematical state. Frozen sessions are history. Scratch work and conversation are never authority.
 
-The initial scaffold contains no mathematical roadmap, no chosen attack, and no mathematical claim. Do not invent a global roadmap or long-horizon strategy unless the user explicitly asks for one in a later task. Research should be driven by the current authoritative session brief and direct user instruction.
+## Current programme root
+
+By explicit user-authorized programme amendment dated 2026-10-05, the sole current mathematical root is **HC7**:
+
+> for every finite simple graph G with chi(G)=7, prove h(G)>=7 (equivalently, G contains K7 as a minor).
+
+A legitimate negative result is an actual rigorously verified finite simple graph with chi(G)=7 and h(G)<=6. The full sharp Hadwiger conjecture for arbitrary chromatic number is not a required target of the current programme. Historical sessions that used the full conjecture as their root remain frozen history and must not be rewritten on account of this narrowing.
+
+Do not change the current programme root again without explicit user authorization. A narrower inherited theorem contributes to HC7 only through a proved coverage bridge recorded in current authority.
+
+The initial scaffold contained no mathematical roadmap. The user has now explicitly authorized the durable HC7 programme in `authoritative/HC7_RESEARCH_PROGRAMME.md`; do not silently supersede it with an invented long-horizon strategy. Research should be driven by that programme, the current authoritative session brief, and direct user instruction.
 
 ## Mathematical integrity
 
@@ -49,7 +59,7 @@ Separate permission to investigate an input from permission to consume it as pro
 
 Carry `authoritative/FAILURE_AND_LESSON_LEDGER.md` forward in every handover. Preserve the original error or failed expectation, evidence, first invalid or missing dependency, surviving valid scope, downstream effects, lesson, and conditions for revisiting it. Distinguish an actual mathematical error from a valid restricted result, inconclusive search, access defect, or process defect. Corrections append an explicit history; they never erase the original issue or rewrite frozen sessions.
 
-Each blocked research checkpoint must identify the next concrete recovery task and its bounds. A work unit or RL may finish while the programme remains active. Do not repeat a failed attempt without a named change, manufacture progress, or replace the root by an easier variant. Integrity failures still freeze affected deductions; only repair or work independent of the failure may proceed after the applicable gate passes. User-directed pauses and `CLOSEOUT_LOCK` remain binding.
+Each blocked research checkpoint must identify the next concrete recovery task and its bounds. A work unit or RL may finish while the programme remains active. Do not repeat a failed attempt without a named change, manufacture progress, or replace the current HC7 root by a different target without an explicit user-authorized programme amendment. Integrity failures still freeze affected deductions; only repair or work independent of the failure may proceed after the applicable gate passes. User-directed pauses and `CLOSEOUT_LOCK` remain binding.
 
 ## Every tenth session: progress and correction audit
 

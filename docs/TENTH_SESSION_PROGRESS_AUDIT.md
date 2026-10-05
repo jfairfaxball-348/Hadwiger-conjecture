@@ -24,12 +24,16 @@ older provenance only where a live dependency requires it.
 
 ## Required review
 
-Keep full sharp Hadwiger, h(G)>=chi(G) for every finite simple graph, as
-the root. Either a complete rigorous proof or an actual rigorously verified
-finite h<chi graph is legitimate. Review each session's input, result,
-exact quantifiers, proof classification, verifier scope, corrections,
-failures, lessons, and precise contribution to a named root obligation.
-Assess valid local results separately from applicability to the root.
+Keep HC7 as the current root: for every finite simple graph G with
+chi(G)=7, prove h(G)>=7. A legitimate negative result is an actual
+rigorously verified finite simple graph with chi(G)=7 and h(G)<=6. The
+full sharp conjecture is no longer a required programme target. When an
+audit reviews pre-pivot sessions, preserve their historical target and
+classifications, but assess present applicability only through proved
+coverage bridges to HC7. Review each session's input, result, exact
+quantifiers, proof classification, verifier scope, corrections, failures,
+lessons, and precise contribution to a named current-root obligation.
+Assess valid local results separately from applicability to HC7.
 
 Recheck load-bearing proofs and hypotheses at their consuming scopes.
 Challenge universal-coloring claims, critical/auxiliary distinctions,

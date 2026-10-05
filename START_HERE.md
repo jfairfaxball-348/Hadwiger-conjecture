@@ -1,20 +1,24 @@
-# Hadwiger research repository — start here
+# Hadwiger chi=7 research repository — start here
 
 The repository is the research-state carrier; worker conversations are disposable.
 
 Read, in order:
 
-1. AGENTS.md — binding conveyor rules;
-2. authoritative/START_HERE.md — unique incoming RL;
-3. only the exact current files named by that entry point and its sole brief.
+1. `AGENTS.md` — binding conveyor rules and the current HC7 root;
+2. `authoritative/START_HERE.md` — unique incoming RL;
+3. `authoritative/HC7_RESEARCH_PROGRAMME.md` — durable coverage-first programme;
+4. only the exact current files named by the authoritative entry point and its sole brief.
 
-Before beginning mathematics, complete the start gate in AGENTS.md.
+Before beginning mathematics, complete the start gate in `AGENTS.md`.
 
 ## Current handoff
 
-RL27 is CLOSED/FROZEN under sessions/RL27/.
-RL28 is the unique incoming session, with sole brief authoritative/RL28_EDGE_CRITICAL_EXTRA_NEIGHBOR_BRIEF.md.
+RL51 is CLOSED/FROZEN under `sessions/RL51/`.
 
-RL27 proves fixed-color non-A-list-colorability of G[R_1] and the minimal-obstruction inequality |A(u)|<=d_K(u), but its sole endpoint consequence stops because Q_1/W do not control extra original-G edges at x. FL-030 records that barrier. No saturation exclusion or named-obligation reduction occurs. RL28 is the prepared edge-critical extra-neighbor gate, READY / NOT STARTED.
+RL52 is the unique incoming numbered session, READY / NOT STARTED, with sole brief `authoritative/RL52_HC7_ROOT_COVERAGE_GATE_BRIEF.md`.
 
-Keep h(G)>=chi(G) for EVERY finite simple graph as the root. Preserve every result, source/failure/certificate limit and residual, and follow the recovery protocol and every-tenth-session audit rule. Programme ACTIVE.
+Current root: HC7 only — for every finite simple graph G with chi(G)=7, prove h(G)>=7. The full sharp Hadwiger conjecture is not a required target.
+
+The first RL52 task is a bounded root-coverage audit. It must determine which arrows from a minor-minimal HC7 counterexample to the previously studied degree-seven/full-C7/local-resource domains are actually proved in repository authority and stop at the first uncovered universal branch.
+
+Preserve every frozen result, source/failure/certificate limit, correction/demotion, and retry condition. Programme ACTIVE.

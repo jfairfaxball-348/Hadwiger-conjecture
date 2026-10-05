@@ -4,7 +4,7 @@
 
 ## Scope and two admission gates
 
-Full sharp Hadwiger remains the root: h(G)>=chi(G) for every finite simple graph, with both values zero on the empty graph. Either a full rigorous proof or an actual rigorously verified finite counterexample is legitimate. A bridge countermodel has its own scope and is not automatically a root counterexample.
+HC7 is the current sole root: for every finite simple graph G with chi(G)=7, prove h(G)>=7, equivalently that G has a K7 minor. A legitimate negative result is an actual rigorously verified finite simple graph with chi(G)=7 and h(G)<=6. The full sharp Hadwiger conjecture outside chi=7 is out of scope as a required target. Historical records that name the former full-conjecture root retain their historical meaning. A bridge countermodel has its own scope and is not automatically an HC7 counterexample.
 
 **Exploration admission:** a worker may propose and investigate an unproved input if it names a concrete mechanism, explains its relevance to a recorded missing dependency, distinguishes established facts from hypotheses, and supplies a bounded test. The user need not provide a theorem or candidate graph first. Candidate formulation and bounded falsification can themselves be research tasks.
 
@@ -27,7 +27,7 @@ This separation permits discovery without relaxing mathematical standards. A rou
 |---|---|---|
 | Repair | Correct or independently justify the first failed dependency; recheck every affected conclusion. | Quietly removing a hypothesis or treating an invalidated conclusion as proved. |
 | Rework | Replace the mechanism, interface, or decomposition while retaining a proved connection to the root; expose all residual cases. | More consequences of a mechanism known to cover no relevant cases. |
-| Pivot | Choose a different bridge or a concrete candidate-negative strategy with exact root relevance and testable work. | An easier variant substituted for full Hadwiger, or an unbounded roadmap refresh. |
+| Pivot | Choose a different bridge or a concrete candidate-negative strategy with exact HC7 relevance and testable work. | A different theorem substituted for HC7 without explicit user authorization, or an unbounded roadmap refresh. |
 
 Before restarting a stopped mechanism, state the **change from the recorded attempt** and show how it addresses the recorded obstruction. A newly formulated input can be assessed as a candidate; it cannot yet license its consequences. A new title, extra local conditions, repeated query, or unchanged inaccessible URL is not a change.
 

@@ -2,21 +2,21 @@
 
 Status: READY / NOT STARTED.
 Predecessor: RL51 CLOSED/FROZEN.
-Sole brief: RL52_M3_CLIQUE_SEPARATOR_DICHOTOMY_PROOF_OR_FALSIFICATION_BRIEF.md.
+Type: first numbered session under the HC7 programme reset.
+Sole brief: RL52_HC7_ROOT_COVERAGE_GATE_BRIEF.md.
+Root: HC7 only.
 
-RL51 correction/demotion: NONE.
-Named inherited universal obligations genuinely reduced in RL51: NONE.
+The 2026-10-05 programme target amendment is a separate non-RL commit. It preserves RL52 as the unique incoming numbered session and gives no mathematical progress credit.
 
-RL51-P01 proves only the independent payoff of the admitted candidate M3-CLIQUE-SEPARATOR-DICHOTOMY. The candidate theorem itself remains UNPROVED.
+Correction/demotion: NONE.
+Mathematical classification changes caused by the pivot: NONE.
 
-Admitted candidate: every retained full-C7 degree-seven m=3,A=S realization has either an S-rooted K6 in H or a clique separator X of G with |X|<=6.
+RL51-P01 remains only a scoped conditional payoff theorem. M3-CLIQUE-SEPARATOR-DICHOTOMY remains ADMITTED / UNPROVED inside the retained full-C7 degree-seven m=3,A=S scope. It is not the automatic RL52 task.
 
-Rejected RL51 candidate classes:
-- universal five-color boundary extension, as an unchanged A2/interface-lift mechanism;
-- universal pivotal/Kempe entry, as insufficient and suspended under FL-053.
+FL-043 through FL-054 and all retry conditions remain in force. The RL31-RL39 terminal-core route and RL41-RL49 fixed-triple/Kempe hierarchy remain subject to their recorded anti-Collatz suspension conditions.
 
-The cumulative failure ledger remains through FL-053; FL-054 is the separate RL51 appendix. All are in force.
+RL52 executes exactly one bounded HC7 root-coverage audit. It must trace the chain from a hypothetical minor-minimal HC7 counterexample through universal structure, degree/neighborhood coverage, and only then to any inherited degree-seven / H[S]=K7-C7 / resource domain. It stops at the first missing universal arrow.
 
-RL52 executes exactly one bounded proof/falsification task for the admitted dichotomy on the no-S-rooted-K6 branch.
+No external mathematical source retrieval and no mathematical numerical computation by default.
 
 Programme ACTIVE.
