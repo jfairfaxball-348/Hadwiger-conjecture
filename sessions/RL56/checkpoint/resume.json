@@ -1,0 +1,43 @@
+{
+  "format": "rl-connector-resume-v1",
+  "base_head": "873e71ae37bc6fbf0a37c28fb07a94308e1b63fa",
+  "base_tree": "caf59296f27dff01bebf6d3bddd2a6b2f74898e8",
+  "authoritative_tree": "775f25fe6edf29e7495540ed66f0c214e1ac2085",
+  "incoming_rl": 56,
+  "successor_rl": 57,
+  "session_brief": "authoritative/RL56_HC7_K44_MODEL_RELATIVE_DEGREE_ATTACHMENT_GATE_BRIEF.md",
+  "last_verified_frontier": "Every hypothetical minor-minimal HC7 counterexample is certified through delta(G)>=7 and contains a K4,4 minor. On delta>=8 a minimum model satisfies RL55-P01. RL56-P01 gives a conditional K7 payoff for an exterior double apex, but universal existence is unproved because degree eight can be absorbed inside the model union under current authority.",
+  "completed_artifacts": [
+    "RL56_REPORT.md",
+    "RL56_PROOF_STATE_AND_RESIDUAL_LEDGER.md",
+    "RL56_FAILURE_AND_LESSON_LEDGER_APPENDIX.md",
+    "RL57_HC7_K44_MODEL_UNION_DEGREE_ABSORPTION_ESCAPE_GATE_BRIEF.md",
+    "RL57_STATE.md"
+  ],
+  "unpromoted_or_uncovered": [
+    "delta(G)>=8",
+    "RL56-C01 universal double-apex existence",
+    "HC7-K44-MODEL-UNION-DEGREE-ABSORPTION/ESCAPE",
+    "HC7-DEGREE-SEVEN-EXISTENCE"
+  ],
+  "failure_lesson_ids": [
+    "FL-043",
+    "FL-053",
+    "FL-054",
+    "FL-055",
+    "FL-056",
+    "FL-057"
+  ],
+  "recovery_mode": "rework",
+  "changed_input_or_mechanism": "Move from an unforced double-apex attachment to one exact universal model-union degree-cap/escape candidate in the original graph.",
+  "next_task_bounds": "Assess only RL57-C01: some v in the minimum-model union U has at most seven neighbours in U. If proved, record only the resulting escape edge from delta>=8.",
+  "retry_conditions": [
+    "Do not infer double-apex attachment from one escape edge",
+    "Do not catalogue model degrees or attachments",
+    "Do not repeat branch-set reducibility",
+    "Do not compare model sizes across graphs",
+    "Do not transfer delta(G)>=8 to a quotient"
+  ],
+  "correction_demotion": "NONE",
+  "stop_and_repair_active": false
+}
