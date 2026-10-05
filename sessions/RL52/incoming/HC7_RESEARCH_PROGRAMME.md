@@ -2,7 +2,7 @@
 
 Status: CURRENT PROGRAMME AUTHORITY.
 Installed by explicit non-RL target amendment on 2026-10-05.
-Incoming numbered session: RL53.
+Incoming numbered session: RL52.
 Programme ACTIVE.
 
 ## 1. Exact root theorem and negative target
@@ -39,8 +39,7 @@ Assume for programme planning that HC7 is false. Choose a K7-minor-free graph G 
 | Every proper subgraph is 6-colorable. | elementary consequence | Every proper subgraph is a proper minor. |
 | G is connected. | elementary consequence | Otherwise a component has chromatic number 7 and is a proper subgraph. |
 | delta(G)>=6. | elementary consequence | If d(v)<=5, a six-coloring of G-v extends to v. |
-| delta(G)>=7. | proved inherited analytic consequence, certified for HC7 by RL52 | RL6-P03 proves alpha(G[N(v)])<=d(v)-5 in every full-C7 critical graph. If d(v)=6, N(v) is a K6, so v together with N(v) is a K7, impossible in a K7-minor-free HC7 counterexample. |
-| stronger connectivity, existence of a degree-seven vertex, or a complete neighborhood classification | NOT ASSUMED | RL52 found no proved/source-verified universal bridge for these. Do not import them from memory. |
+| stronger connectivity, stronger minimum-degree bounds, existence of a degree-seven vertex, or a complete neighborhood classification | NOT ASSUMED | These require an exact repository proof or a bounded source-verification task. Do not import them from memory. |
 | existence of v with d(v)=7, H=G-v with H[S]=K7-C7, m=3,A=S, the RL41 attachment triple, a star coloring, a color pair, a Kempe component, a pivotal edge, or M3-CLIQUE-SEPARATOR-DICHOTOMY | NOT ASSUMED | These are progressively narrower inherited domains/candidates and require proved coverage bridges. |
 
 The elementary entries above justify the baseline formulation. They do not change the proof classification of any inherited theorem.
@@ -51,7 +50,7 @@ A result contributes to HC7 only if every restriction between the HC7 root and t
 
 | Scope | Inherited material | Current HC7 coverage status |
 |---|---|---|
-| universal HC7 / minor-minimal counterexample | the baseline above plus inherited RL6-P03 | RL52 certified the chain through delta(G)>=7. Existence of a degree-seven vertex is not certified; the residual delta(G)>=8 branch remains explicit. |
+| universal HC7 / minor-minimal counterexample | the baseline above; any genuinely universal full-C7 consequences that RL52 can locate and verify | root-facing, but stronger structure beyond the elementary baseline is not assumed until exact provenance is verified |
 | full-C7 critical | criticality/A2-type arguments used throughout the programme | potentially root-facing because the minor-minimal baseline is full-C7 critical; each specific consequence still needs its exact hypotheses and provenance |
 | degree-seven | the long inherited degree-seven programme | conditional only; current authority does not authorize assuming that every HC7 counterexample has a degree-seven vertex |
 | H[S]=K7-C7 | the retained seven-neighbor cycle-complement branch | narrower than degree-seven; it contributes only after a proved neighborhood-coverage theorem |
@@ -73,7 +72,7 @@ There are four principal workstreams. They are ordered by coverage, not by local
 
 **Inherited bridge.** The elementary minor-minimal reduction to full-C7 criticality.
 
-**First known gap.** RL52 certified the baseline through delta(G)>=7 using inherited RL6-P03. The first missing universal arrow is whether every minor-minimal HC7 counterexample has a degree-seven vertex, equivalently whether the residual delta(G)>=8 branch is impossible.
+**First known gap.** Current authority has not yet been audited for the exact proof/source status of stronger connectivity and degree consequences needed by later local work.
 
 **Falsification condition.** A claimed universal structural consequence lacks a repository proof/source-status record, loses a hypothesis, or admits a baseline-compatible counterpattern.
 
@@ -87,7 +86,7 @@ There are four principal workstreams. They are ordered by coverage, not by local
 
 **Inherited bridge.** W1 universal structure.
 
-**First known gap.** RL52 found no proved/source-verified universal theorem forcing a degree-seven vertex. Thus delta(G)>=8 is the first explicit residual branch. Neighborhood classification is downstream and must not be entered until degree-seven existence is proved.
+**First known gap.** No current authority may assume that every such G contains a degree-seven vertex, nor that every relevant degree-seven neighborhood satisfies H[S]=K7-C7. RL52 must verify whether either arrow is already proved somewhere in authoritative/frozen provenance.
 
 **Falsification condition.** An allowed degree/neighborhood branch remains outside the proposed partition, or an asserted branch reduction is only heuristic/source-memory.
 
@@ -115,7 +114,7 @@ There are four principal workstreams. They are ordered by coverage, not by local
 
 **Inherited bridge.** The explicit exhaustive partition produced by W2.
 
-**First known gap.** The residual definitely includes the universal branch delta(G)>=8 unless RL53 eliminates it. Degree-seven graphs with other neighborhood structures remain downstream residuals once degree-seven existence is certified.
+**First known gap.** The residual may include higher-degree graphs, degree-seven graphs with other neighborhood structures, or other cases not yet identified because the coverage chain has not been audited.
 
 **Falsification condition.** A proposed residual theorem fails on an allowed branch or depends on a structural result not proved/source-verified for all residual graphs.
 
@@ -146,31 +145,27 @@ RL51-P01 proves only the candidate's conditional payoff at that retained scope.
 
 The candidate is one possible W3 subroute. It is not automatically the next principal task, because HC7 first needs the root-to-local coverage chain audited. The old RL52 brief selecting immediate proof/falsification of this dichotomy is not current authority.
 
-## 7. RL52 outcome and first bounded RL53 task
+## 7. First bounded RL52 task
 
-RL52 completed the HC7 root-coverage gate.
+RL52 performs exactly one **HC7 root-coverage gate**. It does not attempt to prove HC7 and does not attempt M3-CLIQUE-SEPARATOR-DICHOTOMY.
 
-Certified chain:
+Audit the exact chain
 
 ```
 HC7 counterexample
   -> minor-minimal HC7 counterexample
-  -> every proper minor 6-colorable / full-C7 critical
-  -> proper subgraphs 6-colorable, connected
-  -> delta(G)>=7.
+  -> full-C7 / proper-minor-six-colorable baseline
+  -> available universal connectivity and degree consequences
+  -> degree/neighborhood cases
+  -> degree-seven H[S]=K7-C7 domain, if justified
+  -> inherited resource cases, including m=3,A=S, if justified
+  -> existing RL31-RL51 local machinery.
 ```
 
-The delta(G)>=7 step is not a new RL52 theorem. RL52 verified exact inherited provenance in RL6-P03 and the RL10 dependency/scope audit.
+For each arrow record: exact statement, proof/source status, exact repository provenance, whether it is universal over every minor-minimal HC7 counterexample, and the first uncovered branch.
 
-The first missing universal arrow is
+**Primary stopping rule:** stop at the first arrow that is not already proved/source-verified at the needed universal scope. That first uncovered universal branch becomes the next root-facing obligation. Do not continue deeper into m=3 merely because the old programme did.
 
-```
-minor-minimal HC7 counterexample with delta(G)>=7
-  -> existence of a vertex v with d(v)=7.
-```
+The task is desk-based and finite: no external source retrieval and no mathematical numerical computation by default. Exact older files may be opened only when directly cited by the current/frozen RL50-RL51 authority as load-bearing provenance.
 
-Equivalently, the residual branch delta(G)>=8 has not been excluded. Therefore no degree-seven neighborhood, H[S]=K7-C7, resource, m=3,A=S, fixed-color, Kempe, pivotal-edge, or M3 clique-separator result may be credited to HC7 until this arrow is proved.
-
-RL53 performs exactly one HC7 degree-seven-existence gate. It must prove, or exactly source-verify at the required scope, that every minor-minimal HC7 counterexample has a degree-seven vertex; otherwise it must retain delta(G)>=8 explicitly and identify the first missing dependency. No broad theorem-discovery campaign, census, local Kempe work, or M3 work is authorized.
-
-Correction/demotion remains NONE unless RL53 discovers an actual scope or validity defect.
+Correction/demotion remains NONE unless the audit discovers an actual scope or validity defect. Narrowing the programme target by itself changes no mathematical classification.

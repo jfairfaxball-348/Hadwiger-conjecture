@@ -1,45 +1,46 @@
-# RL52 authoritative state — HC7 programme
+# RL53 authoritative state — HC7 programme
 
 Status: READY / NOT STARTED.
-Predecessor: RL51 CLOSED/FROZEN under `sessions/RL51/`.
-Sole current brief: `RL52_HC7_ROOT_COVERAGE_GATE_BRIEF.md`.
-Durable programme: `HC7_RESEARCH_PROGRAMME.md`.
-Target amendment record: `HC7_PROGRAMME_TARGET_AMENDMENT.md`.
+Predecessor: RL52 CLOSED/FROZEN under sessions/RL52/.
+Sole current brief: RL53_HC7_DEGREE_SEVEN_EXISTENCE_GATE_BRIEF.md.
+Durable programme: HC7_RESEARCH_PROGRAMME.md.
+Root: HC7 only.
 
-## Current root
+## RL52 outcome
 
-HC7 only:
+RL52 completed the bounded HC7 root-coverage audit.
 
-```
-for every finite simple graph G with chi(G)=7,
-h(G) >= 7
-```
+Certified for every hypothetical minor-minimal HC7 counterexample:
+- every proper minor is 6-colorable / full-C7 critical;
+- every proper subgraph is 6-colorable;
+- G is connected;
+- delta(G)>=7.
 
-equivalently, G contains K7 as a minor.
+The delta(G)>=7 conclusion is inherited from RL6-P03 and was revalidated at scope by RL52 using frozen RL6 and RL10 provenance. RL52 did not prove a new mathematical theorem.
 
-A legitimate negative result is a rigorously verified finite simple graph with chi(G)=7 and h(G)<=6.
+First uncertified universal arrow:
+every such graph has a degree-seven vertex.
 
-The full sharp Hadwiger conjecture is not a required current target. Historical RL1-RL51 records that name it as their root remain frozen history.
+Equivalent universal residual branch:
+delta(G)>=8.
 
-## Preserved RL51 state
+Therefore do not descend into H[S]=K7-C7, resource cases, m=3,A=S, fixed colorings, Kempe/pivotal-edge work, or M3-CLIQUE-SEPARATOR-DICHOTOMY unless the degree-seven-existence gate first passes.
+
+## Preserved inherited state
 
 Correction/demotion: NONE.
-No mathematical classification changes arise from the target amendment.
+No inherited theorem changed classification.
 
-RL41-P01, RL41-P02 and RL42-P01 through RL49-P01 survive exactly at their recorded scopes. RL47-P01 through RL49-P01 remain conditional on an exterior pivotal separating edge.
+RL41-P01, RL41-P02 and RL42-P01 through RL49-P01 survive exactly at recorded scopes; RL47-P01 through RL49-P01 retain their pivotal-edge antecedent.
 
-RL51-P01 proves only the independent payoff of M3-CLIQUE-SEPARATOR-DICHOTOMY at the retained full-C7 degree-seven m=3,A=S scope. The candidate theorem itself remains ADMITTED / UNPROVED.
+RL51-P01 remains only a scoped conditional payoff theorem. M3-CLIQUE-SEPARATOR-DICHOTOMY remains ADMITTED / UNPROVED.
 
-FL-043 through FL-054 and all retry conditions remain in force. The fixed RL41 triple / e_0 / {2,6} / pivotal-edge Kempe hierarchy remains suspended as a principal route under FL-053.
+FL-043 through FL-054 and all retry conditions remain in force.
 
-M3-CORE remains NOT CERTIFIED. The retained m=3,A=S configuration remains open.
+## RL53 task
 
-## RL52 task
+RL53 performs exactly one bounded HC7 degree-seven-existence proof/source-verification gate: prove or exactly source-verify, at the minor-minimal HC7 scope, that some vertex has degree seven, equivalently eliminate delta(G)>=8.
 
-RL52 is a root-coverage gate, not the old clique-separator proof attempt.
-
-Audit the exact chain from a hypothetical minor-minimal HC7 counterexample to the local domains already studied. Determine which arrows are already proved/source-verified in repository authority and stop at the first missing universal arrow. If the degree-seven/full-C7 m=3 route does not cover every hypothetical HC7 counterexample, record the first uncovered branch instead of continuing deeper into m=3.
-
-Required current files are the sole brief, `HC7_RESEARCH_PROGRAMME.md`, `PROOF_STATE_AND_OPEN_OBLIGATIONS.md`, `RL52_STATE.md`, the RL51 report/proof-state/FL-054 appendix, the cumulative failure ledger, and only the exact frozen RL50-RL51 provenance named by the brief.
+Required current files are this entry point, HC7_RESEARCH_PROGRAMME.md, PROOF_STATE_AND_OPEN_OBLIGATIONS.md, RL53_STATE.md, RL52_REPORT.md, RL52_PROOF_STATE_AND_RESIDUAL_LEDGER.md, the failure/lesson ledger plus RL51 FL-054 appendix, and only exact older frozen provenance named by the RL53 brief.
 
 Programme ACTIVE.

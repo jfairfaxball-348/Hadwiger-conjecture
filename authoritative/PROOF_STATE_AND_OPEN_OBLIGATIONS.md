@@ -1,13 +1,13 @@
 # HC7 proof state and open obligations
 
-Status: CURRENT after the 2026-10-05 non-RL target amendment.
+Status: CURRENT after RL52.
 Root: HC7 only — every finite simple graph G with chi(G)=7 has h(G)>=7.
 Counterexample target: a rigorously verified finite simple graph with chi(G)=7 and h(G)<=6.
 Correction/demotion: NONE.
 
 ## Classification preservation
 
-No existing mathematical result changed classification in the target amendment.
+No inherited mathematical theorem changed classification in RL52.
 
 RL41-P01, RL41-P02 and RL42-P01 through RL49-P01 remain valid exactly at their recorded scopes. RL47-P01 through RL49-P01 retain their conditional pivotal-edge scope.
 
@@ -15,33 +15,41 @@ RL51-P01 remains proved scoped analytic candidate-payoff sufficiency only. M3-CL
 
 FL-043 through FL-053 remain in the cumulative ledger and FL-054 remains in the RL51 appendix, with all retry conditions in force.
 
-Historical statements that full sharp Hadwiger was open remain historical; the full conjecture is no longer a required programme obligation.
+## RL52 certified HC7-universal frontier
 
-## Universal HC7 obligations
+For every hypothetical minor-minimal HC7 counterexample G:
+1. G is finite simple, chi(G)=7, and has no K7 minor;
+2. every proper minor is 6-colorable, hence G is full-C7 critical in the repository sense;
+3. every proper subgraph is 6-colorable and G is connected;
+4. delta(G)>=6 by elementary coloring extension;
+5. delta(G)>=7 by inherited RL6-P03: alpha(G[N(v)])<=d(v)-5, and degree six would force N(v)=K6 and hence a K7 subgraph with v.
 
-1. **HC7-MINIMAL-BASELINE.** Use a minor-minimal chi=7, K7-minor-free counterexample and justify the proper-minor-six-colorable/full-C7 baseline. The elementary reduction is recorded in `HC7_RESEARCH_PROGRAMME.md`; RL52 must verify the exact chain before consuming stronger inherited structure.
-2. **HC7-UNIVERSAL-STRUCTURE.** Identify exactly which stronger connectivity/degree consequences are proved or source-verified for every such minor-minimal counterexample. Do not import classical theorems from memory.
-3. **HC7-DEGREE-NEIGHBORHOOD-COVERAGE.** Produce a proved exhaustive partition that covers every minor-minimal HC7 counterexample and identifies when the inherited degree-seven / H[S]=K7-C7 machinery applies.
-4. **HC7-LOCAL-BRANCH-CLOSURE.** Close each branch in that exhaustive partition. Existing m=3,A=S work can discharge only a branch reached by a proved coverage theorem.
-5. **HC7-RESIDUAL-CLOSURE.** Keep every higher-degree, different-neighborhood, different-resource, or otherwise uncovered branch explicit until proved impossible or independently closed.
+The delta(G)>=7 theorem is inherited mathematics. RL52's contribution is exact root-facing provenance/coverage certification.
 
-None of obligations 2-5 is certified by the target amendment.
+## First open universal obligation
 
-## Narrow inherited scopes
+**HC7-DEGREE-SEVEN-EXISTENCE.** Prove for every minor-minimal HC7 counterexample G that some vertex has degree seven.
 
-- full-C7 critical arguments: potentially root-facing after the minimal-baseline bridge, but each theorem retains its exact recorded hypotheses;
-- degree-seven results: conditional on reaching a degree-seven vertex by a proved universal bridge;
-- H[S]=K7-C7 results: conditional on a proved neighborhood-coverage bridge;
-- m=3,A=S results: conditional on an exhaustive resource-case bridge;
-- fixed-triple / fixed-color / Kempe results: RL41-RL49 only at recorded scopes;
-- suspended mechanisms: RL31-RL39 terminal-core chain under FL-043 and fixed RL41 triple/e_0/{2,6}/pivotal-edge Kempe chain under FL-053.
+Equivalent residual after the certified frontier: exclude the branch delta(G)>=8.
 
-M3-CORE remains NOT CERTIFIED. The retained m=3,A=S configuration remains open. These are no longer the programme root.
+Status: OPEN / NOT SOURCE-VERIFIED at the required scope.
+
+This is the first missing coverage arrow. Until it is discharged, the inherited degree-seven programme is conditional and cannot be credited as exhausting HC7.
+
+## Downstream obligations retained explicitly
+
+After degree-seven existence, separate proof obligations remain for:
+- exhaustive degree-seven neighborhood classification, including whether H[S]=K7-C7 is forced or merely one branch;
+- exhaustive resource decomposition and all m-cases;
+- m=3,A=S only where proved applicable;
+- every fixed-triple / fixed-color / Kempe / pivotal-edge hypothesis;
+- M3-CLIQUE-SEPARATOR-DICHOTOMY, still ADMITTED / UNPROVED;
+- every residual branch not covered by the local machinery.
+
+M3-CORE remains NOT CERTIFIED.
 
 ## Exact successor
 
-RL52 is READY / NOT STARTED and performs only the bounded HC7 root-coverage gate in `RL52_HC7_ROOT_COVERAGE_GATE_BRIEF.md`.
-
-It must stop at the first unproved universal arrow from the HC7 counterexample baseline toward the existing degree-seven/local machinery and record that uncovered branch. It must not execute the old M3 clique-separator proof/falsification task.
+RL53 is READY / NOT STARTED and performs only the bounded HC7 degree-seven-existence gate in RL53_HC7_DEGREE_SEVEN_EXISTENCE_GATE_BRIEF.md.
 
 Programme ACTIVE.
