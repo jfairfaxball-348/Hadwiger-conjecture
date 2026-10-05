@@ -1,43 +1,43 @@
-# RL55 authoritative state — HC7 programme
+# RL56 authoritative state — HC7 programme
 
 Status: READY / NOT STARTED.
-Predecessor: RL54 CLOSED/FROZEN under sessions/RL54/.
-Sole current brief: RL55_HC7_K44_MINOR_MODEL_CRITICAL_AUGMENTATION_GATE_BRIEF.md.
+Predecessor: RL55 CLOSED/FROZEN under sessions/RL55/.
+Sole current brief: RL56_HC7_K44_MODEL_RELATIVE_DEGREE_ATTACHMENT_GATE_BRIEF.md.
 Durable programme: HC7_RESEARCH_PROGRAMME.md.
 Root: HC7 only.
 
-## RL54 outcome
+## RL55 outcome
 
-RL54 completed the bounded HC7 delta>=8 / K4,4 payoff gate.
+RL55 completed the bounded K4,4 minor-model critical augmentation gate.
 
-SRC-0025, Kawarabayashi–Toft (2005), *Any 7-Chromatic Graphs Has K7 Or K4,4 As A Minor*, is now checked_primary at theorem-statement/hypothesis level from the original Springer Nature publication record, DOI 10.1007/s00493-005-0019-1. The full subscription proof was not independently reconstructed.
+A legitimate K4,4 model was normalized by minimum total branch-set size. RL55-P01 proves exact branch-set irreducibility: for a branch set X, no proper nonempty connected subset meets all four opposite-side attachment sets. In particular, if X-x remains connected then x uniquely supports at least one opposite branch set, and every spanning tree of G[X] has at most four leaves.
 
-Therefore every hypothetical minor-minimal HC7 counterexample contains a K4,4 minor.
-
-This is a genuine universal structural reduction but not a contradiction. K4,4 is 2-colorable, so its appearance as a proper minor is compatible with every proper minor being 6-colorable. delta(G)>=8 is not automatically preserved in the contracted quotient.
+This is a proved analytic model-level theorem, but it does not eliminate any residual graph. Contracting an internal branch-set edge preserves a K4,4 model in a proper minor, and full-C7 criticality permits that proper minor to be 6-colorable. Minimum model size in G cannot be compared across to the contracted graph, and delta(G)>=8 does not automatically pass to a quotient.
 
 delta(G)>=8 therefore remains OPEN / NOT ELIMINATED.
 
-First missing dependency: augment an arbitrary K4,4 branch-set model in a full-C7-critical, K7-minor-free graph with delta(G)>=8 to K7 or a non-6-colorable proper minor.
+First missing dependency: HC7-K44-MODEL-RELATIVE-DEGREE-ATTACHMENT — use the original-graph degree-eight condition relative to the minimum K4,4 model to force an explicit attachment with a proved K7 or proper-minor-coloring payoff.
 
 Correction/demotion: NONE.
 Inherited mathematical theorem classification changes: NONE.
-Source-status change: SRC-0025 not_directly_checked -> checked_primary in current authority; frozen historical source records remain unchanged.
+Source-status changes: NONE.
 
 ## Preserved inherited state
+
+SRC-0025 remains checked_primary at theorem-statement/hypothesis level; the full subscription proof was not independently reconstructed.
 
 RL41-P01, RL41-P02 and RL42-P01 through RL49-P01 survive exactly at recorded scopes; RL47-P01 through RL49-P01 retain their pivotal-edge antecedent.
 
 RL51-P01 remains only a scoped conditional payoff theorem. M3-CLIQUE-SEPARATOR-DICHOTOMY remains ADMITTED / UNPROVED.
 
-FL-043 through FL-055 and all retry conditions remain in force. The anti-Collatz suspensions from RL40 and RL50 remain binding.
+FL-043 through FL-056 and all retry conditions remain in force. The anti-Collatz suspensions from RL40 and RL50 remain binding.
 
-## RL55 task
+## RL56 task
 
-RL55 performs exactly one bounded HC7-K44-MINOR-MODEL-CRITICAL-AUGMENTATION-GATE.
+RL56 performs exactly one bounded HC7-K44-MODEL-RELATIVE-DEGREE-ATTACHMENT-GATE.
 
-Work with an arbitrary K4,4 branch-set model supplied by RL54. If useful, choose one minimizing total branch-set size and prove every consequence of that normalization. Test only whether model-level minimality plus full-C7 criticality, K7-minor-freeness and delta(G)>=8 forces K7 or an exact proper-minor coloring contradiction. Stop at the first further missing dependency.
+Work only on the delta(G)>=8 residual with a minimum-total-size K4,4 model and consume RL55-P01 exactly at its proved scope. Formulate and assess at most one precise universal attachment lemma that genuinely uses degree in the original graph. Its attachment object and explicit K7/proper-minor-coloring payoff must be stated before it is used.
 
-Do not strengthen the minor to a subgraph/induced subgraph/separator/prescribed model. Do not return to degree-seven/resource/Kempe/M3 machinery or launch a broad literature campaign.
+Do not repeat internal minimal-model deductions, compare model size across different graphs, transfer minimum degree to a quotient, catalogue K4,4 models, or return to degree-seven/resource/Kempe/M3 machinery.
 
 Programme ACTIVE.

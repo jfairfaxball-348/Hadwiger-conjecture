@@ -1,0 +1,40 @@
+{
+  "format": "rl-connector-resume-v1",
+  "base_head": "b38901e9334819dd64b4cb98cf0b3fed620bdb7f",
+  "base_tree": "5cd2119fca4fc82862731418490ecf3d27b1978e",
+  "authoritative_tree": "de1d9d2ce38125d0eea99092420c91f1c31d1587",
+  "incoming_rl": 55,
+  "successor_rl": 56,
+  "session_brief": "authoritative/RL55_HC7_K44_MINOR_MODEL_CRITICAL_AUGMENTATION_GATE_BRIEF.md",
+  "last_verified_frontier": "Every hypothetical minor-minimal HC7 counterexample is certified through delta(G)>=7 and contains a K4,4 minor. On the delta>=8 branch a minimum-total-size model satisfies RL55-P01 branch-set irreducibility, but no K7/proper-minor-coloring augmentation follows.",
+  "completed_artifacts": [
+    "RL55_REPORT.md",
+    "RL55_PROOF_STATE_AND_RESIDUAL_LEDGER.md",
+    "RL55_FAILURE_AND_LESSON_LEDGER_APPENDIX.md",
+    "RL56_HC7_K44_MODEL_RELATIVE_DEGREE_ATTACHMENT_GATE_BRIEF.md",
+    "RL56_STATE.md"
+  ],
+  "unpromoted_or_uncovered": [
+    "delta(G)>=8",
+    "HC7-K44-MODEL-RELATIVE-DEGREE-ATTACHMENT",
+    "HC7-DEGREE-SEVEN-EXISTENCE"
+  ],
+  "failure_lesson_ids": [
+    "FL-043",
+    "FL-053",
+    "FL-054",
+    "FL-055",
+    "FL-056"
+  ],
+  "recovery_mode": "rework",
+  "changed_input_or_mechanism": "Move from same-graph K4,4 model minimality to one original-graph degree-surplus / model-attachment interface with explicit payoff.",
+  "next_task_bounds": "One bounded universal model-relative attachment candidate; no model catalogue, quotient-degree argument, source campaign, or degree-seven/resource/Kempe/M3 work.",
+  "retry_conditions": [
+    "Do not repeat internal model-minimality deductions",
+    "Do not compare model size across different graphs",
+    "Use delta(G)>=8 only in the original graph",
+    "Require explicit K7 or proper-minor-coloring payoff before consuming a candidate"
+  ],
+  "correction_demotion": "NONE",
+  "stop_and_repair_active": false
+}

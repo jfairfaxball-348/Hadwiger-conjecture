@@ -2,7 +2,7 @@
 
 Status: CURRENT PROGRAMME AUTHORITY.
 Installed by explicit non-RL target amendment on 2026-10-05.
-Incoming numbered session: RL56.
+Incoming numbered session: RL55.
 Programme ACTIVE.
 
 ## 1. Exact root theorem and negative target
@@ -73,7 +73,7 @@ There are four principal workstreams. They are ordered by coverage, not by local
 
 **Inherited bridge.** The elementary minor-minimal reduction to full-C7 criticality.
 
-**First known gap.** RL55 proves an exact irreducibility theorem for a minimum-total-size K4,4 model but finds that this same-graph normalization does not interact strongly enough with proper-minor 6-colorability. The residual delta(G)>=8 branch remains explicit. The first missing bridge is from original-graph degree-eight surplus, relative to the normalized model, to an explicit K7 or proper-minor-coloring payoff.
+**First known gap.** RL54 source-verified SRC-0025 and therefore certifies that every hypothetical HC7 counterexample contains a K4,4 minor. The residual delta(G)>=8 branch remains explicit because no proved repository bridge upgrades an arbitrary K4,4 minor model to K7 or to a contradiction with proper-minor 6-colorability.
 
 **Falsification condition.** A claimed universal structural consequence lacks a repository proof/source-status record, loses a hypothesis, or admits a baseline-compatible counterpattern.
 
@@ -87,7 +87,7 @@ There are four principal workstreams. They are ordered by coverage, not by local
 
 **Inherited bridge.** W1 universal structure.
 
-**First known gap.** RL55 sharpens the K4,4 model interface but does not eliminate any graph: every incoming graph admits a minimum-total-size model satisfying RL55-P01. The next missing payoff is model-relative and degree-sensitive: use delta(G)>=8 in the original graph to force an attachment with an explicit K7 or criticality contradiction. Degree-seven neighborhood classification remains downstream.
+**First known gap.** RL54 certifies a universal K4,4 minor on the no-K7 HC7 domain, including delta(G)>=8. The first missing payoff is model-level: an arbitrary K4,4 minor must be augmented to K7 or converted into an exact criticality contradiction. Degree-seven neighborhood classification remains downstream.
 
 **Falsification condition.** An allowed degree/neighborhood branch remains outside the proposed partition, or an asserted branch reduction is only heuristic/source-memory.
 
@@ -115,7 +115,7 @@ There are four principal workstreams. They are ordered by coverage, not by local
 
 **Inherited bridge.** The explicit exhaustive partition produced by W2.
 
-**First known gap.** RL55 did not eliminate delta(G)>=8. A minimum-total-size K4,4 model is internally irreducible in the exact RL55-P01 sense, but that normalization alone does not couple to proper-minor 6-colorability. The missing universal bridge is HC7-K44-MODEL-RELATIVE-DEGREE-ATTACHMENT.
+**First known gap.** RL54 did not eliminate delta(G)>=8, but it reduced every hypothetical counterexample in that branch to one containing a K4,4 minor. The missing universal bridge is from an arbitrary K4,4 minor model plus full-C7 criticality and delta(G)>=8 to K7 or an exact contradiction.
 
 **Falsification condition.** A proposed residual theorem fails on an allowed branch or depends on a structural result not proved/source-verified for all residual graphs.
 
@@ -146,22 +146,20 @@ RL51-P01 proves only the candidate's conditional payoff at that retained scope.
 
 The candidate is one possible W3 subroute. It is not automatically the next principal task, because HC7 first needs the root-to-local coverage chain audited. The old RL52 brief selecting immediate proof/falsification of this dichotomy is not current authority.
 
-## 7. RL55 outcome and first bounded RL56 task
+## 7. RL54 outcome and first bounded RL55 task
 
-RL55 completed the bounded HC7 K4,4 minor-model critical augmentation gate.
+RL54 completed the bounded HC7 delta>=8 / K4,4 payoff gate.
 
-Choose a legitimate K4,4 minor model minimizing the total number of vertices in its eight branch sets. RL55-P01 proves the following exact same-graph irreducibility consequence. For any branch set X and opposite branch sets Y_1,...,Y_4, let T_j be the vertices of X adjacent to Y_j. No proper nonempty connected subset of X meets all four T_j. Hence if X-x remains connected, then x is the unique member of some T_j, and every spanning tree of G[X] has at most four leaves, with distinct leaves uniquely supporting distinct opposite branch sets.
+SRC-0025 — Ken-ichi Kawarabayashi and Bjarne Toft, *Any 7-Chromatic Graphs Has K7 Or K4,4 As A Minor*, Combinatorica 25 (2005), 327–353, DOI 10.1007/s00493-005-0019-1 — is now checked_primary at theorem-statement/hypothesis level. The original Springer Nature publication page identifies the paper and states that it proves the result in its title. No additional hypothesis or qualifier is stated in that theorem formulation. The full subscription proof was not independently reconstructed.
 
-This normalization does not eliminate delta(G)>=8. If an internal branch-set edge is contracted, the image of the eight branch sets still gives a K4,4 model in the proper minor, but full-C7 criticality permits that proper minor to be 6-colorable. Model minimality in G cannot be compared with model size in the contracted graph, and delta(G)>=8 does not pass automatically to the quotient.
+Therefore every hypothetical minor-minimal HC7 counterexample G, and in particular every retained delta(G)>=8 branch, contains a K4,4 minor because G has no K7 minor.
 
-Therefore RL55 supplies no sufficient universal augmentation to K7 and no non-6-colorable proper minor. The HC7 graph-level residual is not genuinely narrowed, although the normalized model interface is now exact.
+This does not eliminate delta(G)>=8. A K4,4 minor is 2-colorable and is compatible with every proper minor of G being 6-colorable. No proved repository theorem converts an arbitrary K4,4 branch-set model in this domain into K7 or a non-6-colorable proper minor.
 
-The first missing universal dependency is HC7-K44-MODEL-RELATIVE-DEGREE-ATTACHMENT: use delta(G)>=8 in the original graph, relative to a minimum K4,4 model, to force an explicit attachment configuration whose payoff is already proved to be K7 or an exact proper-minor coloring contradiction.
+The first missing universal dependency is HC7-K44-MINOR-MODEL-PAYOFF: an arbitrary K4,4 minor model in a full-C7-critical, K7-minor-free graph with delta(G)>=8 must be augmented to K7 or converted into an exact proper-minor coloring contradiction.
 
-RL56 performs exactly one HC7-K44-MODEL-RELATIVE-DEGREE-ATTACHMENT-GATE. It may formulate and assess one precise universal attachment lemma at this interface. The candidate must name its attachment object and explicit payoff before proof work begins. Stop at the first further missing dependency or falsifying configuration.
+RL55 performs exactly one HC7-K44-MINOR-MODEL-CRITICAL-AUGMENTATION-GATE. If useful, choose among all K4,4 models one minimizing total branch-set size. Prove every consequence of that normalization before use. Audit only whether minimal-model structure plus full-C7 criticality, K7-minor-freeness and delta(G)>=8 supplies a universal augmentation to K7 or an exact contradiction. Stop at the first further missing dependency.
 
-Do not repeat internal branch-set reducibility, infer singleton branch sets, transfer minimum degree to a quotient, catalogue K4,4 models, return to degree-seven/resource/Kempe/pivotal-edge machinery, or work on M3-CLIQUE-SEPARATOR-DICHOTOMY.
+Do not strengthen “K4,4 minor” to a subgraph, induced subgraph, separator, prescribed model, or independent side. Do not perform a broad literature campaign, graph census, degree-seven neighborhood work, resource/Kempe/pivotal-edge work, or M3 work.
 
-Correction/demotion remains NONE unless RL56 discovers an actual scope or validity defect.
-
-Programme ACTIVE.
+Correction/demotion remains NONE unless RL55 discovers an actual scope or validity defect.
