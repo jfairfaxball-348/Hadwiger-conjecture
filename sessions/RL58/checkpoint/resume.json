@@ -1,0 +1,51 @@
+{
+  "format": "rl-connector-resume-v1",
+  "base_head": "9e388a29f6c4aa3fe9c93f2357f0ddbe8b1a88b5",
+  "base_tree": "417e733c6a9bf22b50f27d0d080f8375e5304c87",
+  "authoritative_tree": "fd81a705a4f131fde22e88fb037363db0a40590d",
+  "incoming_rl": 58,
+  "successor_rl": 59,
+  "session_brief": "authoritative/RL58_HC7_K44_DENSE_MODEL_UNION_K7_PAYOFF_GATE_BRIEF.md",
+  "last_verified_frontier": "RL58-C01 is not established and not certified-domain falsified. The inherited K4,4 model yields a K5 using all eight original branch sets; current authority has no universal dense-union K5-to-K7 repartition/augmentation. The RL57 stress-test blocks RL55/interface-only steps. No escape edge or direct K7 was proved.",
+  "completed_artifacts": [
+    "RL58_REPORT.md",
+    "RL58_PROOF_STATE_AND_RESIDUAL_LEDGER.md",
+    "RL58_FAILURE_AND_LESSON_LEDGER_APPENDIX.md",
+    "RL59_HC7_K44_SPANNING_DENSE_MODEL_CRITICAL_REPARTITION_GATE_BRIEF.md",
+    "RL59_STATE.md"
+  ],
+  "unpromoted_or_uncovered": [
+    "delta(G)>=8",
+    "RL56-C01 universal double-apex existence",
+    "RL57-C01 universal in-union degree cap",
+    "RL58-C01 dense model-union K7 payoff",
+    "universal escape edge",
+    "HC7-K44-SPANNING-DENSE-MODEL-CRITICAL-REPARTITION/AUGMENTATION",
+    "HC7-DEGREE-SEVEN-EXISTENCE"
+  ],
+  "failure_lesson_ids": [
+    "FL-043",
+    "FL-053",
+    "FL-054",
+    "FL-055",
+    "FL-056",
+    "FL-057",
+    "FL-058",
+    "FL-059"
+  ],
+  "recovery_mode": "rework",
+  "changed_input_or_mechanism": "Restrict to U=V(G), where exterior escape is impossible, and use proper-minor 6-colorability / HC7 criticality as the new input for one K5-to-K7 repartition/augmentation candidate.",
+  "next_task_bounds": "RL59 works only in the spanning-union subcase and develops/assesses exactly one critical repartition/augmentation candidate. Stop at the first further missing universal dependency.",
+  "retry_conditions": [
+    "Do not seek an exterior escape edge",
+    "Do not reopen RL56-C01",
+    "Do not retry RL57-C01 by degree counting",
+    "Do not repeat RL55 reducibility",
+    "Do not use quotient minimum degree",
+    "Do not catalogue model degrees or attachments",
+    "Do not search for a full realization of the RL57 stress-test pattern",
+    "Do not return to degree-seven/resource/Kempe/pivotal-edge/M3 machinery"
+  ],
+  "correction_demotion": "NONE",
+  "stop_and_repair_active": false
+}

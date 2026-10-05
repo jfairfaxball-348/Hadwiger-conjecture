@@ -2,7 +2,7 @@
 
 Status: CURRENT PROGRAMME AUTHORITY.
 Installed by explicit non-RL target amendment on 2026-10-05.
-Incoming numbered session: RL59.
+Incoming numbered session: RL58.
 Programme ACTIVE.
 
 ## 1. Exact root theorem and negative target
@@ -146,26 +146,28 @@ RL51-P01 proves only the candidate's conditional payoff at that retained scope.
 
 The candidate is one possible W3 subroute. It is not automatically the next principal task, because HC7 first needs the root-to-local coverage chain audited. The old RL52 brief selecting immediate proof/falsification of this dichotomy is not current authority.
 
-## 7. RL58 outcome and first bounded RL59 task
+## 7. RL57 outcome and first bounded RL58 task
 
-RL58 completed the bounded HC7 K4,4 dense model-union K7 payoff gate.
+RL57 completed the bounded HC7 K4,4 model-union degree absorption / escape gate.
 
-RL58-C01 asserted universally that for every certified graph G on the delta(G)>=8 residual and every minimum-total-size K4,4 model M with branch-set union U, if every v in U has at least eight neighbours in U, then G contains a K7 minor.
+RL57-C01 asserted universally that for every certified graph G on the delta(G)>=8 residual and every minimum-total-size K4,4 model M with branch-set union U, some v in U satisfies |N_G(v) intersect U|<=7. If this cap were proved, delta(G)>=8 in the original graph would force at least one neighbour outside U.
 
-RL58-C01 is NOT ESTABLISHED / NOT PROMOTED. It was not falsified by a certified-domain counterexample.
+RL57-C01 is NOT ESTABLISHED / NOT PROMOTED. It is also not falsified by a certified-domain counterexample.
 
-The direct construction reaches the inherited K5 minor with branch sets A_1 union B_1, A_2 union B_2, A_3 union B_3, A_4, B_4. Those five branch sets collectively consume all eight original K4,4 branch sets. Current authority contains no universal theorem converting dense adjacency inside U into a repartition or augmentation producing two further disjoint connected branch sets.
+The decisive bounded obstruction is an RL55-interface counterpattern. Using eight three-vertex path branch sets indexed by K4,4, make an alternating Hamilton-cycle pair at each branch set use distinct singleton endpoint supporters, and make the two remaining opposite-side pairs complete between the corresponding three-vertex paths. Every branch set then satisfies the RL55-P01 irreducibility condition, while every displayed model vertex has exactly eight neighbours inside U. This pattern is not asserted to be a globally minimum K4,4 model in a full HC7 counterexample; it shows exactly that RL55-P01 and the legitimate-model interface alone cannot yield RL57-C01.
 
-The RL57 three-vertex-path pattern remains a fixed stress test. It satisfies RL55-P01 while every displayed model vertex has in-union degree eight, so any claimed repartition step relying only on RL55-P01, the basic K4,4 interface, or dense degree is invalid. The pattern remains outside the certified HC7 domain and does not falsify RL58-C01.
+Therefore no universal escape edge was proved. delta(G)>=8 remains OPEN / NOT ELIMINATED. The HC7-universal graph residual was not genuinely narrowed, and no HC7-universal obligation was genuinely reduced.
 
-No direct K7 consequence was promoted. No universal escape edge was proved. delta(G)>=8 remains OPEN / NOT ELIMINATED. The HC7-universal graph residual was not genuinely narrowed, and no HC7-universal obligation was genuinely reduced.
+The first missing universal dependency is **HC7-K44-DENSE-MODEL-UNION-K7-PAYOFF**.
 
-The first missing universal dependency is HC7-K44-SPANNING-DENSE-MODEL-CRITICAL-REPARTITION/AUGMENTATION. The sharp subcase is U=V(G), where exterior escape is unavailable and any successful argument must exploit HC7 criticality rather than minimum-model interface irreducibility alone.
+RL58 performs exactly one bounded dense-model-union payoff gate. Assess only this candidate:
 
-RL59 performs exactly one bounded HC7-K44-SPANNING-DENSE-MODEL-CRITICAL-REPARTITION-GATE. Work only in the U=V(G) subcase and use proper-minor 6-colorability as the changed input. Develop and assess exactly one concrete universal repartition/augmentation candidate capable of turning the spanning minimum K4,4 model into a direct K7 payoff or an equivalent contradiction. Stop at the first further missing universal dependency.
+> for every certified G and every minimum-total-size K4,4 model M with union U, if |N_G(v) intersect U|>=8 for every v in U, then G contains a K7 minor.
 
-Do not first derive an escape edge, reopen RL56-C01, replay RL55 reducibility or RL57 degree counting, catalogue model degrees/attachments, compare minimum model sizes across graphs, transfer delta(G)>=8 to a quotient, run a realization census, or return to degree-seven/resource/Kempe/pivotal-edge/M3 mechanisms.
+This is a changed proof mechanism, not progress merely by reformulation: the assessment must seek a direct K7 payoff from dense in-union adjacency using the full certified HC7 hypotheses, rather than first deriving an escape edge, repeating RL55 reducibility, or reopening the RL56 double-apex existence claim. If the candidate cannot be proved from current authority, stop at the first missing universal dependency. If a specifically named load-bearing theorem already present in repository provenance is required but weakly source-verified, hand off one bounded source-verification task rather than launching a literature survey.
 
-Correction/demotion remains NONE unless RL59 finds an actual validity defect.
+Do not catalogue model degrees or attachment types, compare model sizes across different graphs, transfer delta(G)>=8 to a quotient, perform a graph census or mathematical numerical computation, or return to degree-seven/resource/Kempe/pivotal-edge/M3 mechanisms.
+
+Correction/demotion remains NONE unless RL58 finds an actual validity defect.
 
 Programme ACTIVE.
