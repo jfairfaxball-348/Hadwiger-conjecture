@@ -2,7 +2,7 @@
 
 Status: CURRENT PROGRAMME AUTHORITY.
 Installed by explicit non-RL target amendment on 2026-10-05.
-Incoming numbered session: RL58.
+Incoming numbered session: RL57.
 Programme ACTIVE.
 
 ## 1. Exact root theorem and negative target
@@ -73,7 +73,7 @@ There are four principal workstreams. They are ordered by coverage, not by local
 
 **Inherited bridge.** The elementary minor-minimal reduction to full-C7 criticality.
 
-**First known gap.** RL57 shows that RL55-P01 and the basic K4,4 model interface can coexist with every displayed model vertex having eight neighbours inside the model union U. RL57-C01, the universal in-union degree cap, is therefore not derivable from that interface alone. The residual delta(G)>=8 branch remains explicit. The first missing bridge is an HC7-specific direct payoff or exclusion theorem for a dense minimum-model union.
+**First known gap.** RL56 tests one exact model-relative degree attachment candidate and proves its conditional K7 payoff, but current authority does not force even one neighbour outside the union U of a minimum-total-size K4,4 model. The residual delta(G)>=8 branch remains explicit. The first missing bridge is a universal model-union degree-absorption/escape statement that converts original-graph degree eight into a genuinely new attachment.
 
 **Falsification condition.** A claimed universal structural consequence lacks a repository proof/source-status record, loses a hypothesis, or admits a baseline-compatible counterpattern.
 
@@ -87,7 +87,7 @@ There are four principal workstreams. They are ordered by coverage, not by local
 
 **Inherited bridge.** W1 universal structure.
 
-**First known gap.** RL57 does not establish the proposed cap |N_G(v) intersect U|<=7. A concrete RL55-interface counterpattern has every displayed model vertex of in-union degree eight, so a successful argument must use HC7-specific structure beyond minimum-model irreducibility. The next missing bridge is a direct dense-model-union K7 payoff or the first further dependency preventing it. Degree-seven neighborhood classification remains downstream.
+**First known gap.** RL56 shows that degree eight cannot be converted to a new attachment merely by counting neighbours: current authority permits the degree to be absorbed by internal/model-union neighbours or repeated neighbours in an already-required opposite branch set. The next missing bridge is a universal cap or escape theorem for the minimum-model union U. Degree-seven neighborhood classification remains downstream.
 
 **Falsification condition.** An allowed degree/neighborhood branch remains outside the proposed partition, or an asserted branch reduction is only heuristic/source-memory.
 
@@ -115,7 +115,7 @@ There are four principal workstreams. They are ordered by coverage, not by local
 
 **Inherited bridge.** The explicit exhaustive partition produced by W2.
 
-**First known gap.** RL57 did not eliminate delta(G)>=8 and did not prove a universal escape edge. The RL55 interface admits a dense in-union counterpattern, so the cap/escape mechanism cannot be retried unchanged. The missing universal bridge is HC7-K44-DENSE-MODEL-UNION-K7-PAYOFF.
+**First known gap.** RL56 did not eliminate delta(G)>=8. Its double-apex candidate has an exact conditional K7 payoff, but the universal existence of that attachment is not established because no current theorem bounds degree absorbed inside the model union. The missing universal bridge is HC7-K44-MODEL-UNION-DEGREE-ABSORPTION/ESCAPE.
 
 **Falsification condition.** A proposed residual theorem fails on an allowed branch or depends on a structural result not proved/source-verified for all residual graphs.
 
@@ -146,28 +146,28 @@ RL51-P01 proves only the candidate's conditional payoff at that retained scope.
 
 The candidate is one possible W3 subroute. It is not automatically the next principal task, because HC7 first needs the root-to-local coverage chain audited. The old RL52 brief selecting immediate proof/falsification of this dichotomy is not current authority.
 
-## 7. RL57 outcome and first bounded RL58 task
+## 7. RL56 outcome and first bounded RL57 task
 
-RL57 completed the bounded HC7 K4,4 model-union degree absorption / escape gate.
+RL56 completed the bounded HC7 K4,4 model-relative degree attachment gate.
 
-RL57-C01 asserted universally that for every certified graph G on the delta(G)>=8 residual and every minimum-total-size K4,4 model M with branch-set union U, some v in U satisfies |N_G(v) intersect U|<=7. If this cap were proved, delta(G)>=8 in the original graph would force at least one neighbour outside U.
+Let M=(A_1,...,A_4;B_1,...,B_4) be a minimum-total-size K4,4 model and U the union of its eight branch sets. RL56 assessed exactly one universal attachment candidate: two disjoint nonempty connected exterior sets P,Q, adjacent to each other and each adjacent to every one of the eight branch sets.
 
-RL57-C01 is NOT ESTABLISHED / NOT PROMOTED. It is also not falsified by a certified-domain counterexample.
+RL56-P01 proves the conditional payoff: if such P,Q exist, then G has a K7 minor. Indeed the K4,4 model contains a K5 model with branch sets A_1 union B_1, A_2 union B_2, A_3 union B_3, A_4, B_4; P and Q extend it to K7.
 
-The decisive bounded obstruction is an RL55-interface counterpattern. Using eight three-vertex path branch sets indexed by K4,4, make an alternating Hamilton-cycle pair at each branch set use distinct singleton endpoint supporters, and make the two remaining opposite-side pairs complete between the corresponding three-vertex paths. Every branch set then satisfies the RL55-P01 irreducibility condition, while every displayed model vertex has exactly eight neighbours inside U. This pattern is not asserted to be a globally minimum K4,4 model in a full HC7 counterexample; it shows exactly that RL55-P01 and the legitimate-model interface alone cannot yield RL57-C01.
+RL56-C01, the universal existence of such a double apex, is NOT ESTABLISHED. The original-graph condition delta(G)>=8 does not currently force even one edge leaving U. RL55-P01 controls which vertices are indispensable for required opposite-side attachment, but it does not bound the number of neighbours a model vertex may have inside its own branch set or in one already-required opposite branch set. Thus the degree-eight lower bound can be absorbed without producing a new attachment type.
 
-Therefore no universal escape edge was proved. delta(G)>=8 remains OPEN / NOT ELIMINATED. The HC7-universal graph residual was not genuinely narrowed, and no HC7-universal obligation was genuinely reduced.
+A concrete permitted local pattern is a spanning-tree leaf x of a branch set X that uniquely supports Y_1, with one internal neighbour in X and seven distinct neighbours in Y_1. This gives d_G(x)=8 while adding no exterior/model-transverse attachment. The pattern is not asserted to be a full HC7 counterexample; it falsifies the naive degree-surplus inference available from current authority.
 
-The first missing universal dependency is **HC7-K44-DENSE-MODEL-UNION-K7-PAYOFF**.
+Therefore delta(G)>=8 remains OPEN / NOT ELIMINATED, and the HC7-universal graph residual is not genuinely narrowed.
 
-RL58 performs exactly one bounded dense-model-union payoff gate. Assess only this candidate:
+The first missing universal dependency is HC7-K44-MODEL-UNION-DEGREE-ABSORPTION/ESCAPE. RL57 assesses exactly one explicit candidate at that interface:
 
-> for every certified G and every minimum-total-size K4,4 model M with union U, if |N_G(v) intersect U|>=8 for every v in U, then G contains a K7 minor.
+> for every graph G and every minimum-total-size K4,4 model in the certified domain, with U its branch-set union, there exists v in U such that |N_G(v) intersect U|<=7.
 
-This is a changed proof mechanism, not progress merely by reformulation: the assessment must seek a direct K7 payoff from dense in-union adjacency using the full certified HC7 hypotheses, rather than first deriving an escape edge, repeating RL55 reducibility, or reopening the RL56 double-apex existence claim. If the candidate cannot be proved from current authority, stop at the first missing universal dependency. If a specifically named load-bearing theorem already present in repository provenance is required but weakly source-verified, hand off one bounded source-verification task rather than launching a literature survey.
+If proved, delta(G)>=8 in the original graph forces at least one neighbour of v outside U. That is only an escape-edge conclusion; RL57 must not silently promote it to the RL56 double-apex attachment or to K7.
 
-Do not catalogue model degrees or attachment types, compare model sizes across different graphs, transfer delta(G)>=8 to a quotient, perform a graph census or mathematical numerical computation, or return to degree-seven/resource/Kempe/pivotal-edge/M3 mechanisms.
+Do not catalogue attachments, repeat RL55 internal reducibility, compare model size across graphs, transfer delta(G)>=8 to a quotient, or return to degree-seven/resource/Kempe/pivotal-edge/M3 mechanisms.
 
-Correction/demotion remains NONE unless RL58 finds an actual validity defect.
+Correction/demotion remains NONE unless RL57 finds an actual validity defect.
 
 Programme ACTIVE.

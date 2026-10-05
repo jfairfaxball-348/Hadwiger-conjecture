@@ -1,28 +1,28 @@
-# RL57 authoritative state — HC7 programme
+# RL58 authoritative state — HC7 programme
 
 Status: READY / NOT STARTED.
-Predecessor: RL56 CLOSED/FROZEN under sessions/RL56/.
-Sole current brief: RL57_HC7_K44_MODEL_UNION_DEGREE_ABSORPTION_ESCAPE_GATE_BRIEF.md.
+Predecessor: RL57 CLOSED/FROZEN under sessions/RL57/.
+Sole current brief: RL58_HC7_K44_DENSE_MODEL_UNION_K7_PAYOFF_GATE_BRIEF.md.
 Durable programme: HC7_RESEARCH_PROGRAMME.md.
 Root: HC7 only.
 
-## RL56 outcome
+## RL57 outcome
 
-RL56 assessed exactly one universal model-relative attachment candidate on the delta(G)>=8 residual.
+RL57 assessed exactly one universal model-union degree-cap / escape candidate on the delta(G)>=8 residual.
 
-For a minimum-total-size K4,4 model M with branch-set union U, RL56-C01 proposed two disjoint nonempty connected sets P,Q outside U, adjacent to each other and each adjacent to all eight model branch sets.
+For every certified G and every minimum-total-size K4,4 model M with branch-set union U, RL57-C01 proposed that some v in U satisfy |N_G(v) intersect U|<=7.
 
-RL56-P01 proves the conditional payoff: if such P,Q exist, the K4,4 model supplies a K5 minor and P,Q extend it to a K7 minor.
+RL57-C01 is NOT ESTABLISHED / NOT PROMOTED. It was not falsified by a certified-domain counterexample.
 
-RL56-C01 universal existence is NOT ESTABLISHED.
+The bounded obstruction is an exact RL55-interface counterpattern: eight three-vertex path branch sets can satisfy the RL55-P01 irreducibility condition while every displayed model vertex has exactly eight neighbours inside U. This does not certify a full HC7 counterexample or global minimum of the displayed model. It proves only that RL55-P01 and the basic legitimate-model interface cannot by themselves yield the RL57 cap.
 
-The barrier occurs before the payoff. delta(G)>=8 in the ORIGINAL GRAPH does not currently force even one neighbour outside U. RL55-P01 controls indispensable attachment support, not internal degree or multiplicity of neighbours in one already-required opposite branch set. The degree-eight lower bound can therefore be absorbed inside the model union under current authority.
+Therefore no universal escape edge was proved.
 
 delta(G)>=8 remains OPEN / NOT ELIMINATED.
-The HC7 graph-level residual was not genuinely narrowed in RL56.
+The HC7 graph-level residual was not genuinely narrowed in RL57.
 No HC7-universal obligation was genuinely reduced.
 
-First missing dependency: HC7-K44-MODEL-UNION-DEGREE-ABSORPTION/ESCAPE.
+First missing dependency: HC7-K44-DENSE-MODEL-UNION-K7-PAYOFF.
 
 Correction/demotion: NONE.
 Inherited mathematical theorem classification changes: NONE.
@@ -34,22 +34,24 @@ SRC-0025 remains checked_primary at theorem-statement/hypothesis level; the full
 
 RL55-P01 remains proved analytic mathematics exactly at the minimum-model scope.
 
+RL56-P01 remains proved analytic mathematics only as a conditional double-apex K7 payoff. RL56-C01 remains NOT ESTABLISHED.
+
 RL41-P01, RL41-P02 and RL42-P01 through RL49-P01 survive exactly at recorded scopes; RL47-P01 through RL49-P01 retain their pivotal-edge antecedent.
 
 RL51-P01 remains only a scoped conditional payoff theorem. M3-CLIQUE-SEPARATOR-DICHOTOMY remains ADMITTED / UNPROVED.
 
-FL-043 through FL-057 and all retry conditions remain in force. The anti-Collatz suspensions from RL40 and RL50 remain binding.
+FL-043 through FL-058 and all retry conditions remain in force. The anti-Collatz suspensions from RL40 and RL50 remain binding.
 
-## RL57 task
+## RL58 task
 
-RL57 performs exactly one bounded HC7-K44-MODEL-UNION-DEGREE-ABSORPTION-ESCAPE-GATE.
+RL58 performs exactly one bounded HC7-K44-DENSE-MODEL-UNION-K7-PAYOFF-GATE.
 
-Assess only RL57-C01:
+Assess only RL58-C01:
 
-> for every certified G and every minimum-total-size K4,4 model with union U, there exists v in U with |N_G(v) intersect U|<=7.
+> for every certified G and every minimum-total-size K4,4 model M with union U, if |N_G(v) intersect U|>=8 for every v in U, then G contains a K7 minor.
 
-If proved, combine it only with delta(G)>=8 in the original graph to conclude that v has at least one neighbour outside U. Do not infer the RL56 double-apex attachment or K7 from one escape edge.
+The changed mechanism is a direct root-facing K7 payoff from dense in-union adjacency using the full certified HC7 hypotheses. Do not first derive an escape edge, repeat RL55 branch-set reducibility, catalogue degrees/attachments, or reopen the RL56 double-apex existence claim.
 
-Do not catalogue attachments or degrees, repeat branch-set reducibility, compare model size across graphs, transfer degree to a quotient, or return to degree-seven/resource/Kempe/M3 machinery.
+The RL57 three-vertex-path pattern is only an interface stress test. It is not a certified-domain falsifier.
 
 Programme ACTIVE.
