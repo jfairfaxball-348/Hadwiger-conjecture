@@ -2,7 +2,7 @@
 
 Status: CURRENT PROGRAMME AUTHORITY.
 Installed by explicit non-RL target amendment on 2026-10-05.
-Incoming numbered session: RL55.
+Incoming numbered session: RL54.
 Programme ACTIVE.
 
 ## 1. Exact root theorem and negative target
@@ -73,7 +73,7 @@ There are four principal workstreams. They are ordered by coverage, not by local
 
 **Inherited bridge.** The elementary minor-minimal reduction to full-C7 criticality.
 
-**First known gap.** RL54 source-verified SRC-0025 and therefore certifies that every hypothetical HC7 counterexample contains a K4,4 minor. The residual delta(G)>=8 branch remains explicit because no proved repository bridge upgrades an arbitrary K4,4 minor model to K7 or to a contradiction with proper-minor 6-colorability.
+**First known gap.** RL52 certified the baseline through delta(G)>=7 using inherited RL6-P03. RL53 confirmed that current repository proof/source authority contains no theorem forcing a degree-seven vertex. The residual delta(G)>=8 branch remains explicit.
 
 **Falsification condition.** A claimed universal structural consequence lacks a repository proof/source-status record, loses a hypothesis, or admits a baseline-compatible counterpattern.
 
@@ -87,7 +87,7 @@ There are four principal workstreams. They are ordered by coverage, not by local
 
 **Inherited bridge.** W1 universal structure.
 
-**First known gap.** RL54 certifies a universal K4,4 minor on the no-K7 HC7 domain, including delta(G)>=8. The first missing payoff is model-level: an arbitrary K4,4 minor must be augmented to K7 or converted into an exact criticality contradiction. Degree-seven neighborhood classification remains downstream.
+**First known gap.** RL53 found no proved/source-verified universal theorem forcing a degree-seven vertex. Thus delta(G)>=8 remains the first explicit residual branch. Neighborhood classification is downstream and must not be entered until degree-seven existence is proved.
 
 **Falsification condition.** An allowed degree/neighborhood branch remains outside the proposed partition, or an asserted branch reduction is only heuristic/source-memory.
 
@@ -115,7 +115,7 @@ There are four principal workstreams. They are ordered by coverage, not by local
 
 **Inherited bridge.** The explicit exhaustive partition produced by W2.
 
-**First known gap.** RL54 did not eliminate delta(G)>=8, but it reduced every hypothetical counterexample in that branch to one containing a K4,4 minor. The missing universal bridge is from an arbitrary K4,4 minor model plus full-C7 criticality and delta(G)>=8 to K7 or an exact contradiction.
+**First known gap.** RL53 did not eliminate the universal branch delta(G)>=8, which remains explicit. Degree-seven graphs with other neighborhood structures remain downstream residuals if degree-seven existence is later certified.
 
 **Falsification condition.** A proposed residual theorem fails on an allowed branch or depends on a structural result not proved/source-verified for all residual graphs.
 
@@ -146,20 +146,29 @@ RL51-P01 proves only the candidate's conditional payoff at that retained scope.
 
 The candidate is one possible W3 subroute. It is not automatically the next principal task, because HC7 first needs the root-to-local coverage chain audited. The old RL52 brief selecting immediate proof/falsification of this dichotomy is not current authority.
 
-## 7. RL54 outcome and first bounded RL55 task
+## 7. RL53 outcome and first bounded RL54 task
 
-RL54 completed the bounded HC7 delta>=8 / K4,4 payoff gate.
+RL53 completed the bounded HC7 degree-seven-existence gate.
 
-SRC-0025 — Ken-ichi Kawarabayashi and Bjarne Toft, *Any 7-Chromatic Graphs Has K7 Or K4,4 As A Minor*, Combinatorica 25 (2005), 327–353, DOI 10.1007/s00493-005-0019-1 — is now checked_primary at theorem-statement/hypothesis level. The original Springer Nature publication page identifies the paper and states that it proves the result in its title. No additional hypothesis or qualifier is stated in that theorem formulation. The full subscription proof was not independently reconstructed.
+Exact target:
 
-Therefore every hypothetical minor-minimal HC7 counterexample G, and in particular every retained delta(G)>=8 branch, contains a K4,4 minor because G has no K7 minor.
+```
+minor-minimal HC7 counterexample with delta(G)>=7
+  -> existence of a vertex v with d(v)=7.
+```
 
-This does not eliminate delta(G)>=8. A K4,4 minor is 2-colorable and is compatible with every proper minor of G being 6-colorable. No proved repository theorem converts an arbitrary K4,4 branch-set model in this domain into K7 or a non-6-colorable proper minor.
+RL53 found no repository proof or source-verified theorem establishing this implication. Frozen RL6 explicitly retains every vertex degree at least eight, and the RL10 dependency/scope audit explicitly states that the inherited minimum-degree argument does not force a degree-seven vertex.
 
-The first missing universal dependency is HC7-K44-MINOR-MODEL-PAYOFF: an arbitrary K4,4 minor model in a full-C7-critical, K7-minor-free graph with delta(G)>=8 must be augmented to K7 or converted into an exact proper-minor coloring contradiction.
+The universal residual therefore remains:
 
-RL55 performs exactly one HC7-K44-MINOR-MODEL-CRITICAL-AUGMENTATION-GATE. If useful, choose among all K4,4 models one minimizing total branch-set size. Prove every consequence of that normalization before use. Audit only whether minimal-model structure plus full-C7 criticality, K7-minor-freeness and delta(G)>=8 supplies a universal augmentation to K7 or an exact contradiction. Stop at the first further missing dependency.
+```
+delta(G)>=8.
+```
 
-Do not strengthen “K4,4 minor” to a subgraph, induced subgraph, separator, prescribed model, or independent side. Do not perform a broad literature campaign, graph census, degree-seven neighborhood work, resource/Kempe/pivotal-edge work, or M3 work.
+The bounded source-record check identified SRC-0025, Kawarabayashi–Toft (2005), *Any 7-chromatic graph has K7 or K4,4 as a minor*, as a relevant HC7 structural source already present in frozen provenance. Its repository classification is `not_directly_checked`; the exact paper was not obtained in the inherited source audit. Its recorded title-level conclusion, even if verified, gives a K4,4 minor under the no-K7 hypothesis but does not by itself eliminate delta(G)>=8.
 
-Correction/demotion remains NONE unless RL55 discovers an actual scope or validity defect.
+RL54 performs exactly one **HC7-DELTA8-K44-PAYOFF-GATE**. First perform one bounded primary-source verification of SRC-0025 only. If its exact theorem applies to every graph in the certified HC7 domain, record the resulting universal K4,4-minor consequence. Then assess only whether that consequence, together with full-C7 criticality, K7-minor-freeness and delta(G)>=8, yields a K7 minor or another exact contradiction; otherwise stop at the first additional missing dependency.
+
+Do not perform a broad theorem-discovery campaign, graph census, degree-seven neighborhood work, resource decomposition, Kempe/pivotal-edge work, or M3-CLIQUE-SEPARATOR-DICHOTOMY work.
+
+Correction/demotion remains NONE unless RL54 discovers an actual scope or validity defect.

@@ -356,23 +356,3 @@ Selected successor: RL51 M3 universal-payoff candidate gate. Compare at most thr
 
 Sources/computation: zero new mathematical source retrieval and zero mathematical numerical computation in RL50.
 Programme ACTIVE.
-
----
-
-# FL-055 — K4,4-minor payoff barrier
-
-Date: 2026-10-05.
-Origin: RL54 HC7 delta>=8 / K4,4 payoff gate.
-Classification: source-enabled structural reduction plus root-payoff barrier; not a mathematical error, theorem demotion, counterexample, or finite certificate.
-
-SRC-0025 is now checked_primary at theorem-statement/hypothesis level from the original Springer Nature publication record. Every hypothetical HC7 counterexample therefore contains a K4,4 minor.
-
-First missing implication: from an arbitrary K4,4 branch-set model in a finite simple full-C7-critical, K7-minor-free graph with delta(G)>=8, derive either a K7 minor or a proper minor of chromatic number at least seven. The K4,4 minor alone is compatible with proper-minor 6-colorability because K4,4 is 2-colorable.
-
-Lesson: do not replace K4,4 minor by a subgraph, induced subgraph, separator, prescribed branch-set model, or independent bipartite side. A retry must work with an arbitrary legitimate minor model and prove every normalization it consumes.
-
-Correction/demotion: NONE.
-Source-status change: SRC-0025 not_directly_checked -> checked_primary in current authority; frozen historical source records remain unchanged.
-Retry condition: RL55 may choose a K4,4 model minimizing total branch-set size and audit only proved consequences of that minimality plus full-C7 criticality. No broad literature campaign and no return to degree-seven/resource/Kempe/M3 machinery.
-Selected successor: RL55 HC7-K44-MINOR-MODEL-CRITICAL-AUGMENTATION-GATE.
-Programme ACTIVE.

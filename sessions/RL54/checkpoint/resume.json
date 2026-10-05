@@ -1,0 +1,38 @@
+{
+  "format": "rl-connector-resume-v1",
+  "base_head": "292771060190fb6407a17cbfe532dc4e8f78d56f",
+  "base_tree": "8f5d2b9fff5c0377803850e80ace41f8e372c3a9",
+  "authoritative_tree": "be2c0a00c03b18dc1a019418c5f5766470cb4293",
+  "incoming_rl": 54,
+  "successor_rl": 55,
+  "session_brief": "authoritative/RL54_HC7_DELTA8_K44_PAYOFF_GATE_BRIEF.md",
+  "last_verified_frontier": "Every hypothetical minor-minimal HC7 counterexample is certified through delta(G)>=7 and contains a K4,4 minor; delta(G)>=8 remains open because arbitrary minor-model payoff is missing.",
+  "completed_artifacts": [
+    "RL54_REPORT.md",
+    "RL54_PROOF_STATE_AND_RESIDUAL_LEDGER.md",
+    "RL54_FAILURE_AND_LESSON_LEDGER_APPENDIX.md",
+    "RL55_HC7_K44_MINOR_MODEL_CRITICAL_AUGMENTATION_GATE_BRIEF.md",
+    "RL55_STATE.md"
+  ],
+  "unpromoted_or_uncovered": [
+    "delta(G)>=8",
+    "HC7-K44-MINOR-MODEL-PAYOFF",
+    "HC7-DEGREE-SEVEN-EXISTENCE"
+  ],
+  "failure_lesson_ids": [
+    "FL-043",
+    "FL-053",
+    "FL-054",
+    "FL-055"
+  ],
+  "recovery_mode": "rework",
+  "changed_input_or_mechanism": "Move from coarse K4,4-minor existence to an arbitrary branch-set model, optionally minimal in total branch-set size.",
+  "next_task_bounds": "One bounded K4,4 model / criticality augmentation gate; no broad source campaign or degree-seven/resource/Kempe/M3 work.",
+  "retry_conditions": [
+    "Do not replace minor by stronger structure",
+    "Prove every minimal-model consequence before use",
+    "Stop at first further missing universal dependency"
+  ],
+  "correction_demotion": "NONE",
+  "stop_and_repair_active": false
+}
