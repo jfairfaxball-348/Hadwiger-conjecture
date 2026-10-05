@@ -1,13 +1,13 @@
 # HC7 proof state and open obligations
 
-Status: CURRENT after RL53.
+Status: CURRENT after RL52.
 Root: HC7 only — every finite simple graph G with chi(G)=7 has h(G)>=7.
 Counterexample target: a rigorously verified finite simple graph with chi(G)=7 and h(G)<=6.
 Correction/demotion: NONE.
 
 ## Classification preservation
 
-No inherited mathematical theorem changed classification in RL53.
+No inherited mathematical theorem changed classification in RL52.
 
 RL41-P01, RL41-P02 and RL42-P01 through RL49-P01 remain valid exactly at their recorded scopes. RL47-P01 through RL49-P01 retain their conditional pivotal-edge scope.
 
@@ -25,16 +25,6 @@ For every hypothetical minor-minimal HC7 counterexample G:
 5. delta(G)>=7 by inherited RL6-P03: alpha(G[N(v)])<=d(v)-5, and degree six would force N(v)=K6 and hence a K7 subgraph with v.
 
 The delta(G)>=7 theorem is inherited mathematics. RL52's contribution is exact root-facing provenance/coverage certification.
-
-## RL53 degree-seven-existence gate outcome
-
-RL53 assessed the exact universal implication from the certified minor-minimal HC7 domain to existence of a degree-seven vertex.
-
-No proof of that implication exists in current repository authority or the required frozen RL6/RL10 provenance. RL6 explicitly retains every degree-at-least-eight case, and RL10 explicitly records that the minimum-degree argument does not force a degree-seven vertex.
-
-A bounded repository source-record check identified SRC-0025 (Kawarabayashi–Toft, 2005, *Any 7-chromatic graph has K7 or K4,4 as a minor*) as relevant but `not_directly_checked`. Its recorded title-level theorem would give a K4,4 minor in the no-K7 branch if exactly verified, but does not itself exclude delta(G)>=8.
-
-RL53 therefore proves no new mathematical theorem and does not reduce the HC7-universal residual. Correction/demotion remains NONE.
 
 ## First open universal obligation
 
@@ -60,6 +50,6 @@ M3-CORE remains NOT CERTIFIED.
 
 ## Exact successor
 
-RL54 is READY / NOT STARTED and performs only the bounded HC7-DELTA8-K44-PAYOFF-GATE in RL54_HC7_DELTA8_K44_PAYOFF_GATE_BRIEF.md.
+RL53 is READY / NOT STARTED and performs only the bounded HC7 degree-seven-existence gate in RL53_HC7_DEGREE_SEVEN_EXISTENCE_GATE_BRIEF.md.
 
 Programme ACTIVE.

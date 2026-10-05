@@ -2,7 +2,7 @@
 
 Status: CURRENT PROGRAMME AUTHORITY.
 Installed by explicit non-RL target amendment on 2026-10-05.
-Incoming numbered session: RL54.
+Incoming numbered session: RL53.
 Programme ACTIVE.
 
 ## 1. Exact root theorem and negative target
@@ -73,7 +73,7 @@ There are four principal workstreams. They are ordered by coverage, not by local
 
 **Inherited bridge.** The elementary minor-minimal reduction to full-C7 criticality.
 
-**First known gap.** RL52 certified the baseline through delta(G)>=7 using inherited RL6-P03. RL53 confirmed that current repository proof/source authority contains no theorem forcing a degree-seven vertex. The residual delta(G)>=8 branch remains explicit.
+**First known gap.** RL52 certified the baseline through delta(G)>=7 using inherited RL6-P03. The first missing universal arrow is whether every minor-minimal HC7 counterexample has a degree-seven vertex, equivalently whether the residual delta(G)>=8 branch is impossible.
 
 **Falsification condition.** A claimed universal structural consequence lacks a repository proof/source-status record, loses a hypothesis, or admits a baseline-compatible counterpattern.
 
@@ -87,7 +87,7 @@ There are four principal workstreams. They are ordered by coverage, not by local
 
 **Inherited bridge.** W1 universal structure.
 
-**First known gap.** RL53 found no proved/source-verified universal theorem forcing a degree-seven vertex. Thus delta(G)>=8 remains the first explicit residual branch. Neighborhood classification is downstream and must not be entered until degree-seven existence is proved.
+**First known gap.** RL52 found no proved/source-verified universal theorem forcing a degree-seven vertex. Thus delta(G)>=8 is the first explicit residual branch. Neighborhood classification is downstream and must not be entered until degree-seven existence is proved.
 
 **Falsification condition.** An allowed degree/neighborhood branch remains outside the proposed partition, or an asserted branch reduction is only heuristic/source-memory.
 
@@ -115,7 +115,7 @@ There are four principal workstreams. They are ordered by coverage, not by local
 
 **Inherited bridge.** The explicit exhaustive partition produced by W2.
 
-**First known gap.** RL53 did not eliminate the universal branch delta(G)>=8, which remains explicit. Degree-seven graphs with other neighborhood structures remain downstream residuals if degree-seven existence is later certified.
+**First known gap.** The residual definitely includes the universal branch delta(G)>=8 unless RL53 eliminates it. Degree-seven graphs with other neighborhood structures remain downstream residuals once degree-seven existence is certified.
 
 **Falsification condition.** A proposed residual theorem fails on an allowed branch or depends on a structural result not proved/source-verified for all residual graphs.
 
@@ -146,29 +146,31 @@ RL51-P01 proves only the candidate's conditional payoff at that retained scope.
 
 The candidate is one possible W3 subroute. It is not automatically the next principal task, because HC7 first needs the root-to-local coverage chain audited. The old RL52 brief selecting immediate proof/falsification of this dichotomy is not current authority.
 
-## 7. RL53 outcome and first bounded RL54 task
+## 7. RL52 outcome and first bounded RL53 task
 
-RL53 completed the bounded HC7 degree-seven-existence gate.
+RL52 completed the HC7 root-coverage gate.
 
-Exact target:
+Certified chain:
+
+```
+HC7 counterexample
+  -> minor-minimal HC7 counterexample
+  -> every proper minor 6-colorable / full-C7 critical
+  -> proper subgraphs 6-colorable, connected
+  -> delta(G)>=7.
+```
+
+The delta(G)>=7 step is not a new RL52 theorem. RL52 verified exact inherited provenance in RL6-P03 and the RL10 dependency/scope audit.
+
+The first missing universal arrow is
 
 ```
 minor-minimal HC7 counterexample with delta(G)>=7
   -> existence of a vertex v with d(v)=7.
 ```
 
-RL53 found no repository proof or source-verified theorem establishing this implication. Frozen RL6 explicitly retains every vertex degree at least eight, and the RL10 dependency/scope audit explicitly states that the inherited minimum-degree argument does not force a degree-seven vertex.
+Equivalently, the residual branch delta(G)>=8 has not been excluded. Therefore no degree-seven neighborhood, H[S]=K7-C7, resource, m=3,A=S, fixed-color, Kempe, pivotal-edge, or M3 clique-separator result may be credited to HC7 until this arrow is proved.
 
-The universal residual therefore remains:
+RL53 performs exactly one HC7 degree-seven-existence gate. It must prove, or exactly source-verify at the required scope, that every minor-minimal HC7 counterexample has a degree-seven vertex; otherwise it must retain delta(G)>=8 explicitly and identify the first missing dependency. No broad theorem-discovery campaign, census, local Kempe work, or M3 work is authorized.
 
-```
-delta(G)>=8.
-```
-
-The bounded source-record check identified SRC-0025, Kawarabayashi–Toft (2005), *Any 7-chromatic graph has K7 or K4,4 as a minor*, as a relevant HC7 structural source already present in frozen provenance. Its repository classification is `not_directly_checked`; the exact paper was not obtained in the inherited source audit. Its recorded title-level conclusion, even if verified, gives a K4,4 minor under the no-K7 hypothesis but does not by itself eliminate delta(G)>=8.
-
-RL54 performs exactly one **HC7-DELTA8-K44-PAYOFF-GATE**. First perform one bounded primary-source verification of SRC-0025 only. If its exact theorem applies to every graph in the certified HC7 domain, record the resulting universal K4,4-minor consequence. Then assess only whether that consequence, together with full-C7 criticality, K7-minor-freeness and delta(G)>=8, yields a K7 minor or another exact contradiction; otherwise stop at the first additional missing dependency.
-
-Do not perform a broad theorem-discovery campaign, graph census, degree-seven neighborhood work, resource decomposition, Kempe/pivotal-edge work, or M3-CLIQUE-SEPARATOR-DICHOTOMY work.
-
-Correction/demotion remains NONE unless RL54 discovers an actual scope or validity defect.
+Correction/demotion remains NONE unless RL53 discovers an actual scope or validity defect.

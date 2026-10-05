@@ -1,0 +1,36 @@
+{
+  "format": "rl-connector-resume-v1",
+  "base_head": "cd811a92d9c8947130c98aa195812eac5bcb0da5",
+  "base_tree": "589f850e77d5f30ab868ba8a5e13fb4b78bc87db",
+  "authoritative_tree": "73243361d8706d9dd0ab143fc8dd45aabadce56e",
+  "incoming_rl": 53,
+  "successor_rl": 54,
+  "session_brief": "authoritative/RL53_HC7_DEGREE_SEVEN_EXISTENCE_GATE_BRIEF.md",
+  "last_verified_frontier": "Minor-minimal HC7 counterexamples are certified through delta(G)>=7; degree-seven existence is not established; delta(G)>=8 remains universal residual.",
+  "completed_artifacts": [
+    "RL53_REPORT.md",
+    "RL53_PROOF_STATE_AND_RESIDUAL_LEDGER.md",
+    "RL54_HC7_DELTA8_K44_PAYOFF_GATE_BRIEF.md",
+    "RL54_STATE.md"
+  ],
+  "unpromoted_or_uncovered": [
+    "HC7-DEGREE-SEVEN-EXISTENCE",
+    "delta(G)>=8",
+    "SRC-0025 exact primary-source statement/applicability",
+    "K4,4-minor to K7/criticality payoff"
+  ],
+  "failure_lesson_ids": [
+    "FL-043",
+    "FL-053",
+    "FL-054"
+  ],
+  "recovery_mode": "rework",
+  "changed_input_or_mechanism": "Use the already-recorded HC7-specific SRC-0025 K7-or-K4,4 structural theorem as a bounded source/payoff gate rather than retrying degree-seven local machinery.",
+  "next_task_bounds": "One primary-source verification of SRC-0025, then one root-facing K4,4 payoff audit; stop at first missing dependency.",
+  "retry_conditions": [
+    "No broad theorem discovery",
+    "No degree-seven neighborhood/resource/Kempe/M3 work"
+  ],
+  "correction_demotion": "NONE",
+  "stop_and_repair_active": false
+}
