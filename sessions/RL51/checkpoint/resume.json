@@ -1,0 +1,19 @@
+{
+  "format": "rl-connector-resume-v1",
+  "base_head": "01887ea7bc181d18fcf0d44f0d6d37ab29094f31",
+  "authoritative_tree": "8cf14a95d7cfdcac1a405126ccb12cd020f3958b",
+  "incoming_rl": 51,
+  "successor_rl": 52,
+  "session_brief": "authoritative/RL51_M3_UNIVERSAL_PAYOFF_CANDIDATE_GATE_BRIEF.md",
+  "last_verified_frontier": "RL51 gate complete: C1 clique-separator dichotomy admitted but unproved; C2 boundary-extension and C3 pivotal/Kempe entry rejected; correction/demotion NONE; no named universal obligation reduced.",
+  "recovery_mode": "pivot",
+  "changed_input_or_mechanism": "Global actual-graph rooted-K6-or-clique-separator dichotomy.",
+  "failure_lesson_ids": ["FL-043","FL-044","FL-045","FL-046","FL-047","FL-048","FL-049","FL-050","FL-051","FL-052","FL-053","FL-054"],
+  "next_task_bounds": "RL52: one proof/falsification attempt for M3-CLIQUE-SEPARATOR-DICHOTOMY on the no-S-rooted-K6 branch; zero source retrieval/computation by default; no censuses or fixed-triple/Kempe replay.",
+  "retry_conditions": [
+    "Do not consume C1 before proof.",
+    "C2 requires a separately justified universal extension theorem.",
+    "C3 requires an independently obligation-closing universal payoff."
+  ],
+  "stop_and_repair_active": false
+}
