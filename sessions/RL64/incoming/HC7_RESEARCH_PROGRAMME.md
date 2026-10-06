@@ -2,7 +2,7 @@
 
 Status: CURRENT PROGRAMME AUTHORITY.
 Installed by explicit non-RL target amendment on 2026-10-05.
-Incoming numbered session: RL65.
+Incoming numbered session: RL64.
 Programme ACTIVE.
 
 ## 1. Exact root theorem and negative target
@@ -221,33 +221,5 @@ RL63 audited RL1–RL62, the initialization/scaffold and the 2026-10-05 target a
 **Runner-up (not selected).** The Mader K7 extremal-function gate.
 
 This audit does not replace the RL70 periodic audit.
-
-Programme ACTIVE.
-
-## 11. RL64 frontier admission outcome and RL65 successor
-
-RL64 ran the two-edge-deficient frontier admission gate selected by RL63. The start-gate precondition first failed: arxiv.org was policy-blocked. The user then changed the environment and arxiv.org became reachable. RL64 used 4 of 6 retrievals and 0 computation.
-
-**Findings.**
-- **F1 admitted at Level A.** arXiv:2609.17760v1 (Dvořák–Norin–Rahman): "Every K7= -minor-free graph is 6-colorable". It is an unrefereed preprint, its AI-assisted proofs are disclosed, and the proof was not read.
-- **F2 admitted at Level A.** arXiv:2507.03244v1 (Norin–Totschnig): "Every graph with no K7∨ -minor is 6-colorable". It is an unrefereed preprint.
-- **New universal item U8.** Every HC7 counterexample contains K7 minus any two edges as a minor. This is the first universal narrowing since RL54. U8 does not imply U7 and does not give K7^-.
-- **Classical inputs.** Both proofs consume Mader's 7-connectivity, citing conflicting originals, together with Dirac, Kriesell–Mohr and KT05 lemmas. F1 also depends on Dvořák 2026 (rooted K5). Neither uses the Mader K7 extremal function or Gallai. A separate extremal-function gate is therefore not needed for the frontier.
-- **Documented obstructions.**
-  - K7^- reduces exactly to the density statement F1 Conjecture 1.5 (5-connected, n>=6, e>=4n−2 ⇒ K7^- minor), via F1 Theorem 1.6.
-  - For K7 the density method is documented false (two apices over a planar triangulation give 5n−15 edges).
-
-**Classifications.** Mathematical correction/demotion: NONE. Theorem-classification changes: NONE. Source-status changes are recorded in RL64_SOURCE_REGISTER.md. FL-065 is appended to the ledger and extends the frontier rule.
-
-**Successor.** Exactly one successor is installed: RL65 HC7-K7MINUS-DENSITY-CANDIDATE-GATE (authoritative/RL65_HC7_K7MINUS_DENSITY_CANDIDATE_GATE_BRIEF.md). It is a bounded new-mathematics assessment of C65 = F1 Conjecture 1.5, with three parts:
-- the bridge B65 to U9;
-- a falsification test;
-- the K7^- analogue at the first F1 deficiency locus.
-
-Bounds: at most 3 retrievals; 0 computation.
-
-**Runner-up (not selected).** A Level-A gate for Mader's 7-connectivity. It has no downstream consumer, sits below the frontier, and carries FL-063 access risk plus an attribution discrepancy.
-
-The RL70 periodic audit is still owed.
 
 Programme ACTIVE.
