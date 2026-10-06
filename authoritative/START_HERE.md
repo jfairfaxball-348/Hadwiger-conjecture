@@ -1,30 +1,29 @@
-# RL59 authoritative state — HC7 programme
+# RL60 authoritative state — HC7 programme
 
 Status: READY / NOT STARTED.
-Predecessor: RL58 CLOSED/FROZEN under sessions/RL58/.
-Sole current brief: RL59_HC7_K44_SPANNING_DENSE_MODEL_CRITICAL_REPARTITION_GATE_BRIEF.md.
+Predecessor: RL59 CLOSED/FROZEN under sessions/RL59/.
+Sole current brief: RL60_PROGRESS_AND_CORRECTION_AUDIT_BRIEF.md.
 Durable programme: HC7_RESEARCH_PROGRAMME.md.
 Root: HC7 only.
 
-## RL58 outcome
+## RL59 outcome
 
-RL58 assessed exactly one universal dense model-union K7 payoff candidate on the delta(G)>=8 residual.
+RL59 assessed exactly one HC7-critical spanning K4,4 candidate in the subcase U=V(G).
 
-For every certified G and every minimum-total-size K4,4 model M with union U, RL58-C01 proposed that if every v in U has at least eight neighbours in U, then G contains a K7 minor.
+RL59-C01 is the spanning quotient side-palette lift. Contracting all eight branch sets gives an eight-vertex proper minor Q, hence Q is 6-colorable by minor-minimal HC7 criticality. Because Q contains K4,4, the colors appearing on its A-side and B-side quotient vertices form disjoint palettes. If some quotient 6-coloring always supplied palettes sufficient to color the corresponding original side-unions, the two side colorings would combine to a 6-coloring of G.
 
-RL58-C01 is NOT ESTABLISHED / NOT PROMOTED and was not falsified by a certified-domain counterexample.
+That conditional payoff is proved, but the universal lift is not. Current authority has no theorem transferring the contracted palette sizes back to the chromatic requirements of the original side-unions.
 
-The direct construction reaches the inherited K5 minor with branch sets A_1 union B_1, A_2 union B_2, A_3 union B_3, A_4, B_4. These five branch sets consume all eight original K4,4 branch sets. Current authority contains no universal theorem converting dense adjacency inside U into a seven-way connected pairwise-adjacent repartition or equivalent augmentation.
+RL59-C01 is NOT ESTABLISHED / NOT PROMOTED and not certified-domain falsified.
 
-The fixed RL57 three-vertex-path pattern remains a stress test showing that RL55-P01 plus the basic model interface and dense degree alone cannot justify such a repartition step. It is not a certified HC7 counterexample or globally minimum model.
+The fixed RL57 stress-test pattern does not falsify RL59-C01; its quotient is K4,4 and both side-unions are 2-colorable. It remains a method barrier only against steps using RL55-P01/basic model incidence/dense degree without genuine HC7 criticality.
 
-No direct K7 consequence was added.
-No universal escape edge was proved.
-delta(G)>=8 remains OPEN / NOT ELIMINATED.
-The HC7 graph-level residual was not genuinely narrowed in RL58.
-No HC7-universal obligation was genuinely reduced.
+U=V(G) eliminated: NO.
+delta(G)>=8 eliminated: NO.
+HC7-universal graph residual genuinely narrowed: NO.
+HC7-universal obligation genuinely reduced: NO.
 
-First missing dependency: HC7-K44-SPANNING-DENSE-MODEL-CRITICAL-REPARTITION/AUGMENTATION.
+First missing dependency: HC7-K44-SPANNING-QUOTIENT-SIDE-PALETTE-LIFT.
 
 Correction/demotion: NONE.
 Inherited mathematical theorem classification changes: NONE.
@@ -32,26 +31,24 @@ Source-status changes: NONE.
 
 ## Preserved inherited state
 
-SRC-0025 remains checked_primary at theorem-statement/hypothesis level; the full subscription proof was not independently reconstructed.
+SRC-0025 remains checked_primary at theorem-statement/hypothesis level; the full subscription proof has not been independently reconstructed.
 
-RL55-P01 remains proved analytic mathematics exactly at the minimum-model scope.
-
-RL56-P01 remains proved analytic mathematics only as a conditional double-apex K7 payoff. RL56-C01 remains NOT ESTABLISHED.
-
+RL55-P01 remains proved analytic mathematics exactly at minimum-model scope.
+RL56-P01 remains only a conditional double-apex payoff and RL56-C01 remains NOT ESTABLISHED.
 RL57-C01 remains NOT ESTABLISHED / NOT PROMOTED.
+RL58-C01 remains NOT ESTABLISHED / NOT PROMOTED and not certified-domain falsified.
+RL59-C01 remains NOT ESTABLISHED / NOT PROMOTED and not certified-domain falsified.
 
-RL41-P01, RL41-P02 and RL42-P01 through RL49-P01 survive exactly at recorded scopes; RL47-P01 through RL49-P01 retain their pivotal-edge antecedent.
+FL-043 through FL-060 and their retry conditions remain in force. The anti-Collatz suspensions from RL40 and RL50 remain binding.
 
-RL51-P01 remains only a scoped conditional payoff theorem. M3-CLIQUE-SEPARATOR-DICHOTOMY remains ADMITTED / UNPROVED.
+## RL60 task
 
-FL-043 through FL-059 and all retry conditions remain in force. The anti-Collatz suspensions from RL40 and RL50 remain binding.
+RL60 is divisible by ten and is therefore the mandatory progress/correction audit under docs/TENTH_SESSION_PROGRESS_AUDIT.md.
 
-## RL59 task
+Audit the ten preceding numbered session positions RL50 through RL59, plus the explicit non-RL HC7 programme-target amendment installed between RL51 and RL52 because it changes present applicability of the pre-pivot work.
 
-RL59 performs exactly one bounded HC7-K44-SPANNING-DENSE-MODEL-CRITICAL-REPARTITION-GATE.
+Do not begin a new theorem proof campaign during the audit. Recheck exact quantifiers, classifications, proof/source scopes, corrections, load-bearing dependencies, HC7 coverage, and Collatz risk. Determine whether any result actually reduced an HC7-universal obligation, whether any claim needs correction/demotion, and whether the RL59 quotient-palette bridge is a justified next interface or another renamed unsolved dependency.
 
-Work only in the spanning-union subcase U=V(G). Develop and assess exactly one concrete universal repartition/augmentation candidate using proper-minor 6-colorability as the changed input, with an explicit direct K7 or coloring-contradiction payoff.
-
-Do not seek exterior escape, reopen RL56-C01, repeat RL55 reducibility or RL57 degree counting, transfer minimum degree to a quotient, catalogue model attachments, or return to degree-seven/resource/Kempe/M3 work.
+End with exactly one bounded RL61 successor task chosen from the audited HC7 root dependencies, with quantifiers, independent root-facing sufficiency, provenance, falsification/stopping criteria, and computation/source bounds where relevant.
 
 Programme ACTIVE.

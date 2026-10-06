@@ -1,0 +1,50 @@
+{
+  "format": "rl-connector-resume-v1",
+  "base_head": "64fc474744fd1c99aea1dc7ee5933ffc66f8dae8",
+  "base_tree": "6a857f3f27dc439ff605823deedfb86b60840aca",
+  "authoritative_tree": "c366a89dfd864bca5eaf176a6ebb9db2ef8fef41",
+  "incoming_rl": 59,
+  "successor_rl": 60,
+  "session_brief": "authoritative/RL59_HC7_K44_SPANNING_DENSE_MODEL_CRITICAL_REPARTITION_GATE_BRIEF.md",
+  "last_verified_frontier": "RL59-C01 is not established and not certified-domain falsified. Contracting the spanning minimum K4,4 model gives a proper 6-colorable eight-vertex quotient with disjoint side palettes, but current authority does not lift those palettes to the original side-unions. U=V(G) and delta(G)>=8 remain open.",
+  "completed_artifacts": [
+    "RL59_REPORT.md",
+    "RL59_PROOF_STATE_AND_RESIDUAL_LEDGER.md",
+    "RL59_FAILURE_AND_LESSON_LEDGER_APPENDIX.md",
+    "RL60_PROGRESS_AND_CORRECTION_AUDIT_BRIEF.md",
+    "RL60_STATE.md"
+  ],
+  "unpromoted_or_uncovered": [
+    "delta(G)>=8",
+    "U=V(G) spanning-union subcase",
+    "RL56-C01 universal double-apex existence",
+    "RL57-C01 universal in-union degree cap",
+    "RL58-C01 dense model-union K7 payoff",
+    "RL59-C01 spanning quotient side-palette lift",
+    "HC7-K44-SPANNING-QUOTIENT-SIDE-PALETTE-LIFT",
+    "HC7-DEGREE-SEVEN-EXISTENCE"
+  ],
+  "failure_lesson_ids": [
+    "FL-043",
+    "FL-053",
+    "FL-054",
+    "FL-055",
+    "FL-056",
+    "FL-057",
+    "FL-058",
+    "FL-059",
+    "FL-060"
+  ],
+  "recovery_mode": "audit",
+  "changed_input_or_mechanism": "RL60 performs the mandatory tenth-session audit before any further proof attempt.",
+  "next_task_bounds": "Audit exactly RL50-RL59 plus the explicit HC7 pivot; produce the required matrix, dependency/scope audit, Collatz assessment, correction record, route verdict, and one bounded RL61 successor.",
+  "retry_conditions": [
+    "Do not automatically retry RL59-C01",
+    "Do not do new theorem discovery before the audit",
+    "Do not broaden beyond HC7",
+    "Do not launch a broad source search or computation campaign",
+    "Do not rewrite frozen RL50-RL59 history"
+  ],
+  "correction_demotion": "NONE",
+  "stop_and_repair_active": false
+}
