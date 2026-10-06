@@ -1,20 +1,8 @@
 # HC7 proof state and open obligations
 
-Status: CURRENT after RL68.
+Status: CURRENT after RL67.
 Root: HC7 only — every finite simple graph G with chi(G)=7 has h(G)>=7.
 Counterexample target: a rigorously verified finite simple graph with chi(G)=7 and h(G)<=6.
-
-## RL68 classification summary
-
-| Item | RL68 result |
-|---|---|
-| Correction/demotion | NONE; closeout fixed only unpromoted wording about the safe-edge equivalence |
-| Theorem/source changes | NONE |
-| New certified universal item | NONE |
-| C68 | OPEN / CANDIDATE / NOT ESTABLISHED, not falsified |
-| Proved analytic | required falsification record; n=8,9 bases; contraction edge identity; 7-connectivity contraction criterion; R68 separator obstruction; Q10 relaxed stress test |
-| Frontier | U1-U8 unchanged; U9 CONDITIONAL |
-| Control | RL69 tests the equivalent safe-contraction mechanism; drift rule binds; RL70 audit follows |
 
 ## RL67 classification summary
 
@@ -98,7 +86,7 @@ Notes on U8:
 
 | Target | Status | Documented obstruction |
 |---|---|---|
-| K7^- minor in every chi>=7 graph (U9) | OPEN (U9 CONDITIONAL) | It suffices to prove C65 = F1 Conjecture 1.5: every 5-connected graph with n>=6 and e>=4n−2 has a K7^- minor. The bridge B65 is proved (RL65), conditional on C65 and F1 Thm 1.6 at Level A. No falsifier was found among the named families (RL65). The F1 proof interface is blocked at its first deficiency locus: T2.9⁻ is refuted by G0 (FL-066). The heavy-side repair C66 is OPEN and at least as strong as C65's degree-5 case (RL66, FL-067). The r = 1 minimality transfer H67 is OPEN; its obstruction is the root-split two-dense-halves configuration (RL67, FL-068). Only C65⁷ is needed for U9. RL68 assessed C68=C65⁷: it remains OPEN; RL69 tests the equivalent safe-contraction mechanism. |
+| K7^- minor in every chi>=7 graph (U9) | OPEN (U9 CONDITIONAL) | It suffices to prove C65 = F1 Conjecture 1.5: every 5-connected graph with n>=6 and e>=4n−2 has a K7^- minor. The bridge B65 is proved (RL65), conditional on C65 and F1 Thm 1.6 at Level A. No falsifier was found among the named families (RL65). The F1 proof interface is blocked at its first deficiency locus: T2.9⁻ is refuted by G0 (FL-066). The heavy-side repair C66 is OPEN and at least as strong as C65's degree-5 case (RL66, FL-067). The r = 1 minimality transfer H67 is OPEN; its obstruction is the root-split two-dense-halves configuration (RL67, FL-068). Only C65⁷ is needed for U9; RL68 assesses it directly. |
 | K7 (HC7) | OPEN | The density method is documented false. Two universal vertices over a 5-connected planar triangulation give 7-connected K7-minor-free graphs with 5n−15 edges. A non-density mechanism is needed. |
 
 ## Retained scoped results
@@ -159,7 +147,7 @@ Full RL63 table: RL63_ROUTE_PORTFOLIO_AND_KILL_LIST.md. The RL64 updates below o
 |---|---|
 | KEEP | R01 (universal baseline, now U1–U8) |
 | RESOLVED | R02 two-edge-deficient frontier (admitted RL64 → U8) |
-| ACTIVE (RL69) | R21-K7^-: C68 remains open after RL68; RL69 tests the equivalent safe-contraction mechanism C69. The F1-interface chain remains HELD until RL70. |
+| ACTIVE (RL68) | R21-K7^-, pursued directly through C65⁷ = C68 (RL68), the 7-connected density statement that U9 needs. The F1-interface lemma chain is HELD under the drift rule until the RL70 audit prices it: T2.9⁻ blocked (FL-066), C66 open (FL-067), H67 open (FL-068). |
 | SOURCE-GATE | R04 7-connectivity (rank 1 source gate; attribution discrepancy); R03 Mader extremal / delta in {7,8,9} (de-prioritised: unused by the frontier); R05 Gallai order bound (low) |
 | KILL/RETIRE at current scope | R06 degree-seven-existence target; R07–R09 early routes; R10–R13 m=1, m=2, m=3 terminal-core and fixed-triple Kempe chains; R16 K4,4 minimum-model (also superseded by U8); R17 spanning K4,4 colouring (FL-062) |
 | SUPERSEDED | R18 non-colouring uses of K4,4 (superseded by U8 as near-K7 structure) |
@@ -176,7 +164,7 @@ It must also show that it does not re-derive frontier facts at lower strength.
 
 ## Open obligations
 
-- **O1 (RL69).** Assess equivalent safe-contraction C69 from RL68. It is a mechanism gate, not a new narrowing. The FL-068 drift rule still binds.
+- **O1 (RL68).** Assess C68 = C65⁷: every 7-connected graph with n >= 8 and at least 4n − 2 edges contains K7^- as a minor. By B65⁷ (RL66), C68 + F1 Thm 1.6 (Level A) ⇒ U9. The task lies outside the F1-interface chain. Mader's extremal functions (Level C) may not be consumed.
 - **O1d (unscheduled; drift rule; FL-068 retry condition).** H67 and its minimality-assisted form Var (equivalent to closing r = 1 under H54⁻). The first missing dependency is a K7^- -forcing or reduction lemma for the root-split two-dense-halves configuration. Held until the RL70 audit.
 - **O1a (unscheduled; FL-067 retry condition).** C66 itself. It is open, and at least as strong as C65 for 5-connected graphs with a degree-5 vertex (S66).
 - **O1a′ (unscheduled; low priority).** The all-components-poor regime of falsification family (ii) (RL66_FALSIFICATION_TEST.md).
@@ -195,6 +183,6 @@ It must also show that it does not re-derive frontier facts at lower strength.
 - **O3.** A non-density mechanism for K7^- → K7. Unscoped. The 2-apex examples rule out density (re-proved in RL65).
 - **O4.** HC7 itself: open. Disproof capability: none. The RL70 periodic audit is still owed (after RL69); it must price the F1-interface chain (FL-068).
 
-FL-001 through FL-069 and every retry condition remain in force. The drift rule (FL-068) binds RL69. RL70 is the mandatory next audit.
+FL-001 through FL-068 and every retry condition remain in force. The drift rule (FL-068) binds RL68 and RL69.
 
 Programme ACTIVE.

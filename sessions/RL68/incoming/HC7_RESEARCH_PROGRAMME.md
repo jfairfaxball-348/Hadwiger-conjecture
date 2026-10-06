@@ -2,7 +2,7 @@
 
 Status: CURRENT PROGRAMME AUTHORITY.
 Installed by explicit non-RL target amendment on 2026-10-05.
-Incoming numbered session: RL69.
+Incoming numbered session: RL68.
 Programme ACTIVE.
 
 ## 1. Exact root theorem and negative target
@@ -335,20 +335,4 @@ RL67 assessed H67 as one bounded new-mathematics candidate gate. H67 states that
 
 **The RL70 periodic audit follows RL69.** It must price the F1-interface chain.
 
-Programme ACTIVE.
-
-
-## 15. RL68 seven-connected density outcome and RL69 successor
-
-RL68 assessed C68=C65^7 directly outside the held F1-interface chain. C68 remains OPEN / CANDIDATE / NOT ESTABLISHED; no required named family falsified it.
-
-RL68 proved the n=8,9 base cases, the contraction edge-count identity, the exact 7-connectivity contraction criterion, and R68: every edge with at most three common neighbours in a minimum-order C68 counterexample lies in a 7-separator. Q10=K10-E(P8) is an edge-tight relaxed stress test showing density+connectivity alone cannot force the desired edge.
-
-The safe-edge formulation is equivalent to C68, not a strict reduction. Thus RL68 changed proof architecture without narrowing the HC7 residual. U1-U8 remain certified; U9 remains conditional.
-
-Corrections/demotions: NONE. Theorem-classification changes: NONE. Source-status changes: NONE. FL-069 appended. Retrievals 0; computation 0; census 0.
-
-Successor: RL69 HC7-K7MINUS-SAFE-CONTRACTION-GATE, one bounded mechanism gate on the equivalent safe-edge form. FL-068 drift rule still binds. Runner-up K6-minor augmentation loses because its density entry point naturally needs the unavailable Level-C Mader K6 extremal theorem.
-
-RL70 follows RL69 and is the mandatory periodic audit. It must price the F1-interface chain.
 Programme ACTIVE.
