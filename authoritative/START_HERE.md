@@ -1,61 +1,61 @@
-# RL65 authoritative state — HC7 K7^- density candidate gate
+# RL66 authoritative state — HC7 K7^- heavy-side rooted K6 gate
 
 Status: READY / NOT STARTED.
-Predecessor: RL64 CLOSED/FROZEN under sessions/RL64/.
-Sole current brief: RL65_HC7_K7MINUS_DENSITY_CANDIDATE_GATE_BRIEF.md.
-Durable programme: HC7_RESEARCH_PROGRAMME.md (see §11).
+Predecessor: RL65 CLOSED/FROZEN under sessions/RL65/.
+Sole current brief: RL66_HC7_K7MINUS_HEAVY_SIDE_ROOTED_K6_GATE_BRIEF.md.
+Durable programme: HC7_RESEARCH_PROGRAMME.md (see §12).
 Proof state: PROOF_STATE_AND_OPEN_OBLIGATIONS.md.
-Source register: RL64_SOURCE_REGISTER.md (consolidated; supersedes RL63_SOURCE_GAP_REGISTER.md, which is retired from authority and frozen in sessions/RL63/checkpoint/ and sessions/RL64/incoming/).
-Ledger: FAILURE_AND_LESSON_LEDGER.md (FL-001..FL-065).
+Source register: RL64_SOURCE_REGISTER.md (consolidated), plus the RL65 register note in RL65_REPORT.md §7.
+Ledger: FAILURE_AND_LESSON_LEDGER.md (FL-001..FL-066).
 Root: HC7 only.
 
-## RL64 outcome (two-edge-deficient frontier admission gate)
+## RL65 outcome (K7^- density candidate gate, C65 = F1 Conjecture 1.5)
 
-Admitted at Level A (statement-checked, version-pinned v1, proofs unread, unrefereed preprints):
-- **F1**, arXiv:2609.17760v1 (Dvořák–Norin–Rahman): "Every K7= -minor-free graph is 6-colorable." Caveats: AI-assistance disclosure (§1.1); depends on the unrefereed Dvořák arXiv 2609.13818.
-- **F2**, arXiv:2507.03244v1 (Norin–Totschnig): "Every graph with no K7∨ -minor is 6-colorable."
+Records: RL65_REPORT.md, RL65_B65_BRIDGE.md, RL65_FALSIFICATION_TEST.md, RL65_LOCUS_ASSESSMENT.md.
 
-New certified universal item: **U8.** Every HC7 counterexample contains K7 minus any two edges as a minor. This is the first narrowing since RL54. U8 does not imply U7 (K4,4) and does not give K7^-.
+- **B65: proved, conditional.** C65 + F1 Thm 1.6 ⇒ every graph with chi >= 7 has a K7^- minor ⇒ **U9** (every HC7 counterexample has a K7^- minor).
+  - Classification: PROVED ANALYTIC, CONDITIONAL on C65 (CONJECTURE) and on F1 Thm 1.6 at Level A statement (unrefereed, AI-assisted proofs disclosed, proof unread).
+  - **U9 is NOT certified.**
+- **Falsification test: no falsifier** among K6, apex + triangulation, F2's G_n, K2,2,2,2 and 2 apices + triangulation.
+  - G_n shows 5-connectivity is necessary.
+  - The 2-apex family satisfies C65 and is K7-free.
+- **First F1 locus.** Thm 2.9 as consumed in Lemma 5.7 (F1.txt:412–413, 1220–1226).
+- **Its K7^- analogue T2.9⁻ is false.** The counterpattern is G0, the two-fanged vampire: 4-light, quite heavy, ρ4 = 1, 9 edges. This is a lemma-level method barrier, not a refutation of C65.
+- **Lemma D (proved).** A rooted K6↓5 on one side plus a 4-light side with ρ4 > 0 gives K7^-.
+- **Repair requirement H65**, now **C66**, the RL66 candidate. With Lemma D it would close the r = 1 sub-case. That payoff is conditional on the NOT PROMOTED Lemma 5.4 analogue.
 
-Documented obstructions:
-- **K7^-:** exactly F1 Conjecture 1.5 (5-connected, n>=6, e>=4n−2 ⇒ K7^- minor), via F1 Thm 1.6.
-- **K7:** the density method is false. Two universal vertices over a 5-connected planar triangulation give 7-connected K7-minor-free graphs with 5n−15 edges.
-
-Inputs: the frontier proofs consume Mader 7-connectivity (with conflicting citations), Dirac, Kriesell–Mohr, KT05 lemmas and Dvořák 2026. They do **not** use the Mader K7 extremal function or Gallai.
+Bounds used: retrievals 2/3 (F1 v1 PDF re-pinned, sha256 unchanged; [Dvo26] abstract); computation 0; census 0.
 
 Classification summary:
 - Correction/demotion: NONE.
 - Theorem-classification changes: NONE.
-- Source-status changes:
-  - SRC-03 C→A; SRC-04 C→A; GAP-02 C→B;
-  - new Level-B rows RL64-SRC-01..10.
+- Source-status changes: NONE. Register note: [Dvo26] arXiv 2609.13818 is v1 only (12 Sep 2026), sole author Dvořák, CC BY 4.0, unrefereed, abstract pinned; its content stays Level B.
 
-## RL65 task
+## RL66 task
 
-Assess C65 = F1 Conjecture 1.5:
-- prove the bridge B65 (C65 + F1 Thm 1.6 ⇒ U9: every HC7 counterexample has a K7^- minor);
-- run the falsification test on the named families;
-- formulate and assess the K7^- analogue at the first F1 locus where the matching deficiency is spent (Thm 2.9 or Lemma 6.4/6.6).
+Assess C66 (= H65): every 4-light 5-rooted graph R with ρ4(R) >= m(R)+7 contains K6↓5 as a rooted minor.
+- Test the named falsifier families first.
+- Then: proved / explicit falsifier / open with the exact first missing dependency.
 
-Stop at the first missing dependency or falsifier.
+**Precondition.** None for mathematics. arxiv.org is needed only before a logged retrieval.
 
-**Precondition.** arxiv.org reachable (F1 v1 sha256-pinned), or the user supplies the files.
-
-**Bounds.** At most 3 retrievals. Mathematical computation: 0. Census: 0. One candidate.
+**Bounds.** At most 2 retrievals. Mathematical computation: 0. Census: 0. One candidate.
 
 **Prohibited:**
-- K7^=/K7^vee model upgrades (FL-055..062);
+- T2.9⁻ retry at the quite-heavy threshold;
+- K7^=/K7^vee/vampire model upgrades (FL-055..062);
 - density attempts for K7;
 - degree-7 / M3 / Kempe / K4,4 local work;
-- consuming F1/F2 lemmas above Level A statement level;
+- r >= 2 sub-cases or a second F1 locus;
+- consuming F1/F2 above Level A statement or [Dvo26] above Level B;
 - a literature loop;
 - committing F1 full text.
 
 ## Standing rules
 
-- Frontier rule (FL-064, extended by FL-065): state the position relative to S1, S2, S4/U8, the K7^- target, and the K7 density-failure examples.
-- All FL-001..FL-065 retry conditions remain in force.
+- Frontier rule (FL-064, extended by FL-065 and FL-066): state the position relative to S1, S2, S4/U8, the K7^- target (C65), and the K7 density-failure examples.
+- All FL-001..FL-066 retry conditions remain in force.
 - The RL70 periodic audit is still owed (after RL69).
-- Do not silently assume 7-connectivity, delta<=9, or C65.
+- Do not silently assume 7-connectivity, delta <= 9, C65, C66, or the NOT PROMOTED Lemma 5.4 analogue.
 
 Programme ACTIVE.

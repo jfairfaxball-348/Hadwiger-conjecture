@@ -1,0 +1,53 @@
+{
+  "format": "rl-connector-resume-v1",
+  "base_head": "60ccaddd48147a64df431e91d26675089200c82e",
+  "base_tree": "73291ea96571c77a8f4b1de863fa6bcc409aa659",
+  "authoritative_tree": "8085e1ef56bc3a765e62072cf529959f4ded2880",
+  "incoming_rl": 65,
+  "session_brief": "authoritative/RL65_HC7_K7MINUS_DENSITY_CANDIDATE_GATE_BRIEF.md",
+  "last_verified_frontier": "RL65 closeout candidate: U1-U8 certified (unchanged); U9 CONDITIONAL via B65; C65 not falsified; first F1 locus Thm 2.9/Lemma 5.7; T2.9- refuted by G0; Lemma D proved; C66 (=H65) is RL66 task. Red team 8/8 CONFIRMED.",
+  "completed_artifacts": [
+    "INCOMING_SNAPSHOT.md",
+    "authoritative_sha256.txt",
+    "RL65_RETRIEVAL_LOG.md",
+    "RL65_B65_BRIDGE.md",
+    "RL65_FALSIFICATION_TEST.md",
+    "RL65_LOCUS_ASSESSMENT.md",
+    "FAILURE_AND_LESSON_LEDGER_APPENDIX.md",
+    "RL65_CHECKPOINT_SUMMARY.md",
+    "RL65_RED_TEAM_RECORD.md",
+    "CLOSEOUT_STATE.md",
+    "RL65_REPORT.md",
+    "RL65_CLOSEOUT_VERIFICATION_REPORT.md",
+    "RL65_SESSION_STATE_AND_RL66_KICKOFF.md",
+    "resume.json",
+    "README.md"
+  ],
+  "unpromoted_or_uncovered": [
+    "C65 CONJECTURE / NOT ESTABLISHED",
+    "U9 conditional on C65",
+    "H65 CANDIDATE / NOT ASSESSED",
+    "r>=2 both-quite-heavy sub-cases of the Lemma 5.7 analogue open",
+    "Lemma 6.4/6.6 locus not assessed",
+    "orientation note: uniform-threshold H65 expected to fail on apex-over-planar (NOT PROMOTED)"
+  ],
+  "next_exact_operation": "commit RL65 transition (parent 60ccadd), push to claude/sweet-hypatia-ktxxxs, lease-check main == 60ccadd, fast-forward main (user-approved), read back",
+  "do_not_recompute": [
+    "R1 (F1 sha256 verified), R2 ([Dvo26] abstract pinned)",
+    "B65 proof, falsification table, locus identification, G0 counterpattern"
+  ],
+  "failure_lesson_ids": [
+    "FL-001..FL-066"
+  ],
+  "recovery_mode": "bounded repair installed as RL66 (C66)",
+  "changed_input_or_mechanism": "C65-specific density surplus (sides sum >= m+8) spent on heavy side via rooted K6 target",
+  "next_task_bounds": {
+    "external_retrievals_max": 2,
+    "math_computation": 0,
+    "census": 0,
+    "candidates": 1
+  },
+  "stop_and_repair_active": false,
+  "rl70_audit_owed": true,
+  "red_team": "wf_8feab086-c47: 8/8 CONFIRMED, 0 blocking; all minor/wording issues applied"
+}

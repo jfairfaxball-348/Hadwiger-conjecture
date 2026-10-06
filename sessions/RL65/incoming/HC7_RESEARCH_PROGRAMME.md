@@ -2,7 +2,7 @@
 
 Status: CURRENT PROGRAMME AUTHORITY.
 Installed by explicit non-RL target amendment on 2026-10-05.
-Incoming numbered session: RL66.
+Incoming numbered session: RL65.
 Programme ACTIVE.
 
 ## 1. Exact root theorem and negative target
@@ -247,33 +247,6 @@ RL64 ran the two-edge-deficient frontier admission gate selected by RL63. The st
 Bounds: at most 3 retrievals; 0 computation.
 
 **Runner-up (not selected).** A Level-A gate for Mader's 7-connectivity. It has no downstream consumer, sits below the frontier, and carries FL-063 access risk plus an attribution discrepancy.
-
-The RL70 periodic audit is still owed.
-
-Programme ACTIVE.
-
-## 12. RL65 K7^- density candidate outcome and RL66 successor
-
-RL65 assessed C65 = F1 Conjecture 1.5 as one bounded new-mathematics candidate gate. It used 2 of 3 retrievals: F1 v1 was re-pinned with sha256 unchanged, and the [Dvo26] abstract was pinned. Computation 0; census 0.
-
-**Findings.**
-- **Bridge B65, proved conditionally.** C65 + F1 Thm 1.6 ⇒ every graph with chi >= 7 has a K7^- minor ⇒ U9 for every HC7 counterexample. B65 is conditional on C65 and on F1 Thm 1.6 at Level A statement. U9 is recorded as CONDITIONAL and is not certified.
-- **No falsifier of C65** among the five named families. F2's G_n shows that 5-connectivity is necessary. The 2-apex triangulations satisfy C65 and are K7-free.
-- **First F1 deficiency locus.** Thm 2.9 as consumed in Lemma 5.7. Lemma 6.4/6.6 and every other locus are downstream.
-- **The K7^- analogue T2.9⁻ is false** at Thm 2.9's own quite-heavy threshold. The counterpattern is the two-fanged vampire G0, which is itself 4-light and quite heavy. So the F1 Thm 2.9 / Lemma 5.6 interface cannot reach K7^- unchanged. This is a lemma-level method barrier, not a refutation of C65.
-- **The new resource.** A K7^- version has a 5-unit density surplus: the sides of a 5-separation sum to >= m+8, against m+3 in F1.
-- **Lemma D (proved).** A rooted K6↓5 on one side plus a 4-light side with positive 4-density gives K7^-.
-- **H65.** The formulated heavy-side repair for the r = 1 sub-case, where G0 lives. Its payoff is conditional on the NOT PROMOTED Lemma 5.4 analogue. The barrier itself is proved only for a standalone lemma assuming just 4-light and quite heavy.
-
-**Classifications.** Mathematical correction/demotion: NONE. Theorem-classification changes: NONE. Source-status changes: NONE (a register note for [Dvo26] v1 metadata). FL-066 is appended to the ledger.
-
-**Successor.** Exactly one successor is installed: RL66 HC7-K7MINUS-HEAVY-SIDE-ROOTED-K6-GATE (authoritative/RL66_HC7_K7MINUS_HEAVY_SIDE_ROOTED_K6_GATE_BRIEF.md). It assesses C66 (= H65): every 4-light 5-rooted graph R with ρ4(R) >= m(R)+7 contains K6↓5 as a rooted minor.
-- Bounds: at most 2 retrievals; computation 0; census 0; one candidate.
-- No r >= 2 sub-cases and no second locus.
-
-**Runner-up (not selected).** T2.9⁻ at the raised threshold ρ4 >= 2. It leaves the r = 1 sub-case containing G0 untouched, and Lemma 5.9's side is only known to be quite heavy. It would also mean re-running F1 §4, above Level A. Symmetrically, C66 leaves r >= 2 open.
-
-**Drift caution.** C66 sits two levels below the documented K7^- target. If RL66 neither resolves C66 nor sharpens its first missing dependency, the next selection should weigh the RL70 audit and the cost of this lemma chain before continuing it.
 
 The RL70 periodic audit is still owed.
 
