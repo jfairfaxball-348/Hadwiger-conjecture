@@ -1,59 +1,63 @@
-# RL61 authoritative state — HC7 programme
+# RL62 authoritative state — HC7 programme
 
 Status: READY / NOT STARTED.
-Predecessor: RL60 CLOSED/FROZEN under sessions/RL60/.
-Sole current brief: RL61_HC7_K44_SPANNING_SIDE_CHROMATIC_SUM_GATE_BRIEF.md.
+Predecessor: RL61 CLOSED/FROZEN under sessions/RL61/.
+Sole current brief: RL62_HC7_CRITICAL_7_CONNECTIVITY_GATE_BRIEF.md.
 Durable programme: HC7_RESEARCH_PROGRAMME.md.
 Root: HC7 only.
 
-## RL60 audit outcome
+## RL61 outcome
 
-RL60 audited exactly RL50-RL59 plus the explicit HC7 programme-target amendment between RL51 and RL52.
+RL61 assessed exactly HC7-K44-SPANNING-SIDE-CHROMATIC-SUM on the delta(G)>=8 spanning minimum-total-size K4,4-model subcase.
 
-Mathematical correction/demotion: NONE.
-Inherited mathematical theorem classification changes: NONE.
-Source-status changes in RL60: NONE.
+For every vertex partition V(G)=A disjoint-union B,
 
-The audited HC7-universal frontier genuinely advanced in this window only through RL52 and RL54:
-- every hypothetical minor-minimal HC7 counterexample is full-C7 critical and has delta(G)>=7;
-- every such counterexample contains a K4,4 minor by SRC-0025 at checked_primary theorem-statement/hypothesis level.
+    chi(G) <= chi(G[A]) + chi(G[B]).
 
-The full SRC-0025 subscription proof has not been independently reconstructed.
+Therefore every actual RL61-domain member with chi(G)=7 necessarily has
+
+    chi(G[A]) + chi(G[B]) >= 7.
+
+The proposed <=6 candidate is not an independent structural invariant; it can hold universally on the stated counterexample domain only if that domain has already been eliminated independently.
+
+Classification:
+- HC7-K44-SPANNING-SIDE-CHROMATIC-SUM: CANDIDATE / NOT ESTABLISHED;
+- not certified-domain falsified;
+- spanning U=V(G) not eliminated;
+- delta(G)>=8 not narrowed;
+- no HC7-universal obligation reduced.
+
+Correction/demotion: NONE.
+Inherited theorem-classification changes: NONE.
+Source-status changes: NONE.
+
+FL-062 suspends the spanning K4,4 coloring route. Do not retry quotient palettes, disjoint side palettes, equivalent side-chromatic bounds, branch-set coloring catalogues, RL57 degree counting, or RL56 exterior escape.
+
+## Preserved incoming classifications
+
+SRC-0025 remains checked_primary at theorem-statement/hypothesis level only. The full subscription proof has not been independently reconstructed.
 
 RL55-P01 remains proved analytic mathematics exactly at minimum-total-size K4,4-model scope.
-RL56-P01 remains conditional only; RL56-C01 remains NOT ESTABLISHED.
-RL57-C01, RL58-C01 and RL59-C01 remain NOT ESTABLISHED / NOT PROMOTED; RL58-C01 and RL59-C01 are not certified-domain falsified.
 
-RL55-RL59 did not further narrow the graph-level HC7 residual and reduced no further HC7-universal obligation.
+RL56-P01 remains conditional only; RL56-C01 remains NOT ESTABLISHED / NOT PROMOTED.
 
-Collatz/repetition risk for unchanged continuation of RL55-RL59 is HIGH.
+RL57-C01, RL58-C01 and RL59-C01 remain NOT ESTABLISHED / NOT PROMOTED. RL58-C01 and RL59-C01 remain not certified-domain falsified.
 
-Route verdict: PIVOT within the K4,4 route. Immediate replay of HC7-K44-SPANNING-QUOTIENT-SIDE-PALETTE-LIFT is suspended.
+FL-043 through FL-062 and every retry condition remain in force.
 
-The consolidated failure ledger's missing FL-054 entry has been restored from the byte-identical current/frozen RL51 appendix. This is a provenance-packaging repair only.
+## RL62 task
 
-FL-043 through FL-061 and all retry conditions remain in force.
+Assess exactly one root-universal structural candidate:
 
-## RL61 task
+    HC7-CRITICAL-7-CONNECTIVITY:
+    every hypothetical minor-minimal HC7 counterexample is 7-connected.
 
-RL61 assesses exactly one changed mechanism on the spanning subcase U=V(G).
+Status on entry: CANDIDATE / NOT ESTABLISHED.
 
-For every hypothetical minor-minimal HC7 counterexample G on the delta(G)>=8 residual and every minimum-total-size spanning K4,4 model
+Work from the certified minor-minimal/full-C7-critical HC7 baseline only. A success is either a complete analytic proof or one exactly applicable checked source theorem whose statement, hypotheses and source status are verified. Do not assume the connectivity claim while trying to prove it.
 
-    M=(A_1,A_2,A_3,A_4;B_1,B_2,B_3,B_4),
+Stop at the first missing dependency.
 
-define A=A_1 union ... union A_4 and B=B_1 union ... union B_4.
-
-Assess exactly:
-
-    chi(G[A]) + chi(G[B]) <= 6.
-
-If established, disjoint side palettes give a 6-coloring of G and contradict chi(G)=7.
-
-First missing dependency: a direct HC7-critical/minimum-model mechanism controlling the chromatic numbers of the original side-unions.
-
-Do not return to quotient-palette lifting, branch-set catalogs, RL57 degree counting, RL56 exterior-attachment inference, degree-seven/resource/Kempe/M3 work, broad literature search, graph census, or mathematical numerical computation.
-
-If no direct original-graph mechanism is established in the bounded task, stop and suspend the spanning K4,4 coloring route rather than rename the lift.
+This task is deliberately outside the suspended spanning K4,4 coloring route.
 
 Programme ACTIVE.

@@ -1,0 +1,15 @@
+{
+  "format": "rl-connector-resume-v1",
+  "base_head": "ee3a649da561e2f9aae8f0073a7436d7d4421a45",
+  "authoritative_tree": "faa9a1cc757ff8a9b2e8e6ad7276569ad118ee3b",
+  "incoming_rl": 61,
+  "successor_rl": 62,
+  "status": "CLOSED/FROZEN on promotion",
+  "result": "HC7-K44-SPANNING-SIDE-CHROMATIC-SUM remains CANDIDATE / NOT ESTABLISHED; not certified-domain falsified",
+  "barrier": "Every actual 7-chromatic partition has side chromatic sum at least seven; spanning K4,4 coloring route suspended",
+  "failure_lesson_ids": [
+    "FL-062"
+  ],
+  "next_task": "RL62 HC7-CRITICAL-7-CONNECTIVITY-GATE",
+  "stop_and_repair_active": false
+}

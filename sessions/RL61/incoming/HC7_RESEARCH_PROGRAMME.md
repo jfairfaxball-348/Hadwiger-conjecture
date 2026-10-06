@@ -2,7 +2,7 @@
 
 Status: CURRENT PROGRAMME AUTHORITY.
 Installed by explicit non-RL target amendment on 2026-10-05.
-Incoming numbered session: RL62.
+Incoming numbered session: RL61.
 Programme ACTIVE.
 
 ## 1. Exact root theorem and negative target
@@ -73,7 +73,7 @@ There are four principal workstreams. They are ordered by coverage, not by local
 
 **Inherited bridge.** The elementary minor-minimal reduction to full-C7 criticality.
 
-**First known gap.** RL61 showed that the direct spanning side-chromatic-sum candidate is not an independent invariant: every actual 7-chromatic domain member has side chromatic sum at least seven. The spanning K4,4 coloring route is suspended. RL62 therefore pivots to one root-universal structural candidate, HC7-CRITICAL-7-CONNECTIVITY. The residual delta(G)>=8 branch remains explicit.
+**First known gap.** RL60 suspends immediate replay of the quotient side-palette lift. In the spanning-union subcase U=V(G), RL61 tests one direct original-graph candidate: whether the chromatic numbers of the two K4,4 side-unions always sum to at most six. The residual delta(G)>=8 branch remains explicit.
 
 **Falsification condition.** A claimed universal structural consequence lacks a repository proof/source-status record, loses a hypothesis, or admits a baseline-compatible counterpattern.
 
@@ -115,7 +115,7 @@ There are four principal workstreams. They are ordered by coverage, not by local
 
 **Inherited bridge.** The explicit exhaustive partition produced by W2.
 
-**First known gap.** RL59 did not eliminate the spanning-union U=V(G) subcase, and RL61 showed that the direct side-chromatic-sum reformulation cannot independently eliminate it because every actual 7-chromatic domain member has side chromatic sum at least seven. The spanning K4,4 coloring route is therefore suspended. The broader delta(G)>=8 residual and earlier model-union structural obligations remain open.
+**First known gap.** RL59 did not eliminate the spanning-union U=V(G) subcase. RL60 suspended immediate quotient-palette replay and selected one changed mechanism: direct control of the original side-union chromatic sum. Outside that subcase the broader delta(G)>=8 residual and the earlier model-union escape/augmentation obligations remain open.
 
 **Falsification condition.** A proposed residual theorem fails on an allowed branch or depends on a structural result not proved/source-verified for all residual graphs.
 
@@ -167,19 +167,3 @@ If established, disjoint optimal color palettes on A and B give a proper colorin
 If RL61 cannot prove this direct original-graph control without reopening a recorded failed interface, it must stop and suspend the spanning K4,4 coloring route rather than rename the lift.
 
 Programme ACTIVE.
-
-## 8. RL61 outcome and RL62 successor
-
-RL61 assessed exactly HC7-K44-SPANNING-SIDE-CHROMATIC-SUM on the spanning minimum-total-size K4,4 model domain.
-
-For every partition V(G)=A disjoint-union B, chi(G)<=chi(G[A])+chi(G[B]) by disjoint-palette combination. Hence every actual RL61-domain member with chi(G)=7 has chi(G[A])+chi(G[B])>=7. The proposed <=6 bound is therefore not an independent structural invariant; it can hold on the stated counterexample domain only if that domain is already empty.
-
-HC7-K44-SPANNING-SIDE-CHROMATIC-SUM remains CANDIDATE / NOT ESTABLISHED and is not certified-domain falsified, because no genuine certified-domain counterexample graph is exhibited. The spanning U=V(G) subcase and delta(G)>=8 remain open. No HC7-universal obligation was reduced.
-
-FL-062 suspends the spanning K4,4 coloring route. Immediate retries by quotient palettes, disjoint side palettes, equivalent side-chromatic upper bounds, branch-set coloring catalogues, RL57 degree counting, or RL56 exterior escape are prohibited by its retry condition.
-
-Exactly one successor is installed. RL62 assesses the root-universal candidate HC7-CRITICAL-7-CONNECTIVITY: every hypothetical minor-minimal HC7 counterexample is 7-connected.
-
-Status on entry: CANDIDATE / NOT ESTABLISHED.
-
-RL62 is a bounded proof/source-verification gate outside the suspended spanning K4,4 coloring interface. It may not assume the candidate before proof or source verification and must stop at the first missing dependency.
