@@ -1,0 +1,67 @@
+{
+  "format": "rl-connector-resume-v1",
+  "base_head": "ad6eff15af85627a318cf8052f3eff2d08f86433",
+  "authoritative_tree": "70d8f6797b120a47f477edc08bd8147d7036da44",
+  "incoming_rl": 63,
+  "session_brief": "authoritative/RL63_HC7_GLOBAL_AUDIT_AND_ATTACK_PLAN_BRIEF.md",
+  "validated_authority_paths": [
+    "authoritative/START_HERE.md",
+    "authoritative/RL63_STATE.md",
+    "authoritative/RL63_HC7_GLOBAL_AUDIT_AND_ATTACK_PLAN_BRIEF.md",
+    "authoritative/HC7_RESEARCH_PROGRAMME.md",
+    "authoritative/PROOF_STATE_AND_OPEN_OBLIGATIONS.md",
+    "authoritative/RL62_REPORT.md",
+    "authoritative/RL62_SOURCE_VERIFICATION_RECORD.md",
+    "authoritative/RL62_PROOF_STATE_AND_RESIDUAL_LEDGER.md",
+    "authoritative/RL62_FAILURE_AND_LESSON_LEDGER_APPENDIX.md",
+    "authoritative/FAILURE_AND_LESSON_LEDGER.md"
+  ],
+  "last_verified_frontier": "Unchanged: U1-U7 (minor-minimal, full-C7 critical, connected, delta>=7, deg7-or-delta>=8, K4,4 minor). Last narrowing RL54. Corrections NONE; source-status changes NONE; RL12-SRC-01 clarified Level B.",
+  "completed_artifacts": [
+    "FAILURE_AND_LESSON_LEDGER_APPENDIX.md",
+    "FL_001_042_RESTORATION_MANIFEST.md",
+    "FL_055_DIVERGENCE_NOTE.md",
+    "INCOMING_SNAPSHOT.md",
+    "PREPARED_RECOVERY_TASK.md",
+    "README.md",
+    "RL63_CORRECTION_AND_DEMOTION_RECORD.md",
+    "RL63_GLOBAL_AUDIT_REPORT.md",
+    "RL63_HC7_DEPENDENCY_AND_SCOPE_AUDIT.md",
+    "RL63_PROOF_VS_DISPROOF_ATTACK_MAP.md",
+    "RL63_RETRIEVAL_LOG.md",
+    "RL63_ROUTE_PORTFOLIO_AND_KILL_LIST.md",
+    "RL63_SESSION_MATRIX.md",
+    "RL63_SESSION_STATE_AND_RL64_KICKOFF.md",
+    "RL63_SOURCE_GAP_REGISTER.md",
+    "RL63_STRATEGIC_VERDICT.md",
+    "authoritative_sha256.txt",
+    "resume.json"
+  ],
+  "unpromoted_or_uncovered": [
+    "all RL63 outputs (scratch until closeout)",
+    "Q6 order-bound question unanswered (retrieval cap)",
+    "F1/F2, Mader 1968a/b, Gallai: located/orientation only, not consumed"
+  ],
+  "next_exact_operation": "none for RL63 (closed). RL64: pin main, check arxiv.org precondition, run admission gate per authoritative brief",
+  "do_not_recompute": [
+    "internal session sweep RL1-RL62 (completed in plan phase; findings in plan file /root/.claude/plans/github-continue-with-the-synthetic-curry.md)"
+  ],
+  "failure_lesson_ids": [
+    "FL-001..FL-063"
+  ],
+  "recovery_mode": "global audit / pivot assessment",
+  "changed_input_or_mechanism": "RL64 = HC7-TWO-EDGE-DEFICIENT-FRONTIER-ADMISSION-GATE (precondition: arxiv.org reachable)",
+  "next_task_bounds": {
+    "external_retrievals_max": 8,
+    "math_computation": 0,
+    "census": 0
+  },
+  "retry_conditions": [
+    "FL-063: no replay of Springer BF02052726 landing page; reopen only with inspectable theorem text or complete proof",
+    "FL-062: no spanning K4,4 color-lift retries"
+  ],
+  "stop_and_repair_active": false,
+  "retrievals_used": 8,
+  "math_computation": 0,
+  "closeout": "RL63 CLOSED/FROZEN on promotion"
+}

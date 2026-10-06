@@ -1,69 +1,62 @@
-# RL63 authoritative state — global HC7 audit and attack-plan pivot
+# RL64 authoritative state — HC7 two-edge-deficient frontier admission gate
 
 Status: READY / NOT STARTED.
-Predecessor: RL62 CLOSED/FROZEN under sessions/RL62/.
-Sole current brief: RL63_HC7_GLOBAL_AUDIT_AND_ATTACK_PLAN_BRIEF.md.
-Durable programme: HC7_RESEARCH_PROGRAMME.md.
+Predecessor: RL63 CLOSED/FROZEN under sessions/RL63/.
+Sole current brief: RL64_HC7_TWO_EDGE_DEFICIENT_FRONTIER_ADMISSION_GATE_BRIEF.md.
+Durable programme: HC7_RESEARCH_PROGRAMME.md (see §10).
+Proof state: PROOF_STATE_AND_OPEN_OBLIGATIONS.md.
+Ledger: FAILURE_AND_LESSON_LEDGER.md (FL-001..FL-064; FL-001..042 restored at RL63).
 Root: HC7 only.
 
-## RL62 outcome
+## RL63 outcome (user-directed global audit)
 
-RL62 assessed exactly HC7-CRITICAL-7-CONNECTIVITY:
+The certified HC7-universal frontier is unchanged:
+- minor-minimal ⇒ full-C7 critical;
+- every proper subgraph is 6-colourable, and G is connected;
+- delta>=7;
+- a degree-seven vertex exists, or delta>=8;
+- K4,4 minor (SRC-0025, statement level).
 
-    every hypothetical minor-minimal HC7 counterexample is 7-connected.
+The last genuine narrowing was RL54. 46 of 62 sessions built valid local machinery that no coverage bridge reaches. The k=7 literature frontier was never imported.
 
-The direct elementary separator route stopped because proper-minor six-colorability alone does not supply compatibility of side colorings across a separator of size at most six.
-
-A classical Mader contraction-critical connectivity theorem became load-bearing. A modern secondary restatement gives the desired 7-connectivity for k>=7 under hypotheses matching the current baseline at k=7. The original Mader source was located, but the theorem text and hypotheses were not inspectable through the subscription-restricted primary page. Because RL62 required original-statement/hypothesis verification, the theorem was not consumed.
-
-Classification:
-- HC7-CRITICAL-7-CONNECTIVITY: CANDIDATE / NOT ESTABLISHED;
-- no certified-domain falsifier;
-- universal HC7 counterexample class not narrowed to 7-connected;
-- delta(G)>=8 unchanged;
-- degree-seven coverage unchanged;
-- no HC7-universal obligation reduced.
+Source-gated, not consumed:
+- S1: 7-connected (Level B via RL12-SRC-01; FL-063).
+- S2: delta in {7,8,9} (Mader K7 extremal function).
+- S3: n>=13 (Gallai).
+- S4: K7 minus any two edges as minors (arXiv:2609.17760, arXiv:2507.03244; orientation only).
 
 Correction/demotion: NONE.
-Inherited theorem-classification changes: NONE.
+Theorem-classification changes: NONE.
 Promoted source-status changes: NONE.
+RL12-SRC-01 is clarified as a Level-B restatement of Mader's theorem.
 
-FL-063 records the exact source-access/proof-admission barrier. Do not promote 7-connectivity from secondary memory alone.
+## RL64 task
 
-## Preserved incoming classifications
+Admit or reject, from inspected arXiv text:
+- **F1:** no K7^= minor ⇒ 6-colourable (Dvořák–Norin–Rahman, arXiv:2609.17760).
+- **F2:** no K7^vee minor ⇒ 6-colourable (arXiv:2507.03244).
 
-The certified universal baseline remains:
-- minor-minimal hypothetical HC7 counterexample;
-- every proper minor 6-colorable / full-C7 critical;
-- every proper subgraph 6-colorable;
-- connected;
-- delta(G)>=7;
-- unresolved split: a degree-seven vertex exists or delta(G)>=8;
-- SRC-0025 checked_primary at theorem-statement/hypothesis scope, giving a K4,4 minor in every HC7 counterexample.
+Then extract:
+- the classical inputs these proofs consume, at Level B;
+- the authors' documented obstruction to K7^- / K7.
 
-RL55-P01 remains exactly at minimum-total-size K4,4-model scope.
-RL56-P01 remains conditional only.
-RL56-C01, RL57-C01, RL58-C01 and RL59-C01 remain NOT ESTABLISHED / NOT PROMOTED at their recorded scopes.
-The spanning K4,4 coloring route remains suspended by FL-062.
-All earlier failure/lesson records and retry conditions remain in force.
+Stop after that.
 
-## User-directed RL63 pivot
+**Precondition.** arxiv.org must be reachable, or the user supplies the exact versions. Otherwise stop before mathematics.
 
-The user explicitly directs RL63 to be a GLOBAL AUDIT of all progress to date and to pivot with laser focus on the sole question:
+**Bounds.** At most 6 external retrievals. Mathematical computation: 0. Census: 0.
 
-    How can HC7 actually be proved or disproved?
+**Prohibited:**
+- model-upgrade attempts (the FL-055..062 pattern);
+- degree-7 / M3 / Kempe / K4,4 local work;
+- proof reconstruction;
+- a literature loop.
 
-RL63 must review the full repository research history through RL62, not merely the last ten sessions. This is an extraordinary user-directed strategic audit and does not replace the standing every-tenth-session audit cadence.
+## Standing rules
 
-The audit should be aggressive in strategy:
-- kill, suspend, or sharply deprioritize routes that repeatedly fail to reduce a root HC7 obligation;
-- identify the strongest genuinely proved universal structure;
-- separate source-gated known-theorem opportunities from new mathematics;
-- compare proof and explicit-counterexample/disproof tracks on equal evidential terms;
-- identify where exact computation could be decisive and what certificate/verifier would be required;
-- rank candidate next moves by root leverage, falsifiability, and distance to a complete HC7 proof/disproof;
-- select exactly one decisive bounded successor task.
-
-Aggressive does not mean speculative promotion. Proof classifications, exact quantifiers, source verification, and certificate requirements remain strict.
+- Frontier rule (FL-064): every brief states its position relative to S1, S2 and S4.
+- All FL-001..FL-064 retry conditions remain in force.
+- The RL70 periodic audit is still owed.
+- Do not silently assume 7-connectivity, delta<=9, or the F1/F2 statements.
 
 Programme ACTIVE.

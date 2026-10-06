@@ -2,7 +2,7 @@
 
 Status: CURRENT PROGRAMME AUTHORITY.
 Installed by explicit non-RL target amendment on 2026-10-05.
-Incoming numbered session: RL64.
+Incoming numbered session: RL63.
 Programme ACTIVE.
 
 ## 1. Exact root theorem and negative target
@@ -197,29 +197,5 @@ FL-063 records the source-access/proof-admission barrier. Repeating the same ina
 By explicit user direction, RL63 is a GLOBAL AUDIT of all progress RL1-RL62 plus the HC7 target amendment. It must reconstruct the exact valid HC7 dependency frontier, aggressively retire or deprioritize low-leverage routes, compare proof and explicit-disproof strategies, identify where source verification or exact computation can be decisive, and select exactly one bounded highest-leverage RL64 task.
 
 This extraordinary audit does not replace the standing every-tenth-session cadence.
-
-Programme ACTIVE.
-
-## 10. RL63 global audit outcome and RL64 successor
-
-RL63 audited RL1–RL62, the initialization/scaffold and the 2026-10-05 target amendment, under explicit user direction.
-
-**Findings.**
-- The certified HC7-universal frontier is unchanged and entirely classical: U1–U7, with K4,4 from SRC-0025 at statement level. The last genuine narrowing was RL54.
-- 46 of 62 sessions developed valid local machinery for subcases that no coverage bridge reaches.
-- The programme never imported the k=7 literature: Mader 7-connectivity, the Mader K7 extremal function (delta in {7,8,9}), Gallai's order bound, and the 2025–2026 preprints. Orientation indicates those preprints show every 7-chromatic graph has a K7-minus-any-two-edges minor.
-- The RL52/RL53 target "degree-seven existence" is retired as mis-specified. The correct finite coverage statement is delta in {7,8,9}, which is source-gated.
-
-**Classifications.** Mathematical correction/demotion: NONE. Theorem-classification changes: NONE. Promoted source-status changes: NONE. RL12-SRC-01 is clarified as a Level-B restatement. The consolidated ledger is repaired: FL-001..042 restored, FL-055 note appended.
-
-**New rule.** The frontier rule (FL-064) applies to every later brief.
-
-**Successor.** Exactly one successor is installed: RL64 HC7-TWO-EDGE-DEFICIENT-FRONTIER-ADMISSION-GATE (authoritative/RL64_HC7_TWO_EDGE_DEFICIENT_FRONTIER_ADMISSION_GATE_BRIEF.md). It admits or rejects F1 (no K7^= minor ⇒ 6-colourable; arXiv:2609.17760) and F2 (no K7^vee minor ⇒ 6-colourable; arXiv:2507.03244) from inspected text, and extracts the consumed classical inputs and the documented K7^- / K7 obstruction.
-- Precondition: arxiv.org reachable.
-- Bounds: at most 6 retrievals; 0 computation.
-
-**Runner-up (not selected).** The Mader K7 extremal-function gate.
-
-This audit does not replace the RL70 periodic audit.
 
 Programme ACTIVE.
