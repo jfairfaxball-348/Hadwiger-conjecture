@@ -1,0 +1,37 @@
+{
+  "format": "rl-connector-resume-v1",
+  "base_head": "306753660754123c53065916e3167e7b56bfbe25",
+  "authoritative_tree": "2f340d08493dd8f3fc51c469270b6295b75efbfc",
+  "incoming_rl": 62,
+  "session_brief": "authoritative/RL62_HC7_CRITICAL_7_CONNECTIVITY_GATE_BRIEF.md",
+  "last_verified_frontier": "HC7-CRITICAL-7-CONNECTIVITY remains NOT ESTABLISHED; Mader theorem route is source-gated at original theorem-text verification; no universal HC7 narrowing.",
+  "completed_artifacts": [
+    "RL62_REPORT",
+    "RL62_SOURCE_VERIFICATION_RECORD",
+    "RL62_PROOF_STATE_AND_RESIDUAL_LEDGER",
+    "FL-063",
+    "RL63 successor brief"
+  ],
+  "unpromoted_or_uncovered": [
+    "7-connectivity",
+    "degree-seven existence",
+    "delta(G)>=8 residual",
+    "spanning K4,4 residual"
+  ],
+  "next_exact_operation": "Atomic RL62 closeout and lease-checked promotion to main.",
+  "do_not_recompute": [
+    "RL62 mathematics",
+    "Mader inaccessible primary-page lookup"
+  ],
+  "failure_lesson_ids": [
+    "FL-043 through FL-063"
+  ],
+  "recovery_mode": "pivot",
+  "changed_input_or_mechanism": "User-directed global strategic audit of RL1-RL62 with proof-vs-disproof route ranking.",
+  "next_task_bounds": "RL63: no census; no large computation; <=8 targeted source retrievals; choose exactly one RL64 task.",
+  "retry_conditions": [
+    "Do not promote Mader 7-connectivity from secondary memory alone.",
+    "Do not restart suspended K4,4 coloring route without a genuinely changed mechanism."
+  ],
+  "stop_and_repair_active": false
+}

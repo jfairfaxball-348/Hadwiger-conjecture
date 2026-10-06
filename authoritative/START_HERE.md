@@ -1,63 +1,69 @@
-# RL62 authoritative state — HC7 programme
+# RL63 authoritative state — global HC7 audit and attack-plan pivot
 
 Status: READY / NOT STARTED.
-Predecessor: RL61 CLOSED/FROZEN under sessions/RL61/.
-Sole current brief: RL62_HC7_CRITICAL_7_CONNECTIVITY_GATE_BRIEF.md.
+Predecessor: RL62 CLOSED/FROZEN under sessions/RL62/.
+Sole current brief: RL63_HC7_GLOBAL_AUDIT_AND_ATTACK_PLAN_BRIEF.md.
 Durable programme: HC7_RESEARCH_PROGRAMME.md.
 Root: HC7 only.
 
-## RL61 outcome
+## RL62 outcome
 
-RL61 assessed exactly HC7-K44-SPANNING-SIDE-CHROMATIC-SUM on the delta(G)>=8 spanning minimum-total-size K4,4-model subcase.
+RL62 assessed exactly HC7-CRITICAL-7-CONNECTIVITY:
 
-For every vertex partition V(G)=A disjoint-union B,
+    every hypothetical minor-minimal HC7 counterexample is 7-connected.
 
-    chi(G) <= chi(G[A]) + chi(G[B]).
+The direct elementary separator route stopped because proper-minor six-colorability alone does not supply compatibility of side colorings across a separator of size at most six.
 
-Therefore every actual RL61-domain member with chi(G)=7 necessarily has
-
-    chi(G[A]) + chi(G[B]) >= 7.
-
-The proposed <=6 candidate is not an independent structural invariant; it can hold universally on the stated counterexample domain only if that domain has already been eliminated independently.
+A classical Mader contraction-critical connectivity theorem became load-bearing. A modern secondary restatement gives the desired 7-connectivity for k>=7 under hypotheses matching the current baseline at k=7. The original Mader source was located, but the theorem text and hypotheses were not inspectable through the subscription-restricted primary page. Because RL62 required original-statement/hypothesis verification, the theorem was not consumed.
 
 Classification:
-- HC7-K44-SPANNING-SIDE-CHROMATIC-SUM: CANDIDATE / NOT ESTABLISHED;
-- not certified-domain falsified;
-- spanning U=V(G) not eliminated;
-- delta(G)>=8 not narrowed;
+- HC7-CRITICAL-7-CONNECTIVITY: CANDIDATE / NOT ESTABLISHED;
+- no certified-domain falsifier;
+- universal HC7 counterexample class not narrowed to 7-connected;
+- delta(G)>=8 unchanged;
+- degree-seven coverage unchanged;
 - no HC7-universal obligation reduced.
 
 Correction/demotion: NONE.
 Inherited theorem-classification changes: NONE.
-Source-status changes: NONE.
+Promoted source-status changes: NONE.
 
-FL-062 suspends the spanning K4,4 coloring route. Do not retry quotient palettes, disjoint side palettes, equivalent side-chromatic bounds, branch-set coloring catalogues, RL57 degree counting, or RL56 exterior escape.
+FL-063 records the exact source-access/proof-admission barrier. Do not promote 7-connectivity from secondary memory alone.
 
 ## Preserved incoming classifications
 
-SRC-0025 remains checked_primary at theorem-statement/hypothesis level only. The full subscription proof has not been independently reconstructed.
+The certified universal baseline remains:
+- minor-minimal hypothetical HC7 counterexample;
+- every proper minor 6-colorable / full-C7 critical;
+- every proper subgraph 6-colorable;
+- connected;
+- delta(G)>=7;
+- unresolved split: a degree-seven vertex exists or delta(G)>=8;
+- SRC-0025 checked_primary at theorem-statement/hypothesis scope, giving a K4,4 minor in every HC7 counterexample.
 
-RL55-P01 remains proved analytic mathematics exactly at minimum-total-size K4,4-model scope.
+RL55-P01 remains exactly at minimum-total-size K4,4-model scope.
+RL56-P01 remains conditional only.
+RL56-C01, RL57-C01, RL58-C01 and RL59-C01 remain NOT ESTABLISHED / NOT PROMOTED at their recorded scopes.
+The spanning K4,4 coloring route remains suspended by FL-062.
+All earlier failure/lesson records and retry conditions remain in force.
 
-RL56-P01 remains conditional only; RL56-C01 remains NOT ESTABLISHED / NOT PROMOTED.
+## User-directed RL63 pivot
 
-RL57-C01, RL58-C01 and RL59-C01 remain NOT ESTABLISHED / NOT PROMOTED. RL58-C01 and RL59-C01 remain not certified-domain falsified.
+The user explicitly directs RL63 to be a GLOBAL AUDIT of all progress to date and to pivot with laser focus on the sole question:
 
-FL-043 through FL-062 and every retry condition remain in force.
+    How can HC7 actually be proved or disproved?
 
-## RL62 task
+RL63 must review the full repository research history through RL62, not merely the last ten sessions. This is an extraordinary user-directed strategic audit and does not replace the standing every-tenth-session audit cadence.
 
-Assess exactly one root-universal structural candidate:
+The audit should be aggressive in strategy:
+- kill, suspend, or sharply deprioritize routes that repeatedly fail to reduce a root HC7 obligation;
+- identify the strongest genuinely proved universal structure;
+- separate source-gated known-theorem opportunities from new mathematics;
+- compare proof and explicit-counterexample/disproof tracks on equal evidential terms;
+- identify where exact computation could be decisive and what certificate/verifier would be required;
+- rank candidate next moves by root leverage, falsifiability, and distance to a complete HC7 proof/disproof;
+- select exactly one decisive bounded successor task.
 
-    HC7-CRITICAL-7-CONNECTIVITY:
-    every hypothetical minor-minimal HC7 counterexample is 7-connected.
-
-Status on entry: CANDIDATE / NOT ESTABLISHED.
-
-Work from the certified minor-minimal/full-C7-critical HC7 baseline only. A success is either a complete analytic proof or one exactly applicable checked source theorem whose statement, hypotheses and source status are verified. Do not assume the connectivity claim while trying to prove it.
-
-Stop at the first missing dependency.
-
-This task is deliberately outside the suspended spanning K4,4 coloring route.
+Aggressive does not mean speculative promotion. Proof classifications, exact quantifiers, source verification, and certificate requirements remain strict.
 
 Programme ACTIVE.

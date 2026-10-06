@@ -2,7 +2,7 @@
 
 Status: CURRENT PROGRAMME AUTHORITY.
 Installed by explicit non-RL target amendment on 2026-10-05.
-Incoming numbered session: RL63.
+Incoming numbered session: RL62.
 Programme ACTIVE.
 
 ## 1. Exact root theorem and negative target
@@ -73,7 +73,7 @@ There are four principal workstreams. They are ordered by coverage, not by local
 
 **Inherited bridge.** The elementary minor-minimal reduction to full-C7 criticality.
 
-**First known gap.** RL62 did not promote HC7-CRITICAL-7-CONNECTIVITY: the elementary separator route stopped at coloring compatibility and the classical Mader route is source-gated because the original theorem text/hypotheses were not directly inspectable. RL63 is therefore a user-directed global audit of the full HC7 attack portfolio rather than an automatic local retry. The residual delta(G)>=8 branch remains explicit.
+**First known gap.** RL61 showed that the direct spanning side-chromatic-sum candidate is not an independent invariant: every actual 7-chromatic domain member has side chromatic sum at least seven. The spanning K4,4 coloring route is suspended. RL62 therefore pivots to one root-universal structural candidate, HC7-CRITICAL-7-CONNECTIVITY. The residual delta(G)>=8 branch remains explicit.
 
 **Falsification condition.** A claimed universal structural consequence lacks a repository proof/source-status record, loses a hypothesis, or admits a baseline-compatible counterpattern.
 
@@ -183,19 +183,3 @@ Exactly one successor is installed. RL62 assesses the root-universal candidate H
 Status on entry: CANDIDATE / NOT ESTABLISHED.
 
 RL62 is a bounded proof/source-verification gate outside the suspended spanning K4,4 coloring interface. It may not assume the candidate before proof or source verification and must stop at the first missing dependency.
-
-## 9. RL62 outcome and RL63 global strategic audit
-
-RL62 assessed exactly HC7-CRITICAL-7-CONNECTIVITY on the full hypothetical minor-minimal HC7 counterexample domain.
-
-The elementary separator approach did not establish 7-connectivity. A classical Mader contraction-critical connectivity theorem became load-bearing and a secondary restatement matched the current k=7 hypotheses, but the original theorem text and hypotheses were not directly inspectable from the located subscription-restricted primary source. Under the RL62 proof-admission rule the theorem was therefore not consumed.
-
-HC7-CRITICAL-7-CONNECTIVITY remains CANDIDATE / NOT ESTABLISHED. No certified-domain falsifier was found. The HC7 counterexample class is not yet narrowed to 7-connected graphs; delta(G)>=8 and degree-seven coverage remain unchanged; no HC7-universal obligation was reduced.
-
-FL-063 records the source-access/proof-admission barrier. Repeating the same inaccessible primary-page lookup or promoting from secondary memory is prohibited.
-
-By explicit user direction, RL63 is a GLOBAL AUDIT of all progress RL1-RL62 plus the HC7 target amendment. It must reconstruct the exact valid HC7 dependency frontier, aggressively retire or deprioritize low-leverage routes, compare proof and explicit-disproof strategies, identify where source verification or exact computation can be decisive, and select exactly one bounded highest-leverage RL64 task.
-
-This extraordinary audit does not replace the standing every-tenth-session cadence.
-
-Programme ACTIVE.
