@@ -2,7 +2,7 @@
 
 Status: CURRENT PROGRAMME AUTHORITY.
 Installed by explicit non-RL target amendment on 2026-10-05.
-Incoming numbered session: RL68.
+Incoming numbered session: RL67.
 Programme ACTIVE.
 
 ## 1. Exact root theorem and negative target
@@ -307,32 +307,5 @@ RL66 assessed C66 as one bounded new-mathematics candidate gate. C66 states that
 **Drift rule.** If H67 is assessed and fails or stays open, neither the RL68 nor the RL69 recommendation may extend the F1-interface lemma chain before the RL70 audit prices it.
 
 The RL70 periodic audit is still owed.
-
-Programme ACTIVE.
-
-## 14. RL67 r = 1 minimality-transfer outcome and RL68 successor
-
-RL67 assessed H67 as one bounded new-mathematics candidate gate. H67 states that the minor S1 + z' of the r = 1 configuration is 4-bilight. One retrieval (F1 v1 re-pinned, hashes unchanged); computation 0; census 0.
-
-**Findings.**
-- **F1's definitions quoted.** 4-bilight means no dense (≤4)-bifragment (F1.txt:383–387). Minimal counterexamples are lexicographic in (|V|, |E|) (F1.txt:1061–1065), so S1 + z' precedes G. F1 = arXiv:2609.17760v1 is an unrefereed preprint whose §1.1 (F1.txt:154–182) discloses AI-obtained proofs; it is used at Level A only.
-- **H67 is OPEN.**
-  - Its only obstruction is a root-split two-dense-halves configuration in the heavy side (Lemma R67).
-  - Every H67 instance would refute (2.8⁻) and C66 (V67).
-  - A 15-vertex counterpattern shows that H67 without K7^- -freeness is false. So excluding the configuration needs K7^- -freeness, or a minimality-derived hypothesis that the counterpattern violates. The counterpattern is weak, though: it contains K8 and is not edge-minimal, and it does not constrain a direct K7^- -forcing argument.
-  - The minimality-assisted form is OPEN, and it is equivalent to closing r = 1 under H54⁻.
-- **Correction C67-1.** The RL67 brief's falsification-condition remark is corrected (scope remark; not a theorem demotion).
-- **Drift rule triggered.** The F1-interface lemma chain has produced two open repairs in a row (C66, H67). Neither RL68 nor RL69 may extend it before the RL70 audit prices it.
-
-**Classifications.** Correction: C67-1 (scope remark). Theorem demotions: NONE. Theorem-classification changes: NONE. Source-status changes: NONE (F1 re-pinned). FL-068 is appended to the ledger.
-
-**Successor.** Exactly one successor is installed: RL68 HC7-K7MINUS-SEVEN-CONNECTED-DENSITY-GATE (authoritative/RL68_HC7_K7MINUS_SEVEN_CONNECTED_DENSITY_GATE_BRIEF.md). It assesses C68 = C65⁷: every 7-connected graph with n >= 8 and at least 4n − 2 edges contains K7^- as a minor. By B65⁷ this is exactly the density input the B65⁷ route to U9 needs (sufficient; necessity not claimed), and it lies outside the F1-interface chain.
-- First a falsification test on named 7-connected families.
-- Then: proved / falsifier / open.
-- Bounds: retrievals 0; computation 0; census 0; one candidate.
-
-**Runner-up (not selected).** The S1 / Mader 7-connectivity Level-A source gate. It still has no consumer, and it carries FL-063 access risk and an attribution discrepancy.
-
-**The RL70 periodic audit follows RL69.** It must price the F1-interface chain.
 
 Programme ACTIVE.

@@ -1,0 +1,59 @@
+{
+  "format": "rl-connector-resume-v1",
+  "base_head": "00552dfa73d6312f357270334ef2db3a23061891",
+  "base_tree": "9419f96aa3654d1eed0b2eda0c847738a198e0f3",
+  "authoritative_tree": "2a80073dd333b5cffac37c66b37211211478c55e",
+  "incoming_rl": 67,
+  "session_brief": "authoritative/RL67_HC7_K7MINUS_R1_MINIMALITY_TRANSFER_GATE_BRIEF.md",
+  "last_verified_frontier": "RL67 closeout candidate: U1-U8 certified; U9 CONDITIONAL (C65-7 + F1 Thm 1.6 Level A); H67 OPEN (Var OPEN, equivalent to r=1 closure under H54-; H67^G NOT ASSESSED beyond G*); Lemma R67, V67, G* (weak: contains K8), G^x implication PROVED; correction C67-1; drift rule triggered; successor RL68 C68 = C65-7.",
+  "completed_artifacts": [
+    "INCOMING_SNAPSHOT.md",
+    "authoritative_sha256.txt",
+    "RL67_RETRIEVAL_LOG.md",
+    "RL67_H67_ASSESSMENT.md",
+    "RL67_CHECKPOINT_SUMMARY.md",
+    "RL67_VERIFICATION_RECORD.md",
+    "RL67_RED_TEAM_RECORD.md",
+    "CLOSEOUT_STATE.md",
+    "RL67_REPORT.md",
+    "FAILURE_AND_LESSON_LEDGER_APPENDIX.md",
+    "RL67_CLOSEOUT_VERIFICATION_REPORT.md",
+    "RL67_SESSION_STATE_AND_RL68_KICKOFF.md",
+    "resume.json",
+    "README.md"
+  ],
+  "unpromoted_or_uncovered": [
+    "H67 CANDIDATE / NOT ESTABLISHED (open; refutable only with (2.8-) and C66)",
+    "Var OPEN (equivalent to closing r=1 under H54-)",
+    "H67^G NOT ASSESSED beyond G*",
+    "H54- NOT PROMOTED",
+    "C66 open",
+    "r>=2 and downstream loci open; C65 CONJECTURE; U9 conditional"
+  ],
+  "next_exact_operation": "commit RL67 transition (parent 00552df), push branch, lease-check main == 00552df, fast-forward main, read back; then give RL68 kickoff prompt",
+  "do_not_recompute": [
+    "R1 (hashes verified)",
+    "Lemma R67, V67, G*, G^x probe"
+  ],
+  "failure_lesson_ids": [
+    "FL-001..FL-068"
+  ],
+  "recovery_mode": "H67 open; drift rule triggered; bounded successor outside F1-interface chain (C65-7 gate) recommended",
+  "changed_input_or_mechanism": "switch from F1-interface lemma chain to the 7-connected density statement C65-7 that U9 actually needs",
+  "next_task_bounds": {
+    "external_retrievals_max": 0,
+    "math_computation": 0,
+    "census": 0,
+    "candidates": 1
+  },
+  "bounds_used_rl67": {
+    "retrievals": "1/1",
+    "computation": 0,
+    "census": 0,
+    "candidates": 1
+  },
+  "stop_and_repair_active": false,
+  "rl70_audit_owed": true,
+  "verification": "wf_077f1c6f-f18: 4 referees, 2 CONFIRMED, 2 GAP, 1 blocking scope issue (barrier mis-scoped) fixed; correction C67-1 recorded",
+  "red_team": "wf_2b4e8a81-7bd: 5 referees, 0 mathematical errors, 2 blocking scope/source issues fixed"
+}
