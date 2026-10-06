@@ -2,7 +2,7 @@
 
 Status: CURRENT PROGRAMME AUTHORITY.
 Installed by explicit non-RL target amendment on 2026-10-05.
-Incoming numbered session: RL67.
+Incoming numbered session: RL66.
 Programme ACTIVE.
 
 ## 1. Exact root theorem and negative target
@@ -274,37 +274,6 @@ RL65 assessed C65 = F1 Conjecture 1.5 as one bounded new-mathematics candidate g
 **Runner-up (not selected).** T2.9⁻ at the raised threshold ρ4 >= 2. It leaves the r = 1 sub-case containing G0 untouched, and Lemma 5.9's side is only known to be quite heavy. It would also mean re-running F1 §4, above Level A. Symmetrically, C66 leaves r >= 2 open.
 
 **Drift caution.** C66 sits two levels below the documented K7^- target. If RL66 neither resolves C66 nor sharpens its first missing dependency, the next selection should weigh the RL70 audit and the cost of this lemma chain before continuing it.
-
-The RL70 periodic audit is still owed.
-
-Programme ACTIVE.
-
-## 13. RL66 heavy-side rooted K6 outcome and RL67 successor
-
-RL66 assessed C66 as one bounded new-mathematics candidate gate. C66 states that every 4-light 5-rooted R with ρ4(R) >= m(R)+7 has a rooted K6↓5 minor. Retrievals 0 of 2; computation 0; census 0.
-
-**Findings.**
-- **No falsifier found** among the tested members of the named families:
-  - apex over planar (a threshold-necessity witness only);
-  - two apices over planar, including root placements that block rooted K4 (its all-components-poor regime is NOT ASSESSED);
-  - matching-attached blobs (one-directional reduction to a core of larger surplus);
-  - copies of the two-fanged vampire G0, and K2,2,2,2.
-- **C66 is OPEN.** It is not falsified. Its first missing dependency is a rooted extremal theorem forcing K6↓5 in the reduced core that the proved reduction lemmas (full packing, unique non-root neighbour, concentrated contacts) leave.
-- **C66 over-asks.**
-  - E66: a rooted K6↓5 in R is equivalent to a K7^- model of R + z' with {z'} a bag, and C66's threshold ρ4 >= m+7 is exactly C65's edge bound 4n − 2 for R + z'.
-  - It implies C65 for 5-connected graphs with a degree-5 vertex (S66). That case is not established and is not used by U9 via B65. A standalone proof of C66 must settle it without the minimality available at the use-site.
-  - The r = 1 payoff (P66b) needs only some K7^- in the proper minor S1 + z'.
-- **Precision on U9 (B65⁷).** B65 applies C65 only to 7-connected graphs. U9 therefore stays CONDITIONAL. It needs only C65⁷ (C65 for 7-connected graphs with n >= 8; implied by C65) in place of C65, together with F1 Thm 1.6 at Level A. U9 is not certified.
-
-**Classifications.** Mathematical correction/demotion: NONE. Theorem-classification changes: NONE. Source-status changes: NONE. FL-067 is appended to the ledger.
-
-**Successor.** Exactly one successor is installed: RL67 HC7-K7MINUS-R1-MINIMALITY-TRANSFER-GATE (authoritative/RL67_HC7_K7MINUS_R1_MINIMALITY_TRANSFER_GATE_BRIEF.md). It assesses the candidate H67 (NOT ASSESSED): in the r = 1 configuration, the minor S1 + z' is 4-bilight. If H67 holds and G' precedes G in F1's minimality order (to be checked at R1), minimality would close the r = 1 sub-case without C66, conditional on the NOT PROMOTED H54⁻.
-- Precondition: one sha-pinned F1 retrieval, to quote the 4-bilight definition.
-- Bounds: at most 1 retrieval; computation 0; census 0; one candidate.
-
-**Runner-up (not selected).** Continue C66 on its reduced core. It loses because S66 makes a standalone proof of C66 settle an unestablished case of C65 that U9 does not use via B65, and the payoff never uses its singleton-bag conclusion.
-
-**Drift rule.** If H67 is assessed and fails or stays open, neither the RL68 nor the RL69 recommendation may extend the F1-interface lemma chain before the RL70 audit prices it.
 
 The RL70 periodic audit is still owed.
 

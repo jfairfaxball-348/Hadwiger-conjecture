@@ -1,0 +1,64 @@
+{
+  "format": "rl-connector-resume-v1",
+  "base_head": "a9f89debfb523bf32f1aed703b9ceee8484ec72f",
+  "base_tree": "8195e393a1f7a10071a646f128584e9b7e0b707b",
+  "authoritative_tree": "bebe64012cdd90a387c31d174d2c97d2737e2f70",
+  "incoming_rl": 66,
+  "session_brief": "authoritative/RL66_HC7_K7MINUS_HEAVY_SIDE_ROOTED_K6_GATE_BRIEF.md",
+  "last_verified_frontier": "RL66 closeout candidate: U1-U8 certified (unchanged); U9 CONDITIONAL (only C65 on 7-connected graphs needed, plus F1 Thm 1.6 Level A); C66 OPEN, not falsified (tested members of families (i)-(iv); (ii) poor regime NOT ASSESSED; (iii) one-directional reduction); proved: P66a/P66b (conditional), F', P, S, K4r, E66, S66, B65-7. Red team 8 referees, 0 blocking (7 CONFIRMED, V6 ERROR summary-scope only, fixed).",
+  "completed_artifacts": [
+    "INCOMING_SNAPSHOT.md",
+    "authoritative_sha256.txt",
+    "RL66_RETRIEVAL_LOG.md",
+    "RL66_PAYOFF_CHAIN.md",
+    "RL66_FALSIFICATION_TEST.md",
+    "RL66_C66_ASSESSMENT.md",
+    "RL66_CHECKPOINT_SUMMARY.md",
+    "RL66_RED_TEAM_RECORD.md",
+    "CLOSEOUT_STATE.md",
+    "RL66_REPORT.md",
+    "FAILURE_AND_LESSON_LEDGER_APPENDIX.md",
+    "RL66_CLOSEOUT_VERIFICATION_REPORT.md",
+    "RL66_SESSION_STATE_AND_RL67_KICKOFF.md",
+    "resume.json",
+    "README.md"
+  ],
+  "unpromoted_or_uncovered": [
+    "C66 CANDIDATE / NOT ESTABLISHED (open; first missing dependency equivalent to C66, at least C65-degree-5 strength by S66)",
+    "family (ii) all-components-poor regime NOT ASSESSED",
+    "family (iii): cores of surplus >= 12 not excluded",
+    "Lemma P residual case |T| = 4 not excluded",
+    "H54- (K7^- analogue of F1 Lemma 5.4) NOT PROMOTED",
+    "H67 NOT ASSESSED (RL67 candidate)",
+    "Thm 2.9-outcome extension: pointer only (r = 2, 3 out of scope)",
+    "r>=2 sub-cases and downstream loci open; C65 CONJECTURE; U9 conditional",
+    "RL65 orientation note (uniform-threshold H65) still NOT PROMOTED"
+  ],
+  "next_exact_operation": "commit RL66 transition (parent a9f89de), push to claude/wonderful-ritchie-3fs24c, lease-check main == a9f89de, fast-forward main (user-approved 'merge'), read back; then RL67 kickoff from the repository",
+  "do_not_recompute": [
+    "start gate (BASE_HEAD a9f89de verified twice)",
+    "payoff identity and P66",
+    "falsification families (i)-(iv) and their models",
+    "Lemmas F', P, S, K4r, E66, S66, B65-7 precision"
+  ],
+  "failure_lesson_ids": [
+    "FL-001..FL-067"
+  ],
+  "recovery_mode": "C66 open and sharpened; bounded successor H67 (r=1 minimality transfer) recommended",
+  "changed_input_or_mechanism": "replace heavy-side rooted K6 target by minimality on the minor S1+z' (which already has C65 density); needs F1 4-bilight definition",
+  "next_task_bounds": {
+    "external_retrievals_max": 1,
+    "math_computation": 0,
+    "census": 0,
+    "candidates": 1
+  },
+  "stop_and_repair_active": false,
+  "rl70_audit_owed": true,
+  "red_team": "wf_5cc3f33d-0c9: 8 referees, 0 blocking (7 CONFIRMED; V6 ERROR on summary scope only); all issues applied",
+  "bounds_used_rl66": {
+    "retrievals": "0/2",
+    "computation": 0,
+    "census": 0,
+    "candidates": 1
+  }
+}

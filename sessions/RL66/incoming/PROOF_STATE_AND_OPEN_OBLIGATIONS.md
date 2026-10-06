@@ -1,21 +1,10 @@
 # HC7 proof state and open obligations
 
-Status: CURRENT after RL66.
+Status: CURRENT after RL65.
 Root: HC7 only — every finite simple graph G with chi(G)=7 has h(G)>=7.
 Counterexample target: a rigorously verified finite simple graph with chi(G)=7 and h(G)<=6.
 
-## RL66 classification summary
-
-| Item | RL66 result |
-|---|---|
-| Correction/demotion | NONE |
-| Inherited mathematical theorem-classification changes | NONE |
-| Promoted source-status changes | NONE (no retrieval) |
-| New certified universal item | NONE |
-| C66 | OPEN: CANDIDATE / NOT ESTABLISHED, not falsified. Strength: C66 ⇒ C65 for 5-connected graphs with a degree-5 vertex (S66) |
-| New proved items | P66a (conditional on C66) and P66b (conditional on C66 and H54⁻); Step 0 identity; Lemmas F′, P, S, K4r; E66; S66; the falsification record for families (i)–(iv); precision B65⁷ (RL66 records) |
-
-## RL65 classification summary (carried)
+## RL65 classification summary
 
 | Item | RL65 result |
 |---|---|
@@ -59,7 +48,7 @@ Notes on U8:
 
 | ID | Statement | Status |
 |---|---|---|
-| U9 | Every HC7 counterexample (indeed every graph with chi >= 7) contains K7^- as a minor. | CONDITIONAL via B65 (RL65_B65_BRIDGE.md). It needs C65 = F1 Conjecture 1.5 (CONJECTURE / NOT ESTABLISHED) and F1 Thm 1.6 at Level A statement (unrefereed; AI-assisted proofs disclosed; proof unread; internally uses Level-B Mader 7-connectivity). **RL66 precision (B65⁷):** B65 applies C65 only to 7-connected graphs, so C65⁷ (every 7-connected graph with n >= 8 vertices and at least 4n − 2 edges has a K7^- minor; implied by C65) suffices. U9 ⇒ U8; strictness is not claimed. |
+| U9 | Every HC7 counterexample (indeed every graph with chi >= 7) contains K7^- as a minor. | CONDITIONAL via B65 (RL65_B65_BRIDGE.md). It needs C65 = F1 Conjecture 1.5 (CONJECTURE / NOT ESTABLISHED) and F1 Thm 1.6 at Level A statement (unrefereed; AI-assisted proofs disclosed; proof unread; internally uses Level-B Mader 7-connectivity). U9 ⇒ U8; strictness is not claimed. |
 
 ## Source-gated frontier items (NOT consumed)
 
@@ -74,7 +63,7 @@ Notes on U8:
 
 | Target | Status | Documented obstruction |
 |---|---|---|
-| K7^- minor in every chi>=7 graph (U9) | OPEN (U9 CONDITIONAL) | It suffices to prove C65 = F1 Conjecture 1.5: every 5-connected graph with n>=6 and e>=4n−2 has a K7^- minor. The bridge B65 is proved (RL65), conditional on C65 and F1 Thm 1.6 at Level A. No falsifier was found among the named families (RL65). The F1 proof interface is blocked at its first deficiency locus: T2.9⁻ is refuted by G0 (FL-066). The heavy-side repair C66 is OPEN and at least as strong as C65's degree-5 case (RL66, FL-067). The cheaper r = 1 route H67 (minimality on S1 + z') is RL67's candidate. Only C65⁷ is needed for U9. |
+| K7^- minor in every chi>=7 graph (U9) | OPEN (U9 CONDITIONAL) | It suffices to prove C65 = F1 Conjecture 1.5: every 5-connected graph with n>=6 and e>=4n−2 has a K7^- minor. The bridge B65 is proved (RL65), conditional on C65 and F1 Thm 1.6 at Level A. No falsifier was found among the named families (RL65). The F1 proof interface is blocked at its first deficiency locus: T2.9⁻ is refuted by G0 (FL-066). The named heavy-side repair is C66 (RL66). |
 | K7 (HC7) | OPEN | The density method is documented false. Two universal vertices over a 5-connected planar triangulation give 7-connected K7-minor-free graphs with 5n−15 edges. A non-density mechanism is needed. |
 
 ## Retained scoped results
@@ -96,22 +85,6 @@ These results keep their exact classifications:
   - T2.9⁻ (the K7^- analogue of F1 Thm 2.9 at the quite-heavy threshold): FALSE, by the explicit counterpattern G0. This is PROVED ANALYTIC and is a METHOD BARRIER at lemma level.
   - Lemma D: PROVED ANALYTIC.
   - NOT PROMOTED reading-level observations: the K7^- analogue of F1 Lemma 5.4; the expected failure of a uniform-threshold H65.
-- **RL66 results** (RL66 records):
-  - Step 0 counting identity: PROVED ANALYTIC.
-  - P66a (C66 ⇒ no K7^- -minor-free graph has a 5-separation with both sides 4-light, one side at ρ4 >= m+7 and the other at ρ4 >= 1): PROVED ANALYTIC, CONDITIONAL on C66.
-  - P66b (C66 + H54⁻ ⇒ the r = 1 both-quite-heavy sub-case cannot occur in a minimal (2.8⁻)-counterexample): PROVED ANALYTIC, CONDITIONAL on C66 and on the NOT PROMOTED H54⁻.
-  - Lemma F′ (τ(M)+1 disjoint full sets ⇒ K6↓5): PROVED ANALYTIC.
-  - Contraction formula and Lemma P (unique non-root neighbour): PROVED ANALYTIC.
-  - Lemma S (concentrated root contacts ⇒ ρ4 <= C(s,2)+s): PROVED ANALYTIC.
-  - Lemma K4r (three-rooted K4 in 3-connected graphs): PROVED ANALYTIC (textbook Menger/fan facts).
-  - E66 (K6↓5 ⟺ singleton-bag K7^- model in R + z'; C66 threshold = C65 density): PROVED ANALYTIC.
-  - S66 (C66 ⇒ C65 for 5-connected graphs with a degree-5 vertex): PROVED ANALYTIC.
-  - Precision B65⁷: PROVED ANALYTIC, CONDITIONAL exactly as B65.
-  - Falsification record, families (i)–(iv): PROVED ANALYTIC (elementary). No falsifier found in the tested members. The all-components-poor regime of family (ii) is NOT ASSESSED. Family (iii) reduces one-directionally to cores of larger surplus.
-  - C66: CANDIDATE / NOT ESTABLISHED (open, not falsified). First missing dependency: a rooted extremal theorem forcing K6↓5 in the reduced core (RL66_C66_ASSESSMENT.md §3).
-  - NOT ASSESSED orientation notes:
-    - H67, now RL67's candidate;
-    - the Thm 2.9-outcome extension of the minimality mechanism (r <= ρ(W) − 8). It also needs H54⁻ and a proper minor, adds nothing beyond H67 at r = 1, and its r = 2, 3 content is a pointer only.
 
 ## Route state (RL63 portfolio with RL64 updates)
 
@@ -121,7 +94,7 @@ Full RL63 table: RL63_ROUTE_PORTFOLIO_AND_KILL_LIST.md. The RL64 updates below o
 |---|---|
 | KEEP | R01 (universal baseline, now U1–U8) |
 | RESOLVED | R02 two-edge-deficient frontier (admitted RL64 → U8) |
-| ACTIVE (RL67) | R21-K7^-: the K7^- density candidate C65 = F1 Conjecture 1.5 (only C65⁷ is needed for U9). The F1 interface is blocked at T2.9⁻ (FL-066). The heavy-side repair C66 is open at C65-degree-5 strength (FL-067). RL67 assesses the r = 1 minimality transfer H67. |
+| ACTIVE (RL66) | R21-K7^-: the K7^- density candidate C65 = F1 Conjecture 1.5. The F1 interface is blocked at T2.9⁻ (FL-066). RL66 assesses the heavy-side repair C66. |
 | SOURCE-GATE | R04 7-connectivity (rank 1 source gate; attribution discrepancy); R03 Mader extremal / delta in {7,8,9} (de-prioritised: unused by the frontier); R05 Gallai order bound (low) |
 | KILL/RETIRE at current scope | R06 degree-seven-existence target; R07–R09 early routes; R10–R13 m=1, m=2, m=3 terminal-core and fixed-triple Kempe chains; R16 K4,4 minimum-model (also superseded by U8); R17 spanning K4,4 colouring (FL-062) |
 | SUPERSEDED | R18 non-colouring uses of K4,4 (superseded by U8 as near-K7 structure) |
@@ -129,7 +102,7 @@ Full RL63 table: RL63_ROUTE_PORTFOLIO_AND_KILL_LIST.md. The RL64 updates below o
 | SUSPEND | R19 elementary 7-connectivity proof; R21-K7 (K7 beyond K7^-: density documented false, no scoped mechanism) |
 | COMPUTE-GATE | R20 certified counterexample search (no exhaustive domain; current tooling NONE) |
 
-**Frontier rule (FL-064, extended by FL-065, FL-066 and FL-067).** No route may start or reopen without stating its position relative to:
+**Frontier rule (FL-064, extended by FL-065 and FL-066).** No route may start or reopen without stating its position relative to:
 - S1, S2 and S4/U8;
 - the K7^- target (C65);
 - the K7 density-failure examples.
@@ -138,13 +111,8 @@ It must also show that it does not re-derive frontier facts at lower strength.
 
 ## Open obligations
 
-- **O1 (RL67).** Assess H67: in the r = 1 configuration (4-light sides, ρ4(S1) >= m+7, S2 quite heavy with ρ4 = 1, S1 ∪ S2 4-bilight and K7^- -minor-free), S1 + z' is 4-bilight. If H67 holds and G' precedes G in F1's minimality order (to be checked at R1), minimality would close the r = 1 sub-case of the K7^- analogue of F1 Lemma 5.7 without C66. That payoff would be conditional on the NOT PROMOTED H54⁻ (K7^- analogue of F1 Lemma 5.4). It needs F1's 4-bilight definition, to be retrieved at RL67 R1. **Drift rule:** if H67 is assessed and fails or stays open, neither the RL68 nor the RL69 recommendation may extend the F1-interface lemma chain before the RL70 audit prices it.
-- **O1a (unscheduled; FL-067 retry condition).** C66 itself. It is open, and at least as strong as C65 for 5-connected graphs with a degree-5 vertex (S66).
-- **O1a′ (unscheduled; low priority).** The all-components-poor regime of falsification family (ii) (RL66_FALSIFICATION_TEST.md).
-- **O1b (unscheduled).** The r >= 2 sub-cases of that Lemma 5.7 analogue. Each needs one of:
-  - T2.9⁻ at threshold ρ4 >= r on the lighter side;
-  - C66 at threshold m+8−r on the heavier side;
-  - for r = 2, 3 only, the NOT ASSESSED minimality extension through F1 Thm 2.9 outcomes (RL66_C66_ASSESSMENT.md §4). It is a pointer only and needs an authorizing brief.
+- **O1 (RL66).** Assess C66 (= RL65's H65): every 4-light 5-rooted graph R with ρ4(R) >= m(R)+7 contains K6↓5 as a rooted minor. With Lemma D it would close the r = 1 both-quite-heavy sub-case of the K7^- analogue of F1 Lemma 5.7. That payoff is conditional on the NOT PROMOTED Lemma 5.4 analogue.
+- **O1b (unscheduled).** The r >= 2 sub-cases of that Lemma 5.7 analogue. Each needs either T2.9⁻ at threshold ρ4 >= r on the lighter side, or C66 at threshold m+8−r on the heavier side.
 - **O1c (unscheduled; downstream).** The K7^- analogues of:
   - F1 Lemma 5.9 (reading level, NOT PROMOTED: it would need C66, a linkage variant of Lemma D, and a 5-path analogue, given a Lemma 5.7 analogue);
   - Lemmas 6.1/6.2;
@@ -156,6 +124,6 @@ It must also show that it does not re-derive frontier facts at lower strength.
 - **O3.** A non-density mechanism for K7^- → K7. Unscoped. The 2-apex examples rule out density (re-proved in RL65).
 - **O4.** HC7 itself: open. Disproof capability: none. The RL70 periodic audit is still owed.
 
-FL-001 through FL-067 and every retry condition remain in force.
+FL-001 through FL-066 and every retry condition remain in force.
 
 Programme ACTIVE.
