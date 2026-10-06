@@ -2,7 +2,7 @@
 
 Status: CURRENT PROGRAMME AUTHORITY.
 Installed by explicit non-RL target amendment on 2026-10-05.
-Incoming numbered session: RL70.
+Incoming numbered session: RL69.
 Programme ACTIVE.
 
 ## 1. Exact root theorem and negative target
@@ -351,26 +351,4 @@ Corrections/demotions: NONE. Theorem-classification changes: NONE. Source-status
 Successor: RL69 HC7-K7MINUS-SAFE-CONTRACTION-GATE, one bounded mechanism gate on the equivalent safe-edge form. FL-068 drift rule still binds. Runner-up K6-minor augmentation loses because its density entry point naturally needs the unavailable Level-C Mader K6 extremal theorem.
 
 RL70 follows RL69 and is the mandatory periodic audit. It must price the F1-interface chain.
-Programme ACTIVE.
-
-
-## 16. RL69 safe-contraction outcome and explicit RL70 frontier-push amendment
-
-RL69 assessed C69, the safe-contraction form equivalent to C68. C69/C68 remain OPEN / CANDIDATE / NOT ESTABLISHED; no falsifier was found.
-
-**New proved analytic structure.**
-- L69-A: in a 7-connected graph of order at least 8, any K6^- subgraph forces K7^-.
-- Hence K7^- -minor-free neighbourhoods contain no K5^- subgraph; if every edge has codegree at least four, each neighbourhood has minimum degree at least four and is K5^- -subgraph-free.
-- L69-B: every 7-separator S in a 7-connected K7^- -minor-free graph has G[S] K5-minor-free.
-- Therefore every such separator has at most 17 internal edges.
-
-Q10 and K_{2×5} refute the corresponding relaxed statements, so the forbidden-minor hypothesis is genuinely used.
-
-The remaining safe-contraction mechanism still needs to force a low-codegree edge and escape the R68 7-separator trap. The immediate continuation becomes separation/linkage/rooted-minor architecture, so RL69 stopped at the FL-068 boundary. U1-U8 are unchanged; U9 remains conditional.
-
-Corrections/demotions: NONE. Theorem-classification changes: NONE. Source-status changes: NONE. FL-070 appended. Retrievals 0; computation 0; census 0.
-
-**Explicit user-authorised successor amendment.** The direct user instruction dated 2026-10-06 waives the scheduled RL70 tenth-session audit and replaces it with a single all-out frontier-push session. For RL70 only, the instruction suspends the drift rule, one-candidate rule, retrieval/computation/census bounds, RL64 admission levels as consumption barriers, prohibited-route list, checkpoint/work-unit cadence, and atomic-closeout ceremony. Honest result labels and saving/pushing the work remain mandatory. RL71 decides whether to reinstate the deferred audit or another conveyor mode.
-
-The exact authorisation is copied verbatim into authoritative/START_HERE.md and authoritative/RL70_FRONTIER_PUSH_BRIEF.md.
 Programme ACTIVE.

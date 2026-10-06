@@ -1,21 +1,8 @@
 # HC7 proof state and open obligations
 
-Status: CURRENT after RL69.
+Status: CURRENT after RL68.
 Root: HC7 only — every finite simple graph G with chi(G)=7 has h(G)>=7.
 Counterexample target: a rigorously verified finite simple graph with chi(G)=7 and h(G)<=6.
-
-## RL69 classification summary
-
-| Item | RL69 result |
-|---|---|
-| Correction/demotion | NONE |
-| Theorem/source changes | NONE |
-| New certified universal item | NONE |
-| C69/C68 | OPEN / CANDIDATE / NOT ESTABLISHED; no falsifier |
-| New proved analytic | L69-A K6^- extension; neighbourhood K5^- exclusion; L69-B 7-separator K5-minor exclusion; 17-edge separator corollary; relaxed Q10/K_{2×5} falsification record |
-| Drift boundary | REACHED in RL69; no forbidden F1-interface extension consumed |
-| Frontier | U1-U8 unchanged; U9 CONDITIONAL |
-| Successor control | direct user instruction waives the RL70 audit and authorises RL70 all-out frontier push; RL71 decides whether to reinstate the audit |
 
 ## RL68 classification summary
 
@@ -172,7 +159,7 @@ Full RL63 table: RL63_ROUTE_PORTFOLIO_AND_KILL_LIST.md. The RL64 updates below o
 |---|---|
 | KEEP | R01 (universal baseline, now U1–U8) |
 | RESOLVED | R02 two-edge-deficient frontier (admitted RL64 → U8) |
-| OPEN MODE (RL70) | Direct user-authorised frontier push. C68/C69 remain open; L69-A/L69-B are available. The old F1-interface hold is suspended for RL70 only. |
+| ACTIVE (RL69) | R21-K7^-: C68 remains open after RL68; RL69 tests the equivalent safe-contraction mechanism C69. The F1-interface chain remains HELD until RL70. |
 | SOURCE-GATE | R04 7-connectivity (rank 1 source gate; attribution discrepancy); R03 Mader extremal / delta in {7,8,9} (de-prioritised: unused by the frontier); R05 Gallai order bound (low) |
 | KILL/RETIRE at current scope | R06 degree-seven-existence target; R07–R09 early routes; R10–R13 m=1, m=2, m=3 terminal-core and fixed-triple Kempe chains; R16 K4,4 minimum-model (also superseded by U8); R17 spanning K4,4 colouring (FL-062) |
 | SUPERSEDED | R18 non-colouring uses of K4,4 (superseded by U8 as near-K7 structure) |
@@ -189,7 +176,7 @@ It must also show that it does not re-derive frontier facts at lower strength.
 
 ## Open obligations
 
-- **O1 (RL70 open mode).** Push the HC7 frontier under the explicit RL70 authorisation. C68/C69 remain open; L69-A/L69-B are certified inputs. Any sub-target must be a genuine piece of HC7 or minimal-counterexample theory.
+- **O1 (RL69).** Assess equivalent safe-contraction C69 from RL68. It is a mechanism gate, not a new narrowing. The FL-068 drift rule still binds.
 - **O1d (unscheduled; drift rule; FL-068 retry condition).** H67 and its minimality-assisted form Var (equivalent to closing r = 1 under H54⁻). The first missing dependency is a K7^- -forcing or reduction lemma for the root-split two-dense-halves configuration. Held until the RL70 audit.
 - **O1a (unscheduled; FL-067 retry condition).** C66 itself. It is open, and at least as strong as C65 for 5-connected graphs with a degree-5 vertex (S66).
 - **O1a′ (unscheduled; low priority).** The all-components-poor regime of falsification family (ii) (RL66_FALSIFICATION_TEST.md).
@@ -206,8 +193,8 @@ It must also show that it does not re-derive frontier facts at lower strength.
   These are not assessed.
 - **O2.** A Level-A gate for Mader 7-connectivity (S1). It needs an inspectable original and a resolution of the 174/175 attribution discrepancy (FL-063). It still has no consumer.
 - **O3.** A non-density mechanism for K7^- → K7. Unscoped. The 2-apex examples rule out density (re-proved in RL65).
-- **O4.** HC7 itself: open. The previously scheduled RL70 periodic audit is explicitly waived for RL70 by direct user instruction; RL71 decides whether to reinstate it.
+- **O4.** HC7 itself: open. Disproof capability: none. The RL70 periodic audit is still owed (after RL69); it must price the F1-interface chain (FL-068).
 
-FL-001 through FL-070 are preserved. Historical retry conditions remain recorded. For RL70 only, the direct user instruction suspends the drift rule, admission barriers, prohibited-route list, one-candidate rule and old bounds; RL71 decides what process resumes afterward.
+FL-001 through FL-069 and every retry condition remain in force. The drift rule (FL-068) binds RL69. RL70 is the mandatory next audit.
 
 Programme ACTIVE.

@@ -1,0 +1,44 @@
+{
+  "format": "rl-connector-resume-v1",
+  "base_head": "f713b64e9eebaf89bc07475e05d39f1229908e94",
+  "authoritative_tree": "64cb853250e23a2691830415401e7fa8dfe71d13",
+  "incoming_rl": 69,
+  "session_brief": "authoritative/RL69_HC7_K7MINUS_SAFE_CONTRACTION_GATE_BRIEF.md",
+  "last_verified_frontier": "C69/C68 open; L69-A, L69-B and 17-edge separator corollary proved analytic; FL-068 boundary reached; U1-U8 unchanged; U9 conditional.",
+  "completed_artifacts": [
+    "RL69_C69_ASSESSMENT.md",
+    "RL69_REPORT.md",
+    "RL69_FAILURE_AND_LESSON_LEDGER_APPENDIX.md",
+    "RL69_RED_TEAM_RECORD.md",
+    "RL69_CLOSEOUT_VERIFICATION_REPORT.md"
+  ],
+  "unpromoted_or_uncovered": [
+    "C69",
+    "C68",
+    "U9"
+  ],
+  "next_exact_operation": "Promote one atomic RL69 transition to main, then read back sessions/RL69 and RL70 START_HERE.",
+  "do_not_recompute": [
+    "RL68 contraction arithmetic",
+    "RL68 named-family tests",
+    "L69-A",
+    "L69-B",
+    "17-edge separator corollary"
+  ],
+  "failure_lesson_ids": [
+    "FL-064",
+    "FL-065",
+    "FL-066",
+    "FL-067",
+    "FL-068",
+    "FL-069",
+    "FL-070"
+  ],
+  "recovery_mode": "user-authorised RL70 all-out frontier push",
+  "changed_input_or_mechanism": "RL70 process amendment from direct user instruction dated 2026-10-06",
+  "next_task_bounds": "RL70 old bounds suspended by direct user instruction; honest labels and save-work rules remain.",
+  "retry_conditions": [
+    "RL70 may cross prior drift/prohibited-route boundaries under explicit authorization."
+  ],
+  "stop_and_repair_active": false
+}

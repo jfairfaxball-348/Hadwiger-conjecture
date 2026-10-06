@@ -1,18 +1,8 @@
-# RL70 authoritative state — all-out HC7 frontier push
+# RL69 session state and RL70 kickoff
 
-Status: READY / NOT STARTED.
-Predecessor: RL69 CLOSED/FROZEN under sessions/RL69/.
-Sole current brief: RL70_FRONTIER_PUSH_BRIEF.md.
-State: RL70_STATE.md.
-Proof state: PROOF_STATE_AND_OPEN_OBLIGATIONS.md.
-Ledger: FAILURE_AND_LESSON_LEDGER.md FL-001..FL-070.
-Root: HC7 only.
+RL69 closes with C69/C68 OPEN and with L69-A/L69-B plus the 17-edge separator corollary proved analytically. The FL-068 boundary was reached.
 
-RL69 outcome: C69, equivalent to C68, remains OPEN / CANDIDATE / NOT ESTABLISHED; no falsifier. RL69 proved L69-A (K6^- extension), the neighbourhood K5^- exclusion, L69-B (every 7-separator induces a K5-minor-free graph in a 7-connected K7^- -minor-free graph), and the 17-edge separator corollary. Q10 and K_{2×5} refute the relaxed forms. RL69 reached the FL-068 drift boundary without crossing it.
-
-Frontier: U1-U8 certified. U9 remains CONDITIONAL at the RL69 close. C68/C69 remain open. Corrections/demotions: NONE. Source-status changes: NONE.
-
-The previous requirement that RL70 be the tenth-session audit is superseded for RL70 by the following direct user instruction, copied verbatim as required. RL71 decides whether to reinstate the deferred audit or another conveyor mode.
+RL70 is not the previously scheduled audit. The direct user instruction appended to RL69 explicitly replaces it with the all-out frontier-push mode. The exact authorisation is reproduced below for portability.
 
 === DIRECT USER INSTRUCTION — RL70 PIVOT (dated 2026-10-06). Appended to the RL69 kickoff. ===
 
