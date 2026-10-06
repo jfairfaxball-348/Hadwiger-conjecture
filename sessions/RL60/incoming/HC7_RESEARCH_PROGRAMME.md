@@ -2,7 +2,7 @@
 
 Status: CURRENT PROGRAMME AUTHORITY.
 Installed by explicit non-RL target amendment on 2026-10-05.
-Incoming numbered session: RL61.
+Incoming numbered session: RL60.
 Programme ACTIVE.
 
 ## 1. Exact root theorem and negative target
@@ -73,7 +73,7 @@ There are four principal workstreams. They are ordered by coverage, not by local
 
 **Inherited bridge.** The elementary minor-minimal reduction to full-C7 criticality.
 
-**First known gap.** RL60 suspends immediate replay of the quotient side-palette lift. In the spanning-union subcase U=V(G), RL61 tests one direct original-graph candidate: whether the chromatic numbers of the two K4,4 side-unions always sum to at most six. The residual delta(G)>=8 branch remains explicit.
+**First known gap.** RL59 isolates the spanning-union subcase U=V(G) and obtains a certified 6-colorable proper minor by contracting all eight branch sets. The unresolved lift is HC7-K44-SPANNING-QUOTIENT-SIDE-PALETTE-LIFT: convert some quotient 6-coloring into disjoint side palettes sufficient to color the original A- and B-side unions. The residual delta(G)>=8 branch remains explicit.
 
 **Falsification condition.** A claimed universal structural consequence lacks a repository proof/source-status record, loses a hypothesis, or admits a baseline-compatible counterpattern.
 
@@ -87,7 +87,7 @@ There are four principal workstreams. They are ordered by coverage, not by local
 
 **Inherited bridge.** W1 universal structure.
 
-**First known gap.** RL57 did not establish the proposed cap |N_G(v) intersect U|<=7; RL58 did not establish the direct dense-union K7 payoff; RL59 did not establish the spanning quotient side-palette lift; and RL60 suspended immediate replay of that lift because RL55-RL59 narrowed no graph-level residual. Degree-seven neighborhood classification remains downstream of the unresolved universal delta(G)>=8 branch.
+**First known gap.** RL57 did not establish the proposed cap |N_G(v) intersect U|<=7; RL58 did not establish the direct dense-union K7 payoff; and RL59 did not establish the spanning quotient side-palette lift. Degree-seven neighborhood classification remains downstream of the unresolved universal delta(G)>=8 branch.
 
 **Falsification condition.** An allowed degree/neighborhood branch remains outside the proposed partition, or an asserted branch reduction is only heuristic/source-memory.
 
@@ -115,7 +115,7 @@ There are four principal workstreams. They are ordered by coverage, not by local
 
 **Inherited bridge.** The explicit exhaustive partition produced by W2.
 
-**First known gap.** RL59 did not eliminate the spanning-union U=V(G) subcase. RL60 suspended immediate quotient-palette replay and selected one changed mechanism: direct control of the original side-union chromatic sum. Outside that subcase the broader delta(G)>=8 residual and the earlier model-union escape/augmentation obligations remain open.
+**First known gap.** RL59 did not eliminate the spanning-union U=V(G) subcase. The immediate unresolved bridge there is HC7-K44-SPANNING-QUOTIENT-SIDE-PALETTE-LIFT. Outside that subcase the broader delta(G)>=8 residual and the earlier model-union escape/augmentation obligations remain open.
 
 **Falsification condition.** A proposed residual theorem fails on an allowed branch or depends on a structural result not proved/source-verified for all residual graphs.
 
@@ -146,24 +146,32 @@ RL51-P01 proves only the candidate's conditional payoff at that retained scope.
 
 The candidate is one possible W3 subroute. It is not automatically the next principal task, because HC7 first needs the root-to-local coverage chain audited. The old RL52 brief selecting immediate proof/falsification of this dichotomy is not current authority.
 
-## 7. RL60 audit outcome and RL61 successor
+## 7. RL59 outcome and mandatory RL60 audit
 
-RL60 audited exactly RL50-RL59 plus the explicit HC7 target amendment between RL51 and RL52.
+RL59 completed exactly one bounded HC7 K4,4 spanning dense-model critical repartition/augmentation assessment in the subcase U=V(G).
 
-The audit found no mathematical correction or demotion. SRC-0025 remains checked_primary at theorem-statement/hypothesis level; the full subscription proof has not been independently reconstructed. RL55-P01, RL56-P01, RL56-C01, RL57-C01, RL58-C01 and RL59-C01 retain exactly their recorded classifications.
+RL59-C01 is the spanning quotient side-palette lift. Contract each of the eight connected branch sets of the spanning minimum-total-size K4,4 model to obtain an eight-vertex proper minor Q. The contraction is proper because delta(G)>=8 in a finite simple graph implies |V(G)|>=9 while the eight nonempty branch sets partition V(G). Proper-minor criticality therefore certifies that Q is 6-colorable.
 
-The certified HC7-universal frontier was genuinely advanced in this window only by RL52 and RL54: every hypothetical minor-minimal HC7 counterexample is full-C7 critical, has delta(G)>=7, and contains a K4,4 minor. RL55 added a valid minimum-model interface theorem but RL55-RL59 excluded no further hypothetical HC7 counterexample and reduced no further HC7-universal obligation.
+Because Q contains the spanning K4,4, every proper coloring of Q uses disjoint color palettes on the four A-side quotient vertices and the four B-side quotient vertices. RL59-C01 asks whether some such quotient 6-coloring can be chosen so that its A-side palette properly colors G[A_1 union ... union A_4] and its B-side palette properly colors G[B_1 union ... union B_4]. If so, the two disjoint side colorings combine to a 6-coloring of G, contradicting chi(G)=7.
 
-Collatz/repetition risk for unchanged continuation of the RL55-RL59 chain is HIGH. RL59's use of proper-minor 6-colorability was a genuine changed input, but the remaining quotient-palette lift is still an extension/uncontraction interface. Immediate replay of HC7-K44-SPANNING-QUOTIENT-SIDE-PALETTE-LIFT is therefore suspended.
+The conditional payoff is proved, but the universal lift is not. Proper-minor 6-colorability controls the contracted representatives and does not by itself bound the chromatic complexity inside the original side-unions. RL55-P01 controls indispensable opposite-side attachment support, not internal side-union chromatic number. No theorem in current authority supplies the required lift.
 
-The audit verdict is PIVOT within the K4,4 route: retain SRC-0025 and RL55-P01, but replace the quotient-palette mechanism by exactly one direct original-graph coloring gate.
+RL59-C01 is NOT ESTABLISHED / NOT PROMOTED and was not falsified by a certified-domain example.
 
-RL61 assesses the following candidate on the exact RL59 spanning domain. For every hypothetical minor-minimal HC7 counterexample G on the delta(G)>=8 residual and every minimum-total-size spanning K4,4 model M=(A_1,...,A_4;B_1,...,B_4), with A=A_1 union ... union A_4 and B=B_1 union ... union B_4,
+The fixed RL57 three-vertex-path stress test does not falsify RL59-C01: its branch-set quotient is K4,4 and its two side-unions are each 2-colorable, so a sufficiently large disjoint palette choice can lift there. Its role remains only to block deductions based on RL55-P01/basic interface/dense degree alone.
 
-    chi(G[A]) + chi(G[B]) <= 6.
+U=V(G) eliminated: NO.
+delta(G)>=8 eliminated: NO.
+HC7-universal graph residual genuinely narrowed: NO.
+HC7-universal obligation genuinely reduced: NO.
+Correction/demotion: NONE.
+Inherited mathematical theorem classification changes: NONE.
+Source-status changes: NONE.
 
-If established, disjoint optimal color palettes on A and B give a proper coloring of G with at most six colors, contradicting chi(G)=7. The first missing dependency is a genuine HC7-critical/minimum-model argument controlling the chromatic numbers of the original side-unions. RL61 performs no quotient-palette lifting.
+First missing dependency: HC7-K44-SPANNING-QUOTIENT-SIDE-PALETTE-LIFT.
 
-If RL61 cannot prove this direct original-graph control without reopening a recorded failed interface, it must stop and suspend the spanning K4,4 coloring route rather than rename the lift.
+Because RL60 is divisible by ten, the standing audit policy now takes precedence over immediate continuation of this candidate. RL60 must perform the mandatory progress/correction audit of RL50-RL59 and the intervening explicit HC7 target amendment. It must assess present HC7 applicability, load-bearing proof/source scopes, Collatz risk, corrections/demotions, and whether the quotient side-palette bridge is a justified changed mechanism or another renamed unresolved global interface. It must end with exactly one bounded RL61 successor selected from the audited HC7 root dependencies.
+
+No new theorem discovery is authorized during RL60 before the audit is complete.
 
 Programme ACTIVE.

@@ -1,54 +1,59 @@
-# RL60 authoritative state — HC7 programme
+# RL61 authoritative state — HC7 programme
 
 Status: READY / NOT STARTED.
-Predecessor: RL59 CLOSED/FROZEN under sessions/RL59/.
-Sole current brief: RL60_PROGRESS_AND_CORRECTION_AUDIT_BRIEF.md.
+Predecessor: RL60 CLOSED/FROZEN under sessions/RL60/.
+Sole current brief: RL61_HC7_K44_SPANNING_SIDE_CHROMATIC_SUM_GATE_BRIEF.md.
 Durable programme: HC7_RESEARCH_PROGRAMME.md.
 Root: HC7 only.
 
-## RL59 outcome
+## RL60 audit outcome
 
-RL59 assessed exactly one HC7-critical spanning K4,4 candidate in the subcase U=V(G).
+RL60 audited exactly RL50-RL59 plus the explicit HC7 programme-target amendment between RL51 and RL52.
 
-RL59-C01 is the spanning quotient side-palette lift. Contracting all eight branch sets gives an eight-vertex proper minor Q, hence Q is 6-colorable by minor-minimal HC7 criticality. Because Q contains K4,4, the colors appearing on its A-side and B-side quotient vertices form disjoint palettes. If some quotient 6-coloring always supplied palettes sufficient to color the corresponding original side-unions, the two side colorings would combine to a 6-coloring of G.
-
-That conditional payoff is proved, but the universal lift is not. Current authority has no theorem transferring the contracted palette sizes back to the chromatic requirements of the original side-unions.
-
-RL59-C01 is NOT ESTABLISHED / NOT PROMOTED and not certified-domain falsified.
-
-The fixed RL57 stress-test pattern does not falsify RL59-C01; its quotient is K4,4 and both side-unions are 2-colorable. It remains a method barrier only against steps using RL55-P01/basic model incidence/dense degree without genuine HC7 criticality.
-
-U=V(G) eliminated: NO.
-delta(G)>=8 eliminated: NO.
-HC7-universal graph residual genuinely narrowed: NO.
-HC7-universal obligation genuinely reduced: NO.
-
-First missing dependency: HC7-K44-SPANNING-QUOTIENT-SIDE-PALETTE-LIFT.
-
-Correction/demotion: NONE.
+Mathematical correction/demotion: NONE.
 Inherited mathematical theorem classification changes: NONE.
-Source-status changes: NONE.
+Source-status changes in RL60: NONE.
 
-## Preserved inherited state
+The audited HC7-universal frontier genuinely advanced in this window only through RL52 and RL54:
+- every hypothetical minor-minimal HC7 counterexample is full-C7 critical and has delta(G)>=7;
+- every such counterexample contains a K4,4 minor by SRC-0025 at checked_primary theorem-statement/hypothesis level.
 
-SRC-0025 remains checked_primary at theorem-statement/hypothesis level; the full subscription proof has not been independently reconstructed.
+The full SRC-0025 subscription proof has not been independently reconstructed.
 
-RL55-P01 remains proved analytic mathematics exactly at minimum-model scope.
-RL56-P01 remains only a conditional double-apex payoff and RL56-C01 remains NOT ESTABLISHED.
-RL57-C01 remains NOT ESTABLISHED / NOT PROMOTED.
-RL58-C01 remains NOT ESTABLISHED / NOT PROMOTED and not certified-domain falsified.
-RL59-C01 remains NOT ESTABLISHED / NOT PROMOTED and not certified-domain falsified.
+RL55-P01 remains proved analytic mathematics exactly at minimum-total-size K4,4-model scope.
+RL56-P01 remains conditional only; RL56-C01 remains NOT ESTABLISHED.
+RL57-C01, RL58-C01 and RL59-C01 remain NOT ESTABLISHED / NOT PROMOTED; RL58-C01 and RL59-C01 are not certified-domain falsified.
 
-FL-043 through FL-060 and their retry conditions remain in force. The anti-Collatz suspensions from RL40 and RL50 remain binding.
+RL55-RL59 did not further narrow the graph-level HC7 residual and reduced no further HC7-universal obligation.
 
-## RL60 task
+Collatz/repetition risk for unchanged continuation of RL55-RL59 is HIGH.
 
-RL60 is divisible by ten and is therefore the mandatory progress/correction audit under docs/TENTH_SESSION_PROGRESS_AUDIT.md.
+Route verdict: PIVOT within the K4,4 route. Immediate replay of HC7-K44-SPANNING-QUOTIENT-SIDE-PALETTE-LIFT is suspended.
 
-Audit the ten preceding numbered session positions RL50 through RL59, plus the explicit non-RL HC7 programme-target amendment installed between RL51 and RL52 because it changes present applicability of the pre-pivot work.
+The consolidated failure ledger's missing FL-054 entry has been restored from the byte-identical current/frozen RL51 appendix. This is a provenance-packaging repair only.
 
-Do not begin a new theorem proof campaign during the audit. Recheck exact quantifiers, classifications, proof/source scopes, corrections, load-bearing dependencies, HC7 coverage, and Collatz risk. Determine whether any result actually reduced an HC7-universal obligation, whether any claim needs correction/demotion, and whether the RL59 quotient-palette bridge is a justified next interface or another renamed unsolved dependency.
+FL-043 through FL-061 and all retry conditions remain in force.
 
-End with exactly one bounded RL61 successor task chosen from the audited HC7 root dependencies, with quantifiers, independent root-facing sufficiency, provenance, falsification/stopping criteria, and computation/source bounds where relevant.
+## RL61 task
+
+RL61 assesses exactly one changed mechanism on the spanning subcase U=V(G).
+
+For every hypothetical minor-minimal HC7 counterexample G on the delta(G)>=8 residual and every minimum-total-size spanning K4,4 model
+
+    M=(A_1,A_2,A_3,A_4;B_1,B_2,B_3,B_4),
+
+define A=A_1 union ... union A_4 and B=B_1 union ... union B_4.
+
+Assess exactly:
+
+    chi(G[A]) + chi(G[B]) <= 6.
+
+If established, disjoint side palettes give a 6-coloring of G and contradict chi(G)=7.
+
+First missing dependency: a direct HC7-critical/minimum-model mechanism controlling the chromatic numbers of the original side-unions.
+
+Do not return to quotient-palette lifting, branch-set catalogs, RL57 degree counting, RL56 exterior-attachment inference, degree-seven/resource/Kempe/M3 work, broad literature search, graph census, or mathematical numerical computation.
+
+If no direct original-graph mechanism is established in the bounded task, stop and suspend the spanning K4,4 coloring route rather than rename the lift.
 
 Programme ACTIVE.

@@ -1,0 +1,73 @@
+{
+  "format": "rl-connector-resume-v1",
+  "base_head": "b169f486e4f536511345a876a364f54fee088644",
+  "authoritative_tree": "c5715167167509c7fae4f33adb9a957596916e4a",
+  "incoming_rl": 60,
+  "session_brief": "authoritative/RL60_PROGRESS_AND_CORRECTION_AUDIT_BRIEF.md",
+  "validated_authority_paths": [
+    "AGENTS.md",
+    "authoritative/START_HERE.md",
+    "authoritative/HC7_RESEARCH_PROGRAMME.md",
+    "authoritative/PROOF_STATE_AND_OPEN_OBLIGATIONS.md",
+    "authoritative/RL60_STATE.md",
+    "authoritative/RL60_PROGRESS_AND_CORRECTION_AUDIT_BRIEF.md",
+    "authoritative/FAILURE_AND_LESSON_LEDGER.md",
+    "authoritative/HC7_PROGRAMME_TARGET_AMENDMENT.md",
+    "docs/TENTH_SESSION_PROGRESS_AUDIT.md",
+    "docs/RESEARCH_RECOVERY_PROTOCOL.md"
+  ],
+  "last_verified_frontier": "RL60 audit complete: no mathematical demotion; RL52/RL54 genuine HC7 frontier gains; RL55-RL59 no graph-level narrowing; HIGH repetition risk; pivot from quotient palette lift to one direct side-chromatic-sum gate.",
+  "completed_artifacts": [
+    "SESSION_MATRIX.md",
+    "DEPENDENCY_SCOPE_AUDIT.md",
+    "COLLATZ_RISK_AND_VERDICT.md",
+    "CORRECTION_AND_DEMOTION_RECORD.md",
+    "AUDIT_REPORT.md",
+    "RL60_PROOF_STATE_AND_RESIDUAL_LEDGER.md",
+    "FAILURE_AND_LESSON_LEDGER_APPENDIX.md",
+    "PREPARED_RECOVERY_TASK.md",
+    "RL60_CLOSEOUT_VERIFICATION_REPORT.md"
+  ],
+  "unpromoted_or_uncovered": [
+    "HC7-DEGREE-SEVEN-EXISTENCE",
+    "delta(G)>=8 residual",
+    "RL56-C01",
+    "RL57-C01",
+    "RL58-C01",
+    "RL59-C01",
+    "HC7-K44-SPANNING-SIDE-CHROMATIC-SUM"
+  ],
+  "next_exact_operation": "Atomic RL60 promotion and remote readback.",
+  "do_not_recompute": [
+    "RL50-RL59 audit",
+    "FL-054 provenance identity check"
+  ],
+  "failure_lesson_ids": [
+    "FL-043",
+    "FL-044",
+    "FL-045",
+    "FL-046",
+    "FL-047",
+    "FL-048",
+    "FL-049",
+    "FL-050",
+    "FL-051",
+    "FL-052",
+    "FL-053",
+    "FL-054",
+    "FL-055",
+    "FL-056",
+    "FL-057",
+    "FL-058",
+    "FL-059",
+    "FL-060",
+    "FL-061"
+  ],
+  "recovery_mode": "pivot",
+  "changed_input_or_mechanism": "Remove quotient coloring entirely; target chromatic sum of original A/B side-unions.",
+  "next_task_bounds": "RL61: exactly one candidate; zero external source retrieval and zero mathematical numerical computation by default.",
+  "retry_conditions": [
+    "Do not replay quotient-palette lifting; suspend spanning K4,4 coloring route if direct side-chromatic control has no mechanism."
+  ],
+  "stop_and_repair_active": false
+}
