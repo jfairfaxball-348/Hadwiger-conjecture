@@ -1,0 +1,172 @@
+# AGENTS.md — binding rules for the formalisation project
+
+## Purpose and authority
+
+This repository formalises one paper in Lean 4. The repository, not conversation history
+or model memory, carries the project state.
+
+Authority order:
+
+1. direct user instruction;
+2. this file;
+3. `blueprint/BLUEPRINT.md`, `blueprint/SORRY_AXIOM_LEDGER.md`, `blueprint/PAPER_ISSUES.md`;
+4. the Lean sources as they build at HEAD;
+5. the other files under `blueprint/` and `docs/`;
+6. frozen history (`frozen-hc7-programme/`, `sessions/`, `Archive/`, `knowledge/`), as
+   history only;
+7. conversation or model memory, never.
+
+Where the blueprint and the build disagree, the build is the fact and the blueprint is a
+defect to repair before anything else.
+
+## Programme root
+
+By explicit user-authorised programme amendment dated 2026-10-07 (quoted in full in
+`START_HERE.md`), the sole root is:
+
+> Formalise in Lean 4, with Mathlib, the paper "A counterexample to Hadwiger's
+> conjecture" (OpenAI, 23 September 2026), ending in a `DONE` Lean theorem stating that
+> there are finite simple graphs of arbitrarily large order whose chromatic number
+> exceeds their Hadwiger number.
+
+The paper is pinned by URL, upstream commit and sha256 in `docs/PROVENANCE.md`. That
+pinned version is the object being formalised.
+
+The former root, HC7 (every finite simple graph with chromatic number 7 has a K7 minor),
+is **retired, not solved**. Nothing in this project bears on it.
+
+Do not change the root, or the pinned version of the paper, without explicit user
+authorisation.
+
+## Integrity rules
+
+These are the rules of the old programme, restated for Lean. They are not negotiable.
+
+### What counts as proved
+
+- A statement is `DONE` only when it compiles with no `sorry` anywhere beneath it **and**
+  `#print axioms` on it shows only `propext`, `Classical.choice` and `Quot.sound`.
+- Nothing else is called proved, established, verified or done. `STATED` means only that
+  a statement type-checks. `PROVED_MODULO` means a dependency is still open.
+- Evidence and sketches are never reported as proof. An informal argument, a proof
+  outline, a partially filled proof, a passing example, a `decide` on small cases, a
+  plausibility check, or "the paper says so" is reported as exactly that.
+- Never promote a special case to the general statement, a statement about one
+  definition to a statement about another, or `PROVED_MODULO` to `DONE`.
+
+### The ledger
+
+- Every `sorry`, `admit`, `axiom` and `native_decide` in the Lean sources is listed in
+  `blueprint/SORRY_AXIOM_LEDGER.md`. `scripts/check_ledger.py` enforces this.
+- An `axiom` or a `native_decide` may be introduced only with the user's explicit
+  approval. A declaration that depends on one is never `DONE`.
+- Do not hide an obligation: no `unsafe`, `implemented_by`, `extern` or `opaque` used to
+  avoid a proof, no hypothesis added to a statement to make it vacuous, no weakening a
+  statement so that it becomes provable.
+
+### The paper
+
+- A gap or an error found in the paper is a **result**. Record it exactly in
+  `blueprint/PAPER_ISSUES.md` — where it is, what is claimed, what fails or is missing,
+  what was tried — and report it to the user.
+- Never patch a gap or an error with an axiom, with an unexplained extra hypothesis, or
+  with a silently changed statement.
+- If the paper is merely unclear, record that too, with the reading adopted and why.
+
+### Statements and definitions
+
+- A Lean statement must say what the paper's statement says. Every definition has a
+  fidelity note in `blueprint/FIDELITY.md` arguing that it matches the paper's.
+- Never silently strengthen, weaken, repair, generalise or reinterpret a recorded
+  statement or definition. Any difference from the paper — including an equivalent
+  reformulation such as clearing a denominator, and including a harmless generalisation —
+  is written down in the fidelity note or the declaration's doc comment.
+- A change that alters mathematical content, rather than form, needs the user's approval.
+- Watch for junk values. `sSup`, `sInf`, `Set.ncard`, `ENat.toNat`, natural subtraction
+  and division all return a default when the honest answer does not exist. A theorem that
+  is true only because of such a default is not the paper's theorem. This is the standard
+  way a formalisation is correct and proves the wrong thing.
+- A statement in this repository found to be false, or unprovable as stated, is a result:
+  record it in `docs/SESSION_LOG.md`, report it, and correct it by an explicit recorded
+  change. Do not quietly edit it.
+
+### Failed attempts
+
+A failed proof attempt, an abandoned approach, or a Mathlib gap that blocked progress is
+recorded in `docs/SESSION_LOG.md` with the obstruction. Do not repeat a failed attempt
+without a named change. A blocked entry does not end the project: record the block and the
+next bounded task.
+
+## Independence from the upstream Lean code
+
+`openai/math` contains a partial Lean formalisation of this paper (see
+`docs/PROVENANCE.md`). By the user's decision of 2026-10-07 this project is independent
+of it:
+
+- Do not copy upstream's Lean definitions or proofs for this paper into this repository.
+- Do not consult upstream's proofs for this paper while proving here.
+- Comparing a finished statement here with upstream's statement is allowed. Record the
+  comparison in `docs/PROVENANCE.md`.
+- If upstream later publishes more of this paper in Lean, tell the user before doing
+  anything about it.
+
+## Working method
+
+### Start gate
+
+Before any work:
+
+- pin HEAD and the branch;
+- read `START_HERE.md`, the blueprint, the ledger and `blueprint/MILESTONES.md`;
+- run `lake build`, `python scripts/check_ledger.py` and `python scripts/axiom_audit.py`.
+
+If the build or either check fails at HEAD, repair that first and do nothing else. Do not
+edit the blueprint or the ledger merely to make a check pass; find out which side is
+wrong.
+
+### Unit of work
+
+- Work on one blueprint entry or one milestone slice at a time, the one named as the next
+  task in `blueprint/MILESTONES.md` unless the user says otherwise.
+- A Lean change and the blueprint and ledger changes it implies go in the same commit.
+- Before a commit: `lake build` and both checks pass.
+- Commit early and often, on a working branch. Save notes in `docs/SESSION_LOG.md` as you
+  go, not at the end.
+- **Ask the user before pushing anything, and before merging anything into `main`.**
+
+### Limits
+
+- Work inline. Use at most two subagents at a time, and only for independent, well-scoped
+  tasks. (Fanning out nine exhausted the user's usage limit twice.)
+- `elan`, Lean 4 and the Mathlib build cache may be installed or downloaded. Ask before
+  installing anything else.
+- The Lean toolchain and the Mathlib commit are pinned. Changing either is a deliberate
+  step in its own commit, with the reason recorded.
+- Do not store the paper's PDF or TeX source in the repository (see
+  `docs/PROVENANCE.md`); a local copy under the ignored `paper/` folder is fine.
+
+### Checkpoint report
+
+At the end of a session, or when asked, report: which blueprint entries changed and to
+what status; the open `sorry` count and any axioms; every paper issue found; anything
+attempted that failed; and the single next task.
+
+## Frozen history
+
+`frozen-hc7-programme/`, `sessions/`, `Archive/` and `knowledge/` are the record of the
+HC7 programme. Do not edit, rewrite, renumber or delete anything in them. The branch
+`rl70-frontier-push` holds abandoned, unpromoted RL70 work and is not to be merged.
+The RL session numbering, the conveyor, the closeout lock and the tenth-session audit
+belong to that programme and no longer apply.
+
+## Portability
+
+Everything a new worker needs must be in the repository: definitions, exact statements,
+statuses, dependencies, paper issues, the plan and the next task. Phrases such as "as
+discussed above" must never be load-bearing.
+
+## Infrastructure changes
+
+Changes to these rules, the scripts, CI, the toolchain pin or the repository layout are
+made in their own commits, separate from Lean progress, with the reason stated. They never
+change a status in the blueprint.

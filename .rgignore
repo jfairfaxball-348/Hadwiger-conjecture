@@ -10,3 +10,8 @@
 *.zip.sha256
 *.b64.part*
 **/SHA256SUMS.txt
+
+# Frozen HC7 programme, fetched dependencies and the local paper copy
+/frozen-hc7-programme/
+/.lake/
+/paper/

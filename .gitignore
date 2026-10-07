@@ -58,3 +58,6 @@ ENV/
 # Abandoned RL70 working tree: it lives on branch rl70-frontier-push, not here.
 # Local leftovers of that tree (build products) are not part of this branch.
 /work/
+
+# Local working copy of the paper (not stored in the repository; see docs/PROVENANCE.md)
+/paper/
