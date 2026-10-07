@@ -132,7 +132,14 @@ wrong.
 - Before a commit: `lake build` and both checks pass.
 - Commit early and often, on a working branch. Save notes in `docs/SESSION_LOG.md` as you
   go, not at the end.
-- **Ask the user before pushing anything, and before merging anything into `main`.**
+- Working branches may be pushed to `origin` without asking. This is the user's standing
+  permission of 2026-10-07, quoted in `docs/SESSION_LOG.md`; before that date every push
+  needed asking. It covers ordinary pushes of working branches only: never force-push, and
+  never push `main` except to publish a merge the user has approved.
+- **Ask the user before merging anything into `main`.** Each merge is approved one at a
+  time; an approval covers that merge and no later one.
+- After a push, check `git ls-remote --heads origin <branch>` against `git rev-parse HEAD`.
+  The push summary can name an older commit (see `docs/SESSION_LOG.md`, 2026-10-07).
 
 ### Limits
 

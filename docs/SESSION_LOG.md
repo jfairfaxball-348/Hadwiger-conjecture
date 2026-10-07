@@ -395,3 +395,79 @@ Rules that follow:
 - Match a CI run to a commit by its hash (`gh run list --json headSha,...`), not by its
   title.
 
+### Why every push asked the user to sign in, and the fix
+
+The user wrote, verbatim:
+
+```text
+I can't keep manually authorising each push/commit or merge or whatever. Can I not set global permission - you are on 'bypass permission' mode and the github account should be authorised?
+```
+
+Diagnosis (read-only; no secret was displayed):
+
+- The window was not Claude's permission mode, which cannot affect it. It was Git
+  Credential Manager (2.7.3, the only credential helper configured, in the system git
+  configuration).
+- GCM holds two GitHub accounts on this machine, `jball348-svg` and `jfairfaxball-348`.
+  The remote URL named neither, so GCM had to ask which to use on every push. That is the
+  ten-to-twenty-minute wait recorded above: the push sat until the user chose.
+- Test, with `GCM_INTERACTIVE=never` so that nothing could open a window: asking git for
+  the github.com credential without a username failed with "Cannot prompt because user
+  interactivity has been disabled"; with `username=jfairfaxball-348` it succeeded at once.
+- `gh` is signed in as `jball348-svg`, which is not the account that owns the repository.
+  `gh` can read the repository and its CI runs; pushes go through git and GCM, not `gh`.
+
+Fix, on the user's approval (question and answer below): the account is now named in the
+remote URL of this checkout,
+
+```text
+https://jfairfaxball-348@github.com/jfairfaxball-348/Hadwiger-conjecture.git
+```
+
+It names the account and holds no secret. It lives in `.git/config`, so it is **not** in
+the repository: a fresh clone on this machine needs the same one-line
+`git remote set-url`. The next push (`46ab21e`) completed in seconds with interaction
+disabled.
+
+The user also asked for a setting that covers every repository. That is a user-wide git
+setting about which identity signs in everywhere, with a side effect on any repository
+that must push as the other account, so it was left to the user: the command was given to
+them and not run. It was tested without being applied (a one-off `-c` override returned the
+credential silently).
+
+To avoid opening a window on the user's machine by accident, pushes from a worker session
+can be run with `GCM_INTERACTIVE=never GIT_TERMINAL_PROMPT=0`: if git would need to ask, it
+fails at once instead.
+
+### Standing rule changed: pushes no longer need asking
+
+The user was asked two questions through a prompt with options. Questions and answers,
+verbatim:
+
+```text
+Set this repository to always use the GitHub account jfairfaxball-348, so pushes stop opening the account-picker window?
+  -> yes, set it - but I would rather a global permission for all repo's/projects/sessions in claude code
+
+AGENTS.md says to ask before every push and before every merge into main. What standing rule do you want recorded there instead?
+  -> Push freely; merge M0 now
+```
+
+The second option's description, as shown to the user: "I push working branches without
+asking. Merges into main are still asked one at a time, and this one (m0-statement-layer)
+is approved now."
+
+Done on that instruction:
+
+- `AGENTS.md`, "Unit of work": working branches may be pushed without asking; never
+  force-push; `main` is pushed only to publish an approved merge; each merge into `main`
+  is still asked for, one at a time. This is a change to the rules, made in its own commit
+  with this entry, as `AGENTS.md` requires. It changes no status.
+- The merge of `m0-statement-layer` into `main` is approved, this once. It is to be a
+  fast-forward to the commit that contains this entry, after CI has passed on that commit.
+  This entry was written before the merge. **If `main` contains this commit, the merge was
+  done**; `git log main` is the record.
+
+What was not changed: every other rule. In particular axioms and `native_decide`, changes
+to the root or to the pinned paper, changes to the mathematical content of a statement, and
+installing anything other than the Lean toolchain still need the user's approval.
+
