@@ -66,8 +66,40 @@ Only what is trivial, as instructed: `Hole.symm` (`DONE`); the final theorem and
 `not_hadwigerConjecture` as glue from Corollary 1.2 (`PROVED_MODULO`, so still resting on
 `sorry`).
 
+### The full read of the paper
+
+- The whole paper was read once, proofs included: Sections 1 to 3 before the reorganisation,
+  Sections 4 to 14 and Appendix A during it. What was checked, and the six places where the
+  argument could not be followed on one reading, are in `blueprint/PAPER_ISSUES.md`.
+- The "Depends on" columns of the blueprint were seeded mechanically, from the
+  cross-references inside each statement and its proof in the TeX source, then adjusted by
+  hand: forward pointers that are not logical dependencies were removed, and dependencies
+  on definitions and constructions were added. They have not been checked against the
+  proofs line by line.
+- Nothing in Sections 4 to 14 was verified. No error or gap was established.
+
+### A mistake made and corrected in this session
+
+Commit `b014739` recorded PI-001, "Theorem 1.1 has no proof of its own", and the blueprint
+entry T-1.1 said the same. Both were written after reading only Sections 1 to 3. The paper
+proves Theorem 1.1 in the last paragraph of Section 14.4. The mechanical cross-reference
+scan surfaced a proof block naming `thm:main`, which exposed the error. T-1.1 was corrected
+in `33af424`; PI-001 is kept in `PAPER_ISSUES.md` as withdrawn, with the reason. Lesson: do
+not record what a paper lacks before reading all of it.
+
+### Tooling notes
+
+- Shell heredocs lose backslashes in this environment. It happened twice, to a Python
+  script and to a blueprint append containing `\|`. Write such files with the editor
+  tools, not with `cat <<EOF`.
+- The audit script must be run after `lake build`; it compiles a generated file under
+  `.lake/audit/` that imports `Hadwiger`.
+
 ### Not done, and why
 
 - CI has not run: the branch is not pushed (the user is to be asked first).
 - The fidelity notes are unreviewed; that is milestone M0.
 - Lean Zulip was not searched directly for an existing formalisation (needs an account).
+- Theorem 3.1, Proposition 3.4 and the construction of Sections 2.2 to 2.4 are not stated
+  in Lean. Theorem 3.1 cannot be stated until the construction and the parameter
+  structure exist (milestone M5).

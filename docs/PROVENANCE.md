@@ -111,6 +111,26 @@ Recorded for later use. None of the equivalences below has been proved.
 | `χ` in statements | `chromaticNumber.toNat` | `∃ k : ℕ, chromaticNumber = k ∧ …` | Equal for finite graphs. |
 | `χ_f` | absent | `fractionalChromaticNumber` | — |
 
+## Calibration used for effort estimates
+
+To estimate how much Lean a full formalisation needs, the size of the Lean source was
+compared with the size of the paper's TeX source for combinatorics papers that upstream
+formalised in full. Sizes are of the paper's `build/sections/*.tex` and of the named
+directory under `lean/OAI/Combinatorics/` at the pinned commit. A directory is a proxy for
+a formalisation: imports from other directories are not counted.
+
+| Paper (upstream folder name, abbreviated) | Lean directory | TeX bytes | Lean bytes | Ratio |
+|---|---|---|---|---|
+| A linear list-coloring bound in terms of the Hadwiger number | `ListHadwiger` | 134,492 | 902,720 | 6.7 |
+| A Logarithmic Independence Bound for Clique-Free Graphs | `CliqueFree` | 53,824 | 229,474 | 4.3 |
+| A counterexample to Sidorenko's conjecture | `Sidorenko` | 163,656 | 1,216,768 | 7.4 |
+| A Sharp Threshold Bound for Monotone Graph Properties | `SharpThreshold` | 23,929 | 313,943 | 13.1 |
+| A linear cycle and edge decomposition of every graph | `CycleDecomposition` | 92,017 | 998,368 | 10.8 |
+| This paper, the part upstream did (Proposition 3.5 and Corollary 1.2's arithmetic) | `HadwigerMatching` | about 3,200 | 26,958 | about 8 |
+
+This paper's TeX is 356,412 bytes. The estimates built on these ratios are in
+`blueprint/MILESTONES.md`.
+
 ## Toolchain pins
 
 - Lean `v4.34.1`, the version upstream pins and the one already installed locally.
