@@ -1405,11 +1405,13 @@ under M4 the list of what the user has to decide before M4 starts.
 | Commit | What | On the remote | CI |
 |---|---|---|---|
 | `a07528d` | the three proofs and their records | yes; `git ls-remote` equal to `HEAD` after the push | passed, run `37692531079` |
+| `6fa5246` | the non-vacuity lemma and its records | yes; `git ls-remote` equal to `HEAD` after the push | passed, run `37693226157` |
 
-The commit that contains this table adds the non-vacuity lemma; its own CI result is
-therefore not recorded here. The push ran with `GCM_INTERACTIVE=never GIT_TERMINAL_PROMPT=0`
-and did not prompt. `main` on the remote stayed at `564e9f0`. The run was matched to the
-commit by hash.
+The second row was added afterwards, in a commit of its own that changes only this log; the
+CI result of that commit is therefore not recorded here. The pushes ran with
+`GCM_INTERACTIVE=never GIT_TERMINAL_PROMPT=0` and did not prompt. `main` on the remote
+stayed at `564e9f0`. Each run was matched to its commit by hash. In both runs every step
+passed: the build, the ledger check and the axiom audit.
 
 ### Questions put to the user at the end of the session
 
