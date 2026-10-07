@@ -30,8 +30,16 @@ The whole paper was read once, in full, proofs included, on 2026-10-07.
   followed".
 - Machine-checked so far (the blueprint has the statuses; `DONE` there is what this
   means): the three unnumbered bounds of Section 1 (M1), Proposition 3.5 with its proof
-  (M1 and M2), the symmetry part of Lemma 2.2, and the deduction of Corollary 1.2 from
-  Theorem 1.1 (M1). These are the elementary parts. No error or gap was found in them.
+  (M1 and M2), Lemma 2.2 with its proof and both halves of equation (2.3) (M3), and the
+  deduction of Corollary 1.2 from Theorem 1.1 (M1). These are the elementary parts. No
+  error or gap was found in them.
+- Section 2.1 in particular (Definition 2.1, Lemma 2.2, equation (2.3)) was read again at
+  M3 and the Lean proofs follow the paper's sentence by sentence. Every step went through
+  as written. One observation, which is not an issue: the six-term sum that proves
+  triangle-freeness uses neither that the three elements are distinct nor that the `U_i`
+  are injective. Injectivity is used only to exclude loops. The paper's remark "Equal
+  elements are adjacent because holes have no loops" is needed there only because its
+  Lemma 2.2 speaks of three distinct elements.
 - Nothing else has been machine-checked. For everything else the absence of an `ERROR` or
   `GAP` entry means "none found on one reading", not "found correct". In particular
   Theorem 1.1 and all of Sections 4 to 14 are in that state.
@@ -44,7 +52,7 @@ issues". Theorem 3.1 is unformalised upstream.
 | Where | What was checked |
 |---|---|
 | Corollary 1.2 | `26m/75 + 2/3 < m/2` exactly when `m > 100/23`, so for `m ≥ 5`. (Machine-checked since M1, for `m ≥ 5`.) |
-| Lemma 2.2 | The six-term sum over a triangle: left sides cancel in pairs by sharing, bilinear terms by symmetry, leaving `1 + 1 + 1 = 1` in `F_2`. |
+| Lemma 2.2 | The six-term sum over a triangle: left sides cancel in pairs by sharing, bilinear terms by symmetry, leaving `1 + 1 + 1 = 1` in `F_2`. (Machine-checked since M3: the Lean proof of triangle-freeness is this sum, term for term.) |
 | Lemma 3.3 | The cut capacity `Mμ(L_0) + Mμ(R_0) + 2^{DN} μ^2(E_0) < 1` gives both bounds. |
 | Proposition 3.4 | Entropy increment `≥ −log(1 − ε_N)` per recording; `(2C_0 g − D) = −2C_0 g`; fingerprint log-count `O(N^3 2^{100gN}) = o(2^{1000gN})`; fewer than `m/200 + m/200` matching edges. |
 | Proposition 3.5 | `3b ≤ m + 2s + e ≤ m + 4c − 3e + 2`; tight for `K_1` and `K_3`. (Machine-checked since M2: the inequality, and equality for every complete graph of odd order, which includes `K_1` and `K_3`.) |

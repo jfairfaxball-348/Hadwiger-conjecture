@@ -257,6 +257,9 @@ used unchanged.
 - Decision (user, 2026-10-07, question Q4): a non-vacuity lemma is to be added. It is in
   the blueprint as S-M3.hole-nonvacuous, `NOT_STATED`, and in the M3 task list.
 - Reviewed by John Fairfax-Ball, 2026-10-07 (sheet item R-10).
+- Status update after the sign-off (M3, 2026-10-07): Lemma 2.2 is proved in full for the
+  structure as it is defined here, that is, without assuming `X`, `V` finite-dimensional
+  or `Ω` finite. No proof needed finiteness and no hypothesis was added.
 
 ### F-POSGRAPH — the graph on positions (new) — D-2.G
 
@@ -412,6 +415,15 @@ Note added at M0. The difference in form of L-2.2 is also in F-HOLE.
 - Reviewed by John Fairfax-Ball, 2026-10-07 (sheet item R-17).
 - Status update after the sign-off (M1, 2026-10-07): S-1.a is `DONE`. The first half of
   equation (2.3) is still `sorry`, so the second half is still `PROVED_MODULO`.
+- Status update after the sign-off (M3, 2026-10-07): `not_hole_self`, `not_hole_triangle`
+  and the first half of equation (2.3) are proved, with their statements unchanged, so
+  L-2.2 and S-2.3 are `DONE`. The second half of equation (2.3) became `DONE` with them;
+  its statement and its proof were not changed. The fully elaborated statements before and
+  after were compared by machine and are identical (`docs/SESSION_LOG.md`, M3 session).
+  The proof of triangle-freeness is the paper's six-term sum. That computation does not
+  use that the three elements are distinct, so it proves the form "without distinct"
+  directly, and the argument above about a repeated element is not what the Lean proof
+  uses.
 
 ### The fidelity question that matters most
 

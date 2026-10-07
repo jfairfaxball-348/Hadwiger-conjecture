@@ -955,3 +955,305 @@ commit. **If `main` contains this commit, the merge was done**; `git log main` i
 record. The user's answer, if it comes after this commit, belongs at the head of the next
 session's entry, as was done above for M1.
 
+---
+
+## 2026-10-07 — M3 session (Section 2.1: the hole relation)
+
+Branch `m3-hole-relation`, started from main `564e9f0`.
+
+### How M2 ended: the merge
+
+The M2 entry was committed before the user answered its merge question. The user supplied
+the record below and asked for it to be put at the head of this entry, verbatim. It arrived
+in line-sized pieces and is reproduced line for line as received.
+
+```text
+Question: "M2 is finished on branch m2-proposition-3-5: Proposition 3.5 is DONE by the
+audit, 4 sorry left, no signed-off statement changed, CI passed on both commits. The
+second commit is a sanity check I added without being asked (the bound is attained by
+odd complete graphs). What should go into main?"
+Answer: "Merge all of it"
+The option's description, as shown: "Fast-forward main from 9e30110 to 564e9f0: the
+proof of Proposition 3.5 and the extra sanity check. Push main and check the remote.
+This approval covers this merge only."
+Done on that approval: main was fast-forwarded to 564e9f0 and pushed; git ls-remote gave
+564e9f0 for main. CI passed on the branch at 564e9f0 (run 37645142656) and on main at
+564e9f0 (run 37655437692).
+```
+
+The worker of this session did not perform that merge and did not look up the two CI runs.
+The text above is the user's record. What this session checked for itself is under "Start
+gate": `main` and `origin/main` were both at `564e9f0`.
+
+### The instruction
+
+The user's first message was "Continue the Lean formalisation in this repository. AGENTS.md
+is binding; read it first." The rest arrived in line-sized pieces while the start gate was
+being run. It is reproduced line for line as received; blank lines between its parts are
+not recoverable and none have been added.
+
+```text
+START GATE
+1. Pin HEAD. You should be on main, and main should equal origin/main. Expected: 564e9f0
+(M2 complete and merged, 2026-10-07). If main does not equal origin/main, or HEAD is
+something else, stop and tell me before doing anything else.
+2. Read START_HERE.md, AGENTS.md, blueprint/BLUEPRINT.md, blueprint/SORRY_AXIOM_LEDGER.md,
+blueprint/MILESTONES.md, blueprint/FIDELITY.md, blueprint/PAPER_ISSUES.md and the last
+two session entries of docs/SESSION_LOG.md (the M1 and M2 sessions).
+3. Run lake build, python scripts/check_ledger.py and python scripts/axiom_audit.py.
+Expected: 4 sorry, 156 blueprint entries, 95 declarations audited. If any of them
+fails, repair that first and do nothing else.
+A RECORD TO WRITE FIRST
+The M2 session entry was committed before I answered its merge question. Put the following
+at the head of your own session entry, verbatim, as the M2 entry asks:
+Question: "M2 is finished on branch m2-proposition-3-5: Proposition 3.5 is DONE by the
+audit, 4 sorry left, no signed-off statement changed, CI passed on both commits. The
+second commit is a sanity check I added without being asked (the bound is attained by
+odd complete graphs). What should go into main?"
+Answer: "Merge all of it"
+The option's description, as shown: "Fast-forward main from 9e30110 to 564e9f0: the
+proof of Proposition 3.5 and the extra sanity check. Push main and check the remote.
+This approval covers this merge only."
+Done on that approval: main was fast-forwarded to 564e9f0 and pushed; git ls-remote gave
+564e9f0 for main. CI passed on the branch at 564e9f0 (run 37645142656) and on main at
+564e9f0 (run 37655437692).
+TASK: milestone M3, "Section 2.1", as described in blueprint/MILESTONES.md.
+* Create a working branch m3-hole-relation from main.
+* Before proving, re-read Section 2.1 of the paper in the local TeX
+(paper/build/sections/02-geometry.tex): Definition 2.1, Lemma 2.2 with its proof, and
+equation (2.3).
+* Remove these three sorries with real proofs, without changing any statement:
+* L-2.2, no loops        Hadwiger.HoleData.not_hole_self
+* L-2.2, triangle-free   Hadwiger.HoleData.not_hole_triangle
+* S-2.3, first half      Hadwiger.HoleData.indepNum_positionGraph_le_two
+* State and prove the non-vacuity lemma S-M3.hole-nonvacuous: some HoleData has two
+elements with a hole between them. It is a new statement. Choose its exact form, write
+that form in its blueprint row and in the session log, leave it unreviewed, and put it
+to me at the end. The hand example on blueprint/M0_REVIEW_SHEET.md under R-10 was worked
+on paper and is not a proof. If it does not check in Lean, that is a result: record it,
+then find an example that does, or tell me if you cannot.
+* Follow the paper's proof of Lemma 2.2. If a step of it does not go through as written,
+that is a paper issue: record it exactly in blueprint/PAPER_ISSUES.md and tell me. Do
+not patch it silently.
+* Do not touch Theorem 1.1. Do not start M4 or anything else.
+* Expected end state, to check against the audit: 1 sorry (Theorem 1.1). L-2.2 DONE.
+S-2.3 DONE; its second half, Hadwiger.HoleData.le_two_mul_chromaticNumber_positionGraph,
+should become DONE without being touched. S-M3.hole-nonvacuous DONE, with a Lean name.
+C-1.2, T-FINAL, T-NOT-HC and S-1.d still PROVED_MODULO, resting on Theorem 1.1 alone.
+If you add no rows for helper lemmas: 156 entries, DONE 34, PROVED_MODULO 4, STATED 1,
+NOT_STATED 104. If you add rows, say how many and why. If the audit shows anything else,
+find out why before going on.
+* If a statement turns out to be false or unprovable as stated, that is a result. Stop,
+record exactly what failed in docs/SESSION_LOG.md, and tell me. Do not weaken or adjust
+the statement without my say-so.
+* Check that no signed-off statement changed, by the pp.all comparison described in the M1
+session entry. Run the reverse check described in the M2 entry: every declaration in
+the Lean sources is named in the blueprint.
+* Keep the blueprint and the ledger in step with the Lean in the same commit. A result
+counts only when the axiom audit shows it. Bring every status remark into step as well:
+START_HERE.md, README.md, the "How far the paper has been checked" section of
+blueprint/PAPER_ISSUES.md, blueprint/MILESTONES.md, and doc comments in the Lean files.
+STANDING DECISIONS (already made; do not reopen, do not ask)
+* General lemmas stay in Hadwiger/Sanity/ and are imported where needed; nothing is moved.
+* Helper lemmas get blueprint rows and no fidelity notes.
+* Signed fidelity notes are not rewritten. Add a line "Status update after the sign-off".
+* blueprint/M0_REVIEW_SHEET.md is not edited.
+WORKING RULES
+* Work inline; at most two subagents at a time, only for independent, well-scoped tasks.
+* Commit early and often on the working branch. Push it without asking (standing rule in
+AGENTS.md). Run pushes with GCM_INTERACTIVE=never GIT_TERMINAL_PROMPT=0; if a push fails
+because it would need a sign-in, stop and tell me instead of opening a window. After
+each push, check git ls-remote against HEAD.
+* Ask me before merging into main.
+* Do not ask me things one at a time. Carry on with everything that does not depend on my
+answer, and put all open questions, including the merge and the sign-off of the new
+statement, in one prompt at the end.
+* Do not consult the upstream openai/math Lean code for this paper.
+* End with the checkpoint report that AGENTS.md asks for, and the single next task. The
+task after M3 is M4 (Proposition 3.4). Do not start it; list in the report what I have
+to decide before it can start.
+```
+
+### Start gate
+
+- On `main`, working tree clean. `HEAD` = `main` = `origin/main` = `564e9f0`, and
+  `git ls-remote --heads origin main` (run with interaction disabled) gave the same hash.
+- Read in full: `START_HERE.md`, `AGENTS.md`, the blueprint, the ledger, the milestones,
+  the fidelity notes, the paper issues, and the M1 and M2 entries of this log. Also
+  `docs/LEAN_WORKFLOW.md`, the two check scripts and their scanner, and item R-10 of
+  `blueprint/M0_REVIEW_SHEET.md`.
+- `lake build` passed. `check_ledger.py`: 4 `sorry`, 4 rows, OK. `axiom_audit.py`: 156
+  entries, 95 declarations, OK. All as expected.
+- `paper/paper.pdf` sha256 matches the pin in `docs/PROVENANCE.md`.
+- Before any Lean was written, Section 2.1 was read again in the local TeX
+  (`paper/build/sections/02-geometry.tex`, lines 10 to 82): the standing data, Definition
+  2.1, Lemma 2.2 with its proof, the graph on positions and equation (2.3).
+- Before any Lean was written, the fully elaborated statements were printed at `564e9f0`
+  as the baseline for the comparison below.
+
+### What was proved, and how
+
+Three `sorry`s in `Hadwiger/HoleRelation.lean` were replaced by proofs. Each proof is the
+paper's.
+
+**`HoleData.not_hole_self`** (Lemma 2.2, no loops).
+
+| Paper | Lean |
+|---|---|
+| "A loop would have `U_i λ_i = U_i λ_j`, hence `λ_i = λ_j` by injectivity," | `D.U_injective i` applied to the sharing equation |
+| "contradicting the last equation" | the last equation becomes `a(λ) + a(λ) = 1`; `CharTwo.add_self_eq_zero` makes the left side `0` |
+
+**`HoleData.not_hole_triangle`** (Lemma 2.2, triangle-freeness). Write `x_pq` for the
+witness at `p` of the hole on `{p, q}`.
+
+| Paper | Lean |
+|---|---|
+| "For a directed incidence `ij`, let `x_ij` be its witness at `i`." | the three `obtain`s: witnesses `xij xji`, `xjk xkj`, `xik xki`, each with its sharing equation, its two functional identities and its parity equation |
+| "evaluate the functional identity for `ij` on `x_ik`: `u_j(U_i x_ik) = a(x_ik) + T(x_ij, x_ik)`" | `e1` to `e6`, one for each ordering of the three elements, each by `LinearMap.congr_fun` |
+| "Sum over the six ordered choices of `(i,j,k)`." | `hsum`: the sum of the six left sides equals the sum of the six right sides, grouped as the paper groups them |
+| "For fixed `j`, the two arguments on the left are equal by the sharing equation for the remaining edge `ik`, so they cancel." | `hleft`: rewrite with the three sharing equations; each pair is then `y + y = 0` |
+| "For fixed `i`, the two bilinear terms cancel by symmetry of `T`." | `hbil`: rewrite with `T_symm` three times; each pair is then `y + y = 0` |
+| "The remaining sum is `1 + 1 + 1 = 1`, a contradiction." | rewriting `hsum` leaves `0 = 1 + 1 + 1 + 0` in `ZMod 2`, refuted by `decide` |
+
+The six equations, to make the bookkeeping checkable by eye. The first three letters name
+the ordering `(p, q, s)`: the identity of the directed incidence `pq` is evaluated on
+`x_ps`.
+
+| | ordering | equation | cancels on the left with | bilinear term cancels with |
+|---|---|---|---|---|
+| `e1` | `(i, j, k)` | `u_j(U_i x_ik) = a(x_ik) + T(x_ij, x_ik)` | `e2`, by sharing on `{i, k}` | `e3` |
+| `e2` | `(k, j, i)` | `u_j(U_k x_ki) = a(x_ki) + T(x_kj, x_ki)` | `e1` | `e6` |
+| `e3` | `(i, k, j)` | `u_k(U_i x_ij) = a(x_ij) + T(x_ik, x_ij)` | `e4`, by sharing on `{i, j}` | `e1` |
+| `e4` | `(j, k, i)` | `u_k(U_j x_ji) = a(x_ji) + T(x_jk, x_ji)` | `e3` | `e5` |
+| `e5` | `(j, i, k)` | `u_i(U_j x_jk) = a(x_jk) + T(x_ji, x_jk)` | `e6`, by sharing on `{j, k}` | `e4` |
+| `e6` | `(k, i, j)` | `u_i(U_k x_kj) = a(x_kj) + T(x_ki, x_kj)` | `e5` | `e2` |
+
+**`HoleData.indepNum_positionGraph_le_two`** (equation (2.3), first half).
+
+| Paper | Lean |
+|---|---|
+| "An independent triple of positions would therefore give three distinct elements forming a hole triangle." | an independent set with `α(G)` positions exists (`exists_isNIndepSet_indepNum`); if `α(G) > 2` it has three distinct positions (`Finset.two_lt_card`); distinct non-adjacent positions have a hole between their elements, by the definition of `positionGraph`; `not_hole_triangle` |
+| "Equal elements are adjacent because holes have no loops." | not needed in Lean; see below |
+
+### The paper's proof went through as written; two observations
+
+No step of the paper's proof of Lemma 2.2 failed, and nothing had to be added to it. There
+is no paper issue. Two observations, neither of them an issue:
+
+1. **The six-term sum does not use distinctness.** The paper supposes "three distinct
+   elements", but the computation is about three holes and their six witnesses, and it is
+   valid whether or not the elements coincide. So it proves the Lean statement, which has
+   no distinctness hypothesis, as it stands. The signed fidelity note F-HOLE justifies
+   dropping "distinct" by a different argument (a repeated element would give a loop).
+   That argument is correct too, but it is not the one the Lean proof uses, and
+   `not_hole_triangle` does not depend on `not_hole_self`.
+2. **The six-term sum does not use injectivity of the `U_i`.** Injectivity is used only
+   to exclude loops.
+
+In consequence the paper's remark "Equal elements are adjacent because holes have no
+loops" has no counterpart in the Lean proof of equation (2.3). The paper needs it to get
+three *distinct* elements, because its Lemma 2.2 speaks of distinct elements. In Lean the
+triangle lemma applies to any three elements, so `indepNum_positionGraph_le_two` uses
+`not_hole_triangle` only. The remark itself is true, and `not_hole_self` proves the fact it
+rests on.
+
+### `le_two_mul_chromaticNumber_positionGraph`: what was and was not touched
+
+The instruction expected the second half of equation (2.3) to "become DONE without being
+touched". Its statement and its proof body were not touched, and it is `DONE` by the audit.
+One thing in its declaration was changed: the last sentence of its **doc comment** said
+"The first half of equation (2.3) is still `sorry` (milestone M3), so this theorem is
+`PROVED_MODULO`." That became false, and the instruction also asks for doc comments to be
+brought into step, so the sentence now says that the theorem rests on nothing unproved. A doc
+comment is not part of the statement; the comparison below confirms the statement is
+unchanged.
+
+### What the audit shows
+
+After the three proofs, with the non-vacuity lemma not yet added:
+
+- `check_ledger.py`: 1 `sorry`, 1 row.
+- `axiom_audit.py`: 156 entries (`DONE` 33, `PROVED_MODULO` 4, `STATED` 1, `DEFINED` 11,
+  `MATHLIB` 2, `NOT_STATED` 105), 95 declarations. Before: `DONE` 31, `STATED` 3.
+- `#print axioms` on `Hole.symm`, `not_hole_self`, `not_hole_triangle`,
+  `indepNum_positionGraph_le_two` and `le_two_mul_chromaticNumber_positionGraph` shows
+  `propext`, `Classical.choice`, `Quot.sound` and nothing else. So L-2.2 and S-2.3 are
+  `DONE`.
+- C-1.2, T-FINAL, T-NOT-HC and S-1.d still show `sorryAx`. They are `PROVED_MODULO` and
+  rest on Theorem 1.1 alone. **The final theorem is not proved.**
+- The one `sorry` left is Theorem 1.1. It was not touched.
+
+### Check that no signed-off statement changed
+
+As at M1 and M2, with more in it. A file of commands under `set_option pp.all true` was
+run at `main` `564e9f0`, before any change, and again on the working tree. It holds:
+
+- the 14 items of the M1 and M2 comparisons, unchanged and in the same order;
+- everything else in `Hadwiger/HoleRelation.lean`, which those comparisons did not cover
+  and which is the file this milestone changes: `#print` of `HoleData`, `HoleData.r`,
+  `HoleData.Hole` and `HoleData.positionGraph`, so that the bodies of the definitions are
+  compared and not only their types, and `#check` of `HoleData.mk`, `Hole.symm`,
+  `not_hole_self` and `not_hole_triangle`;
+- `#print` of the ten other definitions of the statement layer (`MinorModel`, `IsMinor`,
+  `HasCliqueMinor`, `hadwigerNumber`, `EdgesTouch`, `IsConnectedMatching`,
+  `connectedMatchingNumber`, `FractionalColoring`, `FractionalColoring.total`,
+  `fractionalChromaticNumber`).
+
+The two outputs are byte-identical (4,976 lines; sha256
+`b79be5d590e3818afe4202beb708cfdeda92cf6144fe2223c96a63156973cfc5`). The earlier
+sessions did not keep their outputs, so this one could not be compared with theirs; the
+baseline here is `main` at `564e9f0`.
+
+Also: the diff of `Hadwiger/HoleRelation.lean` against `main` adds and removes no line
+beginning `theorem`, `lemma`, `def`, `structure`, `instance`, `abbrev`, `axiom`,
+`variable`, `open`, `namespace`, `section`, `end` or `import`.
+
+The check file lives under the ignored `.lake/audit/`; it is not a repository script.
+
+### Reverse check
+
+The audit checks blueprint against build, not the reverse. As at M0 and M2 the reverse was
+run by hand, with a one-off script that uses the repository's own scanner
+(`scripts/leanscan.py`) for the declaration pattern: 93 declarations in the Lean sources,
+all named in the blueprint. The other two of the 95 audited names are Mathlib's `indepNum`
+and `chromaticNumber`. The script is not in the repository.
+
+### Junk values
+
+- `indepNum` is a supremum. The statement is about a graph on `Fin m`, where independent
+  sets are bounded in size and the supremum is the maximum
+  (`IsIndepSet.card_le_indepNum`, for a finite vertex type). So `indepNum ≤ 2` says what
+  the paper says: no three positions are independent.
+- A caution for later users of `exists_isNIndepSet_indepNum`: at the pinned Mathlib it has
+  no finiteness hypothesis. For a graph with unboundedly large independent sets
+  `indepNum` is the junk value `0` and the lemma returns the empty set. That cannot happen
+  on `Fin m`.
+- The arithmetic of the six-term sum is in `ZMod 2`: addition only, no subtraction and no
+  division.
+
+### Attempts that failed, and corrections
+
+- Nothing failed. The three proofs compiled as first written. The only change after the
+  first build was to remove an unused `simp` argument (`add_zero`) in two places, on the
+  linter's advice. As the M2 entry says, a first-time success is not evidence of
+  correctness; the evidence is the kernel and the comparison of statements.
+- No statement was found false or unprovable.
+
+### Records brought into step with the three proofs
+
+- Blueprint: L-2.2 and S-2.3 to `DONE`, with their texts.
+- Ledger: three rows removed; one row left. The list of declarations that depend on a
+  `sorry` without containing one is down to the four that rest on Theorem 1.1.
+- `blueprint/FIDELITY.md`: a line "Status update after the sign-off" under F-HOLE and
+  under "L-2.2 and S-2.3". The signed text was not altered.
+- `blueprint/M0_REVIEW_SHEET.md` was **not** edited.
+- `START_HERE.md`, `README.md`: what is now proved, and that Theorem 1.1 is the only
+  `sorry` left. `START_HERE.md` also says that Lemma 2.2 is about the abstract linear data
+  of Section 2.1 and that the paper's construction is not stated yet, so that nobody reads
+  "`α ≤ 2` is proved" as a statement about the paper's graphs.
+- `blueprint/PAPER_ISSUES.md`, "How far the paper has been checked": Lemma 2.2 and
+  equation (2.3) are machine-checked; the two observations above; the spot-check row for
+  Lemma 2.2.
+- `blueprint/MILESTONES.md`: the next task and the state of M3.
+- Doc comments in `Hadwiger/HoleRelation.lean`: the file header; how each of the three
+  proofs goes; the status sentence of the second half of equation (2.3).

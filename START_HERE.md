@@ -31,17 +31,22 @@ Theorem 1.1, which is almost the whole paper, is `sorry`.
 What is proved (2026-10-07), all of it elementary:
 
 - Proposition 3.5, the clique-minor bound `3·h(G) ≤ m + 4·cm(G) + 2` and its consequence
-  for graphs with `α ≤ 2` (milestones M1 and M2). It is the one numbered result of the
-  paper proved so far.
+  for graphs with `α ≤ 2` (milestones M1 and M2). It and Lemma 2.2, below, are the two
+  numbered results of the paper proved so far.
 - Three unnumbered statements from Section 1: the colour-class bound `|V| ≤ α·χ`, its
   fractional form `|V| ≤ α·χ_f`, and `χ_f ≤ χ` (blueprint S-1.a, S-1.b, S-1.c; M1).
+- Lemma 2.2, that the abstract hole relation of Section 2.1 is symmetric, has no loops and
+  is triangle-free, and equation (2.3), that the graph on the positions of any list has
+  `α ≤ 2` and `χ ≥ ⌈m/2⌉` (blueprint L-2.2, S-2.3; M3). This is about the abstract linear
+  data of Section 2.1 only. The paper's actual construction (Sections 2.2 to 2.4) is not
+  stated in Lean yet, so nothing here is yet about the paper's graphs.
 
 What follows from Theorem 1.1 in Lean, and so has a complete proof body but is not proved:
 Corollary 1.2, the final theorem, and the negations of Hadwiger's conjecture and of its
 fractional weakening. Nothing else stands between Theorem 1.1 and the final theorem.
 
-The rest of the statement layer compiles with `sorry` (Section 2.1) or is not yet stated
-(everything from the construction onward).
+Theorem 1.1 is the only `sorry` left. Everything else in the paper, from the construction
+onward, is not yet stated in Lean.
 
 Run `python scripts/axiom_audit.py` for the exact tally; the blueprint has the detail.
 

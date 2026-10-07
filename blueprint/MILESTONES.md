@@ -5,11 +5,13 @@ Statuses of individual results are in `blueprint/BLUEPRINT.md`, never here.
 
 ## The single next task
 
-**M3: Section 2.1 — Lemma 2.2 (no loops; triangle-free), `α ≤ 2` for the graph on
-positions, and the non-vacuity lemma for the hole relation.** Details under M3 below.
+**The rest of M3: the non-vacuity lemma for the hole relation, S-M3.hole-nonvacuous.**
+Details under M3 below. The other parts of M3 (Lemma 2.2 and equation (2.3)) were proved on
+2026-10-07 on branch `m3-hole-relation`.
 
 M2 was completed on 2026-10-07 on branch `m2-proposition-3-5`: Proposition 3.5 is proved.
-From here the final theorem rests on one `sorry` only, Theorem 1.1.
+From here the final theorem rests on one `sorry` only, Theorem 1.1. Since M3 that is the
+only `sorry` in the sources.
 
 M0 was completed on 2026-10-07: every sanity lemma in its list is proved, and every
 fidelity note carries the user's "Reviewed by" line. A definition or statement added or
@@ -197,6 +199,23 @@ M1 to M4 are independent of M5 to M17. When M1, M2 and M17 are done, T-FINAL is 
     the final theorem, which rests on Theorem 1.1 alone.
 - Mathlib gaps: none. Linear maps over `ZMod 2` and a six-term sum in characteristic 2.
 - Size: 250 lines (150–400).
+- State on 2026-10-07 (statuses are in the blueprint, not here):
+  - The three `sorry`s named above are replaced by proofs, each of them the paper's:
+    `not_hole_self` (injectivity, then `a(λ) + a(λ) = 0` in `F_2`), `not_hole_triangle`
+    (the six-term sum) and `indepNum_positionGraph_le_two` (an independent triple of
+    positions gives a hole triangle). No statement was changed and no declaration was
+    added. One `sorry` remains in the sources: Theorem 1.1.
+  - `le_two_mul_chromaticNumber_positionGraph` now rests on nothing open. Its statement
+    and its proof were not changed; one sentence of its doc comment, which said that it
+    was `PROVED_MODULO`, was corrected.
+  - The paper's proof of Lemma 2.2 went through as written. No paper issue was found.
+  - No Mathlib gap was met. Used from Mathlib: `CharTwo.add_self_eq_zero`,
+    `LinearMap.congr_fun`, `SimpleGraph.exists_isNIndepSet_indepNum`,
+    `Finset.two_lt_card`.
+  - Size: `Hadwiger/HoleRelation.lean` grew from 129 lines to 204, comments included; the
+    Lean code in it grew by 41 lines. The estimate of 250 (150–400) also covered the
+    non-vacuity lemma. As at M1 and M2, an elementary argument came in well under a
+    ratio taken from whole papers; that is no evidence about M4 onward.
 
 ## M4 — Proposition 3.4, abstractly
 

@@ -17,34 +17,34 @@ Rules (binding, from `AGENTS.md`):
 - `axiom`: none.
 - `native_decide`: none.
 - `admit`: none.
-- `sorry`: 4, all of them unproved **statements** of the statement layer. No definition
+- `sorry`: 1, an unproved **statement** of the statement layer: Theorem 1.1. No definition
   contains `sorry`. (10 before milestone M1; the five rows for S-1.a, S-1.b, S-1.c, the
-  second assertion of P-3.5 and C-1.2 were removed at M1 by proofs, and the row for the
-  first assertion of P-3.5 at M2.)
-- The files under `Hadwiger/Sanity/` (added at milestone M0) contain none of the four.
+  second assertion of P-3.5 and C-1.2 were removed at M1 by proofs, the row for the first
+  assertion of P-3.5 at M2, and the three rows for the two open parts of L-2.2 and the
+  first half of S-2.3 at M3.)
+- The files under `Hadwiger/Sanity/` (added at milestone M0) do not contain it.
 
 | File | Declaration | Kind | Blueprint ID | Milestone | Note |
 |---|---|---|---|---|---|
-| `Hadwiger/HoleRelation.lean` | `Hadwiger.HoleData.indepNum_positionGraph_le_two` | `sorry` | S-2.3 | M3 | equation (2.3), first half |
-| `Hadwiger/HoleRelation.lean` | `Hadwiger.HoleData.not_hole_self` | `sorry` | L-2.2 | M3 | Lemma 2.2, no loops |
-| `Hadwiger/HoleRelation.lean` | `Hadwiger.HoleData.not_hole_triangle` | `sorry` | L-2.2 | M3 | Lemma 2.2, triangle-free |
 | `Hadwiger/Main.lean` | `Hadwiger.exists_indepNum_le_two_and_connectedMatchingNumber_lt` | `sorry` | T-1.1 | M17 | Theorem 1.1; needs Proposition 3.4 (M4) and Theorem 3.1 (M5 to M16) |
 
 ## Declarations that depend on `sorry` without containing one
 
 These have complete proof bodies and `#print axioms` shows `sorryAx` for each. The open
-`sorry`s each one rests on are named.
+`sorry` each one rests on is named.
 
 - `Hadwiger.exists_hadwigerNumber_lt_fractionalChromaticNumber` (C-1.2; since M1) — from
   Theorem 1.1 (`sorry`, M17), and since M2 from nothing else. `PROVED_MODULO`.
 - `Hadwiger.exists_hadwigerNumber_lt_chromaticNumber` (T-FINAL) — from Corollary 1.2.
 - `Hadwiger.not_hadwigerConjecture` (T-NOT-HC) — from T-FINAL.
 - `Hadwiger.not_fractionalHadwigerConjecture` (S-1.d) — from Corollary 1.2.
-- `Hadwiger.HoleData.le_two_mul_chromaticNumber_positionGraph` (S-2.3, second half) — from
-  the first half of S-2.3 (`sorry`, M3) and from S-1.a (`DONE` since M1). The blueprint
-  entry S-2.3 is `STATED`, the status of its weaker declaration.
 
-So the first four rest on exactly one `sorry`, Theorem 1.1, and the fifth on one other.
+So all four rest on exactly one `sorry`, Theorem 1.1, and no other declaration in the Lean
+sources depends on a `sorry`.
 
-No longer in this list: `Hadwiger.hadwigerNumber_lt_of_indepNum_le_two` (P-3.5, second
-assertion). It rested on the first assertion of Proposition 3.5, which was proved at M2.
+No longer in this list:
+
+- `Hadwiger.hadwigerNumber_lt_of_indepNum_le_two` (P-3.5, second assertion). It rested on
+  the first assertion of Proposition 3.5, which was proved at M2.
+- `Hadwiger.HoleData.le_two_mul_chromaticNumber_positionGraph` (S-2.3, second half). It
+  rested on the first half of S-2.3, which was proved at M3.

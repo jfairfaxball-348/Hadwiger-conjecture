@@ -10,7 +10,9 @@ their Hadwiger number.
 **Status: the final theorem is not proved.** The paper's main theorem (Theorem 1.1),
 which is almost the whole paper, is `sorry`; the final theorem is derived from it in Lean.
 What is proved is elementary: Proposition 3.5 (the clique-minor bound from connected
-matchings) and three statements from the paper's introduction. The paper is
+matchings), three statements from the paper's introduction, and Lemma 2.2 with equation
+(2.3) (the abstract hole relation is triangle-free, so the graphs built from it have
+independence number at most 2). The paper is
 machine-generated and, as far as this project knows, unrefereed; whether its proof is
 correct is one of the things the formalisation will find out.
 
