@@ -50,3 +50,7 @@ ENV/
 .env
 .env.*
 !.env.example
+
+# RL70 working build products
+work/RL70/scripts/**/*.exe
+work/RL70/scripts/**/*.pdb

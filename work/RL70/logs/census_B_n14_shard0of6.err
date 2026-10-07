@@ -1,0 +1,5 @@
+7-vertex iso classes: 1044
+n=14 admissible root classes=1031 tasks=72772
+progress 2000/72772 tasks, nodes=176099 tests=779318 sols=0 t=6s
+progress 8000/72772 tasks, nodes=2424366 tests=19946512 sols=0 t=62s
+progress 14000/72772 tasks, nodes=8214901 tests=67734124 sols=0 t=227s
