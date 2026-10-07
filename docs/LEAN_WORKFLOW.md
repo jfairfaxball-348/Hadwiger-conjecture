@@ -62,7 +62,7 @@ CI (`.github/workflows/lean.yml`) runs the same three steps on every push and pu
 | `Hadwiger/MatchingMinor.lean` | Proposition 3.5, and the steps of its proof as lemmas (blueprint `S-M2.*`). |
 | `Hadwiger/HoleRelation.lean` | Section 2.1: the hole relation, Lemma 2.2, the graph on positions. |
 | `Hadwiger/Main.lean` | Theorem 1.1, Corollary 1.2, the final theorem, Hadwiger's conjecture and its negation. |
-| `Hadwiger/Sanity/` | Sanity checks on the definitions (milestone M0), and the general lemmas about the definitions that they needed. Not statements of the paper; blueprint IDs `S-M0.*`. Files that prove the paper's results may import these files for the general lemmas; `Hadwiger/ChromaticBounds.lean` has done so since M1 and `Hadwiger/MatchingMinor.lean` since M2. |
+| `Hadwiger/Sanity/` | Sanity checks on the definitions (milestone M0, and one for the hole relation at M3), and the general lemmas about the definitions that they needed. Not statements of the paper; blueprint IDs `S-M0.*` and `S-M3.*`. Files that prove the paper's results may import these files for the general lemmas; `Hadwiger/ChromaticBounds.lean` has done so since M1 and `Hadwiger/MatchingMinor.lean` since M2. `Hadwiger/Sanity/HoleRelation.lean` imports `Hadwiger/HoleRelation.lean`, where the definitions it checks are, and nothing imports it but the root module. |
 | `blueprint/` | Blueprint, ledger, fidelity notes, paper issues, milestones. |
 | `scripts/` | The two checks and their shared scanner. |
 

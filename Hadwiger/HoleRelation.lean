@@ -20,7 +20,8 @@ Blueprint entries: `D-2.0`, `D-2.1`, `L-2.2`, `D-2.G`, `S-2.3`. Milestone M3.
 Fidelity notes are in `blueprint/FIDELITY.md` (F-HOLE, F-POSGRAPH).
 
 Lemma 2.2 and both halves of equation (2.3) are proved here, by the paper's proofs
-(milestone M3).
+(milestone M3). That the hole relation can hold at all is checked separately, in
+`Hadwiger/Sanity/HoleRelation.lean`; that check is not a statement of the paper.
 
 Everything here is **new**; only Mathlib's linear algebra and `SimpleGraph` are used, and,
 for the second half of equation (2.3), the colour-class bound `S-1.a` of

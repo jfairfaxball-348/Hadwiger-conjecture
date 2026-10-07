@@ -20,7 +20,7 @@ is stated or proved, this file is wrong and must be fixed; nothing else is autho
 
 | Column | Meaning |
 |---|---|
-| ID | `T-` theorem, `P-` proposition, `L-` lemma, `C-` corollary, `D-` definition or construction, `S-` unnumbered statement made in running text. Numbers follow the paper (`L-2.2` is Lemma 2.2). IDs of the form `S-M0.<name>` are the sanity checks of milestone M0, and `S-M3.<name>` those planned for M3; they are not in the paper. IDs of the form `S-M2.<name>` are the steps of the paper's proof of Proposition 3.5, each proved as a lemma at milestone M2; they are in the paper as sentences of that proof, not as separate statements. The one exception is `S-M2.tight`, a sanity check of the statement of Proposition 3.5 that is not in the paper. |
+| ID | `T-` theorem, `P-` proposition, `L-` lemma, `C-` corollary, `D-` definition or construction, `S-` unnumbered statement made in running text. Numbers follow the paper (`L-2.2` is Lemma 2.2). IDs of the form `S-M0.<name>` are the sanity checks of milestone M0, and `S-M3.<name>` the one added at M3; they are not in the paper. IDs of the form `S-M2.<name>` are the steps of the paper's proof of Proposition 3.5, each proved as a lemma at milestone M2; they are in the paper as sentences of that proof, not as separate statements. The one exception is `S-M2.tight`, a sanity check of the statement of Proposition 3.5 that is not in the paper. |
 | Kind | What the paper calls it. |
 | Paper location | Section, number, and the TeX label in the paper's source. |
 | Statement | A short paraphrase. The paper is the authority for the exact statement. |
@@ -260,7 +260,9 @@ statement layer from both sides: a definition that was accidentally too weak or 
 would make one of them false. Lean files: `Hadwiger/Sanity/Minor.lean`,
 `Hadwiger/Sanity/ConnectedMatching.lean`, `Hadwiger/Sanity/FractionalColoring.lean`.
 One later entry, S-M2.tight, was proved at M2 and is in `Hadwiger/MatchingMinor.lean`; it
-pins the statement of Proposition 3.5, not a definition.
+pins the statement of Proposition 3.5, not a definition. Another, S-M3.hole-nonvacuous, was
+proved at M3 and is in `Hadwiger/Sanity/HoleRelation.lean`; it pins the definition of the
+hole relation (D-2.1) from below, as Lemma 2.2 pins it from above.
 
 Since M1, `Hadwiger/ChromaticBounds.lean` imports `Hadwiger/Sanity/FractionalColoring.lean`
 and the proofs of S-1.b, S-1.c and C-1.2 use support lemmas of S-M0.chif-support and
@@ -281,7 +283,8 @@ Kinds used in this section:
   cell;
 - `support`: lemmas used to prove the others. They are listed so that every declaration in
   `Hadwiger/Sanity/` is audited;
-- `sanity (planned)`: a check the user has asked for that is not yet stated in Lean.
+- `sanity (requested)`: a check the user asked for by name. There is one,
+  S-M3.hole-nonvacuous, proved at M3. Until then its kind was `sanity (planned)`.
 
 "Finite" below means the vertex type has a `Fintype` instance.
 
@@ -329,11 +332,11 @@ Kinds used in this section:
 |---|---|---|---|---|---|---|
 | S-M2.tight | sanity (extra) | not in the paper | The bound of the first assertion of P-3.5 is attained by the complete graph of every odd order `n`: `3·h(K_n) = n + 4·cm(K_n) + 2`. In particular by `K_1` and `K_3`. It does not use P-3.5; it uses the two values from M0. Added because `blueprint/PAPER_ISSUES.md` recorded tightness at `K_1` and `K_3` as a hand check, and because it pins the Lean statement of P-3.5 from the other side: for these graphs the inequality as stated is an equality. | S-M0.hadwiger-top, S-M0.cm-top | `Hadwiger.three_mul_hadwigerNumber_top_of_odd` | DONE |
 
-### The hole relation (planned for M3)
+### The hole relation (added at M3)
 
 | ID | Kind | Paper location | Statement | Depends on | Lean | Status |
 |---|---|---|---|---|---|---|
-| S-M3.hole-nonvacuous | sanity (planned) | not in the paper | Some `HoleData` has two elements with a hole between them, so the hole relation is not vacuous. To be proved at M3, on the user's decision of 2026-10-07 (question Q4 of `blueprint/M0_REVIEW_SHEET.md`). A hand example is on that sheet under R-10; it is an example worked on paper, not a proof. | D-2.0, D-2.1 | — | NOT_STATED |
+| S-M3.hole-nonvacuous | sanity (requested) | not in the paper | Some `HoleData` has two elements with a hole between them, so the hole relation is not vacuous. Exact Lean form: `∃ D : HoleData (Fin 2 → ZMod 2) (Fin 2 → ZMod 2) (Fin 2), D.Hole 0 1`. That is: `X` and `V` are both `F_2^2`, `Ω` has two elements, and the hole is between them. The data is built inside the proof; the statement asserts only that such data exists. It is the hand example of `blueprint/M0_REVIEW_SHEET.md`, item R-10, unchanged, and it checked in Lean as written there. `X` and `V` are finite-dimensional and `Ω` is finite, so the example also lies in the class of the paper, which assumes both. Proved at M3 on the user's decision of 2026-10-07 (question Q4 of that sheet). **The form of this statement was chosen by the worker at M3 and has not been reviewed by the user.** | D-2.0, D-2.1 | `Hadwiger.exists_holeData_hole` | DONE |
 
 ## Steps of the paper's proofs, proved as separate lemmas
 

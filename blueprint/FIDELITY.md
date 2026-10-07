@@ -260,6 +260,13 @@ used unchanged.
 - Status update after the sign-off (M3, 2026-10-07): Lemma 2.2 is proved in full for the
   structure as it is defined here, that is, without assuming `X`, `V` finite-dimensional
   or `Ω` finite. No proof needed finiteness and no hypothesis was added.
+- Status update after the sign-off (M3, 2026-10-07): the non-vacuity lemma of question Q4
+  is proved, `Hadwiger.exists_holeData_hole` (blueprint S-M3.hole-nonvacuous), so Lean now
+  does show that `Hole` can hold. Its data is the hand example of the review sheet,
+  unchanged; it checked in Lean as written. It is a new statement, added after the
+  sign-off: its exact form is in its blueprint row, was chosen by the worker, and is not
+  covered by the sign-off above. By the standing decision that checks and helper lemmas
+  get blueprint rows and no fidelity notes, it has no note of its own.
 
 ### F-POSGRAPH — the graph on positions (new) — D-2.G
 

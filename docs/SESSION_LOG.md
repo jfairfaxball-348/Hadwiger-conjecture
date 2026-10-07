@@ -1257,3 +1257,172 @@ and `chromaticNumber`. The script is not in the repository.
 - `blueprint/MILESTONES.md`: the next task and the state of M3.
 - Doc comments in `Hadwiger/HoleRelation.lean`: the file header; how each of the three
   proofs goes; the status sentence of the second half of equation (2.3).
+
+### The non-vacuity lemma, S-M3.hole-nonvacuous
+
+In a commit of its own, after the commit with the three proofs, so that the new statement
+can be changed or dropped without touching the proofs of the paper's results.
+
+**The exact form.** It is a new statement. The worker chose the form. **It has not been
+reviewed by the user.**
+
+```lean
+theorem exists_holeData_hole :
+    ∃ D : HoleData (Fin 2 → ZMod 2) (Fin 2 → ZMod 2) (Fin 2), D.Hole 0 1
+```
+
+Full name `Hadwiger.exists_holeData_hole`, in the new file
+`Hadwiger/Sanity/HoleRelation.lean`. In words: there is linear data in the sense of
+Section 2.1 (blueprint D-2.0) with `X` and `V` both equal to `F_2^2` and `Ω` a set of two
+elements, in which those two elements have a hole between them (Definition 2.1, D-2.1).
+
+**Why this form, and what else it could have been.**
+
+1. Fixed small types, not "there exist `X`, `V`, `Ω`". An existential over types would
+   carry the vector-space instances inside the statement and bring in a choice of
+   universe. Fixed types are simpler to read and say more: they show how small an example
+   is.
+2. `D.Hole 0 1` for the two named elements, not `∃ i j, D.Hole i j`. It is the stronger
+   statement and it names the pair. That the two are different elements is visible, and
+   by Lemma 2.2 a hole needs different elements in any case.
+3. The data is built inside the proof, not given a name by a `def`. A named example would
+   be a new definition in the sources for the sake of one check. The cost: the statement
+   does not display the data. The doc comment does, and the proof is the witness.
+4. `X`, `V` are finite-dimensional and `Ω` is finite. So the example lies in the class of
+   the paper, and not only in the larger class that the Lean structure allows (the fidelity
+   note F-HOLE dropped "finite-dimensional" and "finite").
+
+**What it does not say.** Nothing about the paper's construction. That the paper's own
+`Ω_n` has holes, and many of them, is the content of Theorem 3.1. The lemma shows only that
+Definition 2.1 as transcribed can be satisfied, so that Lemma 2.2 and equation (2.3) are
+not true for an empty reason. Lemma 2.2 pins the relation from above; this pins it from
+below.
+
+**The hand example checked in Lean as written.** The instruction asked for a record if it
+did not; it did, so the record is that it did. The data of
+`blueprint/M0_REVIEW_SHEET.md`, item R-10, was entered unchanged:
+
+| Sheet | Lean |
+|---|---|
+| `X = V = F_2^2`, `Ω = {0, 1}` | `Fin 2 → ZMod 2`, `Fin 2`; the sheet's `x_1`, `x_2` are Lean's `x 0`, `x 1` |
+| `a(x) = x_1`, `T = 0` | `LinearMap.proj 0`, `0` |
+| `U_0 = id`, `U_1` swaps the coordinates | `![LinearMap.id, LinearMap.funLeft (ZMod 2) (ZMod 2) (Equiv.swap 0 1)]` |
+| `u_0(y) = y_2`, `u_1(y) = y_1` | `![LinearMap.proj 1, LinearMap.proj 0]` |
+| `λ_0 = (1, 0)`, `λ_1 = (0, 1)` | `![1, 0]`, `![0, 1]` |
+
+The five obligations (injectivity of both `U_i`, the sharing equation, the two functional
+identities, the parity equation) were each proved separately. No correction to the sheet
+was needed and no other example was tried.
+
+**Where it lives.** In a new file under `Hadwiger/Sanity/`, not in
+`Hadwiger/HoleRelation.lean`, so that the file for Section 2.1 holds only what is in the
+paper. The new file imports `Hadwiger/HoleRelation.lean`; the root module imports the new
+file; nothing else does. It declares one theorem and nothing else: no instance, attribute,
+notation or `simp` lemma.
+
+**No fidelity note.** By the standing decision, checks and helper lemmas get blueprint
+rows and no fidelity notes. The exact form is in the blueprint row, and a status-update
+line under F-HOLE says the lemma exists and is outside the sign-off.
+
+### The end state, against the instruction
+
+After the second commit:
+
+- `check_ledger.py`: 1 `sorry` (Theorem 1.1), 1 row.
+- `axiom_audit.py`: 156 entries (`DONE` 34, `PROVED_MODULO` 4, `STATED` 1, `DEFINED` 11,
+  `MATHLIB` 2, `NOT_STATED` 104), 96 declarations. This is the end state the instruction
+  gave for the case that no row is added. **No row was added**: S-M3.hole-nonvacuous had
+  its row since M0 and no helper lemma was needed. The audited declarations went from 95
+  to 96; the one new name is `Hadwiger.exists_holeData_hole`.
+- `#print axioms Hadwiger.exists_holeData_hole`: `propext`, `Classical.choice`,
+  `Quot.sound`.
+- The kind of the row was renamed from `sanity (planned)` to `sanity (requested)`, since it
+  is no longer planned; the list of kinds in the blueprint says so.
+- Reverse check: 94 declarations in the Lean sources, all named in the blueprint.
+- The `pp.all` comparison was run again on the final tree: byte-identical to `main`
+  `564e9f0`. The diff of the tracked Lean files against `main` adds one declaration-level
+  line, `import Hadwiger.Sanity.HoleRelation` in the root module; the new file has one
+  `theorem` line.
+
+### Records brought into step with the lemma
+
+Blueprint (the row; the kinds; the two sentences that said "planned"), ledger (the remark
+on the `Sanity` files), `blueprint/FIDELITY.md` (a second status-update line under F-HOLE),
+`START_HERE.md` (one statement is not yet signed off), `docs/LEAN_WORKFLOW.md` (the layout
+row for `Hadwiger/Sanity/`), the header of `Hadwiger/HoleRelation.lean` (one sentence
+pointing to the check), and `blueprint/MILESTONES.md`: the state of M3, the next task, and
+under M4 the list of what the user has to decide before M4 starts.
+
+### Lean notes
+
+- `CharTwo.add_self_eq_zero` applies in `ZMod 2` with no setup; the instance is
+  `ZMod.charP`.
+- `LinearMap.congr_fun h x`, given the expected type by a `have … : … :=`, unfolds
+  composition, the sum of functionals and the project's `r` by definition. No lemma about
+  `r` was needed in `Hadwiger/HoleRelation.lean`. In the sanity file `simp [HoleData.r]`
+  unfolds it.
+- After rewriting with the sharing equations (or with `T_symm`), each pair is literally
+  `y + y`, and `simp only [CharTwo.add_self_eq_zero]` then also closes `0 + 0 + 0 = 0`.
+- `decide` refutes `0 = 1 + 1 + 1 + 0` in `ZMod 2`.
+- `Finset.two_lt_card` gives three distinct elements as
+  `∃ a ∈ s, ∃ b ∈ s, ∃ c ∈ s, a ≠ b ∧ a ≠ c ∧ b ≠ c`.
+- A family of two linear maps can be written `![f, g]` and taken apart with `fin_cases`.
+  `LinearMap.funLeft R M f` is precomposition with `f`; it is injective when `f` is
+  surjective (`LinearMap.funLeft_injective_of_surjective`).
+
+### Tooling notes
+
+- The `cd` problem of the M1 entry again: one command that changed into the Mathlib folder
+  moved the working directory for the commands after it. Nothing was written in the wrong
+  place. Every command now starts with an absolute `cd`.
+- A wrapped doc-comment line that began with the word `open` was matched by the grep for
+  declaration-level lines. The sentence was reworded, so that the check is empty and does
+  not need explaining.
+- To split the work into two commits that each pass the three commands, the pieces of the
+  second (the new file, the import, five places in the blueprint, one sentence of a file
+  header) were set aside in the scratch folder, the first commit was built, checked,
+  committed and pushed without them, and they were then restored. Before restoring, the
+  saved copies were diffed against the committed files and differed only in those pieces.
+
+### Not done, and why
+
+- M4: not started, by instruction. Section 3 of the paper
+  (`paper/build/sections/03-distributions.tex`, lines 1 to 206) was read again, only in
+  order to list what the user has to decide first. No Lean for M4 was written and no M4
+  definition was drafted.
+- Theorem 1.1 was not touched.
+- No sanity check beyond the one requested was added. One suggests itself and was **not**
+  written: that the bound `α ≤ 2` of equation (2.3) is attained by some graph on positions
+  (the list `0, 1` in the example above has no edge), which would be to equation (2.3)
+  what S-M2.tight is to Proposition 3.5. The user has been told.
+- Upstream's Lean code for this paper was not consulted, and no statement was compared
+  with upstream's. Whether upstream has published more Lean for this paper since the
+  reorganisation session was not checked in this session.
+- No subagent was used.
+
+### Push and CI
+
+| Commit | What | On the remote | CI |
+|---|---|---|---|
+| `a07528d` | the three proofs and their records | yes; `git ls-remote` equal to `HEAD` after the push | passed, run `37692531079` |
+
+The commit that contains this table adds the non-vacuity lemma; its own CI result is
+therefore not recorded here. The push ran with `GCM_INTERACTIVE=never GIT_TERMINAL_PROMPT=0`
+and did not prompt. `main` on the remote stayed at `564e9f0`. The run was matched to the
+commit by hash.
+
+### Questions put to the user at the end of the session
+
+In one prompt, as instructed:
+
+1. the sign-off of the form of S-M3.hole-nonvacuous;
+2. whether to merge `m3-hole-relation` into `main`, and how much of it;
+3. the decisions that M4 waits for (`blueprint/MILESTONES.md`, under M4).
+
+### Merge
+
+Nothing was merged into `main` in the work recorded above. If a merge is approved it is to
+be a fast-forward, after CI has passed on the commit merged. **If `main` contains this
+commit, the merge was done**; `git log main` is the record. The user's answers, if they
+come after this commit, belong at the head of the next session's entry, as was done above
+for M1 and M2.

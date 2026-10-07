@@ -22,7 +22,8 @@ Rules (binding, from `AGENTS.md`):
   second assertion of P-3.5 and C-1.2 were removed at M1 by proofs, the row for the first
   assertion of P-3.5 at M2, and the three rows for the two open parts of L-2.2 and the
   first half of S-2.3 at M3.)
-- The files under `Hadwiger/Sanity/` (added at milestone M0) do not contain it.
+- The files under `Hadwiger/Sanity/` (three added at milestone M0, one at M3) do not
+  contain it.
 
 | File | Declaration | Kind | Blueprint ID | Milestone | Note |
 |---|---|---|---|---|---|

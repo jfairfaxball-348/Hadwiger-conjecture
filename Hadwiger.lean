@@ -8,6 +8,7 @@ import Hadwiger.Main
 import Hadwiger.Sanity.Minor
 import Hadwiger.Sanity.ConnectedMatching
 import Hadwiger.Sanity.FractionalColoring
+import Hadwiger.Sanity.HoleRelation
 
 /-!
 # Lean 4 formalisation of "A counterexample to Hadwiger's conjecture"
