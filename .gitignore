@@ -50,3 +50,11 @@ ENV/
 .env
 .env.*
 !.env.example
+
+# Lean / Lake build outputs and fetched dependencies
+/.lake/
+/build/
+
+# Abandoned RL70 working tree: it lives on branch rl70-frontier-push, not here.
+# Local leftovers of that tree (build products) are not part of this branch.
+/work/
