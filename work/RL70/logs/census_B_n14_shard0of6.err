@@ -4,3 +4,6 @@ progress 2000/72772 tasks, nodes=176099 tests=779318 sols=0 t=6s
 progress 8000/72772 tasks, nodes=2424366 tests=19946512 sols=0 t=62s
 progress 14000/72772 tasks, nodes=8214901 tests=67734124 sols=0 t=227s
 progress 20000/72772 tasks, nodes=16217861 tests=143768790 sols=0 t=448s
+progress 26000/72772 tasks, nodes=26322811 tests=248445639 sols=0 t=798s
+progress 32000/72772 tasks, nodes=37248423 tests=375731173 sols=0 t=1188s
+progress 38000/72772 tasks, nodes=44308560 tests=464010778 sols=0 t=1418s
