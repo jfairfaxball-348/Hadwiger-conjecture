@@ -267,6 +267,10 @@ used unchanged.
   sign-off: its exact form is in its blueprint row, was chosen by the worker, and is not
   covered by the sign-off above. By the standing decision that checks and helper lemmas
   get blueprint rows and no fidelity notes, it has no note of its own.
+- Status update after the sign-off (M3, 2026-10-07, later): the user accepted the form of
+  `Hadwiger.exists_holeData_hole` as stated. That acceptance is a separate act from the
+  sign-off of this note; it is recorded in the blueprint row S-M3.hole-nonvacuous and
+  quoted in `docs/SESSION_LOG.md`, M3 session.
 
 ### F-POSGRAPH — the graph on positions (new) — D-2.G
 

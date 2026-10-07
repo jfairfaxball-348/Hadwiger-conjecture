@@ -57,10 +57,11 @@ are not results of the paper. The statement layer was signed off by the user on 
 The sign-off covers the definitions and statements as they stood then; anything added or
 changed later needs its own.
 
-One sanity check has been added since and is **not yet signed off**: that the hole
-relation of Section 2.1 can hold at all (`Hadwiger.exists_holeData_hole`, blueprint
-S-M3.hole-nonvacuous, milestone M3). It is proved; what awaits the user's review is the
-form of its statement, which the worker chose.
+One sanity check has been added since: that the hole relation of Section 2.1 can hold at
+all (`Hadwiger.exists_holeData_hole`, blueprint S-M3.hole-nonvacuous, milestone M3). It is
+proved, and the user accepted the form of its statement on 2026-10-07 (recorded in its
+blueprint row and in `docs/SESSION_LOG.md`, M3 session). Nothing in the Lean sources is
+awaiting review.
 
 ## The old programme
 

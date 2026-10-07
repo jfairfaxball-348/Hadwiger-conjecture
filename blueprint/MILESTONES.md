@@ -5,14 +5,17 @@ Statuses of individual results are in `blueprint/BLUEPRINT.md`, never here.
 
 ## The single next task
 
-**M4: Proposition 3.4, in abstract form — its first slice, the statement layer of Sections
-3.1 and 3.2.** It is **not to be started** until the user has decided the points listed
-under M4 below ("To be decided by the user before M4 starts"). That list is the block; the
-first slice is the next bounded task once it is lifted.
+**M4, first slice: the statement layer of Sections 3.1 and 3.2, statements only.** The new
+definitions (a law on a finite type and the three caps; units and the conflict relation;
+relative entropy; the random list of `m` positions) and the statements of Lemma 3.2, Lemma
+3.3 and Proposition 3.4, each with a fidelity note and each `sorry`, put to the user for
+sign-off. **No proof of M4 is to be written before that sign-off.** The form of
+Proposition 3.4 and the method were decided by the user on 2026-10-07; see "Decided by the
+user" under M4 below. Nothing of M4 has been started.
 
 M3 was completed on 2026-10-07 on branch `m3-hole-relation`: Lemma 2.2 and equation (2.3)
-are proved, and the non-vacuity lemma for the hole relation is stated and proved. The form
-of that lemma's statement awaits the user's review.
+are proved, and the non-vacuity lemma for the hole relation is stated and proved. The user
+accepted the form of that lemma's statement the same day.
 
 M2 was completed on 2026-10-07 on branch `m2-proposition-3-5`: Proposition 3.5 is proved.
 From here the final theorem rests on one `sorry` only, Theorem 1.1. Since M3 that is the
@@ -224,9 +227,10 @@ M1 to M4 are independent of M5 to M17. When M1, M2 and M17 are done, T-FINAL is 
   - S-M3.hole-nonvacuous is stated and proved, in a commit of its own:
     `Hadwiger.exists_holeData_hole`, in the new file `Hadwiger/Sanity/HoleRelation.lean`
     (63 lines, comments included). Its exact form is in its blueprint row. The hand example
-    of R-10 checked in Lean as written; no other example was needed. It is a new statement
-    and **unreviewed**: the worker chose its form. It has a blueprint row and, by the
-    standing decision on checks and helper lemmas, no fidelity note.
+    of R-10 checked in Lean as written; no other example was needed. It is a new statement.
+    The worker chose its form and the user accepted it as stated on 2026-10-07
+    (`docs/SESSION_LOG.md`, M3 session). It has a blueprint row and, by the standing
+    decision on checks and helper lemmas, no fidelity note.
   - With it, M3 as a whole added 140 lines to the Lean sources, comments included
     (1,656 lines before, 1,796 after), against the estimate of 250 (150–400).
   - No blueprint row was added at M3. The count is still 156 entries.
@@ -234,21 +238,30 @@ M1 to M4 are independent of M5 to M17. When M1, M2 and M17 are done, T-FINAL is 
 ## M4 — Proposition 3.4, abstractly
 
 - What: Lemma 3.2 (information projection), Lemma 3.3 (terminal cut), and Proposition 3.4
-  (fingerprints, then the union bound). Proposed form: **abstract**. For any finite set
-  `Ω` with a probability law `μ` and a symmetric, loopless, triangle-free relation, and
-  any numbers `M`, `D'`, `ε`, `m` satisfying explicit numerical inequalities, if every law
-  on units obeying the three caps has conflict probability at least `ε`, then some list of
-  `m` elements has position graph with `cm < m/100`. The construction is not needed, so M4
-  does not wait for M5.
-- A recorded difference from the paper: Proposition 3.4 states probability
-  `1 − exp(−Ω(m))` with a constant uniform in `n`. Theorem 1.1 uses only positive
-  probability. The proposal is to prove existence. That is weaker than the proposition as
-  printed and must be recorded as such in the blueprint when stated.
+  (fingerprints, then the union bound). Form, decided by the user on 2026-10-07:
+  **abstract, with an explicit bound.** For any finite set `Ω` with a probability law `μ`
+  and a symmetric, loopless, triangle-free relation, and any numbers `M`, `D'`, `ε`, `m`:
+  if every law on units obeying the three caps has conflict probability at least `ε`, then
+  the probability that a list of `m` independent `μ`-elements has position graph with
+  `cm ≥ m/100` is at most an explicit expression in those numbers and `|Ω|`. As a
+  corollary, when that expression is below 1, some list of `m` elements has position graph
+  with `cm < m/100`. (`α ≤ 2` holds for every list, by S-2.3.) The construction is not
+  needed, so M4 does not wait for M5. The exact expression is not fixed yet; it is part of
+  the first slice.
+- Recorded differences from the paper, to go into the fidelity note when the statement is
+  written. (1) The statement is about any such `Ω`, `μ` and relation; the paper's is about
+  its own `Ω_n`, `μ_n` and hole relation, which become an instance once M5 exists. (2) The
+  paper's "probability `1 − exp(−Ω(m))`", with a constant independent of `n`, becomes an
+  explicit bound in each instance. That this bound is `exp(−Ω(m))` uniformly in `n` for
+  the paper's parameters is a separate statement about those parameters, left to M17.
+  Theorem 1.1 uses only the corollary.
 - Mathlib gaps, the main cost of this milestone:
   - max-flow/min-cut is not in Mathlib. Lemma 3.3 needs it with real capacities on a
     three-layer network. Options: prove that special case directly from a maximiser on a
     compact polytope, as the paper does; or derive it from Mathlib's hyperplane separation
-    for cones.
+    for cones. By the user's decision of 2026-10-07 the paper's argument is the one to
+    follow; the second option is a fallback only if a step of it fails or it proves far
+    more expensive, and is then recorded.
   - the information-projection lemma (Csiszár) is not in Mathlib. Mathlib's `klDiv` is
     measure-theoretic and extended-real valued; a finite-sum relative entropy with its
     convexity and one-sided derivative will be needed.
@@ -258,38 +271,35 @@ M1 to M4 are independent of M5 to M17. When M1, M2 and M17 are done, T-FINAL is 
     bound, `Nat.choose` estimates.
 - Size: 4,500 lines (3,000–6,000). The TeX is short (about 10 KB) but three pieces of
   missing infrastructure sit underneath it, so the ratio is taken well above the median.
-- **To be decided by the user before M4 starts** (listed at the end of M3, 2026-10-07,
-  after Section 3 of the paper was read again; nothing of M4 has been started). The first
-  two change what is proved, not how, so they need approval under `AGENTS.md`:
-  1. *Abstract form, or wait for the construction?* The paper's Proposition 3.4 is about
-     the sampled graph on the paper's own `Ω_n`, which does not exist in Lean until M5.
-     The proposal above states it for any finite `Ω` with a law `μ` and any symmetric,
-     loopless, triangle-free relation on it, so that M4 can go before M5; the paper's proposition is then the instance at
-     `Ω_n`. That is a generalisation of the printed statement. Approve it, or put M5 first.
-  2. *Existence, or the probability bound?* The paper asserts probability
-     `1 − exp(−Ω(m))` with a constant independent of `n`. Theorem 1.1 uses only that the
-     probability is positive. Three choices: (a) prove existence only, which is weaker than
-     the proposition as printed; (b) prove an explicit bound on the failure probability,
-     with existence as a corollary, which is faithful but needs "`Ω(m)`, uniformly in `n`"
-     turned into an explicit expression; (c) state both now and prove (a) first.
-  3. *Statements before proofs?* M4 needs new definitions (a law on a finite type and the
-     three caps of equation `eq:raw-law-caps`, units and the conflict relation, relative
-     entropy, the random list of `m` positions) and three new statements (Lemma 3.2,
-     Lemma 3.3, Proposition 3.4). None is covered by the sign-off of 2026-10-07. Proposed:
-     M4 opens with a statements-only slice, with fidelity notes, put to the user for
-     sign-off before any proof is written, as M0 was. The slice would also settle two
-     things inside those definitions, for the user to accept or change: whether a law is
+- **Decided by the user on 2026-10-07**, at the end of the M3 session. Five points were
+  listed for the user after Section 3 of the paper had been read again. Points 1 to 4 were
+  then asked, in two questions; point 5 was not asked. The questions, the options as shown
+  and the answers are quoted in `docs/SESSION_LOG.md`, M3 session. Nothing of M4 has been
+  started.
+  1. *Abstract form; M4 does not wait for M5.* Proposition 3.4 is stated for any finite
+     `Ω` with a law `μ` and any symmetric, loopless, triangle-free relation on it. The
+     paper's proposition, which is about its own `Ω_n`, is then an instance. This is a
+     generalisation of the printed statement, approved as such.
+  2. *An explicit bound on the failure probability, with existence as a corollary* when
+     the bound is below 1. Not existence alone. That the bound is `exp(−Ω(m))` uniformly
+     in `n` for the paper's parameters becomes a separate statement, left to M17.
+  3. *Statements first.* M4 opens with a statements-only slice: the new definitions (a law
+     on a finite type and the three caps of equation `eq:raw-law-caps`, units and the
+     conflict relation, relative entropy, the random list of `m` positions) and the three
+     statements (Lemma 3.2, Lemma 3.3, Proposition 3.4), each with a fidelity note, put to
+     the user for sign-off before any proof is written, as M0 was. None of them is covered
+     by the sign-off of 2026-10-07. Two things inside those definitions are still open and
+     are to be proposed in that slice, for the user to accept or change: whether a law is
      a real-valued weight function with finite sums, as `FractionalColoring` is, or
-     Mathlib's `PMF` or `Measure`; and which explicit inequalities among `M`, `D`, `ε`,
-     `m` and `|Ω|` replace the paper's "`o(m)`" and "sufficiently large `n`".
-  4. *Must the proofs be the paper's?* At M1 to M3 every Lean proof followed the paper's.
-     For Lemma 3.3 the paper gives a residual-network argument for max-flow/min-cut; a
-     proof by duality or separation may be much shorter in Lean, and would prove the same
-     statement without checking the paper's argument. Say whether a different proof of the
-     paper's statement is acceptable where it is cheaper, or whether the paper's argument
-     is to be followed, as a check on the paper.
-  5. *Order of the slices.* Proposed: statements; Lemma 3.2; Lemma 3.3; the fingerprint
-     procedure; the union bound and Proposition 3.4. Each a branch and a merge of its own.
+     Mathlib's `PMF` or `Measure`; and which explicit expression in `M`, `D`, `ε`, `m`
+     and `|Ω|` replaces the paper's "`o(m)`" and "sufficiently large `n`".
+  4. *The proofs follow the paper's arguments*, as at M1 to M3. A departure is made only
+     where a step fails or Mathlib makes it far more expensive, and each is recorded. A
+     step of the paper that fails is a paper issue first (`AGENTS.md`).
+  5. *Order of the slices: not asked as a question.* The first slice is fixed by point 3.
+     For the rest the worker's proposal stands until the user says otherwise: Lemma 3.2;
+     Lemma 3.3; the fingerprint procedure; the union bound and Proposition 3.4. Each a
+     branch and a merge of its own.
 
 ## M5 — The construction and the statement of Theorem 3.1
 
@@ -351,6 +361,9 @@ blueprint; below are the Mathlib gaps and what makes it hard.
   be met in the stated order, with explicit, very large constants (`g = 10^9 + 1`,
   `M = 2^1000`). Arithmetic, not mathematics, but the requirements on `M_0` must first be
   collected from every earlier proof (PI-005). Then Theorem 1.1 from M4 and Theorem 3.1.
+  Also here, by the user's decision of 2026-10-07 on the form of Proposition 3.4 (see M4):
+  that the explicit bound of M4 is `exp(−Ω(m))` uniformly in `n` for the paper's
+  parameters. Theorem 1.1 does not need it.
 
 ## Order and gates
 

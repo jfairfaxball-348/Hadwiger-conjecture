@@ -1428,3 +1428,88 @@ be a fast-forward, after CI has passed on the commit merged. **If `main` contain
 commit, the merge was done**; `git log main` is the record. The user's answers, if they
 come after this commit, belong at the head of the next session's entry, as was done above
 for M1 and M2.
+
+### The user's answers
+
+The answers came in the same session, after commit `b5dd7ed` and after CI had passed on it
+(run `37693573488`). So they are recorded here, in the records-only commit that the merge
+option below names, and not at the head of the next entry. This supersedes the last
+sentence of "Merge" above.
+
+What the user had been shown in the conversation before the prompt: the state of the
+branch and of the audit; the new statement in full; that one sentence of the doc comment of
+`le_two_mul_chromaticNumber_positionGraph` had been corrected; that Section 3 had been read
+again to prepare the list for M4; and the five points M4 waited for.
+
+One prompt, four questions, each answered by choosing an option. Verbatim:
+
+```text
+Question 1 (Sign-off): Do you sign off the form of the new statement S-M3.hole-nonvacuous (Hadwiger.exists_holeData_hole)?
+  -> Accept as stated (Recommended)
+Question 2 (Merge): M3 is finished on branch m3-hole-relation: L-2.2, S-2.3 and S-M3.hole-nonvacuous are DONE by the audit, 1 sorry left (Theorem 1.1), no signed-off statement changed, CI passed on all three commits. What should go into main?
+  -> Merge all of it (Recommended)
+Question 3 (M4 statement): M4 (not started): what should the Lean statement of Proposition 3.4 be?
+  -> Abstract, explicit bound (Recommended)
+Question 4 (M4 method): M4 (not started): how should it proceed?
+  -> Statements first; paper's proofs (Recommended)
+```
+
+The descriptions of the chosen options, as shown:
+
+```text
+1. The blueprint row, START_HERE and the F-HOLE status line are changed from 'unreviewed' to 'accepted by John Fairfax-Ball, 2026-10-07', with this question and answer quoted in the session log.
+2. Fast-forward main from 564e9f0 to the head of m3-hole-relation: a07528d (the three proofs), 6fa5246 (the non-vacuity lemma), b5dd7ed (log), plus one records-only commit that writes your answers to this prompt into the blueprint and the session log (no Lean change; CI must pass on it first). Push main and check the remote. This approval covers this merge only.
+3. For any finite Ω, law μ and symmetric, loopless, triangle-free relation: an explicit upper bound on the probability that the sampled graph has cm ≥ m/100, with existence as a corollary when the bound is below 1. Does not wait for M5. That the bound is exp(−Ω(m)) uniformly in n for the paper's parameters becomes a separate statement, left to M17.
+4. M4 opens with a statements-only slice (laws and the three caps, units and conflicts, relative entropy, Lemma 3.2, Lemma 3.3, Proposition 3.4, each with a fidelity note) put to you for sign-off before any proof. Proofs then follow the paper's arguments, as at M1 to M3; a departure is made only where a step fails or Mathlib makes it far more expensive, and each is recorded.
+```
+
+Shown beside the first option, as a preview:
+
+```text
+theorem Hadwiger.exists_holeData_hole :
+    ∃ D : HoleData (Fin 2 → ZMod 2)
+                     (Fin 2 → ZMod 2)
+                     (Fin 2),
+      D.Hole 0 1
+
+X = V = F_2^2, Ω = {0, 1}.
+Data (R-10, unchanged), built inside the proof:
+  a(x) = x_1,  T = 0
+  U_0 = id,    U_1 = swap coordinates
+  u_0(y) = y_2, u_1(y) = y_1
+  witnesses (1,0) and (0,1)
+
+Axioms: propext, Classical.choice, Quot.sound
+```
+
+The options not chosen, by label. Question 1: "Change requested", "Defer the review".
+Question 2: "Merge the proofs only" (a fast-forward to `a07528d`), "Do not merge yet".
+Question 3: "Abstract, existence only", "Wait for M5, as printed", "Decide later".
+Question 4: "Statements first; any valid proof", "Decide later".
+
+So that the weight of the answers can be judged: in all four questions the option chosen
+is the one the worker had marked "(Recommended)". The recommendations were the worker's.
+
+What was done on these answers, in the commit that contains this section:
+
+- Question 1. The blueprint row S-M3.hole-nonvacuous now says the form was accepted by the
+  user; so does `START_HERE.md`; a status-update line under F-HOLE says the same. The
+  acceptance covers the statement of `Hadwiger.exists_holeData_hole` as it is at this
+  commit. No Lean was changed.
+- Questions 3 and 4. `blueprint/MILESTONES.md`: the form of Proposition 3.4 and its
+  recorded differences from the paper; the list "Decided by the user" in place of the list
+  of points to decide; the note on max-flow/min-cut; a note under M17; and the single next
+  task. The blueprint row P-3.4 points to it. The fifth point of the list, the order of the
+  slices, was not asked as a question; it is recorded as the worker's proposal.
+- Scope of this commit: `blueprint/BLUEPRINT.md`, `blueprint/MILESTONES.md`,
+  `blueprint/FIDELITY.md`, `START_HERE.md` and this log. No Lean file and no ledger row
+  changed, and the audit gives the same tally as before it: 1 `sorry`, 156 entries, 96
+  declarations.
+- Question 2. The merge is carried out after this commit, so it cannot be recorded in it:
+  push the branch; wait for CI on this commit; fast-forward `main` to it; run the three
+  commands on `main`; push `main`; check `git ls-remote` against `HEAD`. **If `main`
+  contains this commit, the merge was done**; `git log main` is the record. The hash of
+  this commit, the CI runs on it and on `main`, and the result of the remote check belong
+  at the head of the next session's entry.
+
+M4 was not started. Its first slice is the single next task (`blueprint/MILESTONES.md`).
