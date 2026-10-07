@@ -914,3 +914,44 @@ been told.
 - Upstream's Lean code was not consulted and no statement was compared with upstream's.
 - No subagent was used.
 
+### A sanity check added afterwards: the bound is attained
+
+In a commit of its own, after the commit above, so that it can be dropped without touching
+the proof.
+
+- `Hadwiger.three_mul_hadwigerNumber_top_of_odd`: for odd `n`,
+  `3·h(K_n) = n + 4·cm(K_n) + 2` for the complete graph on `Fin n`. Blueprint S-M2.tight,
+  kind "sanity (extra)", in the sanity section. It is not in the paper.
+- Why: `blueprint/PAPER_ISSUES.md` recorded "tight for `K_1` and `K_3`" as a hand check of
+  Proposition 3.5. Both are instances (`n = 1`, `n = 3`), and both instances were
+  elaborated once as a check. It also pins the Lean statement of the first assertion from
+  the other side, as the M0 lemmas do for the definitions: the assertion is proved, so it
+  does not claim too much; at these graphs it is an equality, so it does not claim too
+  little there.
+- It does not use Proposition 3.5, only `hadwigerNumber_top` and
+  `connectedMatchingNumber_top` from M0, and `omega`.
+- This was the worker's decision; the instruction did not ask for it. The user has been
+  told and may have it removed.
+- After it: `axiom_audit.py` reports 156 entries (`DONE` 31) and 95 declarations; the
+  sources have 93 declarations, all named in the blueprint. Still 4 `sorry`. The 14
+  signed-off statements are again byte-identical to `main`.
+
+### Push and CI
+
+| Commit | What | On the remote | CI |
+|---|---|---|---|
+| `d915e33` | the proof of Proposition 3.5 and the records | yes; `git ls-remote` equal to `HEAD` after the push | passed, run `37644606479` |
+
+The commit that contains this table adds the sanity check above; its own CI result is
+therefore not recorded here. Pushes ran with interaction disabled and did not prompt.
+`main` on the remote stayed at `9e30110`.
+
+### Merge
+
+Nothing was merged into `main` in the work recorded above. The user is being asked, in the
+one prompt at the end of the session, whether to merge `m2-proposition-3-5`. If approved it
+is to be a fast-forward to the commit that contains this entry, after CI has passed on that
+commit. **If `main` contains this commit, the merge was done**; `git log main` is the
+record. The user's answer, if it comes after this commit, belongs at the head of the next
+session's entry, as was done above for M1.
+

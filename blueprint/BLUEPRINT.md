@@ -20,7 +20,7 @@ is stated or proved, this file is wrong and must be fixed; nothing else is autho
 
 | Column | Meaning |
 |---|---|
-| ID | `T-` theorem, `P-` proposition, `L-` lemma, `C-` corollary, `D-` definition or construction, `S-` unnumbered statement made in running text. Numbers follow the paper (`L-2.2` is Lemma 2.2). IDs of the form `S-M0.<name>` are the sanity checks of milestone M0, and `S-M3.<name>` those planned for M3; they are not in the paper. IDs of the form `S-M2.<name>` are the steps of the paper's proof of Proposition 3.5, each proved as a lemma at milestone M2; they are in the paper as sentences of that proof, not as separate statements. |
+| ID | `T-` theorem, `P-` proposition, `L-` lemma, `C-` corollary, `D-` definition or construction, `S-` unnumbered statement made in running text. Numbers follow the paper (`L-2.2` is Lemma 2.2). IDs of the form `S-M0.<name>` are the sanity checks of milestone M0, and `S-M3.<name>` those planned for M3; they are not in the paper. IDs of the form `S-M2.<name>` are the steps of the paper's proof of Proposition 3.5, each proved as a lemma at milestone M2; they are in the paper as sentences of that proof, not as separate statements. The one exception is `S-M2.tight`, a sanity check of the statement of Proposition 3.5 that is not in the paper. |
 | Kind | What the paper calls it. |
 | Paper location | Section, number, and the TeX label in the paper's source. |
 | Statement | A short paraphrase. The paper is the authority for the exact statement. |
@@ -259,6 +259,8 @@ result of the paper.** They were proved at milestone M0 to pin the new definitio
 statement layer from both sides: a definition that was accidentally too weak or too strong
 would make one of them false. Lean files: `Hadwiger/Sanity/Minor.lean`,
 `Hadwiger/Sanity/ConnectedMatching.lean`, `Hadwiger/Sanity/FractionalColoring.lean`.
+One later entry, S-M2.tight, was proved at M2 and is in `Hadwiger/MatchingMinor.lean`; it
+pins the statement of Proposition 3.5, not a definition.
 
 Since M1, `Hadwiger/ChromaticBounds.lean` imports `Hadwiger/Sanity/FractionalColoring.lean`
 and the proofs of S-1.b, S-1.c and C-1.2 use support lemmas of S-M0.chif-support and
@@ -275,7 +277,8 @@ Since M2, `Hadwiger/MatchingMinor.lean` imports `Hadwiger/Sanity/Minor.lean` and
 Kinds used in this section:
 
 - `sanity (M0 list)`: a lemma named in the M0 section of `blueprint/MILESTONES.md`;
-- `sanity (extra)`: a further check added at M0, with the reason in its Statement cell;
+- `sanity (extra)`: a further check added at M0 or later, with the reason in its Statement
+  cell;
 - `support`: lemmas used to prove the others. They are listed so that every declaration in
   `Hadwiger/Sanity/` is audited;
 - `sanity (planned)`: a check the user has asked for that is not yet stated in Lean.
@@ -320,6 +323,12 @@ Kinds used in this section:
 | S-M0.chif-attained | sanity (extra) | not in the paper | The infimum defining `χ_f` is attained by some fractional colouring. Added because the paper says "minimum" and D-1.chif is defined with `sInf`; with this lemma the two agree by proof, not by remark. | D-1.chif, S-M0.chif-totals, S-M0.chif-support | `Hadwiger.exists_fractionalColoring_total_eq` | DONE |
 | S-M0.chif-support | support | not in the paper | Totals are nonnegative; `χ_f` is at most every total and at least every lower bound of the totals; `0 ≤ χ_f ≤ \|V\|`; nonnegative weights on a finite family of independent sets covering every vertex give a fractional colouring with the same total; if every independent set has at most `k` vertices then `\|V\| ≤ k·total` for every fractional colouring. The last is the counting step of the paper's proof of Corollary 1.2 for an arbitrary bound `k`; it is not S-1.b, which is about `α(G)`; S-1.b was proved from it at M1. | D-1.fcol, D-1.chif | `Hadwiger.FractionalColoring.total_nonneg`, `Hadwiger.bddBelow_range_total`, `Hadwiger.fractionalChromaticNumber_le_total`, `Hadwiger.le_fractionalChromaticNumber`, `Hadwiger.fractionalChromaticNumber_nonneg`, `Hadwiger.fractionalChromaticNumber_le_card`, `Hadwiger.exists_fractionalColoring_of_family`, `Hadwiger.FractionalColoring.card_le_mul_total` | DONE |
 
+### Proposition 3.5 (added at M2)
+
+| ID | Kind | Paper location | Statement | Depends on | Lean | Status |
+|---|---|---|---|---|---|---|
+| S-M2.tight | sanity (extra) | not in the paper | The bound of the first assertion of P-3.5 is attained by the complete graph of every odd order `n`: `3·h(K_n) = n + 4·cm(K_n) + 2`. In particular by `K_1` and `K_3`. It does not use P-3.5; it uses the two values from M0. Added because `blueprint/PAPER_ISSUES.md` recorded tightness at `K_1` and `K_3` as a hand check, and because it pins the Lean statement of P-3.5 from the other side: for these graphs the inequality as stated is an equality. | S-M0.hadwiger-top, S-M0.cm-top | `Hadwiger.three_mul_hadwigerNumber_top_of_odd` | DONE |
+
 ### The hole relation (planned for M3)
 
 | ID | Kind | Paper location | Statement | Depends on | Lean | Status |
@@ -331,7 +340,8 @@ Kinds used in this section:
 These are sentences of a proof in the paper, each proved here as a lemma so that the Lean
 proof of the result follows the paper's line by line. They are not separate statements of
 the paper, and the result they serve has its own entry above. Lean file:
-`Hadwiger/MatchingMinor.lean`. They are listed so that every declaration is audited.
+`Hadwiger/MatchingMinor.lean`, which also holds the sanity check S-M2.tight listed under
+"Sanity checks". They are listed so that every declaration is audited.
 
 Notation of the paper's proof of Proposition 3.5: a complete-minor model with `b` branch
 sets, of which `s` are singletons and `e` have two vertices; `c = cm(G)`; `m` is the order

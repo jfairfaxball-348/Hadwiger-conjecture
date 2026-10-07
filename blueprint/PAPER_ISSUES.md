@@ -47,7 +47,7 @@ issues". Theorem 3.1 is unformalised upstream.
 | Lemma 2.2 | The six-term sum over a triangle: left sides cancel in pairs by sharing, bilinear terms by symmetry, leaving `1 + 1 + 1 = 1` in `F_2`. |
 | Lemma 3.3 | The cut capacity `Mμ(L_0) + Mμ(R_0) + 2^{DN} μ^2(E_0) < 1` gives both bounds. |
 | Proposition 3.4 | Entropy increment `≥ −log(1 − ε_N)` per recording; `(2C_0 g − D) = −2C_0 g`; fingerprint log-count `O(N^3 2^{100gN}) = o(2^{1000gN})`; fewer than `m/200 + m/200` matching edges. |
-| Proposition 3.5 | `3b ≤ m + 2s + e ≤ m + 4c − 3e + 2`; tight for `K_1` and `K_3`. (The inequality is machine-checked since M2. The tightness is still a hand check.) |
+| Proposition 3.5 | `3b ≤ m + 2s + e ≤ m + 4c − 3e + 2`; tight for `K_1` and `K_3`. (Machine-checked since M2: the inequality, and equality for every complete graph of odd order, which includes `K_1` and `K_3`.) |
 | Lemma 4.4 | `g^2/4 > 2D` and `8D/g = 32000 < g` for `D = 4000g`, `g = 10^9 + 1`. |
 | Lemma 4.5 | `(ζ − ε)u < D + ζ` with `ε < ζ/4` gives `u < K_1`; the second-peeling total stays below `K`. |
 | Lemma 5.2 | A flat triple of levels exists because `j_* ≥ 6R_* + 4`; the central binomial coefficient exceeds `2R_*`. |

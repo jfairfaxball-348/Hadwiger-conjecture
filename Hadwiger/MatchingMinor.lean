@@ -307,4 +307,21 @@ theorem hadwigerNumber_lt_of_indepNum_le_two (G : SimpleGraph V)
     have h2 : (Fintype.card V : ℝ) ≤ 2 * k := by exact_mod_cast h1
     linarith
 
+/-! ### A sanity check of the statement (not in the paper) -/
+
+/-- **Sanity (not in the paper).** The bound of the first assertion of Proposition 3.5 is
+attained by the complete graph of every odd order `n`: `3·h(K_n) = n + 4·cm(K_n) + 2`, that
+is `3n = n + 4⌊n/2⌋ + 2`. In particular it is attained by `K_1` and by `K_3`.
+
+This does not use Proposition 3.5. It uses the two values `h(K_n) = n` and
+`cm(K_n) = ⌊n/2⌋` proved at milestone M0. Its purpose is to pin the Lean statement of the
+first assertion from the other side: the assertion is proved, so it does not claim too
+much, and here it is an equality, so for these graphs it does not claim too little. -/
+theorem three_mul_hadwigerNumber_top_of_odd {n : ℕ} (hn : Odd n) :
+    3 * hadwigerNumber (⊤ : SimpleGraph (Fin n))
+      = Fintype.card (Fin n) + 4 * connectedMatchingNumber (⊤ : SimpleGraph (Fin n)) + 2 := by
+  rw [hadwigerNumber_top, connectedMatchingNumber_top, Fintype.card_fin]
+  obtain ⟨k, rfl⟩ := hn
+  omega
+
 end Hadwiger

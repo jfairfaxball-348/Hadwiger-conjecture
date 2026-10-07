@@ -173,6 +173,8 @@ M1 to M4 are independent of M5 to M17. When M1, M2 and M17 are done, T-FINAL is 
     elementary combinatorics. That is no evidence about M4 onward.
   - Observation, recorded in the doc comment and the blueprint: the Lean proof does not
     use the hypothesis that the graph is nonempty.
+  - One sanity check was added, in a commit of its own: the bound is attained by every
+    complete graph of odd order (blueprint S-M2.tight). It is not in the paper.
 
 ## M3 — Section 2.1
 
