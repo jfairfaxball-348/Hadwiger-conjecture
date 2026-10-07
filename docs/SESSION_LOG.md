@@ -361,3 +361,37 @@ arguments are not.
 
 M1 was not started.
 
+### Push and CI, final state of the session
+
+Written after the fact, in a commit of its own; the CI result of this last commit is
+therefore not recorded here.
+
+| Commit | What | On the remote | CI |
+|---|---|---|---|
+| `7598686` | sanity lemmas and their blueprint section | yes | passed, run `37602381451` |
+| `69c8d66` | review sheet, fidelity notes | yes | no run of its own (never a pushed head) |
+| `7723329` | blueprint wording fix | yes | passed, run `37604790371` |
+| `ee76bde` | the user's decisions carried out | yes | no run of its own (never a pushed head) |
+| `1e3367f` | the sign-off recorded; M0 complete | yes | passed, run `37605970094` |
+
+`main` was not touched: it is still `e482512`, equal to `origin/main`. The user has been
+asked whether to merge and had not answered when this was written.
+
+**A trap met twice: committing while a push is waiting for a sign-in.** Each push waited
+ten to twenty minutes on Git Credential Manager. Twice a commit was made during that wait.
+When the push went through, git sent the branch as it stood at that moment, including the
+new commit, but printed the older commit in its summary (for example `7723329..ee76bde`
+when the remote received `1e3367f`) and set the local remote-tracking ref to that older
+commit. So the printed summary and `git status` both understated what was on the remote.
+Nothing was wrong on the remote. How it was noticed: `git ls-remote` disagreed with the
+push output, and the list of CI runs had no run for the commit the output named.
+
+Rules that follow:
+
+- After a push, check `git ls-remote --heads origin <branch>` against `git rev-parse HEAD`.
+  Do not rely on the push summary or on `git status`.
+- Run `git fetch origin` afterwards to correct the tracking ref.
+- Better: do not commit while a push is waiting.
+- Match a CI run to a commit by its hash (`gh run list --json headSha,...`), not by its
+  title.
+
