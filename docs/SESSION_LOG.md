@@ -699,3 +699,32 @@ parts of Lemma 2.2; the first half of equation (2.3). None was touched.
   against build and not the reverse (noted at M0). M1 added no declaration, so nothing new
   is unlisted.
 
+### Push and CI
+
+Written after the fact, in a commit of its own; the CI result of that commit is therefore
+not recorded here.
+
+| Commit | What | On the remote | CI |
+|---|---|---|---|
+| `95bdb9d` | the five proofs and all the records above | yes; `git ls-remote` equal to `HEAD` after the push | passed, run `37617983613`, 2 minutes 46 seconds |
+
+- The push was run with `GCM_INTERACTIVE=never GIT_TERMINAL_PROMPT=0` and completed in
+  seconds without asking for anything. The account named in the remote URL (M0 entry) is
+  what makes that work.
+- `main` on the remote was `4b022e4` before and after.
+- The run was matched to the commit by hash, not by title.
+- CI printed two warnings from GitHub. Neither is a failure and neither was acted on,
+  because a change to CI is an infrastructure change with its own commit:
+  - `actions/checkout@v4` targets Node.js 20, which is deprecated; the runner forces it
+    onto Node.js 24.
+  - the `ubuntu-latest` label moves to Ubuntu 26 beginning 2026-10-19. If CI fails after
+    that date on a commit that changes nothing relevant, look there first.
+
+### Merge
+
+Nothing was merged into `main` in the work recorded above. The user is being asked, in the
+one prompt at the end of the session, whether to merge `m1-corollary-1-2`. If approved it
+is to be a fast-forward to the commit that contains this entry, after CI has passed on that
+commit. **If `main` contains this commit, the merge was done**; `git log main` is the
+record.
+
