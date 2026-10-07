@@ -27,19 +27,35 @@ blueprint as `S-M0.*`, all `DONE`. The doubts below are of three kinds: differen
 form that are already recorded and need a human "yes" (most items); things the paper
 leaves undefined, where fidelity is to the standard notion (R-3); and coverage gaps,
 where a sentence of the paper has no Lean counterpart or a definition has no machine
-check (the list just below).
+check (the seven questions just below, since answered).
 
-## Points that need a decision, not just a tick
+## The seven questions, and the user's decisions
 
-| # | Item | The decision |
-|---|---|---|
-| Q1 | R-3 | The paper never defines "minor". The Lean definition is by branch sets. Its equivalence with "delete vertices and edges, contract edges" is a textbook fact that is **not** formalised here (Mathlib has no contraction). Is the branch-set definition accepted as the meaning of "`K_t` minor"? Note that the paper's own proof of Proposition 3.5 works with "a complete-minor model with `b` branch sets". |
-| Q2 | R-3 | `FIDELITY.md` cites "Diestel, *Graph Theory*, §1.7" for that equivalence. The citation was written from memory and has **not** been checked against the book. Check it, or drop the section number. |
-| Q3 | R-10 | `HoleData` drops the paper's hypotheses "finite-dimensional" and "finite". The Lean statements are then about a larger class. Accept the generalisation, or put the hypotheses back? |
-| Q4 | R-10 | Nothing in Lean shows that `Hole` can ever hold. If it could not, Lemma 2.2 and `α ≤ 2` would be true and empty. A hand example is given under R-10; it is not a Lean proof. Should a non-vacuity lemma be added (it would belong to M3)? |
-| Q5 | R-17 | Equation (2.3) has two halves. Only `α(G) ≤ 2` is stated in Lean; `χ(G) ≥ ⌈m/2⌉` is not. Leave it out, or state it? |
-| Q6 | R-19 | Corollary 1.2 ends: the fractional weakening `χ_f(G) ≤ h(G)` is false. There is no Lean statement of that (blueprint S-1.d, `NOT_STATED`). State it, or leave it as an immediate consequence of C-1.2? |
-| Q7 | R-12 to R-16 | Until this session `FIDELITY.md` had no note for S-1.a, S-1.b, S-1.c, S-2.3 or T-NOT-HC; their differences from the paper were recorded only in Lean doc comments. Notes have been added, unreviewed. They need the same sign-off as the others. |
+The user answered on 2026-10-07, verbatim:
+
+```text
+q1 - accept, q2 - check it, q3 - accept, q4 - yes, q5 - state it, q6 - state it, q7 - that's fine.
+```
+
+| # | Item | The question | Decision | What was done |
+|---|---|---|---|---|
+| Q1 | R-3 | The paper never defines "minor". Is the branch-set definition accepted as the meaning of "`K_t` minor"? | accept | Recorded in F-MINOR. |
+| Q2 | R-3 | `FIDELITY.md` cited "Diestel, *Graph Theory*, §1.7" from memory. Check it, or drop the section number? | check it | Checked against the author's free preview of the book. The section is right, and the book's own restatement of "minor" is the Lean definition clause for clause. Details under R-3 and in F-MINOR. |
+| Q3 | R-10 | `HoleData` drops the paper's "finite-dimensional" and "finite". Accept the generalisation? | accept | Recorded in F-HOLE. |
+| Q4 | R-10 | Nothing in Lean shows that `Hole` can ever hold. Should a non-vacuity lemma be added (it would belong to M3)? | yes | Entered in the blueprint as S-M3.hole-nonvacuous (`NOT_STATED`) and in the M3 task list. **Not proved in this session**: the question placed it in M3, and the session's instruction was to start nothing beyond M0. This reading of "yes" is the worker's; say so if it was meant for now. |
+| Q5 | R-17 | The second half of equation (2.3), `χ(G) ≥ ⌈m/2⌉`, has no Lean statement. State it? | state it | Stated: `HoleData.le_two_mul_chromaticNumber_positionGraph`. See R-17. |
+| Q6 | R-19, R-20 | "The fractional weakening `χ_f(G) ≤ h(G)` is false" has no Lean statement. State it? | state it | A definition and its negation were added: `FractionalHadwigerConjecture`, `not_fractionalHadwigerConjecture`. The definition is new and has its own item, R-20. |
+| Q7 | R-12 to R-14, R-17, R-19 | `FIDELITY.md` had no note for S-1.a, S-1.b, S-1.c, S-2.3 or T-NOT-HC. Notes were added, unreviewed. | that's fine | Read as: adding the notes is accepted. It is **not** read as the sign-off of those items; that reading is the worker's. |
+
+On Q5 and Q6: each new theorem was given its complete proof body rather than a `sorry`,
+because each follows in a few lines from results already stated. Both rest on results
+that are still `sorry`, so both are `PROVED_MODULO` and neither is proved. No `sorry` was
+added and none was removed; the count is still 10.
+
+**What is still open on this sheet.** The seven questions are answered. The sign-off lines
+of the items are not filled in: the user's answer decides the questions and does not say
+that the items are accepted. There are now 20 items; R-20 is new and R-17 has a new Lean
+statement.
 
 ---
 
@@ -106,9 +122,21 @@ check (the list just below).
   S-M0.hadwiger-cycle4 (a model with a two-vertex branch set, so contraction of an edge is
   exercised).
 - **Doubts:**
-  1. Q1 above. The definition is faithful to the standard notion by a textbook equivalence
-     that is not formalised. Not proved here either: that `IsMinor` is transitive.
-  2. Q2 above: the Diestel section number is unchecked.
+  1. Q1 above (decided: accept). The definition is faithful to the standard notion by a
+     textbook equivalence that is not formalised. Not proved here either: that `IsMinor`
+     is transitive.
+  2. Q2 above (decided: check it; done). In the author's free preview of Diestel's
+     *Graph Theory* (Chapter 1, pages 19 to 21; the author's page calls it the sixth
+     edition, 2025), §1.7 is "Contraction and minors". It defines a minor through a
+     subgraph whose vertices are partitioned into connected branch sets, and then
+     restates it: `X` is a minor of `Y` if and only if there is a map from a subset of
+     `V(Y)` onto `V(X)` whose fibres are connected in `Y`, with an edge of `Y` between
+     the fibres of the ends of every edge of `X`. That is `MinorModel` with `branch` the
+     fibre map: disjointness is automatic for fibres, "onto" is nonemptiness, and the
+     book's "connected" (§1.4) means the induced subgraph is connected and non-empty.
+     The equivalence with deletions and contractions is Corollary 1.7.2 there, for
+     finite graphs. What was checked is the book's text; the equivalence itself remains
+     unformalised.
   3. A model may leave vertices of `G` outside every branch set and may ignore extra
      edges. That is what "minor" (as opposed to "contraction") requires. Stated so that it
      is seen, not as a problem.
@@ -295,10 +323,11 @@ check (the list just below).
   parity equation all match. The functional identities are equalities of linear maps
   `X → ZMod 2`, so they hold "on the whole space `X`".
 - **Doubts:**
-  1. Q3 above: "finite-dimensional" and "finite" are dropped. Definition 2.1 and the proof
+  1. Q3 above (decided: accept): "finite-dimensional" and "finite" are dropped. Definition 2.1 and the proof
      of Lemma 2.2 do not use them, so the Lean lemma would be about a larger class and
      would imply the paper's.
-  2. Q4 above: non-vacuity is not checked in Lean. Hand example, **not a Lean proof**:
+  2. Q4 above (decided: yes; planned as S-M3.hole-nonvacuous, not yet stated): non-vacuity
+     is not checked in Lean. Hand example, **not a Lean proof**:
      `X = V = F_2^2`, `a(x) = x_1`, `T = 0`, `Ω = {0, 1}`, `U_0 = id`,
      `U_1 = (x_1, x_2) ↦ (x_2, x_1)`, `u_0(y) = y_2`, `u_1(y) = y_1`. Take
      `λ_0 = (1, 0)`, `λ_1 = (0, 1)`. Then `U_0 λ_0 = (1, 0) = U_1 λ_1`;
@@ -427,11 +456,19 @@ paper says.
       (hij : D.Hole i j) (hjk : D.Hole j k) (hik : D.Hole i k) : False
   theorem indepNum_positionGraph_le_two (D : HoleData X V Ω) {m : ℕ} (o : Fin m → Ω) :
       (D.positionGraph o).indepNum ≤ 2
+  theorem le_two_mul_chromaticNumber_positionGraph (D : HoleData X V Ω) {m : ℕ}
+      (o : Fin m → Ω) :
+      ∃ k : ℕ, (D.positionGraph o).chromaticNumber = k ∧ m ≤ 2 * k
   ```
-- **Differences in form:** triangle-freeness without "distinct" (see R-10, doubt 3); only
-  the first half of equation (2.3) is stated.
-- **Doubts:** Q5 above. The second half, `χ(G) ≥ ⌈m/2⌉`, has no Lean statement. It follows
-  from the first half and S-1.a, and nothing later uses it.
+  The last one was added on 2026-10-07 on the user's decision (Q5).
+- **Differences in form:** triangle-freeness without "distinct" (see R-10, doubt 3). In
+  the second half of equation (2.3), `χ(G)` is exhibited as a natural number `k` and
+  `k ≥ ⌈m/2⌉` is written `m ≤ 2k`. For a natural number `k` these are the same statement:
+  `⌈m/2⌉` is the least integer that is at least `m/2`, so `k ≥ ⌈m/2⌉` exactly when
+  `k ≥ m/2`, that is, `2k ≥ m`.
+- **Doubts:** none on the form. On status: the new theorem has a complete proof body from
+  the first half and from S-1.a, which are both `sorry`; it is `PROVED_MODULO`, and the
+  blueprint entry S-2.3 stays `STATED` because its first half is.
 - **Sign-off:** ☐ accepted ☐ change requested — by ____________ on ____________
 
 ### R-18 — Corollary 1.2 — C-1.2
@@ -452,8 +489,9 @@ paper says.
   ```
 - **Differences in form:** as for R-15 and R-16. "Nonempty" is not a separate clause: the
   middle inequality is false at `m = 0` (it holds exactly for `m ≥ 5`).
-- **Doubts:** the corollary's first sentence is stated. Its second sentence is covered for
-  Hadwiger's conjecture by R-19 and is not stated for the fractional weakening (Q6).
+- **Doubts:** none. The corollary's first sentence is this statement. Its second sentence
+  is covered by R-19 (Hadwiger's conjecture) and, since the decision on Q6, by R-20 (the
+  fractional weakening).
 - **Sign-off:** ☐ accepted ☐ change requested — by ____________ on ____________
 
 ### R-19 — the final theorem and the negation of Hadwiger's conjecture — T-FINAL, T-NOT-HC
@@ -475,8 +513,39 @@ paper says.
   holds exactly when `χ(G)` is a natural number above `h(G)`; it cannot hold through
   `χ(G) = ⊤`). Both theorems have complete proof bodies and rest on Corollary 1.2
   (`PROVED_MODULO`).
-- **Doubts:** Q6 above: "the fractional-coloring weakening `χ_f(G) ≤ h(G)` is false" has
-  no Lean statement.
+- **Doubts:** none. The fractional half of the paper's sentence is now R-20.
+- **Sign-off:** ☐ accepted ☐ change requested — by ____________ on ____________
+
+### R-20 — the fractional weakening of Hadwiger's conjecture, and its negation — D-1.fHC, S-1.d, note F-FHC
+
+Added on 2026-10-07 on the user's decision (Q6). **New definition: it was not on the sheet
+when the questions were answered, and it needs its own sign-off.**
+
+- **Paper** (Corollary 1.2, last sentence): "Thus Hadwiger's conjecture and its
+  fractional-coloring weakening `χ_f(G) ≤ h(G)` are false."
+- **Lean** (`Hadwiger/Main.lean`, new):
+
+  ```lean
+  def FractionalHadwigerConjecture : Prop :=
+    ∀ (V : Type) [Fintype V] [Nonempty V] (G : SimpleGraph V),
+      fractionalChromaticNumber G ≤ (hadwigerNumber G : ℝ)
+
+  theorem not_fractionalHadwigerConjecture : ¬ FractionalHadwigerConjecture
+  ```
+- **Machine-checked here:** the negation has a complete proof body from Corollary 1.2
+  (which gives graphs with `h(G) < m/2 ≤ χ_f(G)`). Corollary 1.2 is `sorry`, so this is
+  `PROVED_MODULO`, not proved.
+- **Differences in form:** the comparison is in `ℝ`, with `h(G)` cast from `ℕ`.
+- **Doubts:**
+  1. The paper writes only the inequality `χ_f(G) ≤ h(G)`. The quantifier "for every finite
+     nonempty simple graph `G`" is supplied here, from the paper's own statement of
+     Hadwiger's conjecture, of which this is called the weakening. This is a reading, and
+     the only one under which "are false" can be shown by exhibiting graphs.
+  2. That it is a *weakening* (Hadwiger's conjecture implies it) is `χ_f ≤ χ`, blueprint
+     S-1.c, still `sorry`. It is not stated as a Lean theorem and nothing depends on it.
+  3. `V : Type` only, as in R-5; for the same reason this cannot weaken the negation.
+  4. The paragraph of the paper after Corollary 1.2, on Reed and Seymour's convention
+     (blueprint S-1.e), is still not stated. It was not part of Q6.
 - **Sign-off:** ☐ accepted ☐ change requested — by ____________ on ____________
 
 ---

@@ -18,7 +18,7 @@ is stated or proved, this file is wrong and must be fixed; nothing else is autho
 
 | Column | Meaning |
 |---|---|
-| ID | `T-` theorem, `P-` proposition, `L-` lemma, `C-` corollary, `D-` definition or construction, `S-` unnumbered statement made in running text. Numbers follow the paper (`L-2.2` is Lemma 2.2). IDs of the form `S-M0.<name>` are the sanity checks of milestone M0; they are not in the paper. |
+| ID | `T-` theorem, `P-` proposition, `L-` lemma, `C-` corollary, `D-` definition or construction, `S-` unnumbered statement made in running text. Numbers follow the paper (`L-2.2` is Lemma 2.2). IDs of the form `S-M0.<name>` are the sanity checks of milestone M0, and `S-M3.<name>` those planned for M3; they are not in the paper. |
 | Kind | What the paper calls it. |
 | Paper location | Section, number, and the TeX label in the paper's source. |
 | Statement | A short paraphrase. The paper is the authority for the exact statement. |
@@ -53,6 +53,7 @@ Paper-side problems (gaps, errors, ambiguities) are not statuses. They are recor
 | D-1.minor | definition | §1 ¶1 (used, not spelled out) | `G` contains a `K_t` minor. Formalised through minor models (branch sets). | — | `Hadwiger.MinorModel`, `Hadwiger.IsMinor`, `Hadwiger.HasCliqueMinor` | DEFINED |
 | D-1.h | definition | §1 ¶1 | Hadwiger number `h(G)`: the largest `t` with a `K_t` minor. | D-1.minor | `Hadwiger.hadwigerNumber` | DEFINED |
 | D-1.HC | definition | §1 ¶2 | Hadwiger's conjecture: `h(G) ≥ χ(G)` for every finite nonempty simple graph. | D-1.h, D-1.chi | `Hadwiger.HadwigerConjecture` | DEFINED |
+| D-1.fHC | definition | §1, Corollary 1.2, last sentence | The fractional-colouring weakening of Hadwiger's conjecture: `χ_f(G) ≤ h(G)` for every finite nonempty simple graph. The paper writes only the inequality; the quantifier is taken from its statement of Hadwiger's conjecture (D-1.HC). Defined on the user's decision of 2026-10-07. | D-1.h, D-1.chif | `Hadwiger.FractionalHadwigerConjecture` | DEFINED |
 | D-1.touch | definition | §1 ¶3 | Two disjoint edges touch if an edge joins their endpoint sets. | — | `Hadwiger.EdgesTouch` | DEFINED |
 | D-1.cm | definition | §1 ¶3 | Connected matching: a matching whose edges pairwise touch. `cm(G)` is its maximum size. | D-1.touch | `Hadwiger.IsConnectedMatching`, `Hadwiger.connectedMatchingNumber` | DEFINED |
 | T-1.1 | theorem | §1, Theorem 1.1 (`thm:main`) | For arbitrarily large `m` there is an `m`-vertex graph with `α(G) ≤ 2` and `cm(G) < m/100`. Proved at the end of §14.4 ("Proof of Theorem 1.1"): Proposition 3.4 applied to Theorem 3.1 at every large `n`, with `m = 2^{C_0 g N}` unbounded. | P-3.4, T-3.1 | `Hadwiger.exists_indepNum_le_two_and_connectedMatchingNumber_lt` | STATED |
@@ -64,7 +65,7 @@ Paper-side problems (gaps, errors, ambiguities) are not statuses. They are recor
 | C-1.2 | corollary | §1, Corollary 1.2 (`cor:hadwiger`) | Graphs of arbitrarily large order `m` with `h(G) < 26m/75 + 2/3 < m/2 ≤ χ_f(G) ≤ χ(G)`. | T-1.1, P-3.5, S-1.b, S-1.c | `Hadwiger.exists_hadwigerNumber_lt_fractionalChromaticNumber` | STATED |
 | T-FINAL | theorem | abstract; §1, Corollary 1.2 | Finite simple graphs of arbitrarily large order whose chromatic number exceeds their Hadwiger number. This is the project's final theorem. | C-1.2 | `Hadwiger.exists_hadwigerNumber_lt_chromaticNumber` | PROVED_MODULO |
 | T-NOT-HC | theorem | §1, Corollary 1.2, last sentence | Hadwiger's conjecture is false. | T-FINAL, D-1.HC | `Hadwiger.not_hadwigerConjecture` | PROVED_MODULO |
-| S-1.d | statement | §1, Corollary 1.2, last sentence | The fractional weakening `χ_f(G) ≤ h(G)` is false. Immediate from C-1.2. | C-1.2 | — | NOT_STATED |
+| S-1.d | statement | §1, Corollary 1.2, last sentence | The fractional weakening `χ_f(G) ≤ h(G)` is false. Stated on the user's decision of 2026-10-07; the proof body is complete and rests on C-1.2. | C-1.2, D-1.fHC | `Hadwiger.not_fractionalHadwigerConjecture` | PROVED_MODULO |
 | S-1.e | statement | §1, after Corollary 1.2 | Reed and Seymour's convention (rational weights, coverage exactly one, total at most `p`) gives colourings admissible in D-1.fcol, so their prediction fails with `p = h(G)`. Commentary on the literature; not a formalisation target unless the user asks. | C-1.2 | — | NOT_STATED |
 
 ## Section 2 — The hole relation and its tensor realization
@@ -75,7 +76,7 @@ Paper-side problems (gaps, errors, ambiguities) are not statuses. They are recor
 | D-2.1 | definition | §2.1, Definition 2.1 (`def:hole`) | Hole between `i` and `j`: witnesses `λ_i, λ_j` with `U_i λ_i = U_j λ_j`, `u_j U_i = r(λ_i)`, `u_i U_j = r(λ_j)`, `a(λ_i) + a(λ_j) = 1`. | D-2.0 | `Hadwiger.HoleData.Hole` | DEFINED |
 | L-2.2 | lemma | §2.1, Lemma 2.2 (`lem:hole-triangle-free`) | The hole relation is symmetric, has no loops, and is triangle-free. Symmetry is proved; the other two parts are `sorry`. | D-2.1 | `Hadwiger.HoleData.Hole.symm`, `Hadwiger.HoleData.not_hole_self`, `Hadwiger.HoleData.not_hole_triangle` | STATED |
 | D-2.G | definition | §2.1, after Lemma 2.2 | Graph on the positions of a list `o_1, …, o_m`: distinct positions are adjacent when their elements have no hole. | D-2.1 | `Hadwiger.HoleData.positionGraph` | DEFINED |
-| S-2.3 | statement | §2.1, equation `eq:sample-independence` | For the graph on positions, `α(G) ≤ 2` and `χ(G) ≥ ⌈m/2⌉`. The Lean statement is the first half; the second half is the first half combined with S-1.a. | L-2.2, D-2.G, S-1.a | `Hadwiger.HoleData.indepNum_positionGraph_le_two` | STATED |
+| S-2.3 | statement | §2.1, equation `eq:sample-independence` | For the graph on positions, `α(G) ≤ 2` and `χ(G) ≥ ⌈m/2⌉`. Two Lean statements. The first half is `sorry`. The second half was stated on the user's decision of 2026-10-07, in the form `m ≤ 2k` where `χ(G) = k`; its proof body is complete and rests on the first half and on S-1.a. The entry has the status of its weaker declaration. | L-2.2, D-2.G, S-1.a | `Hadwiger.HoleData.indepNum_positionGraph_le_two`, `Hadwiger.HoleData.le_two_mul_chromaticNumber_positionGraph` | STATED |
 | D-2.par | construction | §2.2, equations `eq:early-constants`, `eq:parameter-order` | Parameters: `C_0 = 1000`, `g = 10^9 + 1` (odd), `D = 4 C_0 g`, `M = 2^1000`; later choices `j_*`, `b`, `J`, `r_0`, `h = 1000 r_0`, and last `M_0`; `N = M_0 n`, `m = 2^{C_0 g N}`. `n` is the only asymptotic parameter. The full order of choices is Appendix A. | D-A.order | — | NOT_STATED |
 | D-2.tags | construction | §2.3 ¶1 | Tags `I = Z/g`, components `E = (I choose 2)`, intervals `I_d`; base variable blocks `O_{d,t}`, `S`, `#`, `Z` of `n` bits each (`g^2 + 3` blocks); a selector of `b` bits whose values are labels. | D-2.par | — | NOT_STATED |
 | D-2.B | construction | §2.3, equation `eq:point-evaluation` | `p_* = Σ_{j ≤ j_*} (b choose j)`; coefficient space `B = F_2^{p_*} ⊗ F_2^{1 + (g^2+3)n}`; point evaluation `v(s,z) = p_s ⊗ (1,z)`. | D-2.tags | — | NOT_STATED |
@@ -262,7 +263,8 @@ Kinds used in this section:
 - `sanity (M0 list)`: a lemma named in the M0 section of `blueprint/MILESTONES.md`;
 - `sanity (extra)`: a further check added at M0, with the reason in its Statement cell;
 - `support`: lemmas used to prove the others. They are listed so that every declaration in
-  `Hadwiger/Sanity/` is audited.
+  `Hadwiger/Sanity/` is audited;
+- `sanity (planned)`: a check the user has asked for that is not yet stated in Lean.
 
 "Finite" below means the vertex type has a `Fintype` instance.
 
@@ -303,3 +305,9 @@ Kinds used in this section:
 | S-M0.chif-cycle5 | sanity (M0 list) | not in the paper | `χ_f(C_5) = 5/2` for Mathlib's `cycleGraph 5`. Not an integer, so the definition is not the ordinary chromatic number in disguise. | D-1.chif, S-M0.chif-totals, S-M0.chif-support | `Hadwiger.fractionalChromaticNumber_cycleGraph_five`, `Hadwiger.card_le_two_of_isIndepSet_cycleGraph_five` | DONE |
 | S-M0.chif-attained | sanity (extra) | not in the paper | The infimum defining `χ_f` is attained by some fractional colouring. Added because the paper says "minimum" and D-1.chif is defined with `sInf`; with this lemma the two agree by proof, not by remark. | D-1.chif, S-M0.chif-totals, S-M0.chif-support | `Hadwiger.exists_fractionalColoring_total_eq` | DONE |
 | S-M0.chif-support | support | not in the paper | Totals are nonnegative; `χ_f` is at most every total and at least every lower bound of the totals; `0 ≤ χ_f ≤ \|V\|`; nonnegative weights on a finite family of independent sets covering every vertex give a fractional colouring with the same total; if every independent set has at most `k` vertices then `\|V\| ≤ k·total` for every fractional colouring. The last is the counting step of the paper's proof of Corollary 1.2 for an arbitrary bound `k`; it is not S-1.b, which is about `α(G)` and is still `STATED`. | D-1.fcol, D-1.chif | `Hadwiger.FractionalColoring.total_nonneg`, `Hadwiger.bddBelow_range_total`, `Hadwiger.fractionalChromaticNumber_le_total`, `Hadwiger.le_fractionalChromaticNumber`, `Hadwiger.fractionalChromaticNumber_nonneg`, `Hadwiger.fractionalChromaticNumber_le_card`, `Hadwiger.exists_fractionalColoring_of_family`, `Hadwiger.FractionalColoring.card_le_mul_total` | DONE |
+
+### The hole relation (planned for M3)
+
+| ID | Kind | Paper location | Statement | Depends on | Lean | Status |
+|---|---|---|---|---|---|---|
+| S-M3.hole-nonvacuous | sanity (planned) | not in the paper | Some `HoleData` has two elements with a hole between them, so the hole relation is not vacuous. To be proved at M3, on the user's decision of 2026-10-07 (question Q4 of `blueprint/M0_REVIEW_SHEET.md`). A hand example is on that sheet under R-10; it is an example worked on paper, not a proof. | D-2.0, D-2.1 | — | NOT_STATED |

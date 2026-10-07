@@ -6,8 +6,10 @@ Statuses of individual results are in `blueprint/BLUEPRINT.md`, never here.
 ## The single next task
 
 **M0, second half: record the user's sign-off of the statement layer.**
-The sheet to sign is `blueprint/M0_REVIEW_SHEET.md`: 19 items and 7 questions that need a
-decision. For each item the user accepts, write its "Reviewed by" line in
+The sheet to sign is `blueprint/M0_REVIEW_SHEET.md`: 20 items. Its 7 questions were
+answered by the user on 2026-10-07 and the answers have been carried out and recorded
+there. What remains is the sign-off of the items themselves: the user has not yet said
+that they are accepted. For each item the user accepts, write its "Reviewed by" line in
 `blueprint/FIDELITY.md`; for each change the user asks for, make it as an explicit recorded
 change. M0 is finished only then. Do not start M1 before it.
 
@@ -90,6 +92,10 @@ M1 to M4 are independent of M5 to M17. When M1, M2 and M17 are done, T-FINAL is 
   - Part (1) is prepared and not done. A worker re-read every fidelity note against the
     paper and wrote `blueprint/M0_REVIEW_SHEET.md`. That re-read is not the review. No
     fidelity note carries a "Reviewed by" line yet.
+  - The user answered the sheet's seven questions the same day. In consequence: a
+    textbook citation was checked; the second half of equation (2.3) and the falsity of
+    the fractional weakening were stated in Lean (blueprint S-2.3, D-1.fHC, S-1.d); and a
+    non-vacuity lemma for the hole relation was entered for M3 (S-M3.hole-nonvacuous).
 
 ## M1 — Corollary 1.2 from Theorem 1.1 and Proposition 3.5
 
@@ -124,6 +130,11 @@ M1 to M4 are independent of M5 to M17. When M1, M2 and M17 are done, T-FINAL is 
 
 - What: the two open parts of L-2.2 (no loops; triangle-free) and S-2.3 (`α ≤ 2` for the
   graph on positions). Symmetry is already proved.
+- Also, on the user's decision of 2026-10-07: S-M3.hole-nonvacuous, a sanity lemma showing
+  that some `HoleData` has a hole between two of its elements. A hand example to
+  formalise is on `blueprint/M0_REVIEW_SHEET.md` under R-10.
+- The second half of equation (2.3) is already stated, with a complete proof body from
+  the first half and S-1.a; it becomes `DONE` when M3 and S-1.a (M1) are.
 - Mathlib gaps: none. Linear maps over `ZMod 2` and a six-term sum in characteristic 2.
 - Size: 250 lines (150–400).
 

@@ -40,3 +40,6 @@ These have complete proof bodies and are `PROVED_MODULO` in the blueprint:
 
 - `Hadwiger.exists_hadwigerNumber_lt_chromaticNumber` (T-FINAL) — from Corollary 1.2.
 - `Hadwiger.not_hadwigerConjecture` (T-NOT-HC) — from T-FINAL.
+- `Hadwiger.not_fractionalHadwigerConjecture` (S-1.d) — from Corollary 1.2.
+- `Hadwiger.HoleData.le_two_mul_chromaticNumber_positionGraph` (S-2.3, second half) — from
+  the first half of S-2.3 and from S-1.a.

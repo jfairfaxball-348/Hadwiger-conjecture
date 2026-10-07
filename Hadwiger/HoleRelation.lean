@@ -1,4 +1,4 @@
-import Mathlib
+import Hadwiger.ChromaticBounds
 
 /-!
 # The hole relation and its triangle-freeness (Section 2.1)
@@ -19,7 +19,9 @@ This file is the abstract part of Section 2 only. The concrete construction of
 Blueprint entries: `D-2.0`, `D-2.1`, `L-2.2`, `D-2.G`, `S-2.3`. Milestone M3.
 Fidelity notes are in `blueprint/FIDELITY.md` (F-HOLE, F-POSGRAPH).
 
-Everything here is **new**; only Mathlib's linear algebra and `SimpleGraph` are used.
+Everything here is **new**; only Mathlib's linear algebra and `SimpleGraph` are used, and,
+for the second half of equation (2.3), the colour-class bound `S-1.a` of
+`Hadwiger/ChromaticBounds.lean`.
 -/
 
 namespace Hadwiger
@@ -97,6 +99,29 @@ two: an independent triple of positions would give a hole triangle. -/
 theorem indepNum_positionGraph_le_two (D : HoleData X V Ω) {m : ℕ} (o : Fin m → Ω) :
     (D.positionGraph o).indepNum ≤ 2 := by
   sorry
+
+/-- **Equation (2.3), second half.** The graph on `m` positions has `χ(G) ≥ ⌈m/2⌉`.
+
+The chromatic number is Mathlib's `chromaticNumber : ℕ∞`; the statement exhibits it as a
+natural number `k`. For a natural number `k`, `k ≥ ⌈m/2⌉` is the same as `m ≤ 2k`, and that
+form is used, so that no division or ceiling appears.
+
+Stated on the user's decision of 2026-10-07 (question Q5 of the M0 review sheet). The proof
+is the paper's: the first half of equation (2.3) and the colour-class bound of Section 1
+(`card_le_indepNum_mul_of_colorable`). Both of those are still `sorry`, so this theorem is
+`PROVED_MODULO`. -/
+theorem le_two_mul_chromaticNumber_positionGraph (D : HoleData X V Ω) {m : ℕ}
+    (o : Fin m → Ω) :
+    ∃ k : ℕ, (D.positionGraph o).chromaticNumber = k ∧ m ≤ 2 * k := by
+  have hne : (D.positionGraph o).chromaticNumber ≠ ⊤ :=
+    ne_top_of_le_ne_top (ENat.natCast_ne_top _) (D.positionGraph o).chromaticNumber_le_card
+  obtain ⟨k, hk⟩ := ENat.ne_top_iff_exists.mp hne
+  refine ⟨k, hk.symm, ?_⟩
+  have hcol : (D.positionGraph o).Colorable k :=
+    SimpleGraph.chromaticNumber_le_iff_colorable.mp hk.symm.le
+  have h1 := card_le_indepNum_mul_of_colorable (D.positionGraph o) hcol
+  rw [Fintype.card_fin] at h1
+  exact h1.trans (Nat.mul_le_mul_right k (D.indepNum_positionGraph_le_two o))
 
 end HoleData
 

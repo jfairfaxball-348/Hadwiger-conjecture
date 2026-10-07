@@ -21,6 +21,11 @@ State on 2026-10-07, after the M0 session:
   about the build, not a review of the note.
 - A "Reviewed by" line is written only on the user's instruction, with the name and date
   the user gives.
+- On 2026-10-07 the user answered the sheet's seven questions (the answer is quoted on
+  the sheet and in `docs/SESSION_LOG.md`). Those decisions are recorded in the notes they
+  concern, marked "Decision". A decision on a question is not the sign-off of an item:
+  the user has not yet said that the items themselves are accepted, so every note still
+  ends "not reviewed".
 
 "New" means not in Mathlib at the pinned commit. "Mathlib" means Mathlib's definition is
 used unchanged.
@@ -64,15 +69,32 @@ used unchanged.
   between `branch w` and `branch w'` whenever `w`, `w'` are adjacent in `H`.
   `IsMinor H G` says a model exists. `HasCliqueMinor G t` is `IsMinor ⊤ G` for the complete
   graph `⊤` on `Fin t`.
-- Argument: this is the standard branch-set characterisation of minors (for example
-  Diestel, *Graph Theory*, §1.7; **the section number was written from memory and has not
-  been checked against the book**): `H` is a minor of `G` exactly when `G` has disjoint
+- Argument: this is the standard branch-set characterisation of minors (Diestel, *Graph
+  Theory*, §1.7 "Contraction and minors"; checked on 2026-10-07, see the next item): `H`
+  is a minor of `G` exactly when `G` has disjoint
   connected vertex sets indexed by `V(H)` with an edge between the sets of every adjacent
   pair. Contracting each branch set and deleting the rest of `G` gives `H` plus possibly
   extra edges, which are then deleted. Vertices outside the branch sets are allowed, as
   are extra edges, which is what "subgraph" permits. For `H = K_t` the adjacency condition
   is "every two distinct branch sets are joined by an edge".
 - Nonemptiness: Mathlib's `Connected` includes `Nonempty`, so every branch set is nonempty.
+- Citation checked on 2026-10-07, on the user's instruction (question Q2), against the
+  author's free preview of the book (Chapter 1, pages 19 to 21; the author's page
+  describes it as the sixth edition, 2025). There a graph `Y` has `X` as a minor when it
+  contains, as a subgraph, a graph whose vertex set is partitioned into connected branch
+  sets indexed by `V(X)`, with an edge between two branch sets exactly for the edges of
+  `X`. The book then restates this: `X` is a minor of `Y` if and only if there is a map
+  from a subset of `V(Y)` onto `V(X)` whose fibres are connected in `Y` and such that for
+  every edge of `X` some edge of `Y` joins the fibres of its ends. With
+  `branch w` the fibre of `w`, that is `MinorModel` clause for clause: fibres are disjoint;
+  "onto" is nonemptiness, and the book's "connected" (§1.4) also means non-empty and is
+  about the induced subgraph, as `(G.induce (branch w)).Connected` is. The equivalence with
+  deleting vertices, deleting edges and contracting edges is Corollary 1.7.2 there, for
+  finite graphs; transitivity is part of Proposition 1.7.1. Statement numbers differ
+  between editions of the book, so they are given for this edition only. The preview
+  chapter was read directly. For the first and second editions only the tables of contents
+  were looked at, and at second hand (ProofWiki; the EMIS mirror of the book's site); both
+  list 1.7 "Contraction and minors".
 - The paper itself works with this notion: its proof of Proposition 3.5 starts from "a
   complete-minor model with `b` branch sets".
 - Edge cases: `HasCliqueMinor G 0` always holds (no branch sets). `HasCliqueMinor G 1`
@@ -85,7 +107,9 @@ used unchanged.
   no contraction of simple graphs, so there is nothing to compare with. The fidelity of
   this definition rests on the textbook equivalence. Also not proved: that `IsMinor` is
   transitive.
-- Review: not reviewed. Sheet item R-3, with questions Q1 and Q2.
+- Decision (user, 2026-10-07, question Q1): the branch-set definition is accepted as the
+  meaning of "`K_t` minor".
+- Review: not reviewed. Sheet item R-3.
 
 ### F-HADWIGER — Hadwiger number (new) — D-1.h
 
@@ -221,7 +245,11 @@ used unchanged.
 - No M0 sanity lemma covers these definitions; the M0 list has none for them. In
   particular nothing in Lean shows that `Hole` can hold at all. A hand example, which is
   not a proof in Lean, is on the review sheet.
-- Review: not reviewed. Sheet item R-10, with questions Q3 and Q4.
+- Decision (user, 2026-10-07, question Q3): dropping "finite-dimensional" and "finite"
+  is accepted.
+- Decision (user, 2026-10-07, question Q4): a non-vacuity lemma is to be added. It is in
+  the blueprint as S-M3.hole-nonvacuous, `NOT_STATED`, and in the M3 task list.
+- Review: not reviewed. Sheet item R-10.
 
 ### F-POSGRAPH — the graph on positions (new) — D-2.G
 
@@ -271,9 +299,9 @@ check each one.
   with the four inequalities in `ℝ`, the last being `fractionalChromaticNumber G ≤ k`.
 - Form: as for T-1.1 and P-3.5. Nonemptiness is not a separate hypothesis because
   `26m/75 + 2/3 < m/2` is false at `m = 0`.
-- Not stated in Lean: the corollary's last clause, that the fractional weakening
-  `χ_f(G) ≤ h(G)` is false (blueprint S-1.d). It is immediate from the statement above.
-- Review: not reviewed. Sheet item R-18, with question Q6.
+- The corollary's last clause, that the fractional weakening `χ_f(G) ≤ h(G)` is false, is
+  stated separately since 2026-10-07 (S-1.d; note F-FHC below).
+- Review: not reviewed. Sheet item R-18.
 
 ### T-FINAL — the final theorem
 
@@ -294,9 +322,32 @@ Note added at M0; before that the form was recorded only in the Lean doc comment
   `χ_f(G) ≤ h(G)` are false" (Corollary 1.2, last sentence).
 - Lean: `not_hadwigerConjecture : ¬ HadwigerConjecture`, with `HadwigerConjecture` as in
   F-HC.
-- Form: only the first half of the sentence. The fractional weakening has no Lean
-  statement (blueprint S-1.d).
-- Review: not reviewed. Sheet item R-19, with question Q6.
+- Form: this is the first half of the sentence. The second half is
+  `not_fractionalHadwigerConjecture` (S-1.d; note F-FHC below).
+- Review: not reviewed. Sheet item R-19.
+
+### F-FHC — the fractional weakening and its negation (new) — D-1.fHC, S-1.d
+
+Note added on 2026-10-07, when the definition and the statement were added on the user's
+decision (question Q6).
+
+- Paper: "Thus Hadwiger's conjecture and its fractional-coloring weakening
+  `χ_f(G) ≤ h(G)` are false" (Corollary 1.2, last sentence).
+- Lean: `FractionalHadwigerConjecture` is
+  `∀ (V : Type) [Fintype V] [Nonempty V] (G : SimpleGraph V), fractionalChromaticNumber G ≤ (hadwigerNumber G : ℝ)`,
+  and `not_fractionalHadwigerConjecture : ¬ FractionalHadwigerConjecture`.
+- Reading adopted: the paper writes only the inequality. The quantifier "for every finite
+  nonempty simple graph `G`" is supplied from the paper's statement of Hadwiger's
+  conjecture, of which this is called the weakening. No other quantifier makes sense of
+  "are false": the paper refutes it by exhibiting graphs.
+- Form: the comparison is in `ℝ`, with `h(G)` cast from `ℕ`. Vertex types range over
+  `Type`, as in F-HC, and for the same reason this cannot weaken the negation.
+- Not stated: that this really is a weakening, that is, that `HadwigerConjecture` implies
+  `FractionalHadwigerConjecture`. That is `χ_f ≤ χ` (S-1.c, still `sorry`) and nothing
+  here depends on it.
+- The negation has a complete proof body from Corollary 1.2 (`h(G) < m/2 ≤ χ_f(G)`), so
+  it is `PROVED_MODULO`.
+- Review: not reviewed. Sheet item R-20.
 
 ### S-1.a, S-1.b, S-1.c — the three bounds of Section 1
 
@@ -321,10 +372,15 @@ Note added at M0. The difference in form of L-2.2 is also in F-HOLE.
 - Paper: "The hole relation is symmetric, has no loops, and is triangle-free"; "Hence
   `α(G) ≤ 2`, `χ(G) ≥ ⌈m/2⌉`" for the graph on positions.
 - Lean: `Hole.symm`, `not_hole_self`, `not_hole_triangle` (three elements, not assumed
-  distinct), and `(D.positionGraph o).indepNum ≤ 2`.
-- Form: triangle-freeness without "distinct". Only the first half of equation (2.3) is
-  stated; the second half follows from it and S-1.a and is not used later.
-- Review: not reviewed. Sheet item R-17, with question Q5.
+  distinct), `(D.positionGraph o).indepNum ≤ 2`, and, since 2026-10-07 on the user's
+  decision (question Q5),
+  `∃ k : ℕ, (D.positionGraph o).chromaticNumber = k ∧ m ≤ 2 * k`.
+- Form: triangle-freeness without "distinct". In the second half of equation (2.3) the
+  chromatic number is exhibited as a natural number `k`, and `k ≥ ⌈m/2⌉` is written
+  `m ≤ 2k`; for a natural number `k` the two are the same, and no division or ceiling
+  appears. Its proof body is complete and rests on the first half and on S-1.a, both
+  still `sorry`. It is not used later in the paper.
+- Review: not reviewed. Sheet item R-17.
 
 ### The fidelity question that matters most
 

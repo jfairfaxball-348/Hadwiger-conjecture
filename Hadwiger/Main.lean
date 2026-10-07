@@ -16,7 +16,7 @@ Paper, Section 1:
 * Hadwiger's conjecture, as the paper states it: "`h(G) ≥ χ(G)` for every finite nonempty
   simple graph `G`."
 
-Blueprint entries: `T-1.1`, `C-1.2`, `D-1.HC`, `T-FINAL`, `T-NOT-HC`.
+Blueprint entries: `T-1.1`, `C-1.2`, `D-1.HC`, `T-FINAL`, `T-NOT-HC`, `D-1.fHC`, `S-1.d`.
 
 An `m`-vertex finite simple graph is a `SimpleGraph (Fin m)`. "Arbitrarily large `m`" is
 `∀ N, ∃ m ≥ N`.
@@ -76,5 +76,29 @@ theorem not_hadwigerConjecture : ¬ HadwigerConjecture := by
   obtain ⟨m, hm, G, hG⟩ := exists_hadwigerNumber_lt_chromaticNumber 1
   have : Nonempty (Fin m) := ⟨⟨0, by omega⟩⟩
   exact absurd (hHC (Fin m) G) (not_le.mpr hG)
+
+/-- **The fractional-colouring weakening of Hadwiger's conjecture**, as named in the last
+sentence of Corollary 1.2: `χ_f(G) ≤ h(G)`. The paper writes only the inequality; the
+quantifier "for every finite nonempty simple graph `G`" is taken from its statement of
+Hadwiger's conjecture, of which this is called the weakening. The comparison is in `ℝ`,
+where `fractionalChromaticNumber` lives. Vertex types range over `Type`, as in
+`HadwigerConjecture`.
+
+Defined on the user's decision of 2026-10-07 (question Q6 of the M0 review sheet). -/
+def FractionalHadwigerConjecture : Prop :=
+  ∀ (V : Type) [Fintype V] [Nonempty V] (G : SimpleGraph V),
+    fractionalChromaticNumber G ≤ (hadwigerNumber G : ℝ)
+
+/-- **The fractional-colouring weakening of Hadwiger's conjecture is false** (Corollary 1.2,
+last sentence). Derived from Corollary 1.2, which gives graphs with
+`h(G) < m/2 ≤ χ_f(G)`. Corollary 1.2 is still `sorry`, so this theorem is
+`PROVED_MODULO`. -/
+theorem not_fractionalHadwigerConjecture : ¬ FractionalHadwigerConjecture := by
+  intro hF
+  obtain ⟨m, hm, G, k, -, h1, h2, h3, -⟩ :=
+    exists_hadwigerNumber_lt_fractionalChromaticNumber 1
+  have : Nonempty (Fin m) := ⟨⟨0, by omega⟩⟩
+  have h4 := hF (Fin m) G
+  linarith
 
 end Hadwiger

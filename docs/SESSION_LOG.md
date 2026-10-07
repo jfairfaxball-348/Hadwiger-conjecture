@@ -262,3 +262,66 @@ scripts in a file with the editor tools and run the file.
 - Transitivity of `IsMinor`, and the equivalence of the branch-set definition with a
   definition by contractions: not attempted. Mathlib has no contraction of simple graphs.
 
+### The user's answers to the seven questions (later the same day)
+
+The checkpoint report put the sheet's seven questions to the user. The answer, verbatim:
+
+```text
+q1 - accept, q2 - check it, q3 - accept, q4 - yes, q5 - state it, q6 - state it, q7 - that's fine.
+```
+
+What was done with each:
+
+- **Q1 (branch-set definition of minor): accept.** Recorded in F-MINOR.
+- **Q2 (the Diestel citation): check it.** Checked against the author's free preview of the
+  book, Chapter 1, fetched from the author's site, which describes it as the sixth edition
+  (2025). Section 1.7 is "Contraction and minors" (pages 19 to 21 of the chapter). After
+  defining minors through a subgraph with connected branch sets, the book restates the
+  notion as a map from a subset of `V(Y)` onto `V(X)` with connected fibres and an edge
+  between the fibres of the ends of each edge of `X`. That is `MinorModel` clause for
+  clause; the book's "connected" (its Section 1.4) means non-empty with connected induced
+  subgraph, as Mathlib's does. The deletion-and-contraction characterisation is Corollary
+  1.7.2 there, for finite graphs. The tables of contents of the first and second editions
+  also have 1.7 "Contraction and minors". So the citation stands, and F-MINOR now says what
+  was checked and in which edition. What was checked is the text of the book; the
+  equivalence with contractions is still not formalised.
+  - A web search summary attributed the deletion-and-contraction statement to
+    "Proposition 1.7.1". In the edition checked, 1.7.1 is the partial-order statement and
+    the characterisation is 1.7.2. Statement numbers differ between editions; the note
+    cites the edition. Lesson: a search summary is not the source.
+- **Q3 (dropping finiteness in `HoleData`): accept.** Recorded in F-HOLE.
+- **Q4 (a non-vacuity lemma for `Hole`): yes.** Entered in the blueprint as
+  S-M3.hole-nonvacuous, `NOT_STATED`, and in the M3 task list. **Not proved in this
+  session.** The question as put said the lemma "would belong to M3", and the session's
+  instruction was to start nothing beyond M0. Reading "yes" as "yes, at M3" is the worker's
+  interpretation; the user has been told so.
+- **Q5 (second half of equation (2.3)): state it.** Added
+  `HoleData.le_two_mul_chromaticNumber_positionGraph`:
+  `∃ k : ℕ, (D.positionGraph o).chromaticNumber = k ∧ m ≤ 2 * k`. `Hadwiger/HoleRelation.lean`
+  now imports `Hadwiger/ChromaticBounds.lean` for S-1.a.
+- **Q6 (the fractional weakening is false): state it.** Added the definition
+  `FractionalHadwigerConjecture` and the theorem `not_fractionalHadwigerConjecture`, with
+  blueprint entry D-1.fHC, fidelity note F-FHC and sheet item R-20. The definition is new
+  and unreviewed.
+- **Q7 (notes added for five statements): "that's fine".** Read as accepting that the notes
+  were added. Not read as the sign-off of those items. This reading is the worker's.
+
+A decision taken by the worker, for the user to overrule: the two theorems of Q5 and Q6
+were given complete proof bodies instead of `sorry`, because each follows in a few lines
+from results already stated. They rest on `sorry`s (the first half of S-2.3 and S-1.a;
+Corollary 1.2), so they are `PROVED_MODULO`, not proved. No `sorry` was added or removed:
+still 10. The alternative, a `sorry` each and two more ledger rows, was not taken. The
+`sorry`s of M1 and M3 are untouched.
+
+**Not done: no fidelity note was marked reviewed.** The user's answer decides the seven
+questions. It does not say that the items of the sheet are accepted, and the instruction
+for this session was that the worker must not mark a note reviewed. The user is being
+asked.
+
+### Push and CI, second round
+
+- The second push also waited on Git Credential Manager, for about twenty minutes, and
+  then completed. Remote and local were both `7723329` afterwards.
+- CI on `7723329` (run `37604790371`) was still running when this entry was written. Its
+  result is not recorded here.
+
