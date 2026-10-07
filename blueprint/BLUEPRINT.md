@@ -7,6 +7,9 @@ This file has one entry for every definition, lemma, proposition, theorem and co
 the paper, plus the unnumbered claims that the main results rely on. For each entry it
 records where it is in the paper, what it depends on, its Lean name, and its status.
 
+The last section, "Sanity checks (not in the paper)", is different in kind: its entries
+(`S-M0.*`) are checks on this repository's definitions, not statements of the paper.
+
 **It replaces the old proof-state file. If this file and anything else disagree about what
 is stated or proved, this file is wrong and must be fixed; nothing else is authority.**
 `python scripts/axiom_audit.py` checks every status in it against the actual build.
@@ -15,7 +18,7 @@ is stated or proved, this file is wrong and must be fixed; nothing else is autho
 
 | Column | Meaning |
 |---|---|
-| ID | `T-` theorem, `P-` proposition, `L-` lemma, `C-` corollary, `D-` definition or construction, `S-` unnumbered statement made in running text. Numbers follow the paper (`L-2.2` is Lemma 2.2). |
+| ID | `T-` theorem, `P-` proposition, `L-` lemma, `C-` corollary, `D-` definition or construction, `S-` unnumbered statement made in running text. Numbers follow the paper (`L-2.2` is Lemma 2.2). IDs of the form `S-M0.<name>` are the sanity checks of milestone M0; they are not in the paper. |
 | Kind | What the paper calls it. |
 | Paper location | Section, number, and the TeX label in the paper's source. |
 | Statement | A short paraphrase. The paper is the authority for the exact statement. |
@@ -245,3 +248,58 @@ entries are T-3.1 and T-1.1 above.
 | S-A.M0 | statement | §A.4, equations `eq:ledger-column-dimension` to `eq:ledger-collision-bit-slacks` | `dim B / N` and every `O(n)` scalar-record count can be made a prescribed small fraction of `N` by choosing `M_0` last: record cells at most `2^{C_rec n + C_rec,0}` with `log_2 < .005N`; tested Gram bits at most `16\|E\| h dim B < .01N`. [PI-005] | D-A.order, P-7.1, T-6.3, L-4.3 | — | NOT_STATED |
 | S-A.ledger | statement | §A.3 (table) | Pin, atom and tensor-rank ledger: `4K_1 + 2d_0 < u_0`; `dim C_i ≤ K^2`; at most 14 atoms per endpoint; `2(K+14) ≤ R_*`; at most 28 positions and `k_max = 56(g−1)` key-vector slots per unit; `8(g−1)` in rare queries. | D-A.order, D-5.C, D-7.query | — | NOT_STATED |
 | S-A.scales | statement | §A.5 (table and text) | Probability scales: which errors (`2^{-Ω(n)}`, `2^{-Ω(n^2)}`, `o(n^{-p})`, `Ω(N^{-4})`) survive which density inflations; the final margin `100g − (56(g−1) + .03) = 44g + 55.97 > 0`; the sampling scales used in P-3.4. A summary of estimates proved elsewhere. | P-7.1, L-8.5, L-10.7, L-14.1, P-3.4 | — | NOT_STATED |
+
+## Sanity checks (not in the paper)
+
+**None of these is a statement of the paper, and a `DONE` here says nothing about any
+result of the paper.** They were proved at milestone M0 to pin the new definitions of the
+statement layer from both sides: a definition that was accidentally too weak or too strong
+would make one of them false. Lean files: `Hadwiger/Sanity/Minor.lean`,
+`Hadwiger/Sanity/ConnectedMatching.lean`, `Hadwiger/Sanity/FractionalColoring.lean`.
+
+Kinds used in this section:
+
+- `sanity (M0 list)`: a lemma named in the M0 section of `blueprint/MILESTONES.md`;
+- `sanity (extra)`: a further check added at M0, with the reason in its Statement cell;
+- `support`: lemmas used to prove the others. They are listed so that every declaration in
+  `Hadwiger/Sanity/` is audited.
+
+"Finite" below means the vertex type has a `Fintype` instance.
+
+### Minors and the Hadwiger number
+
+| ID | Kind | Paper location | Statement | Depends on | Lean | Status |
+|---|---|---|---|---|---|---|
+| S-M0.minor-le-card | sanity (M0 list) | not in the paper | A `K_t` minor of a finite graph needs `t ≤ \|V\|`. | D-1.minor | `Hadwiger.HasCliqueMinor.le_card` | DONE |
+| S-M0.hadwiger-attained | sanity (M0 list) | not in the paper | A finite graph `G` has a `K_t` minor with `t = h(G)`: the supremum in D-1.h is a maximum, not a junk value. | D-1.h, S-M0.minor-le-card, S-M0.minor-zero-one | `Hadwiger.hasCliqueMinor_hadwigerNumber` | DONE |
+| S-M0.hadwiger-top | sanity (M0 list) | not in the paper | `h(K_n) = n` for the complete graph on `Fin n`, every `n` including `0`. | D-1.h, S-M0.hadwiger-complete-iff | `Hadwiger.hadwigerNumber_top` | DONE |
+| S-M0.hadwiger-path3 | sanity (M0 list) | not in the paper | The path on three vertices (Mathlib's `pathGraph 3`) has Hadwiger number `2`. | D-1.h, S-M0.minor-edge, S-M0.hadwiger-complete-iff | `Hadwiger.hadwigerNumber_pathGraph_three` | DONE |
+| S-M0.hadwiger-cycle4 | sanity (M0 list) | not in the paper | The 4-cycle (Mathlib's `cycleGraph 4`) has Hadwiger number `3`. The `K_3` minor has branch sets `{0,1}`, `{2}`, `{3}`: a branch set with two vertices is exercised. | D-1.h, S-M0.hadwiger-complete-iff | `Hadwiger.hadwigerNumber_cycleGraph_four`, `Hadwiger.hasCliqueMinor_cycleGraph_four` | DONE |
+| S-M0.hadwiger-mono | sanity (M0 list) | not in the paper | Adding edges on a fixed finite vertex type does not decrease the Hadwiger number: `G ≤ G'` gives `h(G) ≤ h(G')`. | D-1.h, S-M0.minor-support | `Hadwiger.hadwigerNumber_mono` | DONE |
+| S-M0.hadwiger-iso | sanity (M0 list) | not in the paper | Isomorphic graphs have the same Hadwiger number. No finiteness is assumed. | D-1.h, S-M0.minor-support | `Hadwiger.hadwigerNumber_congr` | DONE |
+| S-M0.minor-zero-one | sanity (extra) | not in the paper | Every graph has a `K_0` minor; a graph has a `K_1` minor exactly when it has a vertex. Added because `blueprint/FIDELITY.md` (F-MINOR) asserts both edge cases. | D-1.minor | `Hadwiger.hasCliqueMinor_zero`, `Hadwiger.hasCliqueMinor_one_iff` | DONE |
+| S-M0.hadwiger-largest | sanity (extra) | not in the paper | For a finite graph, `G` has a `K_t` minor exactly when `t ≤ h(G)`; in particular a `K_t` minor gives a `K_s` minor for `s ≤ t`, and `h(G) ≤ \|V\|`. Added because the paper defines `h(G)` as "the largest `t`". | D-1.h, S-M0.hadwiger-attained | `Hadwiger.hasCliqueMinor_iff_le_hadwigerNumber`, `Hadwiger.HasCliqueMinor.of_le`, `Hadwiger.HasCliqueMinor.le_hadwigerNumber`, `Hadwiger.hadwigerNumber_le_card` | DONE |
+| S-M0.hadwiger-complete-iff | sanity (extra) | not in the paper | For a finite graph, `h(G) = \|V\|` exactly when `G` is complete: a `K_{\|V\|}` minor forces every branch set to be a single vertex. Added as the upper-side pin used for the two small graphs. | D-1.h, S-M0.hadwiger-attained, S-M0.minor-support | `Hadwiger.hadwigerNumber_eq_card_iff`, `Hadwiger.eq_top_of_hasCliqueMinor_card`, `Hadwiger.hadwigerNumber_top_card`, `Hadwiger.hasCliqueMinor_top_card`, `Hadwiger.hadwigerNumber_lt_card_of_ne_top` | DONE |
+| S-M0.minor-edge | sanity (extra) | not in the paper | An edge is a `K_2` minor. | D-1.minor, S-M0.minor-support | `Hadwiger.HasCliqueMinor.of_adj` | DONE |
+| S-M0.minor-support | support | not in the paper | Representatives of branch sets are injective, so a minor model of `H` in `G` gives `\|V(H)\| ≤ \|V(G)\|`; a model is carried along an injective homomorphism (covers adding edges and isomorphisms); an injective homomorphism is a model with singleton branch sets; a `K_t` model may be given by branch sets checked for `i < j` only; the set of `t` is bounded for a finite graph. | D-1.minor | `Hadwiger.MinorModel.exists_injective_rep`, `Hadwiger.MinorModel.card_le`, `Hadwiger.MinorModel.map`, `Hadwiger.MinorModel.ofInjective`, `Hadwiger.hasCliqueMinor_of_branch`, `Hadwiger.HasCliqueMinor.map`, `Hadwiger.HasCliqueMinor.mono`, `Hadwiger.hasCliqueMinor_congr`, `Hadwiger.bddAbove_setOf_hasCliqueMinor` | DONE |
+| S-M0.final-finite | sanity (extra) | not in the paper | For a finite graph, `h(G) < χ(G)` in `ℕ∞` holds exactly when `χ(G)` is a natural number `k` with `h(G) < k`. So T-FINAL cannot be true through an infinite chromatic number. Added because `blueprint/FIDELITY.md` (T-FINAL) names it as an M0 item. | D-1.h, D-1.chi | `Hadwiger.hadwigerNumber_lt_chromaticNumber_iff` | DONE |
+
+### Connected matchings
+
+| ID | Kind | Paper location | Statement | Depends on | Lean | Status |
+|---|---|---|---|---|---|---|
+| S-M0.cm-le-half | sanity (M0 list) | not in the paper | `2·cm(G) ≤ \|V\|` for a finite graph. | D-1.cm, S-M0.cm-attained, S-M0.cm-support | `Hadwiger.two_mul_connectedMatchingNumber_le_card` | DONE |
+| S-M0.cm-attained | sanity (M0 list) | not in the paper | A finite graph has a connected matching with exactly `cm(G)` edges: the supremum in D-1.cm is a maximum, not a junk value. | D-1.cm, S-M0.cm-support | `Hadwiger.exists_isConnectedMatching_ncard_eq` | DONE |
+| S-M0.cm-top | sanity (M0 list) | not in the paper | `cm(K_n) = ⌊n/2⌋` for the complete graph on `Fin n` (natural-number division). | D-1.cm, S-M0.cm-le-half, S-M0.cm-support | `Hadwiger.connectedMatchingNumber_top` | DONE |
+| S-M0.cm-two-disjoint-edges | sanity (M0 list) | not in the paper | The graph on `Fin 4` whose only edges are `0–1` and `2–3` has `cm = 1`: the two edges are a matching that is not connected. This is the check that "touching" is really required. | D-1.cm, D-1.touch, S-M0.cm-le-half, S-M0.cm-attained, S-M0.cm-support | `Hadwiger.connectedMatchingNumber_two_disjoint_edges` | DONE |
+| S-M0.cm-support | support | not in the paper | A matching of a finite graph has `2\|E(M)\| ≤ \|V\|`; `k` pairwise disjoint, pairwise touching edges form a connected matching with exactly `k` edges; the empty subgraph is a connected matching; the set of sizes is bounded for a finite graph; every connected matching has at most `cm(G)` edges. | D-1.cm, D-1.touch | `Hadwiger.two_mul_ncard_edgeSet_le_card`, `Hadwiger.exists_isConnectedMatching_of_family`, `Hadwiger.isConnectedMatching_bot`, `Hadwiger.bddAbove_setOf_connectedMatching`, `Hadwiger.IsConnectedMatching.ncard_le` | DONE |
+
+### Fractional colourings
+
+| ID | Kind | Paper location | Statement | Depends on | Lean | Status |
+|---|---|---|---|---|---|---|
+| S-M0.chif-totals | sanity (M0 list) | not in the paper | The set of totals of fractional colourings of a finite graph is nonempty and has `0` as a lower bound. So `χ_f` is a genuine infimum, never the junk value `sInf ∅ = 0`. | D-1.fcol, D-1.chif, S-M0.chif-support | `Hadwiger.range_total_nonempty`, `Hadwiger.zero_mem_lowerBounds_range_total` | DONE |
+| S-M0.chif-top | sanity (M0 list) | not in the paper | `χ_f(K_n) = n` for the complete graph on `Fin n`, every `n` including `0`. | D-1.chif, S-M0.chif-totals, S-M0.chif-support | `Hadwiger.fractionalChromaticNumber_top` | DONE |
+| S-M0.chif-cycle5 | sanity (M0 list) | not in the paper | `χ_f(C_5) = 5/2` for Mathlib's `cycleGraph 5`. Not an integer, so the definition is not the ordinary chromatic number in disguise (`χ(C_5) = 3`). | D-1.chif, S-M0.chif-totals, S-M0.chif-support | `Hadwiger.fractionalChromaticNumber_cycleGraph_five`, `Hadwiger.card_le_two_of_isIndepSet_cycleGraph_five` | DONE |
+| S-M0.chif-attained | sanity (extra) | not in the paper | The infimum defining `χ_f` is attained by some fractional colouring. Added because the paper says "minimum" and D-1.chif is defined with `sInf`; with this lemma the two agree by proof, not by remark. | D-1.chif, S-M0.chif-totals, S-M0.chif-support | `Hadwiger.exists_fractionalColoring_total_eq` | DONE |
+| S-M0.chif-support | support | not in the paper | Totals are nonnegative; `χ_f` is at most every total and at least every lower bound of the totals; `0 ≤ χ_f ≤ \|V\|`; nonnegative weights on a finite family of independent sets covering every vertex give a fractional colouring with the same total; if every independent set has at most `k` vertices then `\|V\| ≤ k·total` for every fractional colouring. The last is the counting step of the paper's proof of Corollary 1.2 for an arbitrary bound `k`; it is not S-1.b, which is about `α(G)` and is still `STATED`. | D-1.fcol, D-1.chif | `Hadwiger.FractionalColoring.total_nonneg`, `Hadwiger.bddBelow_range_total`, `Hadwiger.fractionalChromaticNumber_le_total`, `Hadwiger.le_fractionalChromaticNumber`, `Hadwiger.fractionalChromaticNumber_nonneg`, `Hadwiger.fractionalChromaticNumber_le_card`, `Hadwiger.exists_fractionalColoring_of_family`, `Hadwiger.FractionalColoring.card_le_mul_total` | DONE |

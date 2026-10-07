@@ -62,6 +62,7 @@ CI (`.github/workflows/lean.yml`) runs the same three steps on every push and pu
 | `Hadwiger/MatchingMinor.lean` | Proposition 3.5. |
 | `Hadwiger/HoleRelation.lean` | Section 2.1: the hole relation, Lemma 2.2, the graph on positions. |
 | `Hadwiger/Main.lean` | Theorem 1.1, Corollary 1.2, the final theorem, Hadwiger's conjecture and its negation. |
+| `Hadwiger/Sanity/` | Sanity checks on the definitions (milestone M0). Not statements of the paper; blueprint IDs `S-M0.*`. |
 | `blueprint/` | Blueprint, ledger, fidelity notes, paper issues, milestones. |
 | `scripts/` | The two checks and their shared scanner. |
 

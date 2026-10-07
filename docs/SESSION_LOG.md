@@ -126,3 +126,83 @@ Yes do it all push commit merge etc. Lets get this show on the road. When done g
 This authorisation covered this push and this merge. The standing rule in `AGENTS.md`
 (ask before pushing, and before merging into `main`) is unchanged for later sessions
 unless the user says otherwise.
+
+---
+
+## 2026-10-07 — M0 session (statement layer reviewed)
+
+Branch `m0-statement-layer`, started from main `e482512`.
+
+### Start gate
+
+- On `main`, working tree clean, `main` = `origin/main` = `e482512` (checked after
+  `git fetch origin`).
+- Read: `START_HERE.md`, `AGENTS.md`, the blueprint, the ledger, the milestones, the
+  fidelity notes, the paper issues, and the reorganisation entry of this log.
+- `lake build` passed. `check_ledger.py`: 10 `sorry`, 10 rows, OK. `axiom_audit.py`: 127
+  entries, 30 declarations, OK.
+- `paper/paper.pdf` sha256 matches the pin in `docs/PROVENANCE.md`.
+
+### Sanity lemmas
+
+Written in three new files under `Hadwiger/Sanity/` and entered in the blueprint under
+"Sanity checks (not in the paper)", IDs `S-M0.*`. Statuses are in the blueprint.
+
+- Every lemma in the M0 list of `blueprint/MILESTONES.md` was proved as listed. **None
+  turned out to be false**, so no definition was changed and none needed changing.
+- Further checks were added beyond the list, each with its reason in the blueprint:
+  the `K_0`/`K_1` edge cases; `K_t` minor iff `t ≤ h(G)`; `h(G) = |V|` iff `G` is complete;
+  an edge is a `K_2` minor; `h(G) < χ(G)` in `ℕ∞` iff `χ(G)` is a natural number above
+  `h(G)`; and the infimum defining `χ_f` is attained.
+- A one-off cross-check (run by hand, not a repository script) confirmed that all 53
+  declarations in `Hadwiger/Sanity/` are named in the blueprint and that no `S-M0` row was
+  dropped by the table parser. The audit script checks blueprint against build, not the
+  reverse; a declaration left out of the blueprint would not be audited. Possible later
+  infrastructure change, not made here: have the audit fail on an unlisted theorem.
+
+Scope note. `FractionalColoring.card_le_mul_total` (if every independent set has at most
+`k` vertices then `|V| ≤ k · total`) was needed for `χ_f(K_n) = n` and `χ_f(C_5) = 5/2`.
+It is the counting step of the paper's proof of Corollary 1.2. M1 was **not** started: the
+three `sorry`s of `Hadwiger/ChromaticBounds.lean` are untouched and S-1.a, S-1.b, S-1.c
+are still `STATED`.
+
+### Attempts that failed, and why
+
+All were mechanical; none was mathematical.
+
+- `SimpleGraph.top_adj` takes its two vertices explicitly at this Mathlib commit, so
+  `top_adj.mp` is not a constant; write `(top_adj _ _).mp`.
+- `first | exact ⟨1, by simp, 2, by simp, by decide⟩ | …` does **not** fall through to the
+  next alternative when a nested `by simp` reduces its goal to `False`: the nested block
+  reports "unsolved goals" as a logged error instead of failing the alternative. The file
+  did not compile, so nothing was silently wrong, but the pattern is unusable. Give
+  membership proofs as terms (`Or.inr rfl`, `rfl`) and write the cases out.
+- `support_subgraphOfAdj` is `SimpleGraph.support_subgraphOfAdj`, not in the `Subgraph`
+  namespace.
+- `Nat.sSup_mem ⟨0, …⟩ h` could not infer the set from an `∃` goal; pass `(s := {k | …})`.
+- `rcases ha with rfl | rfl` on `ha : a = i ∨ a = i + 2` substituted the bound variable `i`
+  away; keep the equations and rewrite.
+- In `∀ s, ¬ G.IsIndepSet (s : Set V) → f s = 0` the binder was elaborated as a `Set V`;
+  annotate it `∀ s : Finset V`.
+
+### Lean notes
+
+- Renamed at this Mathlib commit (the old names still work but warn): `ENat.coe_ne_top` →
+  `ENat.natCast_ne_top`; `Set.setOf_forall` → `Set.ofPred_forall`; `continuous_finset_sum`
+  → `continuous_finsetSum`; `if_neg` is deprecated.
+- `SimpleGraph.cycleGraph n` has a kernel-evaluable `DecidableRel` instance, so facts about
+  `cycleGraph 4` and `cycleGraph 5` can be proved by `decide`. `pathGraph n` is `hasse`;
+  use `pathGraph_adj` and `simp`.
+- Useful and present: `induce_pair_connected_of_adj`, `induce_singleton_eq_top`,
+  `Connected.map`, `induceHom`, `Subgraph.IsMatching.iSup`,
+  `Subgraph.IsMatching.subgraphOfAdj`, `Subgraph.edgeSet_iSup`,
+  `Subgraph.edgeSet_subgraphOfAdj`, `sum_degrees_eq_twice_card_edges`,
+  `IsCompact.exists_isMinOn`.
+- The `cover` field of `FractionalColoring` carries a classical decidability instance.
+  Inside a proof that starts with `classical`, `Finset.sum_filter` rewrites it and the
+  instances agree up to `rfl`. A lemma that takes `[DecidableEq V]` as a hypothesis has a
+  different instance; `exists_fractionalColoring_of_family` handles that once, with `simp`.
+- `exists_isConnectedMatching_of_family` builds a `Subgraph` matching from an indexed list
+  of disjoint edges and computes its `edgeSet.ncard`. `blueprint/MILESTONES.md` names this
+  as a gap for M2; it now exists.
+

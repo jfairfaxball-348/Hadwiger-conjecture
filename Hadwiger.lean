@@ -5,6 +5,9 @@ import Hadwiger.ChromaticBounds
 import Hadwiger.MatchingMinor
 import Hadwiger.HoleRelation
 import Hadwiger.Main
+import Hadwiger.Sanity.Minor
+import Hadwiger.Sanity.ConnectedMatching
+import Hadwiger.Sanity.FractionalColoring
 
 /-!
 # Lean 4 formalisation of "A counterexample to Hadwiger's conjecture"
