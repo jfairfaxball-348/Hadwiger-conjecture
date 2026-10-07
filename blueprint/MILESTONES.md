@@ -5,18 +5,12 @@ Statuses of individual results are in `blueprint/BLUEPRINT.md`, never here.
 
 ## The single next task
 
-**M0, second half: record the user's sign-off of the statement layer.**
-The sheet to sign is `blueprint/M0_REVIEW_SHEET.md`: 20 items. Its 7 questions were
-answered by the user on 2026-10-07 and the answers have been carried out and recorded
-there. What remains is the sign-off of the items themselves: the user has not yet said
-that they are accepted. For each item the user accepts, write its "Reviewed by" line in
-`blueprint/FIDELITY.md`; for each change the user asks for, make it as an explicit recorded
-change. M0 is finished only then. Do not start M1 before it.
+**M1: Corollary 1.2 from Theorem 1.1 and Proposition 3.5, including `χ_f ≥ |V|/α`.**
+Details under M1 below.
 
-The first half of M0 was done on 2026-10-07: every sanity lemma in the M0 list below is
-proved (blueprint section "Sanity checks (not in the paper)"). Details under M0 below.
-
-After M0: M1.
+M0 was completed on 2026-10-07: every sanity lemma in its list is proved, and every
+fidelity note carries the user's "Reviewed by" line. A definition or statement added or
+changed from now on needs its own fidelity note and its own sign-off.
 
 ## How the size estimates were made
 
@@ -89,9 +83,10 @@ M1 to M4 are independent of M5 to M17. When M1, M2 and M17 are done, T-FINAL is 
     blueprint. The three files under `Hadwiger/Sanity/` come to 809 lines including
     comments, against the estimate of 400 (300–600); the excess is the added checks and
     the supporting lemmas. No Mathlib gap was met.
-  - Part (1) is prepared and not done. A worker re-read every fidelity note against the
-    paper and wrote `blueprint/M0_REVIEW_SHEET.md`. That re-read is not the review. No
-    fidelity note carries a "Reviewed by" line yet.
+  - Part (1) is done. A worker re-read every fidelity note against the paper and wrote
+    `blueprint/M0_REVIEW_SHEET.md`; that re-read was preparation. The user then signed off
+    all 20 items of the sheet on 2026-10-07, and every fidelity note carries the "Reviewed
+    by" line.
   - The user answered the sheet's seven questions the same day. In consequence: a
     textbook citation was checked; the second half of equation (2.3) and the falsity of
     the fractional weakening were stated in Lean (blueprint S-2.3, D-1.fHC, S-1.d); and a

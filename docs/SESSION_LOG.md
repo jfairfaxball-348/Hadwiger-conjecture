@@ -325,3 +325,39 @@ asked.
 - CI on `7723329` (run `37604790371`) was still running when this entry was written. Its
   result is not recorded here.
 
+### The sign-off
+
+After the seven questions were carried out, the user was asked two things through a
+prompt with fixed options. Questions and answers, verbatim:
+
+```text
+How should the sign-off of the 20 review-sheet items be recorded in FIDELITY.md?
+  -> Accept all 20 items
+
+Q4, the lemma showing that the hole relation is not vacuous: when should it be proved?
+  -> At M3, as recorded
+```
+
+The first option's description, as shown to the user: every fidelity note gets the line
+"Reviewed by John Fairfax-Ball, 2026-10-07" (name taken from the git configuration), and M0
+is then complete.
+
+Done on that instruction:
+
+- `blueprint/FIDELITY.md`: all 19 notes now end "Reviewed by John Fairfax-Ball, 2026-10-07"
+  with their sheet item numbers; together they cover the 20 items. The header says how the
+  sign-off came about and what it covers: the notes and the Lean text as they stood at the
+  commit that records it, and nothing later.
+- `blueprint/M0_REVIEW_SHEET.md`: the 20 sign-off lines are filled in, and the question and
+  answer are quoted.
+- `blueprint/MILESTONES.md`: M0 is complete; the single next task is M1.
+- The hole non-vacuity lemma stays where it was put: blueprint S-M3.hole-nonvacuous,
+  `NOT_STATED`, for M3. The worker's reading of the answer to Q4 was confirmed.
+
+What the sign-off is and is not. It is the user's acceptance of the notes after reading a
+sheet prepared by a worker. The sheet lists every doubt the worker found; it cannot list
+doubts the worker did not find. The sanity lemmas are machine-checked; the fidelity
+arguments are not.
+
+M1 was not started.
+

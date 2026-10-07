@@ -1,4 +1,4 @@
-# M0 review sheet — the statement layer, for the user's sign-off
+# M0 review sheet — the statement layer, signed off by the user on 2026-10-07
 
 Prepared on 2026-10-07 in the M0 session, on branch `m0-statement-layer`.
 
@@ -6,11 +6,28 @@ Prepared on 2026-10-07 in the M0 session, on branch `m0-statement-layer`.
 layer: the paper's own sentence, the Lean text, what is now machine-checked about it, and
 every doubt found on re-reading. It exists so that the user can sign each item off.
 
-**What this is not.** It is not a review. The re-read was done by a worker (Claude), who
-is not independent of the earlier worker that wrote the definitions and the fidelity notes.
-No note in `blueprint/FIDELITY.md` has been marked reviewed. An item counts as reviewed
-only when the user fills in its sign-off line; the result is then copied into
-`blueprint/FIDELITY.md`.
+**What this is not.** The sheet itself is not a review. The re-read behind it was done by
+a worker (Claude), who is not independent of the earlier worker that wrote the definitions
+and the fidelity notes. An item counts as reviewed only through the user's sign-off, which
+is recorded on its sign-off line and copied into `blueprint/FIDELITY.md`.
+
+**Sign-off.** After answering the seven questions below, the user was asked, on
+2026-10-07:
+
+```text
+How should the sign-off of the 20 review-sheet items be recorded in FIDELITY.md?
+```
+
+and answered, from the options offered:
+
+```text
+Accept all 20 items
+```
+
+The option read: every fidelity note gets the line "Reviewed by John Fairfax-Ball,
+2026-10-07", and M0 is then complete. The sign-off lines below were filled in on that
+instruction. They cover each item as it stands at the commit that records the sign-off,
+and nothing changed later.
 
 **How the re-read was done.** Each note in `blueprint/FIDELITY.md` was compared with the
 paper's TeX source (`build/sections/01-introduction.tex`, `02-geometry.tex`,
@@ -42,20 +59,20 @@ q1 - accept, q2 - check it, q3 - accept, q4 - yes, q5 - state it, q6 - state it,
 | Q1 | R-3 | The paper never defines "minor". Is the branch-set definition accepted as the meaning of "`K_t` minor"? | accept | Recorded in F-MINOR. |
 | Q2 | R-3 | `FIDELITY.md` cited "Diestel, *Graph Theory*, §1.7" from memory. Check it, or drop the section number? | check it | Checked against the author's free preview of the book. The section is right, and the book's own restatement of "minor" is the Lean definition clause for clause. Details under R-3 and in F-MINOR. |
 | Q3 | R-10 | `HoleData` drops the paper's "finite-dimensional" and "finite". Accept the generalisation? | accept | Recorded in F-HOLE. |
-| Q4 | R-10 | Nothing in Lean shows that `Hole` can ever hold. Should a non-vacuity lemma be added (it would belong to M3)? | yes | Entered in the blueprint as S-M3.hole-nonvacuous (`NOT_STATED`) and in the M3 task list. **Not proved in this session**: the question placed it in M3, and the session's instruction was to start nothing beyond M0. This reading of "yes" is the worker's; say so if it was meant for now. |
+| Q4 | R-10 | Nothing in Lean shows that `Hole` can ever hold. Should a non-vacuity lemma be added (it would belong to M3)? | yes | Entered in the blueprint as S-M3.hole-nonvacuous (`NOT_STATED`) and in the M3 task list. **Not proved in this session**: the question placed it in M3. Asked afterwards when it should be proved, the user chose "At M3, as recorded". |
 | Q5 | R-17 | The second half of equation (2.3), `χ(G) ≥ ⌈m/2⌉`, has no Lean statement. State it? | state it | Stated: `HoleData.le_two_mul_chromaticNumber_positionGraph`. See R-17. |
 | Q6 | R-19, R-20 | "The fractional weakening `χ_f(G) ≤ h(G)` is false" has no Lean statement. State it? | state it | A definition and its negation were added: `FractionalHadwigerConjecture`, `not_fractionalHadwigerConjecture`. The definition is new and has its own item, R-20. |
-| Q7 | R-12 to R-14, R-17, R-19 | `FIDELITY.md` had no note for S-1.a, S-1.b, S-1.c, S-2.3 or T-NOT-HC. Notes were added, unreviewed. | that's fine | Read as: adding the notes is accepted. It is **not** read as the sign-off of those items; that reading is the worker's. |
+| Q7 | R-12 to R-14, R-17, R-19 | `FIDELITY.md` had no note for S-1.a, S-1.b, S-1.c, S-2.3 or T-NOT-HC. Notes were added, unreviewed. | that's fine | Read as: adding the notes is accepted. It was not read as the sign-off of those items; that came separately (see "Sign-off" above). |
 
 On Q5 and Q6: each new theorem was given its complete proof body rather than a `sorry`,
 because each follows in a few lines from results already stated. Both rest on results
 that are still `sorry`, so both are `PROVED_MODULO` and neither is proved. No `sorry` was
 added and none was removed; the count is still 10.
 
-**What is still open on this sheet.** The seven questions are answered. The sign-off lines
-of the items are not filled in: the user's answer decides the questions and does not say
-that the items are accepted. There are now 20 items; R-20 is new and R-17 has a new Lean
-statement.
+**Nothing is open on this sheet.** The seven questions are answered and all 20 items are
+signed off, including R-20 (new after the questions were answered) and R-17 with its added
+Lean statement. One thing the sheet led to is still to be done, at M3 and not before: the
+lemma S-M3.hole-nonvacuous.
 
 ---
 
@@ -75,7 +92,7 @@ statement.
   `exists_isNIndepSet_indepNum` (an independent set of that size exists).
 - **Doubts:** none. Junk value `0` only for an infinite graph with unbounded independent
   sets; every use here is on `Fin m` or a `Fintype`.
-- **Sign-off:** ☐ accepted ☐ change requested — by ____________ on ____________
+- **Sign-off:** ☑ accepted ☐ change requested — by John Fairfax-Ball on 2026-10-07
 
 ### R-2 — chromatic number `χ(G)` — D-1.chi, note F-CHI
 
@@ -89,7 +106,7 @@ statement.
   `chromaticNumber_top` (`χ(K_n) = n`).
 - **Doubts:** none. The value lives in `ℕ∞`; no statement here applies `.toNat`. Each
   exhibits the value as `∃ k : ℕ, G.chromaticNumber = k ∧ …`.
-- **Sign-off:** ☐ accepted ☐ change requested — by ____________ on ____________
+- **Sign-off:** ☑ accepted ☐ change requested — by John Fairfax-Ball on 2026-10-07
 
 ### R-3 — `K_t` minor — D-1.minor, note F-MINOR
 
@@ -140,7 +157,7 @@ statement.
   3. A model may leave vertices of `G` outside every branch set and may ignore extra
      edges. That is what "minor" (as opposed to "contraction") requires. Stated so that it
      is seen, not as a problem.
-- **Sign-off:** ☐ accepted ☐ change requested — by ____________ on ____________
+- **Sign-off:** ☑ accepted ☐ change requested — by John Fairfax-Ball on 2026-10-07
 
 ### R-4 — Hadwiger number `h(G)` — D-1.h, note F-HADWIGER
 
@@ -156,7 +173,7 @@ statement.
 - **Doubts:** none for finite graphs. `sSup` of an unbounded set of naturals is `0`, which
   can happen only for an infinite graph; every statement here has a `Fintype`. For the
   graph with no vertices, `h = 0`.
-- **Sign-off:** ☐ accepted ☐ change requested — by ____________ on ____________
+- **Sign-off:** ☑ accepted ☐ change requested — by John Fairfax-Ball on 2026-10-07
 
 ### R-5 — Hadwiger's conjecture — D-1.HC, note F-HC
 
@@ -178,7 +195,7 @@ statement.
      statement is *equivalent* to the unrestricted one (every finite graph is isomorphic
      to one on some `Fin m`) is argued in the note and not formalised.
   2. This is the conjecture the paper refutes. It is not HC7.
-- **Sign-off:** ☐ accepted ☐ change requested — by ____________ on ____________
+- **Sign-off:** ☑ accepted ☐ change requested — by John Fairfax-Ball on 2026-10-07
 
 ### R-6 — touching edges — D-1.touch, note F-TOUCH
 
@@ -201,7 +218,7 @@ statement.
   2. Consistency check with a later sentence of the paper (§2.1, last paragraph): "Two
      disjoint edges fail to touch precisely when all four cross pairs are holes [that is,
      non-edges]." This agrees with the predicate: four cross pairs, none adjacent.
-- **Sign-off:** ☐ accepted ☐ change requested — by ____________ on ____________
+- **Sign-off:** ☑ accepted ☐ change requested — by John Fairfax-Ball on 2026-10-07
 
 ### R-7 — connected matching and `cm(G)` — D-1.cm, note F-CM
 
@@ -234,7 +251,7 @@ statement.
      (every matching is such a family) is not, and is not needed.
   4. Junk values: `Set.ncard` of an infinite set and `sSup` of an unbounded set are `0`;
      both need an infinite graph.
-- **Sign-off:** ☐ accepted ☐ change requested — by ____________ on ____________
+- **Sign-off:** ☑ accepted ☐ change requested — by John Fairfax-Ball on 2026-10-07
 
 ### R-8 — fractional colouring — D-1.fcol, note F-FCOL
 
@@ -266,7 +283,7 @@ statement.
      where `χ_f = 0` (this is the case `n = 0` of S-M0.chif-top).
   4. The membership test in `cover` uses a classical decidability instance. This is
      invisible mathematically; it costs a line in some proofs.
-- **Sign-off:** ☐ accepted ☐ change requested — by ____________ on ____________
+- **Sign-off:** ☑ accepted ☐ change requested — by John Fairfax-Ball on 2026-10-07
 
 ### R-9 — fractional chromatic number `χ_f(G)` — D-1.chif, note F-CHIF
 
@@ -282,7 +299,7 @@ statement.
 - **Doubts:** none remaining. Before this session the difference "infimum, where the paper
   says minimum" rested on an unproved remark about polyhedra; S-M0.chif-attained replaces
   the remark with a proof.
-- **Sign-off:** ☐ accepted ☐ change requested — by ____________ on ____________
+- **Sign-off:** ☑ accepted ☐ change requested — by John Fairfax-Ball on 2026-10-07
 
 ### R-10 — linear data and the hole relation — D-2.0, D-2.1, note F-HOLE
 
@@ -337,7 +354,7 @@ statement.
      all three pairs, without the paper's word "distinct". With a repeated element one of
      the three holes is a loop, which the lemma also excludes, so the Lean form follows
      from the paper's lemma and implies it.
-- **Sign-off:** ☐ accepted ☐ change requested — by ____________ on ____________
+- **Sign-off:** ☑ accepted ☐ change requested — by John Fairfax-Ball on 2026-10-07
 
 ### R-11 — the graph on positions — D-2.G, note F-POSGRAPH
 
@@ -355,7 +372,7 @@ statement.
 - **Machine-checked here:** that it is a simple graph (the two proof fields), using only
   `Hole.symm`. No `sorry` is beneath the definition.
 - **Doubts:** none. Positions are `Fin m`, numbered from `0`; the paper numbers from `1`.
-- **Sign-off:** ☐ accepted ☐ change requested — by ____________ on ____________
+- **Sign-off:** ☑ accepted ☐ change requested — by John Fairfax-Ball on 2026-10-07
 
 ---
 
@@ -374,7 +391,7 @@ paper says.
   for `k = χ(G)`. Taking `k = χ(G)` gives the paper's inequality when `α(G) > 0`, that is,
   for a nonempty graph.
 - **Doubts:** none. For the graph with no vertices it reads `0 ≤ 0`.
-- **Sign-off:** ☐ accepted ☐ change requested — by ____________ on ____________
+- **Sign-off:** ☑ accepted ☐ change requested — by John Fairfax-Ball on 2026-10-07
 
 ### R-13 — fractional bound — S-1.b
 
@@ -386,7 +403,7 @@ paper says.
 - **Doubts:** none. Related, and **not** a proof of this statement: the sanity lemma
   `FractionalColoring.card_le_mul_total` proves the paper's displayed chain for any bound
   `k` on the sizes of independent sets. S-1.b itself is still `sorry`.
-- **Sign-off:** ☐ accepted ☐ change requested — by ____________ on ____________
+- **Sign-off:** ☑ accepted ☐ change requested — by John Fairfax-Ball on 2026-10-07
 
 ### R-14 — `χ_f ≤ χ` — S-1.c
 
@@ -397,7 +414,7 @@ paper says.
 - **Differences in form:** stated for every proper `k`-colouring; `k = χ(G)` gives the
   paper's inequality.
 - **Doubts:** none.
-- **Sign-off:** ☐ accepted ☐ change requested — by ____________ on ____________
+- **Sign-off:** ☑ accepted ☐ change requested — by John Fairfax-Ball on 2026-10-07
 
 ### R-15 — Theorem 1.1 — T-1.1
 
@@ -413,7 +430,7 @@ paper says.
 - **Differences in form:** "arbitrarily large" is `∀ N, ∃ m ≥ N`; an `m`-vertex graph is a
   graph on `Fin m`; `cm < m/100` over the reals is `100·cm < m` over the naturals.
 - **Doubts:** none.
-- **Sign-off:** ☐ accepted ☐ change requested — by ____________ on ____________
+- **Sign-off:** ☑ accepted ☐ change requested — by John Fairfax-Ball on 2026-10-07
 
 ### R-16 — Proposition 3.5 — P-3.5
 
@@ -440,7 +457,7 @@ paper says.
   `χ(G)` is exhibited as a natural number `k`; "`m ≥ 5`" is a hypothesis; the second
   assertion is for any `Fintype` and `5 ≤ |V|` makes it nonempty.
 - **Doubts:** none.
-- **Sign-off:** ☐ accepted ☐ change requested — by ____________ on ____________
+- **Sign-off:** ☑ accepted ☐ change requested — by John Fairfax-Ball on 2026-10-07
 
 ### R-17 — equation (2.3) and Lemma 2.2 — S-2.3, L-2.2
 
@@ -469,7 +486,7 @@ paper says.
 - **Doubts:** none on the form. On status: the new theorem has a complete proof body from
   the first half and from S-1.a, which are both `sorry`; it is `PROVED_MODULO`, and the
   blueprint entry S-2.3 stays `STATED` because its first half is.
-- **Sign-off:** ☐ accepted ☐ change requested — by ____________ on ____________
+- **Sign-off:** ☑ accepted ☐ change requested — by John Fairfax-Ball on 2026-10-07
 
 ### R-18 — Corollary 1.2 — C-1.2
 
@@ -492,7 +509,7 @@ paper says.
 - **Doubts:** none. The corollary's first sentence is this statement. Its second sentence
   is covered by R-19 (Hadwiger's conjecture) and, since the decision on Q6, by R-20 (the
   fractional weakening).
-- **Sign-off:** ☐ accepted ☐ change requested — by ____________ on ____________
+- **Sign-off:** ☑ accepted ☐ change requested — by John Fairfax-Ball on 2026-10-07
 
 ### R-19 — the final theorem and the negation of Hadwiger's conjecture — T-FINAL, T-NOT-HC
 
@@ -514,12 +531,13 @@ paper says.
   `χ(G) = ⊤`). Both theorems have complete proof bodies and rest on Corollary 1.2
   (`PROVED_MODULO`).
 - **Doubts:** none. The fractional half of the paper's sentence is now R-20.
-- **Sign-off:** ☐ accepted ☐ change requested — by ____________ on ____________
+- **Sign-off:** ☑ accepted ☐ change requested — by John Fairfax-Ball on 2026-10-07
 
 ### R-20 — the fractional weakening of Hadwiger's conjecture, and its negation — D-1.fHC, S-1.d, note F-FHC
 
-Added on 2026-10-07 on the user's decision (Q6). **New definition: it was not on the sheet
-when the questions were answered, and it needs its own sign-off.**
+Added on 2026-10-07 on the user's decision (Q6). New definition: it was not on the sheet
+when the questions were answered. It was on the sheet, as this item, when the user signed
+off all 20 items.
 
 - **Paper** (Corollary 1.2, last sentence): "Thus Hadwiger's conjecture and its
   fractional-coloring weakening `χ_f(G) ≤ h(G)` are false."
@@ -546,7 +564,7 @@ when the questions were answered, and it needs its own sign-off.**
   3. `V : Type` only, as in R-5; for the same reason this cannot weaken the negation.
   4. The paragraph of the paper after Corollary 1.2, on Reed and Seymour's convention
      (blueprint S-1.e), is still not stated. It was not part of Q6.
-- **Sign-off:** ☐ accepted ☐ change requested — by ____________ on ____________
+- **Sign-off:** ☑ accepted ☐ change requested — by John Fairfax-Ball on 2026-10-07
 
 ---
 

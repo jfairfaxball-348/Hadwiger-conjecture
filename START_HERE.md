@@ -31,8 +31,10 @@ exact tally; the blueprint has the detail.
 
 Sanity checks on the new definitions are proved (`Hadwiger/Sanity/`, blueprint section
 "Sanity checks (not in the paper)"). They are checks on this repository's definitions and
-are not results of the paper. The statement layer has **not** been reviewed: the sheet
-prepared for the user's sign-off is `blueprint/M0_REVIEW_SHEET.md`.
+are not results of the paper. The statement layer was signed off by the user on 2026-10-07
+(`blueprint/M0_REVIEW_SHEET.md`; the "Reviewed by" lines are in `blueprint/FIDELITY.md`).
+The sign-off covers the definitions and statements as they stood then; anything added or
+changed later needs its own.
 
 ## The old programme
 

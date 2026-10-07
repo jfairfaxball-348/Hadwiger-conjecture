@@ -3,29 +3,30 @@
 One note per definition of the statement layer, arguing that the Lean definition means
 what the paper means, and one per target statement, recording every difference in form.
 
-**Review status: none of these notes has been reviewed.** They were written by the same
-worker who wrote the definitions. Milestone M0 is the review; its outcome is to be recorded
-here, note by note. Until a note carries a "Reviewed by" line, every argument in it is a
-claim.
+**Review status: every note below was signed off by the user, John Fairfax-Ball, on
+2026-10-07.** Each note ends with its "Reviewed by" line.
 
-State on 2026-10-07, after the M0 session:
+How the sign-off came about, so that its weight can be judged:
 
-- Every note was re-read against the paper's source and against the Mathlib source at the
-  pinned commit, by a worker (Claude), not by the user. That re-read is **not** the review.
-  Its findings, item by item, with the paper's sentence, the Lean text and every doubt, are
-  in `blueprint/M0_REVIEW_SHEET.md`, which is waiting for the user's sign-off. Each note
-  below ends with the number of its item on that sheet.
-- The items that earlier versions of this file listed as "to prove at M0" have been proved
-  in Lean. Where a note now says "proved at M0", the lemma is in `Hadwiger/Sanity/`, has a
-  blueprint entry `S-M0.*`, and is `DONE` by `scripts/axiom_audit.py`. That is a statement
-  about the build, not a review of the note.
-- A "Reviewed by" line is written only on the user's instruction, with the name and date
-  the user gives.
-- On 2026-10-07 the user answered the sheet's seven questions (the answer is quoted on
-  the sheet and in `docs/SESSION_LOG.md`). Those decisions are recorded in the notes they
-  concern, marked "Decision". A decision on a question is not the sign-off of an item:
-  the user has not yet said that the items themselves are accepted, so every note still
-  ends "not reviewed".
+- The notes were written by the worker who wrote the definitions. On 2026-10-07 another
+  worker session (Claude) re-read every note against the paper's source and against the
+  Mathlib source at the pinned commit, proved the sanity lemmas of milestone M0, and wrote
+  `blueprint/M0_REVIEW_SHEET.md`: one item per note, with the paper's sentence, the Lean
+  text, what is machine-checked, and every doubt found. That re-read was preparation, not
+  review.
+- The user answered the sheet's seven questions; the answers were carried out and are
+  recorded in the notes they concern, marked "Decision".
+- The user was then asked how the sign-off of the sheet's 20 items should be recorded, and
+  chose "Accept all 20 items". The question and the answer are quoted on the sheet and in
+  `docs/SESSION_LOG.md`. The "Reviewed by" lines below were written on that instruction.
+
+What the sign-off covers: each note, and the Lean text it describes, as they stood on
+2026-10-07 at the commit that records the sign-off. It does not cover later changes. A
+definition or statement that is added or changed afterwards needs a new or amended note,
+and that note is unreviewed until the user signs it off.
+
+Where a note says "proved at M0", the lemma is in `Hadwiger/Sanity/`, has a blueprint entry
+`S-M0.*`, and is `DONE` by `scripts/axiom_audit.py`. That is a statement about the build.
 
 "New" means not in Mathlib at the pinned commit. "Mathlib" means Mathlib's definition is
 used unchanged.
@@ -46,7 +47,7 @@ used unchanged.
   here are on `Fin m` or a `Fintype`.
 - In Mathlib, read at M0: `IsIndepSet.card_le_indepNum` and `exists_isNIndepSet_indepNum`
   make "the supremum is the maximum size" a theorem for finite graphs.
-- Review: not reviewed. Sheet item R-1.
+- Reviewed by John Fairfax-Ball, 2026-10-07 (sheet item R-1).
 
 ### F-CHI — chromatic number (Mathlib) — D-1.chi
 
@@ -58,7 +59,7 @@ used unchanged.
   `|V|` (`chromaticNumber_le_card`).
 - Junk values: none in `ℕ∞` itself. Statements here never apply `.toNat`; they exhibit the
   value as a natural number `k` with `G.chromaticNumber = k`.
-- Review: not reviewed. Sheet item R-2.
+- Reviewed by John Fairfax-Ball, 2026-10-07 (sheet item R-2).
 
 ### F-MINOR — `K_t` minor (new) — D-1.minor
 
@@ -109,7 +110,7 @@ used unchanged.
   transitive.
 - Decision (user, 2026-10-07, question Q1): the branch-set definition is accepted as the
   meaning of "`K_t` minor".
-- Review: not reviewed. Sheet item R-3.
+- Reviewed by John Fairfax-Ball, 2026-10-07 (sheet item R-3).
 
 ### F-HADWIGER — Hadwiger number (new) — D-1.h
 
@@ -127,7 +128,7 @@ used unchanged.
   -cycle4, -mono, -iso, -complete-iff).
 - Junk values: `sSup` of an unbounded set of naturals is `0`. That can happen only for an
   infinite graph; every statement here has a `Fintype`.
-- Review: not reviewed. Sheet item R-4.
+- Reviewed by John Fairfax-Ball, 2026-10-07 (sheet item R-4).
 
 ### F-HC — Hadwiger's conjecture (new) — D-1.HC
 
@@ -143,7 +144,7 @@ used unchanged.
   universes. The project needs only the negation, which is proved from a graph on `Fin m`;
   refuting the conjecture for the graphs on `Type` refutes it for any larger class.
 - Note: this is the statement the paper refutes. It is a different statement from HC7.
-- Review: not reviewed. Sheet item R-5.
+- Reviewed by John Fairfax-Ball, 2026-10-07 (sheet item R-5).
 
 ### F-TOUCH — touching edges (new) — D-1.touch
 
@@ -158,7 +159,7 @@ used unchanged.
   all four cross pairs are holes", holes being the non-edges there.
 - Proved at M0: on the graph with only the edges `0–1` and `2–3` the two edges do not
   touch, and that is why `cm = 1` there (S-M0.cm-two-disjoint-edges).
-- Review: not reviewed. Sheet item R-6.
+- Reviewed by John Fairfax-Ball, 2026-10-07 (sheet item R-6).
 
 ### F-CM — connected matching and `cm(G)` (new, on Mathlib's matching) — D-1.cm
 
@@ -183,7 +184,7 @@ used unchanged.
   touching edges form a connected matching with exactly `k` edges (S-M0.cm-support).
 - Junk values: `Set.ncard` of an infinite set is `0`, and `sSup` of an unbounded set is
   `0`. Both need an infinite graph.
-- Review: not reviewed. Sheet item R-7.
+- Reviewed by John Fairfax-Ball, 2026-10-07 (sheet item R-7).
 
 ### F-FCOL — fractional colouring (new) — D-1.fcol
 
@@ -203,7 +204,7 @@ used unchanged.
   mathematically.
 - Proved at M0: nonnegative weights on any finite family of independent sets that cover
   every vertex give a `FractionalColoring` with the same total (S-M0.chif-support).
-- Review: not reviewed. Sheet item R-8.
+- Reviewed by John Fairfax-Ball, 2026-10-07 (sheet item R-8).
 
 ### F-CHIF — fractional chromatic number (new) — D-1.chif
 
@@ -223,7 +224,7 @@ used unchanged.
   (S-M0.chif-attained), so it equals the paper's minimum by a Lean proof and no longer by
   the remark about polyhedra above; `χ_f(K_n) = n` (S-M0.chif-top); `χ_f(C_5) = 5/2`
   (S-M0.chif-cycle5).
-- Review: not reviewed. Sheet item R-9.
+- Reviewed by John Fairfax-Ball, 2026-10-07 (sheet item R-9).
 
 ### F-HOLE — linear data and the hole relation (new) — D-2.0, D-2.1
 
@@ -249,7 +250,7 @@ used unchanged.
   is accepted.
 - Decision (user, 2026-10-07, question Q4): a non-vacuity lemma is to be added. It is in
   the blueprint as S-M3.hole-nonvacuous, `NOT_STATED`, and in the M3 task list.
-- Review: not reviewed. Sheet item R-10.
+- Reviewed by John Fairfax-Ball, 2026-10-07 (sheet item R-10).
 
 ### F-POSGRAPH — the graph on positions (new) — D-2.G
 
@@ -259,7 +260,7 @@ used unchanged.
 - Lean: `positionGraph o`, for `o : Fin m → Ω`, has `Adj p q := p ≠ q ∧ ¬ Hole (o p) (o q)`.
 - Argument: a literal transcription. Symmetry of adjacency uses the symmetry of `Hole`,
   which is proved (`Hole.symm`), so the definition depends on no `sorry`.
-- Review: not reviewed. Sheet item R-11.
+- Reviewed by John Fairfax-Ball, 2026-10-07 (sheet item R-11).
 
 ---
 
@@ -275,7 +276,7 @@ check each one.
 - Lean: `∀ N, ∃ m, N ≤ m ∧ ∃ G : SimpleGraph (Fin m), G.indepNum ≤ 2 ∧ 100 * connectedMatchingNumber G < m`.
 - Form: "arbitrarily large" is `∀ N, ∃ m ≥ N`. An `m`-vertex graph is a graph on `Fin m`.
   `cm < m/100` over the reals is `100 · cm < m` over the naturals.
-- Review: not reviewed. Sheet item R-15.
+- Reviewed by John Fairfax-Ball, 2026-10-07 (sheet item R-15).
 
 ### P-3.5 — Proposition 3.5
 
@@ -289,7 +290,7 @@ check each one.
 - Form: the first assertion is cleared of its denominator. In the second, `χ(G)` is
   exhibited as a natural number. The second assertion is stated for any `Fintype`; the
   hypothesis `5 ≤ |V|` makes it nonempty.
-- Review: not reviewed. Sheet item R-16.
+- Reviewed by John Fairfax-Ball, 2026-10-07 (sheet item R-16).
 
 ### C-1.2 — Corollary 1.2
 
@@ -301,7 +302,7 @@ check each one.
   `26m/75 + 2/3 < m/2` is false at `m = 0`.
 - The corollary's last clause, that the fractional weakening `χ_f(G) ≤ h(G)` is false, is
   stated separately since 2026-10-07 (S-1.d; note F-FHC below).
-- Review: not reviewed. Sheet item R-18.
+- Reviewed by John Fairfax-Ball, 2026-10-07 (sheet item R-18).
 
 ### T-FINAL — the final theorem
 
@@ -312,7 +313,7 @@ check each one.
   so the inequality cannot hold through an infinite right-hand side.
 - Proved at M0, from Mathlib's `chromaticNumber_le_card`: for a finite graph the inequality
   holds exactly when `χ(G)` is a natural number `k` with `h(G) < k` (S-M0.final-finite).
-- Review: not reviewed. Sheet item R-19.
+- Reviewed by John Fairfax-Ball, 2026-10-07 (sheet item R-19).
 
 ### T-NOT-HC — Hadwiger's conjecture is false
 
@@ -324,7 +325,7 @@ Note added at M0; before that the form was recorded only in the Lean doc comment
   F-HC.
 - Form: this is the first half of the sentence. The second half is
   `not_fractionalHadwigerConjecture` (S-1.d; note F-FHC below).
-- Review: not reviewed. Sheet item R-19.
+- Reviewed by John Fairfax-Ball, 2026-10-07 (sheet item R-19).
 
 ### F-FHC — the fractional weakening and its negation (new) — D-1.fHC, S-1.d
 
@@ -347,7 +348,7 @@ decision (question Q6).
   here depends on it.
 - The negation has a complete proof body from Corollary 1.2 (`h(G) < m/2 ≤ χ_f(G)`), so
   it is `PROVED_MODULO`.
-- Review: not reviewed. Sheet item R-20.
+- Reviewed by John Fairfax-Ball, 2026-10-07 (sheet item R-20).
 
 ### S-1.a, S-1.b, S-1.c — the three bounds of Section 1
 
@@ -363,7 +364,7 @@ Note added at M0; before that the forms were recorded only in the Lean doc comme
   that is, for a nonempty graph, and the Lean forms are also true for the graph with no
   vertices). S-1.a and S-1.c are stated for every proper `k`-colouring; `k = χ(G)` gives
   the paper's inequalities.
-- Review: not reviewed. Sheet items R-12, R-13, R-14.
+- Reviewed by John Fairfax-Ball, 2026-10-07 (sheet items R-12, R-13, R-14).
 
 ### L-2.2 and S-2.3 — Lemma 2.2 and equation (2.3)
 
@@ -380,7 +381,7 @@ Note added at M0. The difference in form of L-2.2 is also in F-HOLE.
   `m ≤ 2k`; for a natural number `k` the two are the same, and no division or ceiling
   appears. Its proof body is complete and rests on the first half and on S-1.a, both
   still `sorry`. It is not used later in the paper.
-- Review: not reviewed. Sheet item R-17.
+- Reviewed by John Fairfax-Ball, 2026-10-07 (sheet item R-17).
 
 ### The fidelity question that matters most
 
