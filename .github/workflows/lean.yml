@@ -1,0 +1,29 @@
+name: Lean
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build-and-audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # Installs the toolchain named in lean-toolchain, fetches the Mathlib build cache,
+      # and runs `lake build`.
+      - uses: leanprover/lean-action@v1
+
+      # Every sorry / admit / axiom / native_decide must be listed in the ledger,
+      # and the ledger must list nothing stale.
+      - name: Sorry and axiom ledger check
+        run: python3 scripts/check_ledger.py
+
+      # Every status in the blueprint must be the status the build supports, and no
+      # declaration may use an axiom beyond propext, Classical.choice, Quot.sound.
+      - name: Axiom audit against the blueprint
+        run: python3 scripts/axiom_audit.py
