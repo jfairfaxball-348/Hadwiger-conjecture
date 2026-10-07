@@ -206,3 +206,59 @@ All were mechanical; none was mathematical.
   of disjoint edges and computes its `edgeSet.ncard`. `blueprint/MILESTONES.md` names this
   as a gap for M2; it now exists.
 
+### The fidelity re-read and the review sheet
+
+- Every note in `blueprint/FIDELITY.md` was re-read against the paper's TeX source
+  (Sections 1, 2.1 and 3.3) and against the Mathlib source at the pinned commit. The
+  Mathlib definitions quoted in the notes (`indepNum`, `IsNIndepSet`, `IsIndepSet`,
+  `chromaticNumber`, `Colorable`, `Coloring`, `Subgraph.IsMatching`, `Connected`,
+  `induce`) are as the notes say.
+- **This re-read is not the review.** It was done by a worker, not by the user, and the
+  worker is not independent of the one who wrote the notes. No note was marked reviewed.
+- Result: `blueprint/M0_REVIEW_SHEET.md`, 19 items (11 definitions, 8 stated results),
+  each with the paper's sentence, the Lean text, what is machine-checked, the doubts, and
+  an empty sign-off line; and 7 questions that need a decision.
+- No definition was found to disagree with the paper.
+- Found on the way, and recorded on the sheet:
+  - `FIDELITY.md` cited a section of Diestel's book from memory. Not checked; now flagged
+    as unchecked in the note.
+  - `FIDELITY.md` had no note for S-1.a, S-1.b, S-1.c, S-2.3 or T-NOT-HC. Their differences
+    in form were only in Lean doc comments, which `AGENTS.md` allows. Notes were added,
+    unreviewed, so that the sheet and the notes cover the same items.
+  - Two sentences of the paper have no Lean statement: the second half of equation (2.3),
+    `χ(G) ≥ ⌈m/2⌉`, and the last clause of Corollary 1.2, that `χ_f(G) ≤ h(G)` is false
+    (blueprint S-1.d). Neither is used later. Both are put to the user as questions.
+  - Nothing in Lean shows that `Hole` can hold. A hand example is on the sheet. It is an
+    example worked on paper, not a proof.
+- `FIDELITY.md` was updated to say which former "to prove at M0" items are now proved, with
+  their blueprint IDs. Each note ends "Review: not reviewed".
+
+### Mistake made and corrected in this session
+
+`blueprint/MILESTONES.md` was first given a line count for the sanity files (761) that had
+been written before it was measured. `wc -l` gives 809. Corrected before the commit.
+
+### Push and CI
+
+- The user's instruction for this session allows pushing the working branch without
+  asking. `m0-statement-layer` was pushed at `7598686`. The push waited several minutes on
+  Git Credential Manager (a sign-in window on the user's machine) and then completed.
+- CI: workflow "Lean", run `37602381451`, on `7598686`: **passed** in 2 minutes 27 seconds.
+- Nothing was merged into `main`.
+
+### Tooling note
+
+A shell heredoc containing an apostrophe failed to parse in this environment ("unexpected
+EOF while looking for matching quote"), even with a quoted delimiter. This is the same
+family of problem as the lost backslashes recorded in the reorganisation entry. Put
+scripts in a file with the editor tools and run the file.
+
+### Not done, and why
+
+- The review itself: it is the user's, by instruction.
+- M1: not started, by instruction.
+- No sanity lemma for `HoleData`, `Hole` or `positionGraph`: the M0 list has none, and the
+  task named the three other definitions. Put to the user as question Q4.
+- Transitivity of `IsMinor`, and the equivalence of the branch-set definition with a
+  definition by contractions: not attempted. Mathlib has no contraction of simple graphs.
+

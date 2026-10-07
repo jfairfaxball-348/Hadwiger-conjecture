@@ -5,9 +5,16 @@ Statuses of individual results are in `blueprint/BLUEPRINT.md`, never here.
 
 ## The single next task
 
-**M0: review the statement layer and pin the definitions with sanity lemmas.**
-Everything else rests on the definitions, and the fidelity notes are unreviewed.
-Details under M0 below.
+**M0, second half: record the user's sign-off of the statement layer.**
+The sheet to sign is `blueprint/M0_REVIEW_SHEET.md`: 19 items and 7 questions that need a
+decision. For each item the user accepts, write its "Reviewed by" line in
+`blueprint/FIDELITY.md`; for each change the user asks for, make it as an explicit recorded
+change. M0 is finished only then. Do not start M1 before it.
+
+The first half of M0 was done on 2026-10-07: every sanity lemma in the M0 list below is
+proved (blueprint section "Sanity checks (not in the paper)"). Details under M0 below.
+
+After M0: M1.
 
 ## How the size estimates were made
 
@@ -74,6 +81,15 @@ M1 to M4 are independent of M5 to M17. When M1, M2 and M17 are done, T-FINAL is 
 - Mathlib gaps: none expected. Uses the `SimpleGraph` connectivity, matching and colouring
   API as it is.
 - Size: 400 lines (300–600).
+- State on 2026-10-07 (statuses are in the blueprint, not here):
+  - Part (2) is done. Every lemma listed above was proved as listed; none was false and no
+    definition was changed. Some further checks were added, each with its reason in the
+    blueprint. The three files under `Hadwiger/Sanity/` come to 809 lines including
+    comments, against the estimate of 400 (300–600); the excess is the added checks and
+    the supporting lemmas. No Mathlib gap was met.
+  - Part (1) is prepared and not done. A worker re-read every fidelity note against the
+    paper and wrote `blueprint/M0_REVIEW_SHEET.md`. That re-read is not the review. No
+    fidelity note carries a "Reviewed by" line yet.
 
 ## M1 — Corollary 1.2 from Theorem 1.1 and Proposition 3.5
 
@@ -84,6 +100,11 @@ M1 to M4 are independent of M5 to M17. When M1, M2 and M17 are done, T-FINAL is 
   Nothing else: double counting over finsets and real arithmetic.
 - Size: 600 lines (400–800). Upstream's proof of the `χ` half is about 100 lines; the
   `χ_f` half has no upstream counterpart.
+- Available since M0, in `Hadwiger/Sanity/FractionalColoring.lean`:
+  `FractionalColoring.card_le_mul_total` (if every independent set has at most `k` vertices
+  then `|V| ≤ k · total`), `exists_fractionalColoring_of_family` (weights on a family of
+  independent sets give a fractional colouring), `fractionalChromaticNumber_le_total` and
+  `le_fractionalChromaticNumber`. S-1.b and S-1.c should be short from these.
 
 ## M2 — Proposition 3.5
 
@@ -94,7 +115,8 @@ M1 to M4 are independent of M5 to M17. When M1, M2 and M17 are done, T-FINAL is 
   `leanprover-community/mathlib4#36210` was open on 2026-10-07); the definition here is
   used. Needed and probably missing: a connected induced subgraph on two vertices is an
   edge; building a `Subgraph` matching from a finite set of disjoint edges, with its
-  `edgeSet.ncard`.
+  `edgeSet.ncard`. The second of these exists since M0:
+  `exists_isConnectedMatching_of_family` in `Hadwiger/Sanity/ConnectedMatching.lean`.
 - Size: 900 lines (700–1,200). Upstream needed about 580 with a simpler representation of
   matchings; using Mathlib's `Subgraph.IsMatching`, as instructed, costs more.
 

@@ -29,6 +29,11 @@ Nothing of the paper is proved here yet. The statement layer exists: the definit
 the target statements compile, with `sorry`. Run `python scripts/axiom_audit.py` for the
 exact tally; the blueprint has the detail.
 
+Sanity checks on the new definitions are proved (`Hadwiger/Sanity/`, blueprint section
+"Sanity checks (not in the paper)"). They are checks on this repository's definitions and
+are not results of the paper. The statement layer has **not** been reviewed: the sheet
+prepared for the user's sign-off is `blueprint/M0_REVIEW_SHEET.md`.
+
 ## The old programme
 
 Until 2026-10-07 this repository pursued **HC7**: every finite simple graph with chromatic

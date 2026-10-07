@@ -19,6 +19,7 @@ Rules (binding, from `AGENTS.md`):
 - `admit`: none.
 - `sorry`: 10, all of them unproved **statements** of the statement layer. No definition
   contains `sorry`.
+- The files under `Hadwiger/Sanity/` (added at milestone M0) contain none of the four.
 
 | File | Declaration | Kind | Blueprint ID | Milestone | Note |
 |---|---|---|---|---|---|
