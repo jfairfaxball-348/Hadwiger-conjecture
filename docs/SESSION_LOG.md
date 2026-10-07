@@ -103,3 +103,26 @@ not record what a paper lacks before reading all of it.
 - Theorem 3.1, Proposition 3.4 and the construction of Sections 2.2 to 2.4 are not stated
   in Lean. Theorem 3.1 cannot be stated until the construction and the parameter
   structure exist (milestone M5).
+
+### Push, first CI run, and merge (later the same day)
+
+The user was asked whether to push and answered, verbatim:
+
+```text
+Yes do it all push commit merge etc. Lets get this show on the road. When done give me the prompt to start in a new session
+```
+
+- `lean-formalisation` (at `e906875`) and `rl70-frontier-push` (at `7aec886`) were pushed
+  to `origin`. The push first waited on a GitHub sign-in: this machine had no stored git
+  credentials, and the account the `gh` tool is signed into has read-only access to the
+  repository. The user signed in with the owning account and the push completed.
+- First CI run: workflow "Lean", run `37596760893`, on `e906875`. **Passed**: `lake build`,
+  the ledger check and the axiom audit, in 2 minutes 49 seconds. So the "CI has not run"
+  item above no longer holds. Two warnings, neither a failure: `actions/checkout@v4`
+  targets a deprecated Node.js version, and `ubuntu-latest` changes image on 2026-10-19.
+- `main` was then fast-forwarded to `lean-formalisation` and pushed. `rl70-frontier-push`
+  was not merged, as intended.
+
+This authorisation covered this push and this merge. The standing rule in `AGENTS.md`
+(ask before pushing, and before merging into `main`) is unchanged for later sessions
+unless the user says otherwise.
