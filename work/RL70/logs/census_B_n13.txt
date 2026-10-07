@@ -1,0 +1,2 @@
+DONE n=13 root_classes=876 tasks=52491 nodes=8693120 minor_tests=68324231 base_solutions=0 solutions_with_repetition=0 t=73.8s
+real	1m13.899s
