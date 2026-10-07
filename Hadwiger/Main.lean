@@ -1,6 +1,8 @@
 import Hadwiger.Defs.Minor
 import Hadwiger.Defs.ConnectedMatching
 import Hadwiger.Defs.FractionalColoring
+import Hadwiger.ChromaticBounds
+import Hadwiger.MatchingMinor
 
 /-!
 # The main statements
@@ -36,7 +38,12 @@ theorem exists_indepNum_le_two_and_connectedMatchingNumber_lt :
 
 The chromatic number is Mathlib's `chromaticNumber : ℕ∞`; the statement exhibits it as a
 natural number `k` and compares in `ℝ`. Nonemptiness of `G` is not a separate hypothesis:
-the middle inequality fails for `m = 0`. -/
+the middle inequality fails for `m = 0`.
+
+Proof, as in the paper: take a graph from Theorem 1.1 with `m ≥ 5`; the second assertion of
+Proposition 3.5 gives the first two inequalities; `|V| ≤ α(G) · χ_f(G)` with `α(G) ≤ 2`
+gives the third; and `χ_f(G) ≤ χ(G)` is the fourth. Theorem 1.1 and the first assertion of
+Proposition 3.5 are still `sorry`, so this theorem is `PROVED_MODULO`. -/
 theorem exists_hadwigerNumber_lt_fractionalChromaticNumber :
     ∀ N : ℕ, ∃ m : ℕ, N ≤ m ∧ ∃ G : SimpleGraph (Fin m), ∃ k : ℕ,
       G.chromaticNumber = k ∧
@@ -44,7 +51,20 @@ theorem exists_hadwigerNumber_lt_fractionalChromaticNumber :
       26 * (m : ℝ) / 75 + 2 / 3 < (m : ℝ) / 2 ∧
       (m : ℝ) / 2 ≤ fractionalChromaticNumber G ∧
       fractionalChromaticNumber G ≤ k := by
-  sorry
+  intro N
+  obtain ⟨m, hm, G, hα, hcm⟩ := exists_indepNum_le_two_and_connectedMatchingNumber_lt (max N 5)
+  obtain ⟨k, hk, h1, h2, -⟩ := hadwigerNumber_lt_of_indepNum_le_two G hα
+    (by rw [Fintype.card_fin]; exact hcm)
+    (by rw [Fintype.card_fin]; exact (le_max_right N 5).trans hm)
+  rw [Fintype.card_fin] at h1 h2
+  refine ⟨m, (le_max_left N 5).trans hm, G, k, hk, h1, h2, ?_,
+    fractionalChromaticNumber_le_of_colorable G
+      (SimpleGraph.chromaticNumber_le_iff_colorable.mp hk.le)⟩
+  have hb := card_le_indepNum_mul_fractionalChromaticNumber G
+  rw [Fintype.card_fin] at hb
+  have hα' : (G.indepNum : ℝ) ≤ 2 := by exact_mod_cast hα
+  have hmul := mul_le_mul_of_nonneg_right hα' (fractionalChromaticNumber_nonneg G)
+  linarith
 
 /-- **Final theorem.** There are finite simple graphs of arbitrarily large order whose
 chromatic number exceeds their Hadwiger number.
@@ -91,8 +111,8 @@ def FractionalHadwigerConjecture : Prop :=
 
 /-- **The fractional-colouring weakening of Hadwiger's conjecture is false** (Corollary 1.2,
 last sentence). Derived from Corollary 1.2, which gives graphs with
-`h(G) < m/2 ≤ χ_f(G)`. Corollary 1.2 is still `sorry`, so this theorem is
-`PROVED_MODULO`. -/
+`h(G) < m/2 ≤ χ_f(G)`. Corollary 1.2 rests on Theorem 1.1 and on the first assertion of
+Proposition 3.5, both still `sorry`, so this theorem is `PROVED_MODULO`. -/
 theorem not_fractionalHadwigerConjecture : ¬ FractionalHadwigerConjecture := by
   intro hF
   obtain ⟨m, hm, G, k, -, h1, h2, h3, -⟩ :=

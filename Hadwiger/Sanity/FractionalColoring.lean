@@ -26,6 +26,14 @@ Corollary 1.2, for an arbitrary bound `k` on the sizes of independent sets. It i
 only for the two examples. The paper's statement `χ_f(G) ≥ |V|/α(G)` (blueprint `S-1.b`,
 milestone M1) is not proved in this file.
 
+Since milestone M1 this file is imported by `Hadwiger/ChromaticBounds.lean`, which uses the
+general lemmas here (`card_le_mul_total`, `exists_fractionalColoring_of_family`,
+`fractionalChromaticNumber_le_total`, `le_fractionalChromaticNumber`,
+`range_total_nonempty`) to prove `S-1.b` and `S-1.c`, and by way of it
+`fractionalChromaticNumber_nonneg` is used in Corollary 1.2. The lemmas were not moved; the
+reason is in `docs/SESSION_LOG.md` (M1 session). Nothing in this file became a statement of
+the paper by being used.
+
 Blueprint entries: `S-M0.fcol-*`, `S-M0.chif-*`, in the section "Sanity checks (not in the
 paper)".
 -/

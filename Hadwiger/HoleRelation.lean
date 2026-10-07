@@ -108,7 +108,8 @@ form is used, so that no division or ceiling appears.
 
 Stated on the user's decision of 2026-10-07 (question Q5 of the M0 review sheet). The proof
 is the paper's: the first half of equation (2.3) and the colour-class bound of Section 1
-(`card_le_indepNum_mul_of_colorable`). Both of those are still `sorry`, so this theorem is
+(`card_le_indepNum_mul_of_colorable`). The colour-class bound was proved at milestone M1.
+The first half of equation (2.3) is still `sorry` (milestone M3), so this theorem is
 `PROVED_MODULO`. -/
 theorem le_two_mul_chromaticNumber_positionGraph (D : HoleData X V Ω) {m : ℕ}
     (o : Fin m → Ω) :

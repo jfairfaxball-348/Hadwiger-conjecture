@@ -471,3 +471,231 @@ What was not changed: every other rule. In particular axioms and `native_decide`
 to the root or to the pinned paper, changes to the mathematical content of a statement, and
 installing anything other than the Lean toolchain still need the user's approval.
 
+---
+
+## 2026-10-07 — M1 session (Corollary 1.2 from Theorem 1.1 and Proposition 3.5)
+
+Branch `m1-corollary-1-2`, started from main `4b022e4`.
+
+### The instruction
+
+The user's first message was "Continue the Lean formalisation in this repository. AGENTS.md
+is binding; read it first." The rest arrived in line-sized pieces while the start gate was
+being run. It is reproduced line for line as received; blank lines between its parts are
+not recoverable and none have been added.
+
+```text
+START GATE
+1. Pin HEAD. You should be on main, and main should equal origin/main. Expected: 4b022e4
+(M0 complete and merged, 2026-10-07). If main does not equal origin/main, or HEAD is
+something else, stop and tell me before doing anything else.
+2. Read START_HERE.md, AGENTS.md, blueprint/BLUEPRINT.md, blueprint/SORRY_AXIOM_LEDGER.md,
+blueprint/MILESTONES.md, blueprint/FIDELITY.md, blueprint/PAPER_ISSUES.md and the last
+session entry of docs/SESSION_LOG.md (the M0 session).
+3. Run lake build, python scripts/check_ledger.py and python scripts/axiom_audit.py.
+Expected: 10 sorry, 152 blueprint entries. If any of them fails, repair that first and
+do nothing else.
+TASK: milestone M1, "Corollary 1.2 from Theorem 1.1 and Proposition 3.5", as described in
+blueprint/MILESTONES.md.
+* Create a working branch m1-corollary-1-2 from main.
+* Remove these five sorries with real proofs, without changing any statement:
+* S-1.a  Hadwiger.card_le_indepNum_mul_of_colorable
+* S-1.b  Hadwiger.card_le_indepNum_mul_fractionalChromaticNumber
+* S-1.c  Hadwiger.fractionalChromaticNumber_le_of_colorable
+* P-3.5, second assertion  Hadwiger.hadwigerNumber_lt_of_indepNum_le_two
+* C-1.2  Hadwiger.exists_hadwigerNumber_lt_fractionalChromaticNumber
+* Helpers already exist in Hadwiger/Sanity/FractionalColoring.lean
+(FractionalColoring.card_le_mul_total, exists_fractionalColoring_of_family,
+fractionalChromaticNumber_le_total, le_fractionalChromaticNumber). Either import that
+file where needed or move the helpers to a non-sanity file; decide, record the choice in
+the session log, and do not ask me.
+* Do not touch the other five sorries: Theorem 1.1, the first assertion of Proposition 3.5
+(M2), the two open parts of Lemma 2.2 and the first half of S-2.3 (M3). Do not start M2,
+M3 or anything else.
+* Expected end state, to check against the audit: 5 sorry. S-1.a, S-1.b, S-1.c DONE.
+C-1.2 PROVED_MODULO (resting on Theorem 1.1 and the first assertion of Proposition 3.5).
+P-3.5 still STATED, because its first assertion is still sorry. If the audit shows
+anything else, find out why before going on.
+* If a statement turns out to be false or unprovable as stated, that is a result. Stop,
+record exactly what failed in docs/SESSION_LOG.md, and tell me. Do not weaken or adjust
+the statement without my say-so.
+* The statement layer was signed off on 2026-10-07 as it stood then. If you need a new
+definition, or need to change a signed-off statement, write its fidelity note, leave it
+unreviewed, and put it to me at the end.
+* Keep the blueprint and the ledger in step with the Lean in the same commit. A result
+counts only when the axiom audit shows it.
+WORKING RULES
+* Work inline; at most two subagents at a time, only for independent, well-scoped tasks.
+* Commit early and often on the working branch. Push it without asking (standing rule in
+AGENTS.md). Run pushes with GCM_INTERACTIVE=never GIT_TERMINAL_PROMPT=0; if a push fails
+because it would need a sign-in, stop and tell me instead of opening a window. After
+each push, check git ls-remote against HEAD.
+* Ask me before merging into main.
+* Do not ask me things one at a time. Carry on with everything that does not depend on my
+answer, and put all open questions, including the merge, in one prompt at the end.
+* Do not consult the upstream openai/math Lean code for this paper.
+* End with the checkpoint report that AGENTS.md asks for, and the single next task.
+```
+
+### Start gate
+
+- On `main`, working tree clean. `HEAD` = `main` = `origin/main` = `4b022e4`, and
+  `git ls-remote --heads origin main` (run with interaction disabled) gave the same hash.
+- Read: `START_HERE.md`, `AGENTS.md`, the blueprint in full, the ledger, the milestones,
+  the fidelity notes, the paper issues, and the M0 entry of this log.
+- `lake build` passed. `check_ledger.py`: 10 `sorry`, 10 rows, OK. `axiom_audit.py`: 152
+  entries, 86 declarations, OK. Both as expected.
+- `paper/paper.pdf` sha256 matches the pin in `docs/PROVENANCE.md`.
+- Before writing proofs, the paper's own text for the five items was read again in the
+  local TeX (`sections/01-introduction.tex`, and Proposition 3.5 with its proof in
+  `sections/03-distributions.tex`).
+
+### Decision: the helper lemmas are imported, not moved
+
+`Hadwiger/ChromaticBounds.lean` now imports `Hadwiger/Sanity/FractionalColoring.lean`.
+Nothing was moved. The user left the choice to the worker. Reasons:
+
+1. No declaration moves. So no `DONE` sanity row, no fidelity note and no file described
+   by the M0 sign-off is altered, and the Lean diff of M1 is proof bodies, comments and
+   import lines only.
+2. The lemmas M1 needs cannot be separated cleanly from the sanity checks.
+   `le_fractionalChromaticNumber` needs `range_total_nonempty`, which is itself a lemma of
+   the M0 list. A move would either take M0-list lemmas out of `Sanity/` or leave a split
+   with no principle behind it.
+3. M2 will meet the same question for `Sanity/Minor.lean` and
+   `Sanity/ConnectedMatching.lean` (for example `hasCliqueMinor_hadwigerNumber` and
+   `exists_isConnectedMatching_of_family`). Importing is one rule that covers all three.
+4. The cost, stated plainly: the import closure of the paper's results, and in the end of
+   the final theorem, contains files named `Sanity`. The name understates what they are:
+   they hold the general lemmas about the definitions as well as the checks. This is
+   cosmetic. The kernel checks a proof wherever it lives, and the audit goes by declaration
+   name, not by file.
+5. Checked: `Hadwiger/Sanity/FractionalColoring.lean` declares theorems only. It has no
+   instance, attribute, notation or `simp` lemma, so importing it cannot change how a
+   statement elaborates.
+
+Alternative not taken: move the general lemmas to a new non-sanity file, or rename the
+folder. Either can be done later as an infrastructure commit without changing a declaration
+name or a status. The user may overrule this choice.
+
+### What was proved, and how
+
+Statuses are in the blueprint; this is how the proofs go. Each follows the paper.
+
+- **S-1.a** `card_le_indepNum_mul_of_colorable`. Take a colouring `C` with colours in
+  `Fin k`. `|V|` is the sum over colours of the sizes of the colour classes
+  (`Finset.card_eq_sum_card_fiberwise`); each class is independent
+  (`Coloring.not_adj_of_mem_colorClass`), hence has at most `α(G)` vertices
+  (`IsIndepSet.card_le_indepNum`).
+- **S-1.b** `card_le_indepNum_mul_fractionalChromaticNumber`. For every fractional
+  colouring `w`, `|V| ≤ α(G) · total w` by `FractionalColoring.card_le_mul_total` with
+  `k = α(G)`. If `α(G) > 0`, divide and use `le_fractionalChromaticNumber`. If `α(G) = 0`
+  the right-hand side is `0` and the bound for any one `w` gives `|V| ≤ 0`. The case
+  `α(G) = 0` occurs only for the graph with no vertices; the statement covers that graph,
+  so the proof must. Attainment of the infimum (`exists_fractionalColoring_total_eq`) is
+  **not** used, in agreement with the fidelity note F-CHIF.
+- **S-1.c** `fractionalChromaticNumber_le_of_colorable`. Weight `1` on each of the `k`
+  colour classes (`exists_fractionalColoring_of_family`); every vertex lies in exactly one
+  class; the total is `k`. A colour class may be empty; the empty set is independent and
+  its weight still counts towards the total, which is why the bound is `k`.
+- **P-3.5, second assertion** `hadwigerNumber_lt_of_indepNum_le_two`. `k` is the chromatic
+  number, finite because `V` is. First inequality: the first assertion with `100·cm < m`,
+  by linear arithmetic over `ℝ`. Second: linear arithmetic from `m ≥ 5`. Third: S-1.a with
+  `α(G) ≤ 2`. `Nonempty V`, needed by the first assertion, comes from `5 ≤ |V|`. **The
+  first assertion is still `sorry`**, so this is `PROVED_MODULO`.
+- **C-1.2** `exists_hadwigerNumber_lt_fractionalChromaticNumber`. Theorem 1.1 at
+  `max N 5` gives `m ≥ N`, `m ≥ 5` and `G`. The second assertion of P-3.5 gives `k` and the
+  first two inequalities. S-1.b with `α(G) ≤ 2` and `χ_f ≥ 0` gives `m/2 ≤ χ_f`. S-1.c
+  gives `χ_f ≤ k`. **Theorem 1.1 and the first assertion of P-3.5 are still `sorry`**, so
+  this is `PROVED_MODULO`.
+
+No statement was found false or unprovable. No definition, statement or named declaration
+was added. No paper issue was found; the three sentences of Section 1, the proof of
+Corollary 1.2 and the "final assertion" of Proposition 3.5 are correct as written. That is
+five elementary items. It says nothing about the rest of the paper.
+
+### Check that no statement changed
+
+The instruction was to change no statement. Two checks:
+
+- The diff of `Hadwiger/` against `main` adds and removes no line beginning `theorem`,
+  `lemma`, `def`, `structure`, `instance`, `abbrev` or `axiom`.
+- The fully elaborated statements were compared by machine. A file of `#check @name`
+  commands under `set_option pp.all true`, for every theorem and definition of
+  `ChromaticBounds.lean`, `MatchingMinor.lean` and `Main.lean` and the two statements of
+  equation (2.3) (14 in all), was run at `main` (by stashing the changes and rebuilding)
+  and again on the working tree. The two outputs are byte-identical. `pp.all` prints every
+  implicit argument, instance and universe level, so this also rules out a change of
+  meaning brought in by the new import lines.
+
+The check file lived under the ignored `.lake/audit/`; it is not a repository script.
+
+### What the audit shows
+
+After the change: `check_ledger.py`: 5 `sorry`, 5 rows. `axiom_audit.py`: 152 entries
+(`DONE` 26, `PROVED_MODULO` 4, `STATED` 4, `DEFINED` 11, `MATHLIB` 2, `NOT_STATED` 105), 86
+declarations. Before: `DONE` 23, `PROVED_MODULO` 3, `STATED` 8.
+
+This is the end state the instruction expected: S-1.a, S-1.b, S-1.c `DONE`; C-1.2
+`PROVED_MODULO`; P-3.5 still `STATED`. `#print axioms` on the three `DONE` results shows
+`propext`, `Classical.choice`, `Quot.sound` and nothing else.
+
+The five `sorry`s left: Theorem 1.1; the first assertion of Proposition 3.5; the two open
+parts of Lemma 2.2; the first half of equation (2.3). None was touched.
+
+### Attempts that failed, and a self-correction
+
+- Nothing failed mathematically, and each of the five proofs compiled as first written.
+  That is unusual enough to say why: the hard step, the counting bound, was done at M0.
+- Self-correction: the first version added `open Finset SimpleGraph` to
+  `Hadwiger/ChromaticBounds.lean`, above the three statements. An `open` changes the
+  context in which the signed-off statements are elaborated. It was removed and the names
+  inside the proofs were written out in full, before the comparison above was run. The
+  comparison would have shown no difference either way; removing the line makes that
+  visible in the diff without running anything.
+
+### Records brought into step
+
+- Blueprint: S-1.a, S-1.b, S-1.c to `DONE`; C-1.2 to `PROVED_MODULO`; the text of P-3.5
+  says which half is open; a stale remark in S-M0.chif-support corrected; a note on the
+  import added to the sanity section.
+- Ledger: five rows removed; the two new `PROVED_MODULO` declarations listed.
+- `blueprint/FIDELITY.md`: the signed notes said "still `sorry`" of things now proved.
+  The signed text was left as it is. A line "Status update after the sign-off" was added
+  under each of the five notes concerned, and the header says what such lines are.
+- `blueprint/M0_REVIEW_SHEET.md` was **not** edited. It is the signed record of M0, and its
+  remarks about what is `sorry` describe that day.
+- `START_HERE.md`, `README.md`: "nothing of the paper is proved" replaced by what is now
+  true. Doc comments in the Lean files that said "still `sorry`" of proved things corrected.
+  This includes one comment in `Hadwiger/HoleRelation.lean`; no statement or `sorry` of
+  that file was touched.
+- `blueprint/MILESTONES.md`: the next task is M2; the state and measured size of M1.
+
+### Lean notes
+
+- `have hne : Nonempty V := …` in a tactic block is found by instance resolution in the
+  rest of the block; no `haveI` is needed.
+- `div_le_iff₀' : 0 < c → (a / c ≤ b ↔ a ≤ c * b)` is the form with the factor on the left.
+- A membership `v ∈ C.colorClass c` is `C v = c` by definition, so
+  `(Finset.mem_filter.mp (Finset.mem_coe.mp hv)).2` is accepted for it.
+- `ENat.ne_top_iff_exists` with `chromaticNumber_ne_top_iff_exists` exhibits `χ(G)` as a
+  natural number without `.toNat`.
+
+### Tooling notes
+
+- The backslash problem again: in a quoted shell heredoc, `\\|` reached Python as `\|`.
+  Python warned ("invalid escape sequence") and produced the intended text, so nothing was
+  wrong, but it was luck. Write edits with the editor tools.
+- A `cd` inside one shell command changed the working directory of later commands. Start
+  each command with an absolute `cd`.
+
+### Not done, and why
+
+- M2 and M3: not started, by instruction.
+- Upstream's Lean code for this paper was not consulted. No comparison of statements with
+  upstream was made in this session, so `docs/PROVENANCE.md` is unchanged.
+- No subagent was used.
+- Possible later infrastructure change, not made here: the audit still checks blueprint
+  against build and not the reverse (noted at M0). M1 added no declaration, so nothing new
+  is unlisted.
+

@@ -7,10 +7,12 @@ The target is a Lean theorem, with no `sorry` and no non-standard axiom, stating
 there are finite simple graphs of arbitrarily large order whose chromatic number exceeds
 their Hadwiger number.
 
-**Status: nothing of the paper is proved here yet.** The definitions and the target
-statements compile; their proofs are `sorry`. The paper is machine-generated and, as far
-as this project knows, unrefereed; whether its proof is correct is one of the things the
-formalisation will find out.
+**Status: no numbered result of the paper is proved here yet.** The definitions and the
+target statements compile. Three elementary statements from the paper's introduction are
+proved. The main theorem (Theorem 1.1) and the first assertion of Proposition 3.5 are
+`sorry`; the final theorem is derived from them in Lean, so it is not proved. The paper is
+machine-generated and, as far as this project knows, unrefereed; whether its proof is
+correct is one of the things the formalisation will find out.
 
 Start with `START_HERE.md`. The rules are in `AGENTS.md`. What is stated and what is
 proved is recorded in exactly one place, `blueprint/BLUEPRINT.md`.

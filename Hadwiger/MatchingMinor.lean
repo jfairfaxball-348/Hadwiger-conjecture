@@ -1,5 +1,6 @@
 import Hadwiger.Defs.Minor
 import Hadwiger.Defs.ConnectedMatching
+import Hadwiger.ChromaticBounds
 
 /-!
 # The clique-minor bound from connected matchings (Proposition 3.5)
@@ -13,6 +14,10 @@ In particular, if `α(G) ≤ 2` and `cm(G) < m/100`, then
 
 Blueprint entries: `P-3.5` (two Lean statements). Milestone M2 (first assertion) and
 M1 (second assertion).
+
+The second assertion has had a complete proof body since milestone M1. It is the paper's
+"final assertion" argument and it uses the first assertion, which is still `sorry`. So the
+second assertion is `PROVED_MODULO`, and the entry `P-3.5` stays `STATED`.
 -/
 
 namespace Hadwiger
@@ -31,7 +36,12 @@ theorem three_mul_hadwigerNumber_le [Nonempty V] (G : SimpleGraph V) :
 
 `cm(G) < m/100` is stated as `100 cm(G) < m`. The chromatic number is Mathlib's
 `chromaticNumber : ℕ∞`; the statement exhibits it as a natural number `k` and compares in
-`ℝ`, so no junk value of a cast can enter. -/
+`ℝ`, so no junk value of a cast can enter.
+
+Proof, as in the paper: the first assertion with `cm(G) < m/100` gives the first inequality;
+the second is arithmetic for `m ≥ 5`; and every colour class has at most two vertices
+(`card_le_indepNum_mul_of_colorable`), which gives the third. The first assertion
+(`three_mul_hadwigerNumber_le`) is still `sorry`, so this theorem is `PROVED_MODULO`. -/
 theorem hadwigerNumber_lt_of_indepNum_le_two (G : SimpleGraph V)
     (hα : G.indepNum ≤ 2)
     (hcm : 100 * connectedMatchingNumber G < Fintype.card V)
@@ -40,6 +50,22 @@ theorem hadwigerNumber_lt_of_indepNum_le_two (G : SimpleGraph V)
       (hadwigerNumber G : ℝ) < 26 * (Fintype.card V : ℝ) / 75 + 2 / 3 ∧
       26 * (Fintype.card V : ℝ) / 75 + 2 / 3 < (Fintype.card V : ℝ) / 2 ∧
       (Fintype.card V : ℝ) / 2 ≤ k := by
-  sorry
+  have hne : Nonempty V := Fintype.card_pos_iff.mp (by omega)
+  obtain ⟨k, hk⟩ := ENat.ne_top_iff_exists.mp
+    (SimpleGraph.chromaticNumber_ne_top_iff_exists.mpr ⟨_, G.colorable_of_fintype⟩)
+  have hcol : G.Colorable k := SimpleGraph.chromaticNumber_le_iff_colorable.mp hk.ge
+  have hm' : (5 : ℝ) ≤ Fintype.card V := by exact_mod_cast hm
+  refine ⟨k, hk.symm, ?_, ?_, ?_⟩
+  · have h1 : (3 : ℝ) * hadwigerNumber G
+        ≤ Fintype.card V + 4 * connectedMatchingNumber G + 2 := by
+      exact_mod_cast three_mul_hadwigerNumber_le G
+    have h2 : (100 : ℝ) * connectedMatchingNumber G < Fintype.card V := by
+      exact_mod_cast hcm
+    linarith
+  · linarith
+  · have h1 : Fintype.card V ≤ 2 * k :=
+      (card_le_indepNum_mul_of_colorable G hcol).trans (Nat.mul_le_mul_right k hα)
+    have h2 : (Fintype.card V : ℝ) ≤ 2 * k := by exact_mod_cast h1
+    linarith
 
 end Hadwiger

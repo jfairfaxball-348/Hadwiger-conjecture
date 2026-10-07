@@ -4,7 +4,7 @@ One note per definition of the statement layer, arguing that the Lean definition
 what the paper means, and one per target statement, recording every difference in form.
 
 **Review status: every note below was signed off by the user, John Fairfax-Ball, on
-2026-10-07.** Each note ends with its "Reviewed by" line.
+2026-10-07.** Each note carries its "Reviewed by" line.
 
 How the sign-off came about, so that its weight can be judged:
 
@@ -24,6 +24,12 @@ What the sign-off covers: each note, and the Lean text it describes, as they sto
 2026-10-07 at the commit that records the sign-off. It does not cover later changes. A
 definition or statement that is added or changed afterwards needs a new or amended note,
 and that note is unreviewed until the user signs it off.
+
+Lines that begin "Status update after the sign-off" were added later by a worker. They say
+what has since been proved and nothing else. They change no definition, no statement and no
+fidelity argument, they are not part of the signed text, and the sign-off does not cover
+them. Where such a line and the signed text above it differ about what is proved, the line
+is the later one; the blueprint is the authority either way.
 
 Where a note says "proved at M0", the lemma is in `Hadwiger/Sanity/`, has a blueprint entry
 `S-M0.*`, and is `DONE` by `scripts/axiom_audit.py`. That is a statement about the build.
@@ -291,6 +297,9 @@ check each one.
   exhibited as a natural number. The second assertion is stated for any `Fintype`; the
   hypothesis `5 ≤ |V|` makes it nonempty.
 - Reviewed by John Fairfax-Ball, 2026-10-07 (sheet item R-16).
+- Status update after the sign-off (M1, 2026-10-07): the second assertion now has a
+  complete proof body, with its statement unchanged. It rests on the first assertion,
+  which is still `sorry`, so it is `PROVED_MODULO` and the entry P-3.5 is still `STATED`.
 
 ### C-1.2 — Corollary 1.2
 
@@ -303,6 +312,9 @@ check each one.
 - The corollary's last clause, that the fractional weakening `χ_f(G) ≤ h(G)` is false, is
   stated separately since 2026-10-07 (S-1.d; note F-FHC below).
 - Reviewed by John Fairfax-Ball, 2026-10-07 (sheet item R-18).
+- Status update after the sign-off (M1, 2026-10-07): the corollary now has a complete
+  proof body, with its statement unchanged. It rests on Theorem 1.1 and on the first
+  assertion of Proposition 3.5, both still `sorry`, so it is `PROVED_MODULO`.
 
 ### T-FINAL — the final theorem
 
@@ -349,6 +361,10 @@ decision (question Q6).
 - The negation has a complete proof body from Corollary 1.2 (`h(G) < m/2 ≤ χ_f(G)`), so
   it is `PROVED_MODULO`.
 - Reviewed by John Fairfax-Ball, 2026-10-07 (sheet item R-20).
+- Status update after the sign-off (M1, 2026-10-07): S-1.c is no longer `sorry`; it is
+  `DONE`. That `HadwigerConjecture` implies `FractionalHadwigerConjecture` is still not
+  stated. The negation is still `PROVED_MODULO`: Corollary 1.2 now has a proof body, which
+  rests on Theorem 1.1 and on the first assertion of Proposition 3.5.
 
 ### S-1.a, S-1.b, S-1.c — the three bounds of Section 1
 
@@ -365,6 +381,9 @@ Note added at M0; before that the forms were recorded only in the Lean doc comme
   vertices). S-1.a and S-1.c are stated for every proper `k`-colouring; `k = χ(G)` gives
   the paper's inequalities.
 - Reviewed by John Fairfax-Ball, 2026-10-07 (sheet items R-12, R-13, R-14).
+- Status update after the sign-off (M1, 2026-10-07): all three are `DONE`, with their
+  statements unchanged. The fully elaborated statements before and after were compared by
+  machine and are identical (`docs/SESSION_LOG.md`, M1 session).
 
 ### L-2.2 and S-2.3 — Lemma 2.2 and equation (2.3)
 
@@ -382,6 +401,8 @@ Note added at M0. The difference in form of L-2.2 is also in F-HOLE.
   appears. Its proof body is complete and rests on the first half and on S-1.a, both
   still `sorry`. It is not used later in the paper.
 - Reviewed by John Fairfax-Ball, 2026-10-07 (sheet item R-17).
+- Status update after the sign-off (M1, 2026-10-07): S-1.a is `DONE`. The first half of
+  equation (2.3) is still `sorry`, so the second half is still `PROVED_MODULO`.
 
 ### The fidelity question that matters most
 

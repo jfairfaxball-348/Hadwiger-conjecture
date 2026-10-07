@@ -5,12 +5,17 @@ Statuses of individual results are in `blueprint/BLUEPRINT.md`, never here.
 
 ## The single next task
 
-**M1: Corollary 1.2 from Theorem 1.1 and Proposition 3.5, including `χ_f ≥ |V|/α`.**
-Details under M1 below.
+**M2: Proposition 3.5, first assertion: `3·h(G) ≤ m + 4·cm(G) + 2`.**
+Details under M2 below. It is the only `sorry` left between Theorem 1.1 and the final
+theorem.
 
 M0 was completed on 2026-10-07: every sanity lemma in its list is proved, and every
 fidelity note carries the user's "Reviewed by" line. A definition or statement added or
 changed from now on needs its own fidelity note and its own sign-off.
+
+M1 was completed on 2026-10-07 on branch `m1-corollary-1-2`: its five `sorry`s were
+replaced by proofs and no statement was changed. Statuses are in the blueprint. Whether
+the branch has been merged into `main` is a question for `git log main`, not for this file.
 
 ## How the size estimates were made
 
@@ -106,6 +111,23 @@ M1 to M4 are independent of M5 to M17. When M1, M2 and M17 are done, T-FINAL is 
   then `|V| ≤ k · total`), `exists_fractionalColoring_of_family` (weights on a family of
   independent sets give a fractional colouring), `fractionalChromaticNumber_le_total` and
   `le_fractionalChromaticNumber`. S-1.b and S-1.c should be short from these.
+- State on 2026-10-07 (statuses are in the blueprint, not here):
+  - Done. The five `sorry`s named for M1 were replaced by proofs: S-1.a, S-1.b, S-1.c, the
+    second assertion of P-3.5, and C-1.2. No statement was changed and no definition or
+    declaration was added. Five `sorry`s remain; none belongs to M1.
+  - Afterwards, as planned: C-1.2, and with it T-FINAL, T-NOT-HC and S-1.d, depend only on
+    T-1.1 and on the first assertion of P-3.5.
+  - The helper lemmas stayed in `Hadwiger/Sanity/FractionalColoring.lean`, which
+    `Hadwiger/ChromaticBounds.lean` now imports. Reasons in `docs/SESSION_LOG.md`.
+  - Size: about 65 lines of proof, against the estimate of 600 (400–800). Two reasons. M0
+    had already proved the counting step and the other general lemmas (about 110 lines in
+    `Hadwiger/Sanity/FractionalColoring.lean`). And these five items are short remarks in
+    the paper whose Lean proofs are a few lines each, so a ratio taken from whole papers
+    overstates them. This says nothing about the estimates for M4 onward, where the
+    mathematics is not elementary.
+  - No Mathlib gap was met. Used from Mathlib: `Coloring.not_adj_of_mem_colorClass`,
+    `IsIndepSet.card_le_indepNum`, `Finset.card_eq_sum_card_fiberwise`,
+    `chromaticNumber_le_iff_colorable`, `chromaticNumber_ne_top_iff_exists`.
 
 ## M2 — Proposition 3.5
 
@@ -120,6 +142,19 @@ M1 to M4 are independent of M5 to M17. When M1, M2 and M17 are done, T-FINAL is 
   `exists_isConnectedMatching_of_family` in `Hadwiger/Sanity/ConnectedMatching.lean`.
 - Size: 900 lines (700–1,200). Upstream needed about 580 with a simpler representation of
   matchings; using Mathlib's `Subgraph.IsMatching`, as instructed, costs more.
+- Noted at the end of M1, for whoever starts M2:
+  - Only the first assertion is left. The second assertion already has its proof body and
+    becomes `DONE` the moment the first does; so does everything from C-1.2 to T-FINAL
+    except for its dependence on T-1.1.
+  - Lemmas M2 is likely to need already exist under `Hadwiger/Sanity/`, proved at M0:
+    `hasCliqueMinor_hadwigerNumber` (a `K_t` model with `t = h(G)` exists),
+    `MinorModel.exists_injective_rep`, `exists_isConnectedMatching_of_family` and
+    `IsConnectedMatching.ncard_le`. By the choice made at M1, import the `Sanity` file
+    instead of moving them.
+  - The paper's proof, for reference when reading it again: `s` singleton branch sets, `e`
+    two-vertex branch sets, `c ≥ e + ⌊s/2⌋`, `m ≥ 3b − 2s − e`, hence
+    `3b ≤ m + 2s + e ≤ m + 4c − 3e + 2`. This was checked by hand at the first reading
+    (`blueprint/PAPER_ISSUES.md`, spot checks). It is not a Lean proof.
 
 ## M3 — Section 2.1
 
