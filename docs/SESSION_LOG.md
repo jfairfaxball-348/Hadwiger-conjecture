@@ -728,3 +728,189 @@ is to be a fast-forward to the commit that contains this entry, after CI has pas
 commit. **If `main` contains this commit, the merge was done**; `git log main` is the
 record.
 
+---
+
+## 2026-10-07 — M2 session (Proposition 3.5)
+
+Branch `m2-proposition-3-5`, started from main `9e30110`.
+
+### How M1 ended: the merge
+
+The M1 entry was committed before the user answered, so the answer is recorded here.
+Question and answer, verbatim, through a prompt with two options:
+
+```text
+M1 is finished on branch m1-corollary-1-2 (head 9e30110, CI passed, 5 sorry left, audit matches your expected end state, no statement changed). Merge it into main?
+  -> Merge now (fast-forward)
+```
+
+The option's description, as shown: "Fast-forward main from 4b022e4 to 9e30110, push main,
+and check the remote against HEAD. No merge commit, no force-push. This approval covers
+this merge only."
+
+Done on that approval: `main` was fast-forwarded to `9e30110`, the three checks were run on
+it, and it was pushed. `git ls-remote` gave `9e30110` for `main`. CI on `main` at `9e30110`
+passed (run `37640561707`); CI on the branch at the same commit had passed before the merge
+(run `37618439161`).
+
+### The instruction for this session
+
+After the M1 checkpoint report the user wrote, verbatim:
+
+```text
+Can you run the next session here?
+```
+
+Nothing else was specified. The worker's reading, which the user may correct:
+
+- "The next session" is the single next task of `blueprint/MILESTONES.md`: M2, the first
+  assertion of Proposition 3.5, and nothing beyond it.
+- The working rules given for M1 (quoted in the M1 entry) are taken to stand: work inline;
+  commit and push the working branch without asking, with interaction disabled; change no
+  signed-off statement; ask before merging; one prompt at the end; do not consult
+  upstream's Lean code.
+
+### Start gate
+
+- On `main`, working tree clean. `HEAD` = `main` = `origin/main` = `9e30110`, and
+  `git ls-remote --heads origin main` gave the same hash.
+- The governing files had been read in full earlier the same day for M1; the only changes
+  since were the M1 commits. `Hadwiger/Defs/Minor.lean`, `Hadwiger/Defs/ConnectedMatching.lean`,
+  `Hadwiger/Sanity/Minor.lean` and `Hadwiger/Sanity/ConnectedMatching.lean` were read for
+  this session, and Proposition 3.5 with its proof in the local TeX.
+- `lake build` passed. `check_ledger.py`: 5 `sorry`, 5 rows, OK. `axiom_audit.py`: 152
+  entries, 86 declarations, OK.
+- `paper/paper.pdf` sha256 matches the pin.
+
+### What was proved, and how
+
+`Hadwiger.three_mul_hadwigerNumber_le`: `3·h(G) ≤ m + 4·cm(G) + 2`. The proof is the
+paper's. Each sentence of the paper's proof is a lemma in `Hadwiger/MatchingMinor.lean`;
+with `b` branch sets, `s` singletons and `e` two-vertex branch sets:
+
+| Paper | Lean |
+|---|---|
+| "Consider a complete-minor model with `b` branch sets." … "Maximize over all complete-minor models." | a `K_b` model with `b = h(G)`, from `hasCliqueMinor_hadwigerNumber` (M0: the supremum is attained) |
+| "Each two-vertex branch is an edge." | `adj_of_connected_induce_pair`: a walk from `x` to `y` inside `{x, y}` has a first step; it leaves `x`, so it ends at `y` |
+| "The singleton vertices form a clique, so pairing them gives `⌊s/2⌋` more edges. All these edges together form one touching matching: their vertex sets are disjoint, and adjacency of the original branches guarantees every required contact." … "`c ≥ e + ⌊s/2⌋`" | `MinorModel.exists_isConnectedMatching` (the general statement) and `MinorModel.card_two_add_card_one_div_two_le` (`e + s/2 ≤ cm(G)`, natural-number division) |
+| "Every remaining branch has at least three vertices, whence `m ≥ s + 2e + 3(b − s − e) = 3b − 2s − e`." | `MinorModel.sum_ncard_branch_le` and `MinorModel.three_mul_card_le` (`3b ≤ m + 2s + e`, no subtraction) |
+| "`3b ≤ m + 2s + e ≤ m + 4c − 3e + 2 ≤ m + 4c + 2`" | `omega` from the two inequalities above |
+
+How the matching is built. The index type is the two-vertex branch sets together with
+`Fin (s/2)`. The singleton branch sets are listed in some order `σ 0, …, σ (s − 1)`
+(`Finset.equivFin`); pair `j` is `σ (2j), σ (2j + 1)`. Each index gets an edge `a – b` of
+`G` and two branch indices `p`, `q` with `a` in the branch set of `p` and `b` in that of
+`q` (`p = q` for a two-vertex branch set). Different indices use different branch sets,
+which gives disjointness. Two edges touch because the branch sets of their `p`'s are joined
+by an edge of `G` and the branch set of `p` has no vertex other than `a` and `b`.
+
+`exists_isConnectedMatching_of_family` from M0 is for families indexed by `Fin k`. A
+version for any finite index type was added (`exists_isConnectedMatching_of_fintype_family`),
+by composing with `Fintype.equivFin`.
+
+Eight lemmas were added and no definition. The lemmas are in the blueprint as
+S-M2.pair-edge, S-M2.count and S-M2.matching, in a new last section, "Steps of the paper's
+proofs, proved as separate lemmas".
+
+### What the audit shows
+
+`check_ledger.py`: 4 `sorry`, 4 rows. `axiom_audit.py`: 155 entries (`DONE` 30,
+`PROVED_MODULO` 4, `STATED` 3, `DEFINED` 11, `MATHLIB` 2, `NOT_STATED` 105), 94
+declarations. Before: 152 entries, `DONE` 26, `STATED` 4, 86 declarations. The three new
+entries are the S-M2 rows; the eight new declarations are the lemmas.
+
+- The reverse check, which the audit does not make, was run by hand as at M0: all 92
+  declarations in the Lean sources are named in the blueprint. The other two audited names
+  are Mathlib's `indepNum` and `chromaticNumber`.
+- P-3.5 is `DONE`: `#print axioms` on both of its declarations shows `propext`,
+  `Classical.choice`, `Quot.sound` and nothing else. The second assertion, which had been
+  `PROVED_MODULO` since M1, became `DONE` without being touched.
+- C-1.2, T-FINAL, T-NOT-HC and S-1.d are still `PROVED_MODULO`. They now rest on one
+  `sorry`: Theorem 1.1. **The final theorem is not proved.**
+- The four `sorry`s left: Theorem 1.1, and the three of M3 (the two open parts of Lemma 2.2
+  and the first half of equation (2.3)). None was touched.
+
+### Check that no signed-off statement changed
+
+As at M1: the fully elaborated statements (`pp.all`) of the 14 theorems and definitions of
+`ChromaticBounds.lean`, `MatchingMinor.lean` (the two that existed), `Main.lean` and of
+equation (2.3) were printed at `main` `9e30110` and on the working tree. Byte-identical.
+The output at `9e30110` is also identical to the output at `4b022e4` kept from M1.
+
+The new lemmas sit in a `section` placed before the file's existing `variable` line, so the
+two existing statements are elaborated in the same context as before. The diff of
+`Hadwiger/` against `main` adds eight `theorem` lines, one `section`, one `variable` inside
+it and its `end`, and removes none.
+
+### Junk values
+
+- Branch-set sizes are `Set.ncard`. Every lemma that mentions one has `[Fintype V]`, so the
+  sets are finite and `ncard` is the number of elements.
+- `s/2` is natural-number division. It is the paper's floor `⌊s/2⌋`, and it appears only
+  in a lower bound on `cm(G)`, where rounding down is what the paper does.
+- `h(G)` and `cm(G)` are suprema. The proof uses them only through
+  `hasCliqueMinor_hadwigerNumber` and `IsConnectedMatching.ncard_le`, both proved at M0
+  from boundedness for a finite graph.
+
+### An observation about the statement
+
+The Lean proof does not use the hypothesis `[Nonempty V]`. The inequality also holds for
+the graph with no vertices, where it reads `0 ≤ 2`. The hypothesis is the paper's "every
+finite nonempty graph" and the statement was left as signed off. This is not a paper issue:
+a hypothesis stronger than needed is not an error. It is noted in the doc comment, the
+blueprint and the fidelity note.
+
+### Paper issues
+
+None found. Proposition 3.5 and its proof are correct as written.
+
+### Attempts that failed, and corrections
+
+- Nothing failed. The file compiled as first written, including the main lemma. As at M1
+  the reason is that the general lemmas were already there from M0. A first-time success
+  is not evidence of correctness; the evidence is the kernel (`#print axioms`) and the
+  comparison of statements.
+- Corrections made before the commit, none of them to Lean:
+  - the new blueprint section was first inserted in the middle of "Sanity checks", which
+    would have put the planned M3 row under the wrong heading. Moved to the end.
+  - **An omission of the M1 session, corrected here.** `blueprint/PAPER_ISSUES.md` still
+    said "Nothing has been machine-checked" after M1 had proved three statements of the
+    paper. It understated; it did not overstate. It now lists what is machine-checked and
+    says that nothing else is.
+
+### Records brought into step
+
+Blueprint (P-3.5 `DONE`; three new rows; the text of C-1.2; the note on imports), ledger
+(one row removed), milestones (next task M3), status-update lines under three fidelity
+notes, `START_HERE.md` and `README.md` (what is and is not proved), `blueprint/PAPER_ISSUES.md`
+(above), doc comments in `Main.lean` and the two `Sanity` files that are now imported.
+`blueprint/M0_REVIEW_SHEET.md` was not edited.
+
+No fidelity note was written for the eight new lemmas. The precedent is M0, where the
+sanity and support lemmas got blueprint rows and no fidelity notes. The reason it is safe:
+they are steps of a proof. If one of them said something other than intended, the proof of
+P-3.5 would not go through, and the statement of P-3.5 is the signed-off one. The user has
+been told.
+
+### Lean notes
+
+- `Walk.exists_eq_cons_of_ne` gives the first step of a walk between different vertices.
+  `induce_adj` is `Iff.rfl`, so an adjacency in `G.induce s` can be used directly as one
+  in `G`.
+- `Set.ncard_eq_one`, `Set.ncard_eq_two`, `Set.ncard_eq_toFinset_card'`,
+  `Set.disjoint_toFinset`, `Finset.card_biUnion` (takes `PairwiseDisjoint`),
+  `Finset.equivFin`, `Finset.card_filter`.
+- To avoid dependent arguments, the vertices of small branch sets were chosen for **every**
+  index with a harmless default (`∀ i, ∃ v, v ∈ B i ∧ (|B i| = 1 → B i = {v})`), then
+  `choose`. This keeps the chosen functions total.
+- `omega` handles `s / 2` and treats the two `Finset.card (filter …)` terms as atoms,
+  provided they are written identically in both hypotheses.
+- A lemma that should not get the file's `[Fintype V]` must sit outside the scope of that
+  `variable` line: instance variables are included whenever their type variables are.
+
+### Not done, and why
+
+- M3: not started.
+- Upstream's Lean code was not consulted and no statement was compared with upstream's.
+- No subagent was used.
+

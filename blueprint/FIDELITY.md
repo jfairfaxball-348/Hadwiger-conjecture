@@ -300,6 +300,11 @@ check each one.
 - Status update after the sign-off (M1, 2026-10-07): the second assertion now has a
   complete proof body, with its statement unchanged. It rests on the first assertion,
   which is still `sorry`, so it is `PROVED_MODULO` and the entry P-3.5 is still `STATED`.
+- Status update after the sign-off (M2, 2026-10-07): the first assertion is proved, with
+  its statement unchanged, so both assertions and the entry P-3.5 are `DONE`. The proof
+  does not use the hypothesis `[Nonempty V]`: the inequality `3·h ≤ m + 4·cm + 2` also
+  holds for the graph with no vertices, where it reads `0 ≤ 2`. The hypothesis is the
+  paper's "nonempty" and has been left in the statement.
 
 ### C-1.2 — Corollary 1.2
 
@@ -315,6 +320,8 @@ check each one.
 - Status update after the sign-off (M1, 2026-10-07): the corollary now has a complete
   proof body, with its statement unchanged. It rests on Theorem 1.1 and on the first
   assertion of Proposition 3.5, both still `sorry`, so it is `PROVED_MODULO`.
+- Status update after the sign-off (M2, 2026-10-07): Proposition 3.5 is proved. The
+  corollary now rests on Theorem 1.1 alone and is still `PROVED_MODULO`.
 
 ### T-FINAL — the final theorem
 
@@ -365,6 +372,8 @@ decision (question Q6).
   `DONE`. That `HadwigerConjecture` implies `FractionalHadwigerConjecture` is still not
   stated. The negation is still `PROVED_MODULO`: Corollary 1.2 now has a proof body, which
   rests on Theorem 1.1 and on the first assertion of Proposition 3.5.
+- Status update after the sign-off (M2, 2026-10-07): since Proposition 3.5 is proved, the
+  negation rests on Theorem 1.1 alone. It is still `PROVED_MODULO`.
 
 ### S-1.a, S-1.b, S-1.c — the three bounds of Section 1
 

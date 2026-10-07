@@ -28,8 +28,13 @@ The whole paper was read once, in full, proofs included, on 2026-10-07.
   follow the outline of each, but not confirm every step. The places where the argument
   could not be followed closely enough to form a view are listed under "Steps not
   followed".
-- Nothing has been machine-checked. The absence of an `ERROR` or `GAP` entry means "none
-  found on one reading", not "found correct".
+- Machine-checked so far (the blueprint has the statuses; `DONE` there is what this
+  means): the three unnumbered bounds of Section 1 (M1), Proposition 3.5 with its proof
+  (M1 and M2), the symmetry part of Lemma 2.2, and the deduction of Corollary 1.2 from
+  Theorem 1.1 (M1). These are the elementary parts. No error or gap was found in them.
+- Nothing else has been machine-checked. For everything else the absence of an `ERROR` or
+  `GAP` entry means "none found on one reading", not "found correct". In particular
+  Theorem 1.1 and all of Sections 4 to 14 are in that state.
 
 The upstream repository says of its own collection that unformalised results "could have
 issues". Theorem 3.1 is unformalised upstream.
@@ -38,11 +43,11 @@ issues". Theorem 3.1 is unformalised upstream.
 
 | Where | What was checked |
 |---|---|
-| Corollary 1.2 | `26m/75 + 2/3 < m/2` exactly when `m > 100/23`, so for `m ≥ 5`. |
+| Corollary 1.2 | `26m/75 + 2/3 < m/2` exactly when `m > 100/23`, so for `m ≥ 5`. (Machine-checked since M1, for `m ≥ 5`.) |
 | Lemma 2.2 | The six-term sum over a triangle: left sides cancel in pairs by sharing, bilinear terms by symmetry, leaving `1 + 1 + 1 = 1` in `F_2`. |
 | Lemma 3.3 | The cut capacity `Mμ(L_0) + Mμ(R_0) + 2^{DN} μ^2(E_0) < 1` gives both bounds. |
 | Proposition 3.4 | Entropy increment `≥ −log(1 − ε_N)` per recording; `(2C_0 g − D) = −2C_0 g`; fingerprint log-count `O(N^3 2^{100gN}) = o(2^{1000gN})`; fewer than `m/200 + m/200` matching edges. |
-| Proposition 3.5 | `3b ≤ m + 2s + e ≤ m + 4c − 3e + 2`; tight for `K_1` and `K_3`. |
+| Proposition 3.5 | `3b ≤ m + 2s + e ≤ m + 4c − 3e + 2`; tight for `K_1` and `K_3`. (The inequality is machine-checked since M2. The tightness is still a hand check.) |
 | Lemma 4.4 | `g^2/4 > 2D` and `8D/g = 32000 < g` for `D = 4000g`, `g = 10^9 + 1`. |
 | Lemma 4.5 | `(ζ − ε)u < D + ζ` with `ε < ζ/4` gives `u < K_1`; the second-peeling total stays below `K`. |
 | Lemma 5.2 | A flat triple of levels exists because `j_* ≥ 6R_* + 4`; the central binomial coefficient exceeds `2R_*`. |

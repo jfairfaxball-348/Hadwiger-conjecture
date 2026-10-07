@@ -42,8 +42,8 @@ the middle inequality fails for `m = 0`.
 
 Proof, as in the paper: take a graph from Theorem 1.1 with `m ≥ 5`; the second assertion of
 Proposition 3.5 gives the first two inequalities; `|V| ≤ α(G) · χ_f(G)` with `α(G) ≤ 2`
-gives the third; and `χ_f(G) ≤ χ(G)` is the fourth. Theorem 1.1 and the first assertion of
-Proposition 3.5 are still `sorry`, so this theorem is `PROVED_MODULO`. -/
+gives the third; and `χ_f(G) ≤ χ(G)` is the fourth. Theorem 1.1 is still `sorry`, so this
+theorem is `PROVED_MODULO`. Nothing else beneath it is open since milestone M2. -/
 theorem exists_hadwigerNumber_lt_fractionalChromaticNumber :
     ∀ N : ℕ, ∃ m : ℕ, N ≤ m ∧ ∃ G : SimpleGraph (Fin m), ∃ k : ℕ,
       G.chromaticNumber = k ∧
@@ -111,8 +111,8 @@ def FractionalHadwigerConjecture : Prop :=
 
 /-- **The fractional-colouring weakening of Hadwiger's conjecture is false** (Corollary 1.2,
 last sentence). Derived from Corollary 1.2, which gives graphs with
-`h(G) < m/2 ≤ χ_f(G)`. Corollary 1.2 rests on Theorem 1.1 and on the first assertion of
-Proposition 3.5, both still `sorry`, so this theorem is `PROVED_MODULO`. -/
+`h(G) < m/2 ≤ χ_f(G)`. Corollary 1.2 rests on Theorem 1.1, which is still `sorry`, so this
+theorem is `PROVED_MODULO`. -/
 theorem not_fractionalHadwigerConjecture : ¬ FractionalHadwigerConjecture := by
   intro hF
   obtain ⟨m, hm, G, k, -, h1, h2, h3, -⟩ :=

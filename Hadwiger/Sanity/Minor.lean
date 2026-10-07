@@ -17,6 +17,10 @@ weak or too strong would be caught (milestone M0, `blueprint/MILESTONES.md`).
 
 Blueprint entries: `S-M0.minor-*`, `S-M0.hadwiger-*`, `S-M0.final-finite`, in the section
 "Sanity checks (not in the paper)".
+
+Since milestone M2 this file is imported by `Hadwiger/MatchingMinor.lean`, whose proof of
+Proposition 3.5 uses `hasCliqueMinor_hadwigerNumber`. Nothing in this file became a
+statement of the paper by being used.
 -/
 
 namespace Hadwiger

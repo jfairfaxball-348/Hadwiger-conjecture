@@ -25,15 +25,23 @@ The repository, not any conversation, carries the project state.
 
 ## Where things stand
 
-No numbered result of the paper is proved here yet. The statement layer exists: the
-definitions and the target statements compile.
+**The final theorem is not proved.** It is derived in Lean from Theorem 1.1, and
+Theorem 1.1, which is almost the whole paper, is `sorry`.
 
-Three unnumbered statements from Section 1 of the paper are proved (milestone M1,
-2026-10-07): the colour-class bound `|V| ≤ α·χ`, its fractional form `|V| ≤ α·χ_f`, and
-`χ_f ≤ χ` (blueprint S-1.a, S-1.b, S-1.c). Corollary 1.2, the final theorem and the
-negation of Hadwiger's conjecture have complete proof bodies, but they rest on two
-statements that are still `sorry`: Theorem 1.1, which is almost the whole paper, and the
-first assertion of Proposition 3.5. **They are therefore not proved.**
+What is proved (2026-10-07), all of it elementary:
+
+- Proposition 3.5, the clique-minor bound `3·h(G) ≤ m + 4·cm(G) + 2` and its consequence
+  for graphs with `α ≤ 2` (milestones M1 and M2). It is the one numbered result of the
+  paper proved so far.
+- Three unnumbered statements from Section 1: the colour-class bound `|V| ≤ α·χ`, its
+  fractional form `|V| ≤ α·χ_f`, and `χ_f ≤ χ` (blueprint S-1.a, S-1.b, S-1.c; M1).
+
+What follows from Theorem 1.1 in Lean, and so has a complete proof body but is not proved:
+Corollary 1.2, the final theorem, and the negations of Hadwiger's conjecture and of its
+fractional weakening. Nothing else stands between Theorem 1.1 and the final theorem.
+
+The rest of the statement layer compiles with `sorry` (Section 2.1) or is not yet stated
+(everything from the construction onward).
 
 Run `python scripts/axiom_audit.py` for the exact tally; the blueprint has the detail.
 

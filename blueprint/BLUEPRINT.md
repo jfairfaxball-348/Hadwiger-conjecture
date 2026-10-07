@@ -7,8 +7,10 @@ This file has one entry for every definition, lemma, proposition, theorem and co
 the paper, plus the unnumbered claims that the main results rely on. For each entry it
 records where it is in the paper, what it depends on, its Lean name, and its status.
 
-The last section, "Sanity checks (not in the paper)", is different in kind: its entries
-(`S-M0.*`) are checks on this repository's definitions, not statements of the paper.
+The last two sections are different in kind. "Sanity checks (not in the paper)" holds
+checks on this repository's definitions (`S-M0.*`, `S-M3.*`); they are not statements of
+the paper. "Steps of the paper's proofs, proved as separate lemmas" holds the lemmas into
+which a proof of the paper was split (`S-M2.*`); the result they prove has its own entry.
 
 **It replaces the old proof-state file. If this file and anything else disagree about what
 is stated or proved, this file is wrong and must be fixed; nothing else is authority.**
@@ -18,7 +20,7 @@ is stated or proved, this file is wrong and must be fixed; nothing else is autho
 
 | Column | Meaning |
 |---|---|
-| ID | `T-` theorem, `P-` proposition, `L-` lemma, `C-` corollary, `D-` definition or construction, `S-` unnumbered statement made in running text. Numbers follow the paper (`L-2.2` is Lemma 2.2). IDs of the form `S-M0.<name>` are the sanity checks of milestone M0, and `S-M3.<name>` those planned for M3; they are not in the paper. |
+| ID | `T-` theorem, `P-` proposition, `L-` lemma, `C-` corollary, `D-` definition or construction, `S-` unnumbered statement made in running text. Numbers follow the paper (`L-2.2` is Lemma 2.2). IDs of the form `S-M0.<name>` are the sanity checks of milestone M0, and `S-M3.<name>` those planned for M3; they are not in the paper. IDs of the form `S-M2.<name>` are the steps of the paper's proof of Proposition 3.5, each proved as a lemma at milestone M2; they are in the paper as sentences of that proof, not as separate statements. |
 | Kind | What the paper calls it. |
 | Paper location | Section, number, and the TeX label in the paper's source. |
 | Statement | A short paraphrase. The paper is the authority for the exact statement. |
@@ -62,7 +64,7 @@ Paper-side problems (gaps, errors, ambiguities) are not statuses. They are recor
 | D-1.chif | definition | §1, after Theorem 1.1 | Fractional chromatic number `χ_f(G)`: least total weight of a fractional colouring. | D-1.fcol | `Hadwiger.fractionalChromaticNumber` | DEFINED |
 | S-1.c | statement | §1, after Theorem 1.1 | `χ_f(G) ≤ χ(G)`: a proper colouring is a fractional colouring with unit weights. Proved at M1 in the form `χ_f(G) ≤ k` for a proper `k`-colouring; the Lean proof uses lemmas of S-M0.chif-support. | D-1.chif, D-1.chi | `Hadwiger.fractionalChromaticNumber_le_of_colorable` | DONE |
 | S-1.b | statement | §1, proof of Corollary 1.2 | `χ_f(G) ≥ \|V\|/α(G)`, by summing the vertex constraints. Proved at M1 in the form `\|V\| ≤ α(G)·χ_f(G)`; the Lean proof uses lemmas of S-M0.chif-support (the counting step) and does not use attainment of the infimum. | D-1.chif, D-1.alpha | `Hadwiger.card_le_indepNum_mul_fractionalChromaticNumber` | DONE |
-| C-1.2 | corollary | §1, Corollary 1.2 (`cor:hadwiger`) | Graphs of arbitrarily large order `m` with `h(G) < 26m/75 + 2/3 < m/2 ≤ χ_f(G) ≤ χ(G)`. The proof body is complete since M1. It rests on T-1.1 and on the first assertion of P-3.5, both still `sorry`. | T-1.1, P-3.5, S-1.b, S-1.c | `Hadwiger.exists_hadwigerNumber_lt_fractionalChromaticNumber` | PROVED_MODULO |
+| C-1.2 | corollary | §1, Corollary 1.2 (`cor:hadwiger`) | Graphs of arbitrarily large order `m` with `h(G) < 26m/75 + 2/3 < m/2 ≤ χ_f(G) ≤ χ(G)`. The proof body is complete since M1. It rests on T-1.1, which is still `sorry`; since M2 nothing else beneath it is open. | T-1.1, P-3.5, S-1.b, S-1.c | `Hadwiger.exists_hadwigerNumber_lt_fractionalChromaticNumber` | PROVED_MODULO |
 | T-FINAL | theorem | abstract; §1, Corollary 1.2 | Finite simple graphs of arbitrarily large order whose chromatic number exceeds their Hadwiger number. This is the project's final theorem. | C-1.2 | `Hadwiger.exists_hadwigerNumber_lt_chromaticNumber` | PROVED_MODULO |
 | T-NOT-HC | theorem | §1, Corollary 1.2, last sentence | Hadwiger's conjecture is false. | T-FINAL, D-1.HC | `Hadwiger.not_hadwigerConjecture` | PROVED_MODULO |
 | S-1.d | statement | §1, Corollary 1.2, last sentence | The fractional weakening `χ_f(G) ≤ h(G)` is false. Stated on the user's decision of 2026-10-07; the proof body is complete and rests on C-1.2. | C-1.2, D-1.fHC | `Hadwiger.not_fractionalHadwigerConjecture` | PROVED_MODULO |
@@ -100,7 +102,7 @@ Paper-side problems (gaps, errors, ambiguities) are not statuses. They are recor
 | L-3.2 | lemma | §3.1, Lemma 3.2 (`lem:entropy-support`) | Information projection: a minimiser `ρ` of `D(·‖q)` on a nonempty compact convex set `P` of laws is positive on the union of supports of `P`; `D(ρ'‖q) − D(ρ‖q) ≥ D(ρ'‖ρ)`; and if `ρ'` is supported on `S` this is at least `−log ρ(S)`. | D-3.KL | — | NOT_STATED |
 | L-3.3 | lemma | §3.1, Lemma 3.3 (`lem:terminal-cut`) | Terminal cut: if no law supported on `R ⊆ Ω_n^2` satisfies the three caps, there are `S` with `μ(S) < 1/M` and `E_0` with `μ^2(E_0) < 2^{-DN}` such that every pair in `R` has an endpoint in `S` or lies in `E_0`. Proved by max-flow/min-cut with real capacities. | — | — | NOT_STATED |
 | P-3.4 | proposition | §3.2, Proposition 3.4 (`prop:raw-to-graph`) | Assuming the conclusion of T-3.1 at a given large `n`: the sampled graph on `m = 2^{C_0 g N}` positions has `α(G) ≤ 2` and `cm(G) < m/100` with probability `1 − exp(−Ω(m))`. Entropy-controlled fingerprints (containers), then a union bound over terminal sets. | T-3.1, L-3.2, L-3.3, L-2.2, D-2.sample, D-3.unit, D-1.cm | — | NOT_STATED |
-| P-3.5 | proposition | §3.3, Proposition 3.5 (`prop:matching-minor`) | `h(G) ≤ (m + 4 cm(G) + 2)/3` for every finite nonempty graph of order `m`; and if `α(G) ≤ 2`, `cm(G) < m/100`, `m ≥ 5`, then `h(G) < 26m/75 + 2/3 < m/2 ≤ χ(G)`. Two Lean statements. The first assertion is `sorry` (M2). The second has a complete proof body since M1, resting on the first and on S-1.a. The entry has the status of its weaker declaration. | D-1.h, D-1.cm, S-1.a | `Hadwiger.three_mul_hadwigerNumber_le`, `Hadwiger.hadwigerNumber_lt_of_indepNum_le_two` | STATED |
+| P-3.5 | proposition | §3.3, Proposition 3.5 (`prop:matching-minor`) | `h(G) ≤ (m + 4 cm(G) + 2)/3` for every finite nonempty graph of order `m`; and if `α(G) ≤ 2`, `cm(G) < m/100`, `m ≥ 5`, then `h(G) < 26m/75 + 2/3 < m/2 ≤ χ(G)`. Two Lean statements, both proved: the first assertion at M2, in the form `3·h(G) ≤ m + 4·cm(G) + 2`, by the paper's proof with its steps as the lemmas S-M2.pair-edge, S-M2.count and S-M2.matching; the second at M1, from the first and S-1.a. The Lean proof of the first assertion does not use nonemptiness. | D-1.h, D-1.cm, S-1.a, S-M2.pair-edge, S-M2.count, S-M2.matching | `Hadwiger.three_mul_hadwigerNumber_le`, `Hadwiger.hadwigerNumber_lt_of_indepNum_le_two` | DONE |
 
 ## Section 4 — Frame laws and preparation of unit laws
 
@@ -264,6 +266,12 @@ and the proofs of S-1.b, S-1.c and C-1.2 use support lemmas of S-M0.chif-support
 this section a statement of the paper. The decision to import instead of moving the lemmas
 is in `docs/SESSION_LOG.md` (M1 session).
 
+Since M2, `Hadwiger/MatchingMinor.lean` imports `Hadwiger/Sanity/Minor.lean` and
+`Hadwiger/Sanity/ConnectedMatching.lean` in the same way. The proof of P-3.5 uses
+`Hadwiger.hasCliqueMinor_hadwigerNumber` (S-M0.hadwiger-attained), and
+`Hadwiger.exists_isConnectedMatching_of_family` and `Hadwiger.IsConnectedMatching.ncard_le`
+(S-M0.cm-support).
+
 Kinds used in this section:
 
 - `sanity (M0 list)`: a lemma named in the M0 section of `blueprint/MILESTONES.md`;
@@ -317,3 +325,20 @@ Kinds used in this section:
 | ID | Kind | Paper location | Statement | Depends on | Lean | Status |
 |---|---|---|---|---|---|---|
 | S-M3.hole-nonvacuous | sanity (planned) | not in the paper | Some `HoleData` has two elements with a hole between them, so the hole relation is not vacuous. To be proved at M3, on the user's decision of 2026-10-07 (question Q4 of `blueprint/M0_REVIEW_SHEET.md`). A hand example is on that sheet under R-10; it is an example worked on paper, not a proof. | D-2.0, D-2.1 | — | NOT_STATED |
+
+## Steps of the paper's proofs, proved as separate lemmas
+
+These are sentences of a proof in the paper, each proved here as a lemma so that the Lean
+proof of the result follows the paper's line by line. They are not separate statements of
+the paper, and the result they serve has its own entry above. Lean file:
+`Hadwiger/MatchingMinor.lean`. They are listed so that every declaration is audited.
+
+Notation of the paper's proof of Proposition 3.5: a complete-minor model with `b` branch
+sets, of which `s` are singletons and `e` have two vertices; `c = cm(G)`; `m` is the order
+of `G`.
+
+| ID | Kind | Paper location | Statement | Depends on | Lean | Status |
+|---|---|---|---|---|---|---|
+| S-M2.pair-edge | support | §3.3, proof of Proposition 3.5: "Each two-vertex branch is an edge." | Two distinct vertices that induce a connected subgraph are adjacent. | D-1.minor | `Hadwiger.adj_of_connected_induce_pair` | DONE |
+| S-M2.count | support | §3.3, proof of Proposition 3.5: "Every remaining branch has at least three vertices, whence `m ≥ s + 2e + 3(b − s − e) = 3b − 2s − e`." | For a minor model of any graph on `b` vertices in a finite graph of order `m`: `3b ≤ m + 2s + e`. Stated without subtraction. With it: branch sets are nonempty, and their sizes add up to at most `m` because they are pairwise disjoint. Sizes are `Set.ncard` of sets in a finite type, so no junk value can enter. | D-1.minor | `Hadwiger.MinorModel.branch_nonempty`, `Hadwiger.MinorModel.sum_ncard_branch_le`, `Hadwiger.MinorModel.three_mul_card_le` | DONE |
+| S-M2.matching | support | §3.3, proof of Proposition 3.5: "The singleton vertices form a clique, so pairing them gives `⌊s/2⌋` more edges. All these edges together form one touching matching … we obtain `c ≥ e + ⌊s/2⌋`." | For a `K_t` model in a finite graph: `e + ⌊s/2⌋ ≤ cm(G)`, with natural-number division for the floor. With it: vertices in different branch sets are different; pairwise disjoint, pairwise touching edges indexed by any finite type form a connected matching with one edge per index (S-M0.cm-support has this for `Fin k`); edges read off a `K_t` model so that different edges use different branch sets form a connected matching. | D-1.minor, D-1.cm, S-M0.cm-support, S-M2.pair-edge | `Hadwiger.MinorModel.ne_of_mem_branch`, `Hadwiger.exists_isConnectedMatching_of_fintype_family`, `Hadwiger.MinorModel.exists_isConnectedMatching`, `Hadwiger.MinorModel.card_two_add_card_one_div_two_le` | DONE |

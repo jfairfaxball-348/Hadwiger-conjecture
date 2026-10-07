@@ -5,9 +5,11 @@ Statuses of individual results are in `blueprint/BLUEPRINT.md`, never here.
 
 ## The single next task
 
-**M2: Proposition 3.5, first assertion: `3·h(G) ≤ m + 4·cm(G) + 2`.**
-Details under M2 below. It is the only `sorry` left between Theorem 1.1 and the final
-theorem.
+**M3: Section 2.1 — Lemma 2.2 (no loops; triangle-free), `α ≤ 2` for the graph on
+positions, and the non-vacuity lemma for the hole relation.** Details under M3 below.
+
+M2 was completed on 2026-10-07 on branch `m2-proposition-3-5`: Proposition 3.5 is proved.
+From here the final theorem rests on one `sorry` only, Theorem 1.1.
 
 M0 was completed on 2026-10-07: every sanity lemma in its list is proved, and every
 fidelity note carries the user's "Reviewed by" line. A definition or statement added or
@@ -155,6 +157,22 @@ M1 to M4 are independent of M5 to M17. When M1, M2 and M17 are done, T-FINAL is 
     two-vertex branch sets, `c ≥ e + ⌊s/2⌋`, `m ≥ 3b − 2s − e`, hence
     `3b ≤ m + 2s + e ≤ m + 4c − 3e + 2`. This was checked by hand at the first reading
     (`blueprint/PAPER_ISSUES.md`, spot checks). It is not a Lean proof.
+- State on 2026-10-07 (statuses are in the blueprint, not here):
+  - Done. The first assertion is proved, with its statement unchanged, so P-3.5 has no
+    `sorry` beneath it. Four `sorry`s remain: Theorem 1.1 and the three of M3.
+  - The proof is the paper's, with its steps as eight lemmas in
+    `Hadwiger/MatchingMinor.lean` (blueprint S-M2.pair-edge, S-M2.count, S-M2.matching).
+    No definition was added.
+  - Both Mathlib gaps named above were real and small. "A connected induced subgraph on
+    two vertices is an edge" took nine lines (`adj_of_connected_induce_pair`); the matching
+    from a family of disjoint edges was already there from M0.
+  - Size: `Hadwiger/MatchingMinor.lean` grew from 71 lines to 310, comments included; 169
+    of the added lines are Lean code. The estimate was 900 (700–1,200). As at M1, M0 had
+    already supplied the general lemmas, and the argument is elementary. M1 and M2 both came
+    in several times under their estimates, so the ratio used for the estimates overstates
+    elementary combinatorics. That is no evidence about M4 onward.
+  - Observation, recorded in the doc comment and the blueprint: the Lean proof does not
+    use the hypothesis that the graph is nonempty.
 
 ## M3 — Section 2.1
 
@@ -164,7 +182,17 @@ M1 to M4 are independent of M5 to M17. When M1, M2 and M17 are done, T-FINAL is 
   that some `HoleData` has a hole between two of its elements. A hand example to
   formalise is on `blueprint/M0_REVIEW_SHEET.md` under R-10.
 - The second half of equation (2.3) is already stated, with a complete proof body from
-  the first half and S-1.a; it becomes `DONE` when M3 and S-1.a (M1) are.
+  the first half and S-1.a; it becomes `DONE` when M3 and S-1.a (M1) are. S-1.a has been
+  `DONE` since M1, so only M3 is outstanding for it.
+- Noted at the end of M2, for whoever starts M3:
+  - Three `sorry`s: `HoleData.not_hole_self`, `HoleData.not_hole_triangle`,
+    `HoleData.indepNum_positionGraph_le_two`. The fourth declaration,
+    `le_two_mul_chromaticNumber_positionGraph`, already has its proof body.
+  - S-M3.hole-nonvacuous has no Lean statement yet. It will be a new statement, so it
+    needs a blueprint row and, being a check on a definition and not a statement of the
+    paper, no fidelity note of its own; say in the report that it is new.
+  - M3 touches nothing that M1 and M2 touched. Finishing it does not change the status of
+    the final theorem, which rests on Theorem 1.1 alone.
 - Mathlib gaps: none. Linear maps over `ZMod 2` and a six-term sum in characteristic 2.
 - Size: 250 lines (150–400).
 
