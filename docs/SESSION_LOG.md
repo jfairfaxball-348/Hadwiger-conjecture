@@ -2570,3 +2570,493 @@ done. Its CI runs are on GitHub under its hash.
 the three assertions of Lemma 3.2; Lemma 3.3; the bound of Proposition 3.4), no axioms; 181
 blueprint entries, 179 declarations audited. Nothing of the paper was proved in this
 session. The final theorem is not proved and rests on Theorem 1.1 alone.
+
+## 2026-10-08 — M4 session, second slice (Lemma 3.2 proved)
+
+Branch `m4-lemma-3-2`, started from main `063829e`.
+
+### The instruction
+
+The user's message is reproduced line for line. It is the draft that the previous session
+left in `docs/NEXT_SESSION_PROMPT.md`, with one change by the user: in step 1 of the start
+gate the bracketed description of the expected commit is replaced by its hash. The block
+below was assembled from that file's text and that one change, after the message had been
+compared with the file by eye.
+
+```text
+Continue the Lean formalisation in this repository. AGENTS.md is binding; read it first.
+
+START GATE
+1. Pin HEAD. You should be on main, and main should equal origin/main. Expected: 063829e
+(M4 first slice merged with its follow-ups, 2026-10-08; the next-session-prompt rule and
+the closing-commit rule added to AGENTS.md; the closing commit of that session). If main
+does not equal origin/main, or HEAD is something else, stop and tell me before doing
+anything else.
+2. Read START_HERE.md, AGENTS.md, blueprint/BLUEPRINT.md, blueprint/SORRY_AXIOM_LEDGER.md,
+blueprint/MILESTONES.md (the single next task, and the state of M4 after its first slice),
+blueprint/FIDELITY.md (in particular the notes F-LAW, F-KL and L-3.2), blueprint/PAPER_ISSUES.md
+(in particular PI-008), blueprint/M4_REVIEW_SHEET.md (items R-22, R-28 and R-30, and
+questions Q1, Q4 and Q6 with my decisions) and the last session entry of
+docs/SESSION_LOG.md (the M4 first-slice session, with its addenda).
+3. Run lake build, python scripts/check_ledger.py and python scripts/axiom_audit.py.
+Expected: 6 sorry, 181 blueprint entries, 179 declarations audited. If any of them
+fails, repair that first and do nothing else.
+4. Upstream check (AGENTS.md, "Independence from the upstream Lean code"). Look only at
+the commit list of openai/math and the file listing of the paper's folder, and compare
+with docs/PROVENANCE.md (paper pinned at adc7f12; upstream main last seen at fd4aeeb, with
+its Lean for this paper already recorded there). Do not open any Lean file there. If
+upstream has commits after fd4aeeb, or the paper's folder has changed, stop and tell me
+before doing anything else. If not, record in the session log that you looked and what
+you saw.
+
+A RECORD TO WRITE FIRST
+None. The previous session's log is complete up to its closing commit, which was
+fast-forwarded into main under the closing-commit rule of AGENTS.md ("Unit of work").
+
+TASK: milestone M4, second slice: prove Lemma 3.2, as described in blueprint/MILESTONES.md.
+* Create a working branch m4-lemma-3-2 from main.
+* Before proving, re-read in the local TeX paper/build/sections/03-distributions.tex lines
+21 to 69: the definition of relative entropy, Lemma 3.2 and its proof.
+* Remove these three sorries with real proofs, without changing any statement:
+* L-3.2, first assertion    Hadwiger.relEntropy_minimizer_pos
+* L-3.2, second assertion   Hadwiger.relEntropy_le_sub_of_minimizer
+* L-3.2, third assertion    Hadwiger.neg_log_mass_le_relEntropy_of_minimizer
+* Follow the paper's proof: for the support assertion, the right derivative at zero of the
+entropy along (1-t) rho + t rho'; for the second, the first-order condition at the
+minimiser and the exact identity D(rho'||q) - D(rho||q) = D(rho'||rho) + sum (rho' - rho)
+log(rho/q); for the third, comparison with the normalised restriction rho(.|S), and the
+nonnegativity of relative entropy from log t <= t - 1. If a step of it does not go through
+as written, that is a paper issue: record it exactly in blueprint/PAPER_ISSUES.md and tell
+me. Do not patch it silently. A departure from the paper's argument is made only where a
+step fails or Mathlib makes it far more expensive, and each one is recorded with its
+reason.
+* Junk values. Real.log 0 = 0 and x / 0 = 0. relEntropy rho' rho has a second argument
+that may vanish (PI-008): every use of it must be shown honest by a proof, from the first
+assertion, and not by a default. The same for Real.log (mass rho S).
+* Hypotheses (my decision on Q6: kept as printed). Do not remove "compact" or "q has total
+mass one" from the statements. Record whether each proof uses them.
+* Helper lemmas (for example nonnegativity of relative entropy, the exact identity, facts
+about the derivative) get blueprint rows of kind support in the section "Steps of the
+paper's proofs, proved as separate lemmas", and no fidelity notes. Give them IDs that
+cannot be confused with the sanity rows S-M4.*, and tell me how many rows you added and
+why. General lemmas about the definitions go in Hadwiger/Sanity/ and are imported.
+* Do not touch Lemma 3.3, Proposition 3.4 or Theorem 1.1. Do not start the third slice.
+* R-32 and R-33 of blueprint/M4_REVIEW_SHEET.md (the explicit bound and Proposition 3.4)
+are held, not signed off. Do not prove the bound, and do not change it or the statements
+of Proposition 3.4. [Edit this line if you sign them off before the session.]
+* If a statement turns out to be false or unprovable as stated, that is a result. Stop,
+record exactly what failed in docs/SESSION_LOG.md, and tell me. Do not weaken or adjust
+the statement without my say-so.
+* Expected end state, to check against the audit: 3 sorry (Theorem 1.1, Lemma 3.3, the
+bound of Proposition 3.4). L-3.2 DONE. L-3.3 and P-3.4 still STATED. C-1.2, T-FINAL,
+T-NOT-HC and S-1.d still PROVED_MODULO, resting on Theorem 1.1 alone. Nothing that is DONE
+now changes. If you add no rows: 181 entries, DONE 50, PROVED_MODULO 4, STATED 3, DEFINED
+21, MATHLIB 2, NOT_STATED 101. If you add rows, give the counts before and after and
+account for the difference. If the audit shows anything else, find out why before going
+on.
+* Check that no signed-off statement changed, by the pp.all comparison of the M3 and M4
+session entries: the M3 list, Hadwiger.exists_holeData_hole, and now also everything
+signed off on 2026-10-08 (the definitions of items R-21 to R-29, with their bodies, and
+the four statements of R-30 and R-31). Take the baseline at main before any change. Include
+the held items (fingerprintLength, exceptionSize, sampleBound and the two statements of
+Proposition 3.4) and tell me if any of them changed. Run the reverse check: every
+declaration in the Lean sources is named in the blueprint.
+* Keep the blueprint and the ledger in step with the Lean in the same commit. A result
+counts only when the axiom audit shows it. Bring every status remark into step as well:
+START_HERE.md, README.md, blueprint/PAPER_ISSUES.md, blueprint/MILESTONES.md, the layout
+table of docs/LEAN_WORKFLOW.md, and doc comments in the Lean files.
+
+STANDING DECISIONS (already made; do not reopen, do not ask)
+* M4, decided 2026-10-07: Proposition 3.4 is stated abstractly and does not wait for M5;
+it is an explicit bound with existence as a corollary; statements are signed off before
+proofs; proofs follow the paper's arguments, with every departure recorded.
+* M4, decided 2026-10-08 (questions Q1 to Q6 of blueprint/M4_REVIEW_SHEET.md): a law is a
+real weight function with the predicate IsLaw; the bound has the form (A); the abstract
+relation is the bare structure HoleRel; relative entropy is a real number with a junk
+value where the second argument vanishes; Proposition 3.4 does not assume mu positive;
+Lemma 3.2 keeps the paper's hypotheses as printed.
+* Signed off on 2026-10-08: sheet items R-21 to R-31. Held: R-32 and R-33.
+* The project is independent of upstream's Lean for this paper, also after upstream's
+publication of 2026-10-08 ("Carry on independently").
+* General lemmas stay in Hadwiger/Sanity/ and are imported where needed; nothing is moved.
+* Helper lemmas and sanity checks get blueprint rows and no fidelity notes. New
+definitions and new target statements get fidelity notes.
+* Signed fidelity notes are not rewritten. Add a line "Status update after the sign-off".
+* blueprint/M0_REVIEW_SHEET.md is not edited. The signed items of
+blueprint/M4_REVIEW_SHEET.md are not rewritten either.
+* The paper's equation eq:sample-independence is (2.2). The blueprint ID S-2.3 is kept as
+an identifier.
+
+WORKING RULES
+* Work inline; at most two subagents at a time, only for independent, well-scoped tasks.
+* Commit early and often on the working branch. Push it without asking (standing rule in
+AGENTS.md). Run pushes with GCM_INTERACTIVE=never GIT_TERMINAL_PROMPT=0; if a push fails
+because it would need a sign-in, stop and tell me instead of opening a window. After
+each push, check git ls-remote against HEAD.
+* Ask me before merging into main. After a merge I approve, the closing commit may follow
+without asking, on the terms of AGENTS.md ("Unit of work") and no others.
+* Do not ask me things one at a time. Carry on with everything that does not depend on my
+answer, and put all open questions, including the merge, in one prompt at the end.
+* Do not consult the upstream openai/math Lean code for this paper.
+* End with the checkpoint report that AGENTS.md asks for, the single next task, and the
+prompt for the next session (AGENTS.md, "Prompt for the next session"). The task after
+this slice is the third slice of M4, Lemma 3.3. Do not start it.
+```
+
+### Start gate
+
+- Step 1. On `main`, working tree clean. After `git fetch origin`: `HEAD` = `main` =
+  `origin/main` = `063829e`. `git log -1 --format=%h -- docs/NEXT_SESSION_PROMPT.md` also
+  gave `063829e`, as the saved prompt asks. `git ls-remote` was not run at this point; it
+  was run after each push.
+- Step 2. Read: `START_HERE.md`; `AGENTS.md`, as loaded into the session; the blueprint,
+  the ledger and the milestones, in full; in `blueprint/FIDELITY.md` the head, the
+  introduction of the M4 section and the notes F-HOLEREL, F-LAW, F-KL, F-LIST, L-3.2 and
+  L-3.3; in `blueprint/PAPER_ISSUES.md` the summary, "How far the paper has been checked",
+  the spot checks and PI-007 to PI-009; in `blueprint/M4_REVIEW_SHEET.md` the head, the six
+  questions with the decisions, and items R-22, R-28, R-29 and R-30; the whole M4
+  first-slice entry of this log, with its three addenda and its closing record. Also
+  `docs/PROVENANCE.md`, `docs/LEAN_WORKFLOW.md`, `docs/STATUS_CLASSIFICATIONS.md`,
+  `README.md`, `docs/NEXT_SESSION_PROMPT.md`, the two check scripts and their scanner, and
+  the Lean files `Hadwiger/EntropyAndCuts.lean`, `Hadwiger/Defs/Law.lean`,
+  `Hadwiger/Defs/RelEntropy.lean`, `Hadwiger/Sanity/Law.lean`,
+  `Hadwiger/Sanity/RelEntropy.lean`.
+- Step 3. `lake build` passed (8,946 jobs; six `sorry` warnings and no other).
+  `check_ledger.py`: 6 `sorry`, 6 rows, OK. `axiom_audit.py`: 181 entries (DEFINED 21, DONE
+  49, MATHLIB 2, NOT_STATED 101, PROVED_MODULO 4, STATED 4), 179 declarations, OK. All as
+  expected.
+- The local copy of the paper is the pinned one: `paper/paper.pdf` has the sha256 of
+  `docs/PROVENANCE.md`, and `paper/build/sections/03-distributions.tex` has git blob
+  `e1078d63`, the blob of that file in upstream's tree at the pin.
+- Step 4, the upstream check, did **not** fire. See the next section.
+
+### The upstream check
+
+Looked at, through the GitHub API, and nothing else:
+
+- the commit list of `openai/math`: three commits, `adc7f12` (the pin), `3014888` and the
+  merge `fd4aeeb` (2026-10-08 05:20 UTC), which is still the head of `main`. **No commit
+  after `fd4aeeb`**;
+- the file listing of the paper's folder at the pin and at `main`: 24 entries each (21
+  files and 3 folders, as the tree API lists them), identical blob for blob; `paper.pdf` is blob `a443d538`, 956,260 bytes. **The paper's
+  folder has not changed**;
+- two things that go a little beyond a literal reading of "only the commit list and the
+  file listing", both metadata: the commit list filtered to the paper's folder (one commit,
+  the initial one), and the list of branches (`main` at `fd4aeeb`; `codex/update-10-7` at
+  `3014888`, the second parent of the merge, already recorded).
+
+No Lean file of upstream was opened, at any commit; the `lean/` tree was not listed. So
+`docs/PROVENANCE.md` is still a description of upstream's current state and was not
+changed.
+
+### What was read before proving
+
+`paper/build/sections/03-distributions.tex`, lines 21 to 69: the definition of relative
+entropy, Lemma 3.2 and its proof. Also lines 1 to 20 and 70 to 119 (the opening of Section
+3; Lemma 3.3 with its proof, read for the prompt for the next session and not worked on).
+
+### The proofs
+
+The three `sorry`s of Lemma 3.2 are replaced by proofs. **No statement was changed.**
+
+| Blueprint | Lean | Proof |
+|---|---|---|
+| L-3.2, first assertion | `relEntropy_minimizer_pos` | from `relEntropy_le_relEntropy_segment` and `eq_zero_of_relEntropy_segment_min` |
+| L-3.2, second assertion | `relEntropy_le_sub_of_minimizer` | from the first assertion, `sum_sub_mul_log_nonneg_of_relEntropy_segment_min` and `relEntropy_sub_relEntropy` |
+| L-3.2, third assertion | `neg_log_mass_le_relEntropy_of_minimizer` | from the first assertion and `neg_log_mass_le_relEntropy` |
+
+Each follows the paper's proof, whose sentences are separate lemmas:
+
+| Sentence of the paper's proof | Lean | Row |
+|---|---|---|
+| "the entropy along `(1−t)ρ+tρ'`"; "This contradicts minimality" | `relEntropy_le_relEntropy_segment`, `sum_slope_segment_nonneg` | S-L3.2.segment |
+| "At all points where `ρ>0`, its derivative is finite." | `hasDerivAt_segment_mul_log`, `tendsto_slope_segment_mul_log` | S-L3.2.old-points |
+| "has right derivative `−∞` at zero from the newly occupied points" | `slope_segment_mul_log_of_eq_zero` | S-L3.2.new-points |
+| "If `ρ(x)=0<ρ'(x)` at a feasible support point, … This contradicts minimality, proving the support assertion." | `eq_zero_of_relEntropy_segment_min` | S-L3.2.support |
+| "The right derivative at the minimizer is nonnegative, giving `∑(ρ'−ρ) log(ρ/q) ≥ 0`, where the constant derivative term cancels because both measures have total mass one." | `sum_sub_mul_log_nonneg_of_relEntropy_segment_min` | S-L3.2.first-order |
+| "The exact identity `D(ρ'‖q)−D(ρ‖q) = D(ρ'‖ρ)+∑(ρ'−ρ) log(ρ/q)`" | `relEntropy_sub_relEntropy` | S-L3.2.identity |
+| "comparison with the normalized restriction `ρ(·\|S)` gives `D(ρ'‖ρ) = D(ρ'‖ρ(·\|S)) − log ρ(S) ≥ −log ρ(S)`" | `IsLaw.exists_pos`, `mass_pos`, `isLaw_restrict`, `relEntropy_eq_relEntropy_restrict_sub_log`, `neg_log_mass_le_relEntropy` | S-L3.2.restrict |
+| "nonnegativity of relative entropy follows from `log t ≤ t−1`, applied with `t=q(x)/ρ'(x)` and summed over the positive support of `ρ'`" | `sub_le_mul_log_div`, `relEntropy_nonneg` | S-L3.2.nonneg |
+
+How the support assertion goes in Lean, since it is the one with content. Suppose
+`ρ x₀ = 0 < ρ' x₀`. For `t > 0` the difference quotient
+`t⁻¹ (D((1−t)ρ+tρ'‖q) − D(ρ‖q))` is a sum over the points. The points with `ρ > 0`
+contribute a sum with a finite limit as `t → 0+`. The points with `ρ = 0` contribute
+exactly `∑ ρ' log(ρ'/q) + (∑ ρ') log t`, the sums being over those points, with
+`∑ ρ' ≥ ρ' x₀ > 0`; this tends to `−∞`. So the quotient is negative for some `t ∈ (0, 1]`.
+But `(1−t)ρ + tρ'` is in `P` by convexity, so the quotient is nonnegative there by
+minimality.
+
+**The paper's proof went through as written.** No step failed, and no departure from the
+paper's argument was made. Three differences of form:
+
+1. "Right derivative at zero" is the limit of the difference quotient as `t → 0+`, which is
+   its definition. At a point with `ρ > 0` the limit comes from Mathlib's two-sided
+   derivative of the term at `t = 0`; the term is defined for every real `t`.
+2. Nonnegativity. The paper sums `log t ≤ t − 1` over the positive support of the first law
+   and then uses that the second has total mass at most one. The Lean proof sums the
+   inequality `a − b ≤ a log(a/b)` over the whole type; at a point off the support it reads
+   `−b ≤ 0`. Both give `D ≥ 1 − 1`.
+3. The last step is proved for every law `ρ'` and all nonnegative weights `ρ` that are
+   positive wherever `ρ'` is, not only for a minimiser and a `ρ' ∈ P`; the third assertion
+   is that lemma with the first assertion. The normalised restriction `ρ(·|S)` has no
+   definition of its own: it is written out as `fun x => S.indicator ρ x / mass ρ S` in the
+   two statements that mention it.
+
+### The hypotheses "compact" and "`q` has total mass one"
+
+Kept in all three statements, as decided (question Q6). What the proofs do with them:
+
+- **First assertion: uses neither.** Its proof calls two lemmas whose statements have
+  neither hypothesis. The linter reports unused arguments, so the theorem is preceded by
+  `set_option linter.unusedVariables.funArgs false in`, which silences that warning for
+  this one declaration; without the option the build warns that `hcomp` and `hq` are not
+  referenced, which is the machine's own statement of the same fact.
+- **Second and third assertions: use them in one place only**, to call the first assertion.
+  Nothing else in their proofs mentions them.
+
+What is used. Convexity of `P`: once, to keep the segment in `P`. Of `hP`: for the first
+assertion only that weights are nonnegative; for the second also that `ρ` and `ρ'` have
+total mass one, where the paper says so; for the third that `ρ'` is a law and `ρ` is
+nonnegative. Of `q`: strict positivity. So the three assertions are true without
+"compact" and without "`q` has total mass one"; the statements were not changed for that.
+
+### Junk values
+
+- `relEntropy ρ' ρ`, whose second argument may vanish (PI-008). Every lemma that handles it
+  has a hypothesis that `ρ` is nonzero, or positive, wherever `ρ'` is:
+  `relEntropy_sub_relEntropy`, `relEntropy_eq_relEntropy_restrict_sub_log`,
+  `neg_log_mass_le_relEntropy`, `relEntropy_nonneg`. In the second and third assertions
+  that hypothesis is supplied by the first assertion, in Lean. Nothing rests on
+  `Real.log 0 = 0` or `x / 0 = 0` to make a wrong term disappear.
+- The hypothesis is needed, not decoration: without it nonnegativity is false for the Lean
+  value. On two points, `ρ = (1/2, 1/2)` and `σ = (1, 0)` give
+  `relEntropy ρ σ = (1/2) log(1/2) + 0 < 0`, the second term being the junk value. **By
+  hand, not in Lean**; it is in the doc comment of `relEntropy_nonneg`.
+- `Real.log (mass ρ S)`. `mass ρ S > 0` is proved inside `neg_log_mass_le_relEntropy`
+  before the logarithm is touched: the law `ρ'` has a point of positive weight
+  (`IsLaw.exists_pos`), it lies in `S`, `ρ` is positive there, so the mass is positive
+  (`mass_pos`).
+- The division in `ρ(·|S)`: by `mass ρ S`, positive as above (`isLaw_restrict` has it as a
+  hypothesis).
+- The sum `∑ (ρ' x − ρ x) * Real.log (ρ x / q x)`: at a point with `ρ x = 0` the term is
+  `(0 − 0) * Real.log 0 = 0`. Here a junk value does occur and is multiplied by a
+  coefficient that is `0` by hypothesis (`h0`, the first assertion); the sum is the paper's
+  sum over the points with `ρ > 0`. Recorded in the doc comments and under PI-008.
+- `0 log 0 = 0`: `0 * Real.log (0 / c) = 0`, the paper's convention, in the term of a newly
+  occupied point at `t = 0`.
+- No natural subtraction, no ceiling, no `sSup` or `ncard` in this slice.
+
+### Paper issues
+
+None new. No `ERROR`, no `GAP`. One paragraph was added to **PI-008**: the sum of the
+first-order condition and of the exact identity is written over all `x`, with a term
+`0 · log 0` where `ρ(x) = 0`; it is read as the sum over the points with `ρ > 0`, as the
+paper's words "using only points where `ρ > 0`" say.
+
+Three observations, recorded in `blueprint/PAPER_ISSUES.md` and not issues: the proof uses
+neither compactness nor the total mass of `q`; the support assertion needs only nonnegative
+weights; the last step holds for any law `ρ'` vanishing wherever `ρ` does.
+
+### Blueprint rows added: eight
+
+All of kind `support`, all in "Steps of the paper's proofs, proved as separate lemmas", in a
+new subsection "Lemma 3.2 (added at M4, second slice)": S-L3.2.segment, S-L3.2.old-points,
+S-L3.2.new-points, S-L3.2.support, S-L3.2.first-order, S-L3.2.identity, S-L3.2.restrict,
+S-L3.2.nonneg. One row for each sentence of the paper's proof, fifteen lemmas in all. Why
+rows at all: every declaration must be named in the blueprint, and the instruction asked
+for rows of this kind for the helper lemmas. No fidelity notes, by the standing decision.
+
+The IDs are named after the lemma (`L3.2`), not after the milestone, so that they cannot be
+taken for the sanity rows `S-M4.*`. The blueprint's list of ID forms says so.
+
+Where the lemmas are. Seven in `Hadwiger/EntropyAndCuts.lean`, before the three statements,
+in a section of their own: the ones about the entropy along the segment. Eight in
+`Hadwiger/Sanity/`, as the instruction says for general lemmas about the definitions: three
+about laws and masses in `Sanity/Law.lean`, five about relative entropy in
+`Sanity/RelEntropy.lean`. `Hadwiger/EntropyAndCuts.lean` now imports both, and
+`Sanity/RelEntropy.lean` imports `Sanity/Law.lean`. The headers of the two `Sanity` files
+were rewritten to say that they now hold steps of a proof of the paper as well as sanity
+checks; the blueprint says the same in its section on sanity checks.
+
+**No definition was added.** So no fidelity note was needed.
+
+### What the audit shows
+
+| | Before (`063829e`) | After |
+|---|---|---|
+| `sorry` (ledger rows) | 6 | 3 |
+| blueprint entries | 181 | 189 |
+| `DEFINED` | 21 | 21 |
+| `MATHLIB` | 2 | 2 |
+| `DONE` | 49 | 58 |
+| `PROVED_MODULO` | 4 | 4 |
+| `STATED` | 4 | 3 |
+| `NOT_STATED` | 101 | 101 |
+| declarations audited | 179 | 194 |
+
+Accounting for the differences:
+
+- Entries +8: the eight new rows.
+- `DONE` +9: L-3.2, from `STATED`, and the eight new rows. **Nothing that was `DONE`
+  changed**: all 49 are still `DONE` (checked by script against the blueprint at `main`).
+- `STATED` −1: L-3.2. Still `STATED`: T-1.1, L-3.3, P-3.4.
+- `PROVED_MODULO` unchanged: C-1.2, T-FINAL, T-NOT-HC, S-1.d, resting on Theorem 1.1 alone.
+  `Hadwiger/Main.lean` is byte for byte as at `main` and imports none of the files touched.
+  **The final theorem is not proved.**
+- Declarations +15: the fifteen lemmas.
+- **The three `sorry`s that remain**, each an unproved statement:
+  1. `Hadwiger.exists_indepNum_le_two_and_connectedMatchingNumber_lt` (Theorem 1.1)
+  2. `Hadwiger.exists_terminal_cut` (Lemma 3.3)
+  3. `Hadwiger.mass_listLaw_le_sampleBound` (Proposition 3.4, the bound)
+- `#print axioms` on the three assertions and on each of the fifteen lemmas shows
+  `propext`, `Classical.choice`, `Quot.sound` and nothing else. No axiom, no
+  `native_decide`, no `admit`.
+
+This is the end state the instruction expected, with the rows added.
+
+### Check that no signed-off statement changed
+
+The `pp.all` comparison, with the baseline taken at `main` `063829e` before the branch had
+any change, and run again on the final tree. Three lists:
+
+- the M3 list (`.lake/audit/M3Types.lean`): byte-identical, 4,976 lines, sha256
+  `b79be5d590e3818afe4202beb708cfdeda92cf6144fe2223c96a63156973cfc5`, the hash recorded in
+  the M3 and M4 first-slice entries;
+- that list with `Hadwiger.exists_holeData_hole` (`M4Types.lean`): byte-identical, 5,156
+  lines, sha256 `61a4e82ae37cf6f0eea5897724bf76a2c4fbdf3b10baf6c19adb5c7aaeb4988c`, as
+  recorded in the M4 first-slice entry;
+- a new list (`M4bTypes.lean`), which adds everything signed off on 2026-10-08 and the held
+  items: `#print` of `HoleRel`, `HoleRel.positionGraph`, `HoleData.holeRel`, `IsLaw`,
+  `mass`, `marginalFst`, `marginalSnd`, `prodLaw`, `SatisfiesCaps`, `HoleRel.IsUnit`,
+  `HoleRel.Conflict`, `HoleRel.conflictProb`, `HoleRel.Supersaturated`, `relEntropy`,
+  `listLaw` (items R-21 to R-29, with bodies) and of the held `fingerprintLength`,
+  `exceptionSize`, `sampleBound`; `#check` of the three structure constructors, of the four
+  statements of R-30 and R-31, and of the two held statements of Proposition 3.4.
+  Byte-identical, 5,571 lines, sha256
+  `f1180cdbadf1c8d71eb2d21c4788725caa6f4e4f82cf38b0751ed9022885cf1a`.
+
+**The held items did not change**: the three definitions and the two statements of
+Proposition 3.4 are in the third list, and `Hadwiger/RandomSample.lean` is byte for byte as
+at `main`.
+
+A second check, on the source text with comments stripped: the signature of each of the
+four statements in `Hadwiger/EntropyAndCuts.lean` is identical at `main` and now, and the
+files `Hadwiger/Defs/Law.lean`, `Hadwiger/Defs/RelEntropy.lean`, `Hadwiger/Defs/HoleRel.lean`,
+`Hadwiger/Supersaturation.lean`, `Hadwiger/RandomSample.lean`, `Hadwiger/Main.lean`,
+`Hadwiger/HoleRelation.lean` and `Hadwiger.lean` are byte for byte as at `main`. The Lean
+files that differ from `main` are three: `Hadwiger/EntropyAndCuts.lean`,
+`Hadwiger/Sanity/Law.lean`, `Hadwiger/Sanity/RelEntropy.lean`.
+
+What did change in the signed-off file `Hadwiger/EntropyAndCuts.lean` besides the proofs:
+two import lines, the file's header, the new section of step lemmas, the last paragraph of
+each of the three doc comments (which said "Not proved: `sorry`"), and one
+`set_option … in` line before the first theorem. The statement of Lemma 3.3, its doc
+comment and its `sorry` are untouched.
+
+The check files are under the ignored `.lake/audit/`; they are not repository scripts.
+
+### Reverse check
+
+Every declaration in the Lean sources is named in the blueprint: 192 declarations, 192
+distinct names, none missing (177 before). The blueprint names 194; the other two are
+Mathlib's `indepNum` and `chromaticNumber`. Run with the one-off script kept from the first
+slice (`.lake/audit/reverse_check.py`).
+
+### Attempts that failed, and corrections
+
+- No statement was found false or unprovable as stated.
+- Lean. The proofs were first written in a scratch file under `.lake/audit/`. Four things
+  failed at the first compilation and were fixed at once: a `ring` after a `field_simp`
+  that had already closed the goal; a `simp only` that used `Finset.sum_sub_distrib` in the
+  wrong direction, replaced by an explicit `rw` and `rfl`; a `simpa` where `simp` sufficed;
+  and `clear hcomp hq`, which does not count as a use for the unused-variable linter.
+  Everything else compiled as first written. As earlier entries say, that is not evidence
+  of correctness; the evidence is the kernel and the audit.
+- Design, considered and not adopted:
+  - a step lemma at the level of `P` without the two unused hypotheses, so that the second
+    and third assertions would not mention them at all. Dropped: the paper derives the
+    second and third assertions from the first, the instruction asks that the honesty of
+    `relEntropy ρ' ρ` come "from the first assertion", and calling the first assertion is
+    the plain way to do that;
+  - a definition for the normalised restriction, or for the term of the entropy along the
+    segment. Dropped: a definition needs a fidelity note and a sign-off, and neither
+    object is the paper's; they are written out;
+  - a sanity lemma that nonnegativity fails without its hypothesis (the example above).
+    Not stated: it would be a further row that nobody asked for. It is by hand only.
+- Tooling. A here-document whose text contains an apostrophe failed again in this shell
+  wrapper, as the first-slice entry warns; the edit scripts were written to files in the
+  session's scratch folder and run from there. One `cd` into the Mathlib package for a
+  search left the shell there for the next command; every later command starts with an
+  absolute `cd`.
+
+### Records brought into step
+
+- Blueprint: the row L-3.2 (status, what was proved, the hypotheses, the junk values; its
+  sign-off sentence kept); the row S-M4.kl (where nonnegativity now is); the two places
+  that list the forms of `S-` IDs; a paragraph in the section on sanity checks; the section
+  on steps of proofs (its introduction, a heading for Proposition 3.5, the new subsection
+  with eight rows).
+- Ledger: three rows removed; "Current state"; one sentence on what depends on Lemma 3.2.
+- `blueprint/FIDELITY.md`: a line "Status update after the sign-off" under each of the
+  signed notes F-LAW, F-KL and L-3.2. One sentence of the introduction of the M4 section,
+  which said that Lemma 3.2 and Lemma 3.3 are not proved, was changed; it is not part of a
+  signed note. **No signed text was altered**: the diff removes that one line and nothing
+  else.
+- `blueprint/M4_REVIEW_SHEET.md`: a status paragraph at the head and a status line under
+  item R-30. Nothing was removed; no signed item was rewritten.
+  `blueprint/M0_REVIEW_SHEET.md` was not edited.
+- `blueprint/PAPER_ISSUES.md`: the summary; "How far the paper has been checked" (the list
+  of what is machine-checked, the item on Sections 3.1 and 3.2, a new item on Lemma 3.2);
+  PI-008 (an addition and its list of blueprint entries).
+- `blueprint/MILESTONES.md`: the single next task; a paragraph on this slice; the count of
+  `sorry`s; the state of M4 after the second slice.
+- `START_HERE.md`: what is proved; what is stated and not proved; the count of `sorry`s.
+- `README.md`: the status paragraph.
+- `docs/LEAN_WORKFLOW.md`: two rows of the layout table.
+- Doc comments: the header of `Hadwiger/EntropyAndCuts.lean` and the three doc comments of
+  Lemma 3.2; the headers of `Hadwiger/Sanity/Law.lean` and `Hadwiger/Sanity/RelEntropy.lean`.
+  No other Lean file had a remark made false by this slice.
+- `docs/PROVENANCE.md`, `docs/STATUS_CLASSIFICATIONS.md`, `AGENTS.md`: not changed; nothing
+  in them became false.
+
+### Lean notes
+
+- `set_option linter.unusedVariables.funArgs false in`, placed before the doc comment,
+  silences the unused-variable warning for the arguments of one declaration and leaves the
+  linter on for `have`s. `clear h` does not count as a use of `h`.
+- The right derivative as a limit: `HasDerivAt.tendsto_slope_zero_right` gives
+  `Tendsto (fun t => t⁻¹ • (f (x + t) - f x)) (𝓝[>] 0) (𝓝 f')`; `simpa` turns it into the
+  form with `t⁻¹ * (f t - f 0)`.
+- `tendsto_finsetSum` is the current name (`tendsto_finset_sum` is deprecated since
+  2026-04-08). `Filter.Tendsto.add_atBot` adds a finite limit and a limit `atBot`;
+  `Filter.Tendsto.const_mul_atBot` multiplies by a positive constant;
+  `Real.tendsto_log_nhdsGT_zero` is `log → −∞` at `0+`; `Ioc_mem_nhdsGT` puts `(0, 1]` in
+  `𝓝[>] 0`; `ge_of_tendsto` passes `0 ≤` to the limit.
+- "Eventually negative and eventually in `(0, 1]`" gives a point by
+  `((h.eventually (eventually_lt_atBot 0)).and (Ioc_mem_nhdsGT _)).exists`.
+- `∑ x with p x, f x` is the sum over `Finset.univ.filter p`; it needs `classical` inside a
+  proof. `Finset.sum_filter_add_sum_filter_not` splits a sum; write the complement as
+  `¬ ρ x = 0`, not `ρ x ≠ 0`, for `rw` to match.
+- `Real.log_div` and `Real.log_mul` need both arguments nonzero and nothing else, which is
+  exactly where the junk values would otherwise slip in.
+- `(1 - t) • ρ + t • ρ'` applied to `x` is `(1 - t) * ρ x + t * ρ' x` by `rfl`.
+- `Convex ℝ P` is applied as `hconv hρ hρ' (ha : 0 ≤ a) (hb : 0 ≤ b) (hab : a + b = 1)`.
+- `hx' : x ∈ Function.support ρ'` can be applied to a proof of `ρ' x = 0` directly.
+
+### Not done, and why
+
+- Lemma 3.3, Proposition 3.4 and Theorem 1.1 were not touched. The third slice was not
+  started; the proof of Lemma 3.3 in the paper was read only to write the next prompt.
+- The bound was not proved and not changed; R-32 and R-33 are still held.
+- No sanity lemma was added. The two `sanity (planned)` rows of the first slice are as they
+  were.
+- Upstream: no Lean file was opened; nothing was built.
+- No subagent was used.
+
+### Merge
+
+Nothing is merged into `main` by the work recorded above. The merge is put to the user at
+the end of the session. If it is approved, it is recorded in the closing commit
+(`AGENTS.md`, "Unit of work"); **if `main` contains this commit, the merge was done**, and
+`git log main` is the record.

@@ -514,7 +514,9 @@ sheet and a summary, and signed the eleven items by choosing the option the work
 marked as recommended. The sign-off covers each note, and the Lean text it describes, as
 they stood at the commit that records it. A sign-off says that the Lean text says what the
 paper says, in the abstract form decided; it does not say that a statement is true. Lemma
-3.2 and Lemma 3.3 are signed off as statements and are **not proved**.
+3.2 and Lemma 3.3 were signed off as statements, before either was proved. (Lemma 3.2 has
+been proved since, at the second slice of M4 on 2026-10-08; this parenthesis was added
+then. Lemma 3.3 is still **not proved**.)
 
 This section was headed "notes awaiting review" until the sign-off was recorded; the text
 of the notes was not changed when the lines were added.
@@ -622,6 +624,12 @@ Equation numbers below are those of the paper's PDF: (3.1) is `eq:raw-law-caps`,
 - Decision (user, 2026-10-08, question Q1): a law is a real weight function with the predicate
   `IsLaw`, with finite sums; not a bundled object, not `PMF`, not a measure.
 - Reviewed by John Fairfax-Ball, 2026-10-08 (sheet item R-22).
+- Status update after the sign-off (2026-10-08, M4 second slice): three general lemmas about
+  these definitions were proved for the proof of Lemma 3.2, in `Hadwiger/Sanity/Law.lean`: a
+  law has a point of positive weight (`IsLaw.exists_pos`); under nonnegative weights a set
+  that contains a point of positive weight has positive mass (`mass_pos`); the normalised
+  restriction of nonnegative weights to a set of positive mass is a law (`isLaw_restrict`).
+  Blueprint S-L3.2.restrict.
 
 ### F-MARG — marginals and the product law (new) — D-3.marg
 
@@ -792,6 +800,12 @@ Equation numbers below are those of the paper's PDF: (3.1) is `eq:raw-law-caps`,
 - Decision (user, 2026-10-08, question Q4): relative entropy is a real number given by the
   paper's finite sum, with the junk value described above; statements guard against it.
 - Reviewed by John Fairfax-Ball, 2026-10-08 (sheet item R-28).
+- Status update after the sign-off (2026-10-08, M4 second slice): `D ≥ 0` is proved, as
+  `Hadwiger.relEntropy_nonneg` (blueprint S-L3.2.nonneg), for laws `ρ`, `σ` with `σ` positive
+  wherever `ρ` is. Also proved: the exact identity of the proof of Lemma 3.2
+  (S-L3.2.identity) and the comparison with the normalised restriction (S-L3.2.restrict).
+  Each has a hypothesis that the second argument is nonzero wherever the first is, which is
+  the guard against the junk value that this note describes.
 
 ### F-LIST — the law of a list of independent elements (new) — D-3.list
 
@@ -884,6 +898,15 @@ Equation numbers below are those of the paper's PDF: (3.1) is `eq:raw-law-caps`,
   ("compact"; `q` a probability measure). Whether the proofs use them is to be recorded
   when they are written.
 - Reviewed by John Fairfax-Ball, 2026-10-08 (sheet item R-30).
+- Status update after the sign-off (2026-10-08, M4 second slice): all three assertions are
+  proved, each by the paper's proof; status `DONE`. The statements were not changed. The
+  proofs do not use `hcomp` ("compact") or `hq` ("`q` has total mass one"): the proof of the
+  first assertion uses neither, and the proofs of the second and third pass them to the
+  first assertion and make no other use of them. What this note says under "Junk values"
+  is now proved in Lean: the lemmas behind the second and third assertions have the
+  hypothesis that `ρ` is positive, or nonzero, wherever `ρ'` is, the first assertion supplies
+  it, and `mass ρ S > 0` is proved before its logarithm is used. The sentences of the
+  paper's proof are the blueprint rows S-L3.2.segment to S-L3.2.nonneg.
 
 ### L-3.3 — Lemma 3.3
 

@@ -35,8 +35,8 @@ Theorem 1.1, which is almost the whole paper, is `sorry`.
 What is proved (2026-10-07), all of it elementary:
 
 - Proposition 3.5, the clique-minor bound `3·h(G) ≤ m + 4·cm(G) + 2` and its consequence
-  for graphs with `α ≤ 2` (milestones M1 and M2). It and Lemma 2.2, below, are the two
-  numbered results of the paper proved so far.
+  for graphs with `α ≤ 2` (milestones M1 and M2). It, Lemma 2.2 and Lemma 3.2, both below,
+  are the three numbered results of the paper proved so far.
 - Three unnumbered statements from Section 1: the colour-class bound `|V| ≤ α·χ`, its
   fractional form `|V| ≤ α·χ_f`, and `χ_f ≤ χ` (blueprint S-1.a, S-1.b, S-1.c; M1).
 - Lemma 2.2, that the abstract hole relation of Section 2.1 is symmetric, has no loops and
@@ -45,24 +45,35 @@ What is proved (2026-10-07), all of it elementary:
   data of Section 2.1 only. The paper's actual construction (Sections 2.2 to 2.4) is not
   stated in Lean yet, so nothing here is yet about the paper's graphs.
 
+Proved on 2026-10-08, in the second slice of milestone M4, and also elementary:
+
+- Lemma 3.2, the information-projection lemma of Section 3.1, in its three assertions: a
+  minimiser `ρ` of the relative entropy `D(·‖q)` on a convex set of laws on a finite set is
+  positive wherever any law of the set is; `D(ρ'‖q) − D(ρ‖q) ≥ D(ρ'‖ρ)`; and
+  `D(ρ'‖ρ) ≥ −log ρ(S)` when `ρ'` is supported on `S` (blueprint L-3.2, with the sentences
+  of the paper's proof as the lemmas S-L3.2.*). The statements are the ones the user signed
+  off; the proofs are the paper's. Nothing in Lean depends on it yet. It is one of the two
+  lemmas that the proof of Proposition 3.4 will use, and it does not by itself bring the
+  final theorem any closer.
+
 What follows from Theorem 1.1 in Lean, and so has a complete proof body but is not proved:
 Corollary 1.2, the final theorem, and the negations of Hadwiger's conjecture and of its
 fractional weakening. Nothing else stands between Theorem 1.1 and the final theorem.
 
-What is stated and **not proved** (2026-10-08, first slice of milestone M4): Lemma 3.2
-(three assertions), Lemma 3.3 and Proposition 3.4, the last as an explicit bound on a
-failure probability, for any finite set with a law and any symmetric, loopless,
-triangle-free relation. Each is `sorry`. The user signed off the statements of Lemma 3.2
-and Lemma 3.3 on 2026-10-08, so their proofs may now be written. **The statement of
-Proposition 3.4 is not signed off**: the user held it, with its explicit bound, for a second
+What is stated and **not proved** (stated on 2026-10-08, in the first slice of milestone
+M4): Lemma 3.3 and Proposition 3.4, the last as an explicit bound on a failure probability,
+for any finite set with a law and any symmetric, loopless, triangle-free relation. Each is
+`sorry`. The user signed off the statement of Lemma 3.3 on 2026-10-08, so its proof may be
+written; it is the next task. **The statement of Proposition 3.4 is not signed off**: the user held it, with its explicit bound, for a second
 reading (`blueprint/M4_REVIEW_SHEET.md`, items R-32 and R-33), and by the user's decision no
 proof of it is written before its sign-off. The bound in Proposition 3.4 is not in the
 paper in that form: it was derived by hand from the paper's proof and has not been checked
 by anyone else. Theorem 3.1 is not stated.
 
-So there are six `sorry`s: Theorem 1.1 and those five. The final theorem rests on Theorem
-1.1 alone; the five are not beneath it, because Theorem 1.1 is not yet derived from
-Proposition 3.4 in Lean. The paper's construction (Sections 2.2 to 2.4), Theorem 3.1 and
+So there are three `sorry`s: Theorem 1.1 and those two. (There were six after the first
+slice of M4; the three of Lemma 3.2 were replaced by proofs in the second.) The final
+theorem rests on Theorem 1.1 alone; the other two are not beneath it, because Theorem 1.1
+is not yet derived from Proposition 3.4 in Lean. The paper's construction (Sections 2.2 to 2.4), Theorem 3.1 and
 everything from Section 4 onward are not yet stated in Lean.
 
 Run `python scripts/axiom_audit.py` for the exact tally; the blueprint has the detail.

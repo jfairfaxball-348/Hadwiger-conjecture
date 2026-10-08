@@ -5,17 +5,27 @@ Statuses of individual results are in `blueprint/BLUEPRINT.md`, never here.
 
 ## The single next task
 
-**M4, second slice: prove Lemma 3.2** (blueprint L-3.2: the three assertions, in
-`Hadwiger/EntropyAndCuts.lean`), by the paper's proof. It may start: the items it rests on
-were signed off by the user on 2026-10-08 (R-22 laws, R-28 relative entropy, R-30 Lemma 3.2
-of `blueprint/M4_REVIEW_SHEET.md`), and questions Q1, Q4 and Q6 were answered without any
-change to the sources. The statements of Lemma 3.2 are not to be changed while proving
-them; a statement found false or unprovable is a result to record and report.
+**M4, third slice: prove Lemma 3.3** (blueprint L-3.3: `Hadwiger.exists_terminal_cut`, in
+`Hadwiger/EntropyAndCuts.lean`), the terminal-cut lemma, by the paper's proof: the
+residual-cut argument for max-flow/min-cut with real capacities, on the network with a
+source, a left and a right copy of `Ω`, and a sink. It may start: the items it rests on were
+signed off by the user on 2026-10-08 (R-22 laws, R-23 marginals and products, R-24 the three
+caps, R-31 Lemma 3.3 of `blueprint/M4_REVIEW_SHEET.md`). The statement of Lemma 3.3 is not to
+be changed while proving it; a statement found false or unprovable is a result to record and
+report. By the user's decision of 2026-10-07 the paper's argument is the one to follow;
+hyperplane separation is a fallback only if a step of it fails or it proves far more
+expensive, and is then recorded (M4 below, "Mathlib gaps").
 
-Still open from the first slice, and **not** part of the second: items R-32 and R-33 of the
+Still open from the first slice, and **not** part of the third: items R-32 and R-33 of the
 sheet, the explicit bound and Proposition 3.4, which the user held on 2026-10-08 for a
-second reading. No proof of the bound may be written before they are signed off. Lemma 3.2
-and Lemma 3.3 (the second and third slices) do not depend on them.
+second reading. No proof of the bound may be written before they are signed off. Lemma 3.3
+does not depend on them, and it does not use Lemma 3.2.
+
+The second slice of M4 was done on 2026-10-08 on branch `m4-lemma-3-2`: the three
+assertions of Lemma 3.2 are proved, each by the paper's proof, with the statements
+unchanged, and the sentences of that proof are fifteen lemmas (blueprint `S-L3.2.*`). State
+under M4 below. Whether the branch has been merged into `main` is a question for
+`git log main`.
 
 The first slice of M4 was done on 2026-10-08 on branch `m4-statement-layer`: the
 definitions of the statement layer of Sections 3.1 and 3.2, the statements of Lemma 3.2,
@@ -30,8 +40,10 @@ accepted the form of that lemma's statement the same day.
 
 M2 was completed on 2026-10-07 on branch `m2-proposition-3-5`: Proposition 3.5 is proved.
 From here the final theorem rests on one `sorry` only, Theorem 1.1. From M3 until the first
-slice of M4 that was the only `sorry` in the sources. Since that slice there are six: the
-five new ones are unproved statements of Section 3 and are not beneath the final theorem.
+slice of M4 that was the only `sorry` in the sources. That slice made it six: the five new
+ones were unproved statements of Section 3, not beneath the final theorem. The second slice
+proved three of them (Lemma 3.2). So there are three: Theorem 1.1, Lemma 3.3 and the bound
+of Proposition 3.4.
 
 M0 was completed on 2026-10-07: every sanity lemma in its list is proved, and every
 fidelity note that existed then carries the user's "Reviewed by" line. A definition or
@@ -355,6 +367,50 @@ M1 to M4 are independent of M5 to M17. When M1, M2 and M17 are done, T-FINAL is 
   - Departures from the paper's argument that the proofs will need, known already: for a
     law with zeros, `μ^2` is not strictly positive and one more step is needed (F-BOUND,
     step 0; question Q5).
+- **State on 2026-10-08, after the second slice** (statuses are in the blueprint, not here):
+  - Done, on branch `m4-lemma-3-2`. The three `sorry`s of Lemma 3.2 are replaced by proofs:
+    `relEntropy_minimizer_pos`, `relEntropy_le_sub_of_minimizer`,
+    `neg_log_mass_le_relEntropy_of_minimizer`. No statement was changed and no definition
+    was added. Three `sorry`s remain: Theorem 1.1, Lemma 3.3, the bound of Proposition 3.4.
+  - Each proof is the paper's: for the support assertion, the right derivative `−∞` at zero
+    of the entropy along `(1 − t)ρ + tρ'`; for the second, the first-order condition at the
+    minimiser and the exact identity; for the third, comparison with the normalised
+    restriction `ρ(·|S)` and the nonnegativity of relative entropy from `log t ≤ t − 1`.
+    The sentences of the proof are fifteen lemmas in eight blueprint rows, `S-L3.2.segment`
+    to `S-L3.2.nonneg`: seven in `Hadwiger/EntropyAndCuts.lean`, and eight general ones about
+    laws and relative entropy in `Hadwiger/Sanity/Law.lean` and
+    `Hadwiger/Sanity/RelEntropy.lean`, imported.
+  - The paper's proof went through as written. No paper issue was found; one sentence was
+    added to PI-008 (the sums of the proof are over the points where `ρ > 0`). No departure
+    from the paper's argument was needed. Three differences of form are recorded in
+    `docs/SESSION_LOG.md` (M4 second-slice session).
+  - Hypotheses kept as printed (question Q6). Neither "compact" nor "`q` has total mass one"
+    is used: the proof of the first assertion uses neither, and the proofs of the second and
+    third use them only to call the first. Both stay in the statements.
+  - Junk values. `relEntropy ρ' ρ` and `Real.log (mass ρ S)` are shown honest by proof: every
+    lemma that handles them has the hypothesis that `ρ` is positive, or nonzero, wherever
+    `ρ'` is; the first assertion supplies it; and `mass ρ S > 0` is proved before the
+    logarithm is used.
+  - The Mathlib gap named above for this lemma ("a finite-sum relative entropy with its
+    convexity and one-sided derivative will be needed") was real and small. Convexity of the
+    entropy was not needed. The one-sided derivative is the difference quotient as `t → 0+`:
+    for one term, Mathlib's `HasDerivAt` (product, logarithm, division by a constant) and
+    `HasDerivAt.tendsto_slope_zero_right`; for the newly occupied points, an explicit formula
+    and `Real.tendsto_log_nhdsGT_zero`. Also used: `Real.log_le_sub_one_of_pos`,
+    `Real.log_div`, `Real.log_mul`, `tendsto_finsetSum`, `Filter.Tendsto.add_atBot`,
+    `Filter.Tendsto.const_mul_atBot`, `ge_of_tendsto`, `Ioc_mem_nhdsGT`,
+    `Finset.sum_filter_add_sum_filter_not`, `Finset.sum_pos'`.
+  - Compactness of the set of laws was not needed here, because the lemma is handed its
+    minimiser. It will be needed where a minimiser has to be produced, in the proof of
+    Proposition 3.4.
+  - Size: the three Lean files touched grew from 413 lines to 860, comments included
+    (+447); the Lean code in them, with comments and blank lines removed, from 191 lines to
+    396 (+205). The Lean sources as a whole went from 3,107 lines to 3,554. There was no
+    estimate for this slice alone; M4 as a whole is estimated at 4,500 (3,000–6,000). As at
+    M1 to M3, this was an elementary argument, and its size says nothing about Lemma 3.3 or
+    about the fingerprints, where the missing infrastructure is.
+  - Eight blueprint rows were added, all of kind `support`, all for steps of the paper's
+    proof. The count went from 181 entries to 189.
 
 ## M5 — The construction and the statement of Theorem 3.1
 

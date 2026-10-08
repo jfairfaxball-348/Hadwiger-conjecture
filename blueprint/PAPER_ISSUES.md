@@ -15,7 +15,9 @@ reading, or something left out; the reading adopted is recorded), `REPAIRED`.
 - `UNCLEAR`: eight (PI-002 to PI-009). All concern how statements are written, not
   whether they are true. PI-007 to PI-009 were found at the first slice of M4
   (2026-10-08), while Sections 3.1 and 3.2 were being stated in Lean; each has a reading
-  adopted, and none stopped a statement from being written.
+  adopted, and none stopped a statement from being written. At the second slice of M4
+  (2026-10-08) Lemma 3.2 was proved in Lean by the paper's proof: every step went through
+  as written, no new issue was found, and one paragraph was added to PI-008.
 - Withdrawn: PI-001, which was a mistake by the worker, not a problem in the paper.
 
 **This is not a verification of the paper.** See "How far the paper has been checked".
@@ -32,9 +34,9 @@ The whole paper was read once, in full, proofs included, on 2026-10-07.
   followed".
 - Machine-checked so far (the blueprint has the statuses; `DONE` there is what this
   means): the three unnumbered bounds of Section 1 (M1), Proposition 3.5 with its proof
-  (M1 and M2), Lemma 2.2 with its proof and both halves of equation (2.2) (M3), and the
-  deduction of Corollary 1.2 from Theorem 1.1 (M1). These are the elementary parts. No
-  error or gap was found in them.
+  (M1 and M2), Lemma 2.2 with its proof and both halves of equation (2.2) (M3), the
+  deduction of Corollary 1.2 from Theorem 1.1 (M1), and Lemma 3.2 with its proof (M4, second
+  slice). These are the elementary parts. No error or gap was found in them.
 - Section 2.1 in particular (Definition 2.1, Lemma 2.2, equation (2.2)) was read again at
   M3 and the Lean proofs follow the paper's sentence by sentence. Every step went through
   as written. One observation, which is not an issue: the six-term sum that proves
@@ -45,7 +47,9 @@ The whole paper was read once, in full, proofs included, on 2026-10-07.
 - Sections 3.1 and 3.2 (Lemma 3.2, Lemma 3.3, Proposition 3.4, each with its proof), the
   opening of Section 3 and the last paragraphs of Sections 2.1 and 2.4 were read again at
   the first slice of M4 (2026-10-08), and the three results were **stated** in Lean. None
-  of the three is proved; each is `sorry`. Two things were done by hand that are not
+  of the three was proved in that slice. (Lemma 3.2 was proved in the next one, see the
+  next item; Lemma 3.3 and Proposition 3.4 are still `sorry`.) Two things were done by hand
+  that are not
   proofs: the explicit bound that replaces "probability `1 − exp(−Ω(m))`" in Proposition
   3.4 was derived from the paper's proof, step by step (`blueprint/FIDELITY.md`, F-BOUND);
   and each new statement was checked in its degenerate cases. No step of the paper's
@@ -53,6 +57,21 @@ The whole paper was read once, in full, proofs included, on 2026-10-07.
   remark of the paper was machine-checked on the way: "Two disjoint edges fail to touch
   precisely when all four cross pairs are holes" (§2.1, last paragraph; blueprint
   S-M4.touch).
+- Lemma 3.2 with its proof (§3.1; lines 21 to 69 of `build/sections/03-distributions.tex`)
+  was read again at the second slice of M4 (2026-10-08), and the Lean proofs of its three
+  assertions follow the paper's sentence by sentence (blueprint L-3.2, and S-L3.2.segment to
+  S-L3.2.nonneg for the sentences). Every step went through as written. Three observations,
+  none of them an issue:
+  1. the proof uses neither that `P` is compact nor that `q` has total mass one. Compactness
+     serves to make a minimiser exist, and the lemma is handed one; of `q` only strict
+     positivity is used;
+  2. the support assertion needs only that the weights are nonnegative. That `ρ` and `ρ'`
+     have total mass one is first used in the first-order condition, where the paper says
+     so ("the constant derivative term cancels");
+  3. the last step, `D(ρ'‖ρ) ≥ −log ρ(S)`, holds for every law `ρ'` that vanishes wherever
+     `ρ` does and is supported on `S`, whether or not `ρ'` lies in `P` or `ρ` is a
+     minimiser.
+  The sums in the proof are to be read over the points where `ρ > 0` (PI-008, addition).
 - An observation from that derivation, which is not an issue: the argument for the bound
   on `cm(G)` uses only that the hole relation is symmetric. That it has no loops and no
   triangles is used for `α(G) ≤ 2` and nowhere else in Section 3.
@@ -273,7 +292,21 @@ limiting probability space obtained by compactness.
   gives a junk value, not `+∞`, where `q` vanishes and `ρ` does not (note F-KL). In the
   second and third assertions of Lemma 3.2 the term `relEntropy ρ' ρ` is the honest value
   because of the first assertion (note L-3.2). Nothing was added to the statements.
-- Blueprint entries: D-3.KL, L-3.2.
+- Addition at the second slice of M4 (2026-10-08), when Lemma 3.2 was proved. The same
+  reading is needed in two more places of the proof. The sum
+  `∑_x (ρ'(x) − ρ(x)) log(ρ(x)/q(x))`, in the first-order condition and in the exact
+  identity, is written over all `x`, and at a point with `ρ(x) = 0` its term is
+  `0 · log 0`. The paper says just before it that it differentiates "using only points where
+  `ρ > 0`", so the sum is over those points; at the others `ρ'(x) = ρ(x) = 0` by the first
+  assertion. In Lean that term is `(0 − 0) * Real.log 0 = 0`, so the sum over the whole type
+  is the paper's sum. And the reading is now enforced by proof and not by remark: every
+  lemma that handles `D(ρ'‖ρ)` or `D(ρ'‖ρ(·|S))` has the hypothesis that the second
+  argument is nonzero wherever the first is, and the first assertion supplies it. The
+  hypothesis is needed: without it nonnegativity fails for the Lean value, since for
+  `ρ = (1/2, 1/2)` and `σ = (1, 0)` on two points `relEntropy ρ σ = (1/2) log(1/2) < 0`
+  (by hand; in the doc comment of `Hadwiger.relEntropy_nonneg`).
+- Blueprint entries: D-3.KL, L-3.2, S-L3.2.first-order, S-L3.2.identity, S-L3.2.restrict,
+  S-L3.2.nonneg.
 
 ## PI-009 — The quantifiers of Proposition 3.4
 

@@ -21,6 +21,14 @@ about those definitions that later files need.
 
 Added at milestone M4, first slice. Blueprint entries: `S-M4.law`, `S-M4.mass`, `S-M4.marg`,
 `S-M4.caps`, `S-M4.list`, in the section "Sanity checks (not in the paper)".
+
+Added at milestone M4, second slice, for the proof of Lemma 3.2 (`Hadwiger/EntropyAndCuts.lean`):
+three general lemmas, marked "Support (Lemma 3.2)" below. A law has a point of positive weight
+(`IsLaw.exists_pos`); a set containing a point of positive weight has positive mass
+(`mass_pos`); and the normalised restriction `ρ(·|S)` of nonnegative weights to a set of
+positive mass is a law (`isLaw_restrict`). They serve the last step of the paper's proof,
+"comparison with the normalized restriction `ρ(·|S)`". Blueprint entry: `S-L3.2.restrict`, in
+the section "Steps of the paper's proofs, proved as separate lemmas".
 -/
 
 namespace Hadwiger
@@ -56,6 +64,15 @@ theorem IsLaw.nonempty {p : α → ℝ} (hp : IsLaw p) : Nonempty α := by
   rw [not_nonempty_iff] at h
   have h1 := hp.sum_eq_one
   simp at h1
+
+/-- **Support (Lemma 3.2).** A law has a point of positive weight: its weights are nonnegative
+and add up to `1`, so they are not all `0`. So the support of a law is not empty. -/
+theorem IsLaw.exists_pos {p : α → ℝ} (hp : IsLaw p) : ∃ a, 0 < p a := by
+  by_contra hne
+  have h0 : ∀ x, p x = 0 := fun x =>
+    le_antisymm (not_lt.mp fun hx => hne ⟨x, hx⟩) (hp.nonneg x)
+  have h1 := hp.sum_eq_one
+  simp [h0] at h1
 
 /-- **Sanity (M4).** The point mass at `a` is a law. -/
 theorem isLaw_single [DecidableEq α] (a : α) : IsLaw (Pi.single a (1 : ℝ)) where
@@ -119,6 +136,28 @@ theorem IsLaw.exists_notMem_of_mass_lt_one {p : α → ℝ} (hp : IsLaw p) {S : 
   have hall : ∀ x, x ∈ S := fun x => by_contra fun hx => hne ⟨x, hx⟩
   rw [Set.eq_univ_of_forall hall, hp.mass_univ] at h
   exact lt_irrefl _ h
+
+/-- **Support (Lemma 3.2).** Under nonnegative weights, a set that contains a point of positive
+weight has positive mass. This is what makes `Real.log (mass ρ S)` an honest logarithm in the
+third assertion of Lemma 3.2, and not the junk value `Real.log 0 = 0`. -/
+theorem mass_pos {p : α → ℝ} (hp : ∀ x, 0 ≤ p x) {S : Set α} {a : α} (ha : a ∈ S)
+    (hpa : 0 < p a) : 0 < mass p S := by
+  refine Finset.sum_pos' (fun x _ => Set.indicator_nonneg (fun y _ => hp y) x)
+    ⟨a, Finset.mem_univ a, ?_⟩
+  rwa [Set.indicator_of_mem ha]
+
+/-- **Support (Lemma 3.2).** The normalised restriction `ρ(·|S)` of nonnegative weights `p` to
+a set `S` of positive mass: `p x / p(S)` for `x ∈ S` and `0` otherwise. It is a law.
+
+The division is by `mass p S`, which the hypothesis makes positive; with `mass p S = 0` the
+function would be `0` everywhere (`x / 0 = 0`) and not a law. The weights `p` need not add up
+to `1`. -/
+theorem isLaw_restrict {p : α → ℝ} (hp : ∀ x, 0 ≤ p x) {S : Set α} (hS : 0 < mass p S) :
+    IsLaw (fun x => S.indicator p x / mass p S) where
+  nonneg x := div_nonneg (Set.indicator_nonneg (fun y _ => hp y) x) hS.le
+  sum_eq_one := by
+    rw [← Finset.sum_div]
+    exact div_self hS.ne'
 
 end Mass
 

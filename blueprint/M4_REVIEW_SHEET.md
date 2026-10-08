@@ -2,6 +2,13 @@
 
 Prepared on 2026-10-08 in the first slice of milestone M4, on branch `m4-statement-layer`.
 
+**Status update, 2026-10-08, second slice of M4.** Lemma 3.2 (item R-30) has been proved
+since: its three statements are `DONE`, and they were not changed. Where this sheet says
+that the statements of Lemma 3.2 are `sorry` or not proved, it describes the day it was
+written and signed. Lemma 3.3 (R-31) and the bound of Proposition 3.4 (R-33) are still
+`sorry`, and items R-32 and R-33 are still held. This paragraph and one line under item R-30
+are the only additions; no signed item was rewritten.
+
 **What this is.** One item for each new fidelity note of `blueprint/FIDELITY.md` (section
 "Milestone M4, first slice"): the paper's own sentences, the Lean
 text, what is machine-checked about it, the comparison clause by clause, every difference
@@ -508,6 +515,13 @@ statement says what the paper says, in the abstract form decided.
      (it is true for any law `ρ'` that vanishes where `ρ` does). The paper states it for
      `ρ' ∈ P`, and that is what is stated.
 - **Sign-off:** ☑ accepted ☐ change requested — by John Fairfax-Ball on 2026-10-08
+- **Status update after the sign-off** (2026-10-08, second slice of M4): all three are
+  proved, by the paper's proof, with the statements unchanged. On the doubts. 1: neither
+  hypothesis is used by the proof of the first assertion, and the other two proofs use them
+  only to call the first; both are kept. 2: it is in Lean now, by hypothesis and proof. 4:
+  the more general form is proved as a helper lemma,
+  `Hadwiger.neg_log_mass_le_relEntropy`; the statement of Lemma 3.2 is as the paper has it.
+  Details: note L-3.2 and `docs/SESSION_LOG.md` (M4 second-slice session).
 
 ### R-31 — Lemma 3.3 — L-3.3
 
