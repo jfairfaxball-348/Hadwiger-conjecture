@@ -3060,3 +3060,35 @@ Nothing is merged into `main` by the work recorded above. The merge is put to th
 the end of the session. If it is approved, it is recorded in the closing commit
 (`AGENTS.md`, "Unit of work"); **if `main` contains this commit, the merge was done**, and
 `git log main` is the record.
+
+### Push and CI
+
+| Commit | What | On the remote | CI |
+|---|---|---|---|
+| `dad6bcd` | the proofs of Lemma 3.2 and their records | yes; `git ls-remote` gave `dad6bcd` for `m4-lemma-3-2`, equal to `HEAD`, after the push | passed, run `37786582422` |
+
+This table was added afterwards, in a commit that changes only this log, the saved prompt
+and the wrapping of two paragraphs of `START_HERE.md` (no word of them changed); the CI
+result of that commit is therefore not recorded here. The push ran with
+`GCM_INTERACTIVE=never GIT_TERMINAL_PROMPT=0` and did not prompt. `main` on the remote
+stayed at `063829e`. The run was matched to its commit by hash. In it every step passed:
+the build, the ledger check and the axiom audit.
+
+Found while looking up that run, and recorded because the closing commit of the previous
+session could not record it: CI passed on `main` at `063829e` (run `37779423299`).
+
+### The prompt for the next session
+
+`docs/NEXT_SESSION_PROMPT.md` was replaced in the same commit, in the form that `AGENTS.md`
+asks for when a session has no approved merge yet: it says that the branch is unmerged and
+marks with `[MERGE]` the lines that the user's answer may change. The task it sets is the
+single next task of `blueprint/MILESTONES.md`, the third slice of M4, to prove Lemma 3.3.
+It carries forward as open, without deciding them: sheet items R-32 and R-33 (held), and
+whether to build upstream's code and audit its axioms.
+
+### Question put to the user at the end of the session
+
+One prompt, one question: whether to merge `m4-lemma-3-2` into `main`. Nothing else in this
+session needed a decision. Carried forward as open, and not asked again: the sign-off of
+R-32 and R-33, which the user holds for a second reading; and whether to build upstream's
+code, which the worker recommended deciding at the gate before M6.

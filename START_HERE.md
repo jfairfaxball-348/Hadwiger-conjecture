@@ -64,17 +64,18 @@ What is stated and **not proved** (stated on 2026-10-08, in the first slice of m
 M4): Lemma 3.3 and Proposition 3.4, the last as an explicit bound on a failure probability,
 for any finite set with a law and any symmetric, loopless, triangle-free relation. Each is
 `sorry`. The user signed off the statement of Lemma 3.3 on 2026-10-08, so its proof may be
-written; it is the next task. **The statement of Proposition 3.4 is not signed off**: the user held it, with its explicit bound, for a second
-reading (`blueprint/M4_REVIEW_SHEET.md`, items R-32 and R-33), and by the user's decision no
-proof of it is written before its sign-off. The bound in Proposition 3.4 is not in the
-paper in that form: it was derived by hand from the paper's proof and has not been checked
-by anyone else. Theorem 3.1 is not stated.
+written; it is the next task. **The statement of Proposition 3.4 is not signed off**: the
+user held it, with its explicit bound, for a second reading
+(`blueprint/M4_REVIEW_SHEET.md`, items R-32 and R-33), and by the user's decision no proof
+of it is written before its sign-off. The bound in Proposition 3.4 is not in the paper in
+that form: it was derived by hand from the paper's proof and has not been checked by anyone
+else. Theorem 3.1 is not stated.
 
 So there are three `sorry`s: Theorem 1.1 and those two. (There were six after the first
 slice of M4; the three of Lemma 3.2 were replaced by proofs in the second.) The final
 theorem rests on Theorem 1.1 alone; the other two are not beneath it, because Theorem 1.1
-is not yet derived from Proposition 3.4 in Lean. The paper's construction (Sections 2.2 to 2.4), Theorem 3.1 and
-everything from Section 4 onward are not yet stated in Lean.
+is not yet derived from Proposition 3.4 in Lean. The paper's construction (Sections 2.2 to
+2.4), Theorem 3.1 and everything from Section 4 onward are not yet stated in Lean.
 
 Run `python scripts/axiom_audit.py` for the exact tally; the blueprint has the detail.
 
