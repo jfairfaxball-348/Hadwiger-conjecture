@@ -9,6 +9,13 @@ written and signed. Lemma 3.3 (R-31) and the bound of Proposition 3.4 (R-33) are
 `sorry`, and items R-32 and R-33 are still held. This paragraph and one line under item R-30
 are the only additions; no signed item was rewritten.
 
+**Status update, 2026-10-08, third slice of M4.** The paragraph above describes the state
+after the second slice. Since then Lemma 3.3 (item R-31) has been proved too: its statement
+is `DONE`, and it was not changed. Where this sheet says that Lemma 3.3 is `sorry` or not
+proved, it describes the day it was written and signed. The bound of Proposition 3.4 (R-33)
+is still `sorry`, and items R-32 and R-33 are still held. This paragraph and one line under
+item R-31 are the only additions of the third slice; no signed item was rewritten.
+
 **What this is.** One item for each new fidelity note of `blueprint/FIDELITY.md` (section
 "Milestone M4, first slice"): the paper's own sentences, the Lean
 text, what is machine-checked about it, the comparison clause by clause, every difference
@@ -553,6 +560,12 @@ statement says what the paper says, in the abstract form decided.
      numbers, by the case split above. The paper has positive values only.
   2. "Either … or" is read inclusively.
 - **Sign-off:** ☑ accepted ☐ change requested — by John Fairfax-Ball on 2026-10-08
+- **Status update after the sign-off** (2026-10-08, third slice of M4): proved, by the
+  paper's proof, with the statement unchanged. On the doubts. 1: the proof covers all real
+  `M` and `B`. It splits at zero: for `M < 0` and for `B < 0` the trivial choices above
+  serve and the hypothesis on `R` is not used; for `0 ≤ M` and `0 ≤ B` it is the paper's
+  proof. 2: nothing new. Of "`μ` is a law" only the nonnegativity of the weights is used.
+  Details: note L-3.3 and `docs/SESSION_LOG.md` (M4 third-slice session).
 
 ### R-32 — the explicit bound — D-3.bound, note F-BOUND
 

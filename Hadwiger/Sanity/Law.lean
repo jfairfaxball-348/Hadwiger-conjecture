@@ -29,6 +29,15 @@ three general lemmas, marked "Support (Lemma 3.2)" below. A law has a point of p
 positive mass is a law (`isLaw_restrict`). They serve the last step of the paper's proof,
 "comparison with the normalized restriction `ρ(·|S)`". Blueprint entry: `S-L3.2.restrict`, in
 the section "Steps of the paper's proofs, proved as separate lemmas".
+
+Added at milestone M4, third slice, for the proof of Lemma 3.3 (`Hadwiger/EntropyAndCuts.lean`):
+three general lemmas, marked "Support (Lemma 3.3)" below. Under nonnegative weights the mass of
+a union is at most the sum of the masses (`mass_union_le`); and the two marginals of the weight
+function that puts weight `c` on one pair `(a, b)` and `0` elsewhere are `c` at `a`, respectively
+at `b`, and `0` elsewhere (`marginalFst_ite_eq`, `marginalSnd_ite_eq`). The first serves the last
+step of the paper's proof ("Take `S = L_0 ∪ R_0`"), the other two the change of a flow along one
+edge of a residual path. Blueprint entries: `S-L3.3.sets` and `S-L3.3.residual`, in the same
+section.
 -/
 
 namespace Hadwiger
@@ -159,6 +168,16 @@ theorem isLaw_restrict {p : α → ℝ} (hp : ∀ x, 0 ≤ p x) {S : Set α} (hS
     rw [← Finset.sum_div]
     exact div_self hS.ne'
 
+/-- **Support (Lemma 3.3).** Under nonnegative weights the mass of a union is at most the sum
+of the masses: `p(S ∪ T) ≤ p(S) + p(T)`. Used for `μ(L_0 ∪ R_0) ≤ μ(L_0) + μ(R_0)` in the last
+step of the paper's proof of Lemma 3.3. -/
+theorem mass_union_le {p : α → ℝ} (hp : ∀ x, 0 ≤ p x) (S T : Set α) :
+    mass p (S ∪ T) ≤ mass p S + mass p T := by
+  classical
+  rw [mass, mass, mass, ← Finset.sum_add_distrib]
+  refine Finset.sum_le_sum fun x _ => ?_
+  by_cases hS : x ∈ S <;> by_cases hT : x ∈ T <;> simp [Set.indicator, hS, hT, hp x]
+
 end Mass
 
 /-! ### Marginals and products -/
@@ -178,6 +197,22 @@ theorem marginalSnd_prodLaw [Fintype α] {p : α → ℝ} (q : β → ℝ) (hp :
     marginalSnd (prodLaw p q) = q := by
   funext y
   simp [marginalSnd, prodLaw, ← Finset.sum_mul, hp]
+
+/-- **Support (Lemma 3.3).** The first marginal of the weight function that puts weight `c` on
+the one pair `(a, b)` and `0` on every other pair: it is `c` at `a` and `0` elsewhere. -/
+theorem marginalFst_ite_eq [DecidableEq α] [DecidableEq β] [Fintype β] (a : α) (b : β) (c : ℝ)
+    (x : α) :
+    marginalFst (fun z : α × β => if z = (a, b) then c else 0) x = if x = a then c else 0 := by
+  simp only [marginalFst, Prod.mk.injEq]
+  by_cases h : x = a <;> simp [h]
+
+/-- **Support (Lemma 3.3).** The second marginal of the weight function that puts weight `c` on
+the one pair `(a, b)` and `0` on every other pair: it is `c` at `b` and `0` elsewhere. -/
+theorem marginalSnd_ite_eq [DecidableEq α] [DecidableEq β] [Fintype α] (a : α) (b : β) (c : ℝ)
+    (y : β) :
+    marginalSnd (fun z : α × β => if z = (a, b) then c else 0) y = if y = b then c else 0 := by
+  simp only [marginalSnd, Prod.mk.injEq]
+  by_cases h : y = b <;> simp [h]
 
 variable [Fintype α] [Fintype β]
 

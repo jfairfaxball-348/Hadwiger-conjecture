@@ -5,21 +5,33 @@ Statuses of individual results are in `blueprint/BLUEPRINT.md`, never here.
 
 ## The single next task
 
-**M4, third slice: prove Lemma 3.3** (blueprint L-3.3: `Hadwiger.exists_terminal_cut`, in
-`Hadwiger/EntropyAndCuts.lean`), the terminal-cut lemma, by the paper's proof: the
-residual-cut argument for max-flow/min-cut with real capacities, on the network with a
-source, a left and a right copy of `Ω`, and a sink. It may start: the items it rests on were
-signed off by the user on 2026-10-08 (R-22 laws, R-23 marginals and products, R-24 the three
-caps, R-31 Lemma 3.3 of `blueprint/M4_REVIEW_SHEET.md`). The statement of Lemma 3.3 is not to
-be changed while proving it; a statement found false or unprovable is a result to record and
-report. By the user's decision of 2026-10-07 the paper's argument is the one to follow;
-hyperplane separation is a fallback only if a step of it fails or it proves far more
-expensive, and is then recorded (M4 below, "Mathlib gaps").
+**M4, fourth slice: the fingerprint procedure** of the paper's proof of Proposition 3.4
+(§3.2, the paragraphs "Entropy-controlled fingerprints" and "The fingerprint determines the
+terminal set"; steps 0 to 3 of the hand derivation in `blueprint/FIDELITY.md`, note F-BOUND).
+That is: the deterministic procedure that takes a set `I` of pairwise non-conflicting units
+to a terminal set `T(I) ⊇ I` on which no feasible law exists; the bound
+`fingerprintLength B ε` on the number of recorded units, from Lemma 3.2 and the nonnegativity
+and the upper bound `log B` of the entropy of a feasible law; and the replay argument, that
+the terminal set is a function of the set of recorded units, so that there are at most
+`(|Ω|^2 + 1)^L` terminal sets. The union bound and the assembly of Proposition 3.4 are the
+fifth slice.
 
-Still open from the first slice, and **not** part of the third: items R-32 and R-33 of the
-sheet, the explicit bound and Proposition 3.4, which the user held on 2026-10-08 for a
-second reading. No proof of the bound may be written before they are signed off. Lemma 3.3
-does not depend on them, and it does not use Lemma 3.2.
+**It may not start yet.** It is the first part of the proof of the bound of Proposition 3.4
+(blueprint P-3.4: `Hadwiger.mass_listLaw_le_sampleBound`, in `Hadwiger/RandomSample.lean`),
+and that statement, with the three definitions of the explicit bound (D-3.bound), is **not
+signed off**: the user held items R-32 and R-33 of `blueprint/M4_REVIEW_SHEET.md` on
+2026-10-08 for a second reading, and by the user's decision of 2026-10-07 no proof is
+written before the sign-off. So the step that comes first is the user's: to sign R-32 and
+R-33 off, or to ask for changes. Until then there is no proving task left in M4: Lemma 3.2
+and Lemma 3.3, the two lemmas the proof will use, are both proved. (M5, the construction and
+the statement of Theorem 3.1, does not depend on M4; whether to turn to it while R-32 and
+R-33 are held is the user's to say, and nothing here decides it.)
+
+The third slice of M4 was done on 2026-10-08 on branch `m4-lemma-3-3`: Lemma 3.3 is proved,
+by the paper's proof, the residual-cut argument for max-flow/min-cut with real capacities,
+with the statement unchanged, and the sentences of that proof are ten lemmas (blueprint
+`S-L3.3.*`). State under M4 below. Whether the branch has been merged into `main` is a
+question for `git log main`.
 
 The second slice of M4 was done on 2026-10-08 on branch `m4-lemma-3-2`: the three
 assertions of Lemma 3.2 are proved, each by the paper's proof, with the statements
@@ -42,8 +54,8 @@ M2 was completed on 2026-10-07 on branch `m2-proposition-3-5`: Proposition 3.5 i
 From here the final theorem rests on one `sorry` only, Theorem 1.1. From M3 until the first
 slice of M4 that was the only `sorry` in the sources. That slice made it six: the five new
 ones were unproved statements of Section 3, not beneath the final theorem. The second slice
-proved three of them (Lemma 3.2). So there are three: Theorem 1.1, Lemma 3.3 and the bound
-of Proposition 3.4.
+proved three of them (Lemma 3.2) and the third slice a fourth (Lemma 3.3). So there are two:
+Theorem 1.1 and the bound of Proposition 3.4.
 
 M0 was completed on 2026-10-07: every sanity lemma in its list is proved, and every
 fidelity note that existed then carries the user's "Reviewed by" line. A definition or
@@ -411,6 +423,74 @@ M1 to M4 are independent of M5 to M17. When M1, M2 and M17 are done, T-FINAL is 
     about the fingerprints, where the missing infrastructure is.
   - Eight blueprint rows were added, all of kind `support`, all for steps of the paper's
     proof. The count went from 181 entries to 189.
+- **State on 2026-10-08, after the third slice** (statuses are in the blueprint, not here):
+  - Done, on branch `m4-lemma-3-3`. The `sorry` of Lemma 3.3 is replaced by a proof:
+    `exists_terminal_cut`. The statement was not changed and no definition was added. Two
+    `sorry`s remain: Theorem 1.1 and the bound of Proposition 3.4.
+  - The proof is the paper's: the network with a source, a left and a right copy of `Ω`
+    and a sink; every flow has value below one, since a flow of value at least one scales
+    down to a law that satisfies the caps; a flow of maximum value exists by compactness;
+    no residual path leads from the source to the sink, since augmenting along it would
+    increase the value; `Z` is the set of vertices reachable from the source; the edges out
+    of `Z` are saturated and the edges into `Z` carry no flow; so the capacity of the cut is
+    the value, which is below one; then `S = L_0 ∪ R_0` and `E_0 = R ∩ ((Ω∖L_0) × (Ω∖R_0))`.
+    Its sentences are ten lemmas in six blueprint rows, `S-L3.3.value` to `S-L3.3.sets`:
+    seven in `Hadwiger/EntropyAndCuts.lean`, and three general ones about masses and
+    marginals in `Hadwiger/Sanity/Law.lean`, imported.
+  - How the paper's objects are written, with no new definition. A flow is a weight
+    function `f` on pairs that is nonnegative, vanishes off `R` and satisfies the three caps
+    (`SatisfiesCaps`, signed off): the flow on the edge from the source to left `x` is the
+    first marginal of `f` and the flow on the edge from right `y` to the sink is the second,
+    by conservation, so only the middle edges need a variable. The value is `∑ f`. The
+    residual network is a relation on `Ω ⊕ Ω`, written inside the proof; the source and
+    the sink are not vertices of it, and their residual edges are the two conditions
+    "the edge from the source to left `x₀` is not saturated" and "the edge from right `y` to
+    the sink is not saturated". Reachability is Mathlib's `Relation.ReflTransGen`.
+  - The paper's proof went through. No paper issue was found. One departure in a detail,
+    recorded with its reason (blueprint S-L3.3.augment; `docs/SESSION_LOG.md`, M4
+    third-slice session): the flow is augmented by a small enough amount and not by "the
+    smallest positive residual capacity on the path", because a path obtained from
+    `Relation.ReflTransGen` may use an edge several times, and Mathlib has no lemma that
+    makes such a path simple. Hyperplane separation, the fallback named above, was not
+    needed and was not used.
+  - Cases. The statement has no sign condition on `M` and `B`, and the paper's network
+    needs nonnegative capacities. The proof splits at zero: `M < 0` and `B < 0` by a trivial
+    choice of the two sets, without the hypothesis on `R`; `0 ≤ M` and `0 ≤ B` by the
+    paper's proof, where that hypothesis is used once.
+  - Hypotheses. Of "`μ` is a law" the proof uses only that the weights are nonnegative. The
+    hypothesis stays in the statement, as signed off.
+  - Junk values. The statement has none. The proof divides once, by the value of a flow
+    that is at least `1`.
+  - The Mathlib gap named above for this lemma ("max-flow/min-cut is not in Mathlib") was
+    real. What was written from scratch, for this network only and not for a general one:
+    the existence of a maximum flow; the passage from a residual path to a change of the
+    flow, by induction along the path; the augmentation; and the equality of cut capacity
+    and value. Used from Mathlib: `IsCompact.exists_isMaxOn`, `isCompact_univ_pi`,
+    `isCompact_Icc`, `IsCompact.of_isClosed_subset`, `isClosed_iInter`, `isClosed_le`,
+    `isClosed_eq`, `continuous_finsetSum`, `continuous_apply`, `Function.support_subset_iff'`,
+    `Relation.ReflTransGen` with its induction and `tail`, `Filter.eventually_all`,
+    `Filter.Tendsto.eventually_lt_const`, `div_le_self`, `Fintype.sum_prod_type`,
+    `Finset.sum_comm`.
+  - Size: the two Lean files touched grew from 648 lines to 1,206, comments included
+    (+558); the Lean code in them, with comments and blank lines removed, from 310 lines to
+    639 (+329). The Lean sources as a whole went from 3,554 lines to 4,112. M4 has added
+    2,316 lines so far, comments included, against the estimate of 4,500 (3,000–6,000) for
+    the whole milestone, with the fingerprints and the union bound still to come.
+  - Six blueprint rows were added, all of kind `support`, all for steps of the paper's
+    proof. The count went from 189 entries to 195.
+  - Noted for whoever starts the fourth slice, once R-32 and R-33 are signed off:
+    - the proof of Proposition 3.4 needs a least-entropy feasible law on a set `R`. The
+      feasible laws on `R` are the flows of value one, and `exists_max_flow` shows how their
+      compactness is proved here: a closed subset of a compact box of `Ω × Ω → ℝ`. Convexity
+      and the continuity of the entropy on that set are still to be written;
+    - Lemma 3.3 will be applied to each terminal set, as `exists_terminal_cut hμ M B T hT`
+      with `hT` the statement that no feasible law exists on `T`, in exactly the form of the
+      hypothesis `hR`;
+    - whether the procedure and the terminal set get Lean definitions (which would need
+      fidelity notes and a sign-off) or are stated existentially, as a family of at most
+      `(|Ω|^2 + 1)^L` sets with no feasible law that together contain every set of pairwise
+      non-conflicting units, is to be put to the user at the start of that slice. Nothing is
+      decided here.
 
 ## M5 — The construction and the statement of Theorem 3.1
 

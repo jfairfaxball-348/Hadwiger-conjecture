@@ -12,10 +12,11 @@ which is almost the whole paper, is `sorry`; the final theorem is derived from i
 What is proved is elementary: Proposition 3.5 (the clique-minor bound from connected
 matchings), three statements from the paper's introduction, Lemma 2.2 with equation
 (2.2) (the abstract hole relation is triangle-free, so the graphs built from it have
-independence number at most 2), and Lemma 3.2 (the information-projection lemma for
-relative entropy on a finite set; proved on 2026-10-08). Stated and not proved since
-2026-10-08: Lemma 3.3 and Proposition 3.4, the last as an explicit bound whose form is this
-project's own and is still awaiting the user's review.
+independence number at most 2), Lemma 3.2 (the information-projection lemma for relative
+entropy on a finite set) and Lemma 3.3 (the terminal-cut lemma, a max-flow/min-cut
+statement for three density bounds; both proved on 2026-10-08). Stated and not proved
+since 2026-10-08: Proposition 3.4, as an explicit bound whose form is this project's own
+and is still awaiting the user's review.
 The paper is machine-generated and, as far as this project knows, unrefereed; whether its
 proof is correct is one of the things the formalisation will find out.
 

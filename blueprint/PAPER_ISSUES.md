@@ -17,7 +17,9 @@ reading, or something left out; the reading adopted is recorded), `REPAIRED`.
   (2026-10-08), while Sections 3.1 and 3.2 were being stated in Lean; each has a reading
   adopted, and none stopped a statement from being written. At the second slice of M4
   (2026-10-08) Lemma 3.2 was proved in Lean by the paper's proof: every step went through
-  as written, no new issue was found, and one paragraph was added to PI-008.
+  as written, no new issue was found, and one paragraph was added to PI-008. At the third
+  slice of M4 (2026-10-08) Lemma 3.3 was proved in Lean by the paper's proof: every step
+  went through, and no new issue was found.
 - Withdrawn: PI-001, which was a mistake by the worker, not a problem in the paper.
 
 **This is not a verification of the paper.** See "How far the paper has been checked".
@@ -35,8 +37,9 @@ The whole paper was read once, in full, proofs included, on 2026-10-07.
 - Machine-checked so far (the blueprint has the statuses; `DONE` there is what this
   means): the three unnumbered bounds of Section 1 (M1), Proposition 3.5 with its proof
   (M1 and M2), Lemma 2.2 with its proof and both halves of equation (2.2) (M3), the
-  deduction of Corollary 1.2 from Theorem 1.1 (M1), and Lemma 3.2 with its proof (M4, second
-  slice). These are the elementary parts. No error or gap was found in them.
+  deduction of Corollary 1.2 from Theorem 1.1 (M1), Lemma 3.2 with its proof (M4, second
+  slice), and Lemma 3.3 with its proof (M4, third slice). These are the elementary parts. No
+  error or gap was found in them.
 - Section 2.1 in particular (Definition 2.1, Lemma 2.2, equation (2.2)) was read again at
   M3 and the Lean proofs follow the paper's sentence by sentence. Every step went through
   as written. One observation, which is not an issue: the six-term sum that proves
@@ -47,8 +50,9 @@ The whole paper was read once, in full, proofs included, on 2026-10-07.
 - Sections 3.1 and 3.2 (Lemma 3.2, Lemma 3.3, Proposition 3.4, each with its proof), the
   opening of Section 3 and the last paragraphs of Sections 2.1 and 2.4 were read again at
   the first slice of M4 (2026-10-08), and the three results were **stated** in Lean. None
-  of the three was proved in that slice. (Lemma 3.2 was proved in the next one, see the
-  next item; Lemma 3.3 and Proposition 3.4 are still `sorry`.) Two things were done by hand
+  of the three was proved in that slice. (Lemma 3.2 was proved in the next one and Lemma
+  3.3 in the one after, see the next two items; the bound of Proposition 3.4 is still
+  `sorry`.) Two things were done by hand
   that are not
   proofs: the explicit bound that replaces "probability `1 − exp(−Ω(m))`" in Proposition
   3.4 was derived from the paper's proof, step by step (`blueprint/FIDELITY.md`, F-BOUND);
@@ -72,6 +76,29 @@ The whole paper was read once, in full, proofs included, on 2026-10-07.
      `ρ` does and is supported on `S`, whether or not `ρ'` lies in `P` or `ρ` is a
      minimiser.
   The sums in the proof are to be read over the points where `ρ > 0` (PI-008, addition).
+- Lemma 3.3 with its proof (§3.1; lines 71 to 108 of `build/sections/03-distributions.tex`)
+  was read again at the third slice of M4 (2026-10-08), and the Lean proof follows the
+  paper's sentence by sentence (blueprint L-3.3, and S-L3.3.value to S-L3.3.sets for the
+  sentences). Every step went through. Five observations, none of them an issue:
+  1. the proof never uses that `μ` has total mass one. Nonnegative weights are enough, for
+     the capacities to be nonnegative;
+  2. the hypothesis that no law supported on `R` satisfies the caps is used once, for "the
+     maximum value is less than one"; and the maximality of the flow is used once, for
+     "there is no residual path from `s` to `t`";
+  3. "a flow of larger value could be scaled down to value one" needs no sign condition:
+     the scaled flow is below the flow, pointwise and in both marginals, because the flow
+     is nonnegative and the factor is at most one;
+  4. "augmenting by the smallest positive residual capacity on such a path" is the right
+     amount for a path that uses no edge twice, which is what "path" means. The Lean proof
+     takes the path as Mathlib's reachability gives it, with edges possibly repeated, and
+     augments by a small enough amount instead (blueprint S-L3.3.augment). The argument is
+     the same;
+  5. points of weight zero and an empty `R` need no separate treatment. An edge of capacity
+     zero carries no flow, is saturated, and is neither a forward nor a reverse residual
+     edge.
+  The paper states the lemma for its own `M = 2^1000` and `2^{DN}`, which are positive. The
+  Lean statement is for all real `M` and `B`; the cases of a negative cap are outside the
+  paper's network and are proved apart, by a trivial choice of the two sets.
 - An observation from that derivation, which is not an issue: the argument for the bound
   on `cm(G)` uses only that the hole relation is symmetric. That it has no loops and no
   triangles is used for `α(G) ≤ 2` and nowhere else in Section 3.
@@ -94,7 +121,7 @@ nothing in this file relies on it.
 |---|---|
 | Corollary 1.2 | `26m/75 + 2/3 < m/2` exactly when `m > 100/23`, so for `m ≥ 5`. (Machine-checked since M1, for `m ≥ 5`.) |
 | Lemma 2.2 | The six-term sum over a triangle: left sides cancel in pairs by sharing, bilinear terms by symmetry, leaving `1 + 1 + 1 = 1` in `F_2`. (Machine-checked since M3: the Lean proof of triangle-freeness is this sum, term for term.) |
-| Lemma 3.3 | The cut capacity `Mμ(L_0) + Mμ(R_0) + 2^{DN} μ^2(E_0) < 1` gives both bounds. |
+| Lemma 3.3 | The cut capacity `Mμ(L_0) + Mμ(R_0) + 2^{DN} μ^2(E_0) < 1` gives both bounds. (Machine-checked since the third slice of M4, with the whole lemma: the capacity of the cut equals the value of the flow, and both bounds follow from it for nonnegative `M` and `2^{DN}`.) |
 | Proposition 3.4 | Entropy increment `≥ −log(1 − ε_N)` per recording; `(2C_0 g − D) = −2C_0 g`; fingerprint log-count `O(N^3 2^{100gN}) = o(2^{1000gN})`; fewer than `m/200 + m/200` matching edges. Again at the first slice of M4, in full and with general `B`, `ε`, `μ`: the fingerprint has at most `1 + ⌊log B/(−log(1−ε))⌋` units, which is at most the paper's `L_N`; the replay argument; `C(m,k) μ(S)^k` and `m^{2k} μ^2(E_0)^k`; and `2(k − 1) < m/100` for `k = ⌈m/200⌉` (`blueprint/FIDELITY.md`, F-BOUND). By hand; the inequality `200k < m + 200` is machine-checked (S-M4.bound). |
 | Proposition 3.5 | `3b ≤ m + 2s + e ≤ m + 4c − 3e + 2`; tight for `K_1` and `K_3`. (Machine-checked since M2: the inequality, and equality for every complete graph of odd order, which includes `K_1` and `K_3`.) |
 | Lemma 4.4 | `g^2/4 > 2D` and `8D/g = 32000 < g` for `D = 4000g`, `g = 10^9 + 1`. |

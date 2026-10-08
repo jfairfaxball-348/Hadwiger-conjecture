@@ -3224,3 +3224,601 @@ done. Its CI runs are on GitHub under its hash.
 Lemma 3.3; the bound of Proposition 3.4), no axioms; 189 blueprint entries, 194
 declarations audited. Lemma 3.2 is proved, in its three assertions, by the paper's proof.
 The final theorem is not proved and rests on Theorem 1.1 alone.
+
+## 2026-10-08 — M4 session, third slice (Lemma 3.3 proved)
+
+Branch `m4-lemma-3-3`, started from main `6d609a9`.
+
+### The instruction
+
+The user's message is reproduced line for line. It is the draft that the previous session
+left in `docs/NEXT_SESSION_PROMPT.md`, with one change by the user: in step 1 of the start
+gate the bracketed description of the expected commit is replaced by its hash, `6d609a9`,
+and the four lines of that step are wrapped accordingly. The block below was assembled from
+that file's text and that one change, after the message had been compared with the file by
+eye. The message arrived as pasted text and nothing else; it is taken as the user's
+instruction, as `AGENTS.md` says of the prompt the user actually sends.
+
+```text
+Continue the Lean formalisation in this repository. AGENTS.md is binding; read it first.
+
+START GATE
+1. Pin HEAD. You should be on main, and main should equal origin/main. Expected: 6d609a9
+(M4 second slice merged, 2026-10-08: Lemma 3.2 proved; the rule on merging changed in
+AGENTS.md; the closing commit of that session). If main does not equal origin/main, or
+HEAD is something else, stop and tell me before doing anything else.
+2. Read START_HERE.md, AGENTS.md, blueprint/BLUEPRINT.md, blueprint/SORRY_AXIOM_LEDGER.md,
+blueprint/MILESTONES.md (the single next task; under M4, "Mathlib gaps" and the states after
+the first and the second slice), blueprint/FIDELITY.md (in particular the notes F-LAW,
+F-MARG, F-CAPS and L-3.3), blueprint/PAPER_ISSUES.md (in particular PI-007 and the spot
+check of Lemma 3.3), blueprint/M4_REVIEW_SHEET.md (items R-22, R-23, R-24 and R-31) and the
+last session entry of docs/SESSION_LOG.md (the M4 second-slice session).
+3. Run lake build, python scripts/check_ledger.py and python scripts/axiom_audit.py.
+Expected: 3 sorry, 189 blueprint entries, 194 declarations audited. If any of them
+fails, repair that first and do nothing else.
+4. Upstream check (AGENTS.md, "Independence from the upstream Lean code"). Look only at
+the commit list of openai/math and the file listing of the paper's folder, and compare
+with docs/PROVENANCE.md (paper pinned at adc7f12; upstream main last seen at fd4aeeb, with
+its Lean for this paper already recorded there). Do not open any Lean file there. If
+upstream has commits after fd4aeeb, or the paper's folder has changed, stop and tell me
+before doing anything else. If not, record in the session log that you looked and what
+you saw.
+
+A RECORD TO WRITE FIRST
+None. The previous session's log is complete up to its closing commit, which was
+fast-forwarded into main under the closing-commit rule of AGENTS.md ("Unit of work").
+
+TASK: milestone M4, third slice: prove Lemma 3.3, as described in blueprint/MILESTONES.md.
+* Create a working branch m4-lemma-3-3 from main.
+* Before proving, re-read in the local TeX paper/build/sections/03-distributions.tex lines
+71 to 108: Lemma 3.3 and its proof.
+* Remove this sorry with a real proof, without changing the statement:
+* L-3.3   Hadwiger.exists_terminal_cut
+* Follow the paper's proof: the network with a source, a left and a right copy of Omega
+and a sink, with capacities M mu(x), M mu(y), and B mu(x) mu(y) on the pairs of R; a flow
+of value one is a law supported on R that satisfies the three caps, and a flow of larger
+value scales down to one, so the maximum value is below one; a maximiser exists because
+the feasible flows form a compact polytope; there is no residual path from the source to
+the sink; Z is the set reachable from the source; every forward edge out of Z is
+saturated and every forward edge into Z has zero flow; summing conservation over Z gives
+cut capacity = value < 1; then S = L_0 union R_0 and E_0 = R intersected with the pairs
+that avoid L_0 on the left and R_0 on the right. If a step of it does not go through as
+written, that is a paper issue: record it exactly in blueprint/PAPER_ISSUES.md and tell
+me. Do not patch it silently. A departure from the paper's argument is made only where a
+step fails or Mathlib makes it far more expensive, and each one is recorded with its
+reason. Hyperplane separation is the fallback named in blueprint/MILESTONES.md; do not
+take it without recording why the paper's argument was given up.
+* Cases. The statement has no sign condition on M and B. For M < 1, and for B < 1, it is
+true for a trivial reason (note L-3.3), and the paper's network needs nonnegative
+capacities, so the proof has to treat those cases apart. Tell me how each case is proved
+and whether the hypothesis hR is used in it. Watch the points of mass zero (edges of
+capacity zero), the empty R, and "a flow of larger value could be scaled down": the
+scaled flow must still satisfy the caps and be supported on R.
+* Junk values. The statement has none (no division, no logarithm). If the proof divides
+(the scaling does), the divisor is shown nonzero by a proof, not by x / 0 = 0.
+* New definitions. A definition (a flow, a network, a residual graph) needs a fidelity
+note and my sign-off like any other. Prefer to write the objects out in the statements of
+the helper lemmas, as the normalised restriction was written out at the second slice. If
+the proof cannot reasonably be written without a new definition, stop before adding it
+and tell me what it would be.
+* Helper lemmas get blueprint rows of kind support in the section "Steps of the paper's
+proofs, proved as separate lemmas", in a subsection for Lemma 3.3, and no fidelity notes.
+Name them after the lemma, S-L3.3.<name>, as S-L3.2.* are, and tell me how many rows you
+added and why. General lemmas about the definitions go in Hadwiger/Sanity/ and are
+imported.
+* Do not touch Lemma 3.2 (it is DONE), Proposition 3.4 or Theorem 1.1. Do not start the
+fourth slice.
+* R-32 and R-33 of blueprint/M4_REVIEW_SHEET.md (the explicit bound and Proposition 3.4)
+are held, not signed off. Do not prove the bound, and do not change it or the statements
+of Proposition 3.4. [Edit this line if you sign them off before the session.]
+* If the statement turns out to be false or unprovable as stated, that is a result. Stop,
+record exactly what failed in docs/SESSION_LOG.md, and tell me. Do not weaken or adjust
+the statement without my say-so.
+* If the proof is not finished in the session: leave Hadwiger.exists_terminal_cut as
+sorry with its ledger row, commit the helper lemmas that are proved, each with its row,
+and say exactly which step remains.
+* Expected end state, to check against the audit: 2 sorry (Theorem 1.1, the bound of
+Proposition 3.4). L-3.3 DONE. P-3.4 still STATED. C-1.2, T-FINAL, T-NOT-HC and S-1.d still
+PROVED_MODULO, resting on Theorem 1.1 alone. Nothing that is DONE now changes. If you add
+no rows: 189 entries, DONE 59, PROVED_MODULO 4, STATED 2, DEFINED 21, MATHLIB 2,
+NOT_STATED 101. If you add rows, give the counts before and after and account for the
+difference. If the audit shows anything else, find out why before going on.
+* Check that no signed-off statement changed, by the pp.all comparison of the M4
+second-slice session entry, with its three lists (the M3 list; that list with
+Hadwiger.exists_holeData_hole; and the list that adds everything signed off on 2026-10-08
+and the held items). Take the baseline at main before any change; the three outputs
+should have the sha256 hashes recorded in that entry. The list files are under the
+ignored .lake/audit/ and exist only on the machine that made them: if they are missing,
+rebuild them from the items named in the session log. Tell me if any held item changed
+(fingerprintLength, exceptionSize, sampleBound and the two statements of Proposition 3.4).
+Run the reverse check: every declaration in the Lean sources is named in the blueprint.
+* Keep the blueprint and the ledger in step with the Lean in the same commit. A result
+counts only when the axiom audit shows it. Bring every status remark into step as well:
+START_HERE.md, README.md, blueprint/PAPER_ISSUES.md, blueprint/MILESTONES.md, the layout
+table of docs/LEAN_WORKFLOW.md, and doc comments in the Lean files.
+
+STANDING DECISIONS (already made; do not reopen, do not ask)
+* M4, decided 2026-10-07: Proposition 3.4 is stated abstractly and does not wait for M5;
+it is an explicit bound with existence as a corollary; statements are signed off before
+proofs; proofs follow the paper's arguments, with every departure recorded.
+* M4, decided 2026-10-08 (questions Q1 to Q6 of blueprint/M4_REVIEW_SHEET.md): a law is a
+real weight function with the predicate IsLaw; the bound has the form (A); the abstract
+relation is the bare structure HoleRel; relative entropy is a real number with a junk
+value where the second argument vanishes; Proposition 3.4 does not assume mu positive;
+Lemma 3.2 keeps the paper's hypotheses as printed.
+* Signed off on 2026-10-08: sheet items R-21 to R-31. Held: R-32 and R-33.
+* Lemma 3.2 is proved (2026-10-08). Its statements keep "compact" and "q has total mass
+one", which its proofs do not need; that is recorded and is not to be reopened.
+* The project is independent of upstream's Lean for this paper, also after upstream's
+publication of 2026-10-08 ("Carry on independently").
+* General lemmas stay in Hadwiger/Sanity/ and are imported where needed; nothing is moved.
+* Helper lemmas and sanity checks get blueprint rows and no fidelity notes. New
+definitions and new target statements get fidelity notes. The steps of a proof of the
+paper are rows named after the result (S-L3.2.*), in the section on steps of proofs.
+* Signed fidelity notes are not rewritten. Add a line "Status update after the sign-off".
+* blueprint/M0_REVIEW_SHEET.md is not edited. The signed items of
+blueprint/M4_REVIEW_SHEET.md are not rewritten either.
+* The paper's equation eq:sample-independence is (2.2). The blueprint ID S-2.3 is kept as
+an identifier.
+* Merging, decided 2026-10-08: "Always merge if it makes sense, you dont need to asl". The
+rule and its conditions are in AGENTS.md ("Unit of work"). [Edit AGENTS.md, or say so
+here, if you want the conditions changed.]
+
+WORKING RULES
+* Work inline; at most two subagents at a time, only for independent, well-scoped tasks.
+* Commit early and often on the working branch. Push it without asking (standing rule in
+AGENTS.md). Run pushes with GCM_INTERACTIVE=never GIT_TERMINAL_PROMPT=0; if a push fails
+because it would need a sign-in, stop and tell me instead of opening a window. After
+each push, check git ls-remote against HEAD.
+* Merge into main without asking when the merge makes sense, that is, when every
+condition of AGENTS.md ("Unit of work") holds. If one of them fails, or you are in doubt,
+ask me once. After each merge the closing commit follows, on the terms of AGENTS.md and no
+others. Tell me in the final message what was merged, with the hashes.
+* Do not ask me things one at a time. Carry on with everything that does not depend on my
+answer, and put all open questions in one prompt at the end.
+* Do not consult the upstream openai/math Lean code for this paper.
+* End with the checkpoint report that AGENTS.md asks for, the single next task, and the
+prompt for the next session (AGENTS.md, "Prompt for the next session"). The task after
+this slice is the fourth slice of M4, the fingerprint procedure. It belongs to the proof
+of Proposition 3.4 and may not start before I sign off R-32 and R-33. Do not start it.
+```
+
+### Start gate
+
+- Step 1. On `main`, working tree clean. After `git fetch origin`: `HEAD` = `main` =
+  `origin/main` = `6d609a9`, the expected commit.
+- Step 2. Read: `START_HERE.md`; `AGENTS.md`, as loaded into the session; the blueprint,
+  the ledger and the milestones, in full; in `blueprint/FIDELITY.md` the introduction of the
+  M4 section and the notes F-HOLEREL, F-LAW, F-MARG, F-CAPS and L-3.3, and later, for the
+  record of the next task, F-BOUND and P-3.4; in `blueprint/PAPER_ISSUES.md` the summary,
+  "How far the paper has been checked", the spot checks and PI-007 to PI-009; in
+  `blueprint/M4_REVIEW_SHEET.md` the head and items R-22, R-23, R-24, R-30 (its status line)
+  and R-31; the whole M4 second-slice entry of this log. Also `docs/PROVENANCE.md` (its
+  head and "Upstream after the pin"), `docs/NEXT_SESSION_PROMPT.md`, the status paragraph
+  of `README.md`, the layout table of `docs/LEAN_WORKFLOW.md`, the table parser of
+  `scripts/leanscan.py`, and the Lean files
+  `Hadwiger/EntropyAndCuts.lean`, `Hadwiger/Defs/Law.lean` and `Hadwiger/Sanity/Law.lean`.
+- Step 3. `lake build` passed (8,946 jobs; three `sorry` warnings and no other).
+  `check_ledger.py`: 3 `sorry`, 3 rows, OK. `axiom_audit.py`: 189 entries (DEFINED 21, DONE
+  58, MATHLIB 2, NOT_STATED 101, PROVED_MODULO 4, STATED 3), 194 declarations, OK. All as
+  expected.
+- The local copy of the paper is the pinned one: `paper/paper.pdf` has the sha256 of
+  `docs/PROVENANCE.md`, and `paper/build/sections/03-distributions.tex` has git blob
+  `e1078d63`, the blob of that file in upstream's tree at the pin.
+- Step 4, the upstream check, did **not** fire. See the next section.
+
+### The upstream check
+
+Looked at, through the GitHub API, and nothing else:
+
+- the commit list of `openai/math`: three commits, `adc7f12` (the pin), `3014888` and the
+  merge `fd4aeeb` (2026-10-08 05:20 UTC), which is still the head of `main`. **No commit
+  after `fd4aeeb`**;
+- the file listing of the paper's folder at the pin and at `main`: 24 entries each (21
+  files and 3 folders), identical blob for blob; `paper.pdf` is blob `a443d538`, 956,260
+  bytes. **The paper's folder has not changed**;
+- two things that go a little beyond a literal reading of "only the commit list and the
+  file listing", both metadata, as in the last session: the commit list filtered to the
+  paper's folder (one commit, the initial one), and the list of branches (`main` at
+  `fd4aeeb`; `codex/update-10-7` at `3014888`, already recorded).
+
+No Lean file of upstream was opened, at any commit; the `lean/` tree was not listed. So
+`docs/PROVENANCE.md` is still a description of upstream's current state and was not
+changed.
+
+### What was read before proving
+
+`paper/build/sections/03-distributions.tex`, lines 71 to 108: Lemma 3.3 and its proof. Also
+lines 1 to 70 (the opening of Section 3 and Lemma 3.2), and, after the proof was done, lines
+110 to 205 (Proposition 3.4 with its proof), read for the record of the next task and the
+prompt for the next session and not worked on.
+
+### The proof
+
+The `sorry` of Lemma 3.3 is replaced by a proof. **The statement was not changed.**
+
+| Blueprint | Lean | Proof |
+|---|---|---|
+| L-3.3 | `exists_terminal_cut` | by cases on the signs of `M` and `B`; for `0 ≤ M`, `0 ≤ B` from `exists_terminal_cut_of_nonneg` |
+
+It follows the paper's proof, whose sentences are separate lemmas:
+
+| Sentence of the paper's proof | Lean | Row |
+|---|---|---|
+| "A flow of value one is precisely a law satisfying the three caps. A flow of larger value could be scaled down to value one, so the maximum value is less than one." | `sum_lt_one_of_satisfiesCaps` | S-L3.3.value |
+| "The feasible flows form a compact polytope, hence the flow value has a maximizer `f`." | `exists_max_flow` | S-L3.3.maximiser |
+| "In its residual network, include a forward edge whenever its capacity exceeds its flow and a reverse edge whenever its flow is positive." | `exists_augmenting_direction`, `marginalFst_ite_eq`, `marginalSnd_ite_eq` | S-L3.3.residual |
+| "There is no residual path from `s` to `t`: augmenting by the smallest positive residual capacity on such a path would increase the value." | `eventually_mul_le`, `exists_sum_lt_sum_of_direction` | S-L3.3.augment |
+| "Every forward edge across `Z` to its complement is saturated, and every forward edge in the opposite direction has zero flow, since otherwise its reverse residual edge would leave `Z`. Summing flow conservation over `Z` shows that the capacity of this cut equals the value of `f`, hence is less than one." | `cut_capacity_eq_sum` | S-L3.3.cut |
+| "Let `Z` be the vertices reachable from `s`."; "Let `L_0` be … Take `S = L_0 ∪ R_0` and take `E_0` to be the pair set in the last summand. Its measure and that of `S` have the asserted bounds. A pair in `R` with neither endpoint in `S` necessarily belongs to `E_0`." | `mass_union_le`, `exists_terminal_cut_of_nonneg` | S-L3.3.sets |
+
+How it goes in Lean, for `0 ≤ M` and `0 ≤ B` (`exists_terminal_cut_of_nonneg`).
+
+1. A flow is a function `f : Ω × Ω → ℝ` with `0 ≤ f`, `Function.support f ⊆ R` and
+   `SatisfiesCaps μ M B f`; its value is `∑ f`. Take a flow of maximum value. Its value is
+   below one: a flow of value `v ≥ 1`, divided by `v`, would be a law supported on `R` that
+   satisfies the caps, against `hR`.
+2. The residual network is the relation `r` on `Ω ⊕ Ω`: from `inl x` to `inr y` when
+   `(x, y) ∈ R` and `f (x, y) < B * prodLaw μ μ (x, y)`; from `inr y` to `inl x` when
+   `0 < f (x, y)`.
+3. `Z` is the set of `v : Ω ⊕ Ω` for which there is `x₀` with `marginalFst f x₀ < M * μ x₀`
+   and `Relation.ReflTransGen r (inl x₀) v`. `L₀ = {x | inl x ∉ Z}`, `R₀ = {y | inr y ∈ Z}`.
+4. If `inr y ∈ Z` then `marginalSnd f y = M * μ y`. Otherwise: by induction along the path
+   there is a direction `d` on the middle edges, positive only on unsaturated edges of `R`
+   and negative only where `f > 0`, with first marginal `1` at `x₀` and second marginal `1`
+   at `y`; and `f + ε d` is a flow of value `∑ f + ε` for small `ε > 0`, against maximality.
+5. `x ∈ L₀` gives `marginalFst f x = M * μ x`, since otherwise `inl x ∈ Z` by the empty
+   path. A pair of `R` with `x ∉ L₀`, `y ∉ R₀` has `f = B μ^2`, since otherwise the forward
+   residual edge puts `inr y` in `Z`. A pair with `x ∈ L₀`, `y ∈ R₀` has `f = 0`, since
+   otherwise the reverse residual edge puts `inl x` in `Z`.
+6. So `M μ(L₀) + M μ(R₀) + B μ^2(R ∩ {z | z.1 ∉ L₀ ∧ z.2 ∉ R₀}) = ∑ f < 1`. The three terms
+   are nonnegative, `μ(L₀ ∪ R₀) ≤ μ(L₀) + μ(R₀)`, and the covering is immediate.
+
+**The paper's proof went through as written.** No step failed. Differences of form, and
+one departure in a detail:
+
+1. *How a flow is written.* The paper's flow lives on all edges and satisfies conservation.
+   Here only the middle edges carry a variable: left `x` has one incoming edge and right `y`
+   one outgoing edge, so conservation determines the flow on the edge from `s` to left `x`
+   as the first marginal and on the edge from right `y` to `t` as the second. Conservation
+   is therefore built in, and "summing flow conservation over `Z`" is a rearrangement of
+   finite sums. The three kinds of capacity constraints are exactly the three fields of
+   `SatisfiesCaps`.
+2. *The source and the sink are not vertices of the Lean relation.* The residual edge from
+   `s` to left `x₀` is the condition `marginalFst f x₀ < M * μ x₀`, and the residual edge
+   from right `y` to `t` is `marginalSnd f y < M * μ y`. The reverse residual edges into `s`
+   and out of `t` are not represented: a path gains nothing by returning to `s`, and `t` is
+   shown not to be reachable. `Z` as defined in step 3 is the set of left and right vertices
+   reachable from `s`; `s` is counted in `Z` and `t` is not, in the description of the cut.
+3. *"Compact polytope".* Only "compact" is used: the set of flows is closed and lies in a
+   compact box. Nonemptiness, which the paper does not mention, is the zero flow; it is
+   where `0 ≤ M`, `0 ≤ B`, `0 ≤ μ` enter.
+4. *Departure in a detail, recorded with its reason: the amount of the augmentation.* The
+   paper augments "by the smallest positive residual capacity on such a path". The Lean
+   proof augments by some small enough `ε > 0`, obtained from finitely many conditions each
+   of which holds for all small `ε` (`eventually_mul_le`, `Filter.eventually_all`). Reason:
+   the path comes from Mathlib's `Relation.ReflTransGen` and may use an edge several times,
+   in both directions; an edge used `k` times changes by `k ε`, so the minimum residual
+   capacity is not in general an admissible amount for such a path. Making the path simple
+   first would be the paper's wording, and Mathlib has no lemma for it (it turns
+   reachability into a chain, `List.exists_isChain_cons_of_relationReflTransGen`, and stops
+   there); it would cost a path-shortening argument that the proof does not need. The
+   argument is otherwise the paper's: a residual path to the sink gives a flow of larger
+   value.
+5. *The direction `d`.* The induction along the path does not build the augmented flow
+   itself but the function `d` that counts, for each middle edge, forward uses less backward
+   uses. Its sign conditions and its two marginals are what the induction carries.
+
+Hyperplane separation, the fallback named in `blueprint/MILESTONES.md`, was not used and
+not needed.
+
+### The cases, and where `hR` is used
+
+The statement has no sign condition on `M` and `B`. The proof has three cases.
+
+| Case | How it is proved | `hR` used? |
+|---|---|---|
+| `M < 0` | `S` the whole type, `E₀` empty: `M · μ(Ω) ≤ 0 < 1` because `M < 0 ≤ μ(Ω)`; `B · 0 = 0 < 1`; every pair has its first endpoint in `S` | no |
+| `0 ≤ M`, `B < 0` | `S` empty, `E₀` the set of all pairs: `M · 0 = 0 < 1`; `B · μ^2(Ω^2) ≤ 0 < 1`; every pair is in `E₀` | no |
+| `0 ≤ M`, `0 ≤ B` | the paper's proof (`exists_terminal_cut_of_nonneg`) | yes, once: every flow has value below one (`sum_lt_one_of_satisfiesCaps`) |
+
+**The split is at zero, not at one.** The instruction, and note L-3.3, say that for `M < 1`
+and for `B < 1` the statement is true for a trivial reason, and that the paper's network
+needs nonnegative capacities. Both are so. The cases that the paper's argument cannot reach
+are those with a negative cap, so those are the ones treated apart. For `0 ≤ M < 1` or
+`0 ≤ B < 1` the trivial choice of sets would also serve, and no law satisfies the caps at
+all, so `hR` holds of itself; the Lean proof does not treat these values apart, and proves
+them with the others by the paper's argument. If the user prefers the split at one, it is a
+change of a few lines in the last theorem; nothing else depends on it.
+
+### Hypotheses: what is used
+
+- `hμ : IsLaw μ`. **Only the nonnegativity of the weights is used**, in all three cases.
+  That the weights add up to one is not used: `exists_terminal_cut_of_nonneg` and every
+  step lemma take `∀ x, 0 ≤ μ x`, or nothing, and the two trivial cases use `0 ≤ μ(Ω)` and
+  `0 ≤ μ^2(Ω^2)`. The hypothesis is the paper's and is in the signed-off statement; it was
+  not changed. The linter does not report it, since `hμ.nonneg` is a use.
+- `hR`: once, as in the table.
+- The maximality of the flow: once, for "no residual path from `s` to `t`".
+- `0 ≤ M` and `0 ≤ B`: for the zero flow (so that a maximiser exists), and in the last step
+  (`M μ(L₀ ∪ R₀) ≤ M μ(L₀) + M μ(R₀)`, and each of the three terms of the capacity is
+  nonnegative). The scaling step and the cut identity need no sign condition.
+
+### The three points the instruction asked to watch
+
+- *Points of mass zero.* If `μ(x) = 0` the edge from `s` to left `x` has capacity `0`; then
+  `0 ≤ marginalFst f x ≤ 0`, the edge is saturated, and `x` is never a starting point of a
+  residual path. A middle edge with `B μ(x) μ(y) = 0` has `f(x, y) = 0`: it is not a forward
+  residual edge (capacity does not exceed flow) and not a reverse one (flow is not
+  positive). No case distinction was needed; the lemmas are stated with `≤` and `<` and
+  these are the instances.
+- *The empty `R`.* The only flow is `0`; `Z` consists of the left `x` with `M μ(x) > 0`;
+  `R₀` is empty; `L₀` is the set of `x` with `M μ(x) = 0`, so `M μ(L₀) = 0`; `E₀` is empty.
+  This is the general proof, not a separate case. (By hand; no lemma states it.)
+- *"A flow of larger value could be scaled down".* For a flow `f` of value `v ≥ 1`, the
+  scaled `f / v` is shown to be a law (nonnegative, total `v / v = 1`), to be supported on
+  `R` (it vanishes wherever `f` does), and to satisfy the three caps: `f(z)/v ≤ f(z)` and
+  the same for each marginal, by `div_le_self` with `0 ≤ f` and `1 ≤ v`, and then the caps
+  of `f`. No sign condition on `M`, `B`, `μ` is needed for this.
+
+### Junk values
+
+- The statement has no division and no logarithm, and was not changed.
+- The proof divides in one lemma, `sum_lt_one_of_satisfiesCaps`, by `v = ∑ f`. There
+  `1 ≤ v` is a hypothesis of the argument, `0 < v` is derived from it, and the two facts
+  used are `div_self` with `v ≠ 0` and `div_le_self` with `1 ≤ v`. Nothing rests on
+  `x / 0 = 0`.
+- No logarithm, no natural subtraction, no ceiling, no `sSup`, no `ncard` in this slice.
+- `if … then 1 else 0` with decidable equality appears in the statements about the
+  direction `d`; these are honest indicators.
+
+### New definitions
+
+**None.** A flow, its value, the network, the residual network, the cut and the sets `Z`,
+`L₀`, `R₀` have no Lean definition. The conditions on a flow are written out in each
+statement; the residual relation is a parameter of `exists_augmenting_direction`, described
+by a hypothesis, and a local `let` inside the proof of `exists_terminal_cut_of_nonneg`; the
+three sets are local `let`s there. So no fidelity note was needed and nothing waits for a
+sign-off.
+
+### Paper issues
+
+None new. No `ERROR`, no `GAP`, no new `UNCLEAR`. Five observations were recorded in
+`blueprint/PAPER_ISSUES.md` ("How far the paper has been checked"), none of them an issue:
+the total mass of `μ` is not used; `hR` and maximality are each used once; the scaling needs
+no sign condition; "the smallest positive residual capacity" is right for a path without a
+repeated edge, and the Lean proof takes a small enough amount instead; points of weight zero
+and an empty `R` need no separate treatment.
+
+### Blueprint rows added: six
+
+All of kind `support`, all in "Steps of the paper's proofs, proved as separate lemmas", in a
+new subsection "Lemma 3.3 (added at M4, third slice)": S-L3.3.value, S-L3.3.maximiser,
+S-L3.3.residual, S-L3.3.augment, S-L3.3.cut, S-L3.3.sets. One row for each group of
+sentences of the paper's proof, ten lemmas in all. Why rows: every declaration must be named
+in the blueprint, and the instruction asked for rows of this kind, named after the lemma.
+No fidelity notes, by the standing decision.
+
+Where the lemmas are. Seven in `Hadwiger/EntropyAndCuts.lean`, before the statement, in a
+section of their own. Three in `Hadwiger/Sanity/Law.lean`, as the instruction says for
+general lemmas about the definitions: `mass_union_le` (row S-L3.3.sets), and
+`marginalFst_ite_eq`, `marginalSnd_ite_eq` (row S-L3.3.residual). No import was added:
+`Hadwiger/EntropyAndCuts.lean` has imported `Hadwiger/Sanity/Law.lean` since the second
+slice.
+
+### What the audit shows
+
+| | Before (`6d609a9`) | After |
+|---|---|---|
+| `sorry` (ledger rows) | 3 | 2 |
+| blueprint entries | 189 | 195 |
+| `DEFINED` | 21 | 21 |
+| `MATHLIB` | 2 | 2 |
+| `DONE` | 58 | 65 |
+| `PROVED_MODULO` | 4 | 4 |
+| `STATED` | 3 | 2 |
+| `NOT_STATED` | 101 | 101 |
+| declarations audited | 194 | 204 |
+
+Accounting for the differences:
+
+- Entries +6: the six new rows.
+- `DONE` +7: L-3.3, from `STATED`, and the six new rows. The instruction's figure for no
+  new rows was 59; 59 + 6 = 65. **Nothing that was `DONE` changed**: all 58 are still `DONE`
+  (checked by script against the blueprint at `main`).
+- `STATED` −1: L-3.3. Still `STATED`: T-1.1, P-3.4.
+- `PROVED_MODULO` unchanged: C-1.2, T-FINAL, T-NOT-HC, S-1.d, resting on Theorem 1.1 alone.
+  `Hadwiger/Main.lean` is byte for byte as at `main`. **The final theorem is not proved.**
+- Declarations +10: the ten lemmas.
+- **The two `sorry`s that remain**, each an unproved statement:
+  1. `Hadwiger.exists_indepNum_le_two_and_connectedMatchingNumber_lt` (Theorem 1.1)
+  2. `Hadwiger.mass_listLaw_le_sampleBound` (Proposition 3.4, the bound)
+- `scripts/axiom_audit.py` passes, which means `#print axioms` on `exists_terminal_cut` and
+  on each of the ten lemmas shows `propext`, `Classical.choice`, `Quot.sound` and nothing
+  else. No axiom, no `native_decide`, no `admit`.
+
+This is the end state the instruction expected, with the rows added.
+
+### Check that no signed-off statement changed
+
+The `pp.all` comparison of the M4 second-slice entry, with its three lists. The list files
+were still on this machine under `.lake/audit/`. The baseline was taken on the new branch
+before any file was changed (tree identical to `main` `6d609a9`), and the comparison was run
+again on the final tree.
+
+| List | Lines | sha256, baseline and final | |
+|---|---|---|---|
+| the M3 list (`M3Types.lean`) | 4,976 | `b79be5d590e3818afe4202beb708cfdeda92cf6144fe2223c96a63156973cfc5` | byte-identical; the recorded hash |
+| that list with `Hadwiger.exists_holeData_hole` (`M4Types.lean`) | 5,156 | `61a4e82ae37cf6f0eea5897724bf76a2c4fbdf3b10baf6c19adb5c7aaeb4988c` | byte-identical; the recorded hash |
+| the list that adds everything signed off on 2026-10-08 and the held items (`M4bTypes.lean`) | 5,571 | `f1180cdbadf1c8d71eb2d21c4788725caa6f4e4f82cf38b0751ed9022885cf1a` | byte-identical; the recorded hash |
+
+**The held items did not change**: `fingerprintLength`, `exceptionSize`, `sampleBound` and
+the two statements of Proposition 3.4 are in the third list, and `Hadwiger/RandomSample.lean`
+is byte for byte as at `main`.
+
+A second check, on the source text with comments stripped (the one-off script of the second
+slice): the signature of each of the four statements in `Hadwiger/EntropyAndCuts.lean` is
+identical at `main` and now, and the files `Hadwiger/Defs/Law.lean`,
+`Hadwiger/Defs/RelEntropy.lean`, `Hadwiger/Defs/HoleRel.lean`,
+`Hadwiger/Supersaturation.lean`, `Hadwiger/RandomSample.lean`, `Hadwiger/Main.lean`,
+`Hadwiger/HoleRelation.lean` and `Hadwiger.lean` are byte for byte as at `main`. The Lean
+files that differ from `main` are two: `Hadwiger/EntropyAndCuts.lean` and
+`Hadwiger/Sanity/Law.lean`.
+
+What changed in the signed-off file `Hadwiger/EntropyAndCuts.lean` besides the proof: one
+paragraph of the file's header; the new section of step lemmas; a heading before the
+theorem; and the end of the doc comment of Lemma 3.3, where "Not proved: `sorry`." is
+replaced by four paragraphs on how it is proved, the cases, the hypotheses and the junk
+values. The three statements of Lemma 3.2, their proofs and the steps of that proof are
+untouched.
+
+### Reverse check
+
+Every declaration in the Lean sources is named in the blueprint: 202 declarations, 202
+distinct names, none missing (192 before). The blueprint names 204; the other two are
+Mathlib's `indepNum` and `chromaticNumber`. Run with the one-off script kept from the first
+slice (`.lake/audit/reverse_check.py`).
+
+### Attempts that failed, and corrections
+
+- No statement was found false or unprovable as stated.
+- Lean. The proof was first written in a scratch file under `.lake/audit/`. At the first
+  compilation the structure was right and these things failed, and were fixed at once: a
+  `simpa` that unfolded `prodLaw` on one side only, replaced by `exact`; the limit
+  `ε a → 0`, written as a term whose implicit arguments could not be found, replaced by a
+  `have` with its type stated; a `fun z => …` whose argument type could not be inferred.
+  Deprecations at the pinned Mathlib: `Set.setOf_forall` is now `Set.ofPred_forall`, and
+  `if_pos`, `if_neg` are deprecated, replaced by `simp only [h, ↓reduceIte]`. When the proof
+  was moved into the source file one more thing failed: `mass_nonneg` applied to a lambda
+  gave a statement about `mass (fun z => μ z.1 * μ z.2)`, which `linarith` did not match
+  with `mass (prodLaw μ μ)`; fixed by naming the weight function, `(p := prodLaw μ μ)`. As
+  earlier entries say, compiling is not evidence of correctness; the evidence is the kernel
+  and the audit.
+- Design, considered and not adopted:
+  - a general max-flow/min-cut theorem for an arbitrary finite network. It would need
+    definitions (network, flow, cut) or very long statements, and then a translation to
+    this network. The paper proves the special case, and so does the Lean;
+  - a flow with its own variables on the source and sink edges and conservation as a
+    hypothesis. Nearer to the paper's words, but three functions in every statement where
+    one suffices;
+  - the source and the sink as vertices of the residual relation. That needs a vertex type
+    with four parts, a new inductive type or nested sums, for two edges whose content is
+    one inequality each;
+  - `Z` defined as the set of vertices to which some flow can be pushed, with no relation
+    and no path at all. Shorter, and equivalent, but it is not the paper's "vertices
+    reachable from `s`"; rejected for that reason;
+  - a relation on the left copy alone, a step being a forward edge followed by a reverse
+    one. Simpler in Lean, one step further from the paper's residual network;
+  - making the residual path simple, to augment by the minimum as the paper says (see the
+    departure above);
+  - splitting the cases at one instead of at zero (see "The cases").
+- Tooling. A here-document whose text contains an apostrophe failed again in this shell
+  wrapper, as two earlier entries warn; the edit scripts and the long texts were written to
+  files in the session's scratch folder with the file tool and run from there. A check of
+  line lengths with `awk` counted bytes and reported lines of more than 100 that have fewer
+  than 100 characters; counted by characters, no line of the two Lean files exceeds 100.
+
+### Records brought into step
+
+- Blueprint: the row L-3.3 (status, how it is proved, the cases, the hypotheses; its
+  sign-off sentence kept); the introduction and the list of forms of `S-` IDs; a paragraph
+  in the section on sanity checks; the new subsection with six rows.
+- Ledger: one row removed; "Current state"; the note of the row of Proposition 3.4; two
+  sentences on what depends on what.
+- `blueprint/FIDELITY.md`: a line "Status update after the sign-off" under each of the
+  signed notes F-LAW, F-MARG, F-CAPS and L-3.3. One sentence of the introduction of the M4
+  section, which said that Lemma 3.3 is not proved, was changed; it was added at the second
+  slice and is not part of a signed note. **No signed text was altered**: the diff removes
+  that one line and nothing else.
+- `blueprint/M4_REVIEW_SHEET.md`: a second status paragraph at the head and a status line
+  under item R-31. Nothing was removed; no signed item was rewritten.
+  `blueprint/M0_REVIEW_SHEET.md` was not edited.
+- `blueprint/PAPER_ISSUES.md`: the summary; "How far the paper has been checked" (the list
+  of what is machine-checked, the item on Sections 3.1 and 3.2, a new item on Lemma 3.3);
+  the spot-check row of Lemma 3.3.
+- `blueprint/MILESTONES.md`: the single next task, which is now the fourth slice and waits
+  for the user's sign-off of R-32 and R-33; a paragraph on this slice; the count of
+  `sorry`s; the state of M4 after the third slice, with notes for the fourth.
+- `START_HERE.md`: what is proved; what is stated and not proved; the count of `sorry`s.
+- `README.md`: the status paragraph.
+- `docs/LEAN_WORKFLOW.md`: two rows of the layout table.
+- Doc comments: the header of `Hadwiger/EntropyAndCuts.lean` and the doc comment of Lemma
+  3.3; the header of `Hadwiger/Sanity/Law.lean`. No other Lean file had a remark made false
+  by this slice.
+- `docs/PROVENANCE.md`, `docs/STATUS_CLASSIFICATIONS.md`, `AGENTS.md`: not changed; nothing
+  in them became false.
+
+### Lean notes
+
+- Induction along `Relation.ReflTransGen r (Sum.inl x₀) v` with `induction hv with | refl
+  | tail _ hbc ih` works with the starting point a fixed term. With the edges described by
+  `hr : ∀ u v, r u v → ∃ x y, (u = inl x ∧ v = inr y ∧ …) ∨ (u = inr y ∧ v = inl x ∧ …)`,
+  `obtain ⟨x, y, ⟨rfl, rfl, …⟩ | ⟨rfl, rfl, …⟩⟩ := hr _ _ hbc` substitutes both ends of the
+  edge in the goal and in `ih`.
+- `simp` decides `Sum.inl x = Sum.inr y` and reduces `Sum.inl x = Sum.inl x'` to `x = x'`
+  inside `if`s, so the bookkeeping of the two marginals closes by `rw [h, h1]; simp`.
+- "For all small `ε > 0`": `∀ᶠ ε in 𝓝[>] (0 : ℝ), …`. `Filter.eventually_all` passes a
+  `∀` over a finite type through `∀ᶠ`; `Filter.Tendsto.eventually_lt_const` gives
+  `f ε < b` eventually from `f → a < b`; `self_mem_nhdsWithin` gives `0 < ε`;
+  `((e1.and e2).and self_mem_nhdsWithin).exists` produces the `ε`.
+- A maximiser: `IsCompact.exists_isMaxOn hK hne hcont` returns `f ∈ K` and `IsMaxOn`, and
+  `hmax (hg : g ∈ K)` is the inequality. Compactness of a set cut out by closed conditions:
+  `IsCompact.of_isClosed_subset (isCompact_univ_pi fun z => isCompact_Icc) hclosed hsub`.
+  `{f | ∀ z, p z f}` is turned into an intersection by `Set.ofPred_forall` (the current name
+  of `Set.setOf_forall`), after which `isClosed_iInter`, `isClosed_le`, `isClosed_eq`,
+  `continuous_apply` and `continuous_finsetSum` apply. `Function.support_subset_iff'` turns
+  `support f ⊆ R` into `∀ z ∉ R, f z = 0`.
+- A set of the form `{f | P f} ∩ ({f | Q f} ∩ {f | S f})` accepts `⟨hP, hQ, hS⟩` as a
+  membership proof and `rintro f ⟨hP, hQ, hS⟩` as a pattern.
+- A structure in `Prop` is not unfolded by `Set.ofPred_forall`: the set of `f` with
+  `SatisfiesCaps μ M B f` was first rewritten as the intersection of its three fields, by
+  `ext f; exact ⟨fun h => ⟨h.fst, h.snd, h.joint⟩, fun h => ⟨h.1, h.2.1, h.2.2⟩⟩`.
+- `mass_nonneg` on `prodLaw μ μ` needs `(p := prodLaw μ μ)` when its hypothesis is given as
+  a lambda, or the weight function is inferred as the unfolded product.
+- `if_pos` and `if_neg` are deprecated at the pinned Mathlib; `simp only [h, ↓reduceIte]`
+  does the same.
+
+### Not done, and why
+
+- Proposition 3.4 and Theorem 1.1 were not touched. Lemma 3.2 was not touched. The fourth
+  slice was not started; the proof of Proposition 3.4 in the paper and note F-BOUND were
+  read only to describe the next task.
+- The bound was not proved and not changed; R-32 and R-33 are still held.
+- No sanity lemma was added. The two `sanity (planned)` rows of the first slice are as they
+  were.
+- Upstream: no Lean file was opened; nothing was built.
+- No subagent was used.
+
+### Merge
+
+Nothing is merged into `main` by the commit that carries this entry. The rule of
+`AGENTS.md` ("Unit of work", standing permission of 2026-10-08) lets the worker fast-forward
+`main` to this branch without asking when every one of its conditions holds. They are
+checked after the push and the CI run of this commit, and the merge, if it is made, is
+recorded in the closing commit. **If `main` contains this commit, the merge was done**, and
+`git log main` is the record.
+
+### The prompt for the next session
+
+`docs/NEXT_SESSION_PROMPT.md` was replaced in the same commit, in the unmerged form that
+`AGENTS.md` asks for while a branch is not yet in `main`; the closing commit brings it to
+its final form. The task it sets is the single next task of `blueprint/MILESTONES.md`: the
+fourth slice of M4, the fingerprint procedure. **That task is gated**: it is the first part
+of the proof of Proposition 3.4, whose statement and bound the user holds (R-32, R-33). The
+prompt therefore has a bracket in which the user says whether they are signed off, and it
+tells the next session what to do in each case, including to stop after the start gate if
+they are still held. It decides none of this.
+
+Carried forward as open, without deciding them: sheet items R-32 and R-33; whether to build
+upstream's code and audit its axioms; the wording of the conditions under which a merge
+"makes sense"; and, new, the form of the target of the fourth slice. That target is written
+in the prompt as a "container" statement: a family of at most `(|Ω|^2 + 1)^L` sets of
+ordered pairs, none of which supports a law satisfying the caps, that together contain every
+set of pairwise non-conflicting units. It packages steps 1 to 3 of note F-BOUND in one
+statement that needs no new definition. It is the worker's proposal and is marked as one.
+
+### Questions put to the user at the end of the session
+
+None that this session needed answered. The merge is covered by the standing permission.
+The sign-off of R-32 and R-33 is not asked again: the user holds them for a second reading,
+and the final message says plainly that the next task waits for it.

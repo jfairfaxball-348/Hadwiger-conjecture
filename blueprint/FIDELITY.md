@@ -516,7 +516,8 @@ they stood at the commit that records it. A sign-off says that the Lean text say
 paper says, in the abstract form decided; it does not say that a statement is true. Lemma
 3.2 and Lemma 3.3 were signed off as statements, before either was proved. (Lemma 3.2 has
 been proved since, at the second slice of M4 on 2026-10-08; this parenthesis was added
-then. Lemma 3.3 is still **not proved**.)
+then. Lemma 3.3 has been proved too, at the third slice of M4 on 2026-10-08; its last
+sentence, which said that Lemma 3.3 was not proved, was changed then.)
 
 This section was headed "notes awaiting review" until the sign-off was recorded; the text
 of the notes was not changed when the lines were added.
@@ -630,6 +631,10 @@ Equation numbers below are those of the paper's PDF: (3.1) is `eq:raw-law-caps`,
   that contains a point of positive weight has positive mass (`mass_pos`); the normalised
   restriction of nonnegative weights to a set of positive mass is a law (`isLaw_restrict`).
   Blueprint S-L3.2.restrict.
+- Status update after the sign-off (2026-10-08, M4 third slice): one more general lemma about
+  `mass` was proved for the proof of Lemma 3.3, in `Hadwiger/Sanity/Law.lean`: under
+  nonnegative weights the mass of a union is at most the sum of the masses
+  (`mass_union_le`). Blueprint S-L3.3.sets. The definitions were not changed.
 
 ### F-MARG — marginals and the product law (new) — D-3.marg
 
@@ -647,6 +652,13 @@ Equation numbers below are those of the paper's PDF: (3.1) is `eq:raw-law-caps`,
 - New. Mathlib's `Measure.fst`, `Measure.snd`, `Measure.prod` and `PMF.map` are for
   measures and `PMF`s, which are not used (F-LAW).
 - Reviewed by John Fairfax-Ball, 2026-10-08 (sheet item R-23).
+- Status update after the sign-off (2026-10-08, M4 third slice): two general lemmas about
+  the marginals were proved for the proof of Lemma 3.3, in `Hadwiger/Sanity/Law.lean`: the
+  first and the second marginal of the weight function that is `c` on one pair `(a, b)` and
+  `0` elsewhere (`marginalFst_ite_eq`, `marginalSnd_ite_eq`). Blueprint S-L3.3.residual. In
+  that proof the two marginals are applied to weight functions that are not laws, namely
+  flows and changes of flows, some with negative values; that is the use which "defined for
+  arbitrary weight functions, not only laws" above allows. The definitions were not changed.
 
 ### F-CAPS — the three caps of equation (3.1) (new) — D-3.caps
 
@@ -669,6 +681,13 @@ Equation numbers below are those of the paper's PDF: (3.1) is `eq:raw-law-caps`,
   named ("the uniform law on pairs satisfies the three caps with both caps equal to 1").
 - Junk values: none.
 - Reviewed by John Fairfax-Ball, 2026-10-08 (sheet item R-24).
+- Status update after the sign-off (2026-10-08, M4 third slice): in the proof of Lemma 3.3
+  `SatisfiesCaps μ M B f` is used for flows `f` on the paper's network, which are
+  nonnegative weight functions on pairs that need not have total mass one. There the three
+  fields are the capacity constraints of the three kinds of edges: `fst` for the edges from
+  the source, `snd` for the edges to the sink, `joint` for the middle edges. A flow of value
+  one is a law satisfying the caps, which is the paper's sentence. The definition was not
+  changed.
 
 ### F-UNIT — units and conflicts (new) — D-3.unit
 
@@ -958,6 +977,28 @@ Equation numbers below are those of the paper's PDF: (3.1) is `eq:raw-law-caps`,
   first reading in `blueprint/PAPER_ISSUES.md`, spot checks).
 - Not proved: `sorry`. Status `STATED`.
 - Reviewed by John Fairfax-Ball, 2026-10-08 (sheet item R-31).
+- Status update after the sign-off (2026-10-08, M4 third slice): proved, by the paper's
+  proof, the residual-cut argument for max-flow/min-cut; status `DONE`. The statement was
+  not changed. The sentences of the paper's proof are the blueprint rows S-L3.3.value to
+  S-L3.3.sets. On what this note says:
+  - Cases. The Lean proof splits at zero, where the paper's network stops having
+    nonnegative capacities, and not at one. `M < 0`: the trivial choice of this note (`S`
+    everything, `E_0` empty); `hR` is not used. `0 ≤ M` and `B < 0`: the other trivial
+    choice (`S` empty, `E_0` everything); `hR` is not used. `0 ≤ M` and `0 ≤ B`: the
+    paper's proof; `hR` is used once, to show that every flow has value below one. So the
+    values `0 ≤ M < 1` and `0 ≤ B < 1`, which this note calls trivial, are true for the
+    trivial reason and are nevertheless proved by the paper's argument.
+  - The hand check at the end of this note is now a Lean proof: the cut capacity equals
+    the value (`cut_capacity_eq_sum`) and both bounds follow for `M ≥ 0`, `B ≥ 0`
+    (`exists_terminal_cut_of_nonneg`).
+  - Hypotheses. Of `hμ` the proof uses only that the weights of `μ` are nonnegative. That
+    they add up to one is not used, in any case. The hypothesis is the paper's and stays.
+  - Junk values: still none in the statement. The proof divides once, by the value of a
+    flow that is at least `1` (`sum_lt_one_of_satisfiesCaps`).
+  - No definition was added. A flow is written out as a weight function on pairs that is
+    nonnegative, vanishes off `R` and satisfies `SatisfiesCaps`; the residual network is a
+    relation on `Ω ⊕ Ω` written inside the proof; reachability is Mathlib's
+    `Relation.ReflTransGen`.
 
 ### F-BOUND — the explicit bound of Proposition 3.4 (new) — D-3.bound
 
