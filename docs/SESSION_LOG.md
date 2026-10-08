@@ -2235,3 +2235,39 @@ in the new fidelity notes, except one display in note L-3.2 that is abridged and
   the user.
 - The two `sanity (planned)` lemmas: not stated, for the reasons in their rows.
 - No subagent was used.
+
+### Push and CI
+
+| Commit | What | On the remote | CI |
+|---|---|---|---|
+| `6d9304b` | records: the upstream finding, the user's decision, the head of this entry | yes; `git ls-remote` equal to `HEAD` after the push | passed, run `37770585659` |
+| `c2337a7` | the statement layer and its records | yes; `git ls-remote` equal to `HEAD` after the push | passed, run `37773256697` |
+
+This table was added afterwards, in a commit of its own that changes only this log; the CI
+result of that commit is therefore not recorded here. The pushes ran with
+`GCM_INTERACTIVE=never GIT_TERMINAL_PROMPT=0` and did not prompt. `main` on the remote
+stayed at `83d8d91`. Each run was matched to its commit by hash. In the run on `c2337a7`
+every step passed: the build, the ledger check and the axiom audit.
+
+### Questions put to the user at the end of the session
+
+In one prompt, as instructed:
+
+1. the six questions of `blueprint/M4_REVIEW_SHEET.md` (Q1 the representation of a law; Q2
+   the form of the explicit bound; Q3 the representation of the abstract relation; Q4
+   relative entropy as a real number with a junk value; Q5 whether Proposition 3.4 assumes
+   `μ` positive; Q6 whether Lemma 3.2 keeps the paper's hypotheses as printed), each with
+   the worker's recommendation;
+2. the sign-off of the sheet's 13 items, R-21 to R-33;
+3. whether to merge `m4-statement-layer` into `main`;
+4. two things found on the way: whether the records' "equation (2.3)" is to be corrected to
+   "(2.2)", and whether anything is to be done about upstream's published Lean (compare
+   the final statement with theirs; build theirs and audit its axioms).
+
+### Merge
+
+Nothing was merged into `main` in the work recorded above. If a merge is approved it is to
+be a fast-forward, after CI has passed on the commit merged. **If `main` contains this
+commit, the merge was done**; `git log main` is the record. The user's answers, if they
+come after this commit, belong in a records-only commit on this branch or at the head of
+the next session's entry, as was done for M1 to M3.
