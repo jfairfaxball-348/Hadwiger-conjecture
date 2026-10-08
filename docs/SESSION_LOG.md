@@ -2501,3 +2501,41 @@ What the draft prompt carries forward as open, without deciding it: sheet items 
 R-33 are held; building upstream's code and auditing its axioms is undecided.
 
 This commit is not merged by anything said above. Its merge is put to the user.
+
+### Third addendum, same day: the merge of the rule, and a standing permission for a closing commit
+
+Still on branch `infra-next-session-prompt`. CI had passed on `c6337d9` (run
+`37777326062`). The user was asked one question. Verbatim:
+
+```text
+Question (Merge): The rule 'every session closes with a prompt for the next one' is in AGENTS.md on branch infra-next-session-prompt (c6337d9; also adds docs/NEXT_SESSION_PROMPT.md; no Lean or blueprint change; CI passed). Should it go into main?
+  -> Merge, plus a closing-commit rule (Recommended)
+```
+
+The description of the chosen option, as shown:
+
+```text
+Merge c6337d9, and add one standing rule to AGENTS.md in its own commit: after a merge you approved, a single closing commit that only records that merge in the session log and finalises docs/NEXT_SESSION_PROMPT.md (no Lean, no blueprint table, no ledger row) may be fast-forwarded into main without asking again, once CI passes on it. This ends the 'A RECORD TO WRITE FIRST' step: the log and the saved prompt are then complete by themselves. Every other merge still needs your approval.
+```
+
+The options not chosen: "Merge the rule only", "Do not merge". So that the weight of the
+answer can be judged: the option chosen is the one the worker had marked "(Recommended)",
+and the standing permission was the worker's proposal. It widens what may reach `main`
+without a question, by one commit of two named files after each approved merge.
+
+What was done on it, in the commit that contains this section:
+
+- `AGENTS.md`, "Unit of work": the exception for the closing commit, written more narrowly
+  than the option where the option left room. It may change `docs/SESSION_LOG.md` and
+  `docs/NEXT_SESSION_PROMPT.md` and nothing else; it records the merge it closes and
+  nothing new; CI and the three commands must pass first; one for each approved merge.
+- `AGENTS.md`, "Prompt for the next session": the saved prompt is now finalised in the
+  closing commit, so it differs from the one in the final message only by the hash of its
+  own commit; and what to do when a session ends without a merge.
+- Reason for the change to the rules: the user approved it, as quoted. Until now each
+  merge happened after the last commit, so the log never contained it, and the user
+  supplied a record at the head of the next prompt (M1, M2, M3 and this session).
+
+This commit and `c6337d9` are covered by the approval quoted above. The merge is carried
+out after this commit and is recorded in the closing commit that follows it, the first one
+made under the new rule.

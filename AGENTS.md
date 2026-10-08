@@ -138,6 +138,22 @@ wrong.
   never push `main` except to publish a merge the user has approved.
 - **Ask the user before merging anything into `main`.** Each merge is approved one at a
   time; an approval covers that merge and no later one.
+- One exception, the **closing commit**. This is the user's standing permission of
+  2026-10-08, quoted in `docs/SESSION_LOG.md` (M4 first-slice session, third addendum).
+  After a merge the user approved has been carried out, a single further commit may be
+  fast-forwarded into `main` without asking again, on these conditions and no others:
+  - it changes only `docs/SESSION_LOG.md` and `docs/NEXT_SESSION_PROMPT.md`;
+  - in the log it records that merge and nothing new: the hashes, the result of the three
+    commands on `main`, the result of `git ls-remote`, the CI runs, and the user's answers
+    that authorised the merge, if they are not in the log yet;
+  - it brings the prompt for the next session to its final form;
+  - CI has passed on it, and the three commands pass on `main` with it, before `main` is
+    pushed;
+  - there is one closing commit for each approved merge. It never carries a Lean file, a
+    blueprint table, a ledger row, a fidelity note, a review sheet, a status remark or a
+    change to these rules. Anything of that kind is a merge to ask for.
+  The closing commit cannot record its own arrival in `main`. The log says so in it: if
+  `main` contains the closing commit, it was fast-forwarded there under this rule.
 - After a push, check `git ls-remote --heads origin <branch>` against `git rev-parse HEAD`.
   The push summary can name an older commit (see `docs/SESSION_LOG.md`, 2026-10-07).
 
@@ -169,16 +185,20 @@ addendum).
   in `docs/NEXT_SESSION_PROMPT.md`, replacing the previous version, in the last commit of
   the session.
 - **The two versions.** The one in the final message is the complete one. The file is
-  written before the hash of its own commit, and any merge or answer that comes after that
-  commit, can be known. It therefore names its parent commit, says that `HEAD` at the next
-  start gate must be the last commit that touched the file (or names what may lie between),
-  and marks the lines that later events may change.
+  brought to its final form in the closing commit (see "Unit of work"), after the merge it
+  closes, so the two differ in one thing only: the file cannot contain the hash of its own
+  commit. It names its parent commit and says that `HEAD` at the next start gate must be
+  the last commit that touched the file. When a session ends without an approved merge,
+  there is no closing commit: the file is then written in the last commit of the working
+  branch, says that the branch is unmerged, and marks the lines that the user's later
+  answers may change.
 - **Form.** That of the user's own session prompts, which are quoted in
   `docs/SESSION_LOG.md` under "The instruction":
   - START GATE: the expected `HEAD` of `main`; what to read; the three commands with the
     expected counts; the upstream check, against what `docs/PROVENANCE.md` last recorded;
   - A RECORD TO WRITE FIRST: anything that happened after the last commit and is therefore
-    missing from the log (a merge, CI runs, the user's answers), as text to copy verbatim;
+    missing from the log (a merge, CI runs, the user's answers), as text to copy verbatim.
+    After a closing commit there is normally nothing, and the prompt says "none";
   - TASK: the single next task of `blueprint/MILESTONES.md`, and nothing beyond it: the
     branch name, what to re-read in the paper, the exact declarations, what not to touch,
     the expected end state to check against the audit, and the checks to run;
