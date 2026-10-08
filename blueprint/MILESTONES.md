@@ -24,7 +24,7 @@ sheet and the sanity lemmas. The user signed off eleven of its thirteen items th
 State under M4 below. Whether the branch has been merged into `main` is a question for
 `git log main`.
 
-M3 was completed on 2026-10-07 on branch `m3-hole-relation`: Lemma 2.2 and equation (2.3)
+M3 was completed on 2026-10-07 on branch `m3-hole-relation`: Lemma 2.2 and equation (2.2)
 are proved, and the non-vacuity lemma for the hole relation is stated and proved. The user
 accepted the form of that lemma's statement the same day.
 
@@ -118,7 +118,7 @@ M1 to M4 are independent of M5 to M17. When M1, M2 and M17 are done, T-FINAL is 
     all 20 items of the sheet on 2026-10-07, and every fidelity note carries the "Reviewed
     by" line.
   - The user answered the sheet's seven questions the same day. In consequence: a
-    textbook citation was checked; the second half of equation (2.3) and the falsity of
+    textbook citation was checked; the second half of equation (2.2) and the falsity of
     the fractional weakening were stated in Lean (blueprint S-2.3, D-1.fHC, S-1.d); and a
     non-vacuity lemma for the hole relation was entered for M3 (S-M3.hole-nonvacuous).
 
@@ -206,7 +206,7 @@ M1 to M4 are independent of M5 to M17. When M1, M2 and M17 are done, T-FINAL is 
 - Also, on the user's decision of 2026-10-07: S-M3.hole-nonvacuous, a sanity lemma showing
   that some `HoleData` has a hole between two of its elements. A hand example to
   formalise is on `blueprint/M0_REVIEW_SHEET.md` under R-10.
-- The second half of equation (2.3) is already stated, with a complete proof body from
+- The second half of equation (2.2) is already stated, with a complete proof body from
   the first half and S-1.a; it becomes `DONE` when M3 and S-1.a (M1) are. S-1.a has been
   `DONE` since M1, so only M3 is outstanding for it.
 - Noted at the end of M2, for whoever starts M3:

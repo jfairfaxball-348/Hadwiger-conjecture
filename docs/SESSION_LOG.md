@@ -2379,3 +2379,37 @@ What was done on these answers, in the commit that contains this section:
 
 Nothing of the second slice was started. The single next task is in
 `blueprint/MILESTONES.md`.
+
+### Addendum, same day: the merge, and the follow-ups left to the worker
+
+Written on branch `m4-followups`, started from `main` at `8202e73` after the merge. This
+branch is **not** covered by the merge approval above and needs its own.
+
+**The merge was carried out** on the approval quoted above ("Merge all of it"). CI passed
+on the answers commit `8202e73` (run `37774660732`); it had also passed on the log commit
+`0cff648` (run `37773594630`). `main` was then fast-forwarded from `83d8d91` to `8202e73`.
+On `main`, before the push: `lake build` passed; `check_ledger.py` gave 6 `sorry`, 6 rows;
+`axiom_audit.py` gave 181 entries, 179 declarations, OK. `main` was pushed as an ordinary
+fast-forward, with interaction disabled, and `git ls-remote --heads origin main` gave
+`8202e73`, equal to `HEAD`. The CI run on `main` at `8202e73` was not looked up before this
+was written.
+
+**Follow-up 1: the equation label.** The paper's `eq:sample-independence` is equation
+(2.2) of the PDF; this repository called it "(2.3)" (see "A defect in this repository's
+records" above). Corrected here, in a commit of its own:
+
+- 15 occurrences of "equation (2.3)" changed to "equation (2.2)": 7 in the doc comments of
+  `Hadwiger/HoleRelation.lean`, 1 in `Hadwiger/Sanity/HoleRelation.lean`, 1 each in
+  `README.md` and `START_HERE.md`, 3 in `blueprint/MILESTONES.md`, 2 in
+  `blueprint/PAPER_ISSUES.md`.
+- The blueprint row S-2.3 now gives the equation's number and says that the ID is an
+  identifier kept from the mistake. **No ID was renamed.**
+- **Not rewritten**: the signed fidelity note "L-2.2 and S-2.3" (a second status-update
+  line says to read "(2.3)" there as "(2.2)"); `blueprint/M0_REVIEW_SHEET.md`, item R-17;
+  and the earlier entries of this log, which are history.
+- Left as they are because they are right: the two places that call the equation of the
+  constants `C_0`, `g`, `D`, `M` "(2.3)" (`eq:early-constants`).
+- `Hadwiger/HoleRelation.lean` is a signed-off file. Only comments changed in it: with
+  comments stripped the file is identical to `main`'s, and the `pp.all` comparison is
+  byte-identical to `main` at `83d8d91` for both lists. The three commands pass, with the
+  same tally.

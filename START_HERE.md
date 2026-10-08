@@ -38,7 +38,7 @@ What is proved (2026-10-07), all of it elementary:
 - Three unnumbered statements from Section 1: the colour-class bound `|V| ≤ α·χ`, its
   fractional form `|V| ≤ α·χ_f`, and `χ_f ≤ χ` (blueprint S-1.a, S-1.b, S-1.c; M1).
 - Lemma 2.2, that the abstract hole relation of Section 2.1 is symmetric, has no loops and
-  is triangle-free, and equation (2.3), that the graph on the positions of any list has
+  is triangle-free, and equation (2.2), that the graph on the positions of any list has
   `α ≤ 2` and `χ ≥ ⌈m/2⌉` (blueprint L-2.2, S-2.3; M3). This is about the abstract linear
   data of Section 2.1 only. The paper's actual construction (Sections 2.2 to 2.4) is not
   stated in Lean yet, so nothing here is yet about the paper's graphs.

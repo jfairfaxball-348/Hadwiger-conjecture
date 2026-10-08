@@ -11,7 +11,7 @@ their Hadwiger number.
 which is almost the whole paper, is `sorry`; the final theorem is derived from it in Lean.
 What is proved is elementary: Proposition 3.5 (the clique-minor bound from connected
 matchings), three statements from the paper's introduction, and Lemma 2.2 with equation
-(2.3) (the abstract hole relation is triangle-free, so the graphs built from it have
+(2.2) (the abstract hole relation is triangle-free, so the graphs built from it have
 independence number at most 2). Stated and not proved since 2026-10-08: Lemma 3.2, Lemma
 3.3 and Proposition 3.4, the last as an explicit bound whose form is this project's own and
 is still awaiting the user's review.

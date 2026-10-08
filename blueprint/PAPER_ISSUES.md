@@ -32,10 +32,10 @@ The whole paper was read once, in full, proofs included, on 2026-10-07.
   followed".
 - Machine-checked so far (the blueprint has the statuses; `DONE` there is what this
   means): the three unnumbered bounds of Section 1 (M1), Proposition 3.5 with its proof
-  (M1 and M2), Lemma 2.2 with its proof and both halves of equation (2.3) (M3), and the
+  (M1 and M2), Lemma 2.2 with its proof and both halves of equation (2.2) (M3), and the
   deduction of Corollary 1.2 from Theorem 1.1 (M1). These are the elementary parts. No
   error or gap was found in them.
-- Section 2.1 in particular (Definition 2.1, Lemma 2.2, equation (2.3)) was read again at
+- Section 2.1 in particular (Definition 2.1, Lemma 2.2, equation (2.2)) was read again at
   M3 and the Lean proofs follow the paper's sentence by sentence. Every step went through
   as written. One observation, which is not an issue: the six-term sum that proves
   triangle-freeness uses neither that the three elements are distinct nor that the `U_i`

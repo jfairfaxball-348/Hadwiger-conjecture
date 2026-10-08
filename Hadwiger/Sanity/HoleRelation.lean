@@ -9,7 +9,7 @@ relation can hold (`exists_holeData_hole`). Lemma 2.2 pins it from above: it has
 and no triangles.
 
 Why it matters. If no `HoleData` had a hole, every graph on positions would be complete,
-and Lemma 2.2 and equation (2.3) would be true and empty.
+and Lemma 2.2 and equation (2.2) would be true and empty.
 
 Added at milestone M3 on the user's decision of 2026-10-07 (question Q4 of
 `blueprint/M0_REVIEW_SHEET.md`). Blueprint entry: `S-M3.hole-nonvacuous`, in the section

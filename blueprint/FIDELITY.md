@@ -469,6 +469,13 @@ Note added at M0. The difference in form of L-2.2 is also in F-HOLE.
   only the label is wrong. Found at the M4 first slice and reported to the user; whether
   the records are to be corrected is the user's decision (`docs/SESSION_LOG.md`, M4
   first-slice session).
+- Status update after the sign-off (2026-10-08, later): the label was corrected to "(2.2)"
+  in the unsigned records and in the Lean doc comments, in a commit of its own, after the
+  user left the follow-ups to the worker's recommendation. **The signed text of this note
+  was not rewritten: where it says "equation (2.3)", read "(2.2)".** The same holds for
+  item R-17 of `blueprint/M0_REVIEW_SHEET.md`, which is not edited, and for the earlier
+  entries of the session log, which are history. The blueprint ID `S-2.3` is kept as an
+  identifier.
 
 ### The fidelity question that matters most
 

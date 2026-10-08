@@ -11,7 +11,7 @@ Let `Ω` be a finite set. For each `i ∈ Ω`, suppose we have an injective line
 `U_i : X → V` and a linear functional `u_i ∈ V*`."
 
 Definition 2.1 (`def:hole`), Lemma 2.2 (`lem:hole-triangle-free`) and the graph on
-positions with equation (2.3) (`eq:sample-independence`).
+positions with equation (2.2) (`eq:sample-independence`).
 
 This file is the abstract part of Section 2 only. The concrete construction of
 `X, a, T, V, U_o, u_o` (Sections 2.2 to 2.4) is not stated yet.
@@ -19,12 +19,12 @@ This file is the abstract part of Section 2 only. The concrete construction of
 Blueprint entries: `D-2.0`, `D-2.1`, `L-2.2`, `D-2.G`, `S-2.3`. Milestone M3.
 Fidelity notes are in `blueprint/FIDELITY.md` (F-HOLE, F-POSGRAPH).
 
-Lemma 2.2 and both halves of equation (2.3) are proved here, by the paper's proofs
+Lemma 2.2 and both halves of equation (2.2) are proved here, by the paper's proofs
 (milestone M3). That the hole relation can hold at all is checked separately, in
 `Hadwiger/Sanity/HoleRelation.lean`; that check is not a statement of the paper.
 
 Everything here is **new**; only Mathlib's linear algebra and `SimpleGraph` are used, and,
-for the second half of equation (2.3), the colour-class bound `S-1.a` of
+for the second half of equation (2.2), the colour-class bound `S-1.a` of
 `Hadwiger/ChromaticBounds.lean`.
 -/
 
@@ -152,7 +152,7 @@ def positionGraph (D : HoleData X V Ω) {m : ℕ} (o : Fin m → Ω) : SimpleGra
   symm := ⟨fun _ _ h => ⟨h.1.symm, fun h' => h.2 h'.symm⟩⟩
   loopless := ⟨fun _ h => h.1 rfl⟩
 
-/-- **Equation (2.3), first half.** The graph on positions has independence number at most
+/-- **Equation (2.2), first half.** The graph on positions has independence number at most
 two: an independent triple of positions would give a hole triangle.
 
 The paper first observes that the three elements are distinct ("Equal elements are adjacent
@@ -176,16 +176,16 @@ theorem indepNum_positionGraph_le_two (D : HoleData X V Ω) {m : ℕ} (o : Fin m
   -- "An independent triple of positions would therefore give … a hole triangle."
   exact D.not_hole_triangle (hole hp hq hpq) (hole hq ht hqt) (hole hp ht hpt)
 
-/-- **Equation (2.3), second half.** The graph on `m` positions has `χ(G) ≥ ⌈m/2⌉`.
+/-- **Equation (2.2), second half.** The graph on `m` positions has `χ(G) ≥ ⌈m/2⌉`.
 
 The chromatic number is Mathlib's `chromaticNumber : ℕ∞`; the statement exhibits it as a
 natural number `k`. For a natural number `k`, `k ≥ ⌈m/2⌉` is the same as `m ≤ 2k`, and that
 form is used, so that no division or ceiling appears.
 
 Stated on the user's decision of 2026-10-07 (question Q5 of the M0 review sheet). The proof
-is the paper's: the first half of equation (2.3) and the colour-class bound of Section 1
+is the paper's: the first half of equation (2.2) and the colour-class bound of Section 1
 (`card_le_indepNum_mul_of_colorable`). The colour-class bound was proved at milestone M1
-and the first half of equation (2.3) at milestone M3, so this theorem rests on nothing
+and the first half of equation (2.2) at milestone M3, so this theorem rests on nothing
 unproved. -/
 theorem le_two_mul_chromaticNumber_positionGraph (D : HoleData X V Ω) {m : ℕ}
     (o : Fin m → Ω) :
