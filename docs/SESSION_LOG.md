@@ -3183,3 +3183,44 @@ a question that need not have been asked.
 This commit is itself merged without a further question, under the last condition of the
 new rule: it writes down an instruction the user gave, with the user's words quoted. Its
 merge is recorded in the closing record below.
+
+### Closing record
+
+This section is the closing commit of the session, made under the closing-commit rule of
+`AGENTS.md` ("Unit of work"). It changes `docs/SESSION_LOG.md` and
+`docs/NEXT_SESSION_PROMPT.md` and nothing else.
+
+**The merges it closes.** There were two, made in a row.
+
+1. The slice, recorded above under "The merge of the slice": `main` from `063829e` to
+   `5a7bc17`. One thing was missing there: CI passed on `main` at `5a7bc17` (run
+   `37787724093`).
+2. The rule on merging: `main` was fast-forwarded from `5a7bc17` to `c76d10d`, the
+   infrastructure commit described above under "The standing permission, written into
+   `AGENTS.md`". It was merged without a further question, under the last condition of the
+   rule it introduces, on the user's instruction quoted under "The user's answer". CI had
+   passed on the branch `infra-merge-permission` at `c76d10d` (run `37787941193`). On
+   `main`, before the push: `lake build` passed, with three `sorry` warnings and no other;
+   `check_ledger.py` gave 3 `sorry`, 3 rows; `axiom_audit.py` gave 189 entries, 194
+   declarations, OK. `main` was pushed as an ordinary fast-forward with interaction
+   disabled, and `git ls-remote --heads origin main` gave `c76d10d`, equal to `HEAD`.
+   CI then passed on `main` at `c76d10d` (run `37788381409`).
+
+No push in this session prompted for a sign-in. Nothing was force-pushed.
+
+**The prompt for the next session** is in `docs/NEXT_SESSION_PROMPT.md` in its final form.
+The task it sets is the single next task of `blueprint/MILESTONES.md`: the third slice of
+M4, to prove Lemma 3.3. Its working rules follow the new rule on merging. It carries
+forward as open, without deciding them: sheet items R-32 and R-33 (held); whether to build
+upstream's code and audit its axioms; and the wording of the conditions under which a merge
+"makes sense", which is the worker's and which the user has not confirmed.
+
+**This commit's own arrival in `main`** cannot be recorded in it. It is pushed to the
+branch `infra-merge-permission`; when CI has passed on it and the three commands pass,
+`main` is fast-forwarded to it under the rule. If `main` contains this commit, that was
+done. Its CI runs are on GitHub under its hash.
+
+**The state the session leaves**, for whoever reads this first: 3 `sorry` (Theorem 1.1;
+Lemma 3.3; the bound of Proposition 3.4), no axioms; 189 blueprint entries, 194
+declarations audited. Lemma 3.2 is proved, in its three assertions, by the paper's proof.
+The final theorem is not proved and rests on Theorem 1.1 alone.

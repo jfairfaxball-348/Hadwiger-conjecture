@@ -4,16 +4,22 @@ Written at the close of the session of 2026-10-08 (M4, second slice), under the 
 "Prompt for the next session" in `AGENTS.md`. **It is a draft for the user.** The prompt
 the user actually sends is the instruction; this file has no authority of its own.
 
-**State when this version was written: the branch `m4-lemma-3-2` is not merged into
-`main`.** This version is in the last commit of the working branch before the merge was put
-to the user. The lines marked `[MERGE]` depend on the user's answer and must be brought up
-to date when it is known. If the merge is approved in the same session, the closing commit
-(`AGENTS.md`, "Unit of work") replaces this version with the final one.
+This is the final form, written in the session's closing commit after the last merge. The
+one thing it cannot contain is the hash of its own commit. Its parent is `c76d10d`. At the
+next start gate `HEAD` of `main` should be the last commit that touched this file; check
+with `git log -1 --format=%h -- docs/NEXT_SESSION_PROMPT.md` against
+`git rev-parse --short HEAD`. Any commit in between is something to explain before going
+on. The version given to the user in the closing message has the hash written out.
 
-Still open with the user, and carried forward as open: sheet items **R-32 and R-33** (the
-explicit bound and Proposition 3.4) are held, not signed off; and whether to build
-upstream's code and audit its axioms (the worker recommended deciding it at the gate
-before M6).
+Still open with the user, and carried forward as open:
+
+- sheet items **R-32 and R-33** (the explicit bound and Proposition 3.4) are held, not
+  signed off;
+- whether to build upstream's code and audit its axioms (the worker recommended deciding
+  it at the gate before M6);
+- the wording of the conditions under which a merge "makes sense". The user's instruction
+  of 2026-10-08 is one sentence; the conditions in `AGENTS.md` ("Unit of work") are the
+  worker's reading of it and the user has not confirmed them.
 
 ---
 
@@ -21,12 +27,11 @@ before M6).
 Continue the Lean formalisation in this repository. AGENTS.md is binding; read it first.
 
 START GATE
-1. Pin HEAD. You should be on main, and main should equal origin/main. Expected: [MERGE:
-the closing commit of the M4 second-slice session, if the branch m4-lemma-3-2 was merged;
-its last commit before the merge question is named in the session log. If the branch was
-NOT merged, main is still 063829e, and this prompt must first say what to do with the
-branch] (M4 second slice, 2026-10-08: Lemma 3.2 proved). If main does not equal
-origin/main, or HEAD is something else, stop and tell me before doing anything else.
+1. Pin HEAD. You should be on main, and main should equal origin/main. Expected: [the
+commit that last touched docs/NEXT_SESSION_PROMPT.md; its parent is c76d10d] (M4 second
+slice merged, 2026-10-08: Lemma 3.2 proved; the rule on merging changed in AGENTS.md; the
+closing commit of that session). If main does not equal origin/main, or HEAD is something
+else, stop and tell me before doing anything else.
 2. Read START_HERE.md, AGENTS.md, blueprint/BLUEPRINT.md, blueprint/SORRY_AXIOM_LEDGER.md,
 blueprint/MILESTONES.md (the single next task; under M4, "Mathlib gaps" and the states after
 the first and the second slice), blueprint/FIDELITY.md (in particular the notes F-LAW,
@@ -45,8 +50,8 @@ before doing anything else. If not, record in the session log that you looked an
 you saw.
 
 A RECORD TO WRITE FIRST
-[MERGE: "None", if the closing commit was made. Otherwise: the merge of m4-lemma-3-2, its
-CI runs and my answers, as text to copy verbatim.]
+None. The previous session's log is complete up to its closing commit, which was
+fast-forwarded into main under the closing-commit rule of AGENTS.md ("Unit of work").
 
 TASK: milestone M4, third slice: prove Lemma 3.3, as described in blueprint/MILESTONES.md.
 * Create a working branch m4-lemma-3-3 from main.
@@ -140,6 +145,9 @@ paper are rows named after the result (S-L3.2.*), in the section on steps of pro
 blueprint/M4_REVIEW_SHEET.md are not rewritten either.
 * The paper's equation eq:sample-independence is (2.2). The blueprint ID S-2.3 is kept as
 an identifier.
+* Merging, decided 2026-10-08: "Always merge if it makes sense, you dont need to asl". The
+rule and its conditions are in AGENTS.md ("Unit of work"). [Edit AGENTS.md, or say so
+here, if you want the conditions changed.]
 
 WORKING RULES
 * Work inline; at most two subagents at a time, only for independent, well-scoped tasks.
@@ -147,10 +155,12 @@ WORKING RULES
 AGENTS.md). Run pushes with GCM_INTERACTIVE=never GIT_TERMINAL_PROMPT=0; if a push fails
 because it would need a sign-in, stop and tell me instead of opening a window. After
 each push, check git ls-remote against HEAD.
-* Ask me before merging into main. After a merge I approve, the closing commit may follow
-without asking, on the terms of AGENTS.md ("Unit of work") and no others.
+* Merge into main without asking when the merge makes sense, that is, when every
+condition of AGENTS.md ("Unit of work") holds. If one of them fails, or you are in doubt,
+ask me once. After each merge the closing commit follows, on the terms of AGENTS.md and no
+others. Tell me in the final message what was merged, with the hashes.
 * Do not ask me things one at a time. Carry on with everything that does not depend on my
-answer, and put all open questions, including the merge, in one prompt at the end.
+answer, and put all open questions in one prompt at the end.
 * Do not consult the upstream openai/math Lean code for this paper.
 * End with the checkpoint report that AGENTS.md asks for, the single next task, and the
 prompt for the next session (AGENTS.md, "Prompt for the next session"). The task after
