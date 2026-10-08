@@ -4,17 +4,12 @@ Written at the close of the session of 2026-10-08 (M4, first slice), under the r
 "Prompt for the next session" in `AGENTS.md`. **It is a draft for the user.** The prompt
 the user actually sends is the instruction; this file has no authority of its own.
 
-What this file could not know when it was written:
-
-- the hash of its own commit. Its parent is `80c603e`. At the next start gate `HEAD` of
-  `main` should be the last commit that touched this file; check with
-  `git log -1 --format=%h -- docs/NEXT_SESSION_PROMPT.md` against `git rev-parse --short HEAD`.
-  Any commit in between is something to explain before going on;
-- whether, and when, the commit containing it was merged into `main`, and the CI runs on
-  it. Those belong under "A RECORD TO WRITE FIRST" and are marked there.
-
-The complete version, with the actual hash and that record, was given to the user in the
-closing message of the session.
+This is the final form, written in the session's closing commit after the last approved
+merge. The one thing it cannot contain is the hash of its own commit. Its parent is
+`58be2aa`. At the next start gate `HEAD` of `main` should be the last commit that touched
+this file; check with `git log -1 --format=%h -- docs/NEXT_SESSION_PROMPT.md` against
+`git rev-parse --short HEAD`. Any commit in between is something to explain before going
+on. The version given to the user in the closing message has the hash written out.
 
 Still open with the user, and carried forward as open: sheet items **R-32 and R-33** (the
 explicit bound and Proposition 3.4) are held, not signed off; and whether to build
@@ -28,10 +23,11 @@ Continue the Lean formalisation in this repository. AGENTS.md is binding; read i
 
 START GATE
 1. Pin HEAD. You should be on main, and main should equal origin/main. Expected: [the
-commit that last touched docs/NEXT_SESSION_PROMPT.md; its parent is 80c603e] (M4 first
-slice merged with its follow-ups, 2026-10-08, and the next-session-prompt rule added to
-AGENTS.md). If main does not equal origin/main, or HEAD is something else, stop and tell
-me before doing anything else.
+commit that last touched docs/NEXT_SESSION_PROMPT.md; its parent is 58be2aa] (M4 first
+slice merged with its follow-ups, 2026-10-08; the next-session-prompt rule and the
+closing-commit rule added to AGENTS.md; the closing commit of that session). If main does
+not equal origin/main, or HEAD is something else, stop and tell me before doing anything
+else.
 2. Read START_HERE.md, AGENTS.md, blueprint/BLUEPRINT.md, blueprint/SORRY_AXIOM_LEDGER.md,
 blueprint/MILESTONES.md (the single next task, and the state of M4 after its first slice),
 blueprint/FIDELITY.md (in particular the notes F-LAW, F-KL and L-3.2), blueprint/PAPER_ISSUES.md
@@ -50,9 +46,8 @@ before doing anything else. If not, record in the session log that you looked an
 you saw.
 
 A RECORD TO WRITE FIRST
-[To be completed from the closing message of the previous session: the merge into main of
-the commit that added the next-session-prompt rule, the result of git ls-remote, and the
-CI runs. Put it at the head of your own session entry, verbatim.]
+None. The previous session's log is complete up to its closing commit, which was
+fast-forwarded into main under the closing-commit rule of AGENTS.md ("Unit of work").
 
 TASK: milestone M4, second slice: prove Lemma 3.2, as described in blueprint/MILESTONES.md.
 * Create a working branch m4-lemma-3-2 from main.
@@ -134,7 +129,8 @@ WORKING RULES
 AGENTS.md). Run pushes with GCM_INTERACTIVE=never GIT_TERMINAL_PROMPT=0; if a push fails
 because it would need a sign-in, stop and tell me instead of opening a window. After
 each push, check git ls-remote against HEAD.
-* Ask me before merging into main.
+* Ask me before merging into main. After a merge I approve, the closing commit may follow
+without asking, on the terms of AGENTS.md ("Unit of work") and no others.
 * Do not ask me things one at a time. Carry on with everything that does not depend on my
 answer, and put all open questions, including the merge, in one prompt at the end.
 * Do not consult the upstream openai/math Lean code for this paper.

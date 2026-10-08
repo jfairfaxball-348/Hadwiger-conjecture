@@ -2539,3 +2539,34 @@ What was done on it, in the commit that contains this section:
 This commit and `c6337d9` are covered by the approval quoted above. The merge is carried
 out after this commit and is recorded in the closing commit that follows it, the first one
 made under the new rule.
+
+### Closing record
+
+This section is the closing commit of the session, the first made under the closing-commit
+rule of `AGENTS.md` ("Unit of work"). It changes `docs/SESSION_LOG.md` and
+`docs/NEXT_SESSION_PROMPT.md` and nothing else.
+
+**The merge it closes**, done on the approval quoted in the third addendum ("Merge, plus a
+closing-commit rule"): `main` was fast-forwarded from `80c603e` to `58be2aa`, which brought
+in `c6337d9` (the rule for a next-session prompt, and the first draft of the prompt) and
+`58be2aa` (the closing-commit rule). On `main`, before the push: `lake build` passed;
+`check_ledger.py` gave 6 `sorry`, 6 rows; `axiom_audit.py` gave 181 entries, 179
+declarations, OK. `main` was pushed as an ordinary fast-forward with interaction disabled,
+and `git ls-remote --heads origin main` gave `58be2aa`, equal to `HEAD`. CI passed on the
+branch at `c6337d9` (run `37777326062`) and at `58be2aa` (run `37778085456`), and on
+`main` at `58be2aa` (run `37778547786`).
+
+**The prompt for the next session** is in `docs/NEXT_SESSION_PROMPT.md` in its final form.
+The task it sets is the single next task of `blueprint/MILESTONES.md`: the second slice of
+M4, to prove Lemma 3.2. It carries forward as open, without deciding them: sheet items
+R-32 and R-33 (held), and whether to build upstream's code and audit its axioms.
+
+**This commit's own arrival in `main`** cannot be recorded in it. It is pushed to the
+branch `infra-next-session-prompt`; when CI has passed on it and the three commands pass,
+`main` is fast-forwarded to it under the rule. If `main` contains this commit, that was
+done. Its CI runs are on GitHub under its hash.
+
+**The state the session leaves**, for whoever reads this first: 6 `sorry` (Theorem 1.1;
+the three assertions of Lemma 3.2; Lemma 3.3; the bound of Proposition 3.4), no axioms; 181
+blueprint entries, 179 declarations audited. Nothing of the paper was proved in this
+session. The final theorem is not proved and rests on Theorem 1.1 alone.
