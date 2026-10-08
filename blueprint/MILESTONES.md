@@ -372,10 +372,15 @@ except Theorem 1.1 `DONE`), then M4, then M5.
 
 Gate before M6: once M5 is done and Theorem 3.1 is stated, re-read Sections 4 to 14
 slowly against the six "steps not followed" in `PAPER_ISSUES.md`, and decide with the user
-whether to continue. About nine tenths of the effort lies beyond this gate, the proof
-beyond it is unverified by anyone as far as this project knows, and the upstream authors,
-whose README says that many but not all of their manuscripts have been formalised, have
-not published a formalisation of this theorem.
+whether to continue. About nine tenths of the effort lies beyond this gate.
 
-Upstream may publish a formalisation of the rest at any time; the project rules say to
-tell the user if it does.
+Upstream and this gate, corrected on 2026-10-08. This paragraph used to say that the proof
+beyond the gate "is unverified by anyone as far as this project knows" and that the
+upstream authors "have not published a formalisation of this theorem". That was written on
+2026-10-07 and was true of upstream at the pin. On 2026-10-08 upstream's catalogue lists
+this paper as having a formalised main result, in a new folder of 276 Lean files
+(`docs/PROVENANCE.md`, "Upstream after the pin"). This project has not built, read or
+checked that code, so for this project the proof beyond the gate is still unverified; but
+it can no longer be said that nobody claims to have verified it. The user was told on
+2026-10-08 and chose to carry on independently (`docs/SESSION_LOG.md`, M4 first-slice
+session). Whether that changes the gate is the user's to decide when the gate is reached.

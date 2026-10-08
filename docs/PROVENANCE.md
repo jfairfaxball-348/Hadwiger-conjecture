@@ -111,6 +111,85 @@ Recorded for later use. None of the equivalences below has been proved.
 | `χ` in statements | `chromaticNumber.toNat` | `∃ k : ℕ, chromaticNumber = k ∧ …` | Equal for finite graphs. |
 | `χ_f` | absent | `fractionalChromaticNumber` | — |
 
+## Upstream after the pin: a formalisation of this paper's main theorem (seen 2026-10-08)
+
+**Upstream now publishes Lean for this paper well beyond what is described above.** This was
+found on 2026-10-08 by the upstream check at the start of the M4 first-slice session. The
+user was told before anything else was done, and decided the same day that the project
+carries on independently (the question, the options and the answers are quoted in
+`docs/SESSION_LOG.md`, M4 first-slice session). The rule in `AGENTS.md` stands: upstream's
+Lean for this paper is not consulted and not copied.
+
+What was looked at, on the user's instruction and then on the user's answer "Names and
+catalogue only": the commit list of `openai/math`; the file listing of the paper's folder;
+commit lists filtered by path; the file names and sizes of one new folder; and three
+catalogue files that are not Lean (`lean/docs/157.md`, `lean/formalization.yaml`,
+`CONTENTS.md`). **No Lean file of upstream was opened, at any commit.**
+
+| | |
+|---|---|
+| `openai/math` `main` on 2026-10-08 | `fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb`, "Merge pull request #1 from openai/codex/update-10-7" (2026-10-08 05:20 UTC) |
+| Its second parent | `301488868beec11bfd897168433b0a64f5258559`, "Update manuscripts and Lean formalizations" (2026-10-08 05:03 UTC); 324,499 lines added, 17,340 deleted, over the whole collection |
+| The pin | `adc7f1241b42e322a6451854ab7e4b4c146bf78a`, unchanged. These three are all the commits there are. |
+
+**The paper is unchanged.** Every file in the paper's folder has the same git blob at
+`fd4aeeb` as at the pin: `README.md`, `paper.pdf` (blob `a443d538`), `build/main.tex`,
+`build/preamble.tex`, the 16 files of `build/sections/` and `build/sources/references.bib`.
+The commit list filtered to that folder shows only the initial commit. So the pinned version
+is still upstream's current version, and the pin does not move.
+
+**What is new, by name and size only:**
+
+- A folder `lean/OAI/Combinatorics/HadwigerCounterexample/`, created by `3014888`: 276 Lean
+  files, 1,633,876 bytes, no subfolders. It has a `Main.lean` (6,213 bytes). The file names
+  run over the whole paper: for example `TerminalCut`, `EntropyContainers`,
+  `FiniteGraphTransfer`, `GradientRealization`, `WeakProductComparison`,
+  `ParameterExistence`, `FinalContradiction`. Names are not contents; nothing is claimed
+  here about what any file proves.
+- The older folder `lean/OAI/Combinatorics/HadwigerMatching/` (the partial formalisation
+  described above) and `lean/OAI/Combinatorics/ListHadwiger/` were not touched by the new
+  commits.
+
+**What upstream's catalogue now says** (read in the three catalogue files; quoted or
+paraphrased from them, not checked against any Lean):
+
+- `lean/formalization.yaml`, whose header calls it a "Catalog of papers with a formalized
+  main result", now lists this paper as a source, with the comparator entry: declaration
+  `OAI.HadwigerCounterexample.not_hadwiger_conjecture`, file
+  `OAI/Combinatorics/HadwigerCounterexample/Main.lean`, configuration
+  `ComparatorChallenges/HadwigerCounterexample.json`. At the pin the file did not mention
+  this paper.
+- `lean/docs/157.md`, the scope page of the paper's family, now names this paper and says
+  that the formalisation constructs arbitrarily large finite simple counterexamples with
+  independence number at most two, and proves for a graph on `m` vertices
+  `h(G) < 26m/75 + 2/3 < m/2 ≤ χ(G)`; that this disproves the ordinary chromatic form; and
+  that the fractional-chromatic strengthening is outside the selected statement. It links a
+  comparator statement `lean/ComparatorChallenges/HadwigerCounterexample.lean` (not opened).
+- `CONTENTS.md` lists the paper as before.
+
+**What this project knows and does not know.** Upstream claims a Lean formalisation of the
+paper's main result in its ordinary-chromatic form, which is this project's final theorem
+(T-FINAL) up to the form of the statement. This project has **not** built upstream's code,
+has not run `#print axioms` on it, has not read its statement, and has not compared it with
+T-FINAL. So nothing here says whether the claim is right, what the upstream statement is
+exactly, or whether it uses `sorry`, extra axioms or `native_decide`. By size it is about
+4.6 times the paper's TeX (1,633,876 against 356,412 bytes), inside the range of the
+calibration table below. Upstream's catalogue does not claim the fractional form
+(Corollary 1.2 with `χ_f`, blueprint C-1.2 and S-1.d), which this project states.
+
+**Consequences recorded, not decided here.**
+
+- The statements above under "Was the paper already formalised?" and "The partial upstream
+  formalisation" describe the pin `adc7f12` and are still true of it. They are no longer a
+  description of upstream's current state.
+- The sentence in `blueprint/MILESTONES.md`, "Order and gates", that the upstream authors
+  "have not published a formalisation of this theorem" was true on 2026-10-07 and is not
+  true of upstream's catalogue on 2026-10-08; it is corrected there.
+- A statement-level comparison of T-FINAL with upstream's `not_hadwiger_conjecture` is
+  allowed by `AGENTS.md` ("Comparing a finished statement here with upstream's statement is
+  allowed"). It has not been made. Whether to make it, and whether to build upstream's
+  code to check its axioms, are questions for the user.
+
 ## Calibration used for effort estimates
 
 To estimate how much Lean a full formalisation needs, the size of the Lean source was
