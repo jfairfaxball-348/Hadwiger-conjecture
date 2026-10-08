@@ -19,8 +19,8 @@ The repository, not any conversation, carries the project state.
    the paper, its Lean name and its status.
 3. `blueprint/SORRY_AXIOM_LEDGER.md` — every open `sorry`; there are no axioms.
 4. `blueprint/MILESTONES.md` — the plan and the single next task.
-   `blueprint/M4_REVIEW_SHEET.md` — the statement layer of Sections 3.1 and 3.2, awaiting
-   the user's sign-off (2026-10-08).
+   `blueprint/M4_REVIEW_SHEET.md` — the statement layer of Sections 3.1 and 3.2, signed
+   off by the user on 2026-10-08 except for two items that are held.
 5. `blueprint/PAPER_ISSUES.md` — anything in the paper found unclear, incomplete or wrong.
 6. `blueprint/FIDELITY.md` — why each Lean definition matches the paper's.
 7. `docs/` — status definitions, the Lean workflow, provenance, the session log.
@@ -50,11 +50,13 @@ fractional weakening. Nothing else stands between Theorem 1.1 and the final theo
 What is stated and **not proved** (2026-10-08, first slice of milestone M4): Lemma 3.2
 (three assertions), Lemma 3.3 and Proposition 3.4, the last as an explicit bound on a
 failure probability, for any finite set with a law and any symmetric, loopless,
-triangle-free relation. Each is `sorry`. **These statements are awaiting the user's
-sign-off** (`blueprint/M4_REVIEW_SHEET.md`), and by the user's decision no proof of them is
-written before it. The bound in Proposition 3.4 is not in the paper in that form: it was
-derived by hand from the paper's proof and has not been checked by anyone else. Theorem 3.1
-is not stated.
+triangle-free relation. Each is `sorry`. The user signed off the statements of Lemma 3.2
+and Lemma 3.3 on 2026-10-08, so their proofs may now be written. **The statement of
+Proposition 3.4 is not signed off**: the user held it, with its explicit bound, for a second
+reading (`blueprint/M4_REVIEW_SHEET.md`, items R-32 and R-33), and by the user's decision no
+proof of it is written before its sign-off. The bound in Proposition 3.4 is not in the
+paper in that form: it was derived by hand from the paper's proof and has not been checked
+by anyone else. Theorem 3.1 is not stated.
 
 So there are six `sorry`s: Theorem 1.1 and those five. The final theorem rests on Theorem
 1.1 alone; the five are not beneath it, because Theorem 1.1 is not yet derived from
@@ -75,12 +77,18 @@ all (`Hadwiger.exists_holeData_hole`, blueprint S-M3.hole-nonvacuous). It is pro
 the user accepted the form of its statement on 2026-10-07 (recorded in its blueprint row
 and in `docs/SESSION_LOG.md`, M3 session).
 
-**Awaiting review since 2026-10-08:** everything added in the first slice of M4. That is
-the definitions of the statement layer of Sections 3.1 and 3.2 (blueprint D-3.rel, D-3.law,
-D-3.marg, D-3.caps, D-3.unit, D-3.confl, D-3.sup, D-3.KL, D-3.list, D-3.bound) and the
-statements L-3.2, L-3.3 and P-3.4. Their fidelity notes carry no "Reviewed by" line. The
-sanity lemmas proved with them (blueprint `S-M4.*`) are checks on those definitions; they
-are proved, and they are not evidence for the three results.
+The first slice of M4 (2026-10-08) added the statement layer of Sections 3.1 and 3.2.
+The user signed off most of it the same day, by the sheet `blueprint/M4_REVIEW_SHEET.md`:
+the definitions D-3.rel, D-3.law, D-3.marg, D-3.caps, D-3.unit, D-3.confl, D-3.sup, D-3.KL
+and D-3.list, and the statements L-3.2 and L-3.3 (items R-21 to R-31). The "Reviewed by"
+lines are in `blueprint/FIDELITY.md`.
+
+**Awaiting review since 2026-10-08:** the explicit bound and Proposition 3.4 (blueprint
+D-3.bound and P-3.4; sheet items R-32 and R-33), held by the user for a second reading.
+Their fidelity notes, F-BOUND and P-3.4, carry no "Reviewed by" line.
+
+The sanity lemmas proved in that slice (blueprint `S-M4.*`) are checks on the new
+definitions; they are proved, and they are not evidence for the three results.
 
 ## The old programme
 

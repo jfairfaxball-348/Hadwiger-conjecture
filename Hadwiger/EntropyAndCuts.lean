@@ -10,7 +10,8 @@ Paper, Section 3.1 ("Entropy minimizers and terminal cuts"): Lemma 3.2
 
 **Both lemmas are stated here and neither is proved**: each proof is `sorry` (milestone M4,
 first slice, statements only). By the user's decision of 2026-10-07 no proof is written
-before the statements are signed off.
+before the statements are signed off. The user signed off both statements on 2026-10-08
+(`blueprint/M4_REVIEW_SHEET.md`, items R-30 and R-31), so the proofs are the next slices.
 
 Lemma 3.3 is stated in the abstract setting: any finite type with a law, in place of the
 paper's `Ω_n` with `μ_n`, and real numbers `M`, `B` in place of `M = 2^1000` and `2^{DN}`.

@@ -24,20 +24,23 @@ Rules (binding, from `AGENTS.md`):
   C-1.2 were removed at M1 by proofs, the row for the first assertion of P-3.5 at M2, and
   the three rows for the two open parts of L-2.2 and the first half of S-2.3 at M3, which
   left 1. The first slice of M4 was "statements only" and added 5.)
-- The five new rows are statements that are **not yet signed off** by the user
-  (`blueprint/M4_REVIEW_SHEET.md`). By the user's decision of 2026-10-07 no proof of them
-  is to be written before that sign-off.
+- Of the five new rows, four are statements the user signed off on 2026-10-08 (the three
+  assertions of Lemma 3.2 and Lemma 3.3; items R-30 and R-31 of
+  `blueprint/M4_REVIEW_SHEET.md`), so their proofs may be written. The fifth, the bound of
+  Proposition 3.4, is **not signed off**: the user held it for a second reading (R-32,
+  R-33). By the user's decision of 2026-10-07 no proof of it is to be written before its
+  sign-off. A sign-off is of the statement; none of the five is proved.
 - The files under `Hadwiger/Sanity/` (three added at milestone M0, one at M3, four in the
   first slice of M4) do not contain it.
 
 | File | Declaration | Kind | Blueprint ID | Milestone | Note |
 |---|---|---|---|---|---|
-| `Hadwiger/EntropyAndCuts.lean` | `Hadwiger.exists_terminal_cut` | `sorry` | L-3.3 | M4 | Lemma 3.3 (terminal cut), abstract and without division; stated in the first slice of M4, unreviewed; its proof is the third slice |
-| `Hadwiger/EntropyAndCuts.lean` | `Hadwiger.neg_log_mass_le_relEntropy_of_minimizer` | `sorry` | L-3.2 | M4 | Lemma 3.2, third assertion; stated in the first slice of M4, unreviewed; its proof is the second slice |
-| `Hadwiger/EntropyAndCuts.lean` | `Hadwiger.relEntropy_le_sub_of_minimizer` | `sorry` | L-3.2 | M4 | Lemma 3.2, second assertion; stated in the first slice of M4, unreviewed; its proof is the second slice |
-| `Hadwiger/EntropyAndCuts.lean` | `Hadwiger.relEntropy_minimizer_pos` | `sorry` | L-3.2 | M4 | Lemma 3.2, first assertion; stated in the first slice of M4, unreviewed; its proof is the second slice |
+| `Hadwiger/EntropyAndCuts.lean` | `Hadwiger.exists_terminal_cut` | `sorry` | L-3.3 | M4 | Lemma 3.3 (terminal cut), abstract and without division; stated in the first slice of M4; statement signed off by the user on 2026-10-08; its proof is the third slice |
+| `Hadwiger/EntropyAndCuts.lean` | `Hadwiger.neg_log_mass_le_relEntropy_of_minimizer` | `sorry` | L-3.2 | M4 | Lemma 3.2, third assertion; stated in the first slice of M4; statement signed off by the user on 2026-10-08; its proof is the second slice |
+| `Hadwiger/EntropyAndCuts.lean` | `Hadwiger.relEntropy_le_sub_of_minimizer` | `sorry` | L-3.2 | M4 | Lemma 3.2, second assertion; stated in the first slice of M4; statement signed off by the user on 2026-10-08; its proof is the second slice |
+| `Hadwiger/EntropyAndCuts.lean` | `Hadwiger.relEntropy_minimizer_pos` | `sorry` | L-3.2 | M4 | Lemma 3.2, first assertion; stated in the first slice of M4; statement signed off by the user on 2026-10-08; its proof is the second slice |
 | `Hadwiger/Main.lean` | `Hadwiger.exists_indepNum_le_two_and_connectedMatchingNumber_lt` | `sorry` | T-1.1 | M17 | Theorem 1.1; needs Proposition 3.4 (M4) and Theorem 3.1 (M5 to M16) |
-| `Hadwiger/RandomSample.lean` | `Hadwiger.mass_listLaw_le_sampleBound` | `sorry` | P-3.4 | M4 | Proposition 3.4 as an explicit bound; stated in the first slice of M4, unreviewed; needs Lemma 3.2 and Lemma 3.3; its proof is the fourth and fifth slices |
+| `Hadwiger/RandomSample.lean` | `Hadwiger.mass_listLaw_le_sampleBound` | `sorry` | P-3.4 | M4 | Proposition 3.4 as an explicit bound; stated in the first slice of M4; **unreviewed**, held by the user on 2026-10-08 for a second reading; needs Lemma 3.2 and Lemma 3.3; its proof is the fourth and fifth slices and may not start before its sign-off |
 
 ## Declarations that depend on `sorry` without containing one
 

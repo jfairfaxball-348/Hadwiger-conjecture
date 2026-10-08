@@ -6,17 +6,23 @@ Statuses of individual results are in `blueprint/BLUEPRINT.md`, never here.
 ## The single next task
 
 **M4, second slice: prove Lemma 3.2** (blueprint L-3.2: the three assertions, in
-`Hadwiger/EntropyAndCuts.lean`), by the paper's proof. **It may not start before the user
-has signed off the statement layer**, at least the items it rests on: R-22 (laws), R-28
-(relative entropy) and R-30 (Lemma 3.2) of `blueprint/M4_REVIEW_SHEET.md`, with questions
-Q1, Q4 and Q6 answered. If an answer changes a definition or a statement, that change comes
-first, in its own commit.
+`Hadwiger/EntropyAndCuts.lean`), by the paper's proof. It may start: the items it rests on
+were signed off by the user on 2026-10-08 (R-22 laws, R-28 relative entropy, R-30 Lemma 3.2
+of `blueprint/M4_REVIEW_SHEET.md`), and questions Q1, Q4 and Q6 were answered without any
+change to the sources. The statements of Lemma 3.2 are not to be changed while proving
+them; a statement found false or unprovable is a result to record and report.
+
+Still open from the first slice, and **not** part of the second: items R-32 and R-33 of the
+sheet, the explicit bound and Proposition 3.4, which the user held on 2026-10-08 for a
+second reading. No proof of the bound may be written before they are signed off. Lemma 3.2
+and Lemma 3.3 (the second and third slices) do not depend on them.
 
 The first slice of M4 was done on 2026-10-08 on branch `m4-statement-layer`: the
 definitions of the statement layer of Sections 3.1 and 3.2, the statements of Lemma 3.2,
 Lemma 3.3 and Proposition 3.4 (five `sorry`s; none proved), their fidelity notes, the review
-sheet and the sanity lemmas. **It is awaiting the user's sign-off.** State under M4 below.
-Whether the branch has been merged into `main` is a question for `git log main`.
+sheet and the sanity lemmas. The user signed off eleven of its thirteen items the same day.
+State under M4 below. Whether the branch has been merged into `main` is a question for
+`git log main`.
 
 M3 was completed on 2026-10-07 on branch `m3-hole-relation`: Lemma 2.2 and equation (2.3)
 are proved, and the non-vacuity lemma for the hole relation is stated and proved. The user
@@ -308,7 +314,9 @@ M1 to M4 are independent of M5 to M17. When M1, M2 and M17 are done, T-FINAL is 
      Lemma 3.3; the fingerprint procedure; the union bound and Proposition 3.4. Each a
      branch and a merge of its own.
 - **State on 2026-10-08, after the first slice** (statuses are in the blueprint, not here):
-  - Done, on branch `m4-statement-layer`, and **awaiting sign-off**. Ten groups of
+  - Done, on branch `m4-statement-layer`. Signed off by the user on 2026-10-08 except for
+    the explicit bound and Proposition 3.4 (sheet items R-32, R-33), which are held; the
+    six questions of the sheet were all answered as recommended. Ten groups of
     definitions, none containing `sorry`: an abstract hole relation with its graph on
     positions and the instance from Section 2.1; laws and masses; marginals and products;
     the three caps; units and conflicts; the conflict probability; the conclusion of
@@ -317,8 +325,9 @@ M1 to M4 are independent of M5 to M17. When M1, M2 and M17 are done, T-FINAL is 
     bound of Proposition 3.4. The existence half of Proposition 3.4 is derived from the
     bound in Lean. Theorem 3.1 is **not** stated.
   - No proof of Lemma 3.2, Lemma 3.3 or the bound was written.
-  - The two things point 3 left open are now proposals, as questions Q1 and Q2 of
-    `blueprint/M4_REVIEW_SHEET.md`: a law is a real weight function with a predicate
+  - The two things point 3 left open were put to the user as questions Q1 and Q2 of
+    `blueprint/M4_REVIEW_SHEET.md` and accepted on 2026-10-08 (for Q2, as the form
+    proposed; the item itself is held): a law is a real weight function with a predicate
     (`IsLaw`); the bound is `(|Ω|^2 + 1)^L (C(m,k)/M^k + m^{2k}/B^k)` with
     `L = 1 + ⌈log B/(−log(1 − ε))⌉` and `k = ⌈m/200⌉`. The sheet has four further questions.
   - The bound was derived by hand from the paper's proof (`blueprint/FIDELITY.md`,

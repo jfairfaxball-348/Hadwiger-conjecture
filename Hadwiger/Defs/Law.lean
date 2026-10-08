@@ -11,8 +11,8 @@ finite set"; it is the standard notion, a function with nonnegative values that 
 one. "The inequalities in (3.1) are pointwise inequalities of measures on the finite raw
 spaces" (Theorem 3.1).
 
-Representation chosen here, **put to the user as question Q1 of
-`blueprint/M4_REVIEW_SHEET.md` and not yet signed off**: a law on a finite type `α` is a
+Representation, decided by the user on 2026-10-08 (question Q1 of
+`blueprint/M4_REVIEW_SHEET.md`): a law on a finite type `α` is a
 function `p : α → ℝ` satisfying the predicate `IsLaw`. Sums are finite sums over the type.
 No measure theory is used.
 

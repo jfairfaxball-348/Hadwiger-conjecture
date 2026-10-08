@@ -5,11 +5,12 @@ what the paper means, and one per target statement, recording every difference i
 
 **Review status.** Every note in the sections "Definitions" and "Target statements" was
 signed off by the user, John Fairfax-Ball, on 2026-10-07, and carries its "Reviewed by"
-line. **The notes of the last section, "Milestone M4, first slice — notes awaiting
-review", were added on 2026-10-08 and are unreviewed**; they carry no "Reviewed by" line.
-(Until 2026-10-08 this paragraph said that every note below was signed off. That stopped
-being true when the M4 notes were added, and the paragraph was changed for that reason
-only. No signed note was altered.)
+line. The notes of the last section, "Milestone M4, first slice", were added on 2026-10-08.
+Eleven of them were signed off by the user the same day and carry their "Reviewed by"
+lines. **Two are not reviewed: F-BOUND and P-3.4**, the explicit bound and Proposition 3.4,
+which the user held for a second reading. (Until 2026-10-08 this paragraph said that every
+note below was signed off. That stopped being true when the M4 notes were added, and the
+paragraph was changed for that reason only. No signed note was altered.)
 
 How the sign-off of 2026-10-07 came about, so that its weight can be judged:
 
@@ -488,13 +489,28 @@ user's sign-off on `blueprint/M0_REVIEW_SHEET.md` is for.
 
 ---
 
-## Milestone M4, first slice — notes awaiting review
+## Milestone M4, first slice
 
-**Every note in this section is unreviewed.** They were written on 2026-10-08 by the worker
-who wrote the definitions and statements they describe. None carries a "Reviewed by" line.
-The review sheet for them is `blueprint/M4_REVIEW_SHEET.md`, items R-21 to R-33, with six
-questions at its head. Until the user signs an item off, the definition or statement it
-describes is a proposal.
+**Review status of this section.** Eleven of its thirteen notes were signed off by the user,
+John Fairfax-Ball, on 2026-10-08, and carry their "Reviewed by" lines: F-HOLEREL, F-LAW,
+F-MARG, F-CAPS, F-UNIT, F-CONFLPROB, F-SUP, F-KL, F-LIST, L-3.2 and L-3.3 (sheet items R-21
+to R-31). **Two are not reviewed**: F-BOUND and P-3.4 (items R-32 and R-33), which the user
+held for a second reading. The six questions of the sheet were answered the same day, all
+as the worker had recommended; the answers are recorded as "Decision" lines in the notes
+they concern. The question, the options and the answers are quoted on
+`blueprint/M4_REVIEW_SHEET.md` and in `docs/SESSION_LOG.md` (M4 first-slice session).
+
+How this sign-off came about, so that its weight can be judged. The notes were written on
+2026-10-08 by the worker who wrote the definitions and statements they describe, in the
+same session; nobody independent read them before the user. The user was shown the review
+sheet and a summary, and signed the eleven items by choosing the option the worker had
+marked as recommended. The sign-off covers each note, and the Lean text it describes, as
+they stood at the commit that records it. A sign-off says that the Lean text says what the
+paper says, in the abstract form decided; it does not say that a statement is true. Lemma
+3.2 and Lemma 3.3 are signed off as statements and are **not proved**.
+
+This section was headed "notes awaiting review" until the sign-off was recorded; the text
+of the notes was not changed when the lines were added.
 
 The setting, decided by the user on 2026-10-07 (`blueprint/MILESTONES.md`, M4): Section 3 is
 formalised for any finite type with a law and any symmetric, loopless, triangle-free
@@ -552,6 +568,9 @@ Equation numbers below are those of the paper's PDF: (3.1) is `eq:raw-law-caps`,
 - Proved at M4: the instance and the `rfl` (S-M4.rel); the graph on positions has
   `α(G) ≤ 2`, by the proof of the first half of equation `eq:sample-independence`
   (blueprint S-2.3) word for word (`HoleRel.indepNum_positionGraph_le_two`, S-M4.support).
+- Decision (user, 2026-10-08, question Q3): the abstract relation is the bare structure
+  `HoleRel`, not a `SimpleGraph` with `CliqueFree 3`.
+- Reviewed by John Fairfax-Ball, 2026-10-08 (sheet item R-21).
 
 ### F-LAW — laws on a finite type, and the mass of a set (new) — D-3.law
 
@@ -593,6 +612,9 @@ Equation numbers below are those of the paper's PDF: (3.1) is `eq:raw-law-caps`,
 - Proved at M4 (S-M4.law, S-M4.mass): the link with Mathlib's `StdSimplex`; a point mass
   and the uniform weights are laws; `mass` is `0` on the empty set, the total on the whole
   type, the weight on a singleton, monotone, and at most `1` for a law.
+- Decision (user, 2026-10-08, question Q1): a law is a real weight function with the predicate
+  `IsLaw`, with finite sums; not a bundled object, not `PMF`, not a measure.
+- Reviewed by John Fairfax-Ball, 2026-10-08 (sheet item R-22).
 
 ### F-MARG — marginals and the product law (new) — D-3.marg
 
@@ -609,6 +631,7 @@ Equation numbers below are those of the paper's PDF: (3.1) is `eq:raw-law-caps`,
   and both marginals of a law are laws.
 - New. Mathlib's `Measure.fst`, `Measure.snd`, `Measure.prod` and `PMF.map` are for
   measures and `PMF`s, which are not used (F-LAW).
+- Reviewed by John Fairfax-Ball, 2026-10-08 (sheet item R-23).
 
 ### F-CAPS — the three caps of equation (3.1) (new) — D-3.caps
 
@@ -630,6 +653,7 @@ Equation numbers below are those of the paper's PDF: (3.1) is `eq:raw-law-caps`,
   `M = B = 1` the caps hold for `σ = μ^2`, for every law `μ`; that is the check the user
   named ("the uniform law on pairs satisfies the three caps with both caps equal to 1").
 - Junk values: none.
+- Reviewed by John Fairfax-Ball, 2026-10-08 (sheet item R-24).
 
 ### F-UNIT — units and conflicts (new) — D-3.unit
 
@@ -663,6 +687,7 @@ Equation numbers below are those of the paper's PDF: (3.1) is `eq:raw-law-caps`,
   does not use the absence of loops; two units can conflict; and the paper's sentence "Two
   disjoint edges fail to touch precisely when all four cross pairs are holes" holds for
   `Conflict` and the signed-off `EdgesTouch` in the graph on positions.
+- Reviewed by John Fairfax-Ball, 2026-10-08 (sheet item R-25).
 
 ### F-CONFLPROB — the conflict probability of a law (new) — D-3.confl
 
@@ -678,6 +703,7 @@ Equation numbers below are those of the paper's PDF: (3.1) is `eq:raw-law-caps`,
   includes `u = v`, which contributes nothing because no pair conflicts with itself.
 - Difference in form: defined for any weight function `σ`.
 - Junk values: none.
+- Reviewed by John Fairfax-Ball, 2026-10-08 (sheet item R-26).
 
 ### F-SUP — the conclusion of Theorem 3.1 as a hypothesis (new) — D-3.sup
 
@@ -723,6 +749,7 @@ Equation numbers below are those of the paper's PDF: (3.1) is `eq:raw-law-caps`,
 - It is not always empty: in an example on two elements it holds, with a law that satisfies
   the caps, exactly for `ε ≤ 1/2` (`exists_holeRel_supersaturated`, proved at M4). That is
   the check the user named, and it pins the property from both sides in that example.
+- Reviewed by John Fairfax-Ball, 2026-10-08 (sheet item R-27).
 
 ### F-KL — relative entropy (new) — D-3.KL
 
@@ -755,6 +782,9 @@ Equation numbers below are those of the paper's PDF: (3.1) is `eq:raw-law-caps`,
   against `q` is `−log q(a)`; against the uniform law on `n` points it is `log n`. The last
   two fix the sign, the order of the two arguments and the treatment of points of weight
   zero. Not proved here: `D ≥ 0`. The paper proves it within the proof of Lemma 3.2.
+- Decision (user, 2026-10-08, question Q4): relative entropy is a real number given by the
+  paper's finite sum, with the junk value described above; statements guard against it.
+- Reviewed by John Fairfax-Ball, 2026-10-08 (sheet item R-28).
 
 ### F-LIST — the law of a list of independent elements (new) — D-3.list
 
@@ -772,6 +802,7 @@ Equation numbers below are those of the paper's PDF: (3.1) is `eq:raw-law-caps`,
 - Degenerate cases. `m = 0`: there is one list and it has weight `1` (`listLaw_zero`).
 - Proved at M4 (S-M4.list): if `μ` is a law then `listLaw μ m` is a law, that is, it has
   total mass `1`; the probability that all `m` elements lie in `S` is `μ(S)^m`.
+- Reviewed by John Fairfax-Ball, 2026-10-08 (sheet item R-29).
 
 ### L-3.2 — Lemma 3.2
 
@@ -842,6 +873,10 @@ Equation numbers below are those of the paper's PDF: (3.1) is `eq:raw-law-caps`,
   restriction of `ρ` to `S`) was followed at the first reading and again for this slice,
   with Lean's conventions for the terms where `ρ` vanishes. Nothing was found.
 - Not proved: all three are `sorry`. Status `STATED`.
+- Decision (user, 2026-10-08, question Q6): the paper's hypotheses are kept as printed
+  ("compact"; `q` a probability measure). Whether the proofs use them is to be recorded
+  when they are written.
+- Reviewed by John Fairfax-Ball, 2026-10-08 (sheet item R-30).
 
 ### L-3.3 — Lemma 3.3
 
@@ -892,6 +927,7 @@ Equation numbers below are those of the paper's PDF: (3.1) is `eq:raw-law-caps`,
   `S = L_0 ∪ R_0`, for `M ≥ 0` and `B ≥ 0`, and the covering claim (recorded since the
   first reading in `blueprint/PAPER_ISSUES.md`, spot checks).
 - Not proved: `sorry`. Status `STATED`.
+- Reviewed by John Fairfax-Ball, 2026-10-08 (sheet item R-31).
 
 ### F-BOUND — the explicit bound of Proposition 3.4 (new) — D-3.bound
 
@@ -1043,6 +1079,12 @@ parameters and are left to M17 by the user's decision.
   `(n^2 + 1)^L (m/M + m^2/B)` for `1 ≤ m ≤ 200`, and is at least `1` for `0 < M ≤ 1` and
   for `0 < B ≤ 1`; and the counterexample at `ε = 0`. **None of these is evidence that the
   bound is right.**
+- Decision (user, 2026-10-08, question Q2): the form of the bound is (A), the form stated
+  here.
+- **Not reviewed.** The user held this note's item (R-32) on 2026-10-08 for a second
+  reading: the bound is a hand derivation and is not in the paper in this form. The
+  decision on Q2 fixes which form is proposed; it is not a sign-off of the derivation
+  or of the definitions.
 
 ### P-3.4 — Proposition 3.4
 
@@ -1151,3 +1193,9 @@ parameters and are left to M17 by the user's decision.
 - Not done, and not part of this slice: Theorem 1.1 is not derived from the existence
   statement. That needs Theorem 3.1 and the construction, and the check that
   `sampleBound < 1` for the paper's parameters (M17).
+- Decision (user, 2026-10-08, question Q5): `μ` is any law; no hypothesis that it is positive
+  is added. The extra step this costs the proof (F-BOUND, step 0) will be recorded as a
+  departure from the paper's argument when the proof is written.
+- **Not reviewed.** The user held this note's item (R-33) on 2026-10-08 for a second
+  reading, together with R-32. Until it is signed off the two statements of
+  Proposition 3.4 are a proposal, and no proof of the bound is to be written.

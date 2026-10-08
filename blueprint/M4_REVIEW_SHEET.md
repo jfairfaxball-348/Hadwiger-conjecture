@@ -1,9 +1,9 @@
-# M4 review sheet — the statement layer of Sections 3.1 and 3.2, for sign-off
+# M4 review sheet — the statement layer of Sections 3.1 and 3.2, signed off in part by the user on 2026-10-08
 
 Prepared on 2026-10-08 in the first slice of milestone M4, on branch `m4-statement-layer`.
 
 **What this is.** One item for each new fidelity note of `blueprint/FIDELITY.md` (section
-"Milestone M4, first slice — notes awaiting review"): the paper's own sentences, the Lean
+"Milestone M4, first slice"): the paper's own sentences, the Lean
 text, what is machine-checked about it, the comparison clause by clause, every difference
 in form, and every doubt. Six questions for the user are at the head. It exists so that
 the user can sign each item off.
@@ -12,7 +12,29 @@ the user can sign each item off.
 wrote the definitions, the statements and the notes in the same session, so nobody
 independent has read them. An item counts as reviewed only through the user's sign-off,
 recorded on its sign-off line and then copied into `blueprint/FIDELITY.md` as a "Reviewed
-by" line. **Nothing on this sheet is signed off.**
+by" line.
+
+**Sign-off.** On 2026-10-08, at the end of the session that wrote this sheet, the user was
+asked four things in one prompt. The two that concern the sheet, verbatim:
+
+```text
+Question (Sheet Q1-Q6): The review sheet has six questions (Q1 law = real weight function with a predicate; Q2 bound = the form shown above; Q3 abstract relation = a bare structure, not SimpleGraph; Q4 relative entropy = a real number with a junk value where q vanishes; Q5 Proposition 3.4 does not assume μ positive; Q6 Lemma 3.2 keeps the paper's hypotheses as printed). How do you answer them?
+  -> Accept all six
+Question (Sign-off): Do you sign off the sheet's 13 items (R-21 to R-29 and R-32 are definitions; R-30 Lemma 3.2; R-31 Lemma 3.3; R-33 Proposition 3.4)? A sign-off says the Lean text says what the paper says in the abstract form you decided. It does not say the statements are true.
+  -> R-21 to R-31 now; hold R-32, R-33 (Recommended)
+```
+
+The descriptions of the chosen options, as shown:
+
+```text
+Accept all six: All six recommendations stand. The Lean sources already follow them, so nothing is rewritten; the answers are recorded on the sheet and in the notes.
+R-21 to R-31 now; hold R-32, R-33 (Recommended): The definitions and Lemmas 3.2 and 3.3 get 'Reviewed by' lines, so the next two slices can start. The explicit bound and Proposition 3.4 wait for a second reading: the bound is my hand derivation and is not in the paper in that form.
+```
+
+So: **items R-21 to R-31 are signed off. Items R-32 and R-33 are not**; they are held for a
+second reading. The sign-off lines below were filled in on that instruction. They cover
+each item as it stands at the commit that records the sign-off, and nothing changed later.
+The rest of the exchange is quoted in `docs/SESSION_LOG.md` (M4 first-slice session).
 
 **What is being signed off.** Ten groups of definitions (R-21 to R-29 and R-32) and three
 results (R-30, R-31, R-33). The three results are six Lean statements. Five of them are
@@ -48,7 +70,21 @@ records call the paper's equation (2.2) "equation (2.3)".
 
 ---
 
-## The six questions
+## The six questions, and the user's decisions
+
+The user answered on 2026-10-08 by choosing the option "Accept all six":
+
+| # | Item | The question | Decision | What was done |
+|---|---|---|---|---|
+| Q1 | R-22 | How is a law represented? | (a): a real weight function with the predicate `IsLaw` | Recorded in F-LAW. No change to the sources. |
+| Q2 | R-32, R-33 | What is the exact form of the explicit bound? | (A): `(n^2 + 1)^L (C(m,k)/M^k + m^{2k}/B^k)` | Recorded in F-BOUND. This fixes the form proposed. **It is not a sign-off of R-32 or R-33**, which are held. |
+| Q3 | R-21 | How is the abstract relation represented? | (a): the bare structure `HoleRel` | Recorded in F-HOLEREL. |
+| Q4 | R-28, R-30 | Is relative entropy a real number with a junk value? | (a): yes | Recorded in F-KL. |
+| Q5 | R-33 | Does Proposition 3.4 assume `μ` positive? | (a): no | Recorded in note P-3.4. The item itself is held. |
+| Q6 | R-30 | Does Lemma 3.2 keep the paper's hypotheses as printed? | (a): yes | Recorded in note L-3.2. |
+
+In every question the decision is the alternative the worker had recommended. The text of
+the questions below is as it was put to the user.
 
 Each has the alternatives considered and a recommendation. The recommendation is the
 worker's, and the Lean sources follow it. Choosing another alternative means rewriting the
@@ -190,7 +226,7 @@ Affects R-30.
   2. The hand derivation of the bound of Proposition 3.4 seems to use only symmetry. The
      statements are nevertheless about a `HoleRel`, as decided. Nothing is lost for the
      paper, whose relation has all three properties.
-- **Sign-off:** ☐ accepted ☐ change requested — by ____ on ____
+- **Sign-off:** ☑ accepted ☐ change requested — by John Fairfax-Ball on 2026-10-08
 
 ### R-22 — laws and the mass of a set — D-3.law, note F-LAW
 
@@ -225,7 +261,7 @@ Affects R-30.
      and the hypothesis as two arguments.
   3. There is no law on an empty type. Every statement below that assumes a law therefore
      excludes the empty type; that is intended and is the named hypothesis for that case.
-- **Sign-off:** ☐ accepted ☐ change requested — by ____ on ____
+- **Sign-off:** ☑ accepted ☐ change requested — by John Fairfax-Ball on 2026-10-08
 
 ### R-23 — marginals and the product law — D-3.marg, note F-MARG
 
@@ -247,7 +283,7 @@ Affects R-30.
   functions on two types.
 - **Doubts:** none. That `σ_1` is the marginal on the *first* endpoint is a reading of the
   subscript; the three caps are symmetric in the two marginals, so nothing depends on it.
-- **Sign-off:** ☐ accepted ☐ change requested — by ____ on ____
+- **Sign-off:** ☑ accepted ☐ change requested — by John Fairfax-Ball on 2026-10-08
 
 ### R-24 — the three caps of equation (3.1) — D-3.caps, note F-CAPS
 
@@ -269,7 +305,7 @@ Affects R-30.
 - **Differences in form:** `M` and `B` are arbitrary real numbers, as instructed; the
   paper's are `2^1000` and `2^{DN}`.
 - **Doubts:** none.
-- **Sign-off:** ☐ accepted ☐ change requested — by ____ on ____
+- **Sign-off:** ☑ accepted ☐ change requested — by John Fairfax-Ball on 2026-10-08
 
 ### R-25 — units and conflicts — D-3.unit, note F-UNIT
 
@@ -305,7 +341,7 @@ Affects R-30.
      the definition as written allows it and the proof of Proposition 3.4 needs it.
   2. "The endpoints of a unit may be dependent" is read as a remark about a law on units,
      with nothing to formalise.
-- **Sign-off:** ☐ accepted ☐ change requested — by ____ on ____
+- **Sign-off:** ☑ accepted ☐ change requested — by John Fairfax-Ball on 2026-10-08
 
 ### R-26 — the conflict probability — D-3.confl, note F-CONFLPROB
 
@@ -323,7 +359,7 @@ Affects R-30.
   `σ ⊗ σ`. "have all four cross holes": the event `Conflict`. "with probability": `mass`.
 - **Differences in form:** defined for any weight function.
 - **Doubts:** none. The sum includes the pairs `(u, u)`, which contribute nothing.
-- **Sign-off:** ☐ accepted ☐ change requested — by ____ on ____
+- **Sign-off:** ☑ accepted ☐ change requested — by John Fairfax-Ball on 2026-10-08
 
 ### R-27 — the conclusion of Theorem 3.1 as a hypothesis — D-3.sup, note F-SUP
 
@@ -359,7 +395,7 @@ Affects R-30.
      well cannot be checked before the construction exists.
   3. The property can hold for an empty reason. Statements that assume it are examined for
      that in R-33.
-- **Sign-off:** ☐ accepted ☐ change requested — by ____ on ____
+- **Sign-off:** ☑ accepted ☐ change requested — by John Fairfax-Ball on 2026-10-08
 
 ### R-28 — relative entropy — D-3.KL, note F-KL
 
@@ -385,7 +421,7 @@ Affects R-30.
   2. PI-008: the paper itself writes `D(ρ'‖ρ)` with `ρ` not strictly positive.
   3. Agreement with Mathlib's `klDiv` is not proved (S-M4.kl-mathlib, `NOT_STATED`).
   4. Nonnegativity is not proved here; the paper proves it inside the proof of Lemma 3.2.
-- **Sign-off:** ☐ accepted ☐ change requested — by ____ on ____
+- **Sign-off:** ☑ accepted ☐ change requested — by John Fairfax-Ball on 2026-10-08
 
 ### R-29 — the law of a list of independent elements — D-3.list, note F-LIST
 
@@ -406,7 +442,7 @@ Affects R-30.
   law `μ_n`": weight `∏ μ(o_i)`.
 - **Differences in form:** any weight function on any type.
 - **Doubts:** none.
-- **Sign-off:** ☐ accepted ☐ change requested — by ____ on ____
+- **Sign-off:** ☑ accepted ☐ change requested — by John Fairfax-Ball on 2026-10-08
 
 ---
 
@@ -471,7 +507,7 @@ statement says what the paper says, in the abstract form decided.
   4. Whether the third assertion should also be available for a `ρ'` that is not in `P`
      (it is true for any law `ρ'` that vanishes where `ρ` does). The paper states it for
      `ρ' ∈ P`, and that is what is stated.
-- **Sign-off:** ☐ accepted ☐ change requested — by ____ on ____
+- **Sign-off:** ☑ accepted ☐ change requested — by John Fairfax-Ball on 2026-10-08
 
 ### R-31 — Lemma 3.3 — L-3.3
 
@@ -502,7 +538,7 @@ statement says what the paper says, in the abstract form decided.
   1. There is no sign condition on `M` and `B`. The statement is claimed for all real
      numbers, by the case split above. The paper has positive values only.
   2. "Either … or" is read inclusively.
-- **Sign-off:** ☐ accepted ☐ change requested — by ____ on ____
+- **Sign-off:** ☑ accepted ☐ change requested — by John Fairfax-Ball on 2026-10-08
 
 ### R-32 — the explicit bound — D-3.bound, note F-BOUND
 
@@ -550,7 +586,7 @@ statement says what the paper says, in the abstract form decided.
      S-M4.eps-needed shows it must.
   4. `⌈·⌉₊` is `0` on negative reals, so for `0 < B < 1` the length is `1`. Harmless by step
      2 of the derivation.
-- **Sign-off:** ☐ accepted ☐ change requested — by ____ on ____
+- **Sign-off:** ☐ accepted ☐ change requested — **not signed**: held by John Fairfax-Ball on 2026-10-08 for a second reading
 
 ### R-33 — Proposition 3.4 — P-3.4
 
@@ -610,7 +646,7 @@ statement says what the paper says, in the abstract form decided.
      equation (3.3). It is not checked here and belongs to M17.
   5. Theorem 1.1 is not derived from the second statement. Nothing of M4 changes the status
      of the final theorem.
-- **Sign-off:** ☐ accepted ☐ change requested — by ____ on ____
+- **Sign-off:** ☐ accepted ☐ change requested — **not signed**: held by John Fairfax-Ball on 2026-10-08 for a second reading
 
 ---
 

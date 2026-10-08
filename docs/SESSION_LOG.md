@@ -2271,3 +2271,111 @@ be a fast-forward, after CI has passed on the commit merged. **If `main` contain
 commit, the merge was done**; `git log main` is the record. The user's answers, if they
 come after this commit, belong in a records-only commit on this branch or at the head of
 the next session's entry, as was done for M1 to M3.
+
+### The user's answers
+
+The answers came in the same session, after commit `0cff648`. So they are recorded here, in
+the records-only commit that the merge option below names, and not at the head of the next
+entry. This supersedes the last sentence of "Merge" above.
+
+What the user had been shown in the conversation before the prompt: a checkpoint report
+(the upstream finding and its extent; the wrong equation label; the blueprint changes and
+counts; the six `sorry`s; the explicit bound with its hypotheses, that it is a hand
+derivation and contains one step that is not the paper's; the three paper issues; the
+single next task), and the review sheet itself, sent as a file.
+
+One prompt, four questions. The first three were answered by choosing an option, the
+fourth in the user's own words. Verbatim:
+
+```text
+Question 1 (Sheet Q1-Q6): The review sheet has six questions (Q1 law = real weight function with a predicate; Q2 bound = the form shown above; Q3 abstract relation = a bare structure, not SimpleGraph; Q4 relative entropy = a real number with a junk value where q vanishes; Q5 Proposition 3.4 does not assume μ positive; Q6 Lemma 3.2 keeps the paper's hypotheses as printed). How do you answer them?
+  -> Accept all six
+Question 2 (Sign-off): Do you sign off the sheet's 13 items (R-21 to R-29 and R-32 are definitions; R-30 Lemma 3.2; R-31 Lemma 3.3; R-33 Proposition 3.4)? A sign-off says the Lean text says what the paper says in the abstract form you decided. It does not say the statements are true.
+  -> R-21 to R-31 now; hold R-32, R-33 (Recommended)
+Question 3 (Merge): M4's first slice is on branch m4-statement-layer (6d9304b records, c2337a7 the statement layer, 0cff648 log): 6 sorry, audit and CI passed on the first two commits, no signed-off statement changed. What should go into main?
+  -> Merge all of it (Recommended)
+Question 4 (Follow-ups; several could be chosen): Which of these follow-ups do you want? Each would be done separately from M4's proof slices.
+  -> Whatever you recommend
+```
+
+The descriptions of the chosen options, as shown:
+
+```text
+1. All six recommendations stand. The Lean sources already follow them, so nothing is rewritten; the answers are recorded on the sheet and in the notes.
+2. The definitions and Lemmas 3.2 and 3.3 get 'Reviewed by' lines, so the next two slices can start. The explicit bound and Proposition 3.4 wait for a second reading: the bound is my hand derivation and is not in the paper in that form.
+3. Fast-forward main from 83d8d91 to the head of the branch, plus one records-only commit that writes your answers to this prompt into the sheet, the notes, the blueprint and the session log (no Lean change unless you asked for one above; CI must pass on it first). Push main and check the remote. This approval covers this merge only.
+```
+
+The options of question 4, as shown, none of which was marked as recommended:
+
+```text
+Correct '(2.3)' to '(2.2)': A records-only commit: the paper's equation number is fixed in unsigned text and Lean doc comments; signed notes get a status-update line instead of being rewritten; the blueprint ID S-2.3 stays as an ID. No statement changes.
+Compare our final statement with upstream's: Read only upstream's comparator statement for the main theorem (not its proofs or definitions beyond what the statement needs) and record how it relates to T-FINAL in docs/PROVENANCE.md. AGENTS.md allows comparing finished statements.
+Build upstream and audit its axioms: Fetch upstream's Lean at fd4aeeb into a scratch project outside this repository, build it without reading the proofs, and run #print axioms on its main theorem, so that 'upstream claims' becomes 'upstream's code compiles with these axioms'. Large download and build.
+None of these for now: Leave the label as recorded and upstream as recorded. Both stay on file in the session log and PROVENANCE.md.
+```
+
+The options not chosen, by label. Question 1: "All but Q5: assume μ positive", "All but Q2:
+discuss the bound", "I will answer one by one". Question 2: "Accept all 13 items", "Defer
+the review", "Change requested". Question 3: "Do not merge yet".
+
+So that the weight of the answers can be judged. In question 1 no option was marked as
+recommended, but each of the six answers accepted is the alternative the worker had
+recommended on the sheet. In questions 2 and 3 the option chosen is the one the worker had
+marked "(Recommended)". In question 2 the worker recommended holding back its own two
+items, R-32 and R-33, because the bound is a hand derivation that nobody else has read; the
+user agreed. Question 4 was handed back to the worker.
+
+What was done on these answers, in the commit that contains this section:
+
+- Question 1. The six decisions are recorded on the sheet (a table under "The six
+  questions, and the user's decisions") and as "Decision" lines in the notes they concern:
+  F-LAW (Q1), F-BOUND (Q2), F-HOLEREL (Q3), F-KL (Q4), P-3.4 (Q5), L-3.2 (Q6). No definition
+  or statement was changed. The decisions on Q2 and Q5 fix what is proposed for the bound
+  and for Proposition 3.4; they are not a sign-off of those two items.
+- Question 2. Items R-21 to R-31 are signed off: the sheet's sign-off lines; a "Reviewed by
+  John Fairfax-Ball, 2026-10-08" line under each of the eleven notes F-HOLEREL, F-LAW,
+  F-MARG, F-CAPS, F-UNIT, F-CONFLPROB, F-SUP, F-KL, F-LIST, L-3.2, L-3.3; and the eleven
+  blueprint rows D-3.rel, D-3.law, D-3.marg, D-3.caps, D-3.unit, D-3.confl, D-3.sup, D-3.KL,
+  D-3.list, L-3.2, L-3.3, which now say "signed off" where they said "unreviewed". **Items
+  R-32 and R-33 are not signed off**: notes F-BOUND and P-3.4 carry no "Reviewed by" line
+  and say that they are held; rows D-3.bound and P-3.4 still say "unreviewed". The sign-off
+  is of statements. Lemma 3.2 and Lemma 3.3 are still `sorry`.
+- The text of the thirteen notes was not changed when the lines were added: the diff of
+  `blueprint/FIDELITY.md` removes lines only in the paragraph at the head of the file and
+  in the introduction of the M4 section, which is now headed "Milestone M4, first slice".
+- Status remarks brought into step: the ledger (which of the five new rows are signed off),
+  `START_HERE.md`, `README.md`, `blueprint/MILESTONES.md` (the next task may start; R-32 and
+  R-33 are open), the layout table of `docs/LEAN_WORKFLOW.md`, and the headers of three
+  Lean files (`Hadwiger/Defs/Law.lean`, `Hadwiger/EntropyAndCuts.lean`,
+  `Hadwiger/RandomSample.lean`), comments only.
+- Scope of this commit: records, and comments in three Lean files. No definition, no
+  statement, no proof and no ledger key changed. The audit gives the same tally as before
+  it: 6 `sorry`, 181 entries, 179 declarations. The `pp.all` comparison was run again and
+  is byte-identical.
+- Question 3. The merge is carried out after this commit, so it cannot be recorded in it:
+  push the branch; wait for CI on this commit; fast-forward `main` to it; run the three
+  commands on `main`; push `main`; check `git ls-remote` against `HEAD`. **If `main`
+  contains this commit, the merge was done**; `git log main` is the record. The hash of
+  this commit, the CI runs on it and on `main`, and the result of the remote check belong
+  at the head of the next session's entry.
+- Question 4. The worker's recommendation, given after the answer, and what follows from
+  it:
+  1. *Correct the equation label*: yes, now, since it is cheap and removes a known wrong
+     label. In a commit of its own on a separate branch, because the merge approval above
+     covers the head of `m4-statement-layer` and one records-only commit and nothing else.
+  2. *Compare the final statement with upstream's*: yes, as a separate step on the same
+     follow-up branch. `AGENTS.md` allows comparing a finished statement, T-FINAL is
+     finished and signed off, and the comparison is about Section 1 notions only, so it
+     cannot touch the work on Section 3. It is the first time an upstream Lean file for
+     this paper is opened since the reorganisation, so it is done after the statement layer
+     of this session is committed, pushed and merged, and recorded with exactly what was
+     read.
+  3. *Build upstream and audit its axioms*: not now. It is a large download and build that
+     the user has not approved by name, and its natural place is the gate before M6, where
+     the question is whether to carry the independent proof past Theorem 3.1's statement.
+  These follow-ups are not part of this commit or of the merge. They are logged in an
+  addendum to this entry on their own branch, and that branch needs its own merge approval.
+
+Nothing of the second slice was started. The single next task is in
+`blueprint/MILESTONES.md`.

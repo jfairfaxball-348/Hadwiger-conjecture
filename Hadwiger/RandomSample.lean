@@ -16,8 +16,10 @@ stated for any finite type with a law and an abstract hole relation, as **an exp
 bound on the probability that the graph on positions of the random list has
 `cm(G) ≥ m/100`**, with the existence of a good list as a corollary when the bound is below
 `1`. The explicit bound, `sampleBound`, was derived by hand from the paper's proof; the
-derivation is in `blueprint/FIDELITY.md` (F-BOUND) and **is not a proof**. Its exact form is
-question Q2 of `blueprint/M4_REVIEW_SHEET.md` and is not yet signed off.
+derivation is in `blueprint/FIDELITY.md` (F-BOUND) and **is not a proof**. The user accepted
+its form on 2026-10-08 (question Q2 of `blueprint/M4_REVIEW_SHEET.md`) and held the
+sign-off of the bound and of this proposition for a second reading (items R-32, R-33).
+**Nothing in this file is signed off.**
 
 **The bound is stated here and not proved**: its proof is `sorry` (milestone M4, first
 slice, statements only). The corollary has a complete proof body and rests on the bound, so
