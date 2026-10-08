@@ -2413,3 +2413,37 @@ records" above). Corrected here, in a commit of its own:
   comments stripped the file is identical to `main`'s, and the `pp.all` comparison is
   byte-identical to `main` at `83d8d91` for both lists. The three commands pass, with the
   same tally.
+
+**Follow-up 2: the statement comparison with upstream.** In a second commit on
+`m4-followups`. One upstream Lean file was opened:
+`lean/ComparatorChallenges/HadwigerCounterexample.lean` at `fd4aeeb`, 56 lines, with its
+15-line configuration file. Its outline was listed first, by declaration keyword and name
+only, and showed four definitions of Section 1 and two theorems; the file was read only
+after that. Both theorems are stated with `sorry`, as a challenge file states them. Nothing
+of the construction, of Section 3 or of any proof is in it, and no file of
+`lean/OAI/Combinatorics/HadwigerCounterexample/` was opened. The file is in the session's
+scratch folder, not in the repository, and nothing of it was copied into the Lean sources.
+
+The comparison is in `docs/PROVENANCE.md`, "Upstream's comparator statement, compared with
+this project's". In short:
+
+- upstream's first statement bundles, for arbitrarily large `m ≥ 5` and a graph on `Fin m`:
+  `α ≤ 2`, `cm < m/100`, `h < 26m/75 + 2/3 < m/2 ≤ χ`, `h < χ`, and `χ` finite. That is
+  this project's T-1.1, the ordinary-chromatic half of C-1.2, and T-FINAL, in one;
+- upstream's second statement is the negation of Hadwiger's conjecture over the graphs on
+  `Fin m`, which implies this project's T-NOT-HC form directly;
+- the fractional chain (`χ_f`) and S-1.d have no upstream counterpart;
+- every "equivalent" there is expected, on the assumption that the two projects'
+  definitions of `cm` and `h` agree on finite graphs. **None is proved.**
+
+What it does not show: that upstream's claim is right. That needs a build and an axiom
+audit of upstream's code, which was not done.
+
+**Follow-up 3: building upstream and auditing its axioms.** Not done. It is a large
+download and build that the user has not approved by name, and the worker's recommendation
+is to decide it at the gate before M6. It is the one step that would turn "upstream
+claims" into "upstream's code compiles with these axioms".
+
+**State of `m4-followups`.** Two commits on top of `main` `8202e73`: the label correction,
+and the comparison with this addendum. No Lean code changed in either (comments in two Lean
+files in the first; no Lean file in the second). Not merged. The merge is put to the user.

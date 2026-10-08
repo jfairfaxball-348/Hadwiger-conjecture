@@ -187,8 +187,75 @@ calibration table below. Upstream's catalogue does not claim the fractional form
   true of upstream's catalogue on 2026-10-08; it is corrected there.
 - A statement-level comparison of T-FINAL with upstream's `not_hadwiger_conjecture` is
   allowed by `AGENTS.md` ("Comparing a finished statement here with upstream's statement is
-  allowed"). It has not been made. Whether to make it, and whether to build upstream's
-  code to check its axioms, are questions for the user.
+  allowed"). When this section was first written it had not been made. It was made later
+  the same day and is the next section. Whether to build upstream's code to check its
+  axioms is still a question for the user.
+
+### Upstream's comparator statement, compared with this project's (2026-10-08)
+
+Made on 2026-10-08, after the statement layer of M4's first slice had been committed,
+pushed and merged, as a follow-up the user left to the worker's recommendation
+(`docs/SESSION_LOG.md`, M4 first-slice session, addendum). `AGENTS.md` allows comparing a
+finished statement here with upstream's; T-FINAL, T-NOT-HC, C-1.2 and T-1.1 are finished
+statements, signed off on 2026-10-07.
+
+**What was opened, and nothing else.** One upstream Lean file,
+`lean/ComparatorChallenges/HadwigerCounterexample.lean` at `fd4aeeb` (56 lines, 1,765
+bytes), and its configuration `HadwigerCounterexample.json` (15 lines). Before the Lean
+file was read, its outline was listed by declaration keyword and name, to make sure it held
+statements only. It does: it imports Mathlib, defines four notions of Section 1, and
+states two theorems whose proofs are `sorry`, as a challenge file does. It contains nothing
+of the construction, of Section 3, or of any proof. This is the first upstream Lean file
+for this paper opened since Step 0. **No file of
+`lean/OAI/Combinatorics/HadwigerCounterexample/` was opened**, and nothing was built. The
+file was fetched into the session's scratch folder and is not stored in this repository.
+
+Its four definitions are the notions already compared in the table above, which were read
+at Step 0: a touching matching as a finite set of two-element cliques, pairwise disjoint and
+pairwise touching; `connectedMatchingNumber` as the supremum of their sizes; `HasCliqueMinor`
+by branch sets indexed by `Fin t`, for a vertex type in `Type`; `hadwigerNumber` as the
+supremum. The configuration names two theorems,
+`OAI.HadwigerCounterexample.exists_counterexamples` and
+`OAI.HadwigerCounterexample.not_hadwiger_conjecture`, the solution module
+`OAI.Combinatorics.HadwigerCounterexample.Main`, and as permitted axioms `propext`,
+`Quot.sound` and `Classical.choice`.
+
+**The two upstream statements, in words.**
+
+1. `exists_counterexamples`: for every `M` there are `m ≥ max(M, 5)` and a graph `G` on
+   `Fin m` with: `α(G) ≤ 2`; `cm(G) < m/100`; `h(G) < 26m/75 + 2/3`;
+   `26m/75 + 2/3 < m/2`; `m/2 ≤ χ(G)`; `h(G) < χ(G)`; and `χ(G)` finite. The comparisons
+   are in `ℚ`, and `χ(G)` enters as `chromaticNumber.toNat`, with two further clauses
+   saying that the chromatic number is not `⊤` and equals its `toNat`.
+2. `not_hadwiger_conjecture`: it is not the case that every graph on every `Fin m` has
+   `χ(G) ≤ h(G)`, compared in `ℕ∞`.
+
+**Comparison.** None of the relations below has been proved in Lean, here or (as far as
+this project knows) anywhere. "Expected" means: it follows if upstream's and this
+project's definitions of `cm` and `h` agree on finite graphs, which the table above
+expects and nobody has proved.
+
+| This project | Upstream's comparator statement | Relation |
+|---|---|---|
+| T-1.1 `exists_indepNum_le_two_and_connectedMatchingNumber_lt`: for every `N` some `m ≥ N` and `G` on `Fin m` with `α(G) ≤ 2`, `100·cm(G) < m` | the first two clauses of statement 1 | Expected equivalent in content: `cm < m/100` in `ℚ` is `100·cm < m` in `ℕ`; upstream also demands `m ≥ 5`, which is harmless for "arbitrarily large". The two definitions of `cm` differ in form. **So upstream's main statement contains this project's Theorem 1.1, the one `sorry` beneath the final theorem.** |
+| C-1.2 `exists_hadwigerNumber_lt_fractionalChromaticNumber`: `h < 26m/75 + 2/3 < m/2 ≤ χ_f ≤ χ` | clauses three to five of statement 1: `h < 26m/75 + 2/3 < m/2 ≤ χ` | Upstream's is the ordinary-chromatic chain only. This project's has `χ_f` in the middle and is the stronger statement. Here in `ℝ`, with `χ` exhibited as a natural number; upstream in `ℚ`, with `toNat` and the two finiteness clauses, which amount to the same thing. |
+| T-FINAL `exists_hadwigerNumber_lt_chromaticNumber`: for every `N` some `m ≥ N` and `G` on `Fin m` with `(h(G) : ℕ∞) < χ(G)` | the clause `h < χ.toNat` of statement 1, with the finiteness clauses | Expected equivalent in content: for a finite chromatic number the `ℕ∞` inequality is the inequality of naturals (S-M0.final-finite proves that reading here). |
+| T-NOT-HC `not_hadwigerConjecture`: `¬ HadwigerConjecture`, the conjecture being over every finite nonempty vertex type in `Type` | statement 2: the negation of the conjecture over the graphs on `Fin m`, every `m`, the empty graph included | Upstream negates the conjecture for a smaller class of graphs, so its statement implies this project's form directly (a counterexample on `Fin m` has `m ≥ 1`, since on `Fin 0` both sides are `0`). The converse needs invariance under relabelling the vertices, which is true and not proved here. Both are obtained from a graph on `Fin m`. |
+| S-1.d `not_fractionalHadwigerConjecture` | none | Not in upstream's selected statement, as its catalogue says. |
+
+**What this does and does not show.** It shows that what upstream claims to have formalised
+is, in content, Theorem 1.1 together with the ordinary-chromatic half of Corollary 1.2 and
+the final theorem; and that this project's statements say the same things in a different
+form, with the fractional chain in addition. It does not show that upstream's claim is
+right: whether `Main.lean` compiles, whether it is free of `sorry`, and which axioms it
+uses, are not known here. Finding that out means building upstream's code, which was not
+done and needs the user's go-ahead.
+
+**A consequence worth stating plainly.** If upstream's first statement is proved there, then
+the only thing between this project's final theorem and a complete proof is a result that
+upstream has, in another form, already machine-checked. Under the independence rule that
+changes nothing in what this project may use. It is recorded because it bears on the
+decision at the gate before M6.
 
 ## Calibration used for effort estimates
 
