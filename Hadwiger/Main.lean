@@ -3,6 +3,8 @@ import Hadwiger.Defs.ConnectedMatching
 import Hadwiger.Defs.FractionalColoring
 import Hadwiger.ChromaticBounds
 import Hadwiger.MatchingMinor
+import Hadwiger.UpstreamBridge
+import OAI.Combinatorics.HadwigerCounterexample.Main
 
 /-!
 # The main statements
@@ -27,11 +29,30 @@ An `m`-vertex finite simple graph is a `SimpleGraph (Fin m)`. "Arbitrarily large
 namespace Hadwiger
 
 /-- **Theorem 1.1.** There are arbitrarily large `m` for which some `m`-vertex graph `G` has
-`α(G) ≤ 2` and `cm(G) < m/100`. The last inequality is stated as `100 cm(G) < m`. -/
+`α(G) ≤ 2` and `cm(G) < m/100`. The last inequality is stated as `100 cm(G) < m`.
+
+**The proof is not this project's.** It is the formalisation published by the paper's
+authors, `openai/math` at commit `fd4aeeb`, kept under `OAI/` (see `NOTICE`): the theorem
+`OAI.HadwigerCounterexample.exists_counterexamples`, whose first two clauses are this
+statement with `m ≥ max(N, 5)` and with upstream's definition of the connected matching
+number, compared in `ℚ`. What is done here is the passage to this project's statement:
+this project's connected matching number is at most upstream's
+(`connectedMatchingNumber_le_upstream`, in `Hadwiger/UpstreamBridge.lean`). The independence
+number is Mathlib's on both sides. -/
 theorem exists_indepNum_le_two_and_connectedMatchingNumber_lt :
     ∀ N : ℕ, ∃ m : ℕ, N ≤ m ∧ ∃ G : SimpleGraph (Fin m),
       G.indepNum ≤ 2 ∧ 100 * connectedMatchingNumber G < m := by
-  sorry
+  intro N
+  -- the upstream theorem, with upstream's connected matching number, compared in `ℚ`
+  obtain ⟨m, hm, G, hα, hcm, -⟩ := OAI.HadwigerCounterexample.exists_counterexamples N
+  refine ⟨m, (le_max_left N 5).trans hm, G, hα, ?_⟩
+  -- this project's number is at most upstream's
+  have hle := connectedMatchingNumber_le_upstream G
+  have hup : 100 * OAI.HadwigerMatching.connectedMatchingNumber G < m := by
+    have h : (100 : ℚ) * (OAI.HadwigerMatching.connectedMatchingNumber G : ℚ) < (m : ℚ) := by
+      linarith
+    exact_mod_cast h
+  omega
 
 /-- **Corollary 1.2.** There are graphs `G` of arbitrarily large order `m` with
 `h(G) < 26m/75 + 2/3 < m/2 ≤ χ_f(G) ≤ χ(G)`.
@@ -42,8 +63,9 @@ the middle inequality fails for `m = 0`.
 
 Proof, as in the paper: take a graph from Theorem 1.1 with `m ≥ 5`; the second assertion of
 Proposition 3.5 gives the first two inequalities; `|V| ≤ α(G) · χ_f(G)` with `α(G) ≤ 2`
-gives the third; and `χ_f(G) ≤ χ(G)` is the fourth. Theorem 1.1 is still `sorry`, so this
-theorem is `PROVED_MODULO`. Nothing else beneath it is open since milestone M2. -/
+gives the third; and `χ_f(G) ≤ χ(G)` is the fourth. Theorem 1.1 is proved from the upstream
+formalisation (see its doc comment); everything else beneath this theorem is this project's
+own. -/
 theorem exists_hadwigerNumber_lt_fractionalChromaticNumber :
     ∀ N : ℕ, ∃ m : ℕ, N ≤ m ∧ ∃ G : SimpleGraph (Fin m), ∃ k : ℕ,
       G.chromaticNumber = k ∧
@@ -111,8 +133,8 @@ def FractionalHadwigerConjecture : Prop :=
 
 /-- **The fractional-colouring weakening of Hadwiger's conjecture is false** (Corollary 1.2,
 last sentence). Derived from Corollary 1.2, which gives graphs with
-`h(G) < m/2 ≤ χ_f(G)`. Corollary 1.2 rests on Theorem 1.1, which is still `sorry`, so this
-theorem is `PROVED_MODULO`. -/
+`h(G) < m/2 ≤ χ_f(G)`. Corollary 1.2 rests on Theorem 1.1, which is proved from the
+upstream formalisation. -/
 theorem not_fractionalHadwigerConjecture : ¬ FractionalHadwigerConjecture := by
   intro hF
   obtain ⟨m, hm, G, k, -, h1, h2, h3, -⟩ :=

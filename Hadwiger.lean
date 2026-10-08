@@ -10,6 +10,7 @@ import Hadwiger.Defs.HoleRel
 import Hadwiger.Supersaturation
 import Hadwiger.EntropyAndCuts
 import Hadwiger.RandomSample
+import Hadwiger.UpstreamBridge
 import Hadwiger.Main
 import Hadwiger.Sanity.Minor
 import Hadwiger.Sanity.ConnectedMatching
@@ -23,6 +24,7 @@ import Hadwiger.Sanity.RandomSample
 /-!
 # Lean 4 formalisation of "A counterexample to Hadwiger's conjecture"
 
-Root module. The single source of truth for what is stated and what is proved is
-`blueprint/BLUEPRINT.md`; every `sorry` is listed in `blueprint/SORRY_AXIOM_LEDGER.md`.
+Root module. What is stated and what is proved is recorded in `blueprint/BLUEPRINT.md`; there
+is no `sorry` (`blueprint/SORRY_AXIOM_LEDGER.md`). The proof of Theorem 1.1 comes from the
+upstream formalisation under `OAI/`; see `NOTICE` and `START_HERE.md`.
 -/

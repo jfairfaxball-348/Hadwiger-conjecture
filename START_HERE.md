@@ -8,113 +8,94 @@ with Mathlib, the paper
 
 ending in a Lean theorem, free of `sorry` and of non-standard axioms, that says: there are
 finite simple graphs of arbitrarily large order whose chromatic number exceeds their
-Hadwiger number.
+Hadwiger number. Since 2026-10-08 that theorem is proved here, with the proof of the paper's
+main theorem taken from the formalisation of the paper's authors.
 
 The repository, not any conversation, carries the project state.
 
 ## Read in this order
 
-1. `AGENTS.md` — the binding rules.
-2. `blueprint/BLUEPRINT.md` — the single source of truth: every definition and result of
-   the paper, its Lean name and its status.
-3. `blueprint/SORRY_AXIOM_LEDGER.md` — every open `sorry`; there are no axioms.
-4. `blueprint/MILESTONES.md` — the plan and the single next task.
-   `blueprint/M4_REVIEW_SHEET.md` — the statement layer of Sections 3.1 and 3.2, signed
-   off by the user on 2026-10-08 except for two items that are held.
-5. `blueprint/PAPER_ISSUES.md` — anything in the paper found unclear, incomplete or wrong.
-6. `blueprint/FIDELITY.md` — why each Lean definition matches the paper's.
-7. `docs/` — status definitions, the Lean workflow, provenance, the session log, and
-   `docs/NEXT_SESSION_PROMPT.md`, the draft prompt that the last session left for the
-   next one (a draft for the user; it has no authority).
+1. `AGENTS.md` — the rules. Rewritten on 2026-10-08; short.
+2. This page — where things stand and what is next.
+3. `blueprint/BLUEPRINT.md` — the status of every statement; `python scripts/axiom_audit.py`
+   checks it against the build.
+4. `NOTICE` and `docs/UPSTREAM_CHANGES.md` — what in this repository is the upstream
+   formalisation and what was changed in it.
+
+Everything else under `blueprint/` and `docs/` is the record of the process that was used
+until 2026-10-08 and is no longer maintained.
 
 ## Where things stand
 
-**The final theorem is not proved.** It is derived in Lean from Theorem 1.1, and
-Theorem 1.1, which is almost the whole paper, is `sorry`.
+**The final theorem is proved in this repository's build.** `lake build` is green with no
+`sorry` anywhere, and the five main statements are `DONE`: no `sorry` beneath them and only
+the axioms `propext`, `Classical.choice` and `Quot.sound` (`python scripts/axiom_audit.py`):
 
-What is proved (2026-10-07), all of it elementary:
+| Statement | Lean |
+|---|---|
+| Theorem 1.1 | `Hadwiger.exists_indepNum_le_two_and_connectedMatchingNumber_lt` |
+| Corollary 1.2, with `χ_f` | `Hadwiger.exists_hadwigerNumber_lt_fractionalChromaticNumber` |
+| arbitrarily large graphs with `h(G) < χ(G)` | `Hadwiger.exists_hadwigerNumber_lt_chromaticNumber` |
+| Hadwiger's conjecture is false | `Hadwiger.not_hadwigerConjecture` |
+| its fractional weakening is false | `Hadwiger.not_fractionalHadwigerConjecture` |
 
-- Proposition 3.5, the clique-minor bound `3·h(G) ≤ m + 4·cm(G) + 2` and its consequence
-  for graphs with `α ≤ 2` (milestones M1 and M2). It, Lemma 2.2, Lemma 3.2 and Lemma 3.3,
-  all below, are the four numbered results of the paper proved so far.
-- Three unnumbered statements from Section 1: the colour-class bound `|V| ≤ α·χ`, its
-  fractional form `|V| ≤ α·χ_f`, and `χ_f ≤ χ` (blueprint S-1.a, S-1.b, S-1.c; M1).
-- Lemma 2.2, that the abstract hole relation of Section 2.1 is symmetric, has no loops and
-  is triangle-free, and equation (2.2), that the graph on the positions of any list has
-  `α ≤ 2` and `χ ≥ ⌈m/2⌉` (blueprint L-2.2, S-2.3; M3). This is about the abstract linear
-  data of Section 2.1 only. The paper's actual construction (Sections 2.2 to 2.4) is not
-  stated in Lean yet, so nothing here is yet about the paper's graphs.
+This is so since 2026-10-08, at Lean `v4.34.1` and Mathlib `d13f23b`. **It rests on the
+upstream formalisation for Theorem 1.1**, as the next section says. A machine-checked proof
+says that the Lean statements follow from the axioms; whether the statements say what the
+paper and the conjecture say is argued in the doc comments and in `blueprint/FIDELITY.md`,
+and is not machine-checked.
 
-Proved on 2026-10-08, in the second slice of milestone M4, and also elementary:
+One statement was withdrawn and not proved: this project's own explicit form of Proposition
+3.4 (blueprint P-3.4). Nothing uses it.
 
-- Lemma 3.2, the information-projection lemma of Section 3.1, in its three assertions: a
-  minimiser `ρ` of the relative entropy `D(·‖q)` on a convex set of laws on a finite set is
-  positive wherever any law of the set is; `D(ρ'‖q) − D(ρ‖q) ≥ D(ρ'‖ρ)`; and
-  `D(ρ'‖ρ) ≥ −log ρ(S)` when `ρ'` is supported on `S` (blueprint L-3.2, with the sentences
-  of the paper's proof as the lemmas S-L3.2.*). The statements are the ones the user signed
-  off; the proofs are the paper's. Nothing in Lean depends on it yet. It is one of the two
-  lemmas that the proof of Proposition 3.4 will use, and it does not by itself bring the
-  final theorem any closer.
+### Who proved what
 
-Proved on 2026-10-08, in the third slice of milestone M4, and also elementary:
+- **Theorem 1.1** (arbitrarily large graphs with `α ≤ 2` and `cm < m/100`), which is almost
+  the whole paper: proved by the formalisation of the paper's authors, `openai/math` at
+  commit `fd4aeeb`, 288 files and about 38,700 lines, kept under `OAI/`. **That proof is
+  not this project's work.** This project built it, checked its axioms, and wrote the
+  comparison of definitions that carries it over to its own statement
+  (`Hadwiger/UpstreamBridge.lean`).
+- **This project's own work** (`Hadwiger/`): the definitions and statements; Proposition
+  3.5; the bounds of Section 1; Corollary 1.2 from Theorem 1.1, including its
+  fractional-chromatic form `χ_f(G) > h(G)`, which upstream's selected statement does not
+  have; the final theorem and the negations of Hadwiger's conjecture and of its fractional
+  weakening from Corollary 1.2; and Lemma 2.2, Lemma 3.2 and Lemma 3.3, which the final
+  theorem does not use on this route.
 
-- Lemma 3.3, the terminal-cut lemma of Section 3.1: if no law supported on a set `R` of
-  ordered pairs satisfies the three caps `σ_1 ≤ Mμ`, `σ_2 ≤ Mμ`, `σ ≤ Bμ^2`, there are a set
-  `S` of points with `M·μ(S) < 1` and a set `E_0` of pairs with `B·μ^2(E_0) < 1` such that
-  every pair of `R` has an endpoint in `S` or lies in `E_0` (blueprint L-3.3, with the
-  sentences of the paper's proof as the lemmas S-L3.3.*). The statement is the one the user
-  signed off; the proof is the paper's, the residual-cut argument for max-flow/min-cut with
-  real capacities, written out in full because Mathlib has no max-flow/min-cut theorem.
-  Nothing in Lean depends on it yet. It is the other of the two lemmas that the proof of
-  Proposition 3.4 will use, and it does not by itself bring the final theorem any closer.
+### How this came about
 
-What follows from Theorem 1.1 in Lean, and so has a complete proof body but is not proved:
-Corollary 1.2, the final theorem, and the negations of Hadwiger's conjecture and of its
-fractional weakening. Nothing else stands between Theorem 1.1 and the final theorem.
+Until 2026-10-08 the project was independent of upstream's Lean code and was proving the
+paper from scratch; about a tenth of the estimated work was done. On 2026-10-08 the user
+asked for the quickest route to a complete build that can be registered on the Palomar
+registry, and chose to build on upstream's proof (`AGENTS.md` quotes the instruction).
 
-What is stated and **not proved** (stated on 2026-10-08, in the first slice of milestone
-M4): Proposition 3.4, as an explicit bound on a failure probability, for any finite set
-with a law and any symmetric, loopless, triangle-free relation. It is `sorry`. **Its
-statement is not signed off**: the user held it, with its explicit bound, for a second
-reading (`blueprint/M4_REVIEW_SHEET.md`, items R-32 and R-33), and by the user's decision
-no proof of it is written before its sign-off. So the next task, the fourth slice of M4,
-which begins that proof, waits for the sign-off. The bound in Proposition 3.4 is not in the
-paper in that form: it was derived by hand from the paper's proof and has not been checked
-by anyone else. Theorem 3.1 is not stated.
+## What is next
 
-So there are two `sorry`s: Theorem 1.1 and the bound of Proposition 3.4. (There were six
-after the first slice of M4; the three of Lemma 3.2 were replaced by proofs in the second,
-and that of Lemma 3.3 in the third.) The final theorem rests on Theorem 1.1 alone; the
-other is not beneath it, because Theorem 1.1 is not yet derived from Proposition 3.4 in
-Lean. The paper's construction (Sections 2.2 to 2.4), Theorem 3.1 and everything from
-Section 4 onward are not yet stated in Lean.
+The build above is not yet in the form the Palomar registry accepts. Still to do, in order:
 
-Run `python scripts/axiom_audit.py` for the exact tally; the blueprint has the detail.
+1. **Port every Lean file to Lean's module system**, upstream's 288 included
+   (`scripts/port_to_modules.py` does the mechanical part). A module cannot import a
+   non-module, and the registry requires modules throughout.
+2. **Move to Lean `v4.35.0-rc2` or later** with the Mathlib commit of the same toolchain
+   (the tag `v4.35.0-rc2`, 69 commits after the Mathlib this build uses), and repair what
+   breaks. The registry's minimum is `v4.35.0-rc2`.
+3. **Package**: `Challenge.lean` (drafted), `Solution.lean`, `comparator.json`,
+   `formalization.yaml`, a README with the account the registry asks for, and a CI job that
+   runs `lake comparator`, the same check the registry runs.
 
-Sanity checks on the new definitions are proved (`Hadwiger/Sanity/`, blueprint section
-"Sanity checks (not in the paper)"). They are checks on this repository's definitions and
-are not results of the paper. The statement layer was signed off by the user on 2026-10-07
-(`blueprint/M0_REVIEW_SHEET.md`; the "Reviewed by" lines are in `blueprint/FIDELITY.md`).
-The sign-off covers the definitions and statements as they stood then; anything added or
-changed later needs its own.
+Every change to an upstream file is listed in `docs/UPSTREAM_CHANGES.md`.
 
-One sanity check was added at M3: that the hole relation of Section 2.1 can hold at
-all (`Hadwiger.exists_holeData_hole`, blueprint S-M3.hole-nonvacuous). It is proved, and
-the user accepted the form of its statement on 2026-10-07 (recorded in its blueprint row
-and in `docs/SESSION_LOG.md`, M3 session).
+## What only the user can do
 
-The first slice of M4 (2026-10-08) added the statement layer of Sections 3.1 and 3.2.
-The user signed off most of it the same day, by the sheet `blueprint/M4_REVIEW_SHEET.md`:
-the definitions D-3.rel, D-3.law, D-3.marg, D-3.caps, D-3.unit, D-3.confl, D-3.sup, D-3.KL
-and D-3.list, and the statements L-3.2 and L-3.3 (items R-21 to R-31). The "Reviewed by"
-lines are in `blueprint/FIDELITY.md`.
-
-**Awaiting review since 2026-10-08:** the explicit bound and Proposition 3.4 (blueprint
-D-3.bound and P-3.4; sheet items R-32 and R-33), held by the user for a second reading.
-Their fidelity notes, F-BOUND and P-3.4, carry no "Reviewed by" line.
-
-The sanity lemmas proved in that slice (blueprint `S-M4.*`) are checks on the new
-definitions; they are proved, and they are not evidence for the three results.
+- **Authorisation to register.** Palomar asks the submitter to be a responsible author or
+  maintainer of the substantive formalisation, or to have approval from one, and says that
+  a fork or a port is not that. The substantive formalisation of Theorem 1.1 is
+  `openai/math`. Registration therefore needs approval from a maintainer of `openai/math`.
+- **Submitting.** The form at <https://submit.palomar-registry.org/>, with the repository,
+  the full commit hash and the path of `comparator.json`.
+- **Standing behind the metadata.** `formalization.yaml` lists human authors and
+  responsible maintainers and describes how AI was used. The user's name goes there.
 
 ## The old programme
 

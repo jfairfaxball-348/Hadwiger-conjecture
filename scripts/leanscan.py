@@ -6,7 +6,7 @@ import os
 import re
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-SOURCE_DIRS = ["Hadwiger"]
+SOURCE_DIRS = ["Hadwiger", "OAI"]
 SOURCE_FILES = ["Hadwiger.lean"]
 BLUEPRINT = os.path.join(ROOT, "blueprint", "BLUEPRINT.md")
 LEDGER = os.path.join(ROOT, "blueprint", "SORRY_AXIOM_LEDGER.md")

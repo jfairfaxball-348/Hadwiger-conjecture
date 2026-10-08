@@ -21,9 +21,8 @@ its form on 2026-10-08 (question Q2 of `blueprint/M4_REVIEW_SHEET.md`) and held 
 sign-off of the bound and of this proposition for a second reading (items R-32, R-33).
 **Nothing in this file is signed off.**
 
-**The bound is stated here and not proved**: its proof is `sorry` (milestone M4, first
-slice, statements only). The corollary has a complete proof body and rests on the bound, so
-it is not proved either.
+**Proposition 3.4 is not stated here any more** (withdrawn on 2026-10-08; see the note at the end
+of the file).
 
 This file imports two files of `Hadwiger/Sanity/` for the general lemmas the corollary uses
 (a list law is a law; a set of mass below `1` misses a point; the abstract graph on positions
@@ -68,54 +67,14 @@ noncomputable def sampleBound (n : ℕ) (M B ε : ℝ) (m : ℕ) : ℝ :=
     ((m.choose (exceptionSize m) : ℝ) / M ^ exceptionSize m
       + (m : ℝ) ^ (2 * exceptionSize m) / B ^ exceptionSize m)
 
-section Proposition34
+/-! ### Proposition 3.4
 
-variable {Ω : Type*} [Fintype Ω]
-
-/-- **Proposition 3.4, as an explicit bound.** Let `Ω` be a finite type with a law `μ` and a
-hole relation `H`, and suppose that every law on units obeying the three caps (marginal cap
-`M`, joint cap `B`) has conflict probability at least `ε`. Then the probability that the
-graph on positions of a list of `m` independent `μ`-elements has `cm(G) ≥ m/100` is at most
-`sampleBound |Ω| M B ε m`.
-
-Form. `cm(G) ≥ m/100` is stated as `m ≤ 100 · cm(G)`, in the natural numbers. The paper's
-statement is about its own `Ω_n`, `μ_n`, `M = 2^1000`, `B = 2^{DN}`, `ε = 2^{-100gN}` and
-`m = 2^{C_0 g N}`, and gives the probability as `1 − exp(−Ω(m))`; here the failure
-probability is bounded explicitly. `α(G) ≤ 2` is not part of this statement: it holds for
-every list (`HoleRel.indepNum_positionGraph_le_two`) and is in the corollary below.
-
-Hypotheses on the numbers. `0 < M`, `0 < B`, `0 < ε`, `ε < 1` are the paper's (its values are
-`2^1000`, `2^{DN}`, `2^{-100gN}`); they are needed because `sampleBound` divides by `M^k` and
-`B^k` and by `−log(1 − ε)`, and because with `ε ≤ 0` the hypothesis `hsup` is empty. There is
-no hypothesis on `m` and none on `μ` beyond its being a law: the bound is claimed for every
-`m`, and is at least `1` when it says nothing.
-
-Not proved: `sorry`. -/
-theorem mass_listLaw_le_sampleBound (H : HoleRel Ω) {μ : Ω → ℝ} (hμ : IsLaw μ)
-    {M B ε : ℝ} (hM : 0 < M) (hB : 0 < B) (hε : 0 < ε) (hε1 : ε < 1) (m : ℕ)
-    (hsup : H.Supersaturated μ M B ε) :
-    mass (listLaw μ m) {o | m ≤ 100 * connectedMatchingNumber (H.positionGraph o)}
-      ≤ sampleBound (Fintype.card Ω) M B ε m := by
-  sorry
-
-/-- **Proposition 3.4, existence.** Under the hypotheses of the bound, if
-`sampleBound |Ω| M B ε m < 1` then some list of `m` elements has a graph on positions with
-`α(G) ≤ 2` and `cm(G) < m/100` (stated as `100 · cm(G) < m`). This is what Theorem 1.1 needs.
-
-Proof: by the bound the lists with `m ≤ 100 · cm(G)` have probability below `1`; the list
-law has total mass `1`, so some list is not among them; and `α(G) ≤ 2` holds for every list.
-The proof body is complete. It rests on `mass_listLaw_le_sampleBound`, which is `sorry`, so
-this theorem is `PROVED_MODULO`, not proved. -/
-theorem exists_list_indepNum_le_two_and_connectedMatchingNumber_lt (H : HoleRel Ω)
-    {μ : Ω → ℝ} (hμ : IsLaw μ) {M B ε : ℝ} (hM : 0 < M) (hB : 0 < B) (hε : 0 < ε)
-    (hε1 : ε < 1) (m : ℕ) (hsup : H.Supersaturated μ M B ε)
-    (hlt : sampleBound (Fintype.card Ω) M B ε m < 1) :
-    ∃ o : Fin m → Ω, (H.positionGraph o).indepNum ≤ 2 ∧
-      100 * connectedMatchingNumber (H.positionGraph o) < m := by
-  have hmass := (mass_listLaw_le_sampleBound H hμ hM hB hε hε1 m hsup).trans_lt hlt
-  obtain ⟨o, ho⟩ := (isLaw_listLaw hμ m).exists_notMem_of_mass_lt_one hmass
-  exact ⟨o, H.indepNum_positionGraph_le_two o, not_le.mp ho⟩
-
-end Proposition34
+This file used to state Proposition 3.4 as an explicit bound
+(`mass_listLaw_le_sampleBound`, proof `sorry`) with an existence statement derived from it.
+Both were withdrawn on 2026-10-08, when the project turned to the upstream formalisation for
+Theorem 1.1 (`AGENTS.md`): the bound was this project's own hand derivation, it was never
+proved, and nothing needs it any more. The statements are in git history
+(`git show 4c48aad:Hadwiger/RandomSample.lean`). The three definitions above and their sanity
+lemmas remain. -/
 
 end Hadwiger
