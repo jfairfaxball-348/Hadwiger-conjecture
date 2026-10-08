@@ -1,13 +1,15 @@
 # Prompt for the next session
 
-Written in the session of 2026-10-08 (M4, third slice), under the rule "Prompt for the next
-session" in `AGENTS.md`. **It is a draft for the user.** The prompt the user actually sends
-is the instruction; this file has no authority of its own.
+Written at the close of the session of 2026-10-08 (M4, third slice), under the rule
+"Prompt for the next session" in `AGENTS.md`. **It is a draft for the user.** The prompt
+the user actually sends is the instruction; this file has no authority of its own.
 
-**This is the unmerged form.** It was written in a commit of the working branch
-`m4-lemma-3-3`, before that branch was merged into `main`. The lines marked `[MERGE]` depend
-on the merge. If a closing commit follows the merge, it replaces this file by the final
-form.
+This is the final form, written in the session's closing commit after the merge. The one
+thing it cannot contain is the hash of its own commit. Its parent is `a2ee9bb`. At the next
+start gate `HEAD` of `main` should be the last commit that touched this file; check with
+`git log -1 --format=%h -- docs/NEXT_SESSION_PROMPT.md` against
+`git rev-parse --short HEAD`. Any commit in between is something to explain before going
+on. The version given to the user in the closing message has the hash written out.
 
 Still open with the user, and carried forward as open:
 
@@ -29,11 +31,11 @@ Still open with the user, and carried forward as open:
 Continue the Lean formalisation in this repository. AGENTS.md is binding; read it first.
 
 START GATE
-1. Pin HEAD. You should be on main, and main should equal origin/main. [MERGE] Expected:
-the commit that last touched docs/NEXT_SESSION_PROMPT.md, once the branch m4-lemma-3-3 is
-in main (M4 third slice, 2026-10-08: Lemma 3.3 proved). If the branch is not in main, if
-main does not equal origin/main, or if HEAD is something else, stop and tell me before
-doing anything else.
+1. Pin HEAD. You should be on main, and main should equal origin/main. Expected: [the
+commit that last touched docs/NEXT_SESSION_PROMPT.md; its parent is a2ee9bb] (M4 third slice
+merged, 2026-10-08: Lemma 3.3 proved; the closing commit of that session). If main does
+not equal origin/main, or HEAD is something else, stop and tell me before doing anything
+else.
 2. Read START_HERE.md, AGENTS.md, blueprint/BLUEPRINT.md, blueprint/SORRY_AXIOM_LEDGER.md,
 blueprint/MILESTONES.md (the single next task; under M4, "Mathlib gaps" and the states after
 the first, the second and the third slice), blueprint/FIDELITY.md (in particular the notes
@@ -54,9 +56,8 @@ before doing anything else. If not, record in the session log that you looked an
 you saw.
 
 A RECORD TO WRITE FIRST
-[MERGE] If m4-lemma-3-3 was merged into main after its last commit, the merge is not in
-the log yet: write its record first (the hashes, the three commands on main, git ls-remote,
-the CI runs). If the log already has it, none.
+None. The previous session's log is complete up to its closing commit, which was
+fast-forwarded into main under the closing-commit rule of AGENTS.md ("Unit of work").
 
 THE GATE ON THE TASK: R-32 AND R-33
 The task below is the first part of the proof of Proposition 3.4. By my decision of

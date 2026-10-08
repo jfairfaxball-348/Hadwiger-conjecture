@@ -3822,3 +3822,70 @@ statement that needs no new definition. It is the worker's proposal and is marke
 None that this session needed answered. The merge is covered by the standing permission.
 The sign-off of R-32 and R-33 is not asked again: the user holds them for a second reading,
 and the final message says plainly that the next task waits for it.
+
+### Closing record
+
+This section is the closing commit of the session, made under the closing-commit rule of
+`AGENTS.md` ("Unit of work"). It changes `docs/SESSION_LOG.md` and
+`docs/NEXT_SESSION_PROMPT.md` and nothing else.
+
+**The merge it closes.** There was one. `main` was fast-forwarded from `6d609a9` to
+`a2ee9bb`, the one commit of the branch `m4-lemma-3-3`: the proof of Lemma 3.3 with its
+records, described in the sections above. **It was made without asking**, under the
+standing permission of 2026-10-08 ("Always merge if it makes sense, you dont need to asl";
+quoted in the M4 second-slice entry, "The user's answer"), after each condition of the rule
+had been gone through:
+
+- the branch carries the task the user set for the session, complete as a unit, and the
+  records describe nothing as done that is not;
+- `lake build` and both checks passed on the tree of `a2ee9bb` before it was committed, and
+  CI passed on the branch at `a2ee9bb` (run `37808578644`: the build, the ledger check and
+  the axiom audit, each a step that passed; the run was matched to the commit by hash);
+- it is a fast-forward, and nothing was force-pushed;
+- the audit shows the end state the instruction expected, with the six added rows accounted
+  for under "What the audit shows";
+- no signed-off definition or statement changed: the `pp.all` comparison is byte-identical
+  on all three lists, the held items included;
+- nothing in the branch waits on a decision that is the user's. No statement was found
+  false or unprovable; no `ERROR` or `GAP` was found in the paper; there is no `axiom` and
+  no `native_decide`; no mathematical content, root, pinned paper, toolchain or Mathlib
+  commit changed; and no rule changed.
+
+On `main` at `a2ee9bb`, before the push: `lake build` passed, with two `sorry` warnings and
+no other; `check_ledger.py` gave 2 `sorry`, 2 rows; `axiom_audit.py` gave 195 entries, 204
+declarations, OK. `main` was pushed as an ordinary fast-forward with interaction disabled,
+and `git ls-remote --heads origin main` gave `a2ee9bb`, equal to `HEAD`. CI then passed on
+`main` at `a2ee9bb` (run `37809032367`).
+
+**Push and CI.**
+
+| Commit | What | On the remote | CI |
+|---|---|---|---|
+| `a2ee9bb` | the proof of Lemma 3.3 and its records | yes; `git ls-remote` gave `a2ee9bb` for `m4-lemma-3-3`, equal to `HEAD`, after the push | passed on the branch, run `37808578644`; passed on `main`, run `37809032367` |
+
+No push in this session prompted for a sign-in. Every push ran with
+`GCM_INTERACTIVE=never GIT_TERMINAL_PROMPT=0`.
+
+Found while looking up those runs, and recorded because the closing commit of the previous
+session could not record it: CI passed on `main` at `6d609a9` (run `37789111267`).
+
+**The prompt for the next session** is in `docs/NEXT_SESSION_PROMPT.md` in its final form.
+The task it sets is the single next task of `blueprint/MILESTONES.md`: the fourth slice of
+M4, the fingerprint procedure. That task is gated by the user's sign-off of sheet items R-32
+and R-33, and the prompt has a bracket for the user's answer. It carries forward as open,
+without deciding them: R-32 and R-33 (held); whether to build upstream's code and audit its
+axioms; the wording of the conditions under which a merge "makes sense", which is the
+worker's and which the user has not confirmed; and the form of the target of the fourth
+slice, which is the worker's proposal.
+
+**This commit's own arrival in `main`** cannot be recorded in it. It is pushed to the
+branch `m4-lemma-3-3`; when CI has passed on it and the three commands pass on `main` with
+it, `main` is fast-forwarded to it under the rule. If `main` contains this commit, that was
+done. Its CI runs are on GitHub under its hash.
+
+**The state the session leaves**, for whoever reads this first: 2 `sorry` (Theorem 1.1; the
+bound of Proposition 3.4), no axioms; 195 blueprint entries, 204 declarations audited.
+Lemma 3.3 is proved, by the paper's max-flow/min-cut proof, with its statement unchanged;
+with Lemma 3.2 it is what the proof of Proposition 3.4 will use. That proof may not start
+before the user signs off R-32 and R-33. The final theorem is not proved and rests on
+Theorem 1.1 alone.
