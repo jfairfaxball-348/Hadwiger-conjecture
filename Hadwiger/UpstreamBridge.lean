@@ -1,6 +1,10 @@
-import Hadwiger.Defs.ConnectedMatching
-import Hadwiger.Sanity.ConnectedMatching
-import OAI.Combinatorics.HadwigerMatching.BasicMatching
+module
+
+public import Hadwiger.Defs.ConnectedMatching
+public import Hadwiger.Sanity.ConnectedMatching
+public import OAI.Combinatorics.HadwigerMatching.BasicMatching
+
+@[expose] public section
 
 /-!
 # Bridge to the upstream formalisation

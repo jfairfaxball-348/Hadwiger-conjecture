@@ -1,8 +1,14 @@
-import Mathlib.Algebra.Field.ZMod
-import Mathlib.LinearAlgebra.Matrix.Rank
-import Mathlib.LinearAlgebra.Matrix.Trace
-import Mathlib.FieldTheory.Finiteness
-import Mathlib.Tactic.Ring
+-- This file is from openai/math at commit fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb (Apache-2.0) and has been
+-- modified: see docs/UPSTREAM_CHANGES.md in this repository.
+module
+
+public import Mathlib.Algebra.Field.ZMod
+public import Mathlib.LinearAlgebra.Matrix.Rank
+public import Mathlib.LinearAlgebra.Matrix.Trace
+public import Mathlib.FieldTheory.Finiteness
+public import Mathlib.Tactic.Ring
+
+@[expose] public section
 
 namespace OAI
 

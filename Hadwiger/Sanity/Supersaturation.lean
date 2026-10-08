@@ -1,7 +1,11 @@
-import Hadwiger.Supersaturation
-import Hadwiger.Defs.ConnectedMatching
-import Hadwiger.Sanity.HoleRelation
-import Hadwiger.Sanity.Law
+module
+
+public import Hadwiger.Supersaturation
+public import Hadwiger.Defs.ConnectedMatching
+public import Hadwiger.Sanity.HoleRelation
+public import Hadwiger.Sanity.Law
+
+@[expose] public section
 
 /-!
 # Sanity checks for the abstract hole relation, units, conflicts and supersaturation

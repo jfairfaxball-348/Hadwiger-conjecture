@@ -21,11 +21,15 @@ This repository contains work from two sources. They are kept in separate direct
    repository relies on is that formalisation. It is the work of its authors, not of this
    repository.
 
-   State of the files: copied byte for byte. Each file has the git blob hash it has in
-   the upstream tree at the commit above. If a later commit of this repository changes any
-   of them (for example to port them to Lean's module system or to a newer Lean and
-   Mathlib), that commit and the file docs/UPSTREAM_CHANGES.md say so, as section 4(b) of
-   the licence requires.
+   State of the files: MODIFIED. They were first added byte for byte (commit 435a157 of
+   this repository, where each file has the git blob hash it has in the upstream tree).
+   They have since been ported to Lean's module system and to this repository's toolchain.
+   Every modified file says so in a comment at its top, and docs/UPSTREAM_CHANGES.md lists
+   the changes, as section 4(b) of the licence requires. No statement of theirs was changed.
+
+   The scripts scripts/check-lean-sources.py and scripts/verify-comparator.sh are from
+   https://github.com/PalomarRegistry/PalomarTemplate (commit
+   2891de4c48955af824969a263d31b25e7a9a1406, Apache-2.0), unmodified.
 
    The upstream repository has no NOTICE file and the files carry no copyright headers.
 

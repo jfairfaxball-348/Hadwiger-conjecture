@@ -1,5 +1,11 @@
-import OAI.Combinatorics.HadwigerCounterexample.UnseenCrossingFactorization
-import OAI.Combinatorics.HadwigerCounterexample.GramConditionedLaws
+-- This file is from openai/math at commit fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb (Apache-2.0) and has been
+-- modified: see docs/UPSTREAM_CHANGES.md in this repository.
+module
+
+public import OAI.Combinatorics.HadwigerCounterexample.UnseenCrossingFactorization
+public import OAI.Combinatorics.HadwigerCounterexample.GramConditionedLaws
+
+@[expose] public section
 
 namespace OAI
 

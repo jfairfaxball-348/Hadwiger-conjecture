@@ -1,6 +1,12 @@
-import OAI.Combinatorics.HadwigerCounterexample.BooleanLabels
-import OAI.Combinatorics.HadwigerCounterexample.QuadraticTesters
-import OAI.Combinatorics.HadwigerCounterexample.CoordinateEmbeddings
+-- This file is from openai/math at commit fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb (Apache-2.0) and has been
+-- modified: see docs/UPSTREAM_CHANGES.md in this repository.
+module
+
+public import OAI.Combinatorics.HadwigerCounterexample.BooleanLabels
+public import OAI.Combinatorics.HadwigerCounterexample.QuadraticTesters
+public import OAI.Combinatorics.HadwigerCounterexample.CoordinateEmbeddings
+
+@[expose] public section
 
 namespace OAI
 

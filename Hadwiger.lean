@@ -1,25 +1,29 @@
-import Hadwiger.Defs.Minor
-import Hadwiger.Defs.ConnectedMatching
-import Hadwiger.Defs.FractionalColoring
-import Hadwiger.ChromaticBounds
-import Hadwiger.MatchingMinor
-import Hadwiger.HoleRelation
-import Hadwiger.Defs.Law
-import Hadwiger.Defs.RelEntropy
-import Hadwiger.Defs.HoleRel
-import Hadwiger.Supersaturation
-import Hadwiger.EntropyAndCuts
-import Hadwiger.RandomSample
-import Hadwiger.UpstreamBridge
-import Hadwiger.Main
-import Hadwiger.Sanity.Minor
-import Hadwiger.Sanity.ConnectedMatching
-import Hadwiger.Sanity.FractionalColoring
-import Hadwiger.Sanity.HoleRelation
-import Hadwiger.Sanity.Law
-import Hadwiger.Sanity.RelEntropy
-import Hadwiger.Sanity.Supersaturation
-import Hadwiger.Sanity.RandomSample
+module
+
+public import Hadwiger.Defs.Minor
+public import Hadwiger.Defs.ConnectedMatching
+public import Hadwiger.Defs.FractionalColoring
+public import Hadwiger.ChromaticBounds
+public import Hadwiger.MatchingMinor
+public import Hadwiger.HoleRelation
+public import Hadwiger.Defs.Law
+public import Hadwiger.Defs.RelEntropy
+public import Hadwiger.Defs.HoleRel
+public import Hadwiger.Supersaturation
+public import Hadwiger.EntropyAndCuts
+public import Hadwiger.RandomSample
+public import Hadwiger.UpstreamBridge
+public import Hadwiger.Main
+public import Hadwiger.Sanity.Minor
+public import Hadwiger.Sanity.ConnectedMatching
+public import Hadwiger.Sanity.FractionalColoring
+public import Hadwiger.Sanity.HoleRelation
+public import Hadwiger.Sanity.Law
+public import Hadwiger.Sanity.RelEntropy
+public import Hadwiger.Sanity.Supersaturation
+public import Hadwiger.Sanity.RandomSample
+
+@[expose] public section
 
 /-!
 # Lean 4 formalisation of "A counterexample to Hadwiger's conjecture"

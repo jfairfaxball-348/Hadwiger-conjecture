@@ -1,0 +1,187 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/mathlib-initiative/formalization.yaml/main/schema/formalization.schema.json
+# formalization.yaml v0.4, in the shape the Palomar registry asks for.
+#
+# DRAFT, prepared by the AI agent that did the work. Before submission the responsible
+# maintainer must read every field and confirm it. In particular: the author and
+# maintainer names, the author_endorsement of the source, and the review status.
+version: "v0.4"
+
+project:
+  name: "A counterexample to Hadwiger's conjecture, with its fractional form"
+  description: >-
+    A Lean 4 development of the result of OpenAI's manuscript "A counterexample to
+    Hadwiger's conjecture" (23 September 2026): there are finite simple graphs of
+    arbitrarily large order m with independence number at most 2 and connected-matching
+    number below m/100, and for them h(G) < 26m/75 + 2/3 < m/2 <= chi_f(G) <= chi(G), where
+    h is the Hadwiger number, chi the chromatic number and chi_f the fractional chromatic
+    number. Hence Hadwiger's conjecture h(G) >= chi(G), and its weakening
+    chi_f(G) <= h(G), fail for finite graphs. The proof of the main theorem (Theorem 1.1 of
+    the manuscript: the existence of the graphs) is NOT original to this repository: it is
+    the Lean formalisation published by the manuscript's authors (openai/math), ported here
+    to Lean's module system and to this toolchain. This repository's own contribution is an
+    independent statement layer (graph minors by branch sets, connected matchings as
+    Mathlib matchings, fractional colourings), independent proofs of the clique-minor bound
+    3 h(G) <= m + 4 cm(G) + 2 and of the bounds of chi and chi_f by the independence number,
+    the deduction of the chain above including its fractional-chromatic part, which the
+    authors' selected Lean statement does not include, and the comparison of definitions
+    that connects the two developments. The manuscript is machine-generated and, as far as
+    this project knows, has not been refereed.
+  authors:
+    - "John Fairfax-Ball"
+  license: "Apache-2.0"
+  responsible_maintainers:
+    - "John Fairfax-Ball"
+
+# `repository` is omitted: the proof development is contained in this repository. Most of
+# it is a port of another repository's formalisation; see `related_formalizations`.
+
+classification:
+  arxiv: ["math.CO"]
+  msc2020: ["05C83", "05C15", "05C70", "05C69", "68V20"]
+
+sources:
+  - title: "A counterexample to Hadwiger's conjecture"
+    authors:
+      - "OpenAI"
+    id: "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/A-counterexample-to-Hadwigers-conjecture-September-23-2026/paper.pdf"
+    type: "paper"
+    location: "openai/math, preprints/A-counterexample-to-Hadwigers-conjecture-September-23-2026/paper.pdf, sha256 a97293542586d3518b9355dcea732012b09d4ce809126da73d285ba0d3906128; 104 pages, dated 23 September 2026"
+    relationship: "formalizes"
+    note: >-
+      The compared declarations are Theorem 1.1 and Corollary 1.2 of this manuscript and
+      their stated consequences. The manuscript is attributed to OpenAI as an organisation
+      and is machine-generated; this project does not know of a refereed version. The
+      manuscript is not stored in this repository.
+    license: "Apache-2.0 (licence of the openai/math repository; no separate statement for the manuscript)"
+    author_endorsement: "not-contacted"
+  - title: "Über eine Klassifikation der Streckenkomplexe"
+    authors:
+      - "Hugo Hadwiger"
+    type: "paper"
+    location: "Vierteljahrsschrift der Naturforschenden Gesellschaft in Zürich 88 (1943), 133-142"
+    relationship: "background"
+    note: "The source of the conjecture that the compared declarations refute."
+
+related_formalizations:
+  - id: "https://github.com/openai/math/tree/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Combinatorics/HadwigerCounterexample"
+    relationship: "adapts"
+    note: >-
+      The Lean formalisation by the manuscript's authors, Apache-2.0. Its 288-file import
+      closure (276 files of HadwigerCounterexample, 10 of HadwigerMatching, 2 of
+      ListHadwiger; about 38,700 lines) is contained in this repository under OAI/, ported
+      to Lean's module system and to this repository's toolchain and Mathlib; the changes
+      are listed in docs/UPSTREAM_CHANGES.md and no statement was changed. It proves the
+      authors' theorem OAI.HadwigerCounterexample.exists_counterexamples, from which this
+      repository takes Theorem 1.1. It was built unmodified at its own pins (Lean v4.34.1)
+      before the port, with no error and with the three standard axioms only. Its selected
+      statement covers the ordinary chromatic number and not the fractional one.
+
+status:
+  scope: >-
+    Formalised: Theorem 1.1 and Corollary 1.2 of the manuscript, the existence of
+    arbitrarily large finite graphs with h(G) < chi(G), and the negations of Hadwiger's
+    conjecture and of its fractional weakening, all for this repository's own definitions
+    of the Hadwiger number, the connected-matching number and the fractional chromatic
+    number. Theorem 1.1 is obtained from the authors' formalisation through a comparison of
+    the two definitions of the connected-matching number (one inequality; the definitions
+    are equal on finite graphs but only the direction needed is proved). Not formalised by
+    this repository's own development: Theorem 3.1 and Sections 4 to 14 of the manuscript,
+    which are in the authors' formalisation. The manuscript's remark on Reed and Seymour's
+    convention for fractional colourings is not formalised.
+  sorry_count: 0
+  sorry_in_definitions: 0
+  axioms: []
+
+automation:
+  methods:
+    - method: "agent"
+      models: ["Claude Opus 5.5"]
+      framework: "Claude Code"
+      tool_setup: >-
+        This repository's own Lean (the Hadwiger/ directory), the port of the authors'
+        files and this metadata were written by an AI coding agent in sessions directed by
+        the maintainer. Earlier sessions may have used other Claude models; the session
+        logs under docs/ and sessions/ are the record.
+      cost:
+        wall_time: "not tracked"
+        spend_usd: "subscription-based"
+        hardware: "local machine"
+      prompting_notes: "The maintainer's instructions are quoted in docs/SESSION_LOG.md and AGENTS.md."
+    - method: "other"
+      models: []
+      framework: "n/a"
+      tool_setup: >-
+        The authors' formalisation under OAI/ was produced by OpenAI. This project has no
+        information about how beyond what the openai/math repository itself states.
+  spend_usd: "not tracked"
+  notes: >-
+    The maintainer set the goal, chose the definitions' form where a choice was put to him,
+    and decided on 2026-10-08 to build on the authors' formalisation instead of completing
+    an independent proof. All Lean text and documentation in Hadwiger/ was written by the
+    AI agent. No human has read the proofs line by line; correctness of the proofs rests on
+    Lean's kernel.
+
+fidelity:
+  divergences: >-
+    All of form, none known of content. (1) cm(G) < m/100 is stated in the natural numbers
+    as 100 cm(G) < m. (2) "Arbitrarily large" is "for every N there is m >= N"; an m-vertex
+    graph is a graph on Fin m. (3) In Corollary 1.2 the chromatic number (Mathlib's, with
+    values in the extended naturals) is exhibited as a natural number and the chain is
+    compared in the reals. (4) Minors are defined by branch sets (disjoint connected vertex
+    sets with an edge between adjacent ones), the standard characterisation; its
+    equivalence with edge contraction is a textbook fact and is not proved here. (5) The
+    Hadwiger number, the connected-matching number and the fractional chromatic number are
+    defined as a supremum or infimum, which is attained for finite graphs; every statement
+    is about finite graphs. (6) A fractional colouring is a weight function on all vertex
+    sets that vanishes off the independent ones. (7) Hadwiger's conjecture is stated for
+    finite nonempty graphs whose vertex type lies in the lowest universe; every finite
+    graph is isomorphic to one of these, and the counterexamples are on Fin m. (8) The
+    quantifier of the fractional weakening, which the manuscript writes as a bare
+    inequality, is taken from its statement of the conjecture.
+
+review:
+  status: "self-assessed"
+  reviewers: []
+  notes: >-
+    The definitions and the five compared statements were set against the manuscript clause
+    by clause in fidelity notes written by the AI agent (blueprint/FIDELITY.md) and were
+    accepted by the maintainer on 2026-10-07 through a review sheet the agent had prepared.
+    That is the authors' own check and not an independent review. Sanity lemmas pin the
+    definitions on small cases (complete graphs, the path on three vertices, the 4-cycle,
+    the 5-cycle). The authors' formalisation was audited here only mechanically: it builds
+    and uses the three standard axioms. Its proofs and its internal definitions were not
+    reviewed by this project.
+
+alignment:
+  namespace: "Hadwiger"
+  statements:
+    - source: "Theorem 1.1"
+      lean: "Hadwiger.exists_indepNum_le_two_and_connectedMatchingNumber_lt"
+      module: "Hadwiger.Main"
+      status: "proved, by the authors' formalisation and a comparison of definitions"
+      note: "The proof is OAI.HadwigerCounterexample.exists_counterexamples (not this repository's work) with Hadwiger.connectedMatchingNumber_le_upstream."
+    - source: "Corollary 1.2"
+      lean: "Hadwiger.exists_hadwigerNumber_lt_fractionalChromaticNumber"
+      module: "Hadwiger.Main"
+      status: "proved from Theorem 1.1"
+      note: "This repository's own deduction, by its own proof of Proposition 3.5 and of the bounds |V| <= alpha chi_f and chi_f <= chi. Includes the fractional chromatic number."
+    - source: "Corollary 1.2, consequence; the abstract"
+      lean: "Hadwiger.exists_hadwigerNumber_lt_chromaticNumber"
+      module: "Hadwiger.Main"
+      status: "proved from Corollary 1.2"
+      note: "Arbitrarily large finite graphs with h(G) < chi(G)."
+    - source: "Corollary 1.2, last sentence"
+      lean: "Hadwiger.not_hadwigerConjecture"
+      module: "Hadwiger.Main"
+      status: "proved from the previous statement"
+      note: "Negation of Hadwiger's conjecture for finite nonempty graphs."
+    - source: "Corollary 1.2, last sentence"
+      lean: "Hadwiger.not_fractionalHadwigerConjecture"
+      module: "Hadwiger.Main"
+      status: "proved from Corollary 1.2"
+      note: "Negation of chi_f(G) <= h(G) for finite nonempty graphs."
+
+acknowledgements: >-
+  The proof of the main theorem is the work of the authors of openai/math. Mathlib and Lean
+  4. The submission format follows the PalomarRegistry template; scripts/check-lean-sources.py
+  is taken from it.

@@ -1,4 +1,8 @@
-import Hadwiger.Defs.Minor
+module
+
+public import Hadwiger.Defs.Minor
+
+@[expose] public section
 
 /-!
 # Sanity checks for minors and the Hadwiger number (not in the paper)

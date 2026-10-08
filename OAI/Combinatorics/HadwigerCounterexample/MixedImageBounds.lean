@@ -1,6 +1,12 @@
-import OAI.Combinatorics.HadwigerCounterexample.FrameOrbitLaws
-import OAI.Combinatorics.HadwigerCounterexample.ConditionalProductLaws
-import Mathlib.Data.Matrix.ColumnRowPartitioned
+-- This file is from openai/math at commit fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb (Apache-2.0) and has been
+-- modified: see docs/UPSTREAM_CHANGES.md in this repository.
+module
+
+public import OAI.Combinatorics.HadwigerCounterexample.FrameOrbitLaws
+public import OAI.Combinatorics.HadwigerCounterexample.ConditionalProductLaws
+public import Mathlib.Data.Matrix.ColumnRowPartitioned
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,5 +1,9 @@
-import Hadwiger.RandomSample
-import Hadwiger.Sanity.ConnectedMatching
+module
+
+public import Hadwiger.RandomSample
+public import Hadwiger.Sanity.ConnectedMatching
+
+@[expose] public section
 
 /-!
 # Sanity checks for the explicit bound of Proposition 3.4 (not in the paper)

@@ -1,6 +1,12 @@
-import OAI.Combinatorics.HadwigerCounterexample.LeafMixtures
-import OAI.Combinatorics.HadwigerCounterexample.CoverAlternatives
-import OAI.Combinatorics.HadwigerCounterexample.ZeroDiscrepancyLemma
+-- This file is from openai/math at commit fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb (Apache-2.0) and has been
+-- modified: see docs/UPSTREAM_CHANGES.md in this repository.
+module
+
+public import OAI.Combinatorics.HadwigerCounterexample.LeafMixtures
+public import OAI.Combinatorics.HadwigerCounterexample.CoverAlternatives
+public import OAI.Combinatorics.HadwigerCounterexample.ZeroDiscrepancyLemma
+
+@[expose] public section
 
 namespace OAI
 

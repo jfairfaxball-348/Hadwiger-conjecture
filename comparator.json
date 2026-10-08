@@ -1,0 +1,13 @@
+{
+  "challenge_module": "Challenge",
+  "solution_module": "Solution",
+  "theorem_names": [
+    "Hadwiger.exists_indepNum_le_two_and_connectedMatchingNumber_lt",
+    "Hadwiger.exists_hadwigerNumber_lt_fractionalChromaticNumber",
+    "Hadwiger.exists_hadwigerNumber_lt_chromaticNumber",
+    "Hadwiger.not_hadwigerConjecture",
+    "Hadwiger.not_fractionalHadwigerConjecture"
+  ],
+  "definition_names": [],
+  "permitted_axioms": ["propext", "Quot.sound", "Classical.choice"]
+}

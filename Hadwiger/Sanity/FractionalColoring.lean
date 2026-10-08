@@ -1,4 +1,8 @@
-import Hadwiger.Defs.FractionalColoring
+module
+
+public import Hadwiger.Defs.FractionalColoring
+
+@[expose] public section
 
 /-!
 # Sanity checks for fractional colourings (not in the paper)

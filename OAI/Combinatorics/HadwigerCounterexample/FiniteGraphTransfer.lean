@@ -1,7 +1,13 @@
-import OAI.Combinatorics.HadwigerCounterexample.TerminalCut
-import OAI.Combinatorics.HadwigerCounterexample.ProductLaws
-import OAI.Combinatorics.HadwigerCounterexample.SampledGraphs
-import Mathlib.Data.Fintype.Powerset
+-- This file is from openai/math at commit fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb (Apache-2.0) and has been
+-- modified: see docs/UPSTREAM_CHANGES.md in this repository.
+module
+
+public import OAI.Combinatorics.HadwigerCounterexample.TerminalCut
+public import OAI.Combinatorics.HadwigerCounterexample.ProductLaws
+public import OAI.Combinatorics.HadwigerCounterexample.SampledGraphs
+public import Mathlib.Data.Fintype.Powerset
+
+@[expose] public section
 
 namespace OAI
 

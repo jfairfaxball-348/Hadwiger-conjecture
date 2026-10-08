@@ -1,6 +1,12 @@
-import Mathlib.Algebra.Group.Fin.Basic
-import Mathlib.Data.Fintype.Card
-import Mathlib.Data.Fintype.Prod
+-- This file is from openai/math at commit fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb (Apache-2.0) and has been
+-- modified: see docs/UPSTREAM_CHANGES.md in this repository.
+module
+
+public import Mathlib.Algebra.Group.Fin.Basic
+public import Mathlib.Data.Fintype.Card
+public import Mathlib.Data.Fintype.Prod
+
+@[expose] public section
 
 namespace OAI
 

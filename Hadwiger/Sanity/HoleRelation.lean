@@ -1,4 +1,8 @@
-import Hadwiger.HoleRelation
+module
+
+public import Hadwiger.HoleRelation
+
+@[expose] public section
 
 /-!
 # Sanity check for the hole relation (not in the paper)

@@ -1,4 +1,8 @@
-import Hadwiger.Defs.ConnectedMatching
+module
+
+public import Hadwiger.Defs.ConnectedMatching
+
+@[expose] public section
 
 /-!
 # Sanity checks for connected matchings (not in the paper)

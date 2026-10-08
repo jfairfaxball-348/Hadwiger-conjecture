@@ -1,6 +1,12 @@
-import OAI.Combinatorics.HadwigerCounterexample.QuadraticTesters
-import OAI.Combinatorics.HadwigerCounterexample.KeyDirections
-import OAI.Combinatorics.HadwigerCounterexample.SumRankBounds
+-- This file is from openai/math at commit fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb (Apache-2.0) and has been
+-- modified: see docs/UPSTREAM_CHANGES.md in this repository.
+module
+
+public import OAI.Combinatorics.HadwigerCounterexample.QuadraticTesters
+public import OAI.Combinatorics.HadwigerCounterexample.KeyDirections
+public import OAI.Combinatorics.HadwigerCounterexample.SumRankBounds
+
+@[expose] public section
 
 namespace OAI
 

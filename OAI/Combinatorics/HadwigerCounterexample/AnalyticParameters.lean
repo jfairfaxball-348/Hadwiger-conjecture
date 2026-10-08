@@ -1,7 +1,13 @@
-import OAI.Combinatorics.HadwigerCounterexample.PairedMassIdentities
-import OAI.Combinatorics.HadwigerCounterexample.UnaryPositivityBounds
-import OAI.Combinatorics.HadwigerCounterexample.RecursiveComparisonErrors
-import OAI.Combinatorics.HadwigerCounterexample.MixerExistence
+-- This file is from openai/math at commit fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb (Apache-2.0) and has been
+-- modified: see docs/UPSTREAM_CHANGES.md in this repository.
+module
+
+public import OAI.Combinatorics.HadwigerCounterexample.PairedMassIdentities
+public import OAI.Combinatorics.HadwigerCounterexample.UnaryPositivityBounds
+public import OAI.Combinatorics.HadwigerCounterexample.RecursiveComparisonErrors
+public import OAI.Combinatorics.HadwigerCounterexample.MixerExistence
+
+@[expose] public section
 
 namespace OAI
 

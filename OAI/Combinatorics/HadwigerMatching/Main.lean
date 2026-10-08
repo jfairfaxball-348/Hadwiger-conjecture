@@ -1,7 +1,13 @@
-import OAI.Combinatorics.HadwigerMatching.MinorBound
-import OAI.Combinatorics.HadwigerMatching.ChromaticBound
-import Mathlib.Tactic.Linarith
-import Mathlib.Tactic.NormNum
+-- This file is from openai/math at commit fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb (Apache-2.0) and has been
+-- modified: see docs/UPSTREAM_CHANGES.md in this repository.
+module
+
+public import OAI.Combinatorics.HadwigerMatching.MinorBound
+public import OAI.Combinatorics.HadwigerMatching.ChromaticBound
+public import Mathlib.Tactic.Linarith
+public import Mathlib.Tactic.NormNum
+
+@[expose] public section
 
 namespace OAI
 

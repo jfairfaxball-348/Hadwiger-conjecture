@@ -1,8 +1,12 @@
-import Hadwiger.Defs.Minor
-import Hadwiger.Defs.ConnectedMatching
-import Hadwiger.ChromaticBounds
-import Hadwiger.Sanity.Minor
-import Hadwiger.Sanity.ConnectedMatching
+module
+
+public import Hadwiger.Defs.Minor
+public import Hadwiger.Defs.ConnectedMatching
+public import Hadwiger.ChromaticBounds
+public import Hadwiger.Sanity.Minor
+public import Hadwiger.Sanity.ConnectedMatching
+
+@[expose] public section
 
 /-!
 # The clique-minor bound from connected matchings (Proposition 3.5)

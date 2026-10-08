@@ -1,5 +1,9 @@
-import Hadwiger.Defs.RelEntropy
-import Hadwiger.Sanity.Law
+module
+
+public import Hadwiger.Defs.RelEntropy
+public import Hadwiger.Sanity.Law
+
+@[expose] public section
 
 /-!
 # Relative entropy: sanity checks, and the general lemmas used by Lemma 3.2

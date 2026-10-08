@@ -1,6 +1,10 @@
-import Hadwiger.HoleRelation
-import Hadwiger.Defs.Law
-import Hadwiger.Defs.HoleRel
+module
+
+public import Hadwiger.HoleRelation
+public import Hadwiger.Defs.Law
+public import Hadwiger.Defs.HoleRel
+
+@[expose] public section
 
 /-!
 # The supersaturation hypothesis (Section 3, opening paragraph and Theorem 3.1)

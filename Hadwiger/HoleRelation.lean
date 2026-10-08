@@ -1,4 +1,8 @@
-import Hadwiger.ChromaticBounds
+module
+
+public import Hadwiger.ChromaticBounds
+
+@[expose] public section
 
 /-!
 # The hole relation and its triangle-freeness (Section 2.1)

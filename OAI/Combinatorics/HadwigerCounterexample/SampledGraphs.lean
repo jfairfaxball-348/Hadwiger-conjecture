@@ -1,7 +1,13 @@
-import OAI.Combinatorics.HadwigerMatching.BasicMatching
-import Mathlib.Data.Fintype.EquivFin
-import Mathlib.Combinatorics.SimpleGraph.Clique
-import Lean.Elab.Tactic.Omega
+-- This file is from openai/math at commit fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb (Apache-2.0) and has been
+-- modified: see docs/UPSTREAM_CHANGES.md in this repository.
+module
+
+public import OAI.Combinatorics.HadwigerMatching.BasicMatching
+public import Mathlib.Data.Fintype.EquivFin
+public import Mathlib.Combinatorics.SimpleGraph.Clique
+public import Lean.Elab.Tactic.Omega
+
+@[expose] public section
 
 namespace OAI
 

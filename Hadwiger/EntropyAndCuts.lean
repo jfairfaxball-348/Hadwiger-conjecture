@@ -1,7 +1,11 @@
-import Hadwiger.Defs.Law
-import Hadwiger.Defs.RelEntropy
-import Hadwiger.Sanity.Law
-import Hadwiger.Sanity.RelEntropy
+module
+
+public import Hadwiger.Defs.Law
+public import Hadwiger.Defs.RelEntropy
+public import Hadwiger.Sanity.Law
+public import Hadwiger.Sanity.RelEntropy
+
+@[expose] public section
 
 /-!
 # Entropy minimizers and terminal cuts (Section 3.1)

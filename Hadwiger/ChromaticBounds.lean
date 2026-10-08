@@ -1,5 +1,9 @@
-import Hadwiger.Defs.FractionalColoring
-import Hadwiger.Sanity.FractionalColoring
+module
+
+public import Hadwiger.Defs.FractionalColoring
+public import Hadwiger.Sanity.FractionalColoring
+
+@[expose] public section
 
 /-!
 # Lower bounds on the (fractional) chromatic number from the independence number

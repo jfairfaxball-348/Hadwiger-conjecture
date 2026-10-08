@@ -1,10 +1,14 @@
-import Hadwiger.Defs.Minor
-import Hadwiger.Defs.ConnectedMatching
-import Hadwiger.Defs.FractionalColoring
-import Hadwiger.ChromaticBounds
-import Hadwiger.MatchingMinor
-import Hadwiger.UpstreamBridge
-import OAI.Combinatorics.HadwigerCounterexample.Main
+module
+
+public import Hadwiger.Defs.Minor
+public import Hadwiger.Defs.ConnectedMatching
+public import Hadwiger.Defs.FractionalColoring
+public import Hadwiger.ChromaticBounds
+public import Hadwiger.MatchingMinor
+public import Hadwiger.UpstreamBridge
+public import OAI.Combinatorics.HadwigerCounterexample.Main
+
+@[expose] public section
 
 /-!
 # The main statements

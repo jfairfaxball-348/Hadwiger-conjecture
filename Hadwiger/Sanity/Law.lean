@@ -1,4 +1,8 @@
-import Hadwiger.Defs.Law
+module
+
+public import Hadwiger.Defs.Law
+
+@[expose] public section
 
 /-!
 # Sanity checks for laws on a finite type (not in the paper)

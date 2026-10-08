@@ -17,3 +17,20 @@ modules, no error, no warning. `#print axioms` on
 
 To check again: for a file `OAI/X.lean`, `git hash-object OAI/X.lean` at that commit equals
 the blob of `lean/OAI/X.lean` in `git ls-tree -r fd4aeeb` of `openai/math`.
+
+## Port to Lean's module system (2026-10-08)
+
+All 288 files were changed, mechanically and in the same way, by
+`scripts/port_to_modules.py`:
+
+- a two-line comment was put at the top of each file, saying that it comes from
+  `openai/math` and has been modified;
+- a line `module` was put before the imports;
+- every `import X` became `public import X`;
+- a line `@[expose] public section` was put after the imports.
+
+Nothing else was changed: no declaration, no statement, no proof. After this change the
+whole tree built with Lean `v4.34.1` and Mathlib `d13f23b`, with no error and no warning
+(before the comment lines were added, which are the only later difference).
+
+To see the change for one file: `git diff 435a157 -- OAI/X.lean`.

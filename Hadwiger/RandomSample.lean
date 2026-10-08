@@ -1,7 +1,11 @@
-import Hadwiger.Supersaturation
-import Hadwiger.Defs.ConnectedMatching
-import Hadwiger.Sanity.Law
-import Hadwiger.Sanity.Supersaturation
+module
+
+public import Hadwiger.Supersaturation
+public import Hadwiger.Defs.ConnectedMatching
+public import Hadwiger.Sanity.Law
+public import Hadwiger.Sanity.Supersaturation
+
+@[expose] public section
 
 /-!
 # Containers and the random sample (Section 3.2): Proposition 3.4
