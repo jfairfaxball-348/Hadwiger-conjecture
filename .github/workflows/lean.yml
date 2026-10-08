@@ -8,18 +8,29 @@ on:
 permissions:
   contents: read
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   build-and-audit:
     runs-on: ubuntu-latest
+    # A cold build compiles the 288 upstream files as well as this project's.
+    timeout-minutes: 350
     steps:
       - uses: actions/checkout@v4
+
+      # The registry's source requirements: every Lean file uses the module system and has
+      # at most 10,000 lines. Runs before anything is built.
+      - name: Lean source requirements
+        run: python3 scripts/check-lean-sources.py
 
       # Installs the toolchain named in lean-toolchain, fetches the Mathlib build cache,
       # and runs `lake build`.
       - uses: leanprover/lean-action@v1
 
       # Every sorry / admit / axiom / native_decide must be listed in the ledger,
-      # and the ledger must list nothing stale.
+      # and the ledger must list nothing stale. Scans Hadwiger/ and OAI/.
       - name: Sorry and axiom ledger check
         run: python3 scripts/check_ledger.py
 
@@ -27,3 +38,13 @@ jobs:
       # declaration may use an axiom beyond propext, Classical.choice, Quot.sound.
       - name: Axiom audit against the blueprint
         run: python3 scripts/axiom_audit.py
+
+      # The registry's mechanical check: Solution against Challenge, with the `lake
+      # comparator` of this project's own toolchain. It needs a sandbox (bubblewrap).
+      - name: Install bubblewrap for lake comparator
+        run: |
+          sudo apt-get update -qq >/dev/null
+          sudo apt-get install -y -qq bubblewrap >/dev/null
+          sudo sysctl -w kernel.apparmor_restrict_unprivileged_userns=0
+      - name: Comparator, Solution against Challenge
+        run: ./scripts/verify-comparator.sh

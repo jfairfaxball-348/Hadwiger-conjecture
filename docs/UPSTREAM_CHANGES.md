@@ -34,3 +34,11 @@ whole tree built with Lean `v4.34.1` and Mathlib `d13f23b`, with no error and no
 (before the comment lines were added, which are the only later difference).
 
 To see the change for one file: `git diff 435a157 -- OAI/X.lean`.
+
+## Move to Lean `v4.35.0-rc2` and the Mathlib commit tagged `v4.35.0-rc2` (2026-10-08)
+
+**No upstream file was changed for this.** After the port above, all 288 files built on the
+new pins as they stood, with no error and no warning. (The Mathlib commit is 69 commits
+after the one upstream pins.) The one repair the move needed was in this project's own
+files: two sanity lemmas about `ZMod 2`, where a new Mathlib instance had to be switched off
+locally (`Hadwiger/Sanity/HoleRelation.lean`, `Hadwiger/Sanity/Supersaturation.lean`).

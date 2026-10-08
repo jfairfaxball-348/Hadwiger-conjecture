@@ -22,6 +22,11 @@ Added at milestone M3 on the user's decision of 2026-10-07 (question Q4 of
 
 namespace Hadwiger
 
+-- With Mathlib at the commit pinned for Lean v4.35.0-rc2, instance search for
+-- `AddCommGroup (ZMod 2)` first finds the instance "a simple nilpotent group is commutative"
+-- (`Mathlib/GroupTheory/Nilpotent.lean`), and then `Module (ZMod 2) (Fin 2 → ZMod 2)` is not
+-- found in a module. The instance is switched off for this declaration only.
+attribute [-instance] instAddCommGroupOfIsSimpleAddGroupOfIsNilpotent in
 /-- **Sanity (M3).** The hole relation is not vacuous: there is linear data, with `X` and
 `V` both `F_2^2` and `Ω` a set of two elements, in which the two elements have a hole
 between them.

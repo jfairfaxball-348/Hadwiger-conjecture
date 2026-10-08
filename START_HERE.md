@@ -39,8 +39,11 @@ the axioms `propext`, `Classical.choice` and `Quot.sound` (`python scripts/axiom
 | Hadwiger's conjecture is false | `Hadwiger.not_hadwigerConjecture` |
 | its fractional weakening is false | `Hadwiger.not_fractionalHadwigerConjecture` |
 
-This is so since 2026-10-08, at Lean `v4.34.1` and Mathlib `d13f23b`. **It rests on the
-upstream formalisation for Theorem 1.1**, as the next section says. A machine-checked proof
+This is so since 2026-10-08. The pins are Lean `v4.35.0-rc2` and the Mathlib commit tagged
+`v4.35.0-rc2`; every Lean file uses Lean's module system. (The first complete build, commit
+`435a157`, was at upstream's own pins, Lean `v4.34.1` and Mathlib `d13f23b`, with upstream's
+files byte for byte.) **It rests on the upstream formalisation for Theorem 1.1**, as the
+next section says. A machine-checked proof
 says that the Lean statements follow from the axioms; whether the statements say what the
 paper and the conjecture say is argued in the doc comments and in `blueprint/FIDELITY.md`,
 and is not machine-checked.
@@ -72,19 +75,28 @@ registry, and chose to build on upstream's proof (`AGENTS.md` quotes the instruc
 
 ## What is next
 
-The build above is not yet in the form the Palomar registry accepts. Still to do, in order:
+The repository is laid out as the Palomar registry's submission standard asks
+(`AGENTS.md`, "Palomar"): `Challenge.lean`, `Solution.lean`, `comparator.json`,
+`formalization.yaml`, one licence file, the module system throughout, Lean `v4.35.0-rc2`.
 
-1. **Port every Lean file to Lean's module system**, upstream's 288 included
-   (`scripts/port_to_modules.py` does the mechanical part). A module cannot import a
-   non-module, and the registry requires modules throughout.
-2. **Move to Lean `v4.35.0-rc2` or later** with the Mathlib commit of the same toolchain
-   (the tag `v4.35.0-rc2`, 69 commits after the Mathlib this build uses), and repair what
-   breaks. The registry's minimum is `v4.35.0-rc2`.
-3. **Package**: `Challenge.lean` (drafted), `Solution.lean`, `comparator.json`,
-   `formalization.yaml`, a README with the account the registry asks for, and a CI job that
-   runs `lake comparator`, the same check the registry runs.
+Checked here:
 
-Every change to an upstream file is listed in `docs/UPSTREAM_CHANGES.md`.
+- `lake build`, `python scripts/check_ledger.py`, `python scripts/axiom_audit.py`;
+- `python scripts/check-lean-sources.py`, the registry's own check of module headers and
+  file lengths;
+- that each definition and statement of `Challenge.lean` is, printed in full, identical to
+  the one the Solution has (a local stand-in for Comparator, which needs Linux);
+- in CI: all of the above and `lake comparator` itself (`scripts/verify-comparator.sh`),
+  the mechanical check the registry runs.
+
+Left to do:
+
+1. If CI's Comparator step fails, repair what it reports.
+2. The maintainer reads `formalization.yaml` and the README, which are drafts written by
+   the agent, and corrects anything that is not so.
+3. The three things under "What only the user can do".
+4. Re-read the registry's standard on the day of submission: its minimum toolchain was
+   `v4.35.0-rc2` on 2026-10-08 and may move.
 
 ## What only the user can do
 

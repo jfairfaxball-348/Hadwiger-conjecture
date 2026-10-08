@@ -135,11 +135,12 @@ python scripts/axiom_audit.py
 The first check confirms that no `sorry`, `axiom` or `native_decide` occurs in `Hadwiger/`
 or `OAI/`. The second runs `#print axioms` on every declaration named in
 `blueprint/BLUEPRINT.md`. `scripts/check-lean-sources.py` checks the registry's source
-requirements.
+requirements, and `scripts/verify-comparator.sh` runs `lake comparator` on
+`comparator.json` (Linux, with bubblewrap); CI runs all of them.
 
 ## Registry
 
-The repository is being laid out for the Palomar registry (<https://palomar-registry.org/>;
+The repository is laid out for the Palomar registry (<https://palomar-registry.org/>;
 submissions at <https://submit.palomar-registry.org/>): `Challenge.lean`, `Solution.lean`,
 `comparator.json`, `formalization.yaml`. Whether and when it is submitted is the
 maintainer's decision. The registry requires the submitter to be a responsible author or

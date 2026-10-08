@@ -185,6 +185,11 @@ end HoleRel
 
 /-! ### Examples -/
 
+-- With Mathlib at the commit pinned for Lean v4.35.0-rc2, instance search for
+-- `AddCommGroup (ZMod 2)` first finds the instance "a simple nilpotent group is commutative"
+-- (`Mathlib/GroupTheory/Nilpotent.lean`), and then `Module (ZMod 2) (Fin 2 → ZMod 2)` is not
+-- found in a module. The instance is switched off for this declaration only.
+attribute [-instance] instAddCommGroupOfIsSimpleAddGroupOfIsNilpotent in
 /-- **Sanity (M4).** In the example of `exists_holeData_hole` (two elements `0`, `1` with a
 hole between them), the pair `(0, 1)` is not a unit and the pair `(0, 0)` is. -/
 theorem exists_holeData_isUnit :
