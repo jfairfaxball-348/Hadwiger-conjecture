@@ -51,7 +51,7 @@ python scripts/axiom_audit.py
 |---|---|
 | `Hadwiger/`, `Hadwiger.lean` | The Lean sources. |
 | `blueprint/` | Blueprint, sorry/axiom ledger, fidelity notes, paper issues, milestones. |
-| `docs/` | Status definitions, workflow, provenance, session log. |
+| `docs/` | Status definitions, workflow, provenance, session log, and the draft prompt for the next session. |
 | `scripts/` | The ledger check and the axiom audit. |
 | `frozen-hc7-programme/`, `sessions/`, `Archive/`, `knowledge/` | Frozen history of the earlier HC7 research programme. Not part of the formalisation. |
 

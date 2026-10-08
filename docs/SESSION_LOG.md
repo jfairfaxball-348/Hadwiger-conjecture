@@ -2447,3 +2447,57 @@ claims" into "upstream's code compiles with these axioms".
 **State of `m4-followups`.** Two commits on top of `main` `8202e73`: the label correction,
 and the comparison with this addendum. No Lean code changed in either (comments in two Lean
 files in the first; no Lean file in the second). Not merged. The merge is put to the user.
+
+### Second addendum, same day: the follow-ups merged; the rule for a next-session prompt
+
+Written on branch `infra-next-session-prompt`, started from `main` at `80c603e`.
+
+**The follow-ups were merged.** The user was asked one question:
+
+```text
+Question (Merge): The two follow-ups are on branch m4-followups (c637ae8 the equation label, 80c603e the comparison with upstream's statement): records and Lean comments only, audit unchanged, CI passed on both. Should they go into main?
+  -> Merge both (Recommended)
+```
+
+The option's description, as shown: "Fast-forward main from 8202e73 to 80c603e, run the
+three commands on main, push, and check the remote. The next session then starts from
+80c603e. This approval covers this merge only." The options not chosen: "Merge the label
+fix only", "Do not merge".
+
+Done on that approval: `main` was fast-forwarded from `8202e73` to `80c603e` and pushed;
+`git ls-remote` gave `80c603e` for `main`. The three commands passed on `main` before the
+push (6 `sorry`, 6 rows; 181 entries, 179 declarations). CI passed on the branch at
+`c637ae8` (run `37775690659`) and at `80c603e` (run `37775917332`), and on `main` at
+`80c603e` (run `37776308458`). CI had also passed on `main` at `8202e73` (run
+`37775173388`).
+
+**The user's next instruction**, verbatim:
+
+```text
+give me prompt for next session (and set up protocol to always do this when session closes)
+```
+
+What was done on it, in one infrastructure commit that changes no Lean file, no blueprint
+table and no ledger row:
+
+- `AGENTS.md`: a new subsection, "Prompt for the next session", after "Checkpoint report".
+  Every session closes with a ready-to-paste prompt for the next one: in the final message,
+  complete, and in `docs/NEXT_SESSION_PROMPT.md`, replacing the previous version. The rule
+  fixes the form (that of the user's own prompts), says which of the two versions is the
+  complete one and why the file cannot be, and says that the prompt is a draft for the
+  user and has no authority.
+- `docs/NEXT_SESSION_PROMPT.md`: new; the draft prompt for the second slice of M4.
+- `README.md` and `START_HERE.md`: one mention each of the new file.
+- Why a rule in `AGENTS.md` and not an automatic hook: writing the prompt needs the state of
+  the session and judgement about the next task, which only the worker has, and
+  `AGENTS.md` is what every session reads first and is bound by.
+
+The reason for the change, as `AGENTS.md` requires for a change to the rules: the user
+asked for it; and at the close of M1, M2, M3 and this session the user had to write the
+next prompt by hand from the checkpoint report, including a record of whatever happened
+after the last commit.
+
+What the draft prompt carries forward as open, without deciding it: sheet items R-32 and
+R-33 are held; building upstream's code and auditing its axioms is undecided.
+
+This commit is not merged by anything said above. Its merge is put to the user.

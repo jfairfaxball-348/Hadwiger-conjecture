@@ -23,7 +23,9 @@ The repository, not any conversation, carries the project state.
    off by the user on 2026-10-08 except for two items that are held.
 5. `blueprint/PAPER_ISSUES.md` — anything in the paper found unclear, incomplete or wrong.
 6. `blueprint/FIDELITY.md` — why each Lean definition matches the paper's.
-7. `docs/` — status definitions, the Lean workflow, provenance, the session log.
+7. `docs/` — status definitions, the Lean workflow, provenance, the session log, and
+   `docs/NEXT_SESSION_PROMPT.md`, the draft prompt that the last session left for the
+   next one (a draft for the user; it has no authority).
 
 ## Where things stand
 

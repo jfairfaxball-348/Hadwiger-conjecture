@@ -158,6 +158,39 @@ At the end of a session, or when asked, report: which blueprint entries changed 
 what status; the open `sorry` count and any axioms; every paper issue found; anything
 attempted that failed; and the single next task.
 
+### Prompt for the next session
+
+Every session closes with a ready-to-paste prompt for the next one. This is the user's
+instruction of 2026-10-08, quoted in `docs/SESSION_LOG.md` (M4 first-slice session, second
+addendum).
+
+- **Where.** In the session's final message, in one fenced block, written after everything
+  else is done, so after any merge, with the actual hashes, counts and CI run numbers. And
+  in `docs/NEXT_SESSION_PROMPT.md`, replacing the previous version, in the last commit of
+  the session.
+- **The two versions.** The one in the final message is the complete one. The file is
+  written before the hash of its own commit, and any merge or answer that comes after that
+  commit, can be known. It therefore names its parent commit, says that `HEAD` at the next
+  start gate must be the last commit that touched the file (or names what may lie between),
+  and marks the lines that later events may change.
+- **Form.** That of the user's own session prompts, which are quoted in
+  `docs/SESSION_LOG.md` under "The instruction":
+  - START GATE: the expected `HEAD` of `main`; what to read; the three commands with the
+    expected counts; the upstream check, against what `docs/PROVENANCE.md` last recorded;
+  - A RECORD TO WRITE FIRST: anything that happened after the last commit and is therefore
+    missing from the log (a merge, CI runs, the user's answers), as text to copy verbatim;
+  - TASK: the single next task of `blueprint/MILESTONES.md`, and nothing beyond it: the
+    branch name, what to re-read in the paper, the exact declarations, what not to touch,
+    the expected end state to check against the audit, and the checks to run;
+  - STANDING DECISIONS, carried over and brought up to date;
+  - WORKING RULES, carried over.
+- **Status.** The prompt is a draft for the user, who may change it. The prompt the user
+  actually sends is the instruction, and it is copied into the session log as before. The
+  file has no authority: where it disagrees with this file, the blueprint, the ledger or
+  the build, the file is wrong.
+- **What it must not do.** It must not decide for the user anything that is the user's:
+  it carries open sign-offs and open questions forward as open, and names them.
+
 ## Frozen history
 
 `frozen-hc7-programme/`, `sessions/`, `Archive/` and `knowledge/` are the record of the
