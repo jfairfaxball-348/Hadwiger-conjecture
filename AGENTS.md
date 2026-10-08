@@ -135,13 +135,43 @@ wrong.
 - Working branches may be pushed to `origin` without asking. This is the user's standing
   permission of 2026-10-07, quoted in `docs/SESSION_LOG.md`; before that date every push
   needed asking. It covers ordinary pushes of working branches only: never force-push, and
-  never push `main` except to publish a merge the user has approved.
-- **Ask the user before merging anything into `main`.** Each merge is approved one at a
-  time; an approval covers that merge and no later one.
-- One exception, the **closing commit**. This is the user's standing permission of
+  never push `main` except to publish a merge made under the next rule.
+- **Merging into `main`: without asking, when the merge makes sense.** Until 2026-10-08
+  every merge needed the user's approval, one merge at a time. On 2026-10-08, asked whether
+  to merge a finished slice, the user answered: "Always merge if it makes sense, you dont
+  need to asl". The question and the answer are quoted in `docs/SESSION_LOG.md` (M4
+  second-slice session, "The user's answer"). That is a standing permission. What "makes
+  sense" means is not spelled out in the user's words; the conditions below are the
+  worker's reading of them, written narrowly, and the user may widen or narrow them. A
+  worker may fast-forward `main` to a working branch without asking when **all** of these
+  hold:
+  - the branch carries the task the user set for the session, or a follow-up of it, and
+    the work is complete as a unit: the records describe nothing as done that is not;
+  - `lake build` and both checks pass on the commit to be merged, CI has passed on that
+    commit, and the three commands pass on `main` before `main` is pushed;
+  - it is a fast-forward. `main` is never force-pushed;
+  - the audit shows the end state the instruction expected, or the session log accounts for
+    every difference;
+  - no signed-off definition or statement has changed;
+  - nothing in the branch waits on a decision that is the user's. In particular the branch
+    does not contain, undecided: a statement found false or unprovable; a paper issue of
+    kind `ERROR` or `GAP` found in the session; an `axiom` or a `native_decide`; a change of
+    mathematical content; a change of the root, of the pinned paper, of the toolchain or of
+    the Mathlib commit;
+  - a change to these rules is merged without asking only when it writes down an
+    instruction the user gave, with the user's words quoted. Any other change to the rules
+    is asked first.
+  If one of these fails, or the worker is in doubt, ask the user, once, as before. Every
+  merge is reported in the session's final message with its hashes and recorded in the
+  log. **The permission is about merging and nothing else.** It signs nothing off: a new
+  definition or statement may reach `main` marked unreviewed, and it stays unreviewed until
+  the user reviews it; held items stay held. It does not cover the branch
+  `rl70-frontier-push`, which is never merged.
+- The **closing commit**. This is the user's standing permission of
   2026-10-08, quoted in `docs/SESSION_LOG.md` (M4 first-slice session, third addendum).
-  After a merge the user approved has been carried out, a single further commit may be
-  fast-forwarded into `main` without asking again, on these conditions and no others:
+  After a merge has been carried out, whether the user approved it by name or it was made
+  under the rule above, a single further commit may be fast-forwarded into `main` without
+  asking again, on these conditions and no others:
   - it changes only `docs/SESSION_LOG.md` and `docs/NEXT_SESSION_PROMPT.md`;
   - in the log it records that merge and nothing new: the hashes, the result of the three
     commands on `main`, the result of `git ls-remote`, the CI runs, and the user's answers
@@ -149,9 +179,11 @@ wrong.
   - it brings the prompt for the next session to its final form;
   - CI has passed on it, and the three commands pass on `main` with it, before `main` is
     pushed;
-  - there is one closing commit for each approved merge. It never carries a Lean file, a
+  - there is one closing commit for each merge, or one for the last of several merges made
+    in a row, if the log already records the earlier ones. It never carries a Lean file, a
     blueprint table, a ledger row, a fidelity note, a review sheet, a status remark or a
-    change to these rules. Anything of that kind is a merge to ask for.
+    change to these rules. Anything of that kind is a merge of its own, under the rule
+    above.
   The closing commit cannot record its own arrival in `main`. The log says so in it: if
   `main` contains the closing commit, it was fast-forwarded there under this rule.
 - After a push, check `git ls-remote --heads origin <branch>` against `git rev-parse HEAD`.
@@ -172,7 +204,8 @@ wrong.
 
 At the end of a session, or when asked, report: which blueprint entries changed and to
 what status; the open `sorry` count and any axioms; every paper issue found; anything
-attempted that failed; and the single next task.
+attempted that failed; every merge into `main` made in the session, with its hashes and
+whether it was asked for or made under the standing permission; and the single next task.
 
 ### Prompt for the next session
 
@@ -188,7 +221,7 @@ addendum).
   brought to its final form in the closing commit (see "Unit of work"), after the merge it
   closes, so the two differ in one thing only: the file cannot contain the hash of its own
   commit. It names its parent commit and says that `HEAD` at the next start gate must be
-  the last commit that touched the file. When a session ends without an approved merge,
+  the last commit that touched the file. When a session ends without a merge,
   there is no closing commit: the file is then written in the last commit of the working
   branch, says that the branch is unmerged, and marks the lines that the user's later
   answers may change.

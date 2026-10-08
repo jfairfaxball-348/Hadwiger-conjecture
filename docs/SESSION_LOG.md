@@ -3092,3 +3092,94 @@ One prompt, one question: whether to merge `m4-lemma-3-2` into `main`. Nothing e
 session needed a decision. Carried forward as open, and not asked again: the sign-off of
 R-32 and R-33, which the user holds for a second reading; and whether to build upstream's
 code, which the worker recommended deciding at the gate before M6.
+
+### The user's answer
+
+Written on branch `infra-merge-permission`, started from `main` at `5a7bc17` after the
+merge below.
+
+What the user had been shown in the conversation before the prompt: a short checkpoint
+summary (the counts before and after; that the axioms are the three standard ones; that the
+`pp.all` comparison is byte-identical, held items included; that the paper's proof went
+through and PI-008 has an addition; what the proofs do with "compact" and "`q` has total
+mass one"; how the junk values are handled; the eight rows; the two CI runs; that R-32 and
+R-33 are still held).
+
+One prompt, one question. The user did not choose an option and answered in their own
+words. Verbatim:
+
+```text
+Question (Merge): M4's second slice is on branch m4-lemma-3-2 (dad6bcd: the proofs of Lemma 3.2 with their records; 5a7bc17: log and draft prompt). 3 sorry, audit and CI passed on both commits, no signed-off or held statement changed. Should it go into main?
+  -> Always merge if it makes sense, you dont need to asl
+```
+
+The options that were offered, with their descriptions as shown:
+
+```text
+Merge both (Recommended): Fast-forward main from 063829e to 5a7bc17, run the three commands on main, push, and check the remote. Then one closing commit (session log and final next-session prompt only) follows under the standing rule in AGENTS.md, once CI passes on it. This approval covers this merge only.
+Do not merge yet: Leave the branch on origin, unmerged. Nothing more is committed. The next-session prompt stays in its unmerged form, and you decide about the branch before the third slice starts.
+```
+
+How the answer was read, by the worker. "asl" is read as "ask". The answer says two
+things: this merge is approved; and later merges are not to be asked for, when they make
+sense. The second is a standing instruction and changes a rule of `AGENTS.md`, which until
+now said "Ask the user before merging anything into `main`".
+
+### The merge of the slice
+
+Done on that answer. `main` was fast-forwarded from `063829e` to `5a7bc17`, which brought in
+`dad6bcd` (the proofs of Lemma 3.2 and their records) and `5a7bc17` (the push and CI
+record, the draft prompt). On `main`, before the push: `lake build` passed, with three
+`sorry` warnings and no other; `check_ledger.py` gave 3 `sorry`, 3 rows; `axiom_audit.py`
+gave 189 entries, 194 declarations, OK. `main` was pushed as an ordinary fast-forward with
+interaction disabled, and `git ls-remote --heads origin main` gave `5a7bc17`, equal to
+`HEAD`. CI had passed on the branch at `dad6bcd` (run `37786582422`) and at `5a7bc17` (run
+`37787031625`). The CI run on `main` at `5a7bc17` (`37787724093`) was still running when
+this was written; its result is in the closing record.
+
+### The standing permission, written into `AGENTS.md`
+
+One infrastructure commit, which changes `AGENTS.md` and this log and nothing else: no
+Lean file, no blueprint table, no ledger row.
+
+What changed in `AGENTS.md`:
+
+- "Unit of work". The rule "Ask the user before merging anything into `main`" is replaced
+  by "Merging into `main`: without asking, when the merge makes sense", with the user's
+  words quoted. The user's words do not say what "makes sense" means. The rule therefore
+  lists conditions, **which are the worker's reading and not the user's text**: the branch
+  carries the session's task, complete as a unit; the three commands and CI pass on the
+  commit merged, and the three commands pass on `main` before the push; fast-forward only;
+  the audit shows the expected end state or the log accounts for the difference; no
+  signed-off definition or statement has changed; nothing in the branch waits on a decision
+  that is the user's (a statement found false, an `ERROR` or `GAP` in the paper, an axiom or
+  `native_decide`, a change of mathematical content, of the root, of the pinned paper, of
+  the toolchain or of Mathlib); and a change to the rules themselves is merged without
+  asking only when it writes down an instruction the user gave, in the user's words. If a
+  condition fails or the worker is in doubt, the worker asks, as before.
+- The rule says what the permission does not do: it signs nothing off, held items stay
+  held, and it does not touch the branch `rl70-frontier-push`.
+- The rule on pushes, the closing-commit rule and "Prompt for the next session" were
+  brought into step: they spoke of "a merge the user has approved" and now speak of a merge
+  made under the rule. The closing commit is unchanged in what it may carry; one closing
+  commit may now close several merges made in a row if the log already records the earlier
+  ones.
+- "Checkpoint report" now asks for every merge made in the session, with its hashes and
+  whether it was asked for.
+
+The reason for the change, as `AGENTS.md` requires for a change to the rules: the user
+gave the instruction, as quoted. Why it is written into `AGENTS.md` and not left to the
+conversation: the repository, not a conversation or a model's memory, carries the rules,
+and the next session is bound by `AGENTS.md`; without this change it would ask again.
+
+So that the weight of this can be judged. The instruction is one sentence, given in answer
+to a question about one merge. It widens what may reach `main` without a question from one
+closing commit to every merge that meets the conditions. The conditions were written by
+the worker after the answer and **the user had not seen them when this was committed**;
+they are set out in the session's final message, and the user may change them. They were
+written narrowly on purpose: where they are narrower than what the user meant, the cost is
+a question that need not have been asked.
+
+This commit is itself merged without a further question, under the last condition of the
+new rule: it writes down an instruction the user gave, with the user's words quoted. Its
+merge is recorded in the closing record below.
