@@ -12,8 +12,10 @@ reading, or something left out; the reading adopted is recorded), `REPAIRED`.
 
 - `ERROR`: none established.
 - `GAP`: none established.
-- `UNCLEAR`: five (PI-002 to PI-006). All concern how statements are written, not
-  whether they are true.
+- `UNCLEAR`: eight (PI-002 to PI-009). All concern how statements are written, not
+  whether they are true. PI-007 to PI-009 were found at the first slice of M4
+  (2026-10-08), while Sections 3.1 and 3.2 were being stated in Lean; each has a reading
+  adopted, and none stopped a statement from being written.
 - Withdrawn: PI-001, which was a mistake by the worker, not a problem in the paper.
 
 **This is not a verification of the paper.** See "How far the paper has been checked".
@@ -40,12 +42,32 @@ The whole paper was read once, in full, proofs included, on 2026-10-07.
   are injective. Injectivity is used only to exclude loops. The paper's remark "Equal
   elements are adjacent because holes have no loops" is needed there only because its
   Lemma 2.2 speaks of three distinct elements.
+- Sections 3.1 and 3.2 (Lemma 3.2, Lemma 3.3, Proposition 3.4, each with its proof), the
+  opening of Section 3 and the last paragraphs of Sections 2.1 and 2.4 were read again at
+  the first slice of M4 (2026-10-08), and the three results were **stated** in Lean. None
+  of the three is proved; each is `sorry`. Two things were done by hand that are not
+  proofs: the explicit bound that replaces "probability `1 − exp(−Ω(m))`" in Proposition
+  3.4 was derived from the paper's proof, step by step (`blueprint/FIDELITY.md`, F-BOUND);
+  and each new statement was checked in its degenerate cases. No step of the paper's
+  proofs failed in that reading. Three places were unclear and are PI-007 to PI-009. One
+  remark of the paper was machine-checked on the way: "Two disjoint edges fail to touch
+  precisely when all four cross pairs are holes" (§2.1, last paragraph; blueprint
+  S-M4.touch).
+- An observation from that derivation, which is not an issue: the argument for the bound
+  on `cm(G)` uses only that the hole relation is symmetric. That it has no loops and no
+  triangles is used for `α(G) ≤ 2` and nowhere else in Section 3.
+- Another, about the paper's setting and not an issue: the paper's `μ_n` is uniform, so
+  `μ^2` is strictly positive, as its definition of relative entropy requires. For a law
+  with zeros the argument needs one more step (F-BOUND, step 0).
 - Nothing else has been machine-checked. For everything else the absence of an `ERROR` or
   `GAP` entry means "none found on one reading", not "found correct". In particular
   Theorem 1.1 and all of Sections 4 to 14 are in that state.
 
 The upstream repository says of its own collection that unformalised results "could have
-issues". Theorem 3.1 is unformalised upstream.
+issues". At the pin, Theorem 3.1 was unformalised upstream. On 2026-10-08 upstream's
+catalogue lists this paper as having a formalised main result (`docs/PROVENANCE.md`,
+"Upstream after the pin"). This project has not built, read or checked that code, and
+nothing in this file relies on it.
 
 ### Spot checks (by hand; all consistent)
 
@@ -54,7 +76,7 @@ issues". Theorem 3.1 is unformalised upstream.
 | Corollary 1.2 | `26m/75 + 2/3 < m/2` exactly when `m > 100/23`, so for `m ≥ 5`. (Machine-checked since M1, for `m ≥ 5`.) |
 | Lemma 2.2 | The six-term sum over a triangle: left sides cancel in pairs by sharing, bilinear terms by symmetry, leaving `1 + 1 + 1 = 1` in `F_2`. (Machine-checked since M3: the Lean proof of triangle-freeness is this sum, term for term.) |
 | Lemma 3.3 | The cut capacity `Mμ(L_0) + Mμ(R_0) + 2^{DN} μ^2(E_0) < 1` gives both bounds. |
-| Proposition 3.4 | Entropy increment `≥ −log(1 − ε_N)` per recording; `(2C_0 g − D) = −2C_0 g`; fingerprint log-count `O(N^3 2^{100gN}) = o(2^{1000gN})`; fewer than `m/200 + m/200` matching edges. |
+| Proposition 3.4 | Entropy increment `≥ −log(1 − ε_N)` per recording; `(2C_0 g − D) = −2C_0 g`; fingerprint log-count `O(N^3 2^{100gN}) = o(2^{1000gN})`; fewer than `m/200 + m/200` matching edges. Again at the first slice of M4, in full and with general `B`, `ε`, `μ`: the fingerprint has at most `1 + ⌊log B/(−log(1−ε))⌋` units, which is at most the paper's `L_N`; the replay argument; `C(m,k) μ(S)^k` and `m^{2k} μ^2(E_0)^k`; and `2(k − 1) < m/100` for `k = ⌈m/200⌉` (`blueprint/FIDELITY.md`, F-BOUND). By hand; the inequality `200k < m + 200` is machine-checked (S-M4.bound). |
 | Proposition 3.5 | `3b ≤ m + 2s + e ≤ m + 4c − 3e + 2`; tight for `K_1` and `K_3`. (Machine-checked since M2: the inequality, and equality for every complete graph of odd order, which includes `K_1` and `K_3`.) |
 | Lemma 4.4 | `g^2/4 > 2D` and `8D/g = 32000 < g` for `D = 4000g`, `g = 10^9 + 1`. |
 | Lemma 4.5 | `(ζ − ε)u < D + ζ` with `ε < ζ/4` gives `u < K_1`; the second-peeling total stays below `K`. |
@@ -207,3 +229,76 @@ limiting probability space obtained by compactness.
 - Reading adopted: each use is disambiguated by its section. The blueprint names the
   object in words wherever the letter is ambiguous.
 - Blueprint entries: all of Sections 4 to 14.
+
+## PI-007 — "A probability law on units", and whether a unit may repeat an element
+
+- Kind: `UNCLEAR`. Found at the first slice of M4 (2026-10-08).
+- Where: §3, first paragraph, and Theorem 3.1 (`thm:raw-supersaturation`); used again in
+  Lemma 3.3 and in the proof of Proposition 3.4.
+- What is unclear, first point: Theorem 3.1 speaks of "every probability law `σ` on units"
+  and then compares it with measures on other sets: `σ_1 ≤ Mμ` and `σ_2 ≤ Mμ` on `Ω_n`,
+  and `σ ≤ 2^{DN} μ^2` on `Ω_n^2`. A law on the set of units is not literally a measure on
+  `Ω_n^2`.
+- Reading adopted: `σ` is a law on all of `Ω_n^2` that vanishes off the units. Why: the
+  third cap is called a pointwise inequality "of measures on the finite raw spaces", which
+  only makes sense for `σ` as a measure on `Ω_n^2`; Lemma 3.3 speaks in the same way of a
+  "probability law supported on `R`" for `R ⊆ Ω_n^2`; and the proof of Proposition 3.4
+  applies that lemma with `R` a set of units. The two descriptions give the same laws.
+- What is unclear, second point: "an ordered pair of raw vertices with no hole between its
+  endpoints" does not say whether the two endpoints may be the same raw vertex. The next
+  sentence, "The endpoints of a unit may be dependent", is about a random unit and does
+  not settle it.
+- Reading adopted: they may. Why: `(x, x)` has no hole between its endpoints, since the
+  hole relation has no loops, so it satisfies the definition as written; and the proof of
+  Proposition 3.4 needs it, because two positions with the same raw vertex are adjacent
+  ("Equal elements are adjacent"), a matching edge may join them, and "the set of raw unit
+  types thereby realized" then contains `(x, x)`.
+- Lean: `Hadwiger.HoleRel.IsUnit`, `Hadwiger.HoleRel.Supersaturated`; notes F-UNIT, F-SUP.
+- Blueprint entries: D-3.unit, D-3.sup, T-3.1, L-3.3, P-3.4.
+
+## PI-008 — Relative entropy against a measure that is not strictly positive
+
+- Kind: `UNCLEAR`. Found at the first slice of M4 (2026-10-08).
+- Where: §3.1. The definition: "`D(ρ‖q) = ∑_x ρ(x) log(ρ(x)/q(x))`. Here `q` is a strictly
+  positive probability measure and `0 log 0 = 0`." Lemma 3.2 then uses `D(ρ'‖ρ)`, and its
+  proof `D(ρ'‖ρ(·|S))`, where `ρ` and `ρ(·|S)` are not strictly positive in general.
+- What is unclear: what `D(ρ'‖ρ)` means when `ρ` vanishes somewhere.
+- Reading adopted: the same sum, taken over the points where `ρ' > 0`. By the first
+  assertion of Lemma 3.2, `ρ` is positive at every such point (for `ρ' ∈ P`), so every
+  term is finite, and the convention `0 log 0 = 0` disposes of the others. For
+  `ρ(·|S)` the same holds when `ρ'` is supported on `S`. This is the standard meaning of
+  relative entropy for `ρ'` absolutely continuous with respect to `ρ`, and it is what the
+  paper's proof computes with.
+- Consequence for Lean: `Hadwiger.relEntropy ρ q` is defined for all weight functions and
+  gives a junk value, not `+∞`, where `q` vanishes and `ρ` does not (note F-KL). In the
+  second and third assertions of Lemma 3.2 the term `relEntropy ρ' ρ` is the honest value
+  because of the first assertion (note L-3.2). Nothing was added to the statements.
+- Blueprint entries: D-3.KL, L-3.2.
+
+## PI-009 — The quantifiers of Proposition 3.4
+
+- Kind: `UNCLEAR`. Found at the first slice of M4 (2026-10-08); the first part was noted
+  when PI-001 was withdrawn.
+- Where: §3.2, Proposition 3.4 (`prop:raw-to-graph`): "Assume the conclusion of Theorem 3.1
+  at a given sufficiently large `n`. For `m = 2^{C_0 g N}`, the sampled graph … satisfies
+  `α(G) ≤ 2`, `cm(G) < m/100` with probability `1 − exp(−Ω(m))`. The implied positive
+  constant is independent of `n`."
+- What is unclear: the statement is about one `n` ("a given … `n`") and also asymptotic
+  ("sufficiently large", "`Ω(m)`", "independent of `n`"). It does not say what "sufficiently
+  large" depends on, or over what the constant is uniform.
+- Reading adopted: there are a constant `c > 0` and a threshold `n_0`, both depending only
+  on the construction parameters, such that for every `n ≥ n_0` at which the conclusion of
+  Theorem 3.1 holds, the probability is at least `1 − exp(−c m)` with `m = m(n)`. Why:
+  the proof bounds the failure probability by `exp(o(m))` terminal sets (equation (3.3),
+  which needs `n` large) times `(200e/M)^k + 2^{-2C_0 g N k}` with `k ≥ m/200`; the first
+  term gives a rate `log(M/(200e))/200` that does not depend on `n`, and the count is
+  absorbed for large `n`. "Sufficiently large" is also needed for the construction to exist
+  at all (§2.4: "For all large `n`, `N ≥ 2(d + h)`"). "With probability `1 − exp(−Ω(m))`"
+  is read as "at least".
+- What Theorem 1.1 needs: only that the probability is positive at each large `n`
+  (noted under PI-001).
+- Consequence for Lean, by the user's decision of 2026-10-07: Proposition 3.4 is stated as
+  an explicit bound on the failure probability for each instance, with no `n`, no constant
+  and no "sufficiently large" (`Hadwiger.mass_listLaw_le_sampleBound`; notes F-BOUND and
+  P-3.4). The asymptotic statement, under the reading above, is left to M17.
+- Blueprint entries: P-3.4, D-3.bound.

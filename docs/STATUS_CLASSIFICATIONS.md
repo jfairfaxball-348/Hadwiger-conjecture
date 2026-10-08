@@ -26,8 +26,10 @@ examples". Such things are notes in `docs/SESSION_LOG.md`, not statuses.
 | `MATHLIB` | Mathlib's own definition is used unchanged. |
 | `DEFINED` | A new Lean definition exists in this repository, contains no `sorry`, and has a fidelity note in `blueprint/FIDELITY.md`. |
 
-`DEFINED` does not mean the definition has been reviewed. Review of the statement layer is
-milestone M0, and its outcome is recorded in `blueprint/FIDELITY.md`.
+`DEFINED` does not mean the definition has been reviewed. Review of the statement layer
+was milestone M0, and its outcome is recorded in `blueprint/FIDELITY.md`. Definitions added
+later are reviewed separately; a blueprint row says so when its definition or statement is
+unreviewed, as the rows added at the first slice of M4 do.
 
 ## The three standard axioms
 

@@ -19,6 +19,8 @@ The repository, not any conversation, carries the project state.
    the paper, its Lean name and its status.
 3. `blueprint/SORRY_AXIOM_LEDGER.md` — every open `sorry`; there are no axioms.
 4. `blueprint/MILESTONES.md` — the plan and the single next task.
+   `blueprint/M4_REVIEW_SHEET.md` — the statement layer of Sections 3.1 and 3.2, awaiting
+   the user's sign-off (2026-10-08).
 5. `blueprint/PAPER_ISSUES.md` — anything in the paper found unclear, incomplete or wrong.
 6. `blueprint/FIDELITY.md` — why each Lean definition matches the paper's.
 7. `docs/` — status definitions, the Lean workflow, provenance, the session log.
@@ -45,8 +47,19 @@ What follows from Theorem 1.1 in Lean, and so has a complete proof body but is n
 Corollary 1.2, the final theorem, and the negations of Hadwiger's conjecture and of its
 fractional weakening. Nothing else stands between Theorem 1.1 and the final theorem.
 
-Theorem 1.1 is the only `sorry` left. Everything else in the paper, from the construction
-onward, is not yet stated in Lean.
+What is stated and **not proved** (2026-10-08, first slice of milestone M4): Lemma 3.2
+(three assertions), Lemma 3.3 and Proposition 3.4, the last as an explicit bound on a
+failure probability, for any finite set with a law and any symmetric, loopless,
+triangle-free relation. Each is `sorry`. **These statements are awaiting the user's
+sign-off** (`blueprint/M4_REVIEW_SHEET.md`), and by the user's decision no proof of them is
+written before it. The bound in Proposition 3.4 is not in the paper in that form: it was
+derived by hand from the paper's proof and has not been checked by anyone else. Theorem 3.1
+is not stated.
+
+So there are six `sorry`s: Theorem 1.1 and those five. The final theorem rests on Theorem
+1.1 alone; the five are not beneath it, because Theorem 1.1 is not yet derived from
+Proposition 3.4 in Lean. The paper's construction (Sections 2.2 to 2.4), Theorem 3.1 and
+everything from Section 4 onward are not yet stated in Lean.
 
 Run `python scripts/axiom_audit.py` for the exact tally; the blueprint has the detail.
 
@@ -57,11 +70,17 @@ are not results of the paper. The statement layer was signed off by the user on 
 The sign-off covers the definitions and statements as they stood then; anything added or
 changed later needs its own.
 
-One sanity check has been added since: that the hole relation of Section 2.1 can hold at
-all (`Hadwiger.exists_holeData_hole`, blueprint S-M3.hole-nonvacuous, milestone M3). It is
-proved, and the user accepted the form of its statement on 2026-10-07 (recorded in its
-blueprint row and in `docs/SESSION_LOG.md`, M3 session). Nothing in the Lean sources is
-awaiting review.
+One sanity check was added at M3: that the hole relation of Section 2.1 can hold at
+all (`Hadwiger.exists_holeData_hole`, blueprint S-M3.hole-nonvacuous). It is proved, and
+the user accepted the form of its statement on 2026-10-07 (recorded in its blueprint row
+and in `docs/SESSION_LOG.md`, M3 session).
+
+**Awaiting review since 2026-10-08:** everything added in the first slice of M4. That is
+the definitions of the statement layer of Sections 3.1 and 3.2 (blueprint D-3.rel, D-3.law,
+D-3.marg, D-3.caps, D-3.unit, D-3.confl, D-3.sup, D-3.KL, D-3.list, D-3.bound) and the
+statements L-3.2, L-3.3 and P-3.4. Their fidelity notes carry no "Reviewed by" line. The
+sanity lemmas proved with them (blueprint `S-M4.*`) are checks on those definitions; they
+are proved, and they are not evidence for the three results.
 
 ## The old programme
 
@@ -168,6 +187,23 @@ Okay cool well if its just 1% lets just redo it all. I choose your option 2
 So this project is **independent of the upstream Lean code**. The rule that follows from
 that is in `AGENTS.md`; what was found upstream, and what was read of it, is in
 `docs/PROVENANCE.md`.
+
+### Upstream since then (2026-10-08)
+
+On 2026-10-08 `openai/math` moved past the pinned commit. The paper is unchanged there. A
+new folder of 276 Lean files and upstream's catalogue now claim a formalisation of the
+paper's main result in its ordinary-chromatic form. The start gate of the session that
+found this stopped and the user was told. The user's decision, by choosing the option so
+labelled, 2026-10-08:
+
+```text
+Carry on independently
+```
+
+The option's description, the other options and the rest of the exchange are quoted in
+`docs/SESSION_LOG.md` (M4 first-slice session); what was seen upstream, and that none of it
+was opened, built or checked, is in `docs/PROVENANCE.md` ("Upstream after the pin"). So the
+project is still independent of the upstream Lean code, and the rule in `AGENTS.md` stands.
 
 ### Corrections to the instruction's assumptions
 

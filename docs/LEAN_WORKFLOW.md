@@ -57,13 +57,16 @@ CI (`.github/workflows/lean.yml`) runs the same three steps on every push and pu
 | Path | Contents |
 |---|---|
 | `Hadwiger.lean` | Root module; imports everything. |
-| `Hadwiger/Defs/` | Definitions that Mathlib lacks: minors and the Hadwiger number, connected matchings, fractional colourings. |
+| `Hadwiger/Defs/` | Definitions that Mathlib lacks: minors and the Hadwiger number, connected matchings, fractional colourings; and, since the first slice of M4 (unreviewed until signed off): laws on a finite type with masses, marginals, products, the three caps and the law of a list (`Law.lean`), relative entropy (`RelEntropy.lean`), an abstract hole relation with its graph on positions, units and conflicts (`HoleRel.lean`). |
 | `Hadwiger/ChromaticBounds.lean` | Section 1: bounds on `χ` and `χ_f` from `α`. |
 | `Hadwiger/MatchingMinor.lean` | Proposition 3.5, and the steps of its proof as lemmas (blueprint `S-M2.*`). |
 | `Hadwiger/HoleRelation.lean` | Section 2.1: the hole relation, Lemma 2.2, the graph on positions. |
+| `Hadwiger/Supersaturation.lean` | Section 3, opening: the hole relation of Section 2.1 as an instance of the abstract one; the conflict probability; the conclusion of Theorem 3.1 as a property (`HoleRel.Supersaturated`). Theorem 3.1 itself is not stated. |
+| `Hadwiger/EntropyAndCuts.lean` | Section 3.1: Lemma 3.2 (three statements) and Lemma 3.3. Stated, not proved. |
+| `Hadwiger/RandomSample.lean` | Section 3.2: the explicit bound and Proposition 3.4, as a bound (stated, not proved) and as an existence statement derived from it. Imports two `Sanity` files for general lemmas. |
 | `Hadwiger/Main.lean` | Theorem 1.1, Corollary 1.2, the final theorem, Hadwiger's conjecture and its negation. |
-| `Hadwiger/Sanity/` | Sanity checks on the definitions (milestone M0, and one for the hole relation at M3), and the general lemmas about the definitions that they needed. Not statements of the paper; blueprint IDs `S-M0.*` and `S-M3.*`. Files that prove the paper's results may import these files for the general lemmas; `Hadwiger/ChromaticBounds.lean` has done so since M1 and `Hadwiger/MatchingMinor.lean` since M2. `Hadwiger/Sanity/HoleRelation.lean` imports `Hadwiger/HoleRelation.lean`, where the definitions it checks are, and nothing imports it but the root module. |
-| `blueprint/` | Blueprint, ledger, fidelity notes, paper issues, milestones. |
+| `Hadwiger/Sanity/` | Sanity checks on the definitions (milestone M0, one for the hole relation at M3, and four files for the statement layer of Section 3 at the first slice of M4: `Law.lean`, `RelEntropy.lean`, `Supersaturation.lean`, `RandomSample.lean`), and the general lemmas about the definitions that they needed. Not statements of the paper; blueprint IDs `S-M0.*`, `S-M3.*` and `S-M4.*`. Files that prove the paper's results may import these files for the general lemmas; `Hadwiger/ChromaticBounds.lean` has done so since M1, `Hadwiger/MatchingMinor.lean` since M2 and `Hadwiger/RandomSample.lean` since the first slice of M4. `Hadwiger/Sanity/HoleRelation.lean` imports `Hadwiger/HoleRelation.lean`, where the definitions it checks are; since the first slice of M4 `Hadwiger/Sanity/Supersaturation.lean` imports it, for the example of its lemma. |
+| `blueprint/` | Blueprint, ledger, fidelity notes, paper issues, milestones, and the two review sheets (M0, signed off; M4, awaiting sign-off). |
 | `scripts/` | The two checks and their shared scanner. |
 
 All project declarations live in the namespace `Hadwiger`, never in `SimpleGraph`, so that

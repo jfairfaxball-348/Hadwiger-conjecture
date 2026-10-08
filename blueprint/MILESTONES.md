@@ -5,25 +5,32 @@ Statuses of individual results are in `blueprint/BLUEPRINT.md`, never here.
 
 ## The single next task
 
-**M4, first slice: the statement layer of Sections 3.1 and 3.2, statements only.** The new
-definitions (a law on a finite type and the three caps; units and the conflict relation;
-relative entropy; the random list of `m` positions) and the statements of Lemma 3.2, Lemma
-3.3 and Proposition 3.4, each with a fidelity note and each `sorry`, put to the user for
-sign-off. **No proof of M4 is to be written before that sign-off.** The form of
-Proposition 3.4 and the method were decided by the user on 2026-10-07; see "Decided by the
-user" under M4 below. Nothing of M4 has been started.
+**M4, second slice: prove Lemma 3.2** (blueprint L-3.2: the three assertions, in
+`Hadwiger/EntropyAndCuts.lean`), by the paper's proof. **It may not start before the user
+has signed off the statement layer**, at least the items it rests on: R-22 (laws), R-28
+(relative entropy) and R-30 (Lemma 3.2) of `blueprint/M4_REVIEW_SHEET.md`, with questions
+Q1, Q4 and Q6 answered. If an answer changes a definition or a statement, that change comes
+first, in its own commit.
+
+The first slice of M4 was done on 2026-10-08 on branch `m4-statement-layer`: the
+definitions of the statement layer of Sections 3.1 and 3.2, the statements of Lemma 3.2,
+Lemma 3.3 and Proposition 3.4 (five `sorry`s; none proved), their fidelity notes, the review
+sheet and the sanity lemmas. **It is awaiting the user's sign-off.** State under M4 below.
+Whether the branch has been merged into `main` is a question for `git log main`.
 
 M3 was completed on 2026-10-07 on branch `m3-hole-relation`: Lemma 2.2 and equation (2.3)
 are proved, and the non-vacuity lemma for the hole relation is stated and proved. The user
 accepted the form of that lemma's statement the same day.
 
 M2 was completed on 2026-10-07 on branch `m2-proposition-3-5`: Proposition 3.5 is proved.
-From here the final theorem rests on one `sorry` only, Theorem 1.1. Since M3 that is the
-only `sorry` in the sources.
+From here the final theorem rests on one `sorry` only, Theorem 1.1. From M3 until the first
+slice of M4 that was the only `sorry` in the sources. Since that slice there are six: the
+five new ones are unproved statements of Section 3 and are not beneath the final theorem.
 
 M0 was completed on 2026-10-07: every sanity lemma in its list is proved, and every
-fidelity note carries the user's "Reviewed by" line. A definition or statement added or
-changed from now on needs its own fidelity note and its own sign-off.
+fidelity note that existed then carries the user's "Reviewed by" line. A definition or
+statement added or changed from then on needs its own fidelity note and its own sign-off;
+the notes added at the first slice of M4 (2026-10-08) are of that kind and are unreviewed.
 
 M1 was completed on 2026-10-07 on branch `m1-corollary-1-2`: its five `sorry`s were
 replaced by proofs and no statement was changed. Statuses are in the blueprint. Whether
@@ -56,7 +63,7 @@ Whole project, central estimate: about 60,000 lines of Lean; plausible range 35,
 | M1 | Corollary 1.2 from Theorem 1.1 and Proposition 3.5, including `χ_f ≥ \|V\|/α` | S-1.a, S-1.b, S-1.c, P-3.5 (second assertion), C-1.2 | 600 (400–800) | M0 |
 | M2 | Proposition 3.5 | P-3.5 (first assertion) | 900 (700–1,200) | M0 |
 | M3 | Section 2.1: the hole relation is triangle-free and gives `α ≤ 2` | L-2.2, S-2.3 | 250 (150–400) | — |
-| M4 | Proposition 3.4, in abstract form | L-3.2, L-3.3, P-3.4, D-3.unit, D-3.KL | 4,500 (3,000–6,000) | M0, M3 |
+| M4 | Proposition 3.4, in abstract form | L-3.2, L-3.3, P-3.4, D-3.rel, D-3.law, D-3.marg, D-3.caps, D-3.unit, D-3.confl, D-3.sup, D-3.KL, D-3.list, D-3.bound | 4,500 (3,000–6,000) | M0, M3 |
 | M5 | The construction, and the statement of Theorem 3.1 | D-2.par to D-2.sample, L-2.3, D-A.order, T-3.1 (statement only) | 2,500 (1,500–4,500) | M3 |
 | M6 | Section 4: frame laws and peeling | L-4.1 to L-4.6 | 4,800 (2,800–9,000) | M5 |
 | M7 | Section 5: moments and mixers | L-5.1 to L-5.5 | 3,400 (1,900–6,300) | M5 |
@@ -300,6 +307,45 @@ M1 to M4 are independent of M5 to M17. When M1, M2 and M17 are done, T-FINAL is 
      For the rest the worker's proposal stands until the user says otherwise: Lemma 3.2;
      Lemma 3.3; the fingerprint procedure; the union bound and Proposition 3.4. Each a
      branch and a merge of its own.
+- **State on 2026-10-08, after the first slice** (statuses are in the blueprint, not here):
+  - Done, on branch `m4-statement-layer`, and **awaiting sign-off**. Ten groups of
+    definitions, none containing `sorry`: an abstract hole relation with its graph on
+    positions and the instance from Section 2.1; laws and masses; marginals and products;
+    the three caps; units and conflicts; the conflict probability; the conclusion of
+    Theorem 3.1 as a property; relative entropy; the law of a list; the explicit bound.
+    Five statements with `sorry`: the three assertions of Lemma 3.2, Lemma 3.3, and the
+    bound of Proposition 3.4. The existence half of Proposition 3.4 is derived from the
+    bound in Lean. Theorem 3.1 is **not** stated.
+  - No proof of Lemma 3.2, Lemma 3.3 or the bound was written.
+  - The two things point 3 left open are now proposals, as questions Q1 and Q2 of
+    `blueprint/M4_REVIEW_SHEET.md`: a law is a real weight function with a predicate
+    (`IsLaw`); the bound is `(|Ω|^2 + 1)^L (C(m,k)/M^k + m^{2k}/B^k)` with
+    `L = 1 + ⌈log B/(−log(1 − ε))⌉` and `k = ⌈m/200⌉`. The sheet has four further questions.
+  - The bound was derived by hand from the paper's proof (`blueprint/FIDELITY.md`,
+    F-BOUND). **That derivation is not a proof.** If it is wrong the statement is false,
+    and the proof slices will find out.
+  - Sanity lemmas, the one exception to "no proof before sign-off": all that were stated
+    are proved (blueprint `S-M4.*`). Two were left unstated and have rows of kind
+    `sanity (planned)`.
+  - Paper: nothing failed on the second reading of Sections 3.1 and 3.2. Three unclear
+    places were recorded with readings adopted (PI-007 to PI-009).
+  - Size: 10 new Lean files, 1,298 lines with comments; the Lean sources went from 1,796
+    lines to 3,104, the root module growing by 10. Of the 1,298, the four files under
+    `Hadwiger/Sanity/` are 765. Lean code, with comments and blank lines removed: 559
+    lines, of which 139 are the definitions and statements and 420 the sanity lemmas. No
+    proof of a result of the paper is among them, so this says nothing yet about the
+    estimate of 4,500.
+  - Mathlib, for the slices to come. Used as they are: `Convex ℝ`, `IsCompact`,
+    `Function.support`, `Set.indicator`, `Nat.ceil`, `Real.log`, `Fintype.prod_sum`. Found
+    at the pinned commit: the set `stdSimplex ℝ α` is deprecated since 2026-08-29 in favour
+    of the bundled `Convexity.StdSimplex ℝ α`, so `isCompact_stdSimplex` and
+    `convex_stdSimplex` carry deprecation warnings; compactness of the set of laws can be
+    had from `StdSimplex.compactSpace` through `isLaw_iff_exists_stdSimplex`, or proved
+    directly (closed and bounded in `α → ℝ`). Still absent: max-flow/min-cut, the
+    information-projection lemma, fingerprints.
+  - Departures from the paper's argument that the proofs will need, known already: for a
+    law with zeros, `μ^2` is not strictly positive and one more step is needed (F-BOUND,
+    step 0; question Q5).
 
 ## M5 — The construction and the statement of Theorem 3.1
 

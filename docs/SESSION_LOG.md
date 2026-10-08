@@ -1766,3 +1766,472 @@ and the scope page was first checked to contain no fenced code block before it w
 displayed. The upstream file names were seen before this session's Lean files were named.
 The names used here (`Law`, `RelEntropy`, `HoleRel`, `Supersaturation`, `EntropyAndCuts`,
 `RandomSample`) were taken from the paper's own section titles and terms.
+
+### A records-only commit first
+
+Commit `6d9304b`, before any Lean was committed: `docs/PROVENANCE.md` (the upstream
+finding), the head of this entry down to here, and one paragraph of
+`blueprint/MILESTONES.md` ("Order and gates") that the finding made false. It changes no
+Lean file, no blueprint table and no ledger row, so the three commands read the same inputs
+as at `83d8d91`, where they had just passed; they were not run again on a clean checkout
+of that commit. Pushed; `git ls-remote` gave `6d9304b` for the branch.
+
+### What was read before any Lean was written
+
+In the local TeX, at the pinned commit: `paper/build/sections/03-distributions.tex`, lines
+1 to 205 (units; Theorem 3.1 with equation `eq:raw-law-caps`; relative entropy; Lemma 3.2,
+Lemma 3.3 and Proposition 3.4, each with its proof); `02-geometry.tex`, lines 1 to 122
+(Section 2.1 to its last paragraph, and the constants) and lines 256 to 321 (Section 2.4,
+with its last paragraph on the sampled graph).
+
+### What the pinned Mathlib has
+
+Looked at in the Mathlib source at `d13f23b`, before defining anything.
+
+| Mathlib | What it is | Used? |
+|---|---|---|
+| `stdSimplex ℝ α` | the set of functions `α → ℝ` with nonnegative values and sum `1` | No. **Deprecated at the pin** (since 2026-08-29), with `convex_stdSimplex`, `isCompact_stdSimplex`, `isClosed_stdSimplex` |
+| `Convexity.StdSimplex ℝ α` | its replacement: a structure with finitely supported weights, nonnegative, total `1`; has a topology, `CompactSpace`, a convex-space structure | Not as the representation. Used in one sanity lemma: its weight functions are exactly the laws here |
+| `PMF α` | `α → ℝ≥0∞` with sum `1`; `PMF.toMeasure`, `map`, `bind`, `pure` | No. No topology or convexity on `PMF` was found |
+| `Measure`, `Measure.pi`, `Measure.prod`, `Measure.fst` | measures, with values in `ℝ≥0∞` | No |
+| `InformationTheory.klDiv` | Kullback–Leibler divergence of two measures, in `ℝ≥0∞`, `∞` without absolute continuity; `klDiv_self`, `toReal_klDiv`, `klDiv_eq_zero_iff` | No. A comparison lemma is planned, not stated (S-M4.kl-mathlib) |
+| `Real.negMulLog`, `InformationTheory.klFun`, `Real.binEntropy` | `−x log x`; `x log x + 1 − x`; binary entropy | No; the definition is the paper's formula as written |
+| `Set.indicator`, `Function.support`, `Convex ℝ`, `IsCompact`, `Nat.ceil`, `Real.log`, `Nat.choose` | — | Yes, unchanged |
+| `SimpleGraph` with `CliqueFree 3` | a symmetric loopless relation; no triangle | Not for the abstract relation (question Q3) |
+| `IsMinOn` | `IsMinOn f s a ↔ ∀ x ∈ s, f a ≤ f x`, by `Iff.rfl` | Not in the statements; the condition is written out |
+| `Fintype.prod_sum`, `Fintype.sum_prod_type` | a product of sums is a sum of products; a sum over pairs | Yes, in the sanity proofs |
+
+The reasons for each "No" are in `blueprint/FIDELITY.md` (F-LAW, F-KL, F-HOLEREL, F-MARG,
+F-LIST) and on the review sheet (Q1, Q3, Q4).
+
+### The definitions
+
+All new; none contains `sorry`; each has a fidelity note without a "Reviewed by" line and a
+blueprint row that says it is unreviewed.
+
+| Blueprint | Lean | File | Note | Sheet |
+|---|---|---|---|---|
+| D-3.rel | `HoleRel`, `HoleRel.positionGraph`, `HoleData.holeRel` | `Hadwiger/Defs/HoleRel.lean`, `Hadwiger/Supersaturation.lean` | F-HOLEREL | R-21 |
+| D-3.law | `IsLaw`, `mass` | `Hadwiger/Defs/Law.lean` | F-LAW | R-22 |
+| D-3.marg | `marginalFst`, `marginalSnd`, `prodLaw` | `Hadwiger/Defs/Law.lean` | F-MARG | R-23 |
+| D-3.caps | `SatisfiesCaps` | `Hadwiger/Defs/Law.lean` | F-CAPS | R-24 |
+| D-3.unit | `HoleRel.IsUnit`, `HoleRel.Conflict` | `Hadwiger/Defs/HoleRel.lean` | F-UNIT | R-25 |
+| D-3.confl | `HoleRel.conflictProb` | `Hadwiger/Supersaturation.lean` | F-CONFLPROB | R-26 |
+| D-3.sup | `HoleRel.Supersaturated` | `Hadwiger/Supersaturation.lean` | F-SUP | R-27 |
+| D-3.KL | `relEntropy` | `Hadwiger/Defs/RelEntropy.lean` | F-KL | R-28 |
+| D-3.list | `listLaw` | `Hadwiger/Defs/Law.lean` | F-LIST | R-29 |
+| D-3.bound | `fingerprintLength`, `exceptionSize`, `sampleBound` | `Hadwiger/RandomSample.lean` | F-BOUND | R-32 |
+
+Choices made, each put to the user on the sheet:
+
+- A law is a function `α → ℝ` with the predicate `IsLaw`, not a bundled object, not `PMF`
+  and not a measure (Q1).
+- The abstract relation is a bare structure `HoleRel`, not a `SimpleGraph` with
+  `CliqueFree 3` (Q3). **`HoleData.positionGraph` was not changed.** The signed-off graph is
+  recovered from the new one by `rfl`: `HoleData.positionGraph_holeRel`.
+- Relative entropy is a real number given by the paper's finite sum, with a junk value
+  where the second argument vanishes and the first does not (Q4).
+- "A law on units" is a law on all ordered pairs with support in the units; the endpoints
+  of a unit may coincide (PI-007).
+- The probability of an event is one definition, `mass`, used for `μ(S)`, `μ^2(E_0)`,
+  `ρ(S)`, the conflict probability and events about the random list.
+- The conclusion of Theorem 3.1 is `HoleRel.Supersaturated H μ M B ε`, with three real
+  numbers. Theorem 3.1 is **not** stated; T-3.1 is still `NOT_STATED`.
+
+### The statements
+
+| Blueprint | Lean | Proof |
+|---|---|---|
+| L-3.2, first assertion | `relEntropy_minimizer_pos` | `sorry` |
+| L-3.2, second assertion | `relEntropy_le_sub_of_minimizer` | `sorry` |
+| L-3.2, third assertion | `neg_log_mass_le_relEntropy_of_minimizer` | `sorry` |
+| L-3.3 | `exists_terminal_cut` | `sorry` |
+| P-3.4, the bound | `mass_listLaw_le_sampleBound` | `sorry` |
+| P-3.4, existence | `exists_list_indepNum_le_two_and_connectedMatchingNumber_lt` | derived from the bound |
+
+The first four are in `Hadwiger/EntropyAndCuts.lean`, the last two in
+`Hadwiger/RandomSample.lean`. The exact texts are on the review sheet (R-30, R-31, R-33).
+
+**No proof of Lemma 3.2, Lemma 3.3 or the bound was written.**
+
+The corollary. The instruction asked for its derivation if it took a few lines. It took
+three: the bound puts the mass of the bad lists below `1`; the list law has total mass `1`,
+so some list is not bad (`isLaw_listLaw`, `IsLaw.exists_notMem_of_mass_lt_one`); and
+`α(G) ≤ 2` for every list. For the last, S-2.3 itself could not be used, because it is
+about the hole relation of linear data and the corollary is about an abstract one. Its
+proof was repeated word for word for `HoleRel` (`HoleRel.indepNum_positionGraph_le_two`,
+blueprint S-M4.support). So the kernel ties the two halves of P-3.4 together, and the
+conclusion of the corollary is exactly the body of Theorem 1.1 for one `m`:
+`∃ o, (H.positionGraph o).indepNum ≤ 2 ∧ 100 * connectedMatchingNumber (H.positionGraph o) < m`.
+The corollary rests on the bound, so it is `PROVED_MODULO` and **not proved**.
+
+### The explicit bound
+
+With `n = |Ω|`, `k = ⌈m/200⌉` and `L = 1 + ⌈log B / (−log(1 − ε))⌉`:
+
+```text
+P( m ≤ 100·cm(G) )  ≤  (n^2 + 1)^L · ( C(m,k)/M^k + m^{2k}/B^k )
+```
+
+under `0 < M`, `0 < B`, `0 < ε < 1`, `μ` a law, and the supersaturation hypothesis. Every
+one of these hypotheses is the paper's (table in note P-3.4); none was added; the paper's
+"`μ` uniform" and "`m = 2^{C_0 g N}`" were dropped.
+
+It was **derived by hand** from the paper's proof and written out in seven numbered steps
+in `blueprint/FIDELITY.md`, note F-BOUND, labelled as a hand derivation and not a proof.
+The factors: `(n^2 + 1)^L` is the paper's count of terminal sets with `L` from equation
+(3.2); `C(m,k)/M^k` and `m^{2k}/B^k` are the two exception probabilities; the sum over
+terminal sets is the union bound; and `2(k − 1) < m/100` is why `k = ⌈m/200⌉` works.
+
+Four other forms were considered and are on the sheet as question Q2: the paper's further
+estimate with `(200e/M)^k`; a length without `log(1 − ε)`; a sharper count; a form with no
+division. The form above is recommended because the others follow from it or are harder
+to read.
+
+Three things about the derivation that the user should know:
+
+1. It contains one step that is not in the paper. The paper takes entropy against `μ^2`,
+   which is strictly positive because `μ_n` is uniform. For a law with zeros a reduction is
+   needed (step 0). It is elementary, but it is the worker's, and it is why question Q5
+   asks whether to assume `μ` positive instead.
+2. It uses of the relation only that it is symmetric. Looplessness and triangle-freeness
+   enter only through `α(G) ≤ 2`.
+3. If the derivation is wrong, `mass_listLaw_le_sampleBound` is a false statement. Nothing
+   machine-checked in this session bears on that. The proof slices will.
+
+### Degenerate cases
+
+Checked by hand for every new statement, and recorded in its note (L-3.2, L-3.3, P-3.4;
+for the hypothesis, F-SUP). The outcome:
+
+| Case | L-3.2 | L-3.3 | P-3.4, the bound | P-3.4, existence |
+|---|---|---|---|---|
+| empty type | excluded (`hρ` with `hP`: no law) | excluded (`hμ`) | excluded (`hμ`) | excluded (`hμ`) |
+| `m = 0` | — | — | true; bound is at least `2` | empty: its hypothesis fails |
+| `1 ≤ m ≤ 200` | — | — | not excluded; `k = 1`; covered by the derivation | likewise |
+| `ε ≤ 0` | — | — | excluded (`hε`) | excluded (`hε`) |
+| `ε ≥ 1` | — | — | excluded (`hε1`) | excluded (`hε1`) |
+| `M ≤ 0` | — | true, trivially (`S` everything) | excluded (`hM`) | excluded (`hM`) |
+| `0 < M ≤ 1` | — | `M < 1`: true trivially; `M = 1`: ordinary | true; bound is at least `1` | empty: its hypothesis fails |
+| `B ≤ 0`, `0 < B ≤ 1` | — | `B < 1`: true trivially | excluded (`hB`); bound at least `1` | excluded; empty |
+| no holes | — | no relation occurs | hypothesis forces `M < 1` or `B < 1`; bound at least `1` | empty |
+| `q` not positive | excluded (`hqpos`) | — | — | — |
+| `S` or `R` empty | excluded (`hS` with `hP`) | true (`S`, `E_0` empty) | — | — |
+
+**No statement was found false, and none is true for an empty reason in a case that a
+named hypothesis does not exclude.** Where the supersaturation hypothesis is empty
+(`M < 1` or `B < 1`), the bound is at least `1`, so the inequality holds trivially and the
+existence statement has a false hypothesis. Machine-checked parts of this table: `m = 0`,
+`1 ≤ m ≤ 200`, `M ≤ 1`, `B ≤ 1` for the bound (S-M4.bound); the emptiness of the hypothesis
+for `ε ≤ 0`, `M < 1`, `B < 1` (S-M4.sup); and that `0 < ε` cannot be dropped
+(S-M4.eps-needed). The rest is by hand.
+
+Two would-be failures, both excluded by hypotheses that are in the statement:
+
+- with `ε = 0` the inequality is false. **Machine-checked**:
+  `exists_mass_listLaw_gt_sampleBound_of_zero`. The junk value at work is `x / 0 = 0` in
+  the fingerprint length.
+- with `M = 0` it is false: one element, no holes, `B = 256`, `ε = 3/4`, `m = 2` give the
+  bound `1/2` and an event of probability `1`. By hand; a `sanity (planned)` row
+  (S-M4.cap-needed).
+
+### Junk values
+
+- `Real.log 0 = 0`. In `relEntropy` it gives the paper's `0 log 0 = 0`, and it gives a junk
+  value where `q x = 0 < ρ x`. Lemma 3.2 assumes `q > 0`, and its `relEntropy ρ' ρ` is
+  honest because of its own first assertion (PI-008). In the third assertion
+  `mass ρ S > 0`. In `fingerprintLength`, `Real.log B` needs `B > 0` and
+  `Real.log (1 − ε)` needs `ε < 1`; both are hypotheses of P-3.4.
+- `x / 0 = 0`. In `relEntropy` (above). In `fingerprintLength` at `ε = 0`. In `sampleBound`
+  at `M = 0` or `B = 0`. All excluded by hypotheses of P-3.4.
+- Ceilings. `⌈·⌉₊` is `0` on negative reals: `fingerprintLength` is `1` for `0 < B < 1`,
+  which is harmless (F-BOUND, step 2). `exceptionSize` is pinned from both sides
+  (`m ≤ 200k < m + 200`).
+- Natural subtraction: none. The paper's `k − 1` appears nowhere in a statement; its use
+  is `200k < m + 200`.
+- Casts: `|Ω|`, `m` and `C(m,k)` go from `ℕ` to `ℝ`; nothing goes back. The event of P-3.4
+  is `m ≤ 100 * cm` in `ℕ`, with no division.
+- `0^0 = 1` and `C(0,0) = 1` at `m = 0`, which make the bound `2(n^2+1)^L` there.
+- Lemma 3.3 has no division: `M * mass μ S < 1`, `B * mass (prodLaw μ μ) E₀ < 1`.
+
+### Sanity lemmas
+
+The instruction made these the one exception to "no proof before sign-off". 15 rows, 59
+lemmas, all proved: the 58 lemmas of the four `Sanity` files and `positionGraph_holeRel`,
+which is beside its definition. 2 further rows of kind `sanity (planned)`, not stated.
+
+Those the user named, and where they are:
+
+| Named by the user | Lean | Row |
+|---|---|---|
+| the list law has total mass 1 | `isLaw_listLaw` | S-M4.list |
+| `D(ρ‖ρ) = 0` | `relEntropy_self` | S-M4.kl |
+| `D` of a point mass against the uniform law on `n` points is `log n` | `relEntropy_single_uniform` | S-M4.kl |
+| the uniform law on pairs satisfies the three caps with both caps `1` | `satisfiesCaps_prodLaw_self`, for every law `μ`, with `isLaw_uniform` | S-M4.caps, S-M4.law |
+| in the example of `exists_holeData_hole`, `(0, 1)` is not a unit and `(0, 0)` is | `exists_holeData_isUnit` | S-M4.unit |
+| conflict is symmetric and no unit conflicts with itself | `HoleRel.Conflict.symm`, `HoleRel.not_conflict_self`, `HoleRel.IsUnit.not_conflict_self` | S-M4.conflict |
+| the hypothesis for Theorem 3.1 can hold with a positive bound in a small example | `exists_holeRel_supersaturated` | S-M4.sup |
+
+Proposed by the worker, to pin the other side of each definition: laws are Mathlib's
+`StdSimplex` weights; masses of the empty set, the whole type and a singleton; which
+marginal is which; no law satisfies the caps below `1`; independence on product events
+(`μ(S)^m`); `D(δ_a‖q) = −log q(a)`; the abstract graph on positions against the signed-off
+one; the paper's sentence on touching and four cross holes; the conflict probability as a
+double sum; supersaturation failing above `1/2` in the example and being empty for
+`ε ≤ 0`, `M < 1`, `B < 1`; the values of the ceiling, the fingerprint length and the bound;
+and that `0 < ε` is needed.
+
+On the exact form of two of the named ones:
+
+- `exists_holeData_isUnit` is `∃ D : HoleData (Fin 2 → ZMod 2) (Fin 2 → ZMod 2) (Fin 2),
+  ¬ D.holeRel.IsUnit (0, 1) ∧ D.holeRel.IsUnit (0, 0)`. The example of
+  `exists_holeData_hole` has no name of its own (its data is built inside that proof, by
+  the M3 choice), so "in the example of" is rendered by obtaining `D` from that lemma.
+- `exists_holeRel_supersaturated` builds a relation on `Fin 2` ("the two elements are
+  different") inside its proof and asserts two things: some law on units satisfies the caps
+  `1`, `2` for the uniform law, and `Supersaturated` holds exactly for `ε ≤ 1/2`. So the
+  example is not empty, and it pins the property from above as well.
+
+Not stated, with rows of kind `sanity (planned)`, `NOT_STATED`:
+
+- S-M4.kl-mathlib: `relEntropy` against Mathlib's `klDiv`. It would take the measure of a
+  law, absolute continuity and the Radon–Nikodym derivative for such measures, and the
+  integral of the log-likelihood ratio as a finite sum: an estimated 60 to 120 lines.
+- S-M4.cap-needed: that `0 < M` cannot be dropped. About 25 lines, the proof of
+  S-M4.eps-needed again with another value of the fingerprint length.
+
+Not stated and not planned as sanity: nonnegativity of relative entropy. The paper proves
+it inside the proof of Lemma 3.2, so it belongs to the next slice.
+
+**What these lemmas are not.** They are checks on definitions. None of them is evidence
+that Lemma 3.2, Lemma 3.3 or the bound of Proposition 3.4 is true.
+
+### Paper issues
+
+Nothing failed on the second reading of Sections 3.1 and 3.2. No `ERROR`, no `GAP`. Three
+`UNCLEAR` entries were added to `blueprint/PAPER_ISSUES.md`, each with the reading adopted:
+
+- **PI-007.** "A probability law on units" is compared with measures on `Ω_n` and
+  `Ω_n^2`; read as a law on `Ω_n^2` that vanishes off the units. And the definition of a
+  unit does not say whether its two endpoints may be the same raw vertex; read as: they
+  may, because the definition as written allows it and the proof of Proposition 3.4 needs
+  it.
+- **PI-008.** Relative entropy is defined for a strictly positive second argument and then
+  used as `D(ρ'‖ρ)` with `ρ` not strictly positive; read as the same sum over the support
+  of `ρ'`, where `ρ` is positive by the lemma's first assertion.
+- **PI-009.** Proposition 3.4 is about "a given sufficiently large `n`" and also has an
+  `Ω(m)` with a constant "independent of `n`"; read as: a constant and a threshold exist,
+  depending only on the construction parameters. The Lean statement avoids the question by
+  being an explicit bound; the asymptotic statement is left to M17.
+
+Two observations that are not issues are recorded there too: the argument for the bound
+uses only the symmetry of the relation; and the paper's entropy against `μ^2` relies on
+`μ_n` being uniform.
+
+### A defect in this repository's records: "equation (2.3)" is the paper's equation (2.2)
+
+Found while checking the equation numbers of Section 3 against the PDF (`pdftotext` on the
+pinned `paper.pdf`). The paper numbers equations within sections, separately from its
+theorems. In Section 2 the PDF has: (2.1) the hole equations; **(2.2)** `α(G) ≤ 2`,
+`χ(G) ≥ ⌈m/2⌉` (`eq:sample-independence`); (2.3) the constants `C_0`, `g`, `D`, `M`
+(`eq:early-constants`); (2.4) `N = M_0 n`, `m = 2^{C_0 g N}`. The paper itself says
+"Equation (2.2) gives `α(G) ≤ 2` deterministically" (Section 2.4).
+
+This repository calls `eq:sample-independence` "equation (2.3)" throughout: the blueprint
+(the ID S-2.3 and the text of several rows), the signed fidelity note "L-2.2 and S-2.3",
+item R-17 of the M0 sheet, `START_HERE.md`, `README.md`, `blueprint/PAPER_ISSUES.md`,
+`blueprint/MILESTONES.md`, the doc comments of `Hadwiger/HoleRelation.lean`, and the M0 to
+M3 entries of this log. The user's instruction for this session uses the ID S-2.3.
+
+It is a wrong label and nothing more: wherever the TeX label is given it is right, the
+sentences quoted are those of `eq:sample-independence`, and the Lean statements are the
+two halves of that equation. No statement is affected.
+
+What was done about it in this session: nothing was rewritten. New text written in this
+session names the equation by its TeX label and blueprint ID and does not repeat the
+number. A status-update line under the signed note "L-2.2 and S-2.3" records the finding.
+The correction itself touches signed text, Lean doc comments and many records, belongs in
+a commit of its own, and is put to the user at the end.
+
+### What the audit shows
+
+| | Before (`83d8d91`) | After |
+|---|---|---|
+| `sorry` (ledger rows) | 1 | 6 |
+| blueprint entries | 156 | 181 |
+| `DEFINED` | 11 | 21 |
+| `MATHLIB` | 2 | 2 |
+| `DONE` | 34 | 49 |
+| `PROVED_MODULO` | 4 | 4 |
+| `STATED` | 1 | 4 |
+| `NOT_STATED` | 104 | 101 |
+| declarations audited | 96 | 179 |
+
+Accounting for the differences:
+
+- **25 rows were added.** 8 definition rows, because the instruction asks for a row for
+  every new definition that has none: D-3.rel, D-3.law, D-3.marg, D-3.caps, D-3.confl,
+  D-3.sup, D-3.list, D-3.bound. 15 rows for the sanity lemmas and the two support lemmas:
+  S-M4.law, S-M4.mass, S-M4.marg, S-M4.caps, S-M4.list, S-M4.kl, S-M4.rel, S-M4.unit,
+  S-M4.conflict, S-M4.touch, S-M4.conflprob, S-M4.sup, S-M4.bound, S-M4.eps-needed,
+  S-M4.support. 2 rows of kind `sanity (planned)`: S-M4.kl-mathlib, S-M4.cap-needed.
+- `DEFINED` +10: the 8 new rows, and D-3.unit and D-3.KL, which had rows and were
+  `NOT_STATED`.
+- `DONE` +15: the 15 sanity and support rows. **Nothing that was `DONE` changed.**
+- `STATED` +3: L-3.2, L-3.3, P-3.4, from `NOT_STATED`.
+- `NOT_STATED` −3: five rows left it (D-3.unit, D-3.KL, L-3.2, L-3.3, P-3.4) and the two
+  planned rows joined it. T-3.1 is still `NOT_STATED`.
+- `PROVED_MODULO` unchanged: C-1.2, T-FINAL, T-NOT-HC and S-1.d, resting on Theorem 1.1
+  alone. `Hadwiger/Main.lean` was not touched and does not import any new file, so none of
+  the five new `sorry`s can be beneath them. **The final theorem is not proved.**
+- Declarations +83. 25 are in the six main files: 18 definitions and structures, the
+  `rfl` lemma `positionGraph_holeRel`, the 5 `sorry` statements and the derived existence
+  statement (7 in `Defs/Law.lean`, 1 in `Defs/RelEntropy.lean`, 4 in `Defs/HoleRel.lean`, 4
+  in `Supersaturation.lean`, 4 in `EntropyAndCuts.lean`, 5 in `RandomSample.lean`). 58 are
+  lemmas in the four `Sanity` files: 23 in `Sanity/Law.lean`, 3 in
+  `Sanity/RelEntropy.lean`, 18 in `Sanity/Supersaturation.lean`, 14 in
+  `Sanity/RandomSample.lean`.
+- **The six `sorry`s**, all of them unproved statements, none in a definition:
+  1. `Hadwiger.exists_indepNum_le_two_and_connectedMatchingNumber_lt` (Theorem 1.1; as before)
+  2. `Hadwiger.relEntropy_minimizer_pos` (Lemma 3.2, first assertion)
+  3. `Hadwiger.relEntropy_le_sub_of_minimizer` (Lemma 3.2, second assertion)
+  4. `Hadwiger.neg_log_mass_le_relEntropy_of_minimizer` (Lemma 3.2, third assertion)
+  5. `Hadwiger.exists_terminal_cut` (Lemma 3.3)
+  6. `Hadwiger.mass_listLaw_le_sampleBound` (Proposition 3.4, the bound)
+- One declaration depends on a new `sorry` without containing one:
+  `Hadwiger.exists_list_indepNum_le_two_and_connectedMatchingNumber_lt`, on the sixth.
+- `#print axioms` on every other new declaration shows `propext`, `Classical.choice`,
+  `Quot.sound` and nothing else. No axiom, no `native_decide`, no `admit`.
+
+This is the end state the instruction expected: Theorem 1.1 still `sorry`, plus one `sorry`
+for each new unproved statement; L-3.2, L-3.3, P-3.4 `STATED`; D-3.unit, D-3.KL and the new
+definition rows `DEFINED`; the sanity rows `DONE`.
+
+### Check that no signed-off statement changed
+
+The `pp.all` comparison of the M3 entry, with the same list of items: the file of commands
+kept from M3 (`.lake/audit/M3Types.lean`: the 14 items of M1 and M2, everything else in
+`Hadwiger/HoleRelation.lean`, and the ten other definitions of the statement layer) was run
+at `main` `83d8d91` before any change and again on the final tree.
+
+- The two outputs are byte-identical: 4,976 lines, sha256
+  `b79be5d590e3818afe4202beb708cfdeda92cf6144fe2223c96a63156973cfc5`. That is also the hash
+  the M3 entry recorded, and the output file kept from M3 has it too, so this time the
+  comparison reaches back to the M3 session and not only to this session's start.
+- A second file adds one item, `#check @Hadwiger.exists_holeData_hole`, whose form the
+  user accepted on 2026-10-07 after the M3 list was fixed: byte-identical as well, 5,156
+  lines, sha256 `61a4e82ae37cf6f0eea5897724bf76a2c4fbdf3b10baf6c19adb5c7aaeb4988c`.
+- The diff of the Lean files that existed at `main` shows ten added `import` lines in the
+  root module `Hadwiger.lean` and no other change. In particular
+  `Hadwiger/HoleRelation.lean` and `Hadwiger/Main.lean` are byte for byte as at `main`.
+
+The check files are under the ignored `.lake/audit/`; they are not repository scripts.
+
+### Reverse check
+
+Every declaration in the Lean sources is named in the blueprint: 177 declarations, 177
+distinct names, none missing. The blueprint names 179; the other two are Mathlib's
+`indepNum` and `chromaticNumber`. Run with a one-off script that uses the repository's
+scanner (`scripts/leanscan.py`) for the declaration pattern; it is under `.lake/audit/` and
+not in the repository. Before: 94 declarations.
+
+Also checked by script: every block of Lean quoted on the review sheet (22 pieces) occurs
+in the sources, comments removed and spaces normalised. The same holds for the Lean quoted
+in the new fidelity notes, except one display in note L-3.2 that is abridged and says so.
+
+### Attempts that failed, and corrections
+
+- No statement was found false or unprovable as stated. One was found that **would** be
+  false without a hypothesis it has (`0 < ε`), and that is now a lemma.
+- Lean. Three small failures, each fixed at once: `conflictProb_nonneg` did not elaborate
+  until the weight function was named (`mass_nonneg (p := prodLaw σ σ) …`); a `norm_num`
+  after a `simp` that had already closed the goal; and `push_neg`, which is deprecated at
+  the pinned Mathlib, replaced by `not_forall.mp` and a direct argument. Everything else
+  compiled as first written. As the M2 and M3 entries say, that is not evidence of
+  correctness; the evidence is the kernel and, for the statements, the review.
+- An import that was not needed (`Hadwiger/Sanity/RelEntropy.lean` on
+  `Hadwiger/Sanity/Law.lean`) was removed.
+- Records. The size figures first written into `blueprint/MILESTONES.md` were from memory
+  and wrong (1,131 lines for 1,298; 657 for 765). They were measured and corrected before
+  the commit. A sentence at the head of the review sheet miscounted its own items and was
+  corrected.
+- Design, considered and not adopted: laws as Mathlib's `stdSimplex` set (deprecated at the
+  pin); the corollary through the signed-off S-2.3 (it is about `HoleData`, not `HoleRel`);
+  a named example relation for the sanity lemmas (it would be a new definition for the
+  sake of two checks; the relation is built inside each proof instead, as at M3).
+
+### Records brought into step
+
+- Blueprint: Section 3 (8 new rows; 5 rows rewritten); the section "Sanity checks" (its
+  introduction, the list of kinds, a new subsection with 17 rows); the two places that
+  list the kinds of `S-` IDs.
+- Ledger: 5 rows added; "Current state"; the list of declarations that depend on a `sorry`
+  without containing one, now five.
+- `blueprint/FIDELITY.md`: a new last section with 13 notes, none with a "Reviewed by"
+  line. The paragraph at the head, which said that every note below was signed off, was
+  changed to say which are and which are not; it is not part of any signed note. Under four
+  signed notes a line "Status update after the sign-off" was added (F-TOUCH, F-HOLE,
+  F-POSGRAPH, "L-2.2 and S-2.3", the last with a second line about the equation number).
+  **No signed text was altered**: the diff removes three lines, all in the head.
+- `blueprint/M4_REVIEW_SHEET.md`: new. `blueprint/M0_REVIEW_SHEET.md` was **not** edited.
+- `blueprint/PAPER_ISSUES.md`: PI-007 to PI-009; the summary; "How far the paper has been
+  checked"; the spot-check row for Proposition 3.4; the sentence about upstream.
+- `blueprint/MILESTONES.md`: the single next task; the state of M4 after its first slice;
+  the overview row of M4; two sentences made false by this slice; and, in the first
+  commit, "Order and gates".
+- `START_HERE.md`: what is stated and not proved; the count of `sorry`s; what is awaiting
+  review; a section on upstream with the user's decision; the reading list.
+- `README.md`: the status paragraph, and a paragraph on upstream.
+- `docs/LEAN_WORKFLOW.md`: the layout table. `docs/STATUS_CLASSIFICATIONS.md`: one sentence
+  on review.
+- `docs/PROVENANCE.md`: the upstream section (first commit).
+- Doc comments: all in new files. No existing Lean file other than the root module's import
+  list was changed, so no existing doc comment was touched; none had become false.
+
+### Lean notes
+
+- `Set.indicator S p x` unfolds by `Set.indicator_apply`, `Set.indicator_of_mem`,
+  `Set.indicator_of_notMem` (the current name; `not_mem` forms are gone).
+- `Fintype.prod_sum : ∏ i, ∑ j, f i j = ∑ x : ∀ i, κ i, ∏ i, f i (x i)` turns the total mass
+  of the list law, and the mass of a product event, into a product. It needs
+  `DecidableEq` on the index type, which `Fin m` has.
+- A sum over pairs is `Fintype.sum_prod_type` (first coordinate outside) or
+  `Fintype.sum_prod_type_right`.
+- A structure whose target is `Prop` (`IsLaw`, `SatisfiesCaps`) is built with
+  `where`-syntax or an anonymous constructor and gives dot access to its clauses.
+- Naming a lemma `IsLaw.prodLaw` beside the definition `prodLaw` invites a clash inside the
+  lemma's own statement; the lemmas are called `isLaw_prodLaw` and so on.
+- `HoleRel.IsUnit` shares its last name with Mathlib's `IsUnit`. Inside
+  `namespace Hadwiger.HoleRel` the bare `IsUnit` is the local one; it is always written
+  `H.IsUnit u` here.
+- `Nat.ceil`: `Nat.le_ceil`, `Nat.ceil_lt_add_one` (needs `0 ≤ a`), and `simp` evaluates
+  `⌈(2 : ℝ)⌉₊`. `omega` then does the arithmetic on `200 * k`.
+- `revert i j k; decide` proves triangle-freeness of a decidable relation on `Fin 2`.
+- For a relation given by a `let` inside a proof, `simp [H, HoleRel.Conflict]` unfolds it.
+- `one_le_pow₀`, `pow_le_one₀`, `le_div_iff₀` are the current names for the ordered-field
+  facts used on the bound.
+
+### Tooling notes
+
+- A here-document whose text contains an apostrophe fails in this shell wrapper ("unexpected
+  EOF while looking for matching quote"), even with a quoted delimiter. Scripts and long
+  texts were written to files in the session's scratch folder and run or appended from
+  there.
+- Python on this machine prints in cp1252; a script that prints Lean's Unicode needs
+  `PYTHONIOENCODING=utf-8`.
+- `lake build` at the start gate took several minutes with no output while it checked the
+  Mathlib traces; no Mathlib file was compiled.
+- Every command starts with an absolute `cd`, as since M1.
+
+### Not done, and why
+
+- No proof of Lemma 3.2, Lemma 3.3 or the bound of Proposition 3.4: by instruction.
+- Theorem 3.1 is not stated: by instruction. Theorem 1.1 was not touched.
+- The second slice (Lemma 3.2) was not started.
+- The correction of "(2.3)" to "(2.2)" in the records: found, recorded, not carried out;
+  put to the user.
+- Upstream: no Lean file was opened; nothing was built; no statement was compared.
+  Whether to compare T-FINAL with upstream's statement, which `AGENTS.md` allows, is put to
+  the user.
+- The two `sanity (planned)` lemmas: not stated, for the reasons in their rows.
+- No subagent was used.

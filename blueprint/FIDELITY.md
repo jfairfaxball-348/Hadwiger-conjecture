@@ -3,10 +3,15 @@
 One note per definition of the statement layer, arguing that the Lean definition means
 what the paper means, and one per target statement, recording every difference in form.
 
-**Review status: every note below was signed off by the user, John Fairfax-Ball, on
-2026-10-07.** Each note carries its "Reviewed by" line.
+**Review status.** Every note in the sections "Definitions" and "Target statements" was
+signed off by the user, John Fairfax-Ball, on 2026-10-07, and carries its "Reviewed by"
+line. **The notes of the last section, "Milestone M4, first slice — notes awaiting
+review", were added on 2026-10-08 and are unreviewed**; they carry no "Reviewed by" line.
+(Until 2026-10-08 this paragraph said that every note below was signed off. That stopped
+being true when the M4 notes were added, and the paragraph was changed for that reason
+only. No signed note was altered.)
 
-How the sign-off came about, so that its weight can be judged:
+How the sign-off of 2026-10-07 came about, so that its weight can be judged:
 
 - The notes were written by the worker who wrote the definitions. On 2026-10-07 another
   worker session (Claude) re-read every note against the paper's source and against the
@@ -166,6 +171,11 @@ used unchanged.
 - Proved at M0: on the graph with only the edges `0–1` and `2–3` the two edges do not
   touch, and that is why `cm = 1` there (S-M0.cm-two-disjoint-edges).
 - Reviewed by John Fairfax-Ball, 2026-10-07 (sheet item R-6).
+- Status update after the sign-off (M4 first slice, 2026-10-08): the sentence of §2.1 quoted
+  above under "Consistent with" is now a Lean lemma for the graph on positions,
+  `Hadwiger.HoleRel.not_edgesTouch_iff_conflict` (blueprint S-M4.touch), with "all four
+  cross pairs are holes" as the new predicate `HoleRel.Conflict`. The definition of
+  `EdgesTouch` was not changed. `Conflict` is new and unreviewed (note F-UNIT).
 
 ### F-CM — connected matching and `cm(G)` (new, on Mathlib's matching) — D-1.cm
 
@@ -271,6 +281,11 @@ used unchanged.
   `Hadwiger.exists_holeData_hole` as stated. That acceptance is a separate act from the
   sign-off of this note; it is recorded in the blueprint row S-M3.hole-nonvacuous and
   quoted in `docs/SESSION_LOG.md`, M3 session.
+- Status update after the sign-off (M4 first slice, 2026-10-08): the hole relation of this
+  note is now also packaged as an instance of an abstract hole relation,
+  `Hadwiger.HoleData.holeRel` (blueprint D-3.rel), whose three fields are the three parts
+  of Lemma 2.2. `HoleData`, `r` and `Hole` were not changed. `HoleRel` and `holeRel` are
+  new and unreviewed (note F-HOLEREL).
 
 ### F-POSGRAPH — the graph on positions (new) — D-2.G
 
@@ -281,6 +296,12 @@ used unchanged.
 - Argument: a literal transcription. Symmetry of adjacency uses the symmetry of `Hole`,
   which is proved (`Hole.symm`), so the definition depends on no `sorry`.
 - Reviewed by John Fairfax-Ball, 2026-10-07 (sheet item R-11).
+- Status update after the sign-off (M4 first slice, 2026-10-08): `positionGraph` was not
+  changed. A second graph on positions, for an abstract hole relation, was added
+  (`Hadwiger.HoleRel.positionGraph`, blueprint D-3.rel), and
+  `D.holeRel.positionGraph o = D.positionGraph o` holds by `rfl`
+  (`Hadwiger.HoleData.positionGraph_holeRel`, blueprint S-M4.rel). The new definition is
+  unreviewed (note F-HOLEREL).
 
 ---
 
@@ -435,6 +456,18 @@ Note added at M0. The difference in form of L-2.2 is also in F-HOLE.
   use that the three elements are distinct, so it proves the form "without distinct"
   directly, and the argument above about a repeated element is not what the Lean proof
   uses.
+- Status update after the sign-off (M4 first slice, 2026-10-08): the first half of the
+  equation, `α(G) ≤ 2`, is now also proved for the graph on positions of an abstract hole
+  relation, by the same proof (`Hadwiger.HoleRel.indepNum_positionGraph_le_two`, blueprint
+  S-M4.support). The statements of this note were not changed.
+- Status update after the sign-off (M4 first slice, 2026-10-08), about a number, not about
+  a statement: in the paper's PDF the equation of this note, `eq:sample-independence`, is
+  numbered **(2.2)**, not (2.3); (2.3) is the equation of the constants `C_0`, `g`, `D`,
+  `M`. The signed text above, and this repository's records generally, call it "(2.3)".
+  The Lean statements and the quoted sentences are those of `eq:sample-independence`, so
+  only the label is wrong. Found at the M4 first slice and reported to the user; whether
+  the records are to be corrected is the user's decision (`docs/SESSION_LOG.md`, M4
+  first-slice session).
 
 ### The fidelity question that matters most
 
@@ -452,3 +485,669 @@ checks (not in the paper)". None was false. What they show is limited: the defin
 give the known answers on those checks. They do not show that the definitions are the
 standard ones in general; that remains the argument of the notes above, and it is what the
 user's sign-off on `blueprint/M0_REVIEW_SHEET.md` is for.
+
+---
+
+## Milestone M4, first slice — notes awaiting review
+
+**Every note in this section is unreviewed.** They were written on 2026-10-08 by the worker
+who wrote the definitions and statements they describe. None carries a "Reviewed by" line.
+The review sheet for them is `blueprint/M4_REVIEW_SHEET.md`, items R-21 to R-33, with six
+questions at its head. Until the user signs an item off, the definition or statement it
+describes is a proposal.
+
+The setting, decided by the user on 2026-10-07 (`blueprint/MILESTONES.md`, M4): Section 3 is
+formalised for any finite type with a law and any symmetric, loopless, triangle-free
+relation, not only for the paper's `Ω_n`, `μ_n` and hole relation. That is a
+generalisation of the printed statements, approved as such. Every note below says where its
+Lean text is more general than the paper's.
+
+Where a note says "proved at M4", the lemma is in `Hadwiger/Sanity/` (or, for one lemma,
+beside its definition), has a blueprint entry `S-M4.*`, and is `DONE` by
+`scripts/axiom_audit.py`. The slice was "statements only"; the sanity lemmas were the one
+exception the user made. They pin definitions. They are not evidence for Lemma 3.2, Lemma
+3.3 or Proposition 3.4.
+
+Equation numbers below are those of the paper's PDF: (3.1) is `eq:raw-law-caps`, (3.2)
+`eq:fingerprint-length`, (3.3) `eq:container-count`, (3.4) `eq:pair-exception-bound`.
+
+### F-HOLEREL — a hole relation in the abstract, and its graph on positions (new) — D-3.rel
+
+- Paper: there is no such definition. Lemma 2.2: "The hole relation is symmetric, has no
+  loops, and is triangle-free." Section 2.4, last paragraph: "By Lemma 2.2, their hole
+  relation on `Ω_n` is symmetric, loopless, and triangle-free." Section 2.1: "Given any
+  list `o_1, …, o_m ∈ Ω`, form a graph `G` on its *positions*: two distinct positions are
+  adjacent when their elements have no hole."
+- Lean: `HoleRel Ω` is a structure with a relation `Rel : Ω → Ω → Prop` and three proofs:
+  `symm` (`Rel i j → Rel j i`), `irrefl` (`¬ Rel i i`), `triangle_free`
+  (`Rel i j → Rel j k → Rel i k → False`). `HoleRel.positionGraph H o`, for
+  `o : Fin m → Ω`, has `Adj p q := p ≠ q ∧ ¬ H.Rel (o p) (o q)`. `HoleData.holeRel D` is
+  the `HoleRel` with `Rel := D.Hole` and the three parts of Lemma 2.2 as its proofs.
+- Argument: the three fields are the three properties of Lemma 2.2, in the forms in which
+  the Lean Lemma 2.2 has them (signed off, notes F-HOLE and "L-2.2 and S-2.3").
+  Triangle-freeness is for any three elements, not assumed distinct; for a relation with no
+  loops that is the same as for three distinct elements, since a repeated element would
+  need a loop. The graph on positions is the signed-off `HoleData.positionGraph` with
+  `H.Rel` in place of `D.Hole`, letter for letter.
+- How the signed-off definition is an instance: `D.holeRel.positionGraph o = D.positionGraph o`
+  holds by `rfl` (`HoleData.positionGraph_holeRel`, proved at M4, S-M4.rel).
+  `HoleData.positionGraph` is not changed; the `pp.all` comparison of
+  `docs/SESSION_LOG.md` (M4 first-slice session) confirms it.
+- New. What Mathlib has: a symmetric relation with no loops is exactly a
+  `SimpleGraph Ω`, and "no triangle" is `SimpleGraph.CliqueFree 3`. Not used, for three
+  reasons. (1) The graph on positions makes positions adjacent when there is **no** hole,
+  so a "hole graph" beside it would give two graphs with opposite meanings of adjacency.
+  (2) The graph on positions is not a pullback of the complement: `Hᶜ.comap o` makes two
+  positions with the same element non-adjacent, and the paper makes them adjacent. (3)
+  `CliqueFree 3` speaks of three-element sets of pairwise adjacent vertices; that it is the
+  same as the "any three elements" form would need a lemma and a review of its own. The
+  bare structure is the paper's three words and nothing else. This is question Q3 of the
+  review sheet.
+- Difference from the paper: the relation is abstract (the user's decision). `Ω` is not
+  assumed finite by the structure, as in `HoleData`; statements that need finiteness
+  assume it.
+- Degenerate cases. `Ω` empty: there is one hole relation, and nothing is said. No holes
+  (`Rel` always false) is a legitimate `HoleRel`; then every graph on positions is complete
+  (`HoleRel.positionGraph_eq_top`, proved at M4).
+- Proved at M4: the instance and the `rfl` (S-M4.rel); the graph on positions has
+  `α(G) ≤ 2`, by the proof of the first half of equation `eq:sample-independence`
+  (blueprint S-2.3) word for word (`HoleRel.indepNum_positionGraph_le_two`, S-M4.support).
+
+### F-LAW — laws on a finite type, and the mass of a set (new) — D-3.law
+
+- Paper: "probability law", "probability measure", "law" and "distribution" are used
+  without definition. Theorem 3.1: "every probability law `σ` on units"; "The inequalities
+  in (3.1) are pointwise inequalities of measures on the finite raw spaces." Section 2.4:
+  "Take the uniform distribution on this finite frame set … Let `Ω_n` be the raw vertex
+  space and `μ = μ_n` this distribution." Section 3.1: "probability measures on a finite
+  set", "`q` is a strictly positive probability measure". The mass of a set is written
+  `μ(S)`, `μ^2(E_0)`, `ρ(S)`.
+- Lean: `IsLaw p`, for `p : α → ℝ` on a `Fintype α`, is `(∀ x, 0 ≤ p x)` together with
+  `∑ x, p x = 1`. `mass p S = ∑ x, S.indicator p x`, where Mathlib's `Set.indicator S p x`
+  is `p x` for `x ∈ S` and `0` otherwise.
+- Argument: a probability measure on a finite set is determined by its values at points,
+  which are nonnegative and add up to one, and the measure of a set is the sum of the
+  values at its points. That is the standard notion and the only one the paper can mean.
+- **Representation. This is question Q1 of the review sheet.** What the pinned Mathlib has:
+  - the set `stdSimplex ℝ α` of functions `α → ℝ`, with the same defining formula as
+    `IsLaw`. At the pinned commit it is marked deprecated (since 2026-08-29), so it is not
+    built on here;
+  - its replacement `Convexity.StdSimplex ℝ α`, a bundled structure: finitely supported
+    weights, nonnegative, with total one. Its weight functions are exactly the laws of
+    this note (`isLaw_iff_exists_stdSimplex`, proved at M4);
+  - `PMF α`: a function `α → ℝ≥0∞` with sum one;
+  - `MeasureTheory.Measure α` and `ProbabilityMeasure α`, with values in `ℝ≥0∞`.
+  Why real weight functions with a predicate. Lemma 3.2 is about a compact convex set of
+  laws and compares entropies by a difference: with functions `α → ℝ`, Mathlib's `IsCompact`
+  and `Convex ℝ` apply as they are, the segment `(1 − t)ρ + tρ'` is ordinary arithmetic, and
+  real subtraction has no truncation. `PMF` has no topology and no convex structure in
+  Mathlib. For measures both exist only through the weak topology and `ℝ≥0∞` arithmetic.
+  Lemma 3.3 has real capacities. The list law is a finite product. The predicate is on
+  bare functions, and not a structure that carries the function, because a set of laws has
+  to be a subset of the vector space `α → ℝ` for "convex" to mean anything.
+- Difference from the paper: none in content. Sums are finite sums over a `Fintype`.
+- Degenerate cases. There is no law on an empty type, since the empty sum is `0`
+  (`IsLaw.nonempty`, proved at M4). So a hypothesis "`μ` is a law" excludes the empty type,
+  and that is the named hypothesis that excludes it in every statement below.
+- Junk values: none. No division, no logarithm, no natural subtraction.
+- Proved at M4 (S-M4.law, S-M4.mass): the link with Mathlib's `StdSimplex`; a point mass
+  and the uniform weights are laws; `mass` is `0` on the empty set, the total on the whole
+  type, the weight on a singleton, monotone, and at most `1` for a law.
+
+### F-MARG — marginals and the product law (new) — D-3.marg
+
+- Paper: equation (3.1) writes `σ_1`, `σ_2` and `μ^2` without defining them. They are the
+  two marginals of a law `σ` on ordered pairs and the law of two independent `μ`-elements.
+- Lean: `marginalFst σ x = ∑ y, σ (x, y)`; `marginalSnd σ y = ∑ x, σ (x, y)`;
+  `prodLaw p q = fun z => p z.1 * q z.2`. The paper's `μ^2` is `prodLaw μ μ`.
+- Argument: literal. `σ_1` is the law of the first endpoint.
+- Difference in form: all three are defined for arbitrary weight functions, not only laws,
+  and `prodLaw` for two functions on two types. Only `prodLaw μ μ` (for `μ^2`) and
+  `prodLaw σ σ` (two independent units) are used.
+- Which marginal is which is fixed by a proof: the first marginal of `p ⊗ q` is `p` and the
+  second is `q` (S-M4.marg, proved at M4). Also proved: the product of two laws is a law,
+  and both marginals of a law are laws.
+- New. Mathlib's `Measure.fst`, `Measure.snd`, `Measure.prod` and `PMF.map` are for
+  measures and `PMF`s, which are not used (F-LAW).
+
+### F-CAPS — the three caps of equation (3.1) (new) — D-3.caps
+
+- Paper: "`σ_1 ≤ Mμ`, `σ_2 ≤ Mμ`, `σ ≤ 2^{DN} μ^2`" (equation (3.1)); "The inequalities in
+  (3.1) are pointwise inequalities of measures on the finite raw spaces."
+- Lean: `SatisfiesCaps μ M B σ` is a structure of three proofs: `fst`
+  (`∀ x, marginalFst σ x ≤ M * μ x`), `snd` (`∀ y, marginalSnd σ y ≤ M * μ y`), `joint`
+  (`∀ z, σ z ≤ B * prodLaw μ μ z`).
+- Argument: an inequality `ν ≤ ν'` of measures on a finite set means `ν(A) ≤ ν'(A)` for
+  every set `A`; taking `A` a point gives the pointwise inequality, and summing the
+  pointwise inequality over `A` gives it back. So "pointwise" may be read either way and the
+  Lean form is the inequality at each point.
+- Difference in form: `M` and `B` are arbitrary real numbers, as the user asked: "one real
+  number for the marginal cap `M` and one for the joint cap `2^{DN}`". In the paper
+  `M = 2^1000` and `B = 2^{DN}`. `μ` is any weight function in the definition; every
+  statement assumes it is a law.
+- Degenerate cases, proved at M4 (S-M4.caps). If `μ` and `σ` are laws and the caps hold
+  then `1 ≤ M` and `1 ≤ B`: so for `M < 1`, or `B < 1`, no law satisfies the caps. For
+  `M = B = 1` the caps hold for `σ = μ^2`, for every law `μ`; that is the check the user
+  named ("the uniform law on pairs satisfies the three caps with both caps equal to 1").
+- Junk values: none.
+
+### F-UNIT — units and conflicts (new) — D-3.unit
+
+- Paper (Section 3, first paragraph): "A *unit* is an ordered pair of raw vertices with no
+  hole between its endpoints. The endpoints of a unit may be dependent. When two units are
+  sampled independently, their four endpoints need not be independent within either unit.
+  The event of interest is that all four cross pairs have holes". Proof of Proposition 3.4:
+  "Make a finite *conflict graph* whose vertices are raw units; two units are adjacent when
+  they give all four cross holes. There are no loops, since a repeated unit would require a
+  hole from a raw vertex to itself."
+- Lean: `H.IsUnit u := ¬ H.Rel u.1 u.2`, for `u : Ω × Ω`.
+  `H.Conflict u v := H.Rel u.1 v.1 ∧ H.Rel u.1 v.2 ∧ H.Rel u.2 v.1 ∧ H.Rel u.2 v.2`.
+- Argument: literal. The cross pairs of two ordered pairs are the four pairs with one
+  endpoint from each.
+- Reading adopted (PI-007): the two endpoints of a unit may be the same element. `(x, x)`
+  has no hole between its endpoints, because the relation has no loops, so it is a unit by
+  the definition as written. The paper needs such units: two positions with the same
+  element are adjacent ("Equal elements are adjacent"), an edge of a matching may join
+  them, and its type is then `(x, x)`.
+- "May be dependent" is a remark about a random unit: under a law `σ` on units the two
+  endpoints need not be independent. It is not a property of a pair, and there is nothing
+  to formalise beyond `σ` being an arbitrary law on pairs.
+- Difference in form: `Conflict` is defined for any two ordered pairs, not only for units,
+  as `EdgesTouch` is defined for any two unordered pairs (F-TOUCH). The relation is an
+  abstract `HoleRel`; the paper's units are pairs of raw vertices.
+- Degenerate cases. With no holes every ordered pair is a unit and no two pairs conflict.
+- Proved at M4 (S-M4.unit, S-M4.conflict, S-M4.touch): `(x, x)` is a unit; being a unit
+  does not depend on the order; in the example of S-M3.hole-nonvacuous `(0, 1)` is not a
+  unit and `(0, 0)` is; conflict is symmetric; no ordered pair conflicts with itself (the
+  paper's reason, no loops), and no unit conflicts with itself for a second reason that
+  does not use the absence of loops; two units can conflict; and the paper's sentence "Two
+  disjoint edges fail to touch precisely when all four cross pairs are holes" holds for
+  `Conflict` and the signed-off `EdgesTouch` in the graph on positions.
+
+### F-CONFLPROB — the conflict probability of a law (new) — D-3.confl
+
+- Paper (Theorem 3.1): "two independent units drawn from `σ` have all four cross holes with
+  probability at least `2^{-100gN}`". Proof of Proposition 3.4: "The average, under this law
+  `ρ`, of `ρ(N_R(v))` is the conflict probability of two independent `ρ`-units".
+- Lean: `H.conflictProb σ = mass (prodLaw σ σ) {z | H.Conflict z.1 z.2}`, where `z` ranges
+  over pairs of ordered pairs.
+- Argument: two independent units with law `σ` are a pair `(u, v)` with law `σ ⊗ σ`, and
+  the probability of an event is its mass.
+- Proved at M4 (S-M4.conflprob): it equals `∑_u ∑_v σ(u) σ(v)` over the conflicting
+  `(u, v)`; it is nonnegative for nonnegative weights and at most `1` for a law. The sum
+  includes `u = v`, which contributes nothing because no pair conflicts with itself.
+- Difference in form: defined for any weight function `σ`.
+- Junk values: none.
+
+### F-SUP — the conclusion of Theorem 3.1 as a hypothesis (new) — D-3.sup
+
+- Paper (Theorem 3.1): "For the construction parameters specified in Sections 2 and
+  Appendix A, for all sufficiently large `n`, every probability law `σ` on units satisfying
+  `σ_1 ≤ Mμ`, `σ_2 ≤ Mμ`, `σ ≤ 2^{DN} μ^2` has the following property: two independent
+  units drawn from `σ` have all four cross holes with probability at least `2^{-100gN}`."
+  Proposition 3.4: "Assume the conclusion of Theorem 3.1 at a given sufficiently large `n`."
+- Lean:
+
+  ```lean
+  def Supersaturated (H : HoleRel Ω) (μ : Ω → ℝ) (M B ε : ℝ) : Prop :=
+    ∀ σ : Ω × Ω → ℝ, IsLaw σ → Function.support σ ⊆ {u | H.IsUnit u} →
+      SatisfiesCaps μ M B σ → ε ≤ H.conflictProb σ
+  ```
+- Clause by clause. "every probability law `σ` on units": `IsLaw σ` and the support of `σ`
+  lies in the units (PI-007: a law on units is a law on all ordered pairs that vanishes off
+  the units; the caps compare `σ` with measures on `Ω` and on `Ω^2`, so `σ` has to be
+  read there). "satisfying (3.1)": `SatisfiesCaps μ M B σ`. "two independent units drawn
+  from `σ` have all four cross holes with probability at least `2^{-100gN}`":
+  `ε ≤ H.conflictProb σ`.
+- What is not in it: "For the construction parameters …, for all sufficiently large `n`".
+  That is the quantification of Theorem 3.1 itself. **Theorem 3.1 is not stated.** Its
+  statement at M5 is to be: for the parameter structure (PI-005) and all large `n`,
+  `Supersaturated` for the hole relation of `Ω_n` (through `HoleData.holeRel`), `μ_n`,
+  `M = 2^1000`, `B = 2^{DN}`, `ε = 2^{-100gN}`. The definition was written for that use: the
+  three numbers are real, the relation is any `HoleRel`, and the law is any weight function.
+- Difference from the paper: abstract, with real numbers `M`, `B`, `ε`.
+- Degenerate cases, each proved at M4 unless marked (S-M4.sup):
+  - `ε ≤ 0`: the property holds for every relation, law and caps
+    (`supersaturated_of_nonpos`). So a statement that assumes it and wants a real conclusion
+    must assume `0 < ε`.
+  - marginal cap `M < 1`, or joint cap `B < 1` (with `μ` a law): the property holds for an
+    empty reason, for every `ε` (`supersaturated_of_lt_one`,
+    `supersaturated_of_jointCap_lt_one`).
+  - `ε ≥ 1`: it can hold only for an empty reason. By hand, not in Lean: a law `σ` on units
+    gives positive mass to some pair `(u, u)`, which does not conflict, so its conflict
+    probability is below `1`.
+  - empty type: there is no law, so the property holds for an empty reason.
+  - no holes: every conflict probability is `0`. For `ε > 0` and a law `μ` the property then
+    holds exactly when no law satisfies the caps, that is, when `M < 1` or `B < 1` (for
+    `M ≥ 1` and `B ≥ 1` the law `μ^2` satisfies them). By hand, from S-M4.caps.
+- It is not always empty: in an example on two elements it holds, with a law that satisfies
+  the caps, exactly for `ε ≤ 1/2` (`exists_holeRel_supersaturated`, proved at M4). That is
+  the check the user named, and it pins the property from both sides in that example.
+
+### F-KL — relative entropy (new) — D-3.KL
+
+- Paper (Section 3.1): "Relative entropy is taken with natural logarithms:
+  `D(ρ‖q) = ∑_x ρ(x) log(ρ(x)/q(x))`. Here `q` is a strictly positive probability measure
+  and `0 log 0 = 0`."
+- Lean: `relEntropy ρ q = ∑ x, ρ x * Real.log (ρ x / q x)`, a real number, for
+  `ρ q : α → ℝ` on a `Fintype α`.
+- Argument: the paper's formula, with Mathlib's natural logarithm `Real.log`.
+- Junk values, which decide what the definition means:
+  - `0 log 0 = 0`: where `ρ x = 0` the term is `0 * Real.log 0`, which is `0` whatever
+    `Real.log 0` is (it is `0`). So the paper's convention holds.
+  - `q x = 0` and `ρ x > 0`: the honest value is `+∞`. Here the term is
+    `ρ x * Real.log (ρ x / 0) = ρ x * Real.log 0 = 0`, a junk value. **So `relEntropy ρ q`
+    is the paper's `D(ρ‖q)` only when `q` is positive wherever `ρ` is.** Each statement that
+    uses it has to secure that: Lemma 3.2 assumes `q` strictly positive, and for `D(ρ'‖ρ)`
+    it follows from the lemma's first assertion (PI-008; note L-3.2).
+  - `Real.log` of a negative number is the logarithm of its absolute value. Laws are
+    nonnegative, so this does not arise in the statements.
+- New. What Mathlib has: `InformationTheory.klDiv μ ν`, for measures, with values in
+  `ℝ≥0∞`, equal to `∞` when `μ` is not absolutely continuous with respect to `ν`; and the
+  real functions `Real.negMulLog x = −x log x` and `InformationTheory.klFun x = x log x + 1 − x`.
+  Why `klDiv` is not used: laws here are real weight functions, not measures (F-LAW), and
+  Lemma 3.2 subtracts two entropies, which in `ℝ≥0∞` is truncated subtraction. For laws
+  with `q` strictly positive the two should agree after `ENNReal.toReal`; that is **not
+  proved** (blueprint S-M4.kl-mathlib, `NOT_STATED`, with what it would take).
+- Difference from the paper: `relEntropy` is defined for all pairs of weight functions,
+  with a junk value where the paper's `D` is infinite or undefined.
+- Proved at M4 (S-M4.kl): `D(ρ‖ρ) = 0`; the relative entropy of the point mass at `a`
+  against `q` is `−log q(a)`; against the uniform law on `n` points it is `log n`. The last
+  two fix the sign, the order of the two arguments and the treatment of points of weight
+  zero. Not proved here: `D ≥ 0`. The paper proves it within the proof of Lemma 3.2.
+
+### F-LIST — the law of a list of independent elements (new) — D-3.list
+
+- Paper (Section 2.4, last paragraph): "Sample `m` raw vertices independently with law
+  `μ_n`, and form the graph on their positions as above." Proposition 3.4: "the sampled
+  graph defined in Section 2 satisfies … with probability `1 − exp(−Ω(m))`."
+- Lean: `listLaw μ m = fun o : Fin m → α => ∏ i, μ (o i)`. The probability of an event `E`
+  about the list is `mass (listLaw μ m) E`.
+- Argument: `m` elements are independent, each with law `μ`, exactly when the list
+  `(o_1, …, o_m)` has probability `∏ μ(o_i)`. A list is a function on `Fin m`, as in the
+  signed-off graph on positions (F-POSGRAPH).
+- New. Mathlib's `Measure.pi` is for measures (F-LAW).
+- Difference from the paper: `μ` is any weight function and the type any finite type;
+  the paper's is `μ_n` on `Ω_n`. The graph is not part of this definition.
+- Degenerate cases. `m = 0`: there is one list and it has weight `1` (`listLaw_zero`).
+- Proved at M4 (S-M4.list): if `μ` is a law then `listLaw μ m` is a law, that is, it has
+  total mass `1`; the probability that all `m` elements lie in `S` is `μ(S)^m`.
+
+### L-3.2 — Lemma 3.2
+
+- Paper: "Let `P` be a nonempty compact convex set of probability measures on a finite set,
+  and let `ρ` minimize `D(·‖q)` on `P`. Then `ρ` is positive on the union of the supports
+  of measures in `P`. For every `ρ' ∈ P`, `D(ρ'‖q) − D(ρ‖q) ≥ D(ρ'‖ρ)`. If `ρ'` is
+  supported on a set `S`, the right side is at least `−log ρ(S)`." Before it: "`q` is a
+  strictly positive probability measure".
+- Lean: three theorems with the same hypotheses,
+
+  ```lean
+  {P : Set (α → ℝ)} (hP : ∀ p ∈ P, IsLaw p) (hconv : Convex ℝ P) (hcomp : IsCompact P)
+  {q : α → ℝ} (hq : IsLaw q) (hqpos : ∀ x, 0 < q x)
+  {ρ : α → ℝ} (hρ : ρ ∈ P) (hmin : ∀ ρ' ∈ P, relEntropy ρ q ≤ relEntropy ρ' q)
+  ```
+
+  and the conclusions, abridged here to the name, the further hypotheses and the
+  conclusion of each (the three statements are in full in the source and on the review
+  sheet, item R-30)
+
+  ```lean
+  relEntropy_minimizer_pos :  ∀ x ∈ ⋃ ρ' ∈ P, Function.support ρ', 0 < ρ x
+  relEntropy_le_sub_of_minimizer (hρ' : ρ' ∈ P) :
+      relEntropy ρ' ρ ≤ relEntropy ρ' q - relEntropy ρ q
+  neg_log_mass_le_relEntropy_of_minimizer (hρ' : ρ' ∈ P) (hS : Function.support ρ' ⊆ S) :
+      -Real.log (mass ρ S) ≤ relEntropy ρ' ρ
+  ```
+- Clause by clause. "a … set of probability measures on a finite set": `P : Set (α → ℝ)`
+  with `hP`. "compact": `IsCompact P`, in the product topology of `α → ℝ`, which for a
+  finite type is the usual topology of `ℝ^α`. "convex": Mathlib's `Convex ℝ P`. "nonempty":
+  not a separate hypothesis; it follows from `hρ`. "`ρ` minimize[s] `D(·‖q)` on `P`": `hρ`
+  and `hmin`. "`q` is a strictly positive probability measure": `hq` and `hqpos`. "the union
+  of the supports of measures in `P`": `⋃ ρ' ∈ P, Function.support ρ'`, with Mathlib's
+  `Function.support ρ' = {x | ρ' x ≠ 0}`. "`ρ'` is supported on a set `S`":
+  `Function.support ρ' ⊆ S`. "`ρ(S)`": `mass ρ S`.
+- Differences in form.
+  1. One theorem for each assertion, each repeating the hypotheses.
+  2. The minimiser is spelled out. Mathlib's `IsMinOn (fun σ => relEntropy σ q) P ρ`
+     unfolds to `hmin`; the explicit form is used so that it can be read without Mathlib.
+  3. The second assertion is written with the smaller side on the left. The subtraction is
+     real subtraction.
+  4. In the third assertion "the right side" is `D(ρ'‖ρ)`, and `ρ'` is the `ρ' ∈ P` of the
+     second assertion. That is how the paper's sentence reads and how its proof uses it.
+- Hypotheses kept though the argument may not use them. Compactness serves to make a
+  minimiser exist, and the lemma is handed one. That `q` has total mass one is not used by
+  the paper's proof of the three assertions as far as the worker can see. Both are the
+  paper's words and are kept. If the Lean proofs do not use them, that will be recorded,
+  as it was for `[Nonempty V]` in Proposition 3.5. Whether to drop them is question Q6.
+- Junk values. `relEntropy ρ q` and `relEntropy ρ' q` are honest: `q` is strictly positive.
+  `relEntropy ρ' ρ` has a second argument that may vanish (PI-008). It is honest all the
+  same: by the first assertion `ρ` is positive wherever `ρ'` is, so no term has `ρ' x > 0`
+  and `ρ x = 0`. `Real.log (mass ρ S)` is an honest logarithm: `ρ'` is a law, so its support
+  has a point; the point is in `S`; `ρ` is positive there; so `mass ρ S > 0`.
+- Degenerate cases, checked by hand.
+  - Empty type: there is no law, so `hP` and `hρ` cannot both hold. Excluded by `hρ`
+    with `hP`.
+  - `P` empty: excluded by `hρ`.
+  - `P` a single law `{ρ}`: the assertions read "`ρ` is positive on its own support",
+    `0 ≤ 0`, and `−log ρ(S) ≤ 0` for `S` containing the support of `ρ`, where `ρ(S) = 1`.
+    True.
+  - `q` with a zero: excluded by `hqpos`.
+  - `S` the whole type: `−log 1 = 0 ≤ D(ρ'‖ρ)`, which is the nonnegativity of relative
+    entropy. `S` empty: impossible for the support of a law. Excluded by `hS` with `hP`.
+  - The length `m`, the conflict bound, the caps and the hole relation do not occur.
+- Checked by hand, **which is not a proof**: the paper's argument for the three assertions
+  (the derivative of the entropy along `(1 − t)ρ + tρ'` at `t = 0`; the exact identity
+  `D(ρ'‖q) − D(ρ‖q) = D(ρ'‖ρ) + ∑ (ρ' − ρ) log(ρ/q)`; comparison with the normalised
+  restriction of `ρ` to `S`) was followed at the first reading and again for this slice,
+  with Lean's conventions for the terms where `ρ` vanishes. Nothing was found.
+- Not proved: all three are `sorry`. Status `STATED`.
+
+### L-3.3 — Lemma 3.3
+
+- Paper: "Let `R ⊆ Ω_n^2`. If no probability law supported on `R` satisfies (3.1), there
+  are sets `S ⊆ Ω_n` and `E_0 ⊆ Ω_n^2` such that `μ(S) < 1/M`, `μ^2(E_0) < 2^{-DN}`, and
+  every pair in `R` either has an endpoint in `S` or belongs to `E_0`."
+- Lean:
+
+  ```lean
+  theorem exists_terminal_cut {μ : Ω → ℝ} (hμ : IsLaw μ) (M B : ℝ) (R : Set (Ω × Ω))
+      (hR : ¬ ∃ σ : Ω × Ω → ℝ, IsLaw σ ∧ Function.support σ ⊆ R ∧ SatisfiesCaps μ M B σ) :
+      ∃ (S : Set Ω) (E₀ : Set (Ω × Ω)),
+        M * mass μ S < 1 ∧ B * mass (prodLaw μ μ) E₀ < 1 ∧
+          ∀ z ∈ R, z.1 ∈ S ∨ z.2 ∈ S ∨ z ∈ E₀
+  ```
+- Clause by clause. "`R ⊆ Ω_n^2`": `R : Set (Ω × Ω)`. "no probability law supported on `R`
+  satisfies (3.1)": `hR`. "sets `S ⊆ Ω_n` and `E_0 ⊆ Ω_n^2`": `S`, `E₀`.
+  "`μ(S) < 1/M`": `M * mass μ S < 1`. "`μ^2(E_0) < 2^{-DN}`":
+  `B * mass (prodLaw μ μ) E₀ < 1`. "every pair in `R` either has an endpoint in `S` or
+  belongs to `E_0`": the last clause, with an inclusive "or".
+- Differences in form.
+  1. Abstract: any finite type with a law `μ`, in place of `Ω_n` with `μ_n`; real numbers
+     `M` and `B` in place of `2^1000` and `2^{DN}`. No hole relation occurs: `R` is any set
+     of ordered pairs, as in the paper.
+  2. No division, as the user asked. For `M > 0` and `B > 0`, `M·μ(S) < 1` is `μ(S) < 1/M`
+     and `B·μ^2(E_0) < 1` is `μ^2(E_0) < 1/B`.
+- Hypotheses. `hμ` is the paper's (its `μ_n` is a law). There is no sign condition on `M`
+  and `B`: the statement is claimed for all real numbers.
+- Degenerate cases, checked by hand.
+  - Empty type: no law; excluded by `hμ`.
+  - `M < 1` (zero and negative values included): take `S` the whole type and `E_0` empty;
+    `M·μ(S) = M < 1` and `B·0 = 0 < 1`. True for a trivial reason, whether or not `hR`
+    holds.
+  - `B < 1`: take `S` empty and `E_0` everything; `M·0 = 0 < 1` and `B·μ^2(Ω^2) = B < 1`.
+    True for a trivial reason.
+  - `M ≥ 1` and `B ≥ 1`: the content of the lemma. The paper's network has capacities
+    `M μ(x)`, `M μ(y)` and `B μ(x) μ(y)`, which are nonnegative, as max-flow/min-cut needs.
+  - `M = 1`: a law satisfies the marginal caps only if both its marginals are `μ`. Nothing
+    special happens to the statement.
+  - `R` empty: no law is supported on the empty set, so `hR` holds; `S` and `E_0` empty
+    serve.
+  - `R` everything, `M ≥ 1`, `B ≥ 1`: `μ^2` satisfies the caps, so `hR` fails and nothing
+    is claimed.
+  - The length `m`, the conflict bound and the hole relation do not occur.
+- Junk values: none. No division or logarithm appears.
+- Checked by hand, **which is not a proof**: the paper's cut-capacity inequality
+  `Mμ(L_0) + Mμ(R_0) + B·μ^2(R ∩ ((Ω∖L_0) × (Ω∖R_0))) < 1` gives both bounds with
+  `S = L_0 ∪ R_0`, for `M ≥ 0` and `B ≥ 0`, and the covering claim (recorded since the
+  first reading in `blueprint/PAPER_ISSUES.md`, spot checks).
+- Not proved: `sorry`. Status `STATED`.
+
+### F-BOUND — the explicit bound of Proposition 3.4 (new) — D-3.bound
+
+- Paper (proof of Proposition 3.4): equation (3.2),
+  `L_N = 1 + ⌈ DN log 2 / (−log(1 − ε_N)) ⌉`; "The number of possible fingerprints, and
+  hence terminal sets, is at most `(|Ω_n|^2 + 1)^{L_N}`"; "Let `k = ⌈m/200⌉`. The
+  probability that at least `k` sampled positions have raw type in `S` is at most
+  `C(m, k) μ(S)^k ≤ (em/(kM))^k ≤ (200e/M)^k`"; "It lies entirely in `E_0` with probability
+  at most `2^{-kDN}`. There are at most `m^{2k}` such collections, so the probability that
+  one exists is at most `m^{2k} 2^{-kDN}`" (equation (3.4)); "Union over the `exp(o(m))`
+  terminal sets".
+- Lean:
+
+  ```lean
+  noncomputable def fingerprintLength (B ε : ℝ) : ℕ :=
+    1 + ⌈Real.log B / (-Real.log (1 - ε))⌉₊
+
+  noncomputable def exceptionSize (m : ℕ) : ℕ :=
+    ⌈(m : ℝ) / 200⌉₊
+
+  noncomputable def sampleBound (n : ℕ) (M B ε : ℝ) (m : ℕ) : ℝ :=
+    ((n : ℝ) ^ 2 + 1) ^ fingerprintLength B ε *
+      ((m.choose (exceptionSize m) : ℝ) / M ^ exceptionSize m
+        + (m : ℝ) ^ (2 * exceptionSize m) / B ^ exceptionSize m)
+  ```
+
+  In words, with `n = |Ω|`, `L = fingerprintLength B ε`, `k = exceptionSize m`:
+  `(n^2 + 1)^L · ( C(m, k)/M^k + m^{2k}/B^k )`.
+- `fingerprintLength` is equation (3.2) with `B` for `2^{DN}` (so `log B` for `DN log 2`)
+  and `ε` for `ε_N`. `exceptionSize` is the paper's `k`. `⌈·⌉₊` is Mathlib's `Nat.ceil`.
+- **The exact form of the bound is question Q2 of the review sheet.** The form above stops
+  at the first expression the paper writes for each exception probability. The
+  alternatives are listed in note P-3.4 below.
+
+**Hand derivation. This is not a proof.** It is the paper's proof of Proposition 3.4 with
+`B`, `ε` and a general law in place of `2^{DN}`, `ε_N` and `μ_n`, written out so that each
+factor of the bound can be traced. Nothing in it is machine-checked except where a Lean name
+is given.
+
+Setting: a finite type `Ω` with `n` elements, a law `μ`, a hole relation `H`, real numbers
+`0 < M`, `0 < B`, `0 < ε < 1`, a number `m`, and the hypothesis `H.Supersaturated μ M B ε`.
+Write `δ = −log(1 − ε) > 0`, `L = 1 + ⌈log B / δ⌉`, `k = ⌈m/200⌉`. For a set `R` of units, a
+*feasible law on `R`* is a law on `Ω^2` with support in `R` that satisfies the three caps.
+
+0. *A reduction that is not in the paper.* The paper's `μ_n` is uniform, so `q = μ^2` is
+   strictly positive, as the definition of `D(·‖q)` requires. A general law may vanish
+   somewhere. This costs nothing: lists that use an element of weight `0` have probability
+   `0`; laws that satisfy the joint cap vanish where `μ^2` does; so everything may be
+   restricted to the elements of positive weight, or `q` may be replaced off the support
+   of `μ^2` by any positive values and rescaled, which shifts every entropy by one
+   constant. The count below only improves when `n` decreases. Either way this is an
+   addition to the paper's argument, and when the proof is written it will be a recorded
+   departure. From here on `q = μ^2` is taken strictly positive.
+1. *The procedure* (paper: "Entropy-controlled fingerprints"). Call two units adjacent when
+   they conflict; no unit conflicts with itself (`HoleRel.not_conflict_self`). Given a set
+   `I` of units no two of which conflict, start with `R` the set of all units. While some
+   feasible law on `R` exists: let `ρ` be the feasible law on `R` of least `D(·‖q)` (the
+   feasible laws form a compact convex set and the entropy is continuous on it); the
+   `ρ`-average of `ρ(N_R(v))`, with `N_R(v)` the units of `R` that conflict with `v`, is
+   the conflict probability of `ρ`, which is at least `ε` by the hypothesis; choose
+   `v ∈ R` with `ρ(N_R(v))` largest, by a fixed rule, so `ρ(N_R(v)) ≥ ε > 0`; if `v ∈ I`,
+   record `v` and remove `N_R(v)` from `R`; otherwise remove `v`. Both keep `I ⊆ R`. Each
+   step removes a unit (`N_R(v)` is not empty, having positive mass; this uses `ε > 0`), so
+   the procedure stops, at a *terminal set* `T(I) ⊇ I` on which no feasible law exists.
+2. *The length of the fingerprint* (paper: equation (3.2)). Let `e(R)` be the least entropy
+   of a feasible law on `R`. Then `0 ≤ e(R) ≤ log B`: the lower bound is the nonnegativity
+   of relative entropy, and the upper bound holds because a feasible law has `σ ≤ Bq`.
+   `e` does not decrease when `R` shrinks. Suppose `v` is recorded at `R` and a feasible
+   law still exists on `R' = R ∖ N_R(v)`, with least-entropy law `ρ'`. Lemma 3.2, applied
+   to the feasible laws on `R`, their minimiser `ρ`, the law `ρ'` and the set `S = R'`,
+   gives `e(R') − e(R) ≥ D(ρ'‖ρ) ≥ −log ρ(R')`. Here `ρ(R') = 1 − ρ(N_R(v)) ≤ 1 − ε`, and
+   `ρ(R') > 0` by the first assertion of the lemma, so `e(R') − e(R) ≥ δ`. If `ℓ` units
+   are recorded, each of the first `ℓ − 1` recordings leaves a feasible law, so
+   `(ℓ − 1) δ ≤ log B` and `ℓ ≤ 1 + ⌊log B / δ⌋ ≤ L`. (If `B < 1` no feasible law exists
+   at all, `ℓ = 0`, and `L = 1`.) The paper writes the ceiling where the floor would do;
+   the paper's form is kept.
+3. *The number of terminal sets* (paper: "The fingerprint determines the terminal set").
+   The run for `I` is reproduced from the set `F` of recorded units alone: replay the
+   procedure, recording a selected unit exactly when it is in `F`. A selected unit is in
+   `I` exactly when it is in `F`, so every step agrees. Hence `T(I)` is a function of `F`,
+   a set of at most `L` units. There are at most `n^2` units, and a set with at most `n^2`
+   elements has at most `(n^2 + 1)^L` subsets with at most `L` elements. So there are at
+   most `(n^2 + 1)^L` terminal sets, over all `I`.
+4. *The cuts.* For each terminal set `T`, Lemma 3.3 with `R = T` gives `S_T ⊆ Ω` and
+   `E_T ⊆ Ω^2` with `M·μ(S_T) < 1`, `B·μ^2(E_T) < 1`, and every pair in `T` has an endpoint
+   in `S_T` or lies in `E_T`. Fix them. They do not depend on the list.
+5. *The two exception probabilities, for one `T`* (paper: "Terminal exceptions in the
+   sample"). Let `A_T` be the set of lists with at least `k` positions whose element is in
+   `S_T`. For a fixed set of `k` positions the probability that all their elements are in
+   `S_T` is `μ(S_T)^k` (as in `mass_listLaw_forall_mem`), and there are `C(m, k)` such
+   sets, so `P(A_T) ≤ C(m, k) μ(S_T)^k ≤ C(m, k)/M^k`. Let `B_T` be the set of lists for
+   which some `k` pairwise disjoint ordered pairs of distinct positions all have their
+   pair of elements in `E_T`. A fixed such collection uses `2k` distinct positions, so its
+   pairs of elements are independent with law `μ^2` and it lies in `E_T` with probability
+   `μ^2(E_T)^k ≤ 1/B^k`; there are at most `m^{2k}` collections; so
+   `P(B_T) ≤ m^{2k}/B^k`.
+6. *The union bound.* The probability that the list lies in some `A_T` or some `B_T` is at
+   most `(n^2 + 1)^L · ( C(m, k)/M^k + m^{2k}/B^k )`, which is `sampleBound n M B ε m`.
+7. *The deterministic step* (paper: "Suppose on this event that `G` has a touching
+   matching of size at least `m/100`"). Let `o` be a list in no `A_T` and no `B_T`, and
+   suppose `m ≤ 100c` with `c = cm(G)`. If `m = 0` then `k = 0` and every list is in every
+   `A_T`; so `m ≥ 1` and `c ≥ 1`. Take a connected matching with `c` edges. Orient each
+   edge `{p, q}` as `(p, q)`; its type `(o_p, o_q)` is a unit, since adjacent positions
+   have no hole. Let `I` be the set of types. No two of them conflict: two different edges
+   touch, so some cross pair of positions is adjacent, so some cross pair of elements has
+   no hole (this is `HoleRel.not_edgesTouch_iff_conflict`); and a unit does not conflict
+   with itself. Let `T = T(I)`. Every edge has its type in `T`, so it has an endpoint whose
+   element is in `S_T`, or its type is in `E_T`. The edges of the first kind are disjoint
+   and each contains a position with element in `S_T`; there are fewer than `k` such
+   positions; so there are at most `k − 1` such edges. The others are disjoint ordered
+   pairs of distinct positions with types in `E_T`, so there are at most `k − 1` of them.
+   Hence `c ≤ 2(k − 1)` and `100c ≤ 200(k − 1) < m` (`mul_exceptionSize_lt`), a
+   contradiction. So every list with `m ≤ 100·cm(G)` lies in some `A_T` or `B_T`, and its
+   probability is at most the bound of step 6.
+
+What the derivation uses of the hole relation: its symmetry, in step 7 and in the graph on
+positions. It does not seem to use that the relation has no loops (no unit conflicts with
+itself by the definition of a unit, `HoleRel.IsUnit.not_conflict_self`) or that it is
+triangle-free. Triangle-freeness is what gives `α(G) ≤ 2`, which is not part of the bound.
+The statement is nevertheless made for a `HoleRel`, which is the form the user decided.
+
+Where the paper goes further, and this bound does not: it estimates
+`C(m, k) μ(S)^k ≤ (em/(kM))^k ≤ (200e/M)^k`; it uses `m = 2^{C_0 g N}` and `D = 4C_0 g` to
+write `m^{2k} 2^{-kDN} = 2^{-2C_0 g N k}`; and it takes logarithms, with
+`log |Ω_n| = O(N^2)`, to get `exp(−Ω(m))` for large `n`. Those steps are about the paper's
+parameters and are left to M17 by the user's decision.
+
+- Junk values in the three definitions.
+  - `Real.log B`: honest for `B > 0`.
+  - `-Real.log (1 - ε)`: for `0 < ε < 1` it is the positive number `δ`. At `ε = 0` it is
+    `0`, the quotient is Lean's `x / 0 = 0`, and the length comes out as `1`; that is a
+    junk value, and with it the bound of Proposition 3.4 would be false
+    (`exists_mass_listLaw_gt_sampleBound_of_zero`, proved at M4). For `ε ≥ 1` the
+    logarithm is of a number that is not positive. Proposition 3.4 assumes `0 < ε < 1`.
+  - `⌈·⌉₊` of a negative number is `0`. This happens for `0 < B < 1`, where the length is
+    `1`. Step 2 shows that is harmless.
+  - `(m : ℝ) / 200`: division by a nonzero number.
+  - `/ M ^ k` and `/ B ^ k`: honest for `M > 0`, `B > 0`. With `M = 0` and `k ≥ 1` Lean
+    gives `0` and the bound would be false (by hand: one element, no holes, `M = 0`,
+    `B = 256`, `ε = 3/4`, `m = 2` give the bound `2^5 · 4/256 = 1/2`, the hypothesis holds
+    for an empty reason, and the event has probability `1`). Proposition 3.4 assumes
+    `0 < M` and `0 < B`.
+  - `(m : ℝ) ^ (2 * k)` at `m = 0`, `k = 0` is `0^0 = 1`, and `C(0, 0) = 1`.
+  - Casts: `n`, `m` and `C(m, k)` are cast from `ℕ` to `ℝ`; nothing is cast back, and
+    there is no natural subtraction.
+- Proved at M4 (S-M4.bound, S-M4.eps-needed): `m ≤ 200k < m + 200`, so `k` is the ceiling;
+  `k = 1` for `1 ≤ m ≤ 200` and `k ≤ m`; the length is at least `1`, is `1` for `B = 1` and
+  is `3` for `B = 4`, `ε = 1/2`; the bound is `2(n^2 + 1)^L` at `m = 0`, is
+  `(n^2 + 1)^L (m/M + m^2/B)` for `1 ≤ m ≤ 200`, and is at least `1` for `0 < M ≤ 1` and
+  for `0 < B ≤ 1`; and the counterexample at `ε = 0`. **None of these is evidence that the
+  bound is right.**
+
+### P-3.4 — Proposition 3.4
+
+- Paper: "Assume the conclusion of Theorem 3.1 at a given sufficiently large `n`. For
+  `m = 2^{C_0 g N}`, the sampled graph defined in Section 2 satisfies `α(G) ≤ 2`,
+  `cm(G) < m/100` with probability `1 − exp(−Ω(m))`. The implied positive constant is
+  independent of `n`."
+- Form decided by the user on 2026-10-07 (`blueprint/MILESTONES.md`, M4): abstract; an
+  explicit upper bound on the probability that the graph on positions of the random list
+  has `cm ≥ m/100`, stated as `100 cm ≥ m`; existence as a corollary when the bound is
+  below `1`.
+- Lean:
+
+  ```lean
+  theorem mass_listLaw_le_sampleBound (H : HoleRel Ω) {μ : Ω → ℝ} (hμ : IsLaw μ)
+      {M B ε : ℝ} (hM : 0 < M) (hB : 0 < B) (hε : 0 < ε) (hε1 : ε < 1) (m : ℕ)
+      (hsup : H.Supersaturated μ M B ε) :
+      mass (listLaw μ m) {o | m ≤ 100 * connectedMatchingNumber (H.positionGraph o)}
+        ≤ sampleBound (Fintype.card Ω) M B ε m
+
+  theorem exists_list_indepNum_le_two_and_connectedMatchingNumber_lt (H : HoleRel Ω)
+      {μ : Ω → ℝ} (hμ : IsLaw μ) {M B ε : ℝ} (hM : 0 < M) (hB : 0 < B) (hε : 0 < ε)
+      (hε1 : ε < 1) (m : ℕ) (hsup : H.Supersaturated μ M B ε)
+      (hlt : sampleBound (Fintype.card Ω) M B ε m < 1) :
+      ∃ o : Fin m → Ω, (H.positionGraph o).indepNum ≤ 2 ∧
+        100 * connectedMatchingNumber (H.positionGraph o) < m
+  ```
+- Clause by clause. "Assume the conclusion of Theorem 3.1 at a given … `n`": `hsup`, for an
+  abstract relation and numbers (F-SUP). "the sampled graph": `H.positionGraph o` for a
+  list `o` with law `listLaw μ m` (F-LIST, F-HOLEREL). "`cm(G) < m/100`":
+  `100 * connectedMatchingNumber … < m` in the corollary; its failure,
+  `m ≤ 100 * connectedMatchingNumber …`, is the event of the bound. "`α(G) ≤ 2`": in the
+  corollary; it holds for every list. "with probability `1 − exp(−Ω(m))`": replaced by "the
+  failure probability is at most `sampleBound …`". "For `m = 2^{C_0 g N}`" and "sufficiently
+  large `n`": gone; the bound is claimed for every `m`, and whether it is small is a matter
+  of the numbers.
+- Differences from the paper, all of them the user's decision of 2026-10-07 or its direct
+  consequences.
+  1. Abstract setting: any finite type, law and hole relation; real numbers `M`, `B`, `ε`.
+  2. An explicit bound in place of `1 − exp(−Ω(m))` with a constant independent of `n`
+     (PI-009). That the bound is `exp(−Ω(m))` uniformly in `n` for the paper's parameters is
+     a separate statement, left to M17.
+  3. Two statements: the bound, and existence. The paper states one probability for both
+     properties; `α(G) ≤ 2` is deterministic there too ("holds deterministically by
+     Lemma 2.2").
+  4. `cm(G) ≥ m/100` is written `m ≤ 100·cm(G)` in `ℕ`. For natural numbers `c`, `m` the
+     real inequality `c ≥ m/100` is `100c ≥ m`.
+- **Hypotheses on the numbers, and where each comes from.**
+
+  | Hypothesis | Whose | Why it is there |
+  |---|---|---|
+  | `hμ : IsLaw μ` | the paper's (`μ_n` is "the uniform distribution", Section 2.4). The Lean one is weaker: any law, not only a uniform one | the list law must be a law; and it excludes the empty type |
+  | `hM : 0 < M` | the paper's (`M = 2^1000`, equation (2.3) of the PDF, `eq:early-constants`) | the bound divides by `M^k`; with `M = 0` it would be false (F-BOUND) |
+  | `hB : 0 < B` | the paper's (`B = 2^{DN}`) | the bound divides by `B^k` and takes `log B` |
+  | `hε : 0 < ε` | the paper's (`ε_N = 2^{-100gN}`) | with `ε ≤ 0` the hypothesis `hsup` is empty and the bound is false (`exists_mass_listLaw_gt_sampleBound_of_zero`) |
+  | `hε1 : ε < 1` | the paper's (`ε_N = 2^{-100gN} < 1` as `N ≥ 1`) | so that `−log(1 − ε)` is a positive number and not a junk value |
+  | `hsup` | the paper's ("Assume the conclusion of Theorem 3.1") | — |
+  | none on `m` | the paper has `m = 2^{C_0 g N}` | the derivation does not use the value of `m`; for small `m` the bound is at least `1` unless `M` and `B` are large |
+  | none that `μ` is positive or uniform | the paper's `μ_n` is uniform | the derivation needs positivity only through step 0 of F-BOUND, which removes it. **Added generality, part of the abstract form.** Whether to assume positivity instead is question Q5 |
+
+  No hypothesis was added that the paper does not have. Two of the paper's are weakened
+  (`μ` any law; `m` any number).
+- **Alternatives for the form of the bound (question Q2).** With `n = |Ω|`,
+  `δ = −log(1 − ε)`:
+  - (A) the form stated: `(n^2 + 1)^{1 + ⌈log B/δ⌉} · ( C(m,k)/M^k + m^{2k}/B^k )`. Each
+    factor is the first expression the paper writes. Recommended.
+  - (B) the paper's further estimates: `(n^2 + 1)^L · ( (200e/M)^k + (m^2/B)^k )`. Weaker
+    than (A) and follows from it by `C(m,k) ≤ (em/k)^k`; it brings `Real.exp 1` into the
+    statement and adds a step to the proof. For the paper's `M = 2^1000` the estimate
+    `C(m,k) ≤ 2^m` already makes the first term of (A) at most `2^{-4m}`, so (B) is not
+    needed later either.
+  - (C) a length without `log(1 − ε)`: `1 + ⌈log B / ε⌉`, using `−log(1 − ε) ≥ ε`, which is
+    the estimate behind the paper's `L_N = O(1 + DN 2^{100gN})`. Weaker than (A); it would
+    make the hypothesis `ε < 1` unnecessary.
+  - (D) a sharper count: the floor in place of the ceiling, and the number of sets of at
+    most `L` units in place of `(n^2 + 1)^L`. Stronger than (A) and further from the
+    paper's formulas.
+  - (E) no division at all: multiply through by `M^k B^k`. Equivalent to (A) for positive
+    `M`, `B`, and much harder to read.
+- **Degenerate cases, checked by hand.**
+  - Empty type: no law; excluded by `hμ`.
+  - `m = 0`: the only list has the graph on no vertices, `cm = 0`, and the event `0 ≤ 0`
+    has probability `1`. The bound is `2(n^2 + 1)^L ≥ 2` (`sampleBound_zero`). The bound
+    holds and says nothing. The existence statement is empty, since its hypothesis fails
+    (`one_lt_sampleBound_zero`); rightly, as no graph has `100·cm < 0`.
+  - `1 ≤ m ≤ 200`: `k = 1` and the bound is `(n^2 + 1)^L (m/M + m^2/B)`. The event is that
+    `G` has an edge when `m ≤ 100`, and that `cm(G) ≥ 2` when `101 ≤ m ≤ 200`. The
+    derivation covers this case and it is not excluded.
+  - conflict bound `ε ≤ 0` or `ε ≥ 1`: excluded by `hε`, `hε1`.
+  - marginal cap `M ≤ 0`: excluded by `hM`. `0 < M ≤ 1`: the bound is at least `1`
+    (`one_le_sampleBound_of_le_one`), so the inequality holds trivially; and for `M < 1`
+    the hypothesis `hsup` is empty, so this is the only way it could hold.
+  - joint cap `B ≤ 0`: excluded by `hB`. `0 < B ≤ 1`: the bound is at least `1`
+    (`one_le_sampleBound_of_jointCap_le_one`), likewise.
+  - no holes: every graph on positions is complete, `cm = ⌊m/2⌋`, and the event has
+    probability `1` for `m ≠ 1`. With `ε > 0` the hypothesis `hsup` then forces `M < 1` or
+    `B < 1` (F-SUP), where the bound is at least `1`. So the statement is true and empty
+    of content, as it should be.
+  - In no case is the statement false or left without a named hypothesis to exclude it.
+- Machine-checked: the existence statement follows from the bound (its proof body), with
+  `isLaw_listLaw`, `IsLaw.exists_notMem_of_mass_lt_one` and
+  `HoleRel.indepNum_positionGraph_le_two`. So the kernel ties the two statements together,
+  and the bound gives what Theorem 1.1 needs once it is below `1`. It rests on the bound,
+  which is `sorry`: it is `PROVED_MODULO`, not proved.
+- Not proved: the bound is `sorry`. Status of the entry: `STATED`.
+- Not done, and not part of this slice: Theorem 1.1 is not derived from the existence
+  statement. That needs Theorem 3.1 and the construction, and the check that
+  `sampleBound < 1` for the paper's parameters (M17).
